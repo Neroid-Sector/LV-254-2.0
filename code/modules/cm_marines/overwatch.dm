@@ -487,7 +487,7 @@
 		if("tacmap_unpin")
 			tacmap.tgui_interact(user)
 		if("dropbomb")
-			if(isnull(params["x"]) || isnull(params["y"]) || isnull(params["z"]))
+			if(!params["x"] || !params["y"] || !params["z"])
 				return
 			x_bomb = text2num(params["x"])
 			y_bomb = text2num(params["y"])
@@ -500,7 +500,7 @@
 				handle_bombard(user)
 
 		if("dropsupply")
-			if(isnull(params["x"]) || isnull(params["y"]) || isnull(params["z"]))
+			if(!params["x"] || !params["y"] || !params["z"])
 				return
 			x_supply = text2num(params["x"])
 			y_supply = text2num(params["y"])
@@ -512,7 +512,7 @@
 					handle_supplydrop()
 
 		if("save_coordinates")
-			if(isnull(params["x"]) || isnull(params["y"]) || isnull(params["z"]))
+			if(!params["x"] || !params["y"] || !params["z"])
 				return
 			if(length(saved_coordinates) >= MAX_SAVED_COORDINATES)
 				popleft(saved_coordinates)
@@ -731,7 +731,7 @@
 /obj/structure/machinery/computer/overwatch/proc/marine_has_camera(mob/living/carbon/human/marine)
 	if(istype(marine.head, /obj/item/clothing/head/helmet/marine))
 		return TRUE
-	if(istype(marine.wear_l_ear, /obj/item/device/overwatch_camera) || istype(marine.wear_r_ear, /obj/item/device/overwatch_camera) || istype(marine.wear_r_ear, /obj/item/device/radio/headset/almayer/marine/overwatch_camera) || istype(marine.wear_l_ear, /obj/item/device/radio/headset/almayer/marine/overwatch_camera))
+	if(istype(marine.wear_l_ear, /obj/item/device/overwatch_camera) || istype(marine.wear_r_ear, /obj/item/device/overwatch_camera))
 		return TRUE
 	return FALSE
 /// returns the overwatch camera the human is wearing
@@ -744,9 +744,6 @@
 /obj/item/device/overwatch_camera/get_camera()
 	return camera
 
-/obj/item/device/radio/headset/almayer/marine/overwatch_camera/get_camera()
-	return camera
-
 ///returns camera holder
 /mob/living/carbon/human/proc/get_camera_holder()
 	if(istype(head, /obj/item/clothing/head/helmet/marine))
@@ -757,12 +754,6 @@
 		cam_gear = wear_l_ear
 		return cam_gear
 	if(istype(wear_r_ear, /obj/item/device/overwatch_camera))
-		cam_gear = wear_r_ear
-		return cam_gear
-	if(istype(wear_l_ear, /obj/item/device/radio/headset/almayer/marine/overwatch_camera))
-		cam_gear = wear_l_ear
-		return cam_gear
-	if(istype(wear_r_ear, /obj/item/device/radio/headset/almayer/marine/overwatch_camera))
 		cam_gear = wear_r_ear
 		return cam_gear
 
@@ -1019,10 +1010,6 @@
 /obj/structure/machinery/computer/overwatch/almayer/small
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'
 	icon_state = "overwatch_computer"
-
-/obj/structure/machinery/computer/overwatch/apc
-	icon = 'icons/obj/structures/props/hybrisa/computers.dmi'
-	icon_state = "bluemultimonitorsmall_on"
 
 /obj/structure/machinery/computer/overwatch/clf
 	faction = FACTION_CLF

@@ -1,5 +1,4 @@
-import type { BooleanLike } from 'common/react';
-import { useBackend } from 'tgui/backend';
+import { useBackend } from '../backend';
 import {
   Box,
   Button,
@@ -10,32 +9,18 @@ import {
   ProgressBar,
   Section,
   Tabs,
-} from 'tgui/components';
-import { Window } from 'tgui/layouts';
-
-type Data = {
-  can_pick_squad: BooleanLike;
-  squad_list: { squad_name: string; squad_color: string }[];
-  current_squad: String;
-  launch_cooldown: number;
-  nextfiretime: number;
-  worldtime: number;
-  x_offset: number;
-  y_offset: number;
-  z_offset: number;
-  loaded: string | null;
-  crate_name: string | null;
-};
+} from '../components';
+import { Window } from '../layouts';
 
 export const SupplyDropConsole = () => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   const can_pick_squad = data.can_pick_squad;
 
   const timeLeft = data.nextfiretime - data.worldtime;
   const timeLeftPct = timeLeft / data.launch_cooldown;
 
-  const cantFire = timeLeft > 0 && data.loaded === null;
+  const cantFire = (timeLeft < 0, data.loaded === null);
 
   const squads = data.squad_list;
 
@@ -43,7 +28,7 @@ export const SupplyDropConsole = () => {
     <Window width={350} height={350}>
       <Window.Content scrollable>
         {!!can_pick_squad && (
-          <NoticeBox info textAlign="center">
+          <NoticeBox info={1} fluid textAlign="center">
             {data.current_squad
               ? `Current squad is :
                 ${data.current_squad}`
@@ -51,7 +36,7 @@ export const SupplyDropConsole = () => {
           </NoticeBox>
         )}
         {!!can_pick_squad && (
-          <Tabs textAlign="center" fluid>
+          <Tabs horizontal textAlign="center" fluid>
             {squads.map((val) => {
               return (
                 <Tabs.Tab
@@ -72,8 +57,8 @@ export const SupplyDropConsole = () => {
               <NumberInput
                 width="4em"
                 step={1}
-                minValue={-Infinity}
-                maxValue={Infinity}
+                minValue={-1000}
+                maxValue={1000}
                 value={data.x_offset}
                 onChange={(value) => act('set_x', { set_x: `${value}` })}
               />
@@ -82,8 +67,8 @@ export const SupplyDropConsole = () => {
               <NumberInput
                 width="4em"
                 step={1}
-                minValue={-Infinity}
-                maxValue={Infinity}
+                minValue={-1000}
+                maxValue={1000}
                 value={data.y_offset}
                 onChange={(value) => act('set_y', { set_y: `${value}` })}
               />
@@ -92,8 +77,8 @@ export const SupplyDropConsole = () => {
               <NumberInput
                 width="4em"
                 step={1}
-                minValue={-Infinity}
-                maxValue={Infinity}
+                minValue={-1000}
+                maxValue={1000}
                 value={data.z_offset}
                 onChange={(value) => act('set_z', { set_z: `${value}` })}
               />
@@ -108,14 +93,14 @@ export const SupplyDropConsole = () => {
               </Button>
             }
           >
-            <NoticeBox info textAlign="center">
+            <NoticeBox info={1} textAlign="center">
               {data.loaded
                 ? `Supply Pad Status :
                   ${data.crate_name} loaded.`
                 : 'No crate loaded.'}
             </NoticeBox>
             {(timeLeft < 0 && (
-              <NoticeBox success textAlign="center">
+              <NoticeBox success={1} textAlign="center">
                 Ready to fire!
               </NoticeBox>
             )) || (

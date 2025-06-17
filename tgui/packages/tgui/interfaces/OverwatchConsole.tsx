@@ -1,5 +1,4 @@
-import type { BooleanLike } from 'common/react';
-import { useBackend, useSharedState } from 'tgui/backend';
+import { useBackend, useSharedState } from '../backend';
 import {
   Box,
   Button,
@@ -12,63 +11,11 @@ import {
   Stack,
   Table,
   Tabs,
-} from 'tgui/components';
-import { Window } from 'tgui/layouts';
-
-type MarineData = {
-  name: string;
-  state: string;
-  has_helmet: BooleanLike;
-  role: string;
-  acting_sl: string;
-  fteam: string;
-  distance: string;
-  area_name: string;
-  ref: string;
-};
-
-type Data = {
-  marines: MarineData[];
-  squad_leader: MarineData;
-  total_deployed: number;
-  living_count: number;
-  leader_count: number;
-  ftl_count: number;
-  spec_count: number;
-  medic_count: number;
-  engi_count: number;
-  smart_count: number;
-  leaders_alive: number;
-  ftl_alive: number;
-  spec_alive: number;
-  medic_alive: number;
-  engi_alive: number;
-  smart_alive: number;
-  specialist_type: string;
-  theme: string;
-  squad_list: string[];
-  current_squad: string;
-  primary_objective: string[] | null;
-  secondary_objective: string[] | null;
-  z_hidden: BooleanLike;
-  saved_coordinates: {
-    x: number;
-    y: number;
-    z: number;
-    comment: string;
-    index: number;
-  }[];
-  can_launch_crates: BooleanLike;
-  has_crate_loaded: BooleanLike;
-  can_launch_obs: BooleanLike;
-  ob_cooldown?: number;
-  ob_loaded: BooleanLike;
-  supply_cooldown: number;
-  operator: string;
-};
+} from '../components';
+import { Window } from '../layouts';
 
 export const OverwatchConsole = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   return (
     <Window
@@ -84,7 +31,7 @@ export const OverwatchConsole = (props) => {
 };
 
 const HomePanel = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   // Buttons don't seem to support hexcode colors, so we'll have to do this manually, sadly
   const squadColorMap = {
@@ -126,7 +73,7 @@ const HomePanel = (props) => {
 };
 
 const SquadPanel = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   const [category, setCategory] = useSharedState('selected', 'monitor');
 
@@ -184,7 +131,7 @@ const SquadPanel = (props) => {
 };
 
 const MainDashboard = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   let { current_squad, primary_objective, secondary_objective } = data;
 
@@ -279,7 +226,7 @@ const MainDashboard = (props) => {
 };
 
 const RoleTable = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   const {
     squad_leader,
@@ -375,7 +322,7 @@ const RoleTable = (props) => {
 };
 
 const SquadMonitor = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   const sortByRole = (a, b) => {
     a = a.role;
@@ -411,7 +358,7 @@ const SquadMonitor = (props) => {
 
   const [hidden_marines, setHiddenMarines] = useSharedState(
     'hidden_marines',
-    [] as string[],
+    [],
   );
 
   const [showHiddenMarines, setShowHiddenMarines] = useSharedState(
@@ -423,7 +370,7 @@ const SquadMonitor = (props) => {
     true,
   );
 
-  const [marineSearch, setMarineSearch] = useSharedState('marinesearch', '');
+  const [marineSearch, setMarineSearch] = useSharedState('marinesearch', null);
 
   let determine_status_color = (status) => {
     let conscious = status.includes('Conscious');
@@ -462,7 +409,7 @@ const SquadMonitor = (props) => {
 
   return (
     <Section
-      pb="3%"
+      pb="1.5%"
       fill
       fontSize="14px"
       title="Monitor"
@@ -517,7 +464,7 @@ const SquadMonitor = (props) => {
         value={marineSearch}
         onInput={(e, value) => setMarineSearch(value)}
       />
-      <Section m="2px" pb="2px" fill scrollable>
+      <Section m="2px" mb="4px" fill height="95%" scrollable>
         <Table>
           <Table.Row bold fontSize="14px">
             <Table.Cell textAlign="center">Name</Table.Cell>
@@ -562,7 +509,7 @@ const SquadMonitor = (props) => {
             marines
               .sort(sortByRole)
               .filter((marine) => {
-                if (marineSearch && !marineSearch.includes('\\')) {
+                if (marineSearch) {
                   const searchableString = String(marine.name).toLowerCase();
                   return searchableString.match(new RegExp(marineSearch, 'i'));
                 }
@@ -638,7 +585,7 @@ const SquadMonitor = (props) => {
 };
 
 const SupplyDrop = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   const [supplyX, setSupplyX] = useSharedState('supplyx', 0);
   const [supplyY, setSupplyY] = useSharedState('supply', 0);
@@ -661,30 +608,21 @@ const SupplyDrop = (props) => {
           <LabeledControls mb="5px">
             <LabeledControls.Item label="LONGITUDE">
               <NumberInput
-                step={1}
                 value={supplyX}
-                minValue={-Infinity}
-                maxValue={Infinity}
                 onChange={(value) => setSupplyX(value)}
                 width="75px"
               />
             </LabeledControls.Item>
             <LabeledControls.Item label="LATITUDE">
               <NumberInput
-                step={1}
                 value={supplyY}
-                minValue={-Infinity}
-                maxValue={Infinity}
                 onChange={(value) => setSupplyY(value)}
                 width="75px"
               />
             </LabeledControls.Item>
             <LabeledControls.Item label="HEIGHT">
               <NumberInput
-                step={1}
                 value={supplyZ}
-                minValue={-Infinity}
-                maxValue={Infinity}
                 onChange={(value) => setSupplyZ(value)}
                 width="75px"
               />
@@ -725,13 +663,13 @@ const SupplyDrop = (props) => {
         </Stack.Item>
         <SavedCoordinates forSupply />
       </Stack>
-      <Divider />
+      <Divider horizontal />
     </Section>
   );
 };
 
 const OrbitalBombardment = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   const [OBX, setOBX] = useSharedState('obx', 0);
   const [OBY, setOBY] = useSharedState('oby', 0);
@@ -754,30 +692,21 @@ const OrbitalBombardment = (props) => {
           <LabeledControls mb="5px">
             <LabeledControls.Item label="LONGITUDE">
               <NumberInput
-                step={1}
                 value={OBX}
-                minValue={-Infinity}
-                maxValue={Infinity}
                 onChange={(value) => setOBX(value)}
                 width="75px"
               />
             </LabeledControls.Item>
             <LabeledControls.Item label="LATITUDE">
               <NumberInput
-                step={1}
                 value={OBY}
-                minValue={-Infinity}
-                maxValue={Infinity}
                 onChange={(value) => setOBY(value)}
                 width="75px"
               />
             </LabeledControls.Item>
             <LabeledControls.Item label="HEIGHT">
               <NumberInput
-                step={1}
                 value={OBZ}
-                minValue={-Infinity}
-                maxValue={Infinity}
                 onChange={(value) => setOBZ(value)}
                 width="75px"
               />
@@ -817,13 +746,13 @@ const OrbitalBombardment = (props) => {
         </Stack.Item>
         <SavedCoordinates forOB />
       </Stack>
-      <Divider />
+      <Divider horizontal />
     </Section>
   );
 };
 
 const SavedCoordinates = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
 
   const [OBX, setOBX] = useSharedState('obx', 0);
   const [OBY, setOBY] = useSharedState('oby', 0);

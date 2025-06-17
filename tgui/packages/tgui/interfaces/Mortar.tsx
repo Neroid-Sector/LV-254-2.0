@@ -1,18 +1,11 @@
 import { useState } from 'react';
-import { useBackend } from 'tgui/backend';
-import { Button, LabeledList, NumberInput, Section } from 'tgui/components';
-import { Window } from 'tgui/layouts';
 
-type Data = {
-  data_target_x: number;
-  data_target_y: number;
-  data_target_z: number;
-  data_dial_x: number;
-  data_dial_y: number;
-};
+import { useBackend } from '../backend';
+import { Button, LabeledList, NumberInput, Section } from '../components';
+import { Window } from '../layouts';
 
 export const Mortar = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
   const {
     data_target_x,
     data_target_y,

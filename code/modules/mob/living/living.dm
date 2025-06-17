@@ -415,7 +415,7 @@
 
 	..()
 
-/mob/living/launch_towards(datum/launch_metadata/LM, tracking = FALSE)
+/mob/living/launch_towards(datum/launch_metadata/LM)
 	if(src)
 		SEND_SIGNAL(src, COMSIG_MOB_MOVE_OR_LOOK, TRUE, dir, dir)
 	if(!istype(LM) || !LM.target || !src)
@@ -694,15 +694,10 @@
 // legacy procs
 /mob/living/put_in_l_hand(obj/item/W)
 	if(body_position == LYING_DOWN)
-		if(!HAS_TRAIT(src, TRAIT_HAULED))
-			return
+		return
 	return ..()
 /mob/living/put_in_r_hand(obj/item/W)
 	if(body_position == LYING_DOWN)
-		if(!HAS_TRAIT(src, TRAIT_HAULED))
-			return
+		return
 	return ..()
 
-/mob/living/onZImpact(turf/impact_turf, height)
-	. = ..()
-	impact_turf.z_impact(src, height)
