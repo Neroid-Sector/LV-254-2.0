@@ -701,6 +701,3 @@
 		return
 	return ..()
 
-/mob/living/onZImpact(turf/impact_turf, height)
-	. = ..()
-	impact_turf.z_impact(src, height)
