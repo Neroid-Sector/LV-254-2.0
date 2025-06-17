@@ -17,6 +17,7 @@
 	var/targ_x = 0
 	var/targ_y = 0
 	var/targ_z = 0
+	var/targ_z = 0
 	// Automatic offsets from target
 	var/offset_x = 0
 	var/offset_y = 0

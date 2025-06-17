@@ -232,7 +232,6 @@
 
 	data["xcoord"] = src.last_x
 	data["ycoord"] = src.last_y
-	data["zcoord"] = src.last_z
 
 	return data
 

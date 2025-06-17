@@ -919,6 +919,10 @@
 /obj/flamer_fire/onZImpact(turf/impact_turf, height)
 	return
 
+// So it doens't do the spinny animation
+/obj/flamer_fire/onZImpact(turf/impact_turf, height)
+	return
+
 /obj/item/weapon/gun/flamer/survivor
 	name = "\improper improvised flamethrower"
 	desc = "A custom made incinerator, made from repurposed welding and piping equipment."

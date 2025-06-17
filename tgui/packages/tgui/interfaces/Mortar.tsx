@@ -12,7 +12,7 @@ type Data = {
 };
 
 export const Mortar = (props) => {
-  const { act, data } = useBackend<Data>();
+  const { act, data } = useBackend();
   const {
     data_target_x,
     data_target_y,

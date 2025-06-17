@@ -681,10 +681,7 @@ const SupplyDrop = (props) => {
             </LabeledControls.Item>
             <LabeledControls.Item label="HEIGHT">
               <NumberInput
-                step={1}
                 value={supplyZ}
-                minValue={-Infinity}
-                maxValue={Infinity}
                 onChange={(value) => setSupplyZ(value)}
                 width="75px"
               />
@@ -774,10 +771,7 @@ const OrbitalBombardment = (props) => {
             </LabeledControls.Item>
             <LabeledControls.Item label="HEIGHT">
               <NumberInput
-                step={1}
                 value={OBZ}
-                minValue={-Infinity}
-                maxValue={Infinity}
                 onChange={(value) => setOBZ(value)}
                 width="75px"
               />

@@ -509,7 +509,7 @@ GLOBAL_DATUM_INIT(supply_controller, /datum/controller/supply, new())
 
 		if("set_z")
 			var/new_z = text2num(params["set_z"])
-			if(isnull(new_z))
+			if(!new_z)
 				return
 			z_supply = new_z
 			. = TRUE

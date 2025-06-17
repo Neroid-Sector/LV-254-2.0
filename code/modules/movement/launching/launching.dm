@@ -155,7 +155,7 @@
 
 	flags_atom |= NO_ZFALL
 
-	launch_towards(LM, tracking)
+	launch_towards(LM)
 
 	flags_atom &= ~NO_ZFALL
 	var/turf/end_turf = get_turf(src)
