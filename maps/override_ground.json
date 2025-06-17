@@ -10,7 +10,26 @@
     "monkey_types": [
         "neaera"
     ],
-    "traits": [{ "Ground": true }],
+    "traits": [
+        {
+            "Ground": true,
+            "Up": 1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Down": -1
+        }
+    ],
     "camouflage": "urban",
     "gamemodes": [
         "Distress Signal",
