@@ -11,8 +11,61 @@ import {
   Stack,
   Table,
   Tabs,
-} from '../components';
-import { Window } from '../layouts';
+} from 'tgui/components';
+import { Window } from 'tgui/layouts';
+
+type MarineData = {
+  name: string;
+  state: string;
+  has_helmet: BooleanLike;
+  role: string;
+  acting_sl: string;
+  fteam: string;
+  distance: string;
+  area_name: string;
+  ref: string;
+};
+
+type Data = {
+  marines: MarineData[];
+  squad_leader: MarineData;
+  total_deployed: number;
+  living_count: number;
+  leader_count: number;
+  ftl_count: number;
+  spec_count: number;
+  medic_count: number;
+  engi_count: number;
+  smart_count: number;
+  leaders_alive: number;
+  ftl_alive: number;
+  spec_alive: number;
+  medic_alive: number;
+  engi_alive: number;
+  smart_alive: number;
+  specialist_type: string;
+  theme: string;
+  squad_list: string[];
+  current_squad: string;
+  primary_objective: string[] | null;
+  secondary_objective: string[] | null;
+  z_hidden: BooleanLike;
+  saved_coordinates: {
+    x: number;
+    y: number;
+    z: number;
+    comment: string;
+    index: number;
+  }[];
+  can_launch_crates: BooleanLike;
+  has_crate_loaded: BooleanLike;
+  can_launch_obs: BooleanLike;
+  ob_cooldown?: number;
+  ob_loaded: BooleanLike;
+  ob_safety: Boolean;
+  supply_cooldown: number;
+  operator: string;
+};
 
 export const OverwatchConsole = (props) => {
   const { act, data } = useBackend();
@@ -680,6 +733,9 @@ const OrbitalBombardment = (props) => {
   if (data.ob_cooldown) {
     ob_status = 'Cooldown - ' + data.ob_cooldown / 10 + ' seconds';
     ob_color = 'yellow';
+  } else if (data.ob_safety) {
+    ob_status = 'Cannon Safety Engaged';
+    ob_color = 'red';
   } else if (!data.ob_loaded) {
     ob_status = 'Not chambered';
     ob_color = 'red';
@@ -722,8 +778,8 @@ const OrbitalBombardment = (props) => {
             <Button
               fontSize="20px"
               width="100%"
-              icon="bomb"
-              color="red"
+              icon={data.ob_safety ? 'ban' : 'bomb'}
+              color={data.ob_safety ? 'transperant' : 'red'}
               onClick={() => act('dropbomb', { x: OBX, y: OBY, z: OBZ })}
             >
               Fire
