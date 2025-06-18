@@ -146,7 +146,7 @@
 	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
 
 /datum/equipment_preset/clf/engineer/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	var/obj/item/clothing/under/colonist/clf/uniform = new()
+	var/obj/item/clothing/under/colonist/insurgent/uniform = new()
 	var/obj/item/clothing/accessory/storage/webbing/webbing = new()
 	uniform.attach_accessory(new_human, webbing)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)

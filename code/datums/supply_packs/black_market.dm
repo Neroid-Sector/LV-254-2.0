@@ -91,7 +91,7 @@ Non-USCM items, from CLF, UPP, colonies, etc. Mostly combat-related.
 			new /obj/item/clothing/under/pizza(src)
 			new /obj/item/clothing/head/soft/red(src)
 		if(3) //clf
-			new /obj/item/clothing/under/colonist/clf(src)
+			new /obj/item/clothing/under/colonist/insurgent(src)
 			new /obj/item/clothing/suit/storage/militia(src)
 			new /obj/item/clothing/head/militia(src)
 			new /obj/item/clothing/gloves/marine/veteran(src)
@@ -1298,7 +1298,7 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 		if(41 to 45)
 		// Spare CLF gear!
 			new /obj/effect/essentials_set/random/clf_shoes(loc)
-			new /obj/item/clothing/under/colonist/clf(loc)
+			new /obj/item/clothing/under/colonist/insurgent(loc)
 			new /obj/effect/essentials_set/random/clf_armor(loc)
 			new /obj/effect/essentials_set/random/clf_gloves(loc)
 			new /obj/effect/essentials_set/random/clf_head(loc)

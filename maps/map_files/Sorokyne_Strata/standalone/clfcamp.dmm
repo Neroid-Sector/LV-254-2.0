@@ -2,7 +2,7 @@
 "aa" = (
 /obj/structure/closet,
 /obj/effect/landmark/objective_landmark/science,
-/obj/item/clothing/under/colonist/clf,
+/obj/item/clothing/under/colonist/insurgent,
 /obj/structure/sign/banners/clf_flag{
 	pixel_y = 32
 	},
@@ -880,7 +880,7 @@
 "Cp" = (
 /obj/structure/closet,
 /obj/effect/landmark/objective_landmark/science,
-/obj/item/clothing/under/colonist/clf,
+/obj/item/clothing/under/colonist/insurgent,
 /turf/open/floor/wood,
 /area/strata/ag/interior/outpost/clf_dorms)
 "Cr" = (

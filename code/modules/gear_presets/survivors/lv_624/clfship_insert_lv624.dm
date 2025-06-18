@@ -50,7 +50,7 @@
 	add_ice_colony_rebel_equipment(new_human)
 
 	//No random armor, so that it's more clear that he's the leader
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/insurgent(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/hos(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
@@ -93,7 +93,7 @@
 /datum/equipment_preset/survivor/clf/medic/load_gear(mob/living/carbon/human/new_human)
 	add_ice_colony_rebel_equipment(new_human)
 
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/colonist/insurgent/CLF = new()
 	var/obj/item/clothing/accessory/storage/surg_vest/equipped/W = new()
 	CLF.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
@@ -102,7 +102,7 @@
 	spawn_rebel_helmet(new_human)
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/insurgent(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BELT)
@@ -143,7 +143,7 @@
 
 	add_ice_colony_rebel_equipment(new_human)
 
-	var/obj/item/clothing/under/colonist/clf/M = new()
+	var/obj/item/clothing/under/colonist/insurgent/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
@@ -217,7 +217,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/jan, WEAR_HEAD)
 	//body
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/colonist/insurgent/CLF = new()
 	var/obj/item/clothing/accessory/storage/webbing/webbing = new()
 	CLF.attach_accessory(new_human, webbing)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)

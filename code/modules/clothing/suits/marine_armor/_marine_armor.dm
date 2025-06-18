@@ -96,7 +96,6 @@
 	var/flags_marine_armor = ARMOR_SQUAD_OVERLAY|ARMOR_LAMP_OVERLAY
 	var/specialty = "M3 pattern marine" //Same thing here. Give them a specialty so that they show up correctly in vendors. speciality does NOTHING if you have NO_NAME_OVERRIDE
 	w_class = SIZE_HUGE
-	uniform_restricted = list(/obj/item/clothing/under/marine)
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
 	time_to_unequip = 20
 	time_to_equip = 20

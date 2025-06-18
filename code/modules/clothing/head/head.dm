@@ -986,6 +986,14 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	desc = "This metal bucket appears to have been modified with padding and chin-straps, plus an eye-slit carved into the \"front\". Presumably, it is intended to be worn on the head, possibly for protection."
 	icon_state = "bucket"
 
+/obj/item/clothing/head/militia/mining
+	name = "Armored Mining helmet"
+	desc = "Hey if it protects your head from rocks, it should protect from the boot of authority too. Featuring some aftermarket sheetmetal to make it a bit thinker, it might even stop bullets."
+	icon_state = "clf_miner"
+
+	armor_melee = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+
 /obj/item/clothing/head/general
 	name = "\improper armored General cap"
 	desc = "A sturdy general officer's cap. More protective than it seems. Please don't ditch this for a helmet like a punk."

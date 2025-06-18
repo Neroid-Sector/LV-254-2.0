@@ -311,7 +311,7 @@
 	if(!istype(new_human))
 		return
 	var/uniformpath = pick(
-		/obj/item/clothing/under/colonist/clf,
+		/obj/item/clothing/under/colonist/insurgent,
 		)
 	new_human.equip_to_slot_or_del(new uniformpath, WEAR_BODY)
 
@@ -728,7 +728,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 /datum/equipment_preset/proc/add_ice_colony_rebel_equipment(mob/living/carbon/human/new_human)
 	if((SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD]) && (SSmapping.configs[GROUND_MAP].map_name != MAP_CORSAT))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/militia(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/insurgent(new_human), WEAR_BODY)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia(new_human), WEAR_JACKET)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
@@ -984,7 +984,7 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("CLF Shoes (Random)", 0, /obj/effect/essentials_set/random/clf_shoes, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/insurgent, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor (Random)", 0, /obj/effect/essentials_set/random/clf_armor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("CLF Gloves (Random)", 0, /obj/effect/essentials_set/random/clf_gloves, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Belt (Random)", 0, /obj/effect/essentials_set/random/clf_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),

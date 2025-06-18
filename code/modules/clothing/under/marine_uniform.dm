@@ -894,15 +894,33 @@
 	worn_state = "workwear_green"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/colonist/clf
-	name = "\improper Colonial Liberation Front uniform"
-	desc = "A stylish grey-green jumpsuit - standard issue for colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+/obj/item/clothing/under/colonist/insurgent
+	name = "\improper Improvised Insurgent uniform"
+	desc = "A once stylish, grease stained grey-green jumpsuit - Standard issue for unspecialized Wey-Yu colonists in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas."
 	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/CLF.dmi'
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/CLF.dmi',
 	)
 	icon_state = "clf_uniform"
 	worn_state = "clf_uniform"
+
+/obj/item/clothing/under/colonist/insurgent/fighter
+	name = "\improper Improvised Camouflage Insurgent uniform"
+	desc = "A pair of coveralls and a worn out work-shirt shoddily covered in brown and green dye to break up its sillhouette - Standard issue for unspecialized Wey-Yu colonists in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas."
+	icon_state = "clf_fighter"
+	worn_state = "clf_fighter"
+
+/obj/item/clothing/under/colonist/insurgent/medic
+	name = "\improper Improvised Insurgent Medic uniform"
+	desc = "A pair of coveralls and work-shirt shoddily covered in brown and green dye to break up its sillhouette - Standard issue for unspecialized Wey-Yu colonists in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas."
+	icon_state = "clf_fighter"
+	worn_state = "clf_fighter"
+
+/obj/item/clothing/under/colonist/insurgent/leader
+	name = "\improper Improvised Camouflage Insurgent Leader uniform"
+	desc = "A pair of coveralls and work-shirt shoddily covered in brown and green dye to break up its sillhouette - Standard issue for unspecialized Wey-Yu colonists in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas."
+	icon_state = "clf_fighter"
+	worn_state = "clf_fighter"
 
 /obj/item/clothing/under/colonist/white_service
 	name = "white service uniform"

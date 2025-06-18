@@ -49,7 +49,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/soldier
-	name = "CLF Soldier"
+	name = "Insurgent Soldier"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF
 	rank = JOB_CLF
@@ -60,7 +60,7 @@
 	skills = /datum/skills/clf
 
 /datum/equipment_preset/clf/soldier/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/under/colonist/insurgent/jumpsuit = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	jumpsuit.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
@@ -83,11 +83,64 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 
+
+	if(prob(15))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red(new_human), WEAR_FACE)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black(new_human), WEAR_FACE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/tornscarf/urban(new_human), WEAR_FACE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_FACE)
+
+	if(prob(15))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+	if(prob(35))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs(new_human), WEAR_R_EAR)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_R_EAR) //fuck you I know this is shitcode
+
+
+/datum/equipment_preset/clf/soldier/elite
+	name = "Insurgent Soldier(Elite)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF
+	rank = JOB_CLF
+	role_comm_title = "Strm.Tpr."
+	skills = /datum/skills/mercenary/elite
+
+/datum/equipment_preset/clf/soldier/elite/load_gear(mob/living/carbon/human/new_human)
+	//TODO: add unique backpacks and satchels
+	//clothes
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/command, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs(new_human), WEAR_R_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/insurgent/fighter, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/militia/upplight, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/militia/mining, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange, WEAR_EYES)
+	//storage items, belt spawning is handled in the spawn elite weapon proc.
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp, WEAR_R_STORE)
+	//backpack and stuff in it
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/hefa, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/attachments(new_human), WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	spawn_weapon(/obj/item/weapon/gun/rifle/type71/flamer/leader, /obj/item/ammo_magazine/rifle/type71/ap, new_human)
+
+
 /datum/equipment_preset/clf/soldier/get_antag_clothing_equipment()
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("CLF Shoes (Random)", 0, /obj/effect/essentials_set/random/clf_shoes, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/insurgent, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor (Random)", 0, /obj/effect/essentials_set/random/clf_armor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("CLF Gloves (Random)", 0, /obj/effect/essentials_set/random/clf_gloves, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Belt (Random)", 0, /obj/effect/essentials_set/random/clf_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
@@ -154,9 +207,8 @@
 		list("Black Webbing", 10, /obj/item/clothing/accessory/storage/webbing/black, null, VENDOR_ITEM_REGULAR),
 	)
 
-
-
 //*****************************************************************************************************/
+
 
 /datum/equipment_preset/clf/engineer
 	name = "CLF Engineer"
@@ -171,7 +223,7 @@
 
 /datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/clf/M = new()
+	var/obj/item/clothing/under/colonist/insurgent/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
@@ -204,7 +256,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("CLF Shoes (Random)", 0, /obj/effect/essentials_set/random/clf_shoes, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/insurgent, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor (Random)", 0, /obj/effect/essentials_set/random/clf_armor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Insulated Gloves", 0, /obj/item/clothing/gloves/yellow, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/distress/CLF/cct, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
@@ -299,7 +351,7 @@
 
 /datum/equipment_preset/clf/medic/load_gear(mob/living/carbon/human/new_human)
 
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/colonist/insurgent/CLF = new()
 	var/obj/item/clothing/accessory/storage/surg_vest/equipped/W = new()
 	CLF.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
@@ -336,7 +388,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("CLF Shoes (Random)", 0, /obj/effect/essentials_set/random/clf_shoes, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/insurgent, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor (Random)", 0, /obj/effect/essentials_set/random/clf_armor, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("CLF Gloves (Random)", 0, /obj/effect/essentials_set/random/clf_gloves, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Head Gear (Random)", 0, /obj/effect/essentials_set/random/clf_head, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
@@ -466,7 +518,7 @@
 /datum/equipment_preset/clf/specialist/load_gear(mob/living/carbon/human/new_human)
 
 	//jumpsuit and their webbing
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/colonist/insurgent/CLF = new()
 	var/obj/item/clothing/accessory/storage/webbing/five_slots/W = new()
 	CLF.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
@@ -508,7 +560,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Combat Boots", 0, /obj/item/clothing/shoes/combat, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/insurgent, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor", 0, /obj/item/clothing/suit/storage/militia, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Combat Gloves", 0, /obj/item/clothing/gloves/combat, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
@@ -595,7 +647,7 @@
 /datum/equipment_preset/clf/leader/load_gear(mob/living/carbon/human/new_human)
 
 	//No random armor, so that it's more clear that he's the leader
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/insurgent(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/hos(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
@@ -629,7 +681,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Combat Boots", 0, /obj/item/clothing/shoes/combat, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/insurgent, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Armor", 0, /obj/item/clothing/suit/storage/militia, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Black Gloves", 0, /obj/item/clothing/gloves/black, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Belt (Random)", 0, /obj/effect/essentials_set/random/clf_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
@@ -798,7 +850,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/jan, WEAR_HEAD)
 	//body
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/colonist/insurgent/CLF = new()
 	var/obj/item/clothing/accessory/storage/webbing/webbing = new()
 	CLF.attach_accessory(new_human, webbing)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
@@ -959,7 +1011,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/jan, WEAR_HEAD)
 	//body
-	var/obj/item/clothing/under/colonist/clf/CLF = new()
+	var/obj/item/clothing/under/colonist/insurgent/CLF = new()
 	var/obj/item/clothing/accessory/storage/webbing/webbing = new()
 	CLF.attach_accessory(new_human, webbing)
 	new_human.equip_to_slot_or_del(CLF, WEAR_BODY)
@@ -1002,7 +1054,7 @@
 /datum/equipment_preset/clf/commander/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/mercenary/miner(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/command(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/insurgent(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia/smartgun(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact(new_human), WEAR_IN_JACKET)
@@ -1019,7 +1071,7 @@
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Combat Boots", 0, /obj/item/clothing/shoes/combat, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/clf, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CLF Uniform", 0, /obj/item/clothing/under/colonist/insurgent, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("CLF Smartgun Armor", 0, /obj/item/clothing/suit/storage/militia/smartgun, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Black Gloves", 0, /obj/item/clothing/gloves/black, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("CLF Smartgunner Belt", 0, /obj/item/storage/belt/gun/smartgunner/clf, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
@@ -1123,7 +1175,7 @@
 	faction = FACTION_HUNTED_CLF
 
 /datum/equipment_preset/clf/soldier/hunted/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/under/colonist/insurgent/jumpsuit = new()
 	var/obj/item/clothing/accessory/storage/webbing/webbing = new()
 	jumpsuit.attach_accessory(new_human, webbing)
 	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
@@ -1148,7 +1200,7 @@
 	faction = FACTION_HUNTED_CLF
 
 /datum/equipment_preset/clf/leader/hunted/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/clf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/insurgent(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/hos(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
@@ -1177,7 +1229,7 @@
 	faction = FACTION_HUNTED_CLF
 
 /datum/equipment_preset/clf/engineer/hunted/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/colonist/clf/terrorist = new()
+	var/obj/item/clothing/under/colonist/insurgent/terrorist = new()
 	var/obj/item/clothing/accessory/storage/webbing/wearer = new()
 	terrorist.attach_accessory(new_human, wearer)
 	new_human.equip_to_slot_or_del(terrorist, WEAR_BODY)
