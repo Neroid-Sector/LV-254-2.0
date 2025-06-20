@@ -896,7 +896,7 @@
 
 /obj/item/clothing/under/colonist/insurgent
 	name = "\improper Improvised Insurgent uniform"
-	desc = "A once stylish, grease stained grey-green jumpsuit - Standard issue for unspecialized Wey-Yu colonists in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas."
+	desc = "A once stylish, grease-stained grey-green jumpsuit - Standard issue for non-specialty Wey-Yu colonists in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas. The Weyland-Yutani patches have been crossed out with markers and derogatory words written in their place."
 	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/CLF.dmi'
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/CLF.dmi',
@@ -912,13 +912,13 @@
 
 /obj/item/clothing/under/colonist/insurgent/medic
 	name = "\improper Improvised Insurgent Medic uniform"
-	desc = "A pair of coveralls and work-shirt shoddily covered in brown and green dye to break up its sillhouette - Standard issue for unspecialized Wey-Yu colonists in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas."
+	desc = "A once stylish, blood-stained seafoam green jumpsuit - Standard issue for assistant Wey-Yu colonial medical staff in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas. The medical symbols have been replaced in certain places by skulls."
 	icon_state = "clf_fighter"
 	worn_state = "clf_fighter"
 
 /obj/item/clothing/under/colonist/insurgent/leader
 	name = "\improper Improvised Camouflage Insurgent Leader uniform"
-	desc = "A pair of coveralls and work-shirt shoddily covered in brown and green dye to break up its sillhouette - Standard issue for unspecialized Wey-Yu colonists in less developed settlements. This version appears to have the symbol of the Insurgents emblazoned in select areas."
+	desc = "A once stylish, grease stained charcoal grey jumpsuit - Standard issue for nonspecialty Wey-Yu colonists in less developed settlements. This suit presumably belonged to someone of importance, as the quality appears to be much higher. The word 'Director' is faintly legible above a hastily-attached replacement name patch reading 'BOSS MAN'. This version appears imitate military uniforms with the symbol of the Insurgents emblazoned on each shoulder and on the chest."
 	icon_state = "clf_fighter"
 	worn_state = "clf_fighter"
 

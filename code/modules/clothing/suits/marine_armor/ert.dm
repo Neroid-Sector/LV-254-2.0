@@ -583,35 +583,50 @@
 
 /obj/item/clothing/suit/storage/marine/ghillie/militia
 	name = "\improper Camouflaged Hunting Gear Rig"
-	desc = "An Camouflaged Hunter Gear Rig that has an Armor Plate on the Body while it sports handmade kneepads, is the basic gear used by the more elite Insurgent Freedom Fighters. This Armor Features civilian grade thermal dampening."
-	icon = 'icons/obj/items/clothing/suits/suits_by_faction/CLF.dmi'
+	desc = "A camouflaged gear rig, frequently worn by hunters, has been modifed with an armor plate attached to the middle while it sports handmade kneepads. This is the basic gear used by the more 'elite' insurgent freedom fighters. This armor features civilian-grade thermal dampening"
 	icon_state = "clf_hunter"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/CLF.dmi'
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/CLF.dmi'
 	)
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
-	icon_state = "clf_hunter"
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	storage_slots = 3
 
-/obj/item/clothing/suit/storage/militia/militiahunter
+/obj/item/clothing/suit/storage/marine/militia
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/CLF.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/CLF.dmi'
+	)
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+
+/obj/item/clothing/suit/storage/militia/militia/hunter
 	name = "\improper Camouflaged Hunting Gear Rig"
-	desc = "A Civilian style Hunting Rig that has an venlar breast plate, and handmade kneepads, is among the basic gear used by most Insurgent Freedom Fighters."
+	desc = "A civilian-style hunting rig that has an venlar breast plate and handmade kneepads. This is some of the most basic gear possible used by most insurgent freedom fighters."
 	icon_state = "clf_hunter"
 	storage_slots = 3
 
 /obj/item/clothing/suit/storage/marine/militia/upplight
 	name = "\improper UA-M1 Repainted body armor"
 	desc = "A set of UPP combat Armor modified by insurgents to be more lightweight and mobile."
-	icon = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/CLF.dmi'
 	icon_state = "clf_combat"
 	storage_slots = 3
 
-/obj/item/clothing/suit/storage/marine/militia/ppheavy
+/obj/item/clothing/suit/storage/marine/militia/uppheavy
 	name = "\improper UA-M1 Repainted body armor"
 	icon = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/CLF.dmi'
-	desc = "An extremely heavy-duty set of body armor made out of Handcrafted Armor Plates, Repurposed Surplus Ballistic Vests and Several Armors Combined in one, Heavy and Highly Resistant, Made by the Insurgents For Their Autogunners and to Show that they are Prepared for Something Bigger than a Guerrilla War."
+	desc = "An extremely heavy-duty set of body armor made out of handcrafted armor plates and repurposed obsolete surplus ballistic vests. Heavy and highly-resistant, this armor is made by the insurgents for their Autogunners and to show that they aren't going anywhere."
 	icon_state = "clf_heavy"
 	storage_slots = 2
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_melee = CLOTHING_ARMOR_HIGHPLUS
+
+/obj/item/clothing/suit/storage/marine/militia/ua
+	desc = "A set of UA CMB officer's combat Armor modified by insurgents, its former owner won't be needing it any more."
+	icon_state = "clf_ua"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+	storage_slots = 2
+
 
 //===========================//CMB\\================================\\
 //=====================================================================\\
