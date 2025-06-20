@@ -74,6 +74,21 @@
 /obj/item/device/helmet_visor/proc/get_helmet_examine_text()
 	return SPAN_NOTICE("\A [name] is flipped down.")
 
+/obj/item/device/helmet_visor/uscm
+	hud_type = MOB_HUD_FACTION_MARINE
+
+/obj/item/device/helmet_visor/upp
+	hud_type = MOB_HUD_FACTION_UPP
+
+/obj/item/device/helmet_visor/clf
+	hud_type = MOB_HUD_FACTION_CLF
+
+/obj/item/device/helmet_visor/twe
+	hud_type = MOB_HUD_FACTION_TWE
+
+/obj/item/device/helmet_visor/cmb
+	hud_type = MOB_HUD_FACTION_CMB
+
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
 	icon_state = "med_sight"

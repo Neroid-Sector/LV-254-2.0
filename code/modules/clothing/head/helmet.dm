@@ -411,7 +411,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	var/helmet_band_icon = 'icons/mob/humans/onmob/clothing/helmet_garb/misc.dmi'
 
 	///Any visors built into the helmet
-	var/list/built_in_visors = list(new /obj/item/device/helmet_visor)
+	var/list/built_in_visors = list(new /obj/item/device/helmet_visor/uscm, new /obj/item/device/helmet_visor/night_vision/marine_raider)
 	///Any visors that have been added into the helmet
 	var/list/inserted_visors = list()
 	///Max amount of inserted visors
@@ -861,14 +861,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	specialty = "M50 tanker"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/welding_visor/tanker)
+	built_in_visors = list(new /obj/item/device/helmet_visor/uscm, new /obj/item/device/helmet_visor/night_vision/marine_raider, new /obj/item/device/helmet_visor/welding_visor/tanker)
 
 /obj/item/clothing/head/helmet/marine/medic
 	name = "\improper M10 corpsman helmet"
 	desc = "An M10 marine helmet version worn by marine hospital corpsmen. Has red cross painted on its front."
 	icon_state = "med_helmet"
 	specialty = "M10 pattern medic"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced)
+	built_in_visors = list(new /obj/item/device/helmet_visor/uscm, new /obj/item/device/helmet_visor/night_vision/marine_raider)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 
 /obj/item/clothing/head/helmet/marine/medic/white
@@ -933,6 +933,29 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper XM12 pattern intelligence helmet"
 	desc = "An experimental brain-bucket. A dust ruffle hangs from back. Moderately better at deflecting blunt objects at the cost of humiliation, can also hold a second visor optic. But who will be laughing at the memorial? Not you, you'll be busy getting medals for your intel work."
 	specialty = "XM12 pattern intel"
+
+/obj/item/clothing/head/helmet/marine/militia
+	icon_state = "clf_m10"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/CLF.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_righthand.dmi'
+	)
+	item_state_slots = list(
+		WEAR_L_HAND = "helmet",
+		WEAR_R_HAND = "helmet"
+	)
+	flags_atom = NO_GAMEMODE_SKIN
+	desc = "An m10 helmet stolen from the corpse of a fallen USCM Marine, now put to use against the UA by an insurgent. It's had most of the electronics and tracking equipment ripped out in favor of some bespoke augmentaions. Damage to the battery has rendered the Infared sight unreliable."
+	built_in_visors = list(new /obj/item/device/helmet_visor/welding_visor, new /obj/item/device/helmet_visor/night_vision)
+
+/obj/item/clothing/head/helmet/marine/militia/heavy
+	icon_state = "clf_m10heavy"
+	item_state = "clf_m10heavy"
+	flags_inv_hide = HIDEMASK|HIDEALLHAIR|HIDEEARS|HIDETOPHAIR
+	flags_atom = NO_GAMEMODE_SKIN
+	desc = "An m10 helmet stolen from the corpse of a fallen Marine, now put to use against the UA by an insurgent. It's had most of the electronics and tracking equipment ripped out in favor of some bespoke augmentaions. Damage to the battery has rendered the Infared sight unreliable."
 
 /obj/item/clothing/head/helmet/marine/specialist
 	name = "\improper B18 helmet"
