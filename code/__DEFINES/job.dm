@@ -394,14 +394,14 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //-------- FORECON --------//
 
-#define JOB_FORECON_CO "Reconnaissance Commander"
-#define JOB_FORECON_SL "Reconnaissance Squad Leader"
-#define JOB_FORECON_SYN "Reconnaissance Synthetic"
-#define JOB_FORECON_SNIPER "Reconnaissance Sniper"
-#define JOB_FORECON_MARKSMAN "Reconnaissance Marksman"
-#define JOB_FORECON_SUPPORT "Reconnaissance Support Technician"
-#define JOB_FORECON_RIFLEMAN "Reconnaissance Rifleman"
-#define JOB_FORECON_SMARTGUNNER "Reconnaissance Smartgunner"
+#define JOB_FORECON_CO "USCM FORECON Commander"
+#define JOB_FORECON_SL "USCM FORECON Squad Leader"
+#define JOB_FORECON_SYN "USCM FORECON Synthetic"
+#define JOB_FORECON_SNIPER "USCM FORECON Sniper"
+#define JOB_FORECON_MARKSMAN "USCM FORECON Marksman"
+#define JOB_FORECON_SUPPORT "USCM FORECON Support Technician"
+#define JOB_FORECON_RIFLEMAN "USCM FORECON Rifleman"
+#define JOB_FORECON_SMARTGUNNER "USCM FORECON Smartgunner"
 
 #define JOB_FORECON_LIST list(JOB_FORECON_CO, JOB_FORECON_SL, JOB_FORECON_SYN, JOB_FORECON_SNIPER, JOB_FORECON_MARKSMAN, JOB_FORECON_SUPPORT, JOB_FORECON_RIFLEMAN, JOB_FORECON_SMARTGUNNER)
 
@@ -459,15 +459,16 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_CLF_SPECIALIST "Insurgent Field Specialist"
 #define JOB_CLF_LEADER "Insurgent Cell Leader"
 #define JOB_CLF_COMMANDER "Insurgent Cell Commander"
-#define JOB_CLF_SYNTH "Insurgent Multipurpose Synthetic"
+#define JOB_CLF_SYNTH "Insurgent Fight'n Joe"
 
 #define JOB_CLF_E "Insurgent Commando"
 #define JOB_CLF_ENGI_E "Insurgent Commando Field Technician"
 #define JOB_CLF_MEDIC_E "Insurgent Commando Field Medic"
 #define JOB_CLF_SPECIALIST_E "Insurgent Commando Specialist"
 #define JOB_CLF_LEADER_E "Insurgent Commando Leader"
+#define JOB_CLF_COMMISSAR "Insurgent Political Komissar"
 
-#define CLF_JOB_LIST list(JOB_CLF, JOB_CLF_ENGI, JOB_CLF_MEDIC, JOB_CLF_SPECIALIST, JOB_CLF_LEADER, JOB_CLF_COMMANDER, JOB_CLF_SYNTH)
+#define CLF_JOB_LIST list(JOB_CLF, JOB_CLF_ENGI, JOB_CLF_MEDIC, JOB_CLF_SPECIALIST, JOB_CLF_LEADER, JOB_CLF_COMMANDER, JOB_CLF_E, JOB_CLF_ENGI_E, JOB_CLF_MEDIC_E, JOB_CLF_SPECIALIST_E, JOB_CLF_LEADER_E, JOB_CLF_COMMISSAR, JOB_CLF_SYNTH)
 
 //-------- TWE --------//
 #define JOB_TWE_REPRESENTATIVE "TWE Representative"
@@ -560,6 +561,10 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_MLP_CAN "Candidate(Miners Liberation Party)"
 #define JOB_UA_CAN "Candidate(United Americas)"
 #define JOB_VR_CAN "Candidate(Voodoo Rationale`)"
+
+#define JOB_MLP_REP "Politician(Miners Liberation Party)"
+#define JOB_UA_REP "Politician(United Americas)"
+#define JOB_VRREP "Politician(Voodoo Rationale`)"
 
 //--guards--//
 #define JOB_MLP_Guard"Bodyguard(MLP)"

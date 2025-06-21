@@ -986,13 +986,43 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	desc = "This metal bucket appears to have been modified with padding and chin-straps, plus an eye-slit carved into the \"front\". Presumably, it is intended to be worn on the head, possibly for protection."
 	icon_state = "bucket"
 
-/obj/item/clothing/head/militia/mining
-	name = "Armored Mining helmet"
-	desc = "Hey if it protects your head from rocks, it should protect from the boot of authority too. Featuring some aftermarket sheetmetal to make it a bit thinker, it might even stop bullets."
-	icon_state = "clf_miner"
+/obj/item/clothing/head/militia/ranger
+	name = "Insurgent Ranger helmet"
+	desc = "A sturdy helmet made from a mining helmet and reinforced with the reclaimed plating of an armored vehicle. The front features a small plate to protect the wearer's face from shrapnel or debris in combat."
+	icon_state = "mlu_ranger"
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 
-	armor_melee = CLOTHING_ARMOR_ULTRAHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+/obj/item/clothing/head/militia/ranger/noface
+	name = "Insurgent Ranger helmet"
+	desc = "A sturdy helmet made from a mining helmet and reinforced with the reclaimed plating of an armored vehicle."
+	icon_state = "mlu_ranger2"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+
+/obj/item/clothing/head/militia/ranger/lamp
+	name = "Insurgent Ranger helmet"
+	desc = "A sturdy helmet made from a mining helmet and reinforced with the reclaimed plating of an armored vehicle."
+	icon_state = "mlu_ranger3"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+
+/obj/item/clothing/head/militia/riot
+	name = "Insurgent helmet"
+	desc = "A sturdy UA Riot officer's helmet stolen by an insurgent. Its paint has been stripped and replaced with a dull brown and grey to better blend in."
+	icon_state = "clf_riot"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+
+/obj/item/clothing/head/militia/mining
+	name = "Insurgent Work helmet"
+	desc = "Hey if it protects your head from rocks, it should protect from the boot of authority too. Featuring some aftermarket sheetmetal to make it a bit thinker, it might even stop bullets. Its bright safety yellow paint has been stripped and replaced with a dull brown and grey to better blend in."
+	icon_state = "clf_miner"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 
 /obj/item/clothing/head/general
 	name = "\improper armored General cap"

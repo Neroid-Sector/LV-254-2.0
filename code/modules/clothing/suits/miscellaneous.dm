@@ -73,6 +73,13 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 
+/obj/item/clothing/suit/pirate/clf
+	name = "Kommisar's coat"
+	desc = "A coat owned and worn by someone who's trying to feel self important."
+	icon_state = "pirate"
+	item_state = "pirate"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+
 /obj/item/clothing/suit/judgerobe
 	name = "judge's robe"
 	desc = "This robe commands authority."
