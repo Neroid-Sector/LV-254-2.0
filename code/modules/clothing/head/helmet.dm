@@ -936,7 +936,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/militia
 	icon_state = "clf_m10"
-	icon = 'icons/obj/items/clothing/hats/hats_by_faction/UPP.dmi'
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/CLF.dmi'
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/CLF.dmi',
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_lefthand.dmi',
@@ -952,7 +952,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/militia/heavy
 	icon_state = "clf_m10heavy"
-	item_state = "clf_m10heavy"
 	flags_inv_hide = HIDEMASK|HIDEALLHAIR|HIDEEARS|HIDETOPHAIR
 	flags_atom = NO_GAMEMODE_SKIN
 	desc = "An m10 helmet stolen from the corpse of a fallen Marine, now put to use against the UA by an insurgent. It's had most of the electronics and tracking equipment ripped out in favor of some bespoke augmentaions. Damage to the battery has rendered the Infared sight unreliable."

@@ -1371,8 +1371,13 @@ Wrist Accessories
 	desc = "An older model of flak jacket worn by combat support personnel such as dropship crew, and smartgunners. Much comfier than it's M70 successor, can be worn under most combat armor, however ballistic protection leaves much to be desired..."
 	icon = 'icons/obj/items/clothing/accessory/misc.dmi'
 	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/misc.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/obj/items/clothing/accessory/misc.dmi',
+		WEAR_JACKET = 'icons/obj/items/clothing/accessory/misc.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_righthand.dmi'
+	)
 	icon_state = "flak"
-	item_state = "flak"
 	var/tucked_in = FALSE
 	flags_armor_protection = BODY_FLAG_CHEST
 	armor_melee = CLOTHING_ARMOR_MEDIUM

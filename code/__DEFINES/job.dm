@@ -453,7 +453,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_COMMISSAR "UPP Political Commissar"
 
 //-------- CLF --------//
-#define JOB_CLF "Insurget Guerilla"
+#define JOB_CLF "Insurgent Guerilla"
 #define JOB_CLF_ENGI "Insurgent Field Technician"
 #define JOB_CLF_MEDIC "Insurgent Field Medic"
 #define JOB_CLF_SPECIALIST "Insurgent Field Specialist"
