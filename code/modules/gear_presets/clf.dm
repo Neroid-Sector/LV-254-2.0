@@ -211,7 +211,7 @@
 
 
 /datum/equipment_preset/clf/engineer
-	name = "CLF Engineer"
+	name = "Insurgent Engineer"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_ENGI
 	rank = JOB_CLF_ENGI
@@ -381,7 +381,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/medic
-	name = "CLF Medic"
+	name = "Insurgent Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_MEDIC
 	rank = JOB_CLF_MEDIC
@@ -433,6 +433,14 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs(new_human), WEAR_R_EAR)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_R_EAR) //fuck you I know this is shitcode
+
+
+/datum/equipment_preset/clf/medic/elite
+	name = "Insurgent Medic(Elite)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF_MEDIC_E
+	rank = JOB_CLF_MEDIC
+	role_comm_title = "Strm.Tpr."
 
 /datum/equipment_preset/clf/medic/elite/load_gear(mob/living/carbon/human/new_human)
 	//webbing
@@ -585,7 +593,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/specialist
-	name = "CLF Specialist"
+	name = "Insurgent Field Specialist"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_SPECIALIST
 	rank = JOB_CLF_SPECIALIST
@@ -818,7 +826,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/leader
-	name = "CLF Leader"
+	name = "Insurgent Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_LEADER
 	rank = JOB_CLF_LEADER
@@ -1047,10 +1055,6 @@
 	rank = JOB_CLF_LEADER
 	role_comm_title = "Ranger LDR"
 	skills = /datum/skills/clf/leader
-
-/datum/equipment_preset/clf/leader/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY, ACCESS_CLF_LEADERSHIP, ACCESS_CLF_FLIGHT)
 
 /datum/equipment_preset/clf/leader/ranger/load_gear(mob/living/carbon/human/new_human)
 
@@ -1306,7 +1310,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/synth
-	name = "CLF Multipurpose Synthetic"
+	name = "Insurgent Fight'n Joe Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	languages = ALL_SYNTH_LANGUAGES
@@ -1508,7 +1512,7 @@
 	)
 
 /datum/equipment_preset/clf/synth/combat
-	name = "CLF Combat Synthetic"
+	name = "Insurgent Combat Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/clf/synth/combat/load_skills(mob/living/carbon/human/new_human)
@@ -1560,7 +1564,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/clf/commander
-	name = "CLF Cell Commander"
+	name = "Insurgent Cell Commander"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_CLF_COMMANDER
 	rank = JOB_CLF_COMMANDER

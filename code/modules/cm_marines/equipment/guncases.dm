@@ -57,6 +57,21 @@
 	new /obj/item/weapon/gun/shotgun/double/mou53(src)
 	new /obj/item/attachable/stock/mou53(src)
 
+/obj/item/storage/box/guncase/type23
+	name = "\improper Type 23 Shotgun case"
+	desc = "A gun case containing the type 23 Shotgun."
+	storage_slots = 7
+	can_hold = list(/obj/item/storage/belt/shotgun/upp/heavybuck, /obj/item/weapon/gun/shotgun/type23, /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot)
+
+/obj/item/storage/box/guncase/type23/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/type23(src)
+	new /obj/item/storage/belt/shotgun/upp/heavybuck(src)
+	new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
+
 //------------
 /obj/item/storage/box/guncase/lmg
 	name = "\improper M41AE2 heavy pulse rifle case"
@@ -124,6 +139,28 @@
 	new /obj/item/ammo_magazine/lever_action(src)
 	new /obj/item/storage/belt/shotgun/lever_action(src)
 	new /obj/item/storage/belt/gun/m44/lever_action/attach_holster(src)
+
+/obj/item/storage/box/guncase/r4t_ranger
+	name = "\improper R4T lever action rifle case"
+	desc = "A gun case containing the R4T lever action rifle, intended for scouting. Comes with an ammunition belt, the optional revolver attachment for it, two boxes of ammunition, a sling, and a stock for the rifle."
+	storage_slots = 14
+	can_hold = list(/obj/item/weapon/gun/lever_action/r4t, /obj/item/attachable/stock/r4t, /obj/item/attachable/magnetic_harness/lever_sling, /obj/item/ammo_magazine/lever_action, /obj/item/ammo_magazine/lever_action/training, /obj/item/storage/belt/shotgun/lever_action, /obj/item/storage/belt/gun/m44/lever_action/attach_holster, /obj/item/device/motiondetector/m717)
+
+/obj/item/storage/box/guncase/r4t_ranger/fill_preset_inventory()
+	new /obj/item/weapon/gun/lever_action/r4t(src)
+	new /obj/item/attachable/stock/r4t(src)
+	new /obj/item/attachable/magnetic_harness/lever_sling(src)
+	new /obj/item/ammo_magazine/lever_action(src)
+	new /obj/item/ammo_magazine/lever_action(src)
+	new /obj/item/storage/belt/shotgun/lever_action(src)
+	new /obj/item/storage/belt/gun/m44/lever_action/attach_holster(src)
+	new /obj/item/attachable/scope/mini(src)
+	new /obj/item/ammo_magazine/smg/pps43(src)
+	new /obj/item/ammo_magazine/smg/pps43(src)
+	new /obj/item/ammo_magazine/smg/pps43(src)
+	new /obj/item/ammo_magazine/smg/pps43(src)
+	new /obj/item/ammo_magazine/smg/pps43(src)
+	new /obj/item/weapon/gun/smg/pps43/extended_mag(src)
 
 /obj/item/storage/box/guncase/xm88
 	name = "\improper XM88 heavy rifle case"

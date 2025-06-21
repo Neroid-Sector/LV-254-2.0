@@ -312,6 +312,8 @@
 		return
 	var/uniformpath = pick(
 		/obj/item/clothing/under/colonist/insurgent,
+		/obj/item/clothing/under/colonist/insurgent/fighter,
+		/obj/item/clothing/under/marine/veteran/UPP,
 		)
 	new_human.equip_to_slot_or_del(new uniformpath, WEAR_BODY)
 
@@ -326,6 +328,9 @@
 		/obj/item/clothing/suit/storage/militia/partial,
 		/obj/item/clothing/suit/armor/bulletproof,
 		/obj/item/clothing/suit/armor/vest,
+		/obj/item/clothing/suit/storage/militia/hunter,
+		/obj/item/clothing/suit/storage/marine/militia/ua,
+		/obj/item/clothing/suit/storage/marine/faction/UPP/support,
 		)
 	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
 
@@ -345,9 +350,33 @@
 		/obj/item/clothing/head/headband/red,
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rambo,
+		/obj/item/clothing/head/militia/ranger,
+		/obj/item/clothing/head/militia/ranger/noface,
+		/obj/item/clothing/head/militia/ranger/lamp,
+		/obj/item/clothing/head/militia/mining,
+		/obj/item/clothing/head/militia/riot,
+		/obj/item/clothing/head/CMB/beret,
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 
+/datum/equipment_preset/proc/spawn_ranger_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/rangerhelmetpath = pick(
+		/obj/item/clothing/head/militia/bucket,
+		/obj/item/clothing/head/militia/ranger,
+		/obj/item/clothing/head/militia/ranger/noface,
+		)
+	new_human.equip_to_slot_or_del(new rangerhelmetpath, WEAR_HEAD)
+
+
+/datum/equipment_preset/proc/spawn_ranger_mask(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/rangermaskpath = pick(
+		/obj/item/clothing/mask/gas,
+		/obj/item/clothing/mask/rebreather,
+		/obj/item/clothing/mask/balaclava,
+		)
+	new_human.equip_to_slot_or_del(new rangermaskpath, WEAR_FACE)
 
 /datum/equipment_preset/proc/spawn_rebel_shoes(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
@@ -359,6 +388,8 @@
 		/obj/item/clothing/shoes/leather,
 		/obj/item/clothing/shoes/combat,
 		/obj/item/clothing/shoes/swat,
+		/obj/item/clothing/shoes/veteran/pmc/knife,
+		/obj/item/clothing/shoes/red/knife,
 		)
 	new_human.equip_to_slot_or_del(new shoespath, WEAR_FEET)
 
@@ -417,7 +448,9 @@
 		/obj/item/weapon/gun/smg/mp5 = /obj/item/ammo_magazine/smg/mp5,
 		/obj/item/weapon/gun/smg/bizon = /obj/item/ammo_magazine/smg/bizon,
 		/obj/item/weapon/gun/smg/mac15 = /obj/item/ammo_magazine/smg/mac15,
-		/obj/item/weapon/gun/smg/uzi = /obj/item/ammo_magazine/smg/uzi
+		/obj/item/weapon/gun/smg/uzi = /obj/item/ammo_magazine/smg/uzi,
+		/obj/item/weapon/gun/rifle/ak4047 = /obj/item/ammo_magazine/rifle/ak4047,
+		/obj/item/weapon/gun/rifle/ak4047 = /obj/item/ammo_magazine/rifle/ak4047/ap,
 		)
 
 	//no guns in sidearms list, we don't want players spawning with a gun in hand.
@@ -518,6 +551,8 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 	/obj/item/weapon/gun/rifle/ar10 = /obj/item/ammo_magazine/rifle/ar10,
 	/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,
 	/obj/item/weapon/gun/rifle/l42a/abr40 = /obj/item/ammo_magazine/rifle/l42a/abr40,
+		/obj/item/weapon/gun/rifle/ak4047 = /obj/item/ammo_magazine/rifle/ak4047,
+		/obj/item/weapon/gun/rifle/ak4047 = /obj/item/ammo_magazine/rifle/ak4047/ap,
 	))
 
 /datum/equipment_preset/proc/spawn_rebel_smg(atom/M, ammo_amount = 12)

@@ -255,6 +255,22 @@
 	new /obj/item/device/binoculars/range(src)
 	new /obj/item/device/binoculars/range(src)
 
+/obj/item/storage/box/spec/clf/sniper
+	name = "\improper Sniper equipment case"
+	desc = "A large case containing your very own long-range sniper rifle, and equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "sniper"
+
+/obj/item/storage/box/spec/clf/sniper/fill_preset_inventory()
+	// sniper
+	new /obj/item/clothing/suit/storage/marine/ghillie/militia(src)
+	new /obj/item/clothing/glasses/night/m42_night_goggles/upp(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/device/binoculars/civ(src)
+	new /obj/item/weapon/gun/rifle/sniper/svd(src)
+	new /obj/item/facepaint/sniper(src)
 
 //-----------------SPEC KIT BOX------------------
 //For events/WO, allows the user to choose a specalist kit out of available ones in spec_kit_boxes_left list in gloabl_lists.dm

@@ -600,7 +600,7 @@
 	)
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
-/obj/item/clothing/suit/storage/militia/militia/hunter
+/obj/item/clothing/suit/storage/militia/hunter
 	name = "\improper Camouflaged Hunting Gear Rig"
 	desc = "A civilian-style hunting rig that has an venlar breast plate and handmade kneepads. This is some of the most basic gear possible used by most insurgent freedom fighters."
 	icon_state = "clf_hunter"
