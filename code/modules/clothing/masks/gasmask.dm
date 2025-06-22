@@ -152,6 +152,7 @@
 	desc = "wetsuit hood & respirator"
 	icon_state = "forecon_scuba"
 	item_state = "forecon_scuba"
+	vision_impair = VISION_IMPAIR_NONE
 	var/hanging = 0
 
 /obj/item/clothing/mask/gas/scuba/verb/toggle()
