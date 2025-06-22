@@ -135,6 +135,12 @@
 	name = "\improper M39-R submachinegun"
 	desc = "The Armat Battlefield Systems M39-R submachinegun. This is a specialized variant made for use by FORECON units, and features an integrated supressor and lighter construction. A lightweight, lower caliber alternative to the various Pulse weapons used the USCM. Fires 10x20mm rounds out of 48 round magazines."
 	icon_state = "m39r"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/urban/back.dmi',
+		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/urban/suit_slot.dmi'
+	)
 	fire_sound = "gun_silenced"
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_SPECIALIST
 	inherent_traits = list(TRAIT_GUN_SILENCED)

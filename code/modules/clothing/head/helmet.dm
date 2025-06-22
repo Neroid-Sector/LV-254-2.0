@@ -1780,13 +1780,17 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/odst
 	name = "\improper Mk6 armored compression helmet"
 	desc = "A special variant of the mk5 compression suit, designed for FORECON covert combat drops"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/ua.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/ua.dmi',
+	)
 	icon_state = "compression"
 	item_state = "compression"
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES|FULL_DECAP_PROTECTION|BLOCKGASEFFECT|NOPRESSUREDMAGE
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROT
@@ -1810,6 +1814,25 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper Decadencia Verde Pattern Tactical Armor"
 	desc = "A modification of the standard Nanotrasen Systems Decadencia armor. Designed with high-profile security operators and corporate mercenaries. This Varient features a large medical insignia."
 	icon_state = "trauma2"
+
+/obj/item/clothing/head/helmet/marine/headrig
+	name = "\improper Mk7 tactical headrig"
+	desc = "A simplistic headrig designed to allow UA forces to wear various modular items without the encumberance of a full helmet."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/ua.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/ua.dmi',
+	)
+	built_in_visors = list()
+	icon_state = "head_rig"
+	item_state = "head_rig"
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN|ARMOR_LAMP_OVERLAY
 
 //=ROYAL MARINES=\\
 

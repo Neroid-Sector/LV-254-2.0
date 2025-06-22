@@ -505,6 +505,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/hack_goggles(new_human), WEAR_EYES)
 //accessory
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/forecon(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch(new_human), WEAR_ACCESSORY)
@@ -514,18 +515,21 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/recon(new_human), WEAR_JACKET)
 //storage
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/utility/full/ms(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/jima(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/sling(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/emp(new_human), WEAR_L_STORE)
 //items
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/hackingdevice(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/toolkit/ms(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/uav_drone(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/uav_drone(new_human), WEAR_IN_BACK)
 //vest items
 	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new/obj/item/device/sentry_computer(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas(new_human), WEAR_IN_ACCESSORY)
-//kit
-	pick_engi_kit(new_human)
 //weapon
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/forecon(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/heap(new_human), WEAR_IN_JACKET)
@@ -541,7 +545,7 @@
 	name = "FORECON-Squad Rifleman"
 
 	assignment = JOB_FORECON_RIFLEMAN
-	rank = JOB_MS_RFM
+	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2)
 	role_comm_title = "Rfm"
 	skills = /datum/skills/ms/rifleman
@@ -613,11 +617,15 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/forecon(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/scuba(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/medhud(new_human), WEAR_EYES)
 //accessory
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest/brown_vest(new_human), WEAR_ACCESSORY)
 //armor
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/scuba(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/forecon_scuba(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/headrig(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_nvg(new_human), WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/attachable/flashlight(new_human), WEAR_IN_HELMET)
 //storage
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
@@ -635,6 +643,42 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/heap(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/heap(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/toxin(new_human), WEAR_IN_R_STORE)
+
+/datum/equipment_preset/uscm/forecon/rfm/odst
+	name = "FORECON-Squad Rifleman(Drop trooper)"
+	flags = EQUIPMENT_PRESET_MARINE
+
+/datum/equipment_preset/uscm/forecon/rfm/odst/load_gear(mob/living/carbon/human/new_human)
+//clothing
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/forecon(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/medhud(new_human), WEAR_EYES)
+//accessory
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/forecon(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest/brown_vest(new_human), WEAR_ACCESSORY)
+//armor
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/odst(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/odst(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/odst(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/hoverpack(new_human), WEAR_BACK)
+//storage
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/utility/full(new_human), WEAR_WAIST)
+//vest items
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
+//kit
+	pick_rfm_kit(new_human)
+//weapon
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large(new_human), WEAR_R_STORE)
+	add_forecon_weapon(new_human)
+
 //------------------Support------------------//
 
 //---Intel---//
@@ -697,3 +741,45 @@
 	preset_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/synth/full(preset_human), WEAR_L_STORE)
 	preset_human.equip_to_slot_or_del(new /obj/item/clothing/head/headset(preset_human), WEAR_HEAD)
 	preset_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/overwatch_camera/forecon(preset_human), WEAR_L_EAR)
+
+
+//---FORECON VENDOR---\\
+
+/obj/structure/machinery/cm_vending/clothing/forecon
+	name = "\improper ColMarTech FORECON Special Equipment Rack"
+	desc = "An automated equipment vendor for FORECON special equipment."
+	icon_state = "sl_gear"
+	show_points = FALSE
+	req_access = list()
+	vendor_role = list(JOB_FORECON_CO, JOB_FORECON_IO, JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
+
+/obj/structure/machinery/cm_vending/clothing/forecon/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_forecon
+
+//------------GEAR---------------
+
+GLOBAL_LIST_INIT(cm_vending_clothing_forecon, list(
+		list("STANDARD EQUIPMENT (TAKE ONE)", 0, null, null, null),
+		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/device/radio/headset/distress/forecon, /obj/item/clothing/ears/earmuffs/earplugs, /obj/item/clothing/suit/storage/marine/light/recon, /obj/item/clothing/head/helmet/marine), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("MK50. Combat Compression Suit", 0, list(/obj/item/clothing/under/marine/forecon, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/device/radio/headset/distress/forecon, /obj/item/clothing/ears/earmuffs/earplugs, /obj/item/clothing/glasses/night/medhud, /obj/item/clothing/mask/gas/pmc/odst, /obj/item/clothing/suit/storage/marine/odst, /obj/item/clothing/head/helmet/marine/odst), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("MK50. Combat Wetsuit", 0, list(/obj/item/clothing/under/marine/forecon_scuba, /obj/item/clothing/shoes/marine/scuba, /obj/item/clothing/gloves/marine, /obj/item/clothing/mask/gas/scuba, /obj/item/clothing/suit/storage/marine/light/vest/forecon_scuba, /obj/item/device/radio/headset/distress/forecon, /obj/item/clothing/ears/earmuffs/earplugs, /obj/item/clothing/head/helmet/marine/headrig, /obj/item/clothing/glasses/night/medhud), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+
+		list("FORECON ARMOR", 0, null, null, null),
+		list("M3-L Recon Armor", 5, /obj/item/clothing/suit/storage/marine/light/recon, null, VENDOR_ITEM_REGULAR),
+		list("MK50. Compression Suit", 5, /obj/item/clothing/suit/storage/marine/odst, null, VENDOR_ITEM_REGULAR),
+		list("MK50. Compression Helmet", 5, /obj/item/clothing/head/helmet/marine/odst, null, VENDOR_ITEM_REGULAR),
+
+		list("RESTRICTED FIREARMS", 0, null, null, null),
+		list("M39-R Submachinegun", 5, /obj/item/weapon/gun/smg/m39/recon, null, VENDOR_ITEM_REGULAR),
+		list("M4a1mk1-R Rifle", 5, /obj/item/weapon/gun/rifle/m41aMK1/forecon, null, VENDOR_ITEM_REGULAR),
+		list("M4a1mk2-R Rifle", 5, /obj/item/weapon/gun/rifle/m41a/tactical, null, VENDOR_ITEM_REGULAR),
+		list("M4RA-R DMR", 5,/obj/item/weapon/gun/rifle/m4ra/tactical, null, VENDOR_ITEM_REGULAR),
+
+		list("SPECIAL EQUIPMENT", 0, null, null, null),
+		list("M2 night vision goggles", 5, /obj/item/prop/helmetgarb/helmet_nvg, null, VENDOR_ITEM_REGULAR),
+		list("Mk7 tactical headrig", 5, /obj/item/clothing/head/helmet/marine/headrig, null, VENDOR_ITEM_REGULAR),
+		list("Mk5 camera headrig", 5, /obj/item/device/radio/headset/almayer/marine/overwatch_camera/forecon, null, VENDOR_ITEM_REGULAR),
+		list("Thermal Headsight", 5, /obj/item/clothing/glasses/night/medhud, null, VENDOR_ITEM_REGULAR),
+		list("Jump-pack", 5, /obj/item/hoverpack, null, VENDOR_ITEM_REGULAR),
+
+	))

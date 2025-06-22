@@ -1853,7 +1853,7 @@
 		)
 	accepted_ammo = list(
 		/obj/item/ammo_magazine/rifle/type71,
-		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/type71/ap,
 		/obj/item/ammo_magazine/rifle/type71/heap,
 		/obj/item/ammo_magazine/rifle/ak4047,
 		/obj/item/ammo_magazine/rifle/ak4047/ap,

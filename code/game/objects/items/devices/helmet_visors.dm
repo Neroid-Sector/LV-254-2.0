@@ -89,6 +89,9 @@
 /obj/item/device/helmet_visor/cmb
 	hud_type = MOB_HUD_FACTION_CMB
 
+/obj/item/device/helmet_visor/pmc
+	hud_type = MOB_HUD_FACTION_PMC
+
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
 	icon_state = "med_sight"

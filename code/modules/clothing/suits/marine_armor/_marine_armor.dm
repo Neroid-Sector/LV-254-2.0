@@ -531,8 +531,8 @@
 	uniform_restricted = null
 
 /obj/item/clothing/suit/storage/marine/light/vest/forecon_scuba
-	name = "\improper M3-VL pattern ballistics vest"
-	desc = "The MK50. wetsuit armored vest designed to protect FORECON Operatives from light small arms, and blades during stealthy raids, while allowing freedom of movement, and lack of excessive weight during swimming."
+	name = "\improper MK50. wetsuit armored vest"
+	desc = "The MK50. wetsuit armored vest designed to protect FORECON Operatives from light small arms, and blades during stealthy raids, while allowing flexibility and freedom of movement, and lack of excessive weight during swimming."
 	armor_melee = CLOTHING_ARMOR_ULTRAHIGHPLUS
 	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
 
@@ -762,12 +762,16 @@
 /obj/item/clothing/suit/storage/marine/odst
 	name = "\improper Mk6 armored compression suit"
 	desc = "A special variant of the mk5 compression suit, designed for FORECON covert combat drops. Custom-made to fit its owner with special straps to operate a smartgun."
-	icon_state = "compression"
-	item_state = "compression"
-	item_state_slots = list(WEAR_JACKET = "compression")
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/ua.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/ua.dmi',
+	)
+	icon_state = "compression_forecon"
+	item_state = "compression_forecon"
+	item_state_slots = list(WEAR_JACKET = "compression_forecon")
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	storage_slots = 3
-	flags_atom = NO_SNOW_TYPE|NOPRESSUREDMAGE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN|NOPRESSUREDMAGE
 	flags_inventory = CANTSTRIP|SMARTGUN_HARNESS|BLOCKSHARPOBJ
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS

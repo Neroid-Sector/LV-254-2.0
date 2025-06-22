@@ -81,8 +81,26 @@
 
 /obj/item/clothing/mask/gas/pmc/leader
 	name = "\improper M8 pattern armored balaclava"
-	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter. This particular suit looks like it belongs to a high-ranking officer."
+	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter. This particular one looks like it belongs to a high-ranking officer."
 	icon_state = "officer_mask"
+
+/obj/item/clothing/mask/gas/pmc/odst
+	name = "\improper M30 pattern compression bonnet"
+	desc = "A bonnet with built in padding and deigned to carry FORECON operator's communication gear and cushion the head during high G-Force Re-entry. The front has a small mask to interface with the MK6 compression suit Helmet airsupply."
+	icon_state = "pmc_mask"
+	anti_hug = 3
+	vision_impair = VISION_IMPAIR_NONE
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	flags_equip_slot = SLOT_FACE
 
 /obj/item/clothing/mask/gas/swat
 	name = "\improper SWAT mask"

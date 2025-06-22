@@ -68,10 +68,11 @@
 
 /obj/item/clothing/shoes/marine/scuba
 	name = "MK50. wetsuit combat flippers"
-	desc = "Standard issue combat flippers for the MK50. Combat Wetsuit, the flippers feature an ankle strap for "
+	desc = "Standard issue combat flippers for the MK50. Combat Wetsuit, the flippers feature an ankle strap for a bayonet holster."
 	icon_state = "forecon_flippers"
 	item_state = "forecon_flippers"
 	spawn_item_type = /obj/item/attachable/bayonet
+	slowdown = SLOWDOWN_ARMOR_HEAVY
 
 /obj/item/clothing/shoes/marine/monkey
 	name = "monkey combat boots"
