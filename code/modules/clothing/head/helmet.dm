@@ -1777,6 +1777,40 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_HARDCORE
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 
+/obj/item/clothing/head/helmet/marine/odst
+	name = "\improper Mk6 armored compression helmet"
+	desc = "A special variant of the mk5 compression suit, designed for FORECON covert combat drops"
+	icon_state = "compression"
+	item_state = "compression"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES|FULL_DECAP_PROTECTION|BLOCKGASEFFECT|NOPRESSUREDMAGE
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS
+	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROT
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/uscm, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/night_vision/marine_raider, new /obj/item/device/helmet_visor/welding_visor/tanker)
+	start_down_visor_type = /obj/item/device/helmet_visor/welding_visor/tanker
+	anti_hug = 10
+	time_to_unequip = 20
+	time_to_equip = 20
+	equip_sounds = list('sound/handling/helmetscrew.mp3')
+
+/obj/item/clothing/head/helmet/marine/odst/trauma_team
+	name = "\improper Decadencia Verde Pattern Tactical Armor"
+	desc = "A modification of the standard Nanotrasen Systems Decadencia armor. Designed with high-profile security operators and corporate mercenaries. This Varient features a large medical insignia."
+	icon_state = "trauma1"
+	start_down_visor_type = null
+	built_in_visors = list(new /obj/item/device/helmet_visor/pmc, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/night_vision/marine_raider, )
+
+/obj/item/clothing/head/helmet/marine/odst/trauma_team/alt
+	name = "\improper Decadencia Verde Pattern Tactical Armor"
+	desc = "A modification of the standard Nanotrasen Systems Decadencia armor. Designed with high-profile security operators and corporate mercenaries. This Varient features a large medical insignia."
+	icon_state = "trauma2"
+
 //=ROYAL MARINES=\\
 
 /obj/item/clothing/head/helmet/marine/veteran/royal_marine

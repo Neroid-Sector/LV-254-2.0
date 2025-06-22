@@ -759,6 +759,23 @@
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 	unacidable = TRUE
 
+/obj/item/clothing/suit/storage/marine/odst
+	name = "\improper Mk6 armored compression suit"
+	desc = "A special variant of the mk5 compression suit, designed for FORECON covert combat drops. Custom-made to fit its owner with special straps to operate a smartgun."
+	icon_state = "compression"
+	item_state = "compression"
+	item_state_slots = list(WEAR_JACKET = "compression")
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	storage_slots = 3
+	flags_atom = NO_SNOW_TYPE|NOPRESSUREDMAGE
+	flags_inventory = CANTSTRIP|SMARTGUN_HARNESS|BLOCKSHARPOBJ
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FOOT_LEFT|BODY_FLAG_FOOT_RIGHT
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FOOT_LEFT|BODY_FLAG_FOOT_RIGHT
+	valid_accessory_slots = list(ACCESSORY_SLOT_DECOR,)
+	black_market_value = 35
+
 //==================Combat Correspondent==================\\
 
 /obj/item/clothing/suit/storage/marine/light/reporter
