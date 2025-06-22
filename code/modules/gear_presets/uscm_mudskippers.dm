@@ -380,7 +380,7 @@
 //---Equipped---
 /datum/equipment_preset/uscm_mudskippers/leader/full
 	name = "Mudskippers-Squad Leader(Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm_mudskippers/leader/full/load_gear(mob/living/carbon/human/new_human)
 //clothes
@@ -470,7 +470,7 @@
 //---Equipped---
 /datum/equipment_preset/uscm_mudskippers/sg/full
 	name = "Mudskippers-Squad Smartgunner(Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm_mudskippers/sg/full/load_gear(mob/living/carbon/human/new_human)
 //clothes
@@ -577,7 +577,7 @@
 //---Equipped---
 /datum/equipment_preset/uscm_mudskippers/medic/full
 	name = "Mudskippers-Squad Hospital Corpsman(Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm_mudskippers/medic/full/load_gear(mob/living/carbon/human/new_human)
 //clothes
@@ -658,7 +658,7 @@
 //---Equipped---
 /datum/equipment_preset/uscm_mudskippers/engineer/full
 	name = "Mudskippers-Squad Combat Technician(Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm_mudskippers/engineer/full/load_gear(mob/living/carbon/human/new_human)
 //clothes
@@ -748,7 +748,7 @@
 
 /datum/equipment_preset/uscm_mudskippers/rfm/full
 	name = "Mudskippers-Squad Rifleman(Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm_mudskippers/rfm/full/load_gear(mob/living/carbon/human/new_human)
 //clothing
@@ -845,7 +845,7 @@
 
 /datum/equipment_preset/uscm_mudskippers/k9/full
 	name = "Mudskippers-Squad K9 Handler(Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm_mudskippers/k9/full/load_gear(mob/living/carbon/human/new_human)
 //clothing
@@ -934,7 +934,7 @@
 //---Tank Crwmn---//
 /datum/equipment_preset/uscm_mudskippers/tank
 	name = "Mudskippers-Vehicle Crewman"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(
 		ACCESS_MARINE_PREP,
