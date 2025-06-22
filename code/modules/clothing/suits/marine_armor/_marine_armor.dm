@@ -530,6 +530,12 @@
 	siemens_coefficient = 0.7
 	uniform_restricted = null
 
+/obj/item/clothing/suit/storage/marine/light/vest/forecon_scuba
+	name = "\improper M3-VL pattern ballistics vest"
+	desc = "The MK50. wetsuit armored vest designed to protect FORECON Operatives from light small arms, and blades during stealthy raids, while allowing freedom of movement, and lack of excessive weight during swimming."
+	armor_melee = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+
 /obj/item/clothing/suit/storage/marine/light/vest/dcc
 	name = "\improper M3-VL pattern flak vest"
 	desc = "A combination of the standard non-combat M3-VL ballistics vest and M70 flak jacket, this piece of armor has been distributed to dropship crew to keep them safe from threats external and internal..."

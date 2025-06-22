@@ -601,6 +601,40 @@
 /datum/equipment_preset/uscm/forecon/rfm/full/e4
 	paygrades = list(PAY_SHORT_ME4)
 
+
+/datum/equipment_preset/uscm/forecon/rfm/scuba
+	name = "FORECON-Squad Rifleman(Scuba)"
+	flags = EQUIPMENT_PRESET_MARINE
+
+/datum/equipment_preset/uscm/forecon/rfm/scuba/load_gear(mob/living/carbon/human/new_human)
+//clothing
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/forecon_scuba(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/forecon(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/scuba(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+//accessory
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest/brown_vest(new_human), WEAR_ACCESSORY)
+//armor
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/scuba(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/forecon_scuba(new_human), WEAR_JACKET)
+//storage
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m39/forecon(new_human), WEAR_WAIST)
+//items
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive(new_human), WEAR_IN_BACK)
+//vest items
+	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
+//weapon
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/heap(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/heap(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/heap(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/toxin(new_human), WEAR_IN_R_STORE)
 //------------------Support------------------//
 
 //---Intel---//

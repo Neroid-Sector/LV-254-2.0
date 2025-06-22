@@ -128,3 +128,37 @@
 		WEAR_FACE = 'icons/mob/humans/onmob/clothing/masks/masks_by_faction/TWE.dmi'
 	)
 	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
+
+/obj/item/clothing/mask/gas/scuba
+	name = "\improper wetsuit mask"
+	desc = "wetsuit hood & respirator"
+	icon_state = "forecon_scuba"
+	item_state = "forecon_scuba"
+	var/hanging = 0
+
+/obj/item/clothing/mask/gas/scuba/verb/toggle()
+	set category = "Object"
+	set name = "Adjust mask"
+	set src in usr
+
+	if(usr.is_mob_incapacitated())
+		if(!src.hanging)
+			src.hanging = !src.hanging
+			gas_transfer_coefficient = 1 //gas is now escaping to the turf and vice versa
+			flags_inventory &= ~(COVERMOUTH | HIDEALLHAIR | COVEREYES | ALLOWINTERNALS | BLOCKGASEFFECT | ALLOWREBREATH | ALLOWCPR)
+			icon_state = "breathdown"
+			to_chat(usr, "Your mask is now hanging on your neck.")
+
+		else
+			src.hanging = !src.hanging
+			gas_transfer_coefficient = 0.10
+			flags_inventory = COVERMOUTH | HIDEALLHAIR | COVEREYES | ALLOWINTERNALS | BLOCKGASEFFECT | ALLOWREBREATH | ALLOWCPR
+			icon_state = "breath"
+			to_chat(usr, "You pull the mask up to cover your face.")
+		update_clothing_icon()
+
+/obj/item/clothing/mask/gas/scuba/forecon
+	name = "\improper MK50. combat wetsuit mask"
+	desc = "The cap, goggles, and rebreather for the mk5 combat wetsuit, used by the USCM FORECON during amphibious and underwater combat."
+	icon_state = "forecon_scuba"
+	item_state = "forecon_scuba"

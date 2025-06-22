@@ -498,6 +498,17 @@
 	worn_state = "forecon_marine"
 	flags_atom = NO_GAMEMODE_SKIN
 
+/obj/item/clothing/under/marine/forecon_scuba
+	name = "\improper mk5 combat wetsuit"
+	desc = "he MK50. combat wetsuit, used by the USCM FORECON during amphibious and underwater combat."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UA.dmi',
+	)
+	icon_state = "forecon_scuba"
+	worn_state = "forecon_scuba"
+	flags_atom = NO_GAMEMODE_SKIN
+
 //=========================//RESPONDERS\\================================\\
 //=======================================================================\\
 

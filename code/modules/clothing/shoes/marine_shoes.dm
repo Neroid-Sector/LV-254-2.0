@@ -66,6 +66,13 @@
 /obj/item/clothing/shoes/marine/urban/knife
 	spawn_item_type = /obj/item/attachable/bayonet
 
+/obj/item/clothing/shoes/marine/scuba
+	name = "MK50. wetsuit combat flippers"
+	desc = "Standard issue combat flippers for the MK50. Combat Wetsuit, the flippers feature an ankle strap for "
+	icon_state = "forecon_flippers"
+	item_state = "forecon_flippers"
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/marine/monkey
 	name = "monkey combat boots"
 	desc = "A sturdy pair of combat boots, the reflection of the polished leather reflects your true self."
