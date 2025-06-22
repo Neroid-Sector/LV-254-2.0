@@ -1000,6 +1000,14 @@
 	icon_state = "cryo_headset"
 	frequency = CRYO_FREQ
 
+/obj/item/device/radio/headset/almayer/marine/overwatch_camera/forecon
+	name = "\improper Force Recon headset"
+	desc = "A headset given to FORECON marines. Channels are as follows: :g - public, :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel"
+	frequency = FORECON_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom)
+	ignore_z = TRUE
+	has_hud = TRUE
+
 /obj/item/device/radio/headset/almayer/marine/mortar
 	name = "mortar crew radio headset"
 	desc = "This is used by the dust raider's bunker mortar crew to get feedback on how good the hits of that 80mm rain turned out. Comes with access to the engineering channel with :e, JTAC for coordinating with :j, Intel with :t, and request more shells supply with :u - this ain't Winchester Outpost!"

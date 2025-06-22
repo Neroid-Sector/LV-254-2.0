@@ -1540,6 +1540,11 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/m39(src)
 
+/obj/item/storage/belt/gun/m39/forecon/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/recon(src))
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39(src)
+
 /obj/item/storage/belt/gun/m39/full/extended/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/smg/m39(src))
 	for(var/i = 1 to storage_slots - 1)

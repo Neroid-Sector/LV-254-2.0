@@ -134,10 +134,10 @@
 /obj/item/weapon/gun/smg/m39/recon
 	name = "\improper M39-R submachinegun"
 	desc = "The Armat Battlefield Systems M39-R submachinegun. This is a specialized variant made for use by FORECON units, and features an integrated supressor and lighter construction. A lightweight, lower caliber alternative to the various Pulse weapons used the USCM. Fires 10x20mm rounds out of 48 round magazines."
-	item_state = "m39-r"
+	icon_state = "m39r"
 	fire_sound = "gun_silenced"
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_SPECIALIST
 	inherent_traits = list(TRAIT_GUN_SILENCED)
-	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/smg/m39/heap
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
@@ -156,11 +156,11 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/reflex)
 	map_specific_decoration = FALSE
 
-/obj/item/weapon/gun/smg/m39recon/set_gun_attachment_offsets()
+/obj/item/weapon/gun/smg/m39/recon/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 14, "rail_y" = 22, "under_x" = 21, "under_y" = 13, "stock_x" = 24, "stock_y" = 15)
 
 
-/obj/item/weapon/gun/smg/m39recon/handle_starting_attachment()
+/obj/item/weapon/gun/smg/m39/recon/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/flashlight/grip/m39r_grip= new(src)
 	m39r_grip.flags_attach_features &= ~ATTACH_REMOVABLE
@@ -168,7 +168,7 @@
 	m39r_grip.Attach(src)
 	update_attachable(m39r_grip.slot)
 
-/obj/item/weapon/gun/smg/m39recon/set_gun_config_values()
+/obj/item/weapon/gun/smg/m39/recon/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_delay(FIRE_DELAY_TIER_SMG)

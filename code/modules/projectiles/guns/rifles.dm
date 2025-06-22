@@ -479,8 +479,8 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
 /obj/item/weapon/gun/rifle/m41aMK1/forecon
-	icon_state = "m41amk1-r"
-	item_state = "m41amk1-r"
+	icon_state = "m41amk1r"
+	item_state = "m41amk1r"
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1, /obj/item/attachable/suppressor, /obj/item/attachable/reflex, /obj/item/attachable/stock/rifle/collapsible)
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/heap
 
