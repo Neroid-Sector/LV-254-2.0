@@ -895,6 +895,7 @@
 #include "code\game\jobs\job\special\uscm.dm"
 #include "code\game\jobs\job\special\uscm_mudskippers.dm"
 #include "code\game\jobs\job\special\weyland_yutani.dm"
+#include "code\modules\gear_presets\civilians.dm"
 #include "code\game\machinery\aicore_lockdown.dm"
 #include "code\game\machinery\air_alarm.dm"
 #include "code\game\machinery\autolathe.dm"
