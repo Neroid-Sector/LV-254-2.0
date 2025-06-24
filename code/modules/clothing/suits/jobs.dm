@@ -53,6 +53,7 @@
 		/obj/item/storage/belt/gun/m4a3,
 		/obj/item/storage/belt/gun/m44,
 		/obj/item/storage/belt/gun/smartpistol,
+		/obj/item/storage/belt/gun/webley,
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 	)
@@ -96,7 +97,7 @@
 	icon_state = "som_vest"
 	item_state = "som_vest"
 	flags_inventory = CANTSTRIP
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
 
 /obj/item/clothing/suit/cultist_hoodie/som/acolyte
 	desc = "DO NOT REMOVE. You will glitch yourself if you remove this item."
