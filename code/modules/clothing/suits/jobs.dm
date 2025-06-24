@@ -69,6 +69,20 @@
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	time_to_equip = 2 SECONDS
 
+/obj/item/clothing/suit/cultist_hoodie/collie
+	name = "survival poncho hood"
+	desc = "A standard Wey Yu issue heavy duty rain poncho. Looks eerie and weird, almost as if it belongs to a cult."
+
+/obj/item/clothing/suit/cultist_hoodie/som
+	desc = "A survival poncho hood with a deer skull and leaves mounted to it, Looks eerie and weird, almost as if it belongs to a cult."
+	name = "Sons of Marina Improvised Body Armor"
+	icon = 'icons/obj/items/clothing/suits/armor.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/armor.dmi'
+	)
+	icon_state = "som_hoodie"
+	item_state = "som_hoodie"
+
 //Chaplain
 /obj/item/clothing/suit/nun
 	name = "nun robe"

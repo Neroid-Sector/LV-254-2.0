@@ -30,6 +30,23 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_LOW
 
+/obj/item/clothing/head/cultist_hood/som
+	desc = "A survival poncho hood with a deer skull and leaves mounted to it, Looks eerie and weird, almost as if it belongs to a cult."
+	name = "skull hood"
+	icon_state = "wendi_hood"
+	item_state = "wendi_hood"
+
+/obj/item/clothing/head/cultist_hood/headscarf
+	desc = "A head wrap desgined to protect the wearer from dust and dirt. This one had leaves and brambles afixed to it. Looks eerie and weird, almost as if it belongs to a cult."
+	name = "cultist head scarf"
+	icon = 'icons/obj/items/clothing/hats/hats_by_map/urban.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_map/urban.dmi',
+	)
+	icon_state = "ghillie_coif"
+	item_state = "ghillie_coif"
+ghillie_coif
+
 //Chaplain
 /obj/item/clothing/head/nun_hood
 	name = "nun hood"
