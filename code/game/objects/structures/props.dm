@@ -1181,3 +1181,17 @@
 	if(initial(emote.sound))
 		playsound(loc, initial(emote.sound), 50, FALSE)
 	return TRUE
+
+
+/obj/structure/prop/marina_statue
+	name = "Icon of Marina"
+	desc = "An imposing statue."
+	icon = 'icons/obj/structures/props/lrgstatues.dmi'
+	icon_state = "marina_statue"
+	unslashable = TRUE
+	unacidable = TRUE
+	density = TRUE
+	layer = ABOVE_MOB_LAYER
+	bound_height = 32
+	bound_width = 64
+	base_pixel_x = -96
