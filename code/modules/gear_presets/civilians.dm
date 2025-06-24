@@ -80,6 +80,7 @@
 
 //--------SOM--------\\
 
+//----------Soldier
 /datum/equipment_preset/colonist/som
 	name = "Sons of Marina Militia(SOM)"
 	assignment = JOB_SOM_MILITIA
@@ -101,6 +102,8 @@
 		new_human.equip_to_slot_or_del(new 	/obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 	if(prob(45))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/collie(new_human), WEAR_JACKET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som/ghillie(new_human), WEAR_JACKET)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som(new_human), WEAR_JACKET)
 //hat
@@ -137,6 +140,8 @@
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_FACE)
 	. = ..()
 
+//----------Zealot
+
 /datum/equipment_preset/colonist/som_z
 	name = "Sons of Marina Zealot(SOM)"
 	assignment = JOB_SOM_ZEALOT
@@ -167,6 +172,67 @@
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
 
+//----------Paladin
+
+/datum/equipment_preset/colonist/som_p
+	name = "Sons of Marina Paladin(SOM)"
+	assignment = JOB_SOM_PALLY
+	rank = JOB_SOM_PALLY
+	skills = /datum/skills/civilian/survivor/militia
+
+/datum/equipment_preset/colonist/som_p/load_gear(mob/living/carbon/human/new_human)
+	new_human.set_species("Hero")
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/grenade/som(new_human), WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som/paladin(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cultist_hood/som(new_human), WEAR_HEAD)
+
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/ultrazine/liaison(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/emergency(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/implanter/rejuv(new_human), WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/gas/nerve_gas(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/gas/nerve_gas(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new/obj/item/storage/pouch/machete/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/shield/riot(new_human), WEAR_L_HAND)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+
+//----------Acolyte
+
+/datum/equipment_preset/colonist/som_a
+	name = "Sons of Marina Acolyte(SOM)"
+	assignment = JOB_SOM_ACOLYTE
+	rank = JOB_SOM_ACOLYTE
+	skills = /datum/skills/civilian/survivor/militia
+
+/datum/equipment_preset/colonist/som_a/load_gear(mob/living/carbon/human/new_human)
+	new_human.set_species("Horror")
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som/acolyte(new_human), WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/implanter/rejuv(new_human), WEAR_IN_BACK)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/chainofcommand(new_human), WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/chainofcommand(new_human), WEAR_L_HAND)
+
+	. = ..()
+
+//----------Shaman
 
 /datum/equipment_preset/colonist/som_s
 	name = "Sons of Marina Shaman(SOM)"
@@ -199,6 +265,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_FACE)
 	. = ..()
 
+//----------Ascended
 
 /datum/equipment_preset/colonist/som_ascended
 	name = "Sons of Marina Ascended(SOM)"

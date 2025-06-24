@@ -70,11 +70,11 @@
 	time_to_equip = 2 SECONDS
 
 /obj/item/clothing/suit/cultist_hoodie/collie
-	name = "survival poncho hood"
+	name = "survival poncho"
 	desc = "A standard Wey Yu issue heavy duty rain poncho. Looks eerie and weird, almost as if it belongs to a cult."
 
 /obj/item/clothing/suit/cultist_hoodie/som
-	desc = "A survival poncho hood with a deer skull and leaves mounted to it, Looks eerie and weird, almost as if it belongs to a cult."
+	desc = "A survival poncho with bits of uncured leather and leaves mounted to it, Looks eerie and weird, almost as if it belongs to a cult."
 	name = "Sons of Marina Improvised Body Armor"
 	icon = 'icons/obj/items/clothing/suits/armor.dmi'
 	item_icons = list(
@@ -82,6 +82,29 @@
 	)
 	icon_state = "som_hoodie"
 	item_state = "som_hoodie"
+
+/obj/item/clothing/suit/cultist_hoodie/som/ghillie
+	desc = "A tangled mass of living leaves, and other foliage in the shape of clothing. A gift from Lady Marina herself to her chosen warriors."
+	name = "Marina's Gift"
+	icon_state = "som_ghillie"
+	item_state = "som_ghillie"
+	flags_inventory = CANTSTRIP
+
+/obj/item/clothing/suit/cultist_hoodie/som/paladin
+	desc = "A survival poncho with bits of uncured leather and leaves mounted to it. Where the poncho ends, and the wearer's flesh begins is hard to discern."
+	name = "Marina's Carapace"
+	icon_state = "som_vest"
+	item_state = "som_vest"
+	flags_inventory = CANTSTRIP
+	armor_bullet = CLOTHING_ARMOR_HIGH
+
+/obj/item/clothing/suit/cultist_hoodie/som/acolyte
+	desc = "DO NOT REMOVE. You will glitch yourself if you remove this item."
+	name = ""
+	icon_state = "som_spook"
+	item_state = "som_spook"
+	flags_inventory = CANTSTRIP
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
 
 //Chaplain
 /obj/item/clothing/suit/nun

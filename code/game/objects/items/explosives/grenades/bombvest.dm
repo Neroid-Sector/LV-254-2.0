@@ -16,7 +16,7 @@
 	armor_bomb = CLOTHING_ARMOR_NONE
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
-	storage_slots = 0
+	storage_slots = 1
 	slowdown = 0
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	///Time it takes to detonate
@@ -66,9 +66,6 @@
 	. = ..()
 
 	if(!. || isnull(loc))
-		return
-
-	if(SEND_SIGNAL(user, COMSIG_GRENADE_PRE_PRIME) & COMPONENT_GRENADE_PRIME_CANCEL)
 		return
 
 	add_fingerprint(user)

@@ -600,7 +600,10 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 //--Sons of Marina--//
 #define JOB_SOM_LDR "Sons of Marina Leader"
 #define JOB_SOM_PRIEST "Sons of Marina Shaman"
+#define JOB_SOM_ACOLYTE "Sons of Marina Shape Seeker"
+#define JOB_SOM_FULFREMEN "Sons of Marina Fulfremen"
 #define JOB_SOM_ZEALOT "Sons of Marina Zealot"
+#define JOB_SOM_PALLY "Sons of Marina Paladin"
 #define JOB_SOM_MILITIA "Sons of Marina Minuteman"
 
 //--Followers of the Noon Day Devil--//
