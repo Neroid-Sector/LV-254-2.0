@@ -1,7 +1,13 @@
 /obj/item/clothing/suit/storage/marine/bombvest
 	name = "juryrigged explosive vest"
 	desc = "Obviously someone just strapped a bomb to a harness and called it a day. It has a common light switch used as the detonator. <span class='warning'>This harness has no light, toggling it will detonate the vest! </span>"
-	icon_state = "1"
+	icon = 'icons/obj/items/clothing/suits/misc_ert.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/misc_ert.dmi',
+	)
+	icon_state = "bomb_vest"
+	item_state = "bomb_vest"
+	item_state_slots = list(WEAR_JACKET = "bomb_vest")
 	armor_melee = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
 	armor_energy = CLOTHING_ARMOR_NONE
@@ -10,6 +16,7 @@
 	armor_bomb = CLOTHING_ARMOR_NONE
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
+	storage_slots = 0
 	slowdown = 0
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	///Time it takes to detonate
