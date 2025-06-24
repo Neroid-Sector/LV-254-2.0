@@ -1184,14 +1184,33 @@
 
 
 /obj/structure/prop/marina_statue
-	name = "Icon of Marina"
-	desc = "An imposing statue."
+	desc = "A large overgrown stone statue of the Sons of Marina's goddess. The face is twisted into an unsettling expression, and a large 'tail?' made of iron curls from beneath the stone statue's dress. In one hand the statue holds a stone sword with words inscribed in an unknown language. Staring at it makes you uncomfortable."
+	desc_lore = "A statue of the Sons of Marina's goddess. When questioned as to how it was built, the Cultists claim to have no knowledge of who built it, or what the words on the sword say. Further study of the statue shows no signs of tools, hands or other traditional methods used in it's manufacture. It's almost as if the stone grew into that shape on its own."
 	icon = 'icons/obj/structures/props/lrgstatues.dmi'
 	icon_state = "marina_statue"
 	unslashable = TRUE
 	unacidable = TRUE
 	density = TRUE
 	layer = ABOVE_MOB_LAYER
-	bound_height = 32
+	bound_height = 64
 	bound_width = 64
-	base_pixel_x = -96
+
+
+/obj/structure/prop/random_props/gallows
+	name = "Gallows"
+	desc = "A grizzly display of capital punishment. Staring at it makes you uncomfortable."
+	icon = 'icons/obj/structures/props/gallows.dmi'
+	icon_state = "gallows"
+	layer = ABOVE_MOB_LAYER
+
+/obj/structure/prop/random_props/stakes
+	name = "Stakes"
+	desc = "A grizzly display of capital punishment. Staring at it makes you uncomfortable."
+	icon = 'icons/obj/structures/props/gallows.dmi'
+	icon_state = "stakes"
+
+/obj/structure/prop/random_props/head_stakes
+	name = "Impaled heads"
+	desc = "A grizzly display of capital punishment. Staring at it makes you uncomfortable."
+	icon = 'icons/obj/structures/props/gallows.dmi'
+	icon_state = "head_stakes"
