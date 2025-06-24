@@ -36,7 +36,7 @@
 			new_human.equip_to_slot_or_del(new/obj/item/clothing/under/rank/utility/brown(new_human), WEAR_BODY)
 
 /datum/equipment_preset/colonist/som/proc/spawn_som_rifle(mob/living/carbon/human/new_human)
-	var/i = rand(1,10)
+	var/i = rand(1,12)
 	switch(i)
 		if (1 , 5)
 			spawn_weapon(/obj/item/weapon/gun/rifle/l42a/abr40, /obj/item/ammo_magazine/rifle/l42a/abr40, new_human)
@@ -46,6 +46,9 @@
 			spawn_weapon(/obj/item/weapon/gun/rifle/ak4047/som, /obj/item/ammo_magazine/rifle/ak4047, new_human)
 		if (9 , 10)
 			spawn_weapon(/obj/item/weapon/gun/rifle/kramer, /obj/item/ammo_magazine/rifle/kramer, new_human)
+		if (11 , 12)
+			spawn_weapon(/obj/item/weapon/gun/rifle/m16, obj/item/ammo_magazine/rifle/m16, new_human)
+
 //====Generic-Civies====//
 
 /datum/equipment_preset/colonist/civilian/generic
@@ -119,6 +122,26 @@
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_FACE)
 	. = ..()
 
+/datum/equipment_preset/colonist/som
+	name = "Sons of Marina Zealot(SOM)"
+	assignment = JOB_SOM_ZEALOT
+	rank = JOB_SOM_ZEALOT
+	skills = /datum/skills/civilian/survivor/militia
+
+/datum/equipment_preset/colonist/som/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/grenade/full/(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cultist_hood/som(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/ultrazine/liaison(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/implanter/rejuv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/twohanded/fireaxe(new_human), WEAR_R_HAND)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+
+
 /datum/equipment_preset/colonist/som_s
 	name = "Sons of Marina Shaman(SOM)"
 	assignment = JOB_SOM_PRIEST
@@ -149,6 +172,8 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_FACE)
 	. = ..()
+
+
 
 
 /datum/equipment_preset/colonist/som_ascended
