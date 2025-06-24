@@ -1047,6 +1047,18 @@
 	new /obj/item/explosive/grenade/high_explosive/airburst(src)
 	new /obj/item/explosive/grenade/high_explosive/airburst(src)
 
+/obj/item/storage/belt/grenade/som/fill_preset_inventory()
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+	new /obj/item/explosive/grenade/incendiary(src)
+
 /obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
 		dump_into(W,user)

@@ -47,6 +47,18 @@
 		if (9 , 10)
 			spawn_weapon(/obj/item/weapon/gun/rifle/kramer, /obj/item/ammo_magazine/rifle/kramer, new_human)
 
+/datum/equipment_preset/colonist/som/proc/spawn_som_hat(mob/living/carbon/human/new_human)
+	var/i = rand(1,10)
+	switch(i)
+		if (1 , 5)
+			spawn_weapon(/obj/item/weapon/gun/rifle/l42a/abr40, /obj/item/ammo_magazine/rifle/l42a/abr40, new_human)
+		if (5 , 6)
+			spawn_weapon(/obj/item/weapon/gun/rifle/mar40, /obj/item/ammo_magazine/rifle/mar40/ap, new_human)
+		if (7 , 8)
+			spawn_weapon(/obj/item/weapon/gun/rifle/ak4047/som, /obj/item/ammo_magazine/rifle/ak4047, new_human)
+		if (9 , 10)
+			spawn_weapon(/obj/item/weapon/gun/rifle/kramer, /obj/item/ammo_magazine/rifle/kramer, new_human)
+
 //====Generic-Civies====//
 
 /datum/equipment_preset/colonist/civilian/generic
@@ -78,10 +90,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/webley/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/ultrazine/liaison(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/chloralhydrate(new_human), WEAR_IN_BACK)
-
+	if(prob(45))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/full(new_human), WEAR_WAIST)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/webley/full(new_human), WEAR_WAIST)
 //robe
 	if(prob(25))
 		new_human.equip_to_slot_or_del(new 	/obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
@@ -98,11 +112,14 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cultist_hood/headscarf(new_human), WEAR_HEAD)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot(new_human), WEAR_HEAD)
+
 	spawn_som_rifle(new_human)
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
+
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+
 	if(prob(15))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	if(prob(35))
@@ -130,11 +147,22 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/grenade/full/(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/grenade/som(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_EYES)
+
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cultist_hood/som(new_human), WEAR_HEAD)
+
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/ultrazine/liaison(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/emergency(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/implanter/rejuv(new_human), WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/gas/nerve_gas(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/gas/nerve_gas(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new/obj/item/storage/pouch/machete/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/full(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/twohanded/fireaxe(new_human), WEAR_R_HAND)
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
@@ -172,10 +200,8 @@
 	. = ..()
 
 
-
-
 /datum/equipment_preset/colonist/som_ascended
-	name = "Sons of Marina ascended(SOM)"
+	name = "Sons of Marina Ascended(SOM)"
 	assignment = JOB_SOM_PRIEST
 	rank = JOB_SOM_PRIEST
 	skills = /datum/skills/civilian/survivor/militia
