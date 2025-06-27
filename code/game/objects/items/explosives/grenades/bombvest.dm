@@ -19,7 +19,6 @@
 	storage_slots = 1
 	slowdown = 0
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
-	///Time it takes to detonate
 	var/datum/cause_data/cause_data
 	var/det_time = 3 SECONDS
 	var/active = FALSE
