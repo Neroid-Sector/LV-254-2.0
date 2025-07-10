@@ -732,7 +732,7 @@
 	/// The typepath of the nerve gas
 	var/nerve_gas_type = /datum/effect_system/smoke_spread/cn20
 	/// The radius the gas will reach
-	var/nerve_gas_radius = 2
+	var/nerve_gas_radius = 8
 
 /obj/item/explosive/grenade/gas/nerve_gas/Initialize(mapload, ...)
 	. = ..()
@@ -800,7 +800,6 @@
 	mustard_gas.start()
 	qdel(src)
 
-
 /obj/item/explosive/grenade/gas/mustard_gas/primed
 	mustard_gas_radius = 20
 	det_time = 6
@@ -808,7 +807,7 @@
 	icon_state = "mortar"
 	anchored = TRUE
 
-/obj/item/explosive/grenade/mustard_gas/primed/Initialize()
+/obj/item/explosive/grenade/gas/mustard_gas/primed/Initialize()
 	. = ..()
 	activate()
 
