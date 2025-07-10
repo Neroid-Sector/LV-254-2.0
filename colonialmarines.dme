@@ -1390,6 +1390,7 @@
 #include "code\game\objects\structures\morgue.dm"
 #include "code\game\objects\structures\musician.dm"
 #include "code\game\objects\structures\noticeboard.dm"
+#include "code\modules\admin\verbs\call_tgui_play_directly.dm"
 #include "code\game\objects\structures\platforms.dm"
 #include "code\game\objects\structures\prop_mech.dm"
 #include "code\game\objects\structures\props.dm"

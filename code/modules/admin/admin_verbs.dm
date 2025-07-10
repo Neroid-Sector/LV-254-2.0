@@ -107,7 +107,8 @@ GLOBAL_LIST_INIT(admin_verbs_ban, list(
 GLOBAL_LIST_INIT(admin_verbs_sounds, list(
 	/client/proc/play_admin_sound,
 	/client/proc/stop_admin_sound,
-	/client/proc/cmd_admin_vox_panel
+	/client/proc/cmd_admin_vox_panel,
+	/client/proc/call_tgui_play_directly,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
