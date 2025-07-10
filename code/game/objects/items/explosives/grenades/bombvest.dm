@@ -62,11 +62,6 @@
 	if(!can_use_bomb_vest(user))
 		return
 
-	. = ..()
-
-	if(!. || isnull(loc))
-		return
-
 	add_fingerprint(user)
 
 	activate(user)
