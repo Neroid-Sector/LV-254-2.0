@@ -342,12 +342,3 @@
 	icon_state = "selfdestruct"
 	requires_power = 0
 	flags_area = AREA_NOTUNNEL
-
-//evac
-area/almayer/evacuation
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "shuttle2"
-	requires_power = 0
-	flags_area = AREA_NOTUNNEL
-
-/area/almayer/evacuation/pod1
