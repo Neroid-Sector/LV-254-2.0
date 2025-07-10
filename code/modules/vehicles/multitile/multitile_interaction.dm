@@ -82,11 +82,11 @@
 			handle_player_entrance(user)
 			return
 
-	if(istype(O, /obj/item/device/motiondetector))
+	if(istype(O, /obj/item/device/motiontracker/adv))
 		if(!interior)
 			to_chat(user, SPAN_WARNING("It appears that [O] cannot establish borders of space inside \the [src]. (PLEASE, TELL A DEV, SOMETHING BROKE)"))
 			return
-		var/obj/item/device/motiondetector/MD = O
+		var/obj/item/device/motiontracker/adv/MD = O
 
 		if(!MD.active)
 			to_chat(user, SPAN_WARNING("\The [MD] must be activated in order to scan \the [src]'s interior."))
@@ -114,8 +114,7 @@
 		if(humans_inside || interior.xenos_taken_slots)
 			msg += "\The [MD] shows [humans_inside ? ("approximately [SPAN_HELPFUL(humans_inside)] signatures") : "no signatures"] of unknown affiliation\
 			[interior.xenos_taken_slots ? (" and about [SPAN_HELPFUL(interior.xenos_taken_slots)] abnormal signatures") : ""] inside of \the [src]."
-			MD.show_blip(user, src)
-			playsound(user, pick('sound/items/detector_ping_1.ogg', 'sound/items/detector_ping_2.ogg', 'sound/items/detector_ping_3.ogg', 'sound/items/detector_ping_4.ogg'), 60, FALSE, 7, 2)
+			playsound(user, 'sound/items/detector_ping.mp3', 60, FALSE, 7, 2)
 			to_chat(user, SPAN_NOTICE(msg))
 		else
 			playsound(user, 'sound/items/detector.ogg', 60, FALSE, 7, 2)
