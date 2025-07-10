@@ -1,6 +1,7 @@
 {
     "override_map": true,
     "map_name": "Lv-254",
+    "weather_holder": "/datum/weather_ss_map_holder/lv624",
     "survivor_types": [
         "/datum/equipment_preset/survivor/civilian",
         "/datum/equipment_preset/survivor/goon"
@@ -30,7 +31,7 @@
             "Down": -1
         }
     ],
-    "camouflage": "urban",
+    "camouflage": "jungle",
     "gamemodes": [
         "Distress Signal",
         "Hunter Games",
