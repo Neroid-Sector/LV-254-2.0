@@ -1958,7 +1958,7 @@
 	)
 	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
-	fire_sound = 'sound/weapons/gun_m4ra.ogg'
+	fire_sound = 'sound/weapons/m4ra.mp3'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 
@@ -2991,7 +2991,7 @@
 	item_state = "xm99a"
 	current_mag = /obj/item/ammo_magazine/rifle/xm99a
 	map_specific_decoration = FALSE
-	fire_sound = 'sound/weapons/pred_plasmacaster_fire.ogg'
+	fire_sound = 'sound/weapons/xm99.mp3'
 	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	mouse_pointer = 'icons/effects/mouse_pointer/smartgun_mouse.dmi'
