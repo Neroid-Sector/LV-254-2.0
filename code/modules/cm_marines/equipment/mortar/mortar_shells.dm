@@ -467,7 +467,8 @@
 
 /obj/item/mortar_shell/ex_act(severity, explosion_direction)
 	if(!burning)
-		return ..()
+		burning = TRUE
+		handle_exploded()
 
 /obj/item/mortar_shell/attack_hand(mob/user)
 	if(burning)
@@ -493,6 +494,18 @@
 
 	addtimer(CALLBACK(src, PROC_REF(detonate), loc), 5 SECONDS)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), (src)), 5.5 SECONDS)
+
+/obj/item/mortar_shell/proc/handle_exploded()
+	visible_message(SPAN_WARNING("[src] cooks off! It's gonna blow!"))
+	anchored = TRUE // don't want other explosions launching it elsewhere
+
+	var/datum/effect_system/spark_spread/sparks = new()
+	sparks.set_up(n = 10, loca = loc)
+	sparks.start()
+	new /obj/effect/warning/explosive(loc, 2 SECONDS)
+
+	addtimer(CALLBACK(src, PROC_REF(detonate), loc), 2 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), (src)), 2.5 SECONDS)
 
 /obj/item/mortar_shell/proc/can_explode()
 	return TRUE

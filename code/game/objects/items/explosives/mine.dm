@@ -329,7 +329,7 @@
 
 /obj/item/atmine
 	name = "m20 anti-vehicle mine"
-	desc = "An anti vehicle mine."
+	desc = "An anti vehicle mine designed by Armat Systems for use by the United States Colonial Marines."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "m20at"
 	w_class = SIZE_MEDIUM
@@ -362,7 +362,6 @@
 	icon_state = "m20at_active"
 	health = 50
 	anchored = TRUE
-	use_dir = FALSE
 	var/angle = 360
 	var/iff_signal = FACTION_MARINE
 	var/defuse_atmine = /obj/item/atmine
@@ -370,7 +369,7 @@
 /obj/item/explosive/atmine/proc/det_atmine(mob/user)
 	playsound(loc, 'sound/weapons/mine_tripped.ogg', 25)
 	create_shrapnel(loc, 10, dir, angle, , cause_data)
-	cell_explosion(loc, 1500, 300, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+	cell_explosion(loc, 1500, 300, EXPLOSION_FALLOFF_SHAPE_LINEAR, , cause_data)
 	qdel(src)
 
 /obj/item/explosive/atmine/Crossed(atom/movable/AM)
@@ -398,7 +397,7 @@
 				SPAN_WARNING("You stop disarming [src]."))
 			return
 		if(user.faction != iff_signal)
-			if(prob(40))
+			if(prob(45))
 				det_atmine()
 				return
 		user.visible_message(SPAN_NOTICE("[user] finishes disarming [src]."), \
