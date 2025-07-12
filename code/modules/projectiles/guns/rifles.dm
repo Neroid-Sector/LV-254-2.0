@@ -2991,7 +2991,7 @@
 	item_state = "xm99a"
 	current_mag = /obj/item/ammo_magazine/rifle/xm99a
 	map_specific_decoration = FALSE
-	fire_sound = 'sound/weapons/xm99.mp3'
+	fire_sound = 'sound/weapons/pred_plasmacaster_fire.ogg'
 	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	mouse_pointer = 'icons/effects/mouse_pointer/smartgun_mouse.dmi'
