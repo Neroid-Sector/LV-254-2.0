@@ -791,5 +791,5 @@
 	icon_state = "xm99a"
 	flags_magazine = AMMUNITION_CANNOT_REMOVE_BULLETS
 	max_rounds = 50
-	gun_type = /obj/item/weapon/gun/rifle/xm99a
+	gun_type = /obj/item/weapon/gun/plasma/xm99a
 	default_ammo = /datum/ammo/bullet/rifle/explosive/xm99a

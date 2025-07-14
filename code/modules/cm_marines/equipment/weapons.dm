@@ -100,7 +100,7 @@
 /obj/item/storage/box/xm99a_system/Initialize()
 	. = ..()
 	new /obj/item/clothing/suit/storage/marine/smartgunner(src)
-	new /obj/item/weapon/gun/rifle/xm99a(src)
+	new /obj/item/weapon/gun/plasma/xm99a(src)
 	new /obj/item/attachable/scope/mini_iff(src)
 	new /obj/item/clothing/glasses/night/medhud/plasma(src)
 	new /obj/item/smartgun_battery(src)

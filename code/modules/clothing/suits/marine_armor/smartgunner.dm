@@ -17,7 +17,7 @@
 		/obj/item/explosive/mine,
 		/obj/item/attachable/bayonet,
 		/obj/item/weapon/gun/smartgun,
-		/obj/item/weapon/gun/rifle/xm99a,
+		/obj/item/weapon/gun/plasma/xm99a,
 		/obj/item/storage/backpack/general_belt,
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,

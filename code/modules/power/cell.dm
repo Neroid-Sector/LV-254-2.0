@@ -198,3 +198,14 @@
 	charge = 100
 	maxcharge = 300
 	minor_fault = 1
+
+/obj/item/cell/hydrogen_fuel_cell
+	name = "\improper 4mW hydrogen fuell cell"
+
+	icon_state = "hcell"
+	charge = 10000
+	maxcharge = 10000
+	matter = list("metal" = 700, "glass" = 60)
+
+/obj/item/cell/hydrogen_fuel_cell/empty
+	charge = 0
