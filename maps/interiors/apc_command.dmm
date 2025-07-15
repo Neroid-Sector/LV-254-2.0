@@ -129,8 +129,9 @@
 	pixel_y = 14;
 	pixel_x = 17
 	},
-/obj/structure/machinery/computer/overwatch/apc{
-	pixel_y = 26
+/obj/structure/machinery/computer/overwatch/groundside_operations/apc{
+	pixel_y = 26;
+	req_access = null
 	},
 /turf/open/shuttle/vehicle/floor_3_7_1,
 /area/interior/vehicle/apc/command)
@@ -158,18 +159,16 @@
 /turf/open/shuttle/vehicle/floor_1_6,
 /area/interior/vehicle/apc/command)
 "s" = (
-/obj/structure/machinery/computer/groundside_operations/arc{
-	dir = 4;
-	layer = 2.981;
-	pixel_x = -13;
-	pixel_y = 10;
-	req_access = null
-	},
 /obj/structure/machinery/computer/intel/disk_reader{
 	dir = 4;
 	layer = 2.983;
 	pixel_x = -13;
 	pixel_y = -3
+	},
+/obj/structure/machinery/computer/squad_changer{
+	pixel_x = -13;
+	dir = 4;
+	pixel_y = 10
 	},
 /turf/open/shuttle/vehicle/floor_1_13,
 /area/interior/vehicle/apc/command)

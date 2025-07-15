@@ -1485,6 +1485,10 @@ GLOBAL_LIST_EMPTY_TYPED(active_overwatch_consoles, /obj/structure/machinery/comp
 	faction = FACTION_FREELANCER
 	freq = DUT_FREQ
 
+/obj/structure/machinery/computer/overwatch/groundside_operations/apc
+	icon = 'icons/obj/structures/props/hybrisa/computers.dmi'
+	icon_state = "bluemultimonitorsmall_on"
+
 /obj/structure/supply_drop
 	name = "Supply Drop Pad"
 	desc = "Place a crate on here to allow bridge Overwatch officers to drop them on people's heads."
