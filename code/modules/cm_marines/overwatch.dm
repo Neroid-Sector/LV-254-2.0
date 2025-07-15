@@ -1447,6 +1447,10 @@ GLOBAL_LIST_EMPTY_TYPED(active_overwatch_consoles, /obj/structure/machinery/comp
 	visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("'[crate.name]' supply drop launched! Another launch will be available in five minutes.")]")
 	busy = FALSE
 
+/obj/structure/machinery/computer/overwatch/apc
+	icon = 'icons/obj/structures/props/hybrisa/computers.dmi'
+	icon_state = "bluemultimonitorsmall_on"
+
 /obj/structure/machinery/computer/overwatch/almayer
 	density = FALSE
 	icon = 'icons/obj/structures/machinery/computer.dmi'
