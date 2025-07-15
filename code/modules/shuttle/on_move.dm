@@ -203,6 +203,10 @@ All ShuttleMove procs go here
 		return
 	. = ..()
 
+/mob/living/onShuttleMove(turf/newT, turf/oldT, list/movement_force, move_dir, obj/docking_port/stationary/old_dock, obj/docking_port/mobile/moving_dock)
+	stop_looking_multiz()
+	. = ..()
+
 /mob/afterShuttleMove(turf/oldT, list/movement_force, shuttle_dir, shuttle_preferred_direction, move_dir, rotation)
 	if(!move_on_shuttle)
 		return

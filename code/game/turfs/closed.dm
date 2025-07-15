@@ -38,6 +38,10 @@
 
 	user.visible_message(SPAN_WARNING("[user] climbs up [src]."), SPAN_WARNING("You climb up [src]."))
 
+	if(isliving(user))
+		var/mob/living/living_user = user
+		living_user.stop_looking_multiz()
+
 	user.forceMove(above_current)
 	return
 

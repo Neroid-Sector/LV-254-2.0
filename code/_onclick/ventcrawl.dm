@@ -96,6 +96,7 @@
 		visible_message(SPAN_DANGER("[src] scrambles into [vent_found]!"), SPAN_WARNING("You climb into [vent_found]."))
 		playsound(src, pick('sound/effects/alien_ventpass1.ogg', 'sound/effects/alien_ventpass2.ogg'), 35, 1)
 		forceMove(vent_found)
+		stop_looking_multiz()
 		update_pipe_icons(vent_found)
 	else
 		to_chat(src, SPAN_WARNING("This vent is not connected to anything."))

@@ -19,7 +19,7 @@
 	w_class = SIZE_LARGE
 	flags_equip_slot = SLOT_BACK
 	actions_types = list(/datum/action/item_action/hover)
-	var/hover_cooldown = 7.5 SECONDS
+	var/hover_cooldown = 3.5 SECONDS
 	/// If you can use it, used for cooldowns.
 	var/can_hover = TRUE
 
@@ -74,17 +74,17 @@
 				speed = 6
 				max_distance = 2
 				fuel_multiplier = 1
-				hover_cooldown = 5 SECONDS
+				hover_cooldown = 2 SECONDS
 			if("Normal (Jump)")
 				speed = 5
 				max_distance = 4
 				fuel_multiplier = 1
-				hover_cooldown = 7.5 SECONDS
+				hover_cooldown = 3.5 SECONDS
 			if("Weak (Leap)")
 				speed = 3
 				max_distance = 6
 				fuel_multiplier = 0.75
-				hover_cooldown = 10 SECONDS
+				hover_cooldown = 5 SECONDS
 
 		to_chat(user, SPAN_NOTICE("You set the hoverpack's pressure output to [input]."))
 
@@ -185,6 +185,7 @@
 		return
 	var/list/turf/path = get_line(user, t_turf, FALSE)
 	warning.forceMove(path[max_distance])
+	user.stop_looking_multiz()
 
 /obj/item/hoverpack/proc/can_use_hoverpack(mob/living/carbon/human/user)
 	if(user.is_mob_incapacitated())

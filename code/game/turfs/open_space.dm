@@ -16,7 +16,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 
 /turf/open_space/Initialize()
 	ADD_TRAIT(src, TURF_Z_TRANSPARENT_TRAIT, TRAIT_SOURCE_INHERENT)
-	
+
 	return INITIALIZE_HINT_LATELOAD
 
 /turf/open_space/Entered(atom/movable/entered_movable, atom/old_loc)
@@ -38,6 +38,10 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 		below = SSmapping.get_turf_below(below)
 		height++
 
+	if(isliving(movable))
+		var/mob/living/living_movable = movable
+		living_movable.stop_looking_multiz()
+
 	movable.forceMove(below)
 	movable.onZImpact(below, height)
 
@@ -48,7 +52,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 /turf/open_space/attack_hand(mob/user)
 	if(user.action_busy)
 		return
-	
+
 	var/turf/current_turf = get_turf(src)
 
 	if(istype(current_turf, /turf/open_space))
@@ -63,6 +67,10 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 		var/turf/below = SSmapping.get_turf_below(current_turf)
 		while(istype(below, /turf/open_space))
 			below = SSmapping.get_turf_below(below)
+
+		if(isliving(user))
+			var/mob/living/living_user = user
+			living_user.stop_looking_multiz()
 
 		user.forceMove(below)
 		return

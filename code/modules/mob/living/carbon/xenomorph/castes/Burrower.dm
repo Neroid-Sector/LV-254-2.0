@@ -142,6 +142,7 @@
 		addtimer(CALLBACK(src, PROC_REF(do_burrow_cooldown)), (caste ? caste.burrow_cooldown : 5 SECONDS))
 		return
 	// TODO Make immune to all damage here.
+	stop_looking_multiz()
 	to_chat(src, SPAN_XENOWARNING("We burrow ourselves into the ground."))
 	invisibility = 101
 	alpha = 100

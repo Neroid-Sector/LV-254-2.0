@@ -250,11 +250,7 @@
 	set name = "Look Up"
 	set category = "IC"
 
-	if(observed_atom)
-		var/atom/to_delete = observed_atom
-		observed_atom = null
-		qdel(to_delete)
-		return
+	stop_looking_multiz()
 
 	var/turf/above = locate(x, y, z+1)
 
@@ -265,3 +261,10 @@
 	var/mob/hologram/look_up/observed_hologram = new(above, src)
 
 	observed_atom = observed_hologram
+
+/mob/living/proc/stop_looking_multiz()
+	if(!observed_atom)
+		return
+	var/atom/to_delete = observed_atom
+	observed_atom = null
+	qdel(to_delete)

@@ -927,6 +927,9 @@ note dizziness decrements automatically in the mob's Life() proc.
 /mob/proc/trainteleport(atom/destination)
 	if(!destination || anchored)
 		return FALSE //Gotta go somewhere and be able to move
+	if(isliving(src))
+		var/mob/living/living_src = src
+		living_src.stop_looking_multiz()
 	if(!pulling)
 		return forceMove(destination) //No need for a special proc if there's nothing being pulled.
 	pulledby?.stop_pulling() //The leader of the choo-choo train breaks the pull
@@ -972,6 +975,9 @@ note dizziness decrements automatically in the mob's Life() proc.
 			end_of_conga = TRUE //Only mobs can continue the cycle.
 	var/area/new_area = get_area(destination)
 	for(var/atom/movable/AM in conga_line)
+		if(isliving(AM))
+			var/mob/living/living_atom = AM
+			living_atom.stop_looking_multiz()
 		var/oldLoc
 		if(AM.loc)
 			oldLoc = AM.loc

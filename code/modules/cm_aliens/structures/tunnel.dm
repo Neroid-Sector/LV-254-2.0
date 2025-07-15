@@ -210,7 +210,7 @@
 /obj/structure/tunnel/attack_larva(mob/living/carbon/xenomorph/M)
 	. = attack_alien(M)
 
-/obj/structure/tunnel/attack_alien(mob/living/carbon/xenomorph/M)
+/obj/structure/tunnel/attack_alien(mob/living/carbon/xenomorph/M, mob/living/user)
 	if(SEND_SIGNAL(M, COMSIG_XENO_ENTER_TUNNEL) & COMPONENT_CANCEL_TUNNEL)
 		return XENO_NO_DELAY_ACTION
 
@@ -270,6 +270,7 @@
 		return XENO_NO_DELAY_ACTION
 
 	if(length(hive.tunnels)) //Make sure other tunnels exist
+		user.stop_looking_multiz()
 		M.forceMove(src) //become one with the tunnel
 		to_chat(M, SPAN_HIGHDANGER("Alt + Click the tunnel to exit, Ctrl + Click to choose a destination."))
 		pick_tunnel(M)
