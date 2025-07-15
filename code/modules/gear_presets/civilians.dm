@@ -171,6 +171,40 @@
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
 
+//----------Zealot-gunner
+
+/datum/equipment_preset/colonist/som_z_g
+	name = "Sons of Marina Zealot Gunner(SOM)"
+	assignment = JOB_SOM_ZEALOT
+	rank = JOB_SOM_ZEALOT
+	skills = /datum/skills/civilian/survivor/militia
+
+/datum/equipment_preset/colonist/som_z_g/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas(new_human), WEAR_FACE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cultist_hood/som(new_human), WEAR_HEAD)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/m2c_gun(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/m2c(new_human), WEAR_WAIST)
+
+//robe
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new 	/obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
+	if(prob(45))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/collie(new_human), WEAR_JACKET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som/ghillie(new_human), WEAR_JACKET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som(new_human), WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new/obj/item/storage/pouch/machete/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/full(new_human), WEAR_L_STORE)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+
+
 //----------Paladin
 
 /datum/equipment_preset/colonist/som_p
