@@ -18,7 +18,7 @@
 
 	to_chat(user, SPAN_GREEN("Audio Relay: [sourcemob.name] [verb], <span class='[language.color]'>\"[message]\"</span>"))
 	if(user && user.client && user.client.prefs && !user.client.prefs.lang_chat_disabled \
-	   && !user.ear_deaf && user.say_understands(sourcemob, language))
+		&& !user.ear_deaf && user.say_understands(sourcemob, language))
 		sourcemob.langchat_display_image(user)
 
 	return TRUE
@@ -55,6 +55,7 @@
 	desc = "An agile seegson brand drone used by to survey unexplored lands or dagerous combat zones."
 	motion_sensed = TRUE
 	invisibility = FALSE
+	flags_atom = NO_ZFALL
 	alpha = 175
 
 /mob/hologram/uav/Initialize(mapload, mob/M, obj/item/uav_drone/drone, obj/item/clothing/glasses/night/hack_goggles/bracers)

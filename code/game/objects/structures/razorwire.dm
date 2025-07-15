@@ -86,6 +86,11 @@
 			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 			anchored = !anchored
 			to_chat(user, SPAN_NOTICE("You [anchored ? "wrench" : "unwrench"] \the [src]."))
+	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER)) //rotate the mount
+		playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
+		user.visible_message(SPAN_NOTICE("[user] rotates [src]."),SPAN_NOTICE("You rotate [src]."))
+		setDir(turn(dir, -90))
+		return
 	else
 		if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
 			if(user.action_busy)
@@ -99,6 +104,7 @@
 				return
 			user.visible_message(SPAN_NOTICE("[user] finishes dismantling [src]."), \
 			SPAN_NOTICE("You finish dismantling [src]."))
+			playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 100)
 			var/obj/item/stack/concertina_wire/R = new dismantlewire(usr.loc)
 			src.transfer_fingerprints_to(R)
 			R.add_fingerprint(user)
@@ -212,6 +218,11 @@
 			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 			anchored = !anchored
 			to_chat(user, SPAN_NOTICE("You [anchored ? "wrench" : "unwrench"] \the [src]."))
+	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER)) //rotate the mount
+		playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
+		user.visible_message(SPAN_NOTICE("[user] rotates [src]."),SPAN_NOTICE("You rotate [src]."))
+		setDir(turn(dir, -90))
+		return
 	else
 		if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
 			if(user.action_busy)
@@ -239,6 +250,7 @@
 				return
 			user.visible_message(SPAN_NOTICE("[user] finishes dismantling [src]."), \
 			SPAN_NOTICE("You finish dismantling [src]."))
+			playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 100)
 			var/obj/item/stack/fragwire/R = new dismantlefragwire(usr.loc)
 			src.transfer_fingerprints_to(R)
 			R.add_fingerprint(user)
@@ -366,6 +378,47 @@
 	amount = STACK_50
 
 //********Spike-Strip********/
+/obj/item/stack/spikestrip
+	name = "Spike-Strip case"
+	desc = "A rolled up spike mat designed for disabling vehicle tires."
+	icon = 'icons/obj/items/marine-items.dmi'
+	icon_state = "spike_strip"
+	w_class = SIZE_MEDIUM
+	max_amount = 25
+	var/deployconcertina = /obj/structure/device/spikestrip
+
+
+/obj/item/stack/spikestrip/attack_self(mob/user)
+	..()
+
+	var/turf/open/T = user.loc
+	if(!(istype(T) && T.allow_construction))
+		to_chat(user, SPAN_WARNING("[src] must be placed on a proper surface!"))
+		return
+	if(locate(/obj/item/explosive/mine) in get_turf(src))
+		to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
+		return
+	if(locate(/obj/item/explosive/atmine) in get_turf(src))
+		to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
+		return
+	if(locate(/obj/structure/device/spikestrip) in get_turf(src))
+		to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+		return
+	if(locate(/obj/structure/barricade) in get_turf(src))
+		to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+		return
+	if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
+		playsound(loc, 'sound/handling/smartgun_open.ogg', 25, TRUE)
+		to_chat(user, SPAN_NOTICE(" You deploy [src]."))
+		var/obj/structure/device/spikestrip/R = new deployconcertina(usr.loc)
+		src.transfer_fingerprints_to(R)
+		R.add_fingerprint(user)
+		if (amount <= 1)
+			qdel(src)
+		else {
+			amount = amount - 1
+			update_icon()
+		}
 
 /obj/structure/device/spikestrip
 	name = "spike-strip"
@@ -377,8 +430,8 @@
 	wrenchable = TRUE
 	health = 50
 	layer = RESIN_STRUCTURE_LAYER
-	var/damage = 400
-	var/dismantlewire = /obj/item/stack/concertina_wire
+	var/damage = 1000
+	var/dismantlewire = /obj/item/stack/spikestrip
 
 /obj/structure/device/spikestrip/Crossed(atom/movable/AM)
 	. = ..()
@@ -386,31 +439,31 @@
 	if(!istype(H))
 		return
 
+	playsound(loc, 'sound/effects/spikestrip.mp3', 25)
 	H.take_damage_type(damage, "slash")
 	H.healthcheck()
-	playsound(loc, 'sound/effects/spikestrip.mp3', 25)
+
 
 /obj/structure/device/spikestrip/attackby(obj/item/W, mob/user)
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
-		if(user.action_busy)
-			return
-		else
-			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-			anchored = !anchored
-			to_chat(user, SPAN_NOTICE("You [anchored ? "wrench" : "unwrench"] \the [src]."))
+	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER)) //rotate the mount
+		playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
+		user.visible_message(SPAN_NOTICE("[user] rotates [src]."),SPAN_NOTICE("You rotate [src]."))
+		setDir(turn(dir, -90))
+		return
 	else
-		if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
+		if(HAS_TRAIT(W, TRAIT_TOOL_CROWBAR))
 			if(user.action_busy)
 				return
 			else
-				user.visible_message(SPAN_NOTICE("[user] starts cutting [src]."), \
-				SPAN_NOTICE("You start cutting [src]."))
+				user.visible_message(SPAN_NOTICE("[user] starts prying the [src]."), \
+				SPAN_NOTICE("You start prying up the [src]."))
 			if(!do_after(user, 30, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
 				user.visible_message(SPAN_WARNING("[user] stops dismantling [src]."), \
 					SPAN_WARNING("You stop dismantling [src]."))
 				return
 			user.visible_message(SPAN_NOTICE("[user] finishes dismantling [src]."), \
 			SPAN_NOTICE("You finish dismantling [src]."))
+			playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 100)
 			var/obj/item/stack/concertina_wire/R = new dismantlewire(usr.loc)
 			src.transfer_fingerprints_to(R)
 			R.add_fingerprint(user)
@@ -422,3 +475,6 @@
 		qdel(src)
 	else
 		playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 100)
+
+/obj/item/stack/spikestrip/full_stack
+	amount = STACK_25

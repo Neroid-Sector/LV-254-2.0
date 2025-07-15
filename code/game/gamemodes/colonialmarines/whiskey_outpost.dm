@@ -770,6 +770,7 @@
 			/obj/item/storage/box/explosive_mines,
 			/obj/item/storage/toolbox/mechanical,
 			/obj/item/storage/box/kit/defensegunner,
+			/obj/item/stack/spikestrip/full_stack,
 			/obj/item/storage/box/kit/engineering_supply_kit)
 		if(9) //General
 			spawnitems = list(/obj/item/device/radio,
