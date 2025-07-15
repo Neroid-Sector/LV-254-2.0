@@ -364,3 +364,61 @@
 
 /obj/item/stack/punjisticks/full_stack
 	amount = STACK_50
+
+//********Spike-Strip********/
+
+/obj/structure/device/spikestrip
+	name = "spike-strip"
+	desc = "A simple device for disabling fleeing vehicles."
+	icon = 'icons/obj/structures/barricades.dmi'
+	icon_state = "spike_strip"
+	density = FALSE
+	anchored = FALSE
+	wrenchable = TRUE
+	health = 50
+	layer = RESIN_STRUCTURE_LAYER
+	var/damage = 400
+	var/dismantlewire = /obj/item/stack/concertina_wire
+
+/obj/structure/device/spikestrip/Crossed(atom/movable/AM)
+	. = ..()
+	var/obj/vehicle/multitile/H = AM
+	if(!istype(H))
+		return
+
+	H.take_damage_type(damage, "slash")
+	H.healthcheck()
+	playsound(loc, 'sound/effects/spikestrip.mp3', 25)
+
+/obj/structure/device/spikestrip/attackby(obj/item/W, mob/user)
+	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+		if(user.action_busy)
+			return
+		else
+			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
+			anchored = !anchored
+			to_chat(user, SPAN_NOTICE("You [anchored ? "wrench" : "unwrench"] \the [src]."))
+	else
+		if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
+			if(user.action_busy)
+				return
+			else
+				user.visible_message(SPAN_NOTICE("[user] starts cutting [src]."), \
+				SPAN_NOTICE("You start cutting [src]."))
+			if(!do_after(user, 30, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY))
+				user.visible_message(SPAN_WARNING("[user] stops dismantling [src]."), \
+					SPAN_WARNING("You stop dismantling [src]."))
+				return
+			user.visible_message(SPAN_NOTICE("[user] finishes dismantling [src]."), \
+			SPAN_NOTICE("You finish dismantling [src]."))
+			var/obj/item/stack/concertina_wire/R = new dismantlewire(usr.loc)
+			src.transfer_fingerprints_to(R)
+			R.add_fingerprint(user)
+			qdel(src)
+
+/obj/structure/device/spikestrip/ex_act()
+	if(prob(40))
+		playsound(loc, 'sound/effects/clang.ogg', 100)
+		qdel(src)
+	else
+		playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 100)
