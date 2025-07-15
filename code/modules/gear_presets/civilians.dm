@@ -64,8 +64,6 @@
 /datum/equipment_preset/colonist/civilian/generic
 	name = "Civilian(generic)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "Civilian"
-	rank = "Civilian"
 	skills = /datum/skills/civilian/survivor
 
 /datum/equipment_preset/colonist/civilian/generic/load_gear(mob/living/carbon/human/new_human)
