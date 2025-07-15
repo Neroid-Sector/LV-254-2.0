@@ -45,10 +45,8 @@
 
 	ammo = /datum/ammo/bullet/smartgun
 	actions_types = list(
-		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
 		/datum/action/item_action/smartgun/toggle_auto_aim,
-		/datum/action/item_action/smartgun/toggle_frontline_mode,
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		/datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
@@ -56,6 +54,11 @@
 	attachable_allowed = list(
 		/obj/item/attachable/smartbarrel,
 		/obj/item/attachable/flashlight,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/lasersight,
+
 	)
 
 	var/obj/item/smartgun_battery/battery = null
@@ -790,6 +793,15 @@
 /obj/item/weapon/gun/smartgun/dirty/elite
 	name = "\improper M56T 'Terminator' smartgun"
 	desc = "The actual firearm in the 4-piece M56T Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+
+	actions_types = list(
+		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
+		/datum/action/item_action/smartgun/toggle_ammo_type,
+		/datum/action/item_action/smartgun/toggle_auto_aim,
+		/datum/action/item_action/smartgun/toggle_lethal_mode,
+		/datum/action/item_action/smartgun/toggle_motion_detector,
+		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+	)
 
 /obj/item/weapon/gun/smartgun/dirty/elite/Initialize(mapload, ...)
 	. = ..()
