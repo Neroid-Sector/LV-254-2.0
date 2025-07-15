@@ -162,7 +162,8 @@
 	dir = 4;
 	layer = 2.981;
 	pixel_x = -13;
-	pixel_y = 10
+	pixel_y = 10;
+	req_access = null
 	},
 /obj/structure/machinery/computer/intel/disk_reader{
 	dir = 4;
@@ -199,6 +200,8 @@
 /obj/structure/machinery/computer/overwatch/apc{
 	pixel_y = 26
 	},
+/obj/item/device/trench_whistle,
+/obj/item/tool/pen,
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/apc/command)
 "x" = (
