@@ -83,6 +83,9 @@
 	/// Doesn't need to be set for areas/Z levels that are marked as admin-only
 	var/block_game_interaction = FALSE
 
+	// Day-Night
+	var/daytime_affected = TRUE
+
 	/// Which, if any, LZ this area belongs to. If an area belongs to an LZ, if that LZ is designated as the primary
 	/// LZ, all weeds will be destroyed and further weed placement disabled
 	var/linked_lz = FALSE
@@ -114,7 +117,9 @@
 	reg_in_areas_in_z()
 	if(is_mainship_level(z))
 		GLOB.ship_areas += src
-
+		daytime_affected = FALSE
+	if(ceiling > CEILING_GLASS)
+		daytime_affected = FALSE
 	update_base_lighting()
 
 	if(unoviable_timer)
