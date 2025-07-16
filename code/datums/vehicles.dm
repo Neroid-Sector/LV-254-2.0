@@ -100,6 +100,14 @@
 	name = "Pizza-Galaxy Van"
 	interior_id = "pizza_van"
 
+/datum/map_template/interior/ambulance
+	name = "Ambulance"
+	interior_id = "ambulance"
+
+/datum/map_template/interior/cop_car
+	name = "Cop Car"
+	interior_id = "cop_car"
+
 //CLF Interiors
 
 /datum/map_template/interior/clf_van

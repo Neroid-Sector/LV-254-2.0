@@ -1,6 +1,6 @@
 /obj/vehicle/multitile/clf_van
-	name = "CLF Technical"
-	desc = "A repurposed civilian truck, plastered with CLF emblems and insignias. Armor plates have been attached on all sides, including the front windows. Bulletholes riddle the vehicle."
+	name = "Insurgent Technical"
+	desc = "A repurposed civilian truck, plastered with Insurgent emblems and insignias. Armor plates have been attached on all sides, including the front windows. Bulletholes riddle the vehicle."
 	layer = ABOVE_XENO_LAYER
 
 	icon = 'icons/obj/vehicles/clf_van.dmi'
@@ -53,7 +53,9 @@
 
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/locomotion/van_wheels,
+		/obj/item/hardpoint/primary/m56,
 	)
+
 
 	move_turn_momentum_loss_factor = 1
 
@@ -113,6 +115,56 @@
 				return NO_BLOCKED_MOVEMENT
 
 	return ..()
+
+/obj/vehicle/multitile/clf_van/add_seated_verbs(mob/living/M, seat)
+	if(!M.client)
+		return
+	add_verb(M.client, list(
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+	))
+	if(seat == VEHICLE_DRIVER)
+		add_verb(M.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+
+			/obj/vehicle/multitile/proc/activate_horn,
+		))
+	if(seat == VEHICLE_GUNNER)
+		add_verb(M.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/activate_horn,
+		))
+
+/obj/vehicle/multitile/clf_van/remove_seated_verbs(mob/living/M, seat)
+	if(!M.client)
+		return
+	remove_verb(M.client, list(
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+	))
+	SStgui.close_user_uis(M, src)
+	if(seat == VEHICLE_DRIVER)
+		remove_verb(M.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/activate_horn,
+		))
+	if(seat == VEHICLE_GUNNER)
+		remove_verb(M.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/activate_horn,
+		))
+
+
 
 /*
 ** PRESETS
@@ -293,3 +345,8 @@
 
 /obj/effect/vehicle_spawner/clf_van/fixed/load_hardpoints(obj/vehicle/multitile/clf_van/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+
+//PRESET: MG
+/obj/effect/vehicle_spawner/clf_van/fixed/m56/load_hardpoints(obj/vehicle/multitile/clf_van/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/primary/m56)

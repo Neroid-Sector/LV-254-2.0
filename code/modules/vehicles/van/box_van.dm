@@ -294,3 +294,105 @@
 
 /obj/effect/vehicle_spawner/box_van/fixed/load_hardpoints(obj/vehicle/multitile/box_van/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+
+//ambulance
+
+/obj/vehicle/multitile/box_van/ambulance
+	name = "\improper ambulance"
+	desc = "An ambulance. It's used to transport critically injured patients."
+	icon = 'icons/obj/vehicles/ambulance.dmi'
+
+	interior_map = /datum/map_template/interior/ambulance
+
+	honk_sound = 'sound/vehicles/vehicle_siren.mp3'
+
+
+/*
+** PRESETS SPAWNERS
+*/
+
+/obj/effect/vehicle_spawner/box_van/ambulance
+	name = "Ambulance Spawner"
+	icon = 'icons/obj/vehicles/ambulance.dmi'
+	icon_state = "van_base"
+
+//PRESET: no hardpoints
+/obj/effect/vehicle_spawner/box_van/ambulance/spawn_vehicle()
+
+//PRESET: wheels installed, destroyed
+/obj/effect/vehicle_spawner/box_van/ambulance/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/box_van/ambulance/AMBULANCE = new (loc)
+
+	load_misc(AMBULANCE)
+	load_hardpoints(AMBULANCE)
+	handle_direction(AMBULANCE)
+	load_damage(AMBULANCE)
+	AMBULANCE.update_icon()
+
+/obj/effect/vehicle_spawner/box_van/ambulance/decrepit/load_hardpoints(obj/vehicle/multitile/box_van/ambulance/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+
+//PRESET: wheels installed
+/obj/effect/vehicle_spawner/box_van/ambulance/fixed/spawn_vehicle()
+	var/obj/vehicle/multitile/box_van/ambulance/AMBULANCE = new (loc)
+
+	load_misc(AMBULANCE)
+	load_hardpoints(AMBULANCE)
+	handle_direction(AMBULANCE)
+	AMBULANCE.update_icon()
+
+/obj/effect/vehicle_spawner/box_van/ambulance/fixed/load_hardpoints(obj/vehicle/multitile/box_van/ambulance/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+
+//police car
+
+
+
+//Trucks
+//Read the documentation in multitile.dm before trying to decipher this stuff
+
+/obj/vehicle/multitile/box_van/cop_car
+	name = "\improper Mono-Spectra police cruiser"
+	desc = "A police car."
+	icon = 'icons/obj/vehicles/cop_car.dmi'
+
+	interior_map = /datum/map_template/interior/cop_car
+
+	honk_sound = 'sound/vehicles/vehicle_siren.mp3'
+
+/*
+** PRESETS SPAWNERS
+*/
+
+/obj/effect/vehicle_spawner/box_van/cop_car
+	name = "Cop Car Spawner"
+	icon = 'icons/obj/vehicles/cop_car.dmi'
+	icon_state = "van_base"
+
+//PRESET: no hardpoints
+/obj/effect/vehicle_spawner/box_van/cop_car/spawn_vehicle()
+
+//PRESET: wheels installed, destroyed
+/obj/effect/vehicle_spawner/box_van/cop_car/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/box_van/cop_car/COP_CAR = new (loc)
+
+	load_misc(COP_CAR)
+	load_hardpoints(COP_CAR)
+	handle_direction(COP_CAR)
+	load_damage(COP_CAR)
+	COP_CAR.update_icon()
+
+/obj/effect/vehicle_spawner/box_van/cop_car/decrepit/load_hardpoints(obj/vehicle/multitile/box_van/cop_car/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+
+//PRESET: wheels installed
+/obj/effect/vehicle_spawner/box_van/cop_car/fixed/spawn_vehicle()
+	var/obj/vehicle/multitile/box_van/cop_car/COP_CAR = new (loc)
+
+	load_misc(COP_CAR)
+	load_hardpoints(COP_CAR)
+	handle_direction(COP_CAR)
+	COP_CAR.update_icon()
+
+/obj/effect/vehicle_spawner/box_van/cop_car/fixed/load_hardpoints(obj/vehicle/multitile/box_van/cop_car/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)

@@ -9,6 +9,8 @@
 	ambience_exterior = 'sound/ambience/vehicle_interior1.ogg'
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 
+//uscm
+
 /area/interior/vehicle/tank
 	name = "tank interior"
 	icon_state = "tank"
@@ -25,12 +27,32 @@
 	name = "\improper CMD APC interior"
 	icon_state = "apc_cmd"
 
+/area/interior/vehicle/arc
+	name = "\improper ARC interior"
+	icon_state = "arc"
+
+//insurgent
+
+/area/interior/vehicle/clf_van
+	name = "clf van interior"
+	icon_state = "van"
+
+//upp
+
+//twe
+
+//civilian
+
 /area/interior/vehicle/van
 	name = "van interior"
 	icon_state = "van"
 
-/area/interior/vehicle/clf_van
-	name = "clf van interior"
+/area/interior/vehicle/ambulance
+	name = "ambulance interior"
+	icon_state = "van"
+
+/area/interior/vehicle/copcar
+	name = "cop-car interior"
 	icon_state = "van"
 
 /area/interior/vehicle/box_van
@@ -41,6 +63,4 @@
 	name = "pizza-van interior"
 	icon_state = "van"
 
-/area/interior/vehicle/arc
-	name = "\improper ARC interior"
-	icon_state = "arc"
+
