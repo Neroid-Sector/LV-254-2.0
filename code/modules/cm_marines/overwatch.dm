@@ -1496,6 +1496,8 @@ GLOBAL_LIST_EMPTY_TYPED(active_overwatch_consoles, /obj/structure/machinery/comp
 /obj/structure/machinery/computer/overwatch/groundside_operations/bulky
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "crew_bulky"
+	density = 1
+	req_access = null
 
 /obj/structure/supply_drop
 	name = "Supply Drop Pad"
