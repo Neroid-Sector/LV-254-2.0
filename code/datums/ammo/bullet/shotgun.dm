@@ -173,6 +173,8 @@
 /datum/ammo/bullet/shotgun/buckshot/masterkey
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/masterkey
 
+	penetration = ARMOR_PENETRATION_TIER_1
+
 	damage = 55
 
 /datum/ammo/bullet/shotgun/buckshot/masterkey/on_hit_mob(mob/M,obj/projectile/P)

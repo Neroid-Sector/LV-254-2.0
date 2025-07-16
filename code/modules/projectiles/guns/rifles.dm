@@ -1991,6 +1991,13 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/flashlight/grip,
+
+		/obj/item/attachable/attached_gun/grenade,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/attached_gun/extinguisher,
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER

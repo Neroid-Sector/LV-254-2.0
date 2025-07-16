@@ -3412,7 +3412,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/New()
 	..()
-	attachment_firing_delay = FIRE_DELAY_TIER_5*3
+	attachment_firing_delay = FIRE_DELAY_TIER_7*3
 
 /obj/item/attachable/attached_gun/shotgun/get_examine_text(mob/user)
 	. = ..()
