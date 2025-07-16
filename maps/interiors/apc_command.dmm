@@ -129,9 +129,10 @@
 	pixel_y = 14;
 	pixel_x = 17
 	},
-/obj/structure/machinery/computer/overwatch/groundside_operations/apc{
-	pixel_y = 26;
-	req_access = null
+/obj/item/device/trench_whistle,
+/obj/item/tool/pen,
+/obj/structure/machinery/computer/overwatch/apc{
+	pixel_y = 26
 	},
 /turf/open/shuttle/vehicle/floor_3_7_1,
 /area/interior/vehicle/apc/command)
@@ -190,17 +191,14 @@
 /turf/open/void/vehicle,
 /area/space)
 "w" = (
-/obj/structure/surface/table/reinforced/black,
 /obj/item/device/flashlight/lamp{
 	pixel_x = 12;
 	pixel_y = 16
 	},
-/obj/item/map,
 /obj/structure/machinery/computer/overwatch/apc{
 	pixel_y = 26
 	},
-/obj/item/device/trench_whistle,
-/obj/item/tool/pen,
+/obj/structure/machinery/computer/overwatch/bulky,
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/apc/command)
 "x" = (

@@ -1451,6 +1451,10 @@ GLOBAL_LIST_EMPTY_TYPED(active_overwatch_consoles, /obj/structure/machinery/comp
 	icon = 'icons/obj/structures/props/hybrisa/computers.dmi'
 	icon_state = "bluemultimonitorsmall_on"
 
+/obj/structure/machinery/computer/overwatch/bulky
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "crew_bulky"
+
 /obj/structure/machinery/computer/overwatch/almayer
 	density = FALSE
 	icon = 'icons/obj/structures/machinery/computer.dmi'
