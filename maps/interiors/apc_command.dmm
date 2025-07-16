@@ -198,7 +198,7 @@
 /obj/structure/machinery/computer/overwatch/apc{
 	pixel_y = 26
 	},
-/obj/structure/machinery/computer/overwatch/bulky,
+/obj/structure/machinery/computer/overwatch/groundside_operations/bulky,
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/apc/command)
 "x" = (
