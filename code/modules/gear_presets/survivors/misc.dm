@@ -30,10 +30,10 @@ Everything below isn't used or out of place.
 	add_ice_colony_survivor_equipment(new_human)
 	..()
 
-/datum/equipment_preset/survivor/prisoner
+/datum/equipment_preset/survivor/prisoner/plain
 	name = "Survivor - Prisoner(no weapons)"
 
-/datum/equipment_preset/survivor/prisoner/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/survivor/prisoner/plain/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/color/orange(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/orange(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
