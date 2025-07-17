@@ -12,6 +12,8 @@
 #define WEATHER_TYPE_SNOW 1
 #define WEATHER_TYPE_SNOWSTORM 2
 #define WEATHER_TYPE_BLIZZARD 3
+#define WEATHER_TYPE_ASH 4
+#define WEATHER_TYPE_FOG 5
 
 #define WEATHER_SOUND_WAIT 300 // All weather sounds should try to be ~30second loops so we end up with consistency
 
