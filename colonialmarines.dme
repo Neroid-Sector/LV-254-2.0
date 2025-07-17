@@ -245,6 +245,7 @@
 #include "code\_onclick\hud\rendering\render_plate.dm"
 #include "code\controllers\shuttle_controller.dm"
 #include "code\controllers\topic.dm"
+#include "code\datums\weather\weather_events\unsorted_weather.dm"
 #include "code\controllers\configuration\config_entry.dm"
 #include "code\controllers\configuration\configuration.dm"
 #include "code\controllers\configuration\entries\combat_config.dm"
