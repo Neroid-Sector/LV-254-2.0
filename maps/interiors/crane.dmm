@@ -59,7 +59,7 @@
 /turf/open/shuttle/vehicle{
 	icon_state = "floor_3_12"
 	},
-/area/vehicle/van)
+/area/interior/vehicle/van)
 "X" = (
 /obj/structure/interior_wall/van{
 	icon_state = "front_3"
