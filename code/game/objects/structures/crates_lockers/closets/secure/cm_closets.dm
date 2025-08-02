@@ -430,6 +430,16 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 			src.desc = "It's a secure locker for marine personnel to store their personal gear. The lock is paired to the first ID swiped to ensure privacy."
 	return
 
+/obj/structure/closet/secure_closet/squad/full/Initialize()
+	. = ..()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/device/radio/headset/almayer/marine/cryo(src)
+	new /obj/item/storage/backpack/marine/satchel(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/clothing/gloves/marine(src)
+	new /obj/item/clothing/head/helmet/marine(src)
+	new /obj/item/clothing/suit/storage/marine(src)
+
 
 //MARINE SQUAD CLOSET ALPHA
 /obj/structure/closet/secure_closet/squad/alpha
