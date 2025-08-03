@@ -149,6 +149,14 @@
 	name = "\improper Worn Colonial Liberation Front flag"
 	desc = "A very worn flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "clfflag_worn"
+/obj/structure/sign/banners/mlu_flag
+	name = "\improper Miner's Liberation Union flag"
+	desc = "A flag of the Miner's Liberation Union. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "mlu_flag"
+/obj/structure/sign/banners/mlu_worn
+	name = "\improper Worn Miner's Liberation Union flag"
+	desc = "A very worn flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "mluflag_worn"
 //============//
 //  Flags    //
 //==========//

@@ -177,6 +177,14 @@
 	minimap_type = MINIMAP_FLAG_WY
 	faction = FACTION_PMC
 
+/obj/structure/machinery/prop/almayer/CICmap/computer/whiteboard
+	name = "Whiteboard"
+	anchored = FALSE
+	use_power = USE_POWER_NONE
+	desc = "A large whiteboard depicting a map of the area of operations."
+	icon = 'icons/obj/structures/props/props.dmi'
+	icon_state = "whiteboard"
+
 //Nonpower using props
 
 /obj/structure/prop/almayer
@@ -184,6 +192,14 @@
 	desc = "THIS SHOULDN'T BE VISIBLE, AHELP 'ART-P02' IF SEEN IN ROUND WITH LOCATION"
 	density = TRUE
 	anchored = TRUE
+
+/obj/structure/prop/almayer/whiteboard
+	name = "Whiteboard"
+	desc = "THIS SHOULDN'T BE VISIBLE, AHELP 'ART-P02' IF SEEN IN ROUND WITH LOCATION"
+	anchored = FALSE
+	desc = "A large whiteboard depicting important information."
+	icon = 'icons/obj/structures/props/props.dmi'
+	icon_state = "whiteboard"
 
 /obj/structure/prop/almayer/minigun_crate
 	name = "30mm ammo crate"
