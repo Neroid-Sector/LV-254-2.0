@@ -1,5 +1,5 @@
 /datum/equipment_preset/uscm_mudskippers
-	name = "Mudskipper"
+	name = "Mudskipper(base)"
 	faction = FACTION_MARINE
 	faction_group = FACTION_LIST_MARINE
 	languages = list(LANGUAGE_ENGLISH)
