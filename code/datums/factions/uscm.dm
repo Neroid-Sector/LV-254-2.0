@@ -169,7 +169,7 @@
 			if(JOB_SEA)
 				marine_rk = "sea"
 				border_rk = "command"
-			if(JOB_SYNTH)
+			if(JOB_SYNTH, JOB_MS_SYNTH)
 				marine_rk = "syn"
 			if(JOB_SYNTH_K9)
 				marine_rk = "syn_k9"
