@@ -335,6 +335,22 @@
 	entry_message_intro = "" // Shown on roundstart and latejoin. Top paragraph. Replaced with a generic "You are a [role name]" if not included
 	entry_message_body = "Drive Tank.  Ensure that you read SOP <a href='https://neroid-sector.com/wiki/index.php?title=Mudskippers_SOP'>" //Middle paragraph. This one is typically written per role and declared here.
 /obj/effect/landmark/start/mudskipper/msvc
-	name = JOB_MS_PILOT
+	name = JOB_MS_CREWMAN
 	icon_state = "po_spawn"
 	job = /datum/job/uscm/mudskipper/msvc
+
+/datum/job/uscm/mudskipper/synth
+	title = JOB_MS_SYNTH
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the platoon commander"
+	selection_class = "job_synth "
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
+	gear_preset = /datum/equipment_preset/synth/mudskippers
+	entry_message_intro = "" // Shown on roundstart and latejoin. Top paragraph. Replaced with a generic "You are a [role name]" if not included
+	entry_message_body = "Support the Platoon or squad leader, and follow orders. <a href='https://neroid-sector.com/wiki/index.php?title=Mudskippers_SOP'>" //Middle paragraph. This one is typically written per role and declared here.
+
+/obj/effect/landmark/start/mudskipper/synth
+	name = JOB_MS_SYNTH
+	icon_state = "po_spawn"
+	job = /datum/job/uscm/mudskipper/synth
