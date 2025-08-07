@@ -78,7 +78,7 @@
 /area/shuttle/generic_shuttle/elevator
 	requires_power = TRUE
 	unlimited_power = FALSE
-	powernet_name = "ground"
+	powernet_name = "ship"
 
 /area/shuttle/generic_shuttle/lz1
 	name = "Trijent LZ1"
