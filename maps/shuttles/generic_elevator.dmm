@@ -1,10 +1,27 @@
-"a" = (/area/space,/turf/open/space/basic)
+"a" = (/obj/structure/machinery/door/poddoor/almayer/locked{dir = 4; id = "east"},/turf/open/floor/almayer/no_build/test_floor4,/area/shuttle/generic_shuttle)
+"c" = (/turf/closed/shuttle/elevator/gears,/area/shuttle/generic_shuttle)
+"d" = (/obj/docking_port/mobile/generic_elevator{id = "genericshuttle"},/turf/closed/shuttle/elevator{dir = 10},/area/shuttle/generic_shuttle)
+"m" = (/obj/structure/machinery/computer/shuttle/generic_elevator_controller,/turf/closed/shuttle/elevator/button/freight,/area/shuttle/generic_shuttle)
+"p" = (/obj/structure/sign/safety/elevator{pixel_y = -4},/turf/closed/shuttle/elevator{dir = 8},/area/shuttle/generic_shuttle)
+"s" = (/turf/open/floor/almayer/no_build/plating,/area/shuttle/generic_shuttle)
+"w" = (/obj/effect/decal/cleanable/blood,/turf/open/shuttle/escapepod/floor1/north,/area/shuttle/generic_shuttle)
+"x" = (/obj/effect/decal/warning_stripes{icon_state = "W"; dir = 1},/obj/effect/decal/cleanable/blood/drip,/turf/open/shuttle/escapepod,/area/shuttle/generic_shuttle)
+"y" = (/turf/closed/shuttle/elevator/freight,/area/shuttle/generic_shuttle)
+"E" = (/turf/closed/shuttle/elevator{dir = 4},/area/shuttle/generic_shuttle)
+"F" = (/obj/effect/decal/warning_stripes{icon_state = "W"; dir = 1},/turf/open/shuttle/escapepod,/area/shuttle/generic_shuttle)
+"G" = (/obj/structure/machinery/power/apc/almayer/hardened/north,/turf/open/shuttle/escapepod/floor1/north,/area/shuttle/generic_shuttle)
+"I" = (/obj/structure/machinery/door/poddoor/almayer/locked{dir = 4; id = "west"},/turf/open/floor/almayer/no_build/test_floor4,/area/shuttle/generic_shuttle)
+"K" = (/turf/closed/shuttle/elevator{dir = 5},/area/shuttle/generic_shuttle)
+"Q" = (/turf/closed/shuttle/elevator{dir = 9},/area/shuttle/generic_shuttle)
+"S" = (/turf/open/shuttle/escapepod/floor1/north,/area/shuttle/generic_shuttle)
+"X" = (/turf/closed/shuttle/elevator{dir = 6},/area/shuttle/generic_shuttle)
+"Y" = (/obj/effect/decal/warning_stripes{icon_state = "E"; dir = 1},/turf/open/shuttle/escapepod/north,/area/shuttle/generic_shuttle)
 
 (1,1,1) = {"
-aaaaaaa
-aaaaaaa
-aaaaaaa
-aaaaaaa
-aaaaaaa
-aaaaaaa
+QcmypcK
+IFsGsYa
+IxswsYa
+IFsSsYa
+IFsSsYa
+dcEEEcX
 "}

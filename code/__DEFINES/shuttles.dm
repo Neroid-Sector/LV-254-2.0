@@ -107,7 +107,7 @@
 #define STAT_TRIJENT_ENGI "trijent_engineering"
 #define STAT_TRIJENT_OMEGA "trijent_omega"
 
-#define MOBILE_GENERIC_ELEVATOR "genericshuttle2"
+#define MOBILE_GENERIC_ELEVATOR "genericshuttle"
 #define STAT_GENERIC_EMPTY "generic_empty"
 #define STAT_GENERIC_OCCUPIED "generic_occupied"
 #define STAT_GENERIC_LZ1 "generic_lz1"
