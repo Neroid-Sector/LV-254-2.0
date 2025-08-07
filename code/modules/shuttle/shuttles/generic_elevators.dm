@@ -1,5 +1,5 @@
 /obj/docking_port/mobile/generic_elevator
-	name="Elevator"
+	name="Freight Tram"
 	id=MOBILE_GENERIC_ELEVATOR
 
 	// Map information

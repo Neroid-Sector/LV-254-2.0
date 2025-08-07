@@ -71,7 +71,7 @@
 	name = "Trijent Omega"
 
 /area/shuttle/generic_shuttle
-	name = "Trijent Elevator"
+	name = "Freight Tram"
 	icon = 'icons/turf/area_almayer.dmi'
 	icon_state = "lifeboat"
 

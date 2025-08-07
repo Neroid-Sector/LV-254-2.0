@@ -105,7 +105,7 @@
 	log_debug("Adding network [elevator_network] to [M.id]")
 
 /datum/map_template/shuttle/generic_elevator
-	name = "Freight Elevator"
+	name = "Freight Tram"
 	shuttle_id = MOBILE_GENERIC_ELEVATOR
 	var/elevator_network
 
