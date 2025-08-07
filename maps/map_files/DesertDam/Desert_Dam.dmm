@@ -3476,7 +3476,7 @@
 /turf/open/floor/prison/whitepurplecorner/west,
 /area/desert_dam/interior/lab_northeast/east_lab_central_hallway)
 "apb" = (
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent/lz1{
+/obj/structure/machinery/computer/shuttle/trijent_elevator_controller/elevator_call/trijent/lz1{
 	pixel_y = 32
 	},
 /turf/open/floor/prison/darkbrown2/southwest,
@@ -6943,7 +6943,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent/omega{
+/obj/structure/machinery/computer/shuttle/trijent_elevator_controller/elevator_call/trijent/omega{
 	pixel_y = 32;
 	shuttleId = "trijentshuttle22"
 	},
@@ -44325,7 +44325,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/building/cafeteria/cafeteria)
 "lwh" = (
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent/engi{
+/obj/structure/machinery/computer/shuttle/trijent_elevator_controller/elevator_call/trijent/engi{
 	pixel_x = -32
 	},
 /turf/open/desert/rock/deep/transition/southwest,
@@ -44651,7 +44651,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/desert_dam/exterior/valley/valley_labs)
 "mej" = (
-/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent/lz2{
+/obj/structure/machinery/computer/shuttle/trijent_elevator_controller/elevator_call/trijent/lz2{
 	pixel_x = 32;
 	shuttleId = "trijentshuttle22"
 	},

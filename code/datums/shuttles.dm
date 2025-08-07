@@ -103,3 +103,20 @@
 	var/obj/docking_port/mobile/trijent_elevator/elev = M
 	elev.elevator_network = elevator_network
 	log_debug("Adding network [elevator_network] to [M.id]")
+
+/datum/map_template/shuttle/generic_elevator
+	name = "Trijent Elevator"
+	shuttle_id = MOBILE_TRIJENT_ELEVATOR
+	var/elevator_network
+
+/datum/map_template/shuttle/generic_elevator/A
+	elevator_network = "A"
+
+/datum/map_template/shuttle/generic_elevator/B
+	elevator_network = "B"
+
+/datum/map_template/shuttle/generic_elevator/post_load(obj/docking_port/mobile/M)
+	. = ..()
+	var/obj/docking_port/mobile/generic_elevator/elev = M
+	elev.elevator_network = elevator_network
+	log_debug("Adding network [elevator_network] to [M.id]")

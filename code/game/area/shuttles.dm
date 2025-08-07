@@ -70,6 +70,22 @@
 /area/shuttle/trijent_shuttle/omega
 	name = "Trijent Omega"
 
+/area/shuttle/generic_shuttle
+	name = "Trijent Elevator"
+	icon = 'icons/turf/area_almayer.dmi'
+	icon_state = "lifeboat"
+
+/area/shuttle/generic_shuttle/elevator
+	requires_power = TRUE
+	unlimited_power = FALSE
+	powernet_name = "ground"
+
+/area/shuttle/generic_shuttle/lz1
+	name = "Trijent LZ1"
+
+/area/shuttle/generic_shuttle/lz2
+	name = "Trijent LZ2"
+
 /area/shuttle/escape_pod
 	icon = 'icons/turf/area_almayer.dmi'
 	icon_state = "lifeboat"
