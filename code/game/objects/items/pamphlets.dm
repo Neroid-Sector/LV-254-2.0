@@ -301,7 +301,7 @@
 /obj/item/pamphlet/language/french
 	name = "The Phantom of the Opera"
 	desc = "A pamphlet written primarily in French, you could probably learn something from reading it."
-	trait = /datum/character_trait/language/bantu
+	trait = /datum/character_trait/language/french
 
 /obj/item/pamphlet/language/celtic
 	name = "Outlander"
