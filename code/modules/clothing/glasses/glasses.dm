@@ -1040,3 +1040,14 @@
 	item_icons = list(
 		WEAR_EYES = 'icons/mob/humans/onmob/clothing/glasses/goggles.dmi',
 	)
+
+/obj/item/clothing/glasses/sunglasses/sechud/hidden
+	name = "Sunglasses"
+	desc = "Sunglasses wired up with the best nano-tech the USCM can muster out on the frontier. Displays information about any person you decree worthy of your gaze, these ones have been made to look like normal sunglasses."
+	icon_state = "bigsunglasses"
+
+/obj/item/clothing/glasses/sunglasses/sechud/hidden/prescription
+	name = "Sunglasses"
+	desc = "Sunglasses wired up with the best nano-tech the USCM can muster out on the frontier. Displays information about any person you decree worthy of your gaze, these ones have been made to look like normal prescription sunglasses."
+	icon_state = "bigsunglasses"
+	prescription = TRUE

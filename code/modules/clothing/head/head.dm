@@ -87,8 +87,8 @@
 	icon_state = "beanietan"
 
 /obj/item/clothing/head/beret/cm
-	name = "\improper USCM beret"
-	desc = "A hat typically worn by the field-officers of the USCM. Occasionally they find their way down the ranks into the hands of squad-leaders and decorated grunts."
+	name = "\improper Military beret"
+	desc = "A hat typically worn by field-officers. Occasionally they find their way down the ranks into the hands of squad-leaders and decorated grunts."
 	icon = 'icons/obj/items/clothing/hats/berets.dmi'
 	icon_state = "beret"
 	item_icons = list(
@@ -151,7 +151,7 @@
 
 /obj/item/clothing/head/beret/cm/squadberet
 	icon_state = "beret_squad"
-	name = "USCM Squad Beret"
+	name = "Squad Beret"
 	desc = "For those who want to show pride and have nothing to lose (in their head, at least)."
 	flags_atom = NO_GAMEMODE_SKIN
 
@@ -686,7 +686,6 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/UA.dmi'
 	)
 
-
 /obj/item/clothing/head/beret/marine/mp/provost/senior
 	name = "\improper USCM senior provost beret"
 	desc = "A beret with the USCM Military Police insignia emblazoned on it."
@@ -695,6 +694,16 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 /obj/item/clothing/head/beret/marine/mp/provost/chief
 	name = "\improper USCM provost command beret"
 	icon_state = "pvciberet"
+
+/obj/item/clothing/head/beret/marine/mp/tis
+	name = "\improper UAAC-TIS Special Agent Beret"
+	icon_state = "berettis"
+	desc = "A beret with the UAAC-TIS insignia emblazoned on it. A mark of a TIS Special Agent, these berets are one of the only pieces of equipment that the TIS actually manufactures for itself and earning one is one of the rare signs of achievement the Three Eyes allows."
+
+/obj/item/clothing/head/beret/marine/mp/tis/co
+	name = "\improper UAAC-TIS Coordinator Beret"
+	icon_state = "berettisco"
+	desc = "A beret with a platinum UAAC-TIS insignia emblazoned on it. A mark of a TIS Coordinators, earning one of these berets is a great honor and are given upon promotion."
 
 /obj/item/clothing/head/beret/marine/commander
 	name = "marine commanding officer beret"

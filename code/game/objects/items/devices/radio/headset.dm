@@ -1276,7 +1276,7 @@
 	name = "\improper CMB Earpiece"
 	desc = "A sleek headset used by The Colonial Marshal Bureau, crafted in Sol. Low profile and comfortable. No one is above the law. Featured channels include: ; - CMB, :o - Colony, :g - public, :v - marine command, :m - medbay, :t - intel."
 	frequency = CMB_FREQ
-	icon_state = "cmb_headset"
+	icon_state = "discreet_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/cmb)
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_CMB
@@ -1358,3 +1358,11 @@
 	ignore_z = FALSE
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_UPP
+
+/obj/item/device/radio/headset/almayer/tis
+	name = "UAAC-TIS Command headset"
+	desc = "A discreet headset issued to members of the UAAC-TIS. Channels are as follows: :v - marine command, :p - military police, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC,  :t - intel,  :z - HighCom"
+	icon_state = "discreet_headset"
+	frequency = HC_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/highcom)
+	volume = RADIO_VOLUME_CRITICAL
