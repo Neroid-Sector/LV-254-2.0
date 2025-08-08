@@ -138,7 +138,7 @@
 /obj/item/stack/points/p20
 	amount = 20
 
-/obj/item/device/portable_vendor/antag/cia
+/obj/item/device/portable_vendor/antag/tis
 	name = "Automated Storage Briefcase"
 	desc = "A briefcase able to dispense items at the user's discretion. This one appears to be tightly locked, and impenetrable."
 	points = 200
@@ -167,10 +167,10 @@
 
 		list("UTILITY", 0, null, null, null),
 		list("Security Access Tuner v2", 25, /obj/item/device/multitool/antag, "white", "An upgraded access tuner, able to rapidly hack various machinery. Disguised as a regular multitool."),
-		list("Listening Device", 20, /obj/item/device/radio/listening_bug/radio_linked/cia, "white", "A listening device. Can be disguised as anything by right-clicking on it."),
+		list("Listening Device", 20, /obj/item/device/radio/listening_bug/radio_linked/tis, "white", "A listening device. Can be disguised as anything by right-clicking on it."),
 		list("USCM Codebook", 20, /obj/item/book/codebook, "white", "A copy of a USCM codebook used to verify credentials with the commanding officer."),
 		list("Tools Kit", 15, /obj/item/storage/toolbox/mechanical, "white", "A toolbox containing general tools."),
-		list("CIA Challenge Coin", 15, /obj/item/coin/silver/cia, "white", "A challenge coin emblazoned with an eagle. Use to identify other CIA operatives on the field at a glance."),
+		list("TIS Challenge Coin", 15, /obj/item/coin/silver/tis, "white", "A challenge coin emblazoned with an eye. Use to identify other TIS operatives on the field at a glance."),
 
 		list("MARINE CLOTHING", 0, null, null, null),
 		list("Marine Helmet", 5, /obj/item/clothing/head/helmet/marine, "white", "A USCM standard military helmet."),
@@ -180,7 +180,7 @@
 		list("M3-VL Ballistics Vest", 12, /obj/item/clothing/suit/storage/marine/light/vest, "white", "A USCM light ballistic vest for combat situations."),
 
 		list("RADIO KEYS", 0, null, null, null),
-		list("Radio Key: CIA", 10, /obj/item/device/encryptionkey/cia, "white", "Radio Key for CIA communications."),
+		list("Radio Key: TIS", 10, /obj/item/device/encryptionkey/tis, "white", "Radio Key for TIS communications."),
 		list("Radio Key: Colonial Marshals", 20, /obj/item/device/encryptionkey/cmb, "white", "Radio Key for the CMB."),
 		list("Radio Key: Colonial Liberation Front", 20, /obj/item/device/encryptionkey/clf, "white", "Radio Key for known local CLF frequencies."),
 		list("Radio Key: Union of Progressive Peoples", 20, /obj/item/device/encryptionkey/upp, "white", "Radio Key for known UPP listening frequencies."),
@@ -191,7 +191,7 @@
 		list("20 points", 20, /obj/item/stack/points/p20, "white", "A method of transferring points between agents."),
 	)
 
-/obj/item/device/portable_vendor/antag/cia/covert
+/obj/item/device/portable_vendor/antag/tis/covert
 	name = "briefcase"
 	icon_state = "briefcase"
 	desc = "It's made of AUTHENTIC faux-leather and has a price-tag still attached. Its owner must be a real professional."

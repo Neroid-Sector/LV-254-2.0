@@ -198,9 +198,17 @@
 			if(JOB_PROVOST_MARSHAL, JOB_PROVOST_CMARSHAL, JOB_PROVOST_SMARSHAL)
 				marine_rk = "pvm"
 				border_rk = "command"
-			//CIA
-			if(JOB_CIA_LIAISON)
-				marine_rk = "cialo"
+			//TIS
+			if(JOB_TIS_ES)
+				marine_rk = "tises"
+			if(JOB_TIS_IO)
+				marine_rk = "tisio"
+			if(JOB_TIS_SIO)
+				marine_rk = "tissio"
+			if(JOB_TIS_SA)
+				marine_rk = "tissa"
+			if(JOB_TIS_CO)
+				marine_rk = "tisco"
 			// Riot MPs
 			if(JOB_RIOT)
 				marine_rk = "rmp"

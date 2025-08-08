@@ -551,7 +551,6 @@
 /obj/item/weapon/gun/rifle/kramer/tactical
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle, /obj/item/attachable/extended_barrel, /obj/item/attachable/flashlight/grip, /obj/item/attachable/reflex)
 
-
 /obj/item/weapon/gun/rifle/kramer/dmr
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod, /obj/item/attachable/scope/mini)
 	current_mag = /obj/item/ammo_magazine/rifle/kramer/heap
@@ -682,13 +681,8 @@
 	..()
 
 /obj/item/weapon/gun/rifle/m46c/tactical
-	name = "\improper M46T pulse rifle"
-	desc = "A prototype M46T, a heavily customized version of the prototype M46C, issued to UAAC-TIS Forces only. Comes standard with a suppressor, angled grip, solid stock and reflex sight. Uses standard MK1 & MK2 rifle magazines."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/assault_rifles.dmi'
-	icon_state = "m46t"
-	item_state = "m46t"
 	map_specific_decoration = FALSE
-	starting_attachment_types = list(/obj/item/attachable/angledgrip, /obj/item/attachable/suppressor, /obj/item/attachable/reflex, /obj/item/attachable/stock/rifle)
+	starting_attachment_types = list(/obj/item/attachable/verticalgrip, /obj/item/attachable/suppressor, /obj/item/attachable/scope/mini)
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/heap
 
 //---ability actions--\\

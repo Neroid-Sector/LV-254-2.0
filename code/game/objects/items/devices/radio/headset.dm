@@ -683,13 +683,6 @@
 /obj/item/device/radio/headset/almayer/marine
 	initial_keys = list(/obj/item/device/encryptionkey/public)
 
-/obj/item/device/radio/headset/almayer/cia
-	name = "radio headset"
-	desc = "A radio headset."
-	frequency = CIA_FREQ
-	initial_keys = list(/obj/item/device/encryptionkey/cia, /obj/item/device/encryptionkey/soc, /obj/item/device/encryptionkey/public)
-
-
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
@@ -1276,7 +1269,7 @@
 	name = "\improper CMB Earpiece"
 	desc = "A sleek headset used by The Colonial Marshal Bureau, crafted in Sol. Low profile and comfortable. No one is above the law. Featured channels include: ; - CMB, :o - Colony, :g - public, :v - marine command, :m - medbay, :t - intel."
 	frequency = CMB_FREQ
-	icon_state = "cmb_headset"
+	icon_state = "discreet_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/cmb)
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_CMB
@@ -1358,3 +1351,16 @@
 	ignore_z = FALSE
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_UPP
+
+/obj/item/device/radio/headset/almayer/tis
+	name = "UAAC-TIS headset"
+	desc = "A discreet headset issued to members of the UAAC-TIS."
+	icon_state = "discreet_headset"
+	frequency = TIS_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/tis/plus)
+	volume = RADIO_VOLUME_CRITICAL
+
+/obj/item/device/radio/headset/almayer/tis/command
+	name = "UAAC-TIS Command headset"
+	desc = "A discreet headset issued to senior members of the UAAC-TIS."
+	initial_keys = list(/obj/item/device/encryptionkey/tis/command)

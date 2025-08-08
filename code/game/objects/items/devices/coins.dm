@@ -31,9 +31,9 @@
 	name = "falling falcons challenge coin"
 	desc = "A small coin, bearing the falling falcons insignia."
 
-/obj/item/coin/silver/cia
+/obj/item/coin/silver/tis
 	name = "silver coin"
-	desc = "A coin of silver. It bears an eagle on the heads side."
+	desc = "A coin of sterling silver. It bears an engraved eye on the heads side and a laurel wreath on the tails side."
 
 /obj/item/coin/copper
 	name = "copper coin"

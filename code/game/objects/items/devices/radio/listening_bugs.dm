@@ -236,9 +236,9 @@
 /obj/item/device/radio/listening_bug/radio_linked/hc/pvst
 	frequency = PVST_FREQ
 
-/obj/item/device/radio/listening_bug/radio_linked/cia
-	frequency = CIA_FREQ
-	req_one_access = list(ACCESS_CIA)
+/obj/item/device/radio/listening_bug/radio_linked/tis
+	frequency = TIS_FREQ
+	req_one_access = list(ACCESS_TIS)
 
 /obj/item/device/radio/listening_bug/radio_linked/wy
 	frequency = WY_FREQ
