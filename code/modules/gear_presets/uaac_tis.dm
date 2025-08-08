@@ -98,7 +98,7 @@
 
 /*****************************************************************************************************/
 /datum/equipment_preset/uaac/tis/sio
-	name = "UAAC-TIS Senior Intelligence Officer (NO2)"
+	name = "UAAC-TIS Senior Intelligence Officer (NO3)"
 	minimum_age = 27
 
 	assignment = JOB_TIS_SIO
