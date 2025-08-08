@@ -329,6 +329,11 @@
 	icon_state = "tis_key"
 	channels = list(
 					RADIO_CHANNEL_TIS = TRUE,
+					)
+
+/obj/item/device/encryptionkey/tis/plus
+	channels = list(
+					RADIO_CHANNEL_TIS = TRUE,
 					RADIO_CHANNEL_COMMAND = TRUE,
 					RADIO_CHANNEL_MP = TRUE,
 					SQUAD_MARINE_1 = FALSE,
@@ -347,7 +352,6 @@
 
 /obj/item/device/encryptionkey/tis/command
 	name = "\improper UAAC-TIS Command Radio Encryption Key"
-	icon_state = "tis_key"
 	channels = list(
 					RADIO_CHANNEL_HIGHCOM = TRUE,
 					RADIO_CHANNEL_TIS = TRUE,

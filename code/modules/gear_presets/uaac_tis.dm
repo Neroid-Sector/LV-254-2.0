@@ -14,7 +14,7 @@
 
 /datum/equipment_preset/uaac/tis/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_ALL)
+	access = get_access(ACCESS_LIST_MARINE_ALL, ACCESS_TIS)
 
 /************************************************/
 /datum/equipment_preset/uaac/tis/es
@@ -129,6 +129,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/tis(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/tis(new_human), WEAR_IN_BACK)
 
 	to_chat(new_human, SPAN_WARNING("You are a Senior Intelligence Officer for UAAC-TIS, an intelligence agency with tremendous power. You are tasked with retrieving or transporting sensitive materials to and from a location, you may also be involved in sensative operations. You are outside the normal USCM chain of command."))
 
@@ -173,6 +174,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/mateba_case/captain/council(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/tis(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_IN_R_STORE)
 
 	to_chat(new_human, SPAN_WARNING("You are a Special Agent for UAAC-TIS, an intelligence agency with tremendous power. You are tasked with investigating sensitive operations and resolving them carefully, you possess a large amount of authority and and may seize UAAC assets to aid in your assigned objectives. You are outside the normal USCM chain of command."))
@@ -217,6 +219,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/mateba_case/general(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/tis(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_IN_R_STORE)
 
 	to_chat(new_human, SPAN_WARNING("You are a Coordinator for UAAC-TIS, an intelligence agency with tremendous power. You maintain entire intelligence networks and ensure their smooth running, you possess an extreme amount of authority and will generally outrank anyone in your AO. You are generally not supposed to get involved personally in operations but are allowed if deemed important enough. You are outside the normal USCM chain of command."))

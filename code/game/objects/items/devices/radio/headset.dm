@@ -683,13 +683,6 @@
 /obj/item/device/radio/headset/almayer/marine
 	initial_keys = list(/obj/item/device/encryptionkey/public)
 
-/obj/item/device/radio/headset/almayer/cia
-	name = "radio headset"
-	desc = "A radio headset."
-	frequency = TIS_FREQ
-	initial_keys = list(/obj/item/device/encryptionkey/tis, /obj/item/device/encryptionkey/soc, /obj/item/device/encryptionkey/public)
-
-
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
@@ -1364,7 +1357,7 @@
 	desc = "A discreet headset issued to members of the UAAC-TIS."
 	icon_state = "discreet_headset"
 	frequency = TIS_FREQ
-	initial_keys = list(/obj/item/device/encryptionkey/tis)
+	initial_keys = list(/obj/item/device/encryptionkey/tis/plus)
 	volume = RADIO_VOLUME_CRITICAL
 
 /obj/item/device/radio/headset/almayer/tis/command

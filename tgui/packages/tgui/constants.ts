@@ -107,6 +107,11 @@ export const RADIO_CHANNELS = [
     color: '#1b748c',
   },
   {
+    name: 'TIS',
+    freq: 1225,
+    color: '#749aa5ff',
+  },
+  {
     name: 'WY',
     freq: 1231,
     color: '#fe9b24',

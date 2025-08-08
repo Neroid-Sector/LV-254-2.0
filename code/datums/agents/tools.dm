@@ -138,7 +138,7 @@
 /obj/item/stack/points/p20
 	amount = 20
 
-/obj/item/device/portable_vendor/antag/cia
+/obj/item/device/portable_vendor/antag/tis
 	name = "Automated Storage Briefcase"
 	desc = "A briefcase able to dispense items at the user's discretion. This one appears to be tightly locked, and impenetrable."
 	points = 200
@@ -170,7 +170,7 @@
 		list("Listening Device", 20, /obj/item/device/radio/listening_bug/radio_linked/tis, "white", "A listening device. Can be disguised as anything by right-clicking on it."),
 		list("USCM Codebook", 20, /obj/item/book/codebook, "white", "A copy of a USCM codebook used to verify credentials with the commanding officer."),
 		list("Tools Kit", 15, /obj/item/storage/toolbox/mechanical, "white", "A toolbox containing general tools."),
-		list("TIS Challenge Coin", 15, /obj/item/coin/silver/cia, "white", "A challenge coin emblazoned with an eye. Use to identify other TIS operatives on the field at a glance."),
+		list("TIS Challenge Coin", 15, /obj/item/coin/silver/tis, "white", "A challenge coin emblazoned with an eye. Use to identify other TIS operatives on the field at a glance."),
 
 		list("MARINE CLOTHING", 0, null, null, null),
 		list("Marine Helmet", 5, /obj/item/clothing/head/helmet/marine, "white", "A USCM standard military helmet."),
@@ -191,7 +191,7 @@
 		list("20 points", 20, /obj/item/stack/points/p20, "white", "A method of transferring points between agents."),
 	)
 
-/obj/item/device/portable_vendor/antag/cia/covert
+/obj/item/device/portable_vendor/antag/tis/covert
 	name = "briefcase"
 	icon_state = "briefcase"
 	desc = "It's made of AUTHENTIC faux-leather and has a price-tag still attached. Its owner must be a real professional."

@@ -209,9 +209,6 @@
 				marine_rk = "tissa"
 			if(JOB_TIS_CO)
 				marine_rk = "tisco"
-			//CIA
-			if(JOB_CIA_LIAISON)
-				marine_rk = "cialo"
 			// Riot MPs
 			if(JOB_RIOT)
 				marine_rk = "rmp"
