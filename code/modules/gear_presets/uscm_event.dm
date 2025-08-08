@@ -3,7 +3,7 @@
 	faction = FACTION_MARINE
 	faction_group = FACTION_LIST_MARINE
 	minimum_age = 30
-	languages = list(LANGUAGE_ENGLISH)
+	languages = ALL_HUMAN_LANGUAGES // Know thy enemy.
 
 
 /*****************************************************************************************************/
@@ -20,7 +20,6 @@
 	role_comm_title = "COL"
 	minimum_age = 40
 	skills = /datum/skills/general
-	languages = ALL_HUMAN_LANGUAGES //Know your enemy.
 
 	utility_under = list(/obj/item/clothing/under/marine,/obj/item/clothing/under/marine/officer/command)
 	utility_hat = list(/obj/item/clothing/head/cmcap,/obj/item/clothing/head/beret/cm/tan)
@@ -67,7 +66,6 @@
 	minimap_icon = "deputy"
 	minimap_background = "background_command"
 	skills = /datum/skills/general
-	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE, LANGUAGE_CHINESE, LANGUAGE_RUSSIAN, LANGUAGE_GERMAN, LANGUAGE_SPANISH, LANGUAGE_TSL) //Know your enemy.
 
 	service_under = list(/obj/item/clothing/under/marine/officer/general, /obj/item/clothing/under/marine/officer/bridge)
 	service_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/general, /obj/item/clothing/suit/storage/jacket/marine/service, /obj/item/clothing/suit/storage/jacket/marine/service/mp)
@@ -139,7 +137,6 @@
 	name = "UPP Spy"
 	flags = EQUIPMENT_PRESET_EXTRA
 
-	languages = list(LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN)
 	access = list(
 		ACCESS_MARINE_ENGINEERING,
 		ACCESS_CIVILIAN_ENGINEERING,
