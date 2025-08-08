@@ -221,6 +221,61 @@
 		S.shuttle_datum = shuttles[S.shuttle_tag]
 
 
+	// Freight Transit I
+	shuttle = new /datum/shuttle/ferry/elevator()
+	shuttle.location = 0
+	shuttle.warmup_time = 10 SECONDS
+	shuttle.recharge_time = ELEVATOR_RECHARGE
+	for(var/area/A in GLOB.all_areas)
+		if(A.type == /area/shuttle/gen_trans1/omega)
+			shuttle.area_offsite = A
+			break
+
+	for(var/area/A in GLOB.all_areas)
+		if(A.type == /area/shuttle/gen_trans1/alpha)
+			shuttle.area_station = A
+			break
+
+	for(var/area/A in GLOB.all_areas)
+		if(A.type == /area/shuttle/gen_trans1/away)
+			shuttle.area_transition = A
+			break
+	shuttle.transit_direction = NORTH
+	shuttle.move_time = TRANSIT_POD_TRANSIT_DURATION
+	shuttle.iselevator = 1
+	shuttle.require_link = 1
+	shuttles["Transit 1"] = shuttle
+	process_shuttles += shuttle
+
+	// Freight Transit II
+	shuttle = new /datum/shuttle/ferry/elevator()
+	shuttle.location = 0
+	shuttle.warmup_time = 10 SECONDS
+	shuttle.recharge_time = ELEVATOR_RECHARGE
+	for(var/area/A in GLOB.all_areas)
+		if(A.type == /area/shuttle/gen_trans2/omega)
+			shuttle.area_offsite = A
+			break
+
+	for(var/area/A in GLOB.all_areas)
+		if(A.type == /area/shuttle/gen_trans2/alpha)
+			shuttle.area_station = A
+			break
+
+	for(var/area/A in GLOB.all_areas)
+		if(A.type == /area/shuttle/gen_trans2/away)
+			shuttle.area_transition = A
+			break
+	shuttle.transit_direction = NORTH
+	shuttle.move_time = TRANSIT_POD_TRANSIT_DURATION
+	shuttle.iselevator = 1
+	shuttle.require_link = 1
+	shuttles["Transit 2"] = shuttle
+	process_shuttles += shuttle
+
+	for(var/obj/structure/machinery/computer/shuttle_control/S in GLOB.shuttle_controls)
+		S.shuttle_datum = shuttles[S.shuttle_tag]
+
 //This is called by gameticker after all the machines and radio frequencies have been properly initialized
 /datum/controller/shuttle_controller/proc/setup_shuttle_docks()
 	var/datum/shuttle/shuttle

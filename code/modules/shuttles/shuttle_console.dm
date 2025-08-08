@@ -532,3 +532,29 @@ GLOBAL_LIST_EMPTY(shuttle_controls)
 
 /obj/structure/machinery/computer/shuttle_control/trijent/tri_trans2
 	shuttle_tag = "Transit 2"
+
+//Generic Elevator transit control console
+
+/obj/structure/machinery/computer/shuttle_control/genric
+	name = "Transit Console"
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "elevator_screen"
+
+	shuttle_type = SHUTTLE_ELEVATOR
+	unslashable = TRUE
+	unacidable = TRUE
+	explo_proof = TRUE
+	density = FALSE
+	req_access = null
+
+/obj/structure/machinery/computer/shuttle_control/genric/proc/animate_on()
+	icon_state = "elevator_screen_animated"
+
+/obj/structure/machinery/computer/shuttle_control/genric/proc/animate_off()
+	icon_state = "elevator_screen"
+
+/obj/structure/machinery/computer/shuttle_control/genric/gen_trans1
+	shuttle_tag = "Transit 1"
+
+/obj/structure/machinery/computer/shuttle_control/genric/gen_trans2
+	shuttle_tag = "Transit 2"

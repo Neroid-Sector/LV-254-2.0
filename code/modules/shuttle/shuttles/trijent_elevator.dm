@@ -14,7 +14,7 @@
 	callTime = 30 SECONDS
 	rechargeTime = 30 SECONDS
 	ignitionTime = 4 SECONDS
-	ambience_flight = 'sound/vehicles/tank_driving.ogg'
+	ambience_flight = 'sound/vehicles/elevator.mp3'
 	ignition_sound = 'sound/mecha/powerup.ogg'
 
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0)

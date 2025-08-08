@@ -107,6 +107,13 @@
 #define STAT_TRIJENT_ENGI "trijent_engineering"
 #define STAT_TRIJENT_OMEGA "trijent_omega"
 
+#define MOBILE_GENERIC_ELEVATOR "genericshuttle"
+#define STAT_GENERIC_EMPTY "generic_empty"
+#define STAT_GENERIC_OCCUPIED "generic_occupied"
+#define STAT_GENERIC_LZ1 "generic_lz1"
+#define STAT_GENERIC_LZ2 "generic_lz2"
+
+
 #define MOBILE_SHUTTLE_LIFEBOAT_PORT "lifeboat-port"
 #define MOBILE_SHUTTLE_LIFEBOAT_STARBOARD "lifeboat-starboard"
 #define MOBILE_SHUTTLE_VEHICLE_ELEVATOR "vehicle_elevator"

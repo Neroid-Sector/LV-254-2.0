@@ -1,6 +1,6 @@
 /obj/docking_port/mobile/generic_elevator
-	name="Elevator"
-	id=MOBILE_generic_elevator
+	name="Freight Tram"
+	id=MOBILE_GENERIC_ELEVATOR
 
 	// Map information
 	height=6
@@ -8,13 +8,13 @@
 	preferred_direction = NORTH
 	port_direction = SOUTH
 
-	area_type = /area/shuttle/trijent_shuttle/elevator
+	area_type = /area/shuttle/generic_shuttle/elevator
 
 	// Shuttle timings
 	callTime = 30 SECONDS
 	rechargeTime = 30 SECONDS
 	ignitionTime = 4 SECONDS
-	ambience_flight = 'sound/vehicles/tank_driving.ogg'
+	ambience_flight = 'sound/vehicles/elevator.mp3'
 	ignition_sound = 'sound/mecha/powerup.ogg'
 
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0)
@@ -78,24 +78,24 @@
 
 /obj/docking_port/stationary/generic_elevator/occupied
 	name = "occupied"
-	id = STAT_TRIJENT_OCCUPIED
+	id = STAT_GENERIC_OCCUPIED
 	airlock_exit = "west"
 	roundstart_template = /datum/map_template/shuttle/generic_elevator
 
 /obj/docking_port/stationary/generic_elevator/empty
 	name = "empty"
-	id = STAT_TRIJENT_EMPTY
+	id = STAT_GENERIC_EMPTY
 	airlock_exit = "west"
 
 /obj/docking_port/stationary/generic_elevator/lz1
 	name="Lz1 Elevator"
-	id=STAT_TRIJENT_LZ1
-	airlock_area=/area/shuttle/trijent_shuttle/lz1
+	id=STAT_GENERIC_LZ1
+	airlock_area=/area/shuttle/generic_shuttle/lz1
 	airlock_exit="west"
 	roundstart_template = /datum/map_template/shuttle/generic_elevator
 
 /obj/docking_port/stationary/generic_elevator/lz2
 	name="Lz2 Elevator"
-	id=STAT_TRIJENT_LZ2
-	airlock_area=/area/shuttle/trijent_shuttle/lz2
+	id=STAT_GENERIC_LZ2
+	airlock_area=/area/shuttle/generic_shuttle/lz2
 	airlock_exit="west"

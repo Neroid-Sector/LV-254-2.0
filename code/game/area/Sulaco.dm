@@ -455,3 +455,25 @@
 /area/shuttle/distress/arrive_s_engi
 	name = "\improper VIP Shuttle"
 	icon_state = "away2"
+
+
+//---ship side freight elevators
+
+//Transit Shuttle
+/area/shuttle/gen_trans1/alpha
+	icon_state = "shuttle"
+
+/area/shuttle/gen_trans1/away
+	icon_state = "away1"
+
+/area/shuttle/gen_trans1/omega
+	icon_state = "shuttle2"
+
+/area/shuttle/gen_trans2/alpha
+	icon_state = "shuttlered"
+
+/area/shuttle/gen_trans2/away
+	icon_state = "away2"
+
+/area/shuttle/gen_trans2/omega
+	icon_state = "shuttle2"
