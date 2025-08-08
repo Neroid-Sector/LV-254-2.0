@@ -62,6 +62,7 @@
 
 /datum/equipment_preset/uscm_mudskippers/commander
 	name = "Mudskippers-Commanding Officer"
+	languages = ALL_HUMAN_LANGUAGES
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	assignment = JOB_MS_CO

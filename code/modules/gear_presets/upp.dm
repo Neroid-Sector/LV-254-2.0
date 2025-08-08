@@ -2414,6 +2414,7 @@
 //*****************************************************************************************************/
 /datum/equipment_preset/upp/officer/flag
 	name = "UPP Flag Officer Base"
+	languages = ALL_HUMAN_LANGUAGES
 	minimap_icon = "upp_co"
 	skills = /datum/skills/upp/commander
 
@@ -2585,6 +2586,7 @@
 
 /datum/equipment_preset/upp/officer/flag/polkovnik
 	name = "UPP Polkovnik (Cryo)"
+	languages = ALL_HUMAN_LANGUAGES
 	assignment = JOB_UPP_KOL_OFFICER
 	rank = JOB_UPP_KOL_OFFICER
 	role_comm_title = "Kol."
@@ -2592,11 +2594,13 @@
 
 /datum/equipment_preset/upp/officer/flag/polkovnik/co
 	name = "UPP Polkovnik (CO)(Cryo)"
+	languages = ALL_HUMAN_LANGUAGES
 	assignment = JOB_UPP_CO_OFFICER
 	rank = JOB_UPP_CO_OFFICER
 
 /datum/equipment_preset/upp/officer/flag/dressed/polkovnik
 	name = "UPP Polkovnik"
+	languages = ALL_HUMAN_LANGUAGES
 	assignment = JOB_UPP_KOL_OFFICER
 	rank = JOB_UPP_KOL_OFFICER
 	role_comm_title = "Kol."

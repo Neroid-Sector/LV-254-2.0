@@ -1,5 +1,6 @@
 /datum/equipment_preset/uscm_co
 	name = "USCM Commanding Officer (CO)"
+	languages = ALL_HUMAN_LANGUAGES
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	faction = FACTION_MARINE
 	faction_group = FACTION_LIST_MARINE
