@@ -537,8 +537,8 @@
 /obj/item/clothing/suit/storage/bomber/armored
 	name = "\improper Armored Bomber Jacket"
 	desc = "An extremely discreet and fashionable piece of armor made by stitching expensive ballistic liners into a bomber jacket. Often worn by flag officers on deployment for their warmth and protection while still staying nimble."
-	icon_state = "bomber_2"
-	item_state_slots = list(WEAR_JACKET = "bomber_2")
+	icon_state = "bomber"
+	item_state_slots = list(WEAR_JACKET = "bomber")
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	min_cold_protection_temperature = ICE_COLONY_TEMPERATURE

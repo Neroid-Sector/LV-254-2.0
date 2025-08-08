@@ -695,12 +695,29 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	name = "\improper USCM provost command beret"
 	icon_state = "pvciberet"
 
-/obj/item/clothing/head/beret/marine/mp/tis
-	name = "\improper UAAC-TIS Special Agent Beret"
+/obj/item/clothing/head/beret/uaac/tis
+	name = "\improper UAAC-TIS Beret"
 	icon_state = "berettis"
-	desc = "A beret with the UAAC-TIS insignia emblazoned on it. A mark of a TIS Special Agent, these berets are one of the only pieces of equipment that the TIS actually manufactures for itself and earning one is one of the rare signs of achievement the Three Eyes allows."
+	desc = "A beret with the UAAC-TIS insignia emblazoned on it. A mark of a TIS officer, these berets are one of the only pieces of equipment that the TIS actually manufactures for itself and earning one is one of the rare signs of achievement the Three Eyes allows. Usually heavily reinforced with ballistic materials."
+	siemens_coefficient = 0.9
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	pickup_sound = null
+	drop_sound = null
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/UA.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/hats_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/hats_righthand.dmi'
+	)
 
-/obj/item/clothing/head/beret/marine/mp/tis/co
+/obj/item/clothing/head/beret/uaac/tis/co
 	name = "\improper UAAC-TIS Coordinator Beret"
 	icon_state = "berettisco"
 	desc = "A beret with a platinum UAAC-TIS insignia emblazoned on it. A mark of a TIS Coordinators, earning one of these berets is a great honor and are given upon promotion."
