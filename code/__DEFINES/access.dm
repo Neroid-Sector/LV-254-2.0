@@ -70,7 +70,7 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_ILLEGAL_PIRATE 120
 
 //CIA-locked covert items
-#define ACCESS_CIA 125
+#define ACCESS_TIS 125
 
 //=================================================
 

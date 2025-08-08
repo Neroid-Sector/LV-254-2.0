@@ -324,9 +324,50 @@
 	icon_state = "sl_key"
 	channels = list("Command" = TRUE, "Almayer" = TRUE,)
 
-/obj/item/device/encryptionkey/cia
-	icon_state = "sl_key"
-	channels = list(RADIO_CHANNEL_CIA = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_MP = TRUE, SQUAD_MARINE_1 = FALSE, SQUAD_MARINE_2 = FALSE, SQUAD_MARINE_3 = FALSE, SQUAD_MARINE_4 = FALSE, SQUAD_MARINE_5 = FALSE, SQUAD_MARINE_CRYO = FALSE, RADIO_CHANNEL_ENGI = TRUE, RADIO_CHANNEL_MEDSCI = TRUE, RADIO_CHANNEL_REQ = TRUE, RADIO_CHANNEL_JTAC = FALSE, RADIO_CHANNEL_INTEL = TRUE)
+/obj/item/device/encryptionkey/tis
+	name = "\improper UAAC-TIS Radio Encryption Key"
+	icon_state = "tis_key"
+	channels = list(
+					RADIO_CHANNEL_TIS = TRUE,
+					RADIO_CHANNEL_COMMAND = TRUE,
+					RADIO_CHANNEL_MP = TRUE,
+					SQUAD_MARINE_1 = FALSE,
+					SQUAD_MARINE_2 = FALSE,
+					SQUAD_MARINE_3 = FALSE,
+					SQUAD_MARINE_4 = FALSE,
+					SQUAD_MARINE_5 = FALSE,
+					SQUAD_MARINE_CRYO = FALSE,
+					RADIO_CHANNEL_ENGI = FALSE,
+					RADIO_CHANNEL_MEDSCI = TRUE,
+					RADIO_CHANNEL_REQ = FALSE,
+					RADIO_CHANNEL_JTAC = FALSE,
+					RADIO_CHANNEL_INTEL = TRUE,
+					RADIO_CHANNEL_ALMAYER = TRUE
+					)
+
+/obj/item/device/encryptionkey/tis/command
+	name = "\improper UAAC-TIS Command Radio Encryption Key"
+	icon_state = "tis_key"
+	channels = list(
+					RADIO_CHANNEL_HIGHCOM = TRUE,
+					RADIO_CHANNEL_TIS = TRUE,
+					RADIO_CHANNEL_PROVOST = FALSE,
+					SQUAD_SOF = FALSE,
+					RADIO_CHANNEL_COMMAND = TRUE,
+					RADIO_CHANNEL_MP = TRUE,
+					SQUAD_MARINE_1 = FALSE,
+					SQUAD_MARINE_2 = FALSE,
+					SQUAD_MARINE_3 = FALSE,
+					SQUAD_MARINE_4 = FALSE,
+					SQUAD_MARINE_5 = FALSE,
+					SQUAD_MARINE_CRYO = FALSE,
+					RADIO_CHANNEL_ENGI = FALSE,
+					RADIO_CHANNEL_MEDSCI = TRUE,
+					RADIO_CHANNEL_REQ = FALSE,
+					RADIO_CHANNEL_JTAC = FALSE,
+					RADIO_CHANNEL_INTEL = TRUE,
+					RADIO_CHANNEL_ALMAYER = TRUE
+					)
 
 /obj/item/device/encryptionkey/cmb
 	name = "\improper Colonial Marshal Bureau Radio Encryption Key"

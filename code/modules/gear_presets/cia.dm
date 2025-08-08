@@ -9,7 +9,7 @@
 
 /datum/equipment_preset/cia/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_ALL) + list(ACCESS_CIA)
+	access = get_access(ACCESS_LIST_MARINE_ALL) + list(ACCESS_TIS)
 
 /datum/equipment_preset/cia/analyst
 	name = "CIA Agent (Civilian Clothing)"
@@ -99,7 +99,7 @@
 
 /datum/equipment_preset/uscm/marsoc/low_threat/cia/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_ALL) + list(ACCESS_CIA)
+	access = get_access(ACCESS_LIST_MARINE_ALL) + list(ACCESS_TIS)
 
 /datum/equipment_preset/uscm/marsoc/low_threat/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	//Custom reduced loadout versus normal MARSOC
@@ -143,7 +143,7 @@
 
 /datum/equipment_preset/clf/engineer/cia/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_TIS)
 
 /datum/equipment_preset/clf/engineer/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	var/obj/item/clothing/under/colonist/insurgent/uniform = new()
@@ -182,7 +182,7 @@
 
 /datum/equipment_preset/upp/soldier/dressed/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_TIS)
 
 /datum/equipment_preset/upp/soldier/dressed/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
@@ -195,7 +195,7 @@
 
 /datum/equipment_preset/upp/officer/senior/dressed/cia/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_TIS)
 
 /datum/equipment_preset/upp/officer/senior/dressed/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()

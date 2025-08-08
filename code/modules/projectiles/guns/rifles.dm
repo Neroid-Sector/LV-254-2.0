@@ -551,7 +551,6 @@
 /obj/item/weapon/gun/rifle/kramer/tactical
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle, /obj/item/attachable/extended_barrel, /obj/item/attachable/flashlight/grip, /obj/item/attachable/reflex)
 
-
 /obj/item/weapon/gun/rifle/kramer/dmr
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod, /obj/item/attachable/scope/mini)
 	current_mag = /obj/item/ammo_magazine/rifle/kramer/heap

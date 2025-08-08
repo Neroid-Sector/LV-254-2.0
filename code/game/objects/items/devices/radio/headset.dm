@@ -686,8 +686,8 @@
 /obj/item/device/radio/headset/almayer/cia
 	name = "radio headset"
 	desc = "A radio headset."
-	frequency = CIA_FREQ
-	initial_keys = list(/obj/item/device/encryptionkey/cia, /obj/item/device/encryptionkey/soc, /obj/item/device/encryptionkey/public)
+	frequency = TIS_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/tis, /obj/item/device/encryptionkey/soc, /obj/item/device/encryptionkey/public)
 
 
 //############################## ALPHA ###############################
@@ -1360,9 +1360,14 @@
 	hud_type = MOB_HUD_FACTION_UPP
 
 /obj/item/device/radio/headset/almayer/tis
-	name = "UAAC-TIS Command headset"
-	desc = "A discreet headset issued to members of the UAAC-TIS. Channels are as follows: :v - marine command, :p - military police, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC,  :t - intel,  :z - HighCom"
+	name = "UAAC-TIS headset"
+	desc = "A discreet headset issued to members of the UAAC-TIS."
 	icon_state = "discreet_headset"
-	frequency = HC_FREQ
-	initial_keys = list(/obj/item/device/encryptionkey/highcom)
+	frequency = TIS_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/tis)
 	volume = RADIO_VOLUME_CRITICAL
+
+/obj/item/device/radio/headset/almayer/tis/command
+	name = "UAAC-TIS Command headset"
+	desc = "A discreet headset issued to senior members of the UAAC-TIS."
+	initial_keys = list(/obj/item/device/encryptionkey/tis/command)
