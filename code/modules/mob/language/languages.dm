@@ -57,17 +57,6 @@
 
 	syllables = list("die", "das", "wein", "mir", "und", "wir", "ein", "nein", "gen", "en", "sauen", "bin", "nein", "rhein", "deut", "der", "lieb", "en", "stein", "nein", "ja", "wolle", "sil", "bei", "der", "sie", "sch", "kein", "nur", "ach", "kann", "volk", "vau", "gelb", "grun", "macht", "zwei", "vier", "nacht", "tag")
 
-/datum/language/scandinavian
-	name = LANGUAGE_SCANDINAVIAN
-	desc = "While not technically one language, Scandinavian languages have grown similar and are nearly indistinguishable from one another unless you actually know the languages."
-	speech_verb = "blubbers"
-	ask_verb = "queries"
-	exclaim_verb = "yelps"
-	color = "scandinavian"
-	key = "0"
-
-	syllables = list("de", "vin", "meg", "og", "vi", "en", "nei", "ing", "gen", "et", "pur", "ke", "er", "nei", "hjort", "tysk", "de", "kjae", "en", "stein", "ja", "ull", "sil", "pa", "hun", "kjo", "erg", "ba", "re", "ol", "kyll", "menn", "esk", "gul", "gronn", "natt", "makt", "to", "fi", "re", "dag", "god", "jul", "ild", "fem", "jeg", "deg", "bjor", "en", "russ", "land", "sve", "rig", "nor", "ge", "dan", "is")
-
 /datum/language/french
 	name = LANGUAGE_FRENCH
 	desc = "Standard French, spoken by the French Republic, one of the few independent countries left on Earth."
@@ -78,6 +67,89 @@
 	key = "9"
 
 	syllables = list("le", "en", "es", "de", "re", "ai", "an", "ar", "au", "ou", "nt", "on", "er", "ur", "an", "it", "te", "me", "la", "is", "ou", "nt", "on", "er", "ur", "an", "it", "te", "et", "me", "is", "qu", "se", "il", "ent", "que", "ait", "les", "lle", "our", "men", "ais", "est", "tre", "mai", "ous", "par", "ant", "ion", "eme", "tai", "ans", "pas", "ell", "vou", "tou", "pou", "eur", "ont", "res", "dan", "une", "ien", "sur", "son", "mme", "tio", "des")
+
+//Minor Languages
+/datum/language/arabic
+	name = LANGUAGE_ARABIC
+	desc = "The main language used in Egypt, parts of the Middle-east, and certain parts of Africa."
+	speech_verb = "khitaabs"
+	ask_verb = "as’al"
+	exclaim_verb = "nehtef"
+	color = "arabic"
+	key = "13"
+
+	syllables = list("mar", "haba", "sabah", "al-kha", "ayr'", "masa", "shu", "kran", "jaz", "eezla", "afwan", "ana", "asef", "min", "fad", "fah", "afk", "lik", "uzra", "kayfa", "haluk", "kallam", "al-ara'", "ibya", "adah", "kinuk", "alta", "duth", "'abta",
+					"ma", "is", "ki", "fa", "ka'", "jah'", "sa'h")
+
+/datum/language/bantu
+	name = LANGUAGE_BANTU
+	desc = "One of the more common Central and South African languages."
+	speech_verb = "di̧ika"
+	ask_verb = "búudi̧a"
+	exclaim_verb = "tsk!"
+	color = "bantu"
+	key = "18"
+
+	syllables = list("di̧", "ika", "kar", "ibu", "ha", "ri", "ar", "nan", "naf", "fur", "ahi", "kuko", "ona", "kwa", "nae", "ewa", "nia", "mpya", "lewa", "ae", "ra", "pah", "ku", "bu", "nje", "te", "ya")
+
+/datum/language/berber
+	name = LANGUAGE_BERBER
+	desc = "An African language primarly used in the northern sections of the continent."
+	speech_verb = "tamazight"
+	ask_verb = "ankatte"
+	exclaim_verb = "“suɣ"
+	color = "berber"
+	key = "17"
+
+	syllables = list("az", "ul", "mata", "aàn", "laba", "sbah", "ms", "ikhr", "yàw", "nit", "ar", "mez", "zra", "wahd", "khem", "àach", "meya", "iqeh", "nes", "sleh", "atag", "chal", "tagin", "sou", "foul", "ous", "tan", "mert", "ehba", "ch", "ab", "uhe",
+					"igh", "lla", "med", "ash", "tis", "lam", "tu", "fat", "ghur", "mam")
+
+/datum/language/celtic
+	name = LANGUAGE_CELTIC
+	desc = "A subset of languages most commonly used in Ireland and Scotland. Celtic usage has been in steady decline for centuries and is usually a rare sight in the wild."
+	speech_verb = "cànans"
+	ask_verb = "larrs"
+	exclaim_verb = "scread"
+	color = "celtic"
+	key = "11"
+
+	syllables = list("tá", "an", "ag", "spéir", "sa", "go", "lonrú", "Bhí", "mé", "siúl", "ar", "mi", "anns", "loch", "fhàs", "a'", "dia", "nos", "hwyl", "tú", "sláá", "n-éirí", "dté", "ball", "thú", "leat", "orm", "baa", "agat", "rai", "da", "pryn",
+					"duit", "slá", "cro")
+
+/datum/language/farsi
+	name = LANGUAGE_FARSI
+	desc = "Also known as Persian, Farsi is a language primarily used in Iran, Afghanistan and Pakistan."
+	speech_verb = "kardans"
+	ask_verb = "persidan"
+	exclaim_verb = "faryads"
+	color = "farsi"
+	key = "12"
+
+	syllables = list("laam", "Khosh", "a'ama", "vakh", "tam", "aste", "naaba", "shid", "saala", "baas", "shi'id", "ahvaal", "chet", "oreh", "e'tun", "khu", "ban", "mersi", "valla", "nista", "ejaaz", "bakh", "khaam", "miko",
+					"befar", "maa'id", "maz'", "erat'", "afa", "faar")
+
+/datum/language/hindi
+	name = LANGUAGE_HINDI
+	desc = "The most common language spoken on the indian sub-continent."
+	speech_verb = "bolna"
+	ask_verb = "pūchanā"
+	exclaim_verb = "chillana"
+	color = "hindi"
+	key = "19"
+
+	syllables = list("kai", "svā", "haiṅ", "nama", "as", "te", "skār", "he", "lo", "āp", "kai", "ka", "hāṁ ", "tum", "ho", "acchā", "maiṁ", "vād", "aur", "ṭh", "īk", "dek", "ha", "bahut", "sam", "nahīṅ","hārā", "merā", "se", "ke", "śubh", "yātr")
+
+/datum/language/latin
+	name = LANGUAGE_LATIN
+	desc = "A classical language very rarely seen anywhere but scholarly institutions, popularized by the ancient Roman empire of old."
+	speech_verb = "oratio"
+	ask_verb = "rogare"
+	exclaim_verb = "exclamo"
+	color = "latin"
+	key = "16"
+
+	syllables = list("carpe", "ipsum", "lor", "vene", "sere", "sed", "lex", "tu", "tempus", "sic", "panem", "unum", "di", "um", "fug", "vici", "vidi", "ergo", "ave", "mori", "et", "est", "pro", "astra", "ex", "salu", "nōn", "ad", "potes", "inimi", "mortem",
+					"effu", "gere", "ip", "disti", "peri", "lux", "seca", "miser", "quod", "illia", "fo", "ibi", "cēte", "tenta", "cor", "tuum", "cadit", "tene", "bris")
 
 /datum/language/spanish
 	name = LANGUAGE_SPANISH
@@ -90,6 +162,31 @@
 
 	syllables = list("ha", "pana", "ja", "blo", "que", "spa", "di", "ga", "na", "ces", "si", "mo", "so", "de", "el", "to", "ro", "mi", "ca", "la", "di", "ah", "mio", "tar", "ion", "gran", "van", "jo", "cie", "qie", "las", "locho", "mas", "no", "gui", "es", "mal")
 
+/datum/language/finnish
+	name = LANGUAGE_FINNISH
+	desc = "The main language spoken by the proud Finnish people back on Earth."
+	speech_verb = "sanoo"
+	ask_verb = "kysyy"
+	exclaim_verb = "huutaa"
+	color = "finnish"
+	key = "15"
+
+	syllables = list("se", "ko", "si", "ta", "va", "ra", "ti", "tta", "va", "ka", "aa", "aa", "kko", "saa", "tuu", "puu", "la", "llo", "lo", "llo", "it", "ku", "kuu", "ro", "rre", "re", "yk", "yh", "ta", "lto", "rto", "ju", "ma", "la",
+					"lau", "muo", "muu", "maa", "mme", "mma", "kki", "ri", "lla", "paa", "y", "a", "u", "o", "ol", "a", "al", "ni", "mi", "ki", "li", "ly", "lyi", "vyi", "hi", "hie")
+	space_chance = 30
+
+/datum/language/swedish
+	name = LANGUAGE_SWEDISH
+	desc = "Mainly used by the sweds, pioneers of affordable furniture and... meatballs.."
+	speech_verb = "tal"
+	ask_verb = "fråga "
+	exclaim_verb = "utropa"
+	color = "swedish"
+	key = "17"
+
+	syllables = list("hur", "mår", "du", "jag", "pra", "tar", "inte", "sven", "ska", "ta", "lyc", "till", "äls", "urs", "vad", "heter", "håll", "jäv", "god", "såd", "läg", "är", "bjor", "tje", "valk", "tack", "omen", "in", "för", "lat")
+
+//Special Languages
 /datum/language/commando
 	name = LANGUAGE_TSL
 	desc = "TSL is a modern technique with a combination of modified American sign language, tactical hand signals and discreet and esoteric code names for radios only known by elite commando groups."
@@ -109,7 +206,7 @@
 	speech_verb = "rumbles"
 	ask_verb = "rumbles"
 	exclaim_verb = "roars"
-	color = "tajaran"
+	color = "yautja"
 	key = "s"
 	flags = WHITELISTED
 
@@ -171,7 +268,7 @@
 /datum/language/apollo
 	name = LANGUAGE_APOLLO
 	desc = "The APOLLO Link is an AI subprocessor designed by SEEGSON, allowing for coordination of maintenance drones and Working Joes. WY denies claims the processor was stolen for ARES."
-	color = "skrell"
+	color = "apollo"
 	speech_verb = "states"
 	ask_verb = "queries"
 	exclaim_verb = "declares"
