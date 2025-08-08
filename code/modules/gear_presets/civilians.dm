@@ -1,5 +1,9 @@
 /datum/equipment_preset/colonist/civilian
 	name = "civi"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_COLONIST
+	rank = CIVILIAN_SURVIVOR
+	faction = FACTION_COLONIST
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 	idtype = /obj/item/card/id/lanyard
 	skills = /datum/skills/civilian

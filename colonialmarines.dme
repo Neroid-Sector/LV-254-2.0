@@ -850,6 +850,7 @@
 #include "code\game\jobs\job\antag\xeno\queen.dm"
 #include "code\game\jobs\job\antag\xeno\xenomorph.dm"
 #include "code\game\jobs\job\civilians\civilian.dm"
+#include "code\modules\gear_presets\sons_of_marina.dm"
 #include "code\game\jobs\job\civilians\other\liaison.dm"
 #include "code\game\jobs\job\civilians\other\mess_seargent.dm"
 #include "code\game\jobs\job\civilians\other\reporter.dm"
