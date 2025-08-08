@@ -45,7 +45,24 @@
 	)
 	icon_state = "ghillie_coif"
 	item_state = "ghillie_coif"
-ghillie_coif
+
+/obj/item/clothing/head/cultist_hood/veilhood
+	desc = "A head wrap desgined to protect the wearer from dust and dirt. This one has a veil to protect from the foul air of the heathens. Looks eerie and weird, almost as if it belongs to a cult."
+	name = "cultist head scarf"
+	icon_state = "veil_hood"
+	item_state = "veil_hood"
+
+/obj/item/clothing/head/cultist_hood/skull_mask
+	desc = "A mask made with a human skull and leaves mounted to it, Looks eerie and weird, almost as if it belongs to a cult."
+	name = "skull mask"
+	icon_state = "skull_mask"
+	item_state = "skull_mask"
+
+/obj/item/clothing/head/cultist_hood/barbedwire
+	desc = "A crown made of barbed wire, Looks eerie and weird, almost as if it belongs to a cult."
+	name = "barbed wire crown"
+	icon_state = "barbed_wire_crown"
+	item_state = "barbed_wire_crown"
 
 //Chaplain
 /obj/item/clothing/head/nun_hood
