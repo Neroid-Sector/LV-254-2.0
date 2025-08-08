@@ -668,8 +668,8 @@
 	icon_state = "medicpatch"
 
 /obj/item/clothing/accessory/patch/clf_patch
-	name = "CLF patch"
-	desc = "A circular, fire-resistant patch with a white border. The design features three white stars and a tricolor background: green, black, and red, symbolizing the Colonial Liberation Front's fight for independence and unity. This patch is worn by CLF fighters as a badge of defiance against corporate and governmental oppression, representing their struggle for a free and self-determined colonial future. Though feared and reviled by some, it remains a powerful symbol of resistance and revolution."
+	name = "Insurgent patch"
+	desc = "A circular, fire-resistant patch with a white border. The design features three white stars and a tricolor background: green, black, and red, symbolizing the Rebels' fight for independence and unity. This patch is worn by Insurgent fighters as a badge of defiance against corporate and governmental oppression, representing their struggle for a free and self-determined colonial future. Though feared and reviled by some, it remains a powerful symbol of resistance and revolution."
 	icon_state = "clfpatch"
 
 // Misc
