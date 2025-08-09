@@ -18,7 +18,7 @@
 
 /************************************************/
 /datum/equipment_preset/uaac/tis/es
-	name = "UAAC-TIS Escort Officer (NE5)"
+	name = "UAAC-TIS Escort Officer (NE4)"
 	assignment = JOB_TIS_ES
 	rank = "UAAC-TIS Escort Officer"
 	paygrades = list(
@@ -138,6 +138,7 @@
 	name = "UAAC-TIS Special Agent (NO5)"
 	minimum_age = 30
 	skills = /datum/skills/tiscomm
+	languages = ALL_HUMAN_LANGUAGES // Know thy enemy.
 
 	assignment = JOB_TIS_SA
 	rank = "UAAC-TIS Special Agent"
@@ -184,6 +185,7 @@
 	name = "UAAC-TIS Coordinator (NO6E)"
 	minimum_age = 40
 	skills = /datum/skills/tiscomm
+	languages = ALL_HUMAN_LANGUAGES // Know thy enemy.
 
 	assignment = JOB_TIS_CO
 	rank = "UAAC-TIS Coordinator"

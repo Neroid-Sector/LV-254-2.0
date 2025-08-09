@@ -145,7 +145,7 @@
 	max_points = 300
 	delay = 0.5
 	force = MELEE_FORCE_STRONG
-	req_access = list()
+	req_access = list(ACCESS_TIS)
 
 	listed_products = list(
 		list("STATIONERY", 0, null, null, null),
@@ -162,7 +162,6 @@
 		list("Handcuffs", 2, /obj/item/restraint/handcuffs, "white", "A set of handcuffs."),
 
 		list("AMMUNITION", 0, null, null, null),
-		list("M1911 Magazine", 5, /obj/item/ammo_magazine/pistol/m1911, "white", "A magazine for an M1911 pistol."),
 		list("Tranquilizer Magazine", 5, /obj/item/ammo_magazine/pistol/tranq, "white", "A magazine for an tranquilizer pistol."),
 
 		list("UTILITY", 0, null, null, null),
