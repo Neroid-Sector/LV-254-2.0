@@ -5,6 +5,7 @@
 	name = "Sons of Marina Militia(SOM)"
 	assignment = JOB_SOM_MILITIA
 	rank = JOB_SOM_MILITIA
+	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
 /datum/equipment_preset/colonist/som/load_gear(mob/living/carbon/human/new_human)
@@ -71,12 +72,16 @@
 	name = "Sons of Marina Witch Doktor(SOM)"
 	assignment = JOB_SOM_MEDIC
 	rank = JOB_SOM_MEDIC
+	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
 /datum/equipment_preset/colonist/som/medi/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cultist_hood/veilhood(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
@@ -84,7 +89,7 @@
 	new_human.equip_to_slot_or_del(new /obj/structure/bed/portable_surgery(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/clf_patch, WEAR_ACCESSORY)
 	if(new_human.disabilities & NEARSIGHTED)
@@ -108,6 +113,7 @@
 	name = "Sons of Marina Zealot(SOM)"
 	assignment = JOB_SOM_ZEALOT
 	rank = JOB_SOM_ZEALOT
+	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
 /datum/equipment_preset/colonist/som_z/load_gear(mob/living/carbon/human/new_human)
@@ -140,6 +146,7 @@
 	name = "Sons of Marina Zealot Gunner(SOM)"
 	assignment = JOB_SOM_ZEALOT
 	rank = JOB_SOM_ZEALOT
+	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
 /datum/equipment_preset/colonist/som_z_g/load_gear(mob/living/carbon/human/new_human)
@@ -153,14 +160,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/m2c(new_human), WEAR_WAIST)
 
 //robe
-	if(prob(25))
-		new_human.equip_to_slot_or_del(new 	/obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
-	if(prob(45))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/collie(new_human), WEAR_JACKET)
-	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som/ghillie(new_human), WEAR_JACKET)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new 	/obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/ultrazine/liaison(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/emergency(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(new_human), WEAR_IN_JACKET)
 
 	new_human.equip_to_slot_or_del(new/obj/item/storage/pouch/machete/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/full(new_human), WEAR_L_STORE)
@@ -174,6 +178,7 @@
 	name = "Sons of Marina Paladin(SOM)"
 	assignment = JOB_SOM_PALLY
 	rank = JOB_SOM_PALLY
+	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
 /datum/equipment_preset/colonist/som_p/load_gear(mob/living/carbon/human/new_human)
@@ -207,6 +212,7 @@
 	name = "Sons of Marina Acolyte(SOM)"
 	assignment = JOB_SOM_ACOLYTE
 	rank = JOB_SOM_ACOLYTE
+	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
 /datum/equipment_preset/colonist/som_a/load_gear(mob/living/carbon/human/new_human)
@@ -236,6 +242,7 @@
 	name = "Sons of Marina Shaman(SOM)"
 	assignment = JOB_SOM_PRIEST
 	rank = JOB_SOM_PRIEST
+	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
 /datum/equipment_preset/colonist/som_s/load_gear(mob/living/carbon/human/new_human)
@@ -269,6 +276,7 @@
 	name = "Sons of Marina Ascended(SOM)"
 	assignment = JOB_SOM_PRIEST
 	rank = JOB_SOM_PRIEST
+	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
 /datum/equipment_preset/colonist/som_ascended/load_gear(mob/living/carbon/human/new_human)
