@@ -38,7 +38,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis/es(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/uaac/tis/es(new_human), WEAR_JACKET)
@@ -79,7 +79,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 	if(new_human.disabilities & NEARSIGHTED)
@@ -115,7 +115,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis/senior(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 	if(new_human.disabilities & NEARSIGHTED)
@@ -157,7 +157,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis/agent(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/council/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/uaac/tis/sa(new_human), WEAR_JACKET)
@@ -224,3 +224,38 @@
 
 	to_chat(new_human, SPAN_WARNING("You are a Coordinator for UAAC-TIS, an intelligence agency with tremendous power. You maintain entire intelligence networks and ensure their smooth running, you possess an extreme amount of authority and will generally outrank anyone in your AO. You are generally not supposed to get involved personally in operations but are allowed if deemed important enough. You are outside the normal USCM chain of command."))
 /*****************************************************************************************************/
+//----------------------------------------UAAC-OWLF----------------------------------------//
+/*****************************************************************************************************/
+/datum/equipment_preset/uaac/tis/owlf
+	name = "UAAC-OWLF Investigative Agent (NO5)"
+	minimum_age = 30
+	skills = /datum/skills/tiscomm
+
+	assignment = JOB_TIS_IA
+	rank = "UAAC-OWLF Investigative Agent"
+	paygrades = list(
+					PAY_SHORT_NO4 = JOB_PLAYTIME_TIER_0,
+					PAY_SHORT_NO5 = JOB_PLAYTIME_TIER_1,
+					PAY_SHORT_NO6 = JOB_PLAYTIME_TIER_2
+					)
+	role_comm_title = "OWLF-IA"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/uaac/tis/owlf/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/scout_cloak
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/owlf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/uaac/owlf(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/thermal/syndi(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/owlf_hood(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/tis(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new 	/obj/item/clothing/accessory/storage/owlf_vest(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/tis(new_human), WEAR_IN_BACK)
+
+	to_chat(new_human, SPAN_WARNING("You are a Special Agent for UAAC-TIS, an intelligence agency with tremendous power. You are tasked with investigating sensitive operations and resolving them carefully, you possess a large amount of authority and and may seize UAAC assets to aid in your assigned objectives. You are outside the normal USCM chain of command."))

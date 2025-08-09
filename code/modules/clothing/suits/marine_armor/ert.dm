@@ -973,6 +973,27 @@
 	)
 	uniform_restricted = list(/obj/item/clothing/under/uaac/tis)
 
+
+/obj/item/clothing/suit/storage/marine/uaac/tis/owlf
+	name = "\improper M3-O Medium Armor"
+	desc = "An extremely modified set of M3-S armor originally designed for USCM Scouts, lightweight alloy plating and a protective lining have been installed in place of the original armor, no doubt at serious expense. Such modifications make the armor extremely protective while still being lightweight and nimble."
+	item_state = ="tis_scout"
+	icon_state = "tis_scout"
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	specialty = "M3-O Medium"
+	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	unacidable = TRUE
+
+
+
 //================//UNITED AMERICAS RIOT CONTROL\\=====================\\
 //=======================================================================\\
 

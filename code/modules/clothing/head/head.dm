@@ -1147,6 +1147,15 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	desc = "This hood is attached to a high-tech suit with built-in thermal cloaking technology."
 	icon = 'icons/obj/items/clothing/hats/misc_ert_colony.dmi'
 	icon_state = "owlf_hood"
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/misc_ert_colony.dmi'
 	)
