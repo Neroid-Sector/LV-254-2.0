@@ -68,13 +68,65 @@
 	spawn_rebel_helmet(new_human)
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/clf_patch, WEAR_ACCESSORY)
-
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/full/random(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb(new_human), WEAR_BACK)
+	if(prob(50))
+		spawn_rebel_smg(new_human)
+	else
+		spawn_rebel_rifle(new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+
+	if(prob(15))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red(new_human), WEAR_FACE)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black(new_human), WEAR_FACE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/tornscarf/urban(new_human), WEAR_FACE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_FACE)
+
+	if(prob(15))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+	if(prob(35))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs(new_human), WEAR_R_EAR)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_R_EAR) //fuck you I know this is shitcode
+
+/datum/equipment_preset/clf/soldier/light
+	name = "Insurgent Soldier(light inf)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF
+	rank = JOB_CLF
+	role_comm_title = "GRL"
+
+	minimap_icon = "clf_mil"
+
+	skills = /datum/skills/clf
+
+/datum/equipment_preset/clf/soldier/light/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/insurgent/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	spawn_rebel_suit(new_human)
+	spawn_rebel_helmet(new_human)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/clf_patch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv/hacked/clf, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/mre_food_packet/clf, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
 	if(prob(50))
 		spawn_rebel_smg(new_human)
@@ -100,6 +152,53 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_R_EAR) //fuck you I know this is shitcode
 
+/datum/equipment_preset/clf/soldier/ied
+	name = "Insurgent Soldier(suicider)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF
+	rank = JOB_CLF
+	role_comm_title = "GRL"
+
+	minimap_icon = "clf_mil"
+
+	skills = /datum/skills/clf
+
+/datum/equipment_preset/clf/soldier/ied/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/insurgent/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/bombvest(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/welding,(new_human), WEAR_HEAD)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/clf_patch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	if(prob(50))
+		spawn_rebel_smg(new_human)
+	else
+		spawn_rebel_rifle(new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+	if(prob(15))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red(new_human), WEAR_FACE)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black(new_human), WEAR_FACE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/tornscarf/urban(new_human), WEAR_FACE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_FACE)
+
+	if(prob(15))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+	if(prob(35))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs(new_human), WEAR_R_EAR)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_R_EAR) //fuck you I know this is shitcode
 
 /datum/equipment_preset/clf/soldier/elite
 	name = "Insurgent Soldier(Elite)"
@@ -291,7 +390,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/attachments(new_human), WEAR_IN_BACK)
 	//gun
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/survivor(new_human), WEAR_L_HAND)
 	spawn_merc_elite_weapon(new_human, 9, 100, 0) //only shotguns
+
 
 /datum/equipment_preset/clf/engineer/get_antag_clothing_equipment()
 	return list(
@@ -1582,6 +1683,7 @@
 /datum/equipment_preset/clf/commander/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/mercenary/miner(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/command(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/insurgent/leader(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia/smartgun(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact(new_human), WEAR_IN_JACKET)
