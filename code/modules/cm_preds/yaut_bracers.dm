@@ -641,10 +641,21 @@
 	var/atom/areaLoc = null
 	for(var/obj/item/tracked_item as anything in GLOB.loose_yautja_gear)
 		var/atom/loc = get_true_location(tracked_item)
+		var/atom/holder = tracked_item
+		var/tracking_blocked = FALSE
+		while(holder)
+			// Check if holder is an item and has block_tracking
+			if(istype(holder, /obj/item) && ("block_tracking" in holder.vars) && holder:block_tracking)
+				tracking_blocked = TRUE
+				break
+			holder = holder.loc
+		if(tracking_blocked)
+			continue
 		if(tracked_item.anchored)
 			continue
 		if(is_honorable_carrier(recursive_holder_check(tracked_item)))
 			continue
+
 		var/area/location = get_area(loc)
 		if(location?.flags_area & AREA_YAUTJA_GROUNDS)
 			continue

@@ -704,6 +704,7 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
 	new /obj/item/tool/extinguisher/mini(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/brain_stimulant(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/redemption_stimulant(src)

@@ -12,7 +12,7 @@
 
 //UAAC-TIS Investigative Agent
 /datum/job/special/uaac/owlf/ia
-	title = JOB_TIS_IA
+	title = JOB_OWLF_IA
 
 //UAAC-TIS Special Agent
 /datum/job/special/uaac/tis/sa

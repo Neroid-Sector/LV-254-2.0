@@ -249,6 +249,46 @@
 	new /obj/item/storage/box/handcuffs(drop_spawn)
 
 /*****************************************************************************************************/
+//UAAC-OWLF Investigative Dispatch
+/*****************************************************************************************************/
+
+/datum/emergency_call/inspection_owlf
+	name = "Single Agent - UA Allied Command OWLF"
+	mob_max = 1
+	mob_min = 1
+	probability = 0
+
+/datum/emergency_call/inspection_owlf/New()
+	..()
+	objectives = "Await detailed directives from your Coordinator."
+
+/datum/emergency_call/inspection_owlf/create_member(datum/mind/M, turf/override_spawn_loc)
+	var/turf/T = override_spawn_loc ? override_spawn_loc : get_spawn_point()
+
+	if(!istype(T))
+		return FALSE
+
+	var/mob/living/carbon/human/H = new(T)
+	M.transfer_to(H, TRUE)
+
+	arm_equipment(H, /datum/equipment_preset/uaac/tis/owlf, TRUE, TRUE)
+	to_chat(H, SPAN_ROLE_HEADER("You are an Investigative Agent working for the UAAC-OWLF!"))
+	to_chat(H, SPAN_ROLE_BODY("You have been tasked with eliminating otherworldly or sensitive targets, as such you've been supplied with advanced equipment meant to counter Synthetics and Strong targets."))
+	to_chat(H, SPAN_ROLE_BODY("You are not expected to enforce ML on the ship and are generally expected to follow the instruction of the Coordinator you are protecting."))
+	to_chat(H, SPAN_WARNING("This role encourages familiarity with Maritime Law and Standard Operating Procedure. Ahelp if you have any questions or wish to surrender the character to someone else."))
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), H, SPAN_BOLD("Objectives: [objectives]")), 1 SECONDS)
+
+/datum/emergency_call/inspection_owlf/duo
+	name = "Dual Agents - UA Allied Command OWLF"
+	mob_max = 2
+	mob_min = 2
+
+/datum/emergency_call/inspection_owlf/trio
+	name = "Squad Deployment - UA Allied Command OWLF"
+	mob_max = 3
+	mob_min = 3
+
+/*****************************************************************************************************/
 
 //Weyland-Yutani
 /datum/emergency_call/inspection_wy

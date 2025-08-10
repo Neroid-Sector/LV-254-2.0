@@ -145,8 +145,7 @@
 	max_points = 300
 	delay = 0.5
 	force = MELEE_FORCE_STRONG
-	emp_weak = FALSE
-	req_access = list()
+	req_access = list(ACCESS_TIS)
 
 	listed_products = list(
 		list("STATIONERY", 0, null, null, null),
@@ -163,7 +162,6 @@
 		list("Handcuffs", 2, /obj/item/restraint/handcuffs, "white", "A set of handcuffs."),
 
 		list("AMMUNITION", 0, null, null, null),
-		list("M1911 Magazine", 5, /obj/item/ammo_magazine/pistol/m1911, "white", "A magazine for an M1911 pistol."),
 		list("Tranquilizer Magazine", 5, /obj/item/ammo_magazine/pistol/tranq, "white", "A magazine for an tranquilizer pistol."),
 
 		list("UTILITY", 0, null, null, null),
@@ -193,6 +191,66 @@
 	)
 
 /obj/item/device/portable_vendor/antag/tis/covert
+	name = "briefcase"
+	icon_state = "briefcase"
+	desc = "It's made of AUTHENTIC faux-leather and has a price-tag still attached. Its owner must be a real professional."
+	covert = TRUE
+
+/obj/item/device/portable_vendor/antag/owlf
+	name = "Automated Storage Briefcase"
+	desc = "A briefcase able to dispense items at the user's discretion. This one appears to be tightly locked, and impenetrable."
+	points = 200
+	max_points = 300
+	delay = 0.5
+	force = MELEE_FORCE_STRONG
+	emp_weak = FALSE
+	req_access = list(ACCESS_TIS)
+
+	listed_products = list(
+		list("STATIONERY", 0, null, null, null),
+		list("pen", 5, /obj/item/tool/pen/clicky, "white", "A pen, for writing on the go."),
+		list("Paper", 5, /obj/item/paper, "white", "A fresh piece of paper, for writing on."),
+		list("Carbon Paper", 5, /obj/item/paper/carbon, "white", "A piece of carbon paper, to double the writing output."),
+		list("Clipboard", 5, /obj/item/clipboard, "white", "A clipboard, for storing all that writing."),
+
+		list("WEAPONS", 0, null, null, null),
+		list("Configured Stunbaton", 25, /obj/item/weapon/baton/antag, "white", "A stun baton with more charge."),
+		list("Tranquilizer Gun", 25, /obj/item/weapon/gun/pistol/tranquilizer, "white", "A tranquilizer gun. Comes with 5 darts. Deals no damage, knockout guaranteed."),
+		list("Chloroform Cloth", 18, /obj/item/weapon/chloroform, "white", "A cloth dosed with chloroform. Has 8 effective uses and can only be used whilst behind a target. You must be in disarm intent to use."),
+		list("Sedative Pen", 15, /obj/item/tool/pen/sleepypen, "white", "A sedative syringe disguised as a pen. Can be used to stealthily knock out targets."),
+		list("Handcuffs", 2, /obj/item/restraint/handcuffs, "white", "A set of handcuffs."),
+
+		list("UTILITY", 0, null, null, null),
+		list("Claymore Box", 50, /obj/item/storage/box/explosive_mines, "white", "A box of 5 claymores."),
+		list("Smoke Grenade Packet", 40, /obj/item/storage/box/packet/smoke, "white", "A packet of smoke grenades."),
+		list("Tranquilizer Magazine", 10, /obj/item/ammo_magazine/pistol/tranq, "white", "A magazine for an tranquilizer pistol."),
+		list("Thermal Bag", 50, /obj/structure/closet/bodybag/tarp/reactive/scout/enhanced, "white", "A thermal bag used for stealthy recovery of bodies"),
+		list("Bear Trap", 20, /obj/item/restraint/legcuffs/beartrap, "white", "A bear trap, useful for slowing targets."),
+		list("Breaching Charge (Rubber)", 20, /obj/item/explosive/plastic/breaching_charge/rubber, "white", "A breaching charge, useful for entering rooms, non-lethally."),
+		list("Breaching Charge", 50, /obj/item/explosive/plastic/breaching_charge, "white", "A breaching charge, useful for entering rooms."),
+
+		list("TOOLS", 0, null, null, null),
+		list("Security Access Tuner v2", 25, /obj/item/device/multitool/antag, "white", "An upgraded access tuner, able to rapidly hack various machinery. Disguised as a regular multitool."),
+		list("Listening Device", 20, /obj/item/device/radio/listening_bug/radio_linked/tis, "white", "A listening device. Can be disguised as anything by right-clicking on it."),
+		list("USCM Codebook", 20, /obj/item/book/codebook, "white", "A copy of a USCM codebook used to verify credentials with the commanding officer."),
+		list("Tools Kit", 15, /obj/item/storage/toolbox/mechanical, "white", "A toolbox containing general tools."),
+		list("TIS Challenge Coin", 15, /obj/item/coin/silver/tis, "white", "A challenge coin emblazoned with an eye. Use to identify other TIS operatives on the field at a glance."),
+		list("MRE Packet", 15, /obj/item/storage/box/mre, "white", "A standard USCM MRE."),
+		list("Power Cell", 15, /obj/item/cell/high, "white", "A standard high-capacity power cell."),
+
+		list("RADIO KEYS", 0, null, null, null),
+		list("Radio Key: TIS", 10, /obj/item/device/encryptionkey/tis, "white", "Radio Key for TIS communications."),
+		list("Radio Key: Colonial Marshals", 20, /obj/item/device/encryptionkey/cmb, "white", "Radio Key for the CMB."),
+		list("Radio Key: Colonial Liberation Front", 20, /obj/item/device/encryptionkey/clf, "white", "Radio Key for known local CLF frequencies."),
+		list("Radio Key: Union of Progressive Peoples", 20, /obj/item/device/encryptionkey/upp, "white", "Radio Key for known UPP listening frequencies."),
+
+		list("TRANSFER POINTS", 0, null, null, null),
+		list("1 point", 1, /obj/item/stack/points/p1, "white", "A method of transferring points between agents."),
+		list("5 points", 5, /obj/item/stack/points/p5, "white", "A method of transferring points between agents."),
+		list("20 points", 20, /obj/item/stack/points/p20, "white", "A method of transferring points between agents."),
+	)
+
+/obj/item/device/portable_vendor/antag/owlf/covert
 	name = "briefcase"
 	icon_state = "briefcase"
 	desc = "It's made of AUTHENTIC faux-leather and has a price-tag still attached. Its owner must be a real professional."

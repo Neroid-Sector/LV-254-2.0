@@ -207,8 +207,8 @@
 				marine_rk = "tissio"
 			if(JOB_TIS_SA)
 				marine_rk = "tissa"
-			if(JOB_TIS_IA)
-				marine_rk = "tisia"
+			if(JOB_OWLF_IA)
+				marine_rk = "owlfia"
 			if(JOB_TIS_CO)
 				marine_rk = "tisco"
 			// Riot MPs
