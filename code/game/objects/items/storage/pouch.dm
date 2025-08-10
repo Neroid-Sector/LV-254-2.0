@@ -637,6 +637,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/grenade/empgrenade/dutch(src)
 
+/obj/item/storage/pouch/explosive/owlf/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/explosive/grenade/empgrenade/owlf(src)
+
 /obj/item/storage/pouch/explosive/emp/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/grenade/empgrenade(src)

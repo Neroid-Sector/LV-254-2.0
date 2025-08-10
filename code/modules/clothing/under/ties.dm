@@ -1304,6 +1304,7 @@
 	desc = "This is a fancy-looking ballistics vest, meant to be attached to a uniform." //No stats for these yet, just placeholder implementation.
 	icon_state = "owlf_vest"
 	item_state = "owlf_vest"
+	storage_slots = 6
 
 /*
 Wrist Accessories

@@ -285,11 +285,15 @@
 	name = "D21 high-explosive armor-piercing incendiary bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 60
+	damage = 50
 	accuracy = -HIT_ACCURACY_TIER_4
 	scatter = -SCATTER_AMOUNT_TIER_9
 	penetration = ARMOR_PENETRATION_TIER_10
 	shell_speed = AMMO_SPEED_TIER_6
+
+/datum/ammo/bullet/rifle/heap/m4ra1/New()
+	..()
+	RegisterSignal(src, COMSIG_AMMO_POINT_BLANK, PROC_REF(handle_battlefield_execution))
 
 /datum/ammo/bullet/rifle/heap/m4ra1/set_bullet_traits()
 	. = ..()

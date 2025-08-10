@@ -3,7 +3,6 @@
 	desc = "Wide area EMP grenade."
 	icon_state = "emp"
 	item_state = "emp"
-	
 
 /obj/item/explosive/grenade/empgrenade/prime()
 	..()
@@ -11,11 +10,19 @@
 		qdel(src)
 	return
 
+/obj/item/explosive/grenade/empgrenade/owlf
+	name = "Upgraded EMP grenade"
+	desc = "Wide area EMP grenade."
+
+/obj/item/explosive/grenade/empgrenade/owlf/prime()
+	..()
+	if(empulse(src, 10, 15))
+		qdel(src)
+	return
+
 /obj/item/explosive/grenade/empgrenade/dutch
 	name = "Dutch's Concoction"
 	desc = "Wide area EMP grenade. The label reads, 'CLOAKER DESTROYER - EXTREMELY STRONG'."
-	icon_state = "emp"
-	item_state = "emp"
 
 /obj/item/explosive/grenade/empgrenade/dutch/prime()
 	..()

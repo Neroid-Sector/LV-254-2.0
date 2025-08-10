@@ -2558,6 +2558,7 @@ Defined in conflicts.dm of the #defines folder.
 	slot = "special"
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS
+	gun_traits = list(TRAIT_GUN_SILENCED)
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 

@@ -145,6 +145,7 @@
 	max_points = 300
 	delay = 0.5
 	force = MELEE_FORCE_STRONG
+	emp_weak = FALSE
 	req_access = list()
 
 	listed_products = list(

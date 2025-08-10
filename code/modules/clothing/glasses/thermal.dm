@@ -47,6 +47,20 @@
 	deactive_state = "degoggles"
 	actions_types = list(/datum/action/item_action/toggle)
 
+/obj/item/clothing/glasses/thermal/owlf //These are going to cause so much salt.
+	name = "Advanced Thermal HUD Array"
+	desc = "Top of the line nanotech capable of thermal imaging, nightvision and displaying a targets security and health data. The wiring has been shielded against EMP blasts and the whole thing is worth more than your house."
+	icon = 'icons/obj/items/clothing/glasses/huds.dmi'
+	item_icons = list(
+		WEAR_EYES = 'icons/mob/humans/onmob/clothing/glasses/huds.dmi',
+	)
+	icon_state = "meson"
+	deactive_state = "degoggles"
+	actions_types = list(/datum/action/item_action/toggle)
+	hud_type = MOB_HUD_SECURITY_ADVANCED
+	blinds_on_emp = FALSE
+
+
 /obj/item/clothing/glasses/thermal/syndi/bug_b_gone
 	name = "Bug-B Gone Thermal Goggles"
 	desc = "For all your bug hunting needs!"
