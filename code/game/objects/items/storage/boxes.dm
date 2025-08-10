@@ -37,7 +37,7 @@
 	storage_slots = null
 	max_w_class = SIZE_SMALL //Changed because of in-game abuse
 	w_class = SIZE_LARGE //Changed becuase of in-game abuse
-	storage_flags = STORAGE_FLAGS_BAG
+	storage_flags = STORAGE_FLAGS_BOX
 
 /obj/item/storage/box/pride
 	name = "box of prideful crayons"
