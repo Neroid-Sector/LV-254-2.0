@@ -503,7 +503,7 @@
 	icon_state = "tis_fatigues"
 	worn_state = "tis_fatigues"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/uaac/tis/es)
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/uaac/tis)
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_laser = CLOTHING_ARMOR_NONE
