@@ -1121,3 +1121,18 @@
 /obj/item/storage/box/whitebeet/fill_preset_inventory()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_container/food/snacks/grown/whitebeet(src)
+
+// OWLF Containment Case
+
+/obj/item/storage/box/owlf
+	name = "OWLF containment case"
+	desc = "A large containment case used by the OWLF to store sensitive items, the inside of the case is composed of thick rubber and faraday liners, able to block tracking signals with the assistance of a small jammer located on the inside of the lid."
+	icon = 'icons/obj/items/storage/boxes.dmi'
+	icon_state = "owlf"
+	item_state = "owlf"
+	max_w_class = SIZE_HUGE
+	w_class = SIZE_MEDIUM
+	storage_slots = null
+	max_storage_space = 21
+	storage_flags = STORAGE_FLAGS_BOX|STORAGE_CLICK_GATHER
+	block_tracking = TRUE

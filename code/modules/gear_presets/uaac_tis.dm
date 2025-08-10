@@ -18,9 +18,10 @@
 
 /************************************************/
 /datum/equipment_preset/uaac/tis/es
-	name = "UAAC-TIS Escort Officer (NE4)"
+	name = "UAAC-TIS Escort Officer"
 	assignment = JOB_TIS_ES
-	rank = "UAAC-TIS Escort Officer"
+	rank = JOB_TIS_ES
+
 	paygrades = list(
 					PAY_SHORT_NE4 = JOB_PLAYTIME_TIER_0,
 					PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_1,
@@ -38,10 +39,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis/es(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/uaac/tis/es(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/uaac/tis(new_human), WEAR_JACKET)
 	if(new_human.disabilities & NEARSIGHTED)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud/hidden/prescription(new_human), WEAR_EYES)
 	else
@@ -59,11 +60,11 @@
 
 /*****************************************************************************************************/
 /datum/equipment_preset/uaac/tis/io
-	name = "UAAC-TIS Intelligence Officer (NO1)"
+	name = "UAAC-TIS Intelligence Officer"
 	skills = /datum/skills/tis
 
 	assignment = JOB_TIS_IO
-	rank = "UAAC-TIS Intelligence Officer"
+	rank = JOB_TIS_IO
 	paygrades = list(
 					PAY_SHORT_NO1 = JOB_PLAYTIME_TIER_0,
 					PAY_SHORT_NO2 = JOB_PLAYTIME_TIER_1,
@@ -79,7 +80,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 	if(new_human.disabilities & NEARSIGHTED)
@@ -98,11 +99,11 @@
 
 /*****************************************************************************************************/
 /datum/equipment_preset/uaac/tis/sio
-	name = "UAAC-TIS Senior Intelligence Officer (NO3)"
+	name = "UAAC-TIS Senior Intelligence Officer"
 	minimum_age = 27
 
 	assignment = JOB_TIS_SIO
-	rank = "UAAC-TIS Senior Intelligence Officer"
+	rank = JOB_TIS_SIO
 	paygrades = list(PAY_SHORT_NO3 = JOB_PLAYTIME_TIER_0,)
 	role_comm_title = "TIS-SIO"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -115,7 +116,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis/senior(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 	if(new_human.disabilities & NEARSIGHTED)
@@ -135,13 +136,13 @@
 
 /*****************************************************************************************************/
 /datum/equipment_preset/uaac/tis/sa
-	name = "UAAC-TIS Special Agent (NO5)"
+	name = "UAAC-TIS Special Agent"
 	minimum_age = 30
 	skills = /datum/skills/tiscomm
 	languages = ALL_HUMAN_LANGUAGES // Know thy enemy.
 
 	assignment = JOB_TIS_SA
-	rank = "UAAC-TIS Special Agent"
+	rank = JOB_TIS_SA
 	paygrades = list(
 					PAY_SHORT_NO4 = JOB_PLAYTIME_TIER_0,
 					PAY_SHORT_NO5 = JOB_PLAYTIME_TIER_1,
@@ -158,7 +159,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/uaac/tis/agent(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/council/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/uaac/tis/sa(new_human), WEAR_JACKET)
@@ -182,13 +183,13 @@
 
 /*****************************************************************************************************/
 /datum/equipment_preset/uaac/tis/co
-	name = "UAAC-TIS Coordinator (NO6E)"
+	name = "UAAC-TIS Coordinator"
 	minimum_age = 40
 	skills = /datum/skills/tiscomm
 	languages = ALL_HUMAN_LANGUAGES // Know thy enemy.
 
 	assignment = JOB_TIS_CO
-	rank = "UAAC-TIS Coordinator"
+	rank = JOB_TIS_CO
 	paygrades = list(
 					PAY_SHORT_NO6E = JOB_PLAYTIME_TIER_0,
 					PAY_SHORT_NO6C = JOB_PLAYTIME_TIER_2,
@@ -226,3 +227,48 @@
 
 	to_chat(new_human, SPAN_WARNING("You are a Coordinator for UAAC-TIS, an intelligence agency with tremendous power. You maintain entire intelligence networks and ensure their smooth running, you possess an extreme amount of authority and will generally outrank anyone in your AO. You are generally not supposed to get involved personally in operations but are allowed if deemed important enough. You are outside the normal USCM chain of command."))
 /*****************************************************************************************************/
+//----------------------------------------UAAC-OWLF----------------------------------------//
+/*****************************************************************************************************/
+/datum/equipment_preset/uaac/tis/owlf
+	name = "UAAC-OWLF Investigative Agent"
+	minimum_age = 30
+	skills = /datum/skills/tiscomm
+	languages = ALL_HUMAN_LANGUAGES // Know thy enemy.
+
+	assignment = JOB_OWLF_IA
+	rank = JOB_OWLF_IA
+	paygrades = list(
+					PAY_SHORT_NO4 = JOB_PLAYTIME_TIER_0,
+					PAY_SHORT_NO5 = JOB_PLAYTIME_TIER_1,
+					PAY_SHORT_NO6 = JOB_PLAYTIME_TIER_2
+					)
+	role_comm_title = "OWLF-IA"
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/uaac/tis/owlf/load_gear(mob/living/carbon/human/new_human)
+	var/back_item = /obj/item/storage/backpack/marine/satchel/scout_cloak
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/tis(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/owlf(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/uaac/tis/owlf(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/thermal/owlf(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/owlf_mask(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m4ra1(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/owlf(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/tis(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/owlf_vest(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/owlf(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m4ra1_custom/tactical(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator/scout(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/intel(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/owlf(new_human), WEAR_IN_BACK)
+
+	to_chat(new_human, SPAN_WARNING("You are an Investigative Agent for the OWLF, a special program under the powerful TIS intelligence agency. You are tasked with investigating and eliminating otherworldly or high-value targets, usually recovering the body or important materials in the process. You possess a large amount of authority and and may seize UAAC assets to aid in your assigned objectives. You are outside the normal USCM chain of command and only answer to TIS Coordinators."))

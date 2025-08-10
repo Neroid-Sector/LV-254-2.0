@@ -39,6 +39,13 @@
 	w_class = SIZE_SMALL
 	unfolded_path = /obj/structure/closet/bodybag/tarp/reactive/scout
 
+/obj/item/bodybag/tarp/reactive/scout/enhanced
+	name = "\improper V4 reactive thermal tarp (folded)"
+	desc = "A slightly improved version of the effective V3 reactive thermal tarp, the V4 incorperates a set of 4 small rollers in the outside corners of the bag, while not as fast as a dedicated roller bed, the rollers allow easier draggings."
+	icon_state = "scouttarp_folded"
+	w_class = SIZE_SMALL
+	unfolded_path = /obj/structure/closet/bodybag/tarp/reactive/scout/enhanced
+
 /obj/structure/closet/bodybag/tarp
 	name = "\improper V1 thermal-dampening tarp"
 	bag_name = "\improper V1 thermal-dampening tarp"
@@ -149,6 +156,14 @@
 		return FALSE
 	. = ..()
 	handle_cloaking()
+
+/obj/structure/closet/bodybag/tarp/reactive/scout/enhanced
+	name = "\improper V4 reactive thermal tarp (folded)"
+	bag_name = "\improper V4 reactive thermal tarp"
+	desc = "A slightly improved version of the effective V3 reactive thermal tarp, the V4 incorperates a set of 4 small rollers in the outside corners of the bag, while not as fast as a dedicated roller bed, the rollers allow easier dragging."
+	item_path = /obj/item/bodybag/tarp/reactive/scout/enhanced
+	drag_delay = 1
+	can_store_dead = TRUE
 
 /obj/structure/broken_apc
 	name = "\improper M577 armored personnel carrier"

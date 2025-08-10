@@ -77,6 +77,7 @@
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/scope/variable_zoom,
 	)
 
 /obj/item/weapon/gun/m4ra_custom/apply_bullet_effects(obj/projectile/projectile_to_fire, mob/user, i = 1, reflex = 0)
@@ -101,11 +102,9 @@
 /obj/item/weapon/gun/rifle/m4ra_custom/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_6)
-	set_burst_amount(BURST_AMOUNT_TIER_2)
-	set_burst_delay(FIRE_DELAY_TIER_12)
+	set_burst_amount(0)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
 	scatter = SCATTER_AMOUNT_TIER_8
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
 	recoil = RECOIL_AMOUNT_TIER_5
 	damage_falloff_mult = 0
@@ -119,3 +118,92 @@
 
 /obj/item/weapon/gun/rifle/m4ra_custom/tactical
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/bayonet, /obj/item/attachable/angledgrip)
+
+// Elite version used by OWLF
+
+/obj/item/weapon/gun/rifle/m4ra1_custom
+	name = "\improper M4RA1 custom battle rifle"
+	desc = "A prototype improvement for the M4RA Custom rifle used by scouts, most notable is the replacement of the original barrel with an integrally suppressed version, providing signature reduction. Other improvements have been made to the internals, increasing firerate and accuracy. Has an integrated magnetic harness."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/marksman_rifles.dmi'
+	icon_state = "m4ra1_custom"
+	item_state = "m4ra1_custom"
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/marksman_rifles.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/marksman_rifles.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_righthand.dmi'
+	)
+	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
+
+	fire_sound = 'sound/weapons/gun_m4ra.ogg'
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+
+	unacidable = TRUE
+	explo_proof = TRUE
+	force = 26
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	map_specific_decoration = FALSE
+	aim_slowdown = SLOWDOWN_ADS_QUICK
+	flags_item = TWOHANDED|NO_CRYO_STORE
+	auto_retrieval_slot = WEAR_J_STORE
+	current_mag = /obj/item/ammo_magazine/rifle/m4ra/m4ra1
+
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rifle/m4ra,
+		/obj/item/ammo_magazine/rifle/m4ra/ap,
+		/obj/item/ammo_magazine/rifle/m4ra/extended,
+		/obj/item/ammo_magazine/rifle/m4ra/rubber,
+		/obj/item/ammo_magazine/rifle/m4ra/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/heap,
+		/obj/item/ammo_magazine/rifle/m4ra/penetrating,
+		/obj/item/ammo_magazine/rifle/m4ra/custom,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
+		/obj/item/ammo_magazine/rifle/m4ra/m4ra1
+	)
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/bipod,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/scope/variable_zoom,
+	)
+
+/obj/item/weapon/gun/rifle/m4ra1_custom/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/m4ra1_barrel/integrated = new(src)
+	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	integrated.Attach(src)
+	update_attachable(integrated.slot)
+
+/obj/item/weapon/gun/rifle/m4ra1_custom/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 23, "rail_y" = 21, "under_x" = 30, "under_y" = 11, "stock_x" = 24, "stock_y" = 13, "special_x" = 37, "special_y" = 16)
+
+/obj/item/weapon/gun/rifle/m4ra1_custom/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(0)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_10
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_5
+	damage_falloff_mult = 0
+
+/obj/item/weapon/gun/rifle/m4ra1_custom/able_to_fire(mob/living/user)
+	. = ..()
+	if (. && istype(user)) //Let's check all that other stuff first.
+		if(!skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SCOUT)
+			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
+			return FALSE
+
+/obj/item/weapon/gun/rifle/m4ra1_custom/tactical
+	starting_attachment_types = list(/obj/item/attachable/scope/mini, /obj/item/attachable/angledgrip)

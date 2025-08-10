@@ -10,6 +10,10 @@
 /datum/job/special/uaac/tis/sio
 	title = JOB_TIS_SIO
 
+//UAAC-TIS Investigative Agent
+/datum/job/special/uaac/owlf/ia
+	title = JOB_OWLF_IA
+
 //UAAC-TIS Special Agent
 /datum/job/special/uaac/tis/sa
 	title = JOB_TIS_SA

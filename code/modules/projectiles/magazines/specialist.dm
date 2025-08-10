@@ -88,6 +88,16 @@
 	gun_type = /obj/item/weapon/gun/rifle/m4ra_custom
 	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
+//M4RA1 magazines
+
+/obj/item/ammo_magazine/rifle/m4ra/m4ra1
+	name = "\improper D21 HEAP-I magazine (10x24mm)"
+	desc = "A magazine of D21 HEAP-I rounds, affectionately known as 'devastators' for their power, they are capable of knocking back targets and are only useable in the M4RA1 due to their higher pressure."
+	default_ammo = /datum/ammo/bullet/rifle/heap/m4ra1
+	max_rounds = 18
+	gun_type = /obj/item/weapon/gun/rifle/m4ra1_custom
+	ammo_band_color = AMMO_BAND_COLOR_EXPLOSIVE
+
 //-------------------------------------------------------
 //SMARTGUN
 /obj/item/ammo_magazine/smartgun

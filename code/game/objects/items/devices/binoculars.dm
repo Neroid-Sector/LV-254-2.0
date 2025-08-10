@@ -397,6 +397,12 @@
 	cooldown_duration = 80
 	target_acquisition_delay = 30
 
+	/// The blue band that covers the binoculars.
+	var/scout_band = "scout_overlay"
+
+/obj/item/device/binoculars/range/designator/scout/update_icon()
+	overlays += scout_band
+
 /obj/item/device/binoculars/range/designator/spotter
 	name = "spotter's laser designator"
 	desc = "A specially-designed laser designator, issued to USCM spotters, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes. Additionally, a trained spotter can laze targets for a USCM marksman, increasing the speed of target acquisition. A targeting beam will connect the binoculars to the target, but it may inherit the user's cloak, if possible."

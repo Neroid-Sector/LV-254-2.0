@@ -165,6 +165,9 @@
 	/// Special storages this item prioritizes
 	var/list/preferred_storage
 
+	/// If TRUE, this item will not be able to be tracked by the yautja tracking system.
+	var/block_tracking = FALSE
+
 /obj/item/Initialize(mapload, ...)
 	. = ..()
 

@@ -252,7 +252,7 @@
 	supervisors = "the squad leader"
 	selection_class = "job_special"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
-	gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm/full
+	gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm
 	entry_message_intro = "" // Shown on roundstart and latejoin. Top paragraph. Replaced with a generic "You are a [role name]" if not included
 	entry_message_body = "Read https://neroid-sector.com/wiki/index.php?title=Squad_roles for more info.  Ensure that you read SOP <a href='https://neroid-sector.com/wiki/index.php?title=Mudskippers_SOP'>"//Middle paragraph. This one is typically written per role and declared here.
 
@@ -260,13 +260,13 @@
 
 /datum/job/uscm/mudskipper/msrfm/handle_job_options(option)
 	if(option == RFM_E1)
-		gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm/full/e1
+		gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm/e1
 	else if(option == RFM_E3)
-		gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm/full/e3
+		gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm/e3
 	else if(option == RFM_E4)
-		gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm/full/e4
+		gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm/e4
 	else
-		gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm/full
+		gear_preset = /datum/equipment_preset/uscm_mudskippers/rfm
 
 /obj/effect/landmark/start/mudskipper/msrfm
 	name = JOB_MS_RFM

@@ -503,7 +503,7 @@
 	icon_state = "tis_fatigues"
 	worn_state = "tis_fatigues"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/uaac/tis/es)
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/uaac/tis)
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_laser = CLOTHING_ARMOR_NONE
@@ -865,6 +865,16 @@
 	worn_state = "owlf_uniform"
 	has_sensor = UNIFORM_NO_SENSORS
 	hood_state = /obj/item/clothing/head/owlf_hood
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/misc_ert_colony.dmi',
 	)

@@ -28,6 +28,7 @@
 	var/contraband = FALSE
 	var/covert = FALSE //covert = no light, no sound
 	var/delay = 3 //fabricating time, in seconds
+	var/emp_weak = TRUE
 
 	var/list/purchase_log = list()
 
@@ -231,18 +232,18 @@
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
-
 /obj/item/device/portable_vendor/proc/malfunction()
-	var/turf/T = get_turf(src)
-	T.visible_message(SPAN_WARNING("[src] shudders as its internal components break apart!"))
-	broken = 1
-	STOP_PROCESSING(SSobj, src)
-	update_overlays()
+	if(emp_weak)
+		var/turf/T = get_turf(src)
+		T.visible_message(SPAN_WARNING("[src] shudders as its internal components break apart!"))
+		broken = 1
+		STOP_PROCESSING(SSobj, src)
+		update_overlays()
 
-	playsound(src, 'sound/effects/sparks4.ogg', 60, 1)
-	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
-	s.set_up(2, 1, src)
-	s.start()
+		playsound(src, 'sound/effects/sparks4.ogg', 60, 1)
+		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
+		s.set_up(2, 1, src)
+		s.start()
 
 /obj/item/device/portable_vendor/emp_act(severity)
 	. = ..()

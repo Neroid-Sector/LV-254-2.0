@@ -537,9 +537,10 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TIS_IO "UAAC-TIS Intelligence Officer"
 #define JOB_TIS_SIO "UAAC-TIS Senior Intelligence Officer"
 #define JOB_TIS_SA "UAAC-TIS Special Agent"
+#define JOB_OWLF_IA "UAAC-OWLF Investigative Agent"
 #define JOB_TIS_CO "UAAC-TIS Coordinator"
 
-#define TIS_JOB_LIST list(JOB_TIS_ES, JOB_TIS_IO, JOB_TIS_SIO, JOB_TIS_SA, JOB_TIS_CO)
+#define TIS_JOB_LIST list(JOB_TIS_ES, JOB_TIS_IO, JOB_TIS_SIO, JOB_TIS_SA, JOB_OWLF_IA, JOB_TIS_CO)
 
 //-------- DUTCH'S DOZEN --------//
 #define JOB_DUTCH_ARNOLD "Dutch's Dozen - Dutch"

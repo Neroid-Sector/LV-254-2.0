@@ -784,13 +784,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/mk1_heap(new_human), WEAR_R_STORE)
 
-/datum/equipment_preset/uscm_mudskippers/rfm/full/e1
+/datum/equipment_preset/uscm_mudskippers/rfm/e1
 	paygrades = list(PAY_SHORT_ME1)
 
-/datum/equipment_preset/uscm_mudskippers/rfm/full/e3
+/datum/equipment_preset/uscm_mudskippers/rfm/e3
 	paygrades = list(PAY_SHORT_ME3)
 
-/datum/equipment_preset/uscm_mudskippers/rfm/full/e4
+/datum/equipment_preset/uscm_mudskippers/rfm/e4
 	paygrades = list(PAY_SHORT_ME4)
 
 

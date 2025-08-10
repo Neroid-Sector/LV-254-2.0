@@ -2550,6 +2550,18 @@ Defined in conflicts.dm of the #defines folder.
 			. = TRUE
 	return .
 
+/obj/item/attachable/m4ra1_barrel
+	name = "custom M4RA1 barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon_state = "m4ra1_barrel"
+	attach_icon = "m4ra1_barrel_a"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	gun_traits = list(TRAIT_GUN_SILENCED)
+	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
+	size_mod = 0
+
 /obj/item/attachable/upp_rpg_breech
 	name = "HJRA-12 Breech"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"

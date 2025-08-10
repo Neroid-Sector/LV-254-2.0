@@ -917,7 +917,7 @@
 //================//UNITED AMERICAS ALLIED COMMAND\\=====================\\
 //=======================================================================\\
 
-/obj/item/clothing/suit/storage/marine/uaac/tis/es
+/obj/item/clothing/suit/storage/marine/uaac/tis
 	name = "\improper M3 pattern Escort Officer Armor"
 	icon_state = "tis_escort"
 	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UA.dmi'
@@ -939,11 +939,7 @@
 	name = "\improper M3 pattern UAAC-TIS Special Agent Armor"
 	desc = "A modified luxury armor, originally meant for a USCM Provost Marshal, modified to use the colors and insignia of the TIS. The Three Eyes is technically able to requisition any equipment or personnel to fulfill its mission and often uses this privilege to outfit their agents with high-quality gear from other UA military forces."
 	icon_state = "tis_agent"
-	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UA.dmi'
 	item_state_slots = list(WEAR_JACKET = "tis_agent")
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UA.dmi'
-	)
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_laser = CLOTHING_ARMOR_LOW
@@ -972,6 +968,25 @@
 		/obj/item/device/walkman,
 	)
 	uniform_restricted = list(/obj/item/clothing/under/uaac/tis)
+
+/obj/item/clothing/suit/storage/marine/uaac/tis/owlf
+	name = "\improper M3-O Medium Armor"
+	desc = "An extremely modified set of M3-S armor originally designed for USCM Scouts, lightweight alloy plating and a protective lining have been installed in place of the original armor, no doubt at serious expense. Such modifications make the armor extremely protective while still being lightweight and nimble."
+	icon_state = "tis_scout"
+	item_state_slots = list(WEAR_JACKET = "tis_scout")
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	specialty = "M3-O Medium"
+	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	unacidable = TRUE
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/owlf)
 
 //================//UNITED AMERICAS RIOT CONTROL\\=====================\\
 //=======================================================================\\
