@@ -29,7 +29,7 @@
 //----------corp signs----------//
 
 /obj/structure/sign/double/corpsign
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "empty"
 	anchored = TRUE
 
@@ -58,7 +58,7 @@
 
 
 /obj/structure/sign/double/norandom
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "meadbay"
 	anchored = TRUE
 
@@ -69,61 +69,61 @@
 	return
 
 /obj/structure/sign/double/norandom/walmart
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "walmart"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/kelland
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "kelland"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/seegson
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "seegson"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/weyyu
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "weyyu"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/wy
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "wy"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/kb
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "kb"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/hyperdyne
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "hyperdyne"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/nanotrasen
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "nanotrasen"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/pinkerton
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "pinkerton"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/vaipo
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "vaipo"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/silver
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "silver"
 	anchored = TRUE
 
 /obj/structure/sign/double/norandom/shi
-	icon = 'icons/obj/structures/props/barsigns.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "shi"
 	anchored = TRUE

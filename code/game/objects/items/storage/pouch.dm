@@ -835,7 +835,7 @@
 	icon_state = "construction"
 	desc = "It's specifically made to hold engineering items. Requires engineering skills to use effectively."
 	storage_slots = 6
-	can_hold_skill = list(
+	can_hold = list(
 		/obj/item/circuitboard,
 		/obj/item/device/flashlight,
 		/obj/item/clothing/glasses/welding,
@@ -858,7 +858,7 @@
 	icon_state = "medkit"
 	desc = "It's specifically made to hold medical items. Requires medical skills to use effectively."
 	storage_slots = 7
-	can_hold_skill = list(
+	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/reagent_container/dropper,
 		/obj/item/reagent_container/pill,

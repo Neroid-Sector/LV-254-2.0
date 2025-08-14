@@ -239,10 +239,10 @@
 	else return
 
 /obj/structure/machinery/prop/almayer/CICmap/table/clf
-	faction = FACTION_CLFCLF
+	faction = FACTION_CLF
 
 /obj/structure/machinery/prop/almayer/CICmap/table/upp
-	faction = FACTION_UPPUPP
+	faction = FACTION_UPP
 
 /obj/structure/machinery/prop/almayer/CICmap/table/pmc
 	faction = FACTION_PMC
