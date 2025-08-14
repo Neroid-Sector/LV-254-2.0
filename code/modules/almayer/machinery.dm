@@ -239,13 +239,13 @@
 	else return
 
 /obj/structure/machinery/prop/almayer/CICmap/table/clf
-	faction = CLF
+	faction = FACTION_CLFCLF
 
 /obj/structure/machinery/prop/almayer/CICmap/table/upp
-	faction = UPP
+	faction = FACTION_UPPUPP
 
 /obj/structure/machinery/prop/almayer/CICmap/table/pmc
-	faction = PMC
+	faction = FACTION_PMC
 
 /obj/structure/machinery/prop/almayer/CICmap/table/segment
 	icon = 'icons/obj/structures/props/maptable.dmi'
@@ -281,13 +281,13 @@
 	light_pixel_y = 16
 
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/clf
-	faction = CLF
+	faction = FACTION_CLF
 
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/upp
-	faction = UPP
+	faction = FACTION_UPP
 
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/pmc
-	faction = PMC
+	faction = FACTION_PMC
 
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment
 	icon = 'icons/obj/structures/props/maptable.dmi'
