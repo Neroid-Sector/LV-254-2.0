@@ -70,9 +70,6 @@
 	var/mob/living/carbon/H = AM
 	if(!istype(H))
 		return
-	var/obj/vehicle/multitile/V = AM
-	if(!istype(V))
-		return
 
 	to_chat(AM, SPAN_DANGER("The barbed wire slices into you!"))
 	H.apply_armoured_damage(damage, penetration = penetration, def_zone = pick(target_limbs))

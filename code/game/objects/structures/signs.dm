@@ -82,6 +82,11 @@
 	desc = "This is the Arcturian stop sign that some Bravos from First Platoon stole on the last shore leave."
 	icon_state = "arcturian_stop_sign"
 
+/obj/structure/sign/stopsign
+	name = "\improper Stop sign"
+	desc = "This is a stop sign. It means stop."
+	icon_state = "stop"
+
 /obj/structure/sign/double/maltesefalcon //The sign is 64x32, so it needs two tiles. ;3
 	name = "The Maltese Falcon"
 	desc = "The Maltese Falcon, Space Bar and Grill."
@@ -108,6 +113,11 @@
 	name = "\improper Maximum Effort banner"
 	desc = "This banner depicts Delta Squad's motto. The Marines of Delta Squad adopted it after picking an old bomber movie for movie night a while back."
 	icon_state = "maximumeffort"
+
+/obj/structure/sign/banners/flork
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning. It has recently appeared in Ltcol Blackbriar's office after a series of unsuccessful operations, but it is high unlikely to be connected to the incident."
+	icon_state = "welldone"
 
 /obj/structure/sign/banners/united_americas_flag
 	name = "\improper United Americas flag"
