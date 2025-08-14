@@ -1130,6 +1130,7 @@
 	icon = 'icons/obj/items/storage/boxes.dmi'
 	icon_state = "owlf"
 	item_state = "owlf"
+	foldable = null
 	max_w_class = SIZE_HUGE
 	w_class = SIZE_MEDIUM
 	storage_slots = null
