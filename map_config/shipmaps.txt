@@ -14,4 +14,5 @@ endmap
 
 map almayer
 	default
+map blackgold
 endmap
