@@ -70,6 +70,22 @@
 /area/shuttle/trijent_shuttle/omega
 	name = "Trijent Omega"
 
+/area/shuttle/cargo_lift
+	name = "Cargo Lift"
+	icon = 'icons/turf/area_almayer.dmi'
+	icon_state = "lifeboat"
+
+/area/shuttle/cargo_lift/elevator
+	requires_power = TRUE
+	unlimited_power = FALSE
+	powernet_name = "ship"
+
+/area/shuttle/cargo_lift/a
+	name = "Cargo Lift A"
+
+/area/shuttle/cargo_lift/b
+	name = "Cargo Lift A"
+
 /area/shuttle/generic_shuttle
 	name = "Freight Tram"
 	icon = 'icons/turf/area_almayer.dmi'
