@@ -3,16 +3,16 @@
 	id=MOBILE_CARGO_ELEVATOR
 
 	// Map information
-	height=6
-	width=7
+	height=12
+	width=6
 	preferred_direction = NORTH
 	port_direction = SOUTH
 
 	area_type = /area/shuttle/cargo_lift/elevator
 
 	// Shuttle timings
-	callTime = 30 SECONDS
-	rechargeTime = 30 SECONDS
+	callTime = 10 SECONDS
+	rechargeTime = 10 SECONDS
 	ignitionTime = 4 SECONDS
 	ambience_flight = 'sound/vehicles/elevator.mp3'
 	ignition_sound = 'sound/mecha/powerup.ogg'
@@ -39,8 +39,8 @@
 
 /obj/docking_port/stationary/cargo_lift
 	dir=NORTH
-	width=7
-	height=6
+	height=12
+	width=6
 	// shutters to clear the area
 	var/airlock_area
 	var/airlock_exit
