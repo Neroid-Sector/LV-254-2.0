@@ -54,6 +54,35 @@
 	shuttle_tag = "Maintenance"
 
 //---------------------------------------------------------------------------------------//
+//-------------------------------------Service Deck--------------------------------------//
+//---------------------------------------------------------------------------------------//
+
+/area/blackgold/underdeck
+	name = "USS blackgold - Under Deck"
+
+/area/blackgold/underdeck/req
+	name = "USS blackgold - Under Deck Cargo"
+	icon_state = "req"
+
+/area/blackgold/underdeck/vehicle
+	name = "USS blackgold - Under Deck Vehicle Bay"
+	icon_state = "req"
+
+//----------------------------------------Stairs-----------------------------------------//
+
+/area/blackgold/underdeck/stairs
+	resin_construction_allowed = FALSE
+	allow_construction = FALSE
+
+/area/blackgold/underdeck/stairs/port
+	icon_state = "stairs_lowerdeck"
+	name = "\improper Underdeck Port Elevator Shaft"
+
+/area/blackgold/underdeck/stairs/star
+	icon_state = "stairs_upperdeck"
+	name = "\improper Underdeck Starboard Elevator Shaft"
+
+//---------------------------------------------------------------------------------------//
 //--------------------------------------Lower Deck---------------------------------------//
 //---------------------------------------------------------------------------------------//
 
