@@ -77,25 +77,12 @@
 	qdel(door_control)
 
 /obj/docking_port/stationary/cargo_lift/occupied
-	name = "occupied"
+	name = "Lower Deck"
 	id = STAT_CARGO_OCCUPIED
 	airlock_exit = "east"
 	roundstart_template = /datum/map_template/shuttle/cargo_lift
 
 /obj/docking_port/stationary/cargo_lift/empty
-	name = "empty"
+	name = "Middle Deck"
 	id = STAT_CARGO_EMPTY
 	airlock_exit = "east"
-
-/obj/docking_port/stationary/cargo_lift/lz1
-	name="Lz1 Elevator"
-	id=STAT_CARGO_A
-	airlock_area=/area/shuttle/trijent_shuttle/lz1
-	airlock_exit="east"
-	roundstart_template = /datum/map_template/shuttle/cargo_lift
-
-/obj/docking_port/stationary/cargo_lift/lz2
-	name="Lz2 Elevator"
-	id=STAT_CARGO_B
-	airlock_area=/area/shuttle/trijent_shuttle/lz2
-	airlock_exit="east"

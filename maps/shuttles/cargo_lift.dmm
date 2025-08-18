@@ -81,7 +81,8 @@
 /area/shuttle/cargo_lift/elevator)
 "Q" = (
 /obj/structure/machinery/door/poddoor/hybrisa/shutters{
-	dir = 4
+	dir = 4;
+	id = "east"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/shuttle/cargo_lift/elevator)
@@ -92,7 +93,8 @@
 /area/shuttle/cargo_lift/elevator)
 "U" = (
 /obj/structure/machinery/door/poddoor/hybrisa/shutters{
-	dir = 4
+	dir = 4;
+	id = "east"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/shuttle/cargo_lift/elevator)
