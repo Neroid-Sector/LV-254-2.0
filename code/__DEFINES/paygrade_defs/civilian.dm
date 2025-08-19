@@ -39,3 +39,15 @@
 
 /// REBC, Rebel Commander "REBC"
 #define PAY_SHORT_REBC "REBC"
+
+/// PKT, Pinkerton
+#define PAY_SHORT_PKT "PKT"
+
+/// PKTTL, Pinkerton Leader
+#define PAY_SHORT_PKT_TL "PKTTL"
+
+/// PKTDir, Pinkerton Leader
+#define PAY_SHORT_PKT_CO "PKT Dir."
+
+/// PKT, Pinkerton Detective
+#define PAY_SHORT_PKT_DET "PI"
