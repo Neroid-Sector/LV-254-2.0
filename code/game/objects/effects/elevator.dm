@@ -30,3 +30,7 @@
 
 /obj/effect/elevator/vehicle
 	icon_state = "vehicle_elevator_lowered"
+
+/obj/effect/elevator/cargo
+	icon = 'icons/effects/192x384.dmi'
+	icon_state = "cargo_lift"

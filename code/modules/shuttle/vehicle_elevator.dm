@@ -53,6 +53,8 @@
 	// If the elevator moved to the vehicle bay, open the railings.
 	if(is_mainship_level(z))
 		open_railings()
+	else
+		close_railings()
 
 /obj/docking_port/mobile/vehicle_elevator/proc/start_gears()
 	for(var/obj/structure/machinery/gear/gear as anything in gears)

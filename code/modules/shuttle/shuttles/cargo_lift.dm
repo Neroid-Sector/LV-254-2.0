@@ -1,5 +1,5 @@
 /obj/docking_port/mobile/cargo_lift
-	name="Elevator"
+	name="Cargo Lift"
 	id=MOBILE_CARGO_ELEVATOR
 
 	// Map information
@@ -11,9 +11,9 @@
 	area_type = /area/shuttle/cargo_lift/elevator
 
 	// Shuttle timings
-	callTime = 10 SECONDS
-	rechargeTime = 10 SECONDS
-	ignitionTime = 4 SECONDS
+	callTime = 5 SECONDS
+	rechargeTime = 5 SECONDS
+	ignitionTime = 5 SECONDS
 	ambience_flight = 'sound/vehicles/elevator.mp3'
 	ignition_sound = 'sound/mecha/powerup.ogg'
 
@@ -45,6 +45,50 @@
 	var/airlock_area
 	var/airlock_exit
 	var/elevator_network
+
+	//elevator effects (four so the entire elevator doesn't vanish when there's one opaque obstacle between you and the actual elevator loc).
+	var/obj/effect/elevator/cargo/SW
+	var/obj/effect/elevator/cargo/SE
+	var/obj/effect/elevator/cargo/NW
+	var/obj/effect/elevator/cargo/NE
+
+/obj/docking_port/stationary/cargo_lift/Initialize(mapload)
+	. = ..()
+	// Create and offset some effects for the elevator shaft sprite.
+	SW = new(locate(src.x - 2, src.y - 2, src.z))
+	SW.pixel_x = 64
+	SW.pixel_y = 64
+
+	SE = new(locate(src.x + 2, src.y - 2, src.z))
+	SE.pixel_x = -64
+	SE.pixel_y = 64
+
+	NW = new(locate(src.x - 2, src.y + 2, src.z))
+	NW.pixel_x = 64
+	NW.pixel_y = -64
+
+	NE = new(locate(src.x + 2, src.y + 2, src.z))
+	NE.pixel_x = -64
+	NE.pixel_y = -64
+
+	SW.invisibility = INVISIBILITY_ABSTRACT
+	SE.invisibility = INVISIBILITY_ABSTRACT
+	NW.invisibility = INVISIBILITY_ABSTRACT
+	NE.invisibility = INVISIBILITY_ABSTRACT
+
+// Make the elevator shaft visible when the elevator leaves.
+/obj/docking_port/stationary/cargo_lift/on_departure(obj/docking_port/mobile/departing_shuttle)
+	SW.invisibility = 0
+	SE.invisibility = 0
+	NW.invisibility = 0
+	NE.invisibility = 0
+
+// And make it invisible again when the elevator returns.
+/obj/docking_port/stationary/cargo_lift/on_arrival(obj/docking_port/mobile/arriving_shuttle)
+	SW.invisibility = INVISIBILITY_ABSTRACT
+	SE.invisibility = INVISIBILITY_ABSTRACT
+	NW.invisibility = INVISIBILITY_ABSTRACT
+	NE.invisibility = INVISIBILITY_ABSTRACT
 
 /obj/docking_port/stationary/cargo_lift/proc/get_doors()
 	. = list()
@@ -79,6 +123,7 @@
 /obj/docking_port/stationary/cargo_lift/occupied
 	name = "Lower Deck"
 	id = STAT_CARGO_OCCUPIED
+	airlock_area=/area/shuttle/cargo_lift/b
 	airlock_exit = "east"
 	roundstart_template = /datum/map_template/shuttle/cargo_lift
 
@@ -86,3 +131,4 @@
 	name = "Middle Deck"
 	id = STAT_CARGO_EMPTY
 	airlock_exit = "east"
+	airlock_area=/area/shuttle/cargo_lift/a

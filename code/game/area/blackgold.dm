@@ -137,6 +137,9 @@
 /area/blackgold/lower/hallways/star
 	icon_state = "starboard"
 
+/area/blackgold/lower/hallways/mid
+	icon_state = "stern"
+
 /area/blackgold/lower/hallways/port/fore
 	name = "\improper Lower Deck Port-Fore Hallway"
 
@@ -154,6 +157,15 @@
 
 /area/blackgold/lower/hallways/star/aft
 	name = "\improper Lower Deck Starboard-Aft Hallway"
+
+/area/blackgold/lower/hallways/mid/fore
+	name = "\improper Lower Deck Fore Hallway"
+
+/area/blackgold/lower/hallways/mid/mid
+	name = "\improper Lower Deck Midship Hallway"
+
+/area/blackgold/lower/hallways/mid/aft
+	name = "\improper Lower Deck Aft Hallway"
 
 //--------------------------------------Maintenance--------------------------------------//
 
@@ -222,6 +234,21 @@
 /area/blackgold/lower/rooms/shuttle/stern
 	name = "\improper Lower Deck Stern Shuttle Landing Bay"
 
+/area/blackgold/lower/rooms/cryo
+	name = "\improper Lower Deck Cryo Cells"
+	icon_state = "cryo"
+
+/area/blackgold/lower/rooms/req
+	name = "\improper Lower Deck Requisitions Bay"
+	icon_state = "req"
+
+/area/blackgold/lower/rooms/range
+	name = "\improper Lower Deck Port Firing Range"
+	icon_state = "firingrange"
+
+/area/blackgold/lower/rooms/range/star
+	name = "\improper Lower Deck Starboard Firing Range"
+
 //-----------------------------------------Brig------------------------------------------//
 
 /area/blackgold/lower/rooms/brig
@@ -241,10 +268,6 @@
 /area/blackgold/lower/rooms/brig/warden
 	name = "\improper Lower Brig Warden Office"
 	icon_state = "chiefmpoffice"
-
-/area/blackgold/lower/rooms/req
-	name = "\improper Lower Deck Requisitions Bay"
-	icon_state = "req"
 
 //---------------------------------------------------------------------------------------//
 //--------------------------------------Middle Deck--------------------------------------//
@@ -292,6 +315,9 @@
 /area/blackgold/middle/hallways/star
 	icon_state = "starboard"
 
+/area/blackgold/middle/hallways/mid
+	icon_state = "stern"
+
 /area/blackgold/middle/hallways/port/fore
 	name = "\improper Middle Deck Port-Fore Hallway"
 
@@ -309,6 +335,16 @@
 
 /area/blackgold/middle/hallways/star/aft
 	name = "\improper Middle Deck Starboard-Aft Hallway"
+
+/area/blackgold/middle/hallways/mid/fore
+	name = "\improper Middle Deck Fore Hallway"
+
+/area/blackgold/middle/hallways/mid/mid
+	name = "\improper Middle Deck Midship Hallway"
+
+/area/blackgold/middle/hallways/mid/aft
+	name = "\improper Middle Deck Aft Hallway"
+
 
 //--------------------------------------Maintenance--------------------------------------//
 
@@ -367,7 +403,7 @@
 
 /area/blackgold/middle/rooms/squad
 	name = "\improper Marine Cryobay"
-	icon_state = "alpha"
+	icon_state = "shared"
 
 /area/blackgold/middle/rooms/squad/prep
 	name = "\improper Marine Squad Preparation"
@@ -379,6 +415,22 @@
 /area/blackgold/middle/rooms/briefing
 	name = "\improper Briefing Hall"
 	icon_state = "briefing"
+
+/area/blackgold/middle/rooms/medical/
+	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
+	soundscape_interval = 120
+
+/area/blackgold/middle/rooms/medical/operating
+	icon_state = "operating"
+
+/area/blackgold/middle/rooms/medical/operating/one
+	name = "\improper Medical Operating Room 1"
+
+/area/blackgold/middle/rooms/medical/operating/two
+	name = "\improper Medical Operating Room 2"
+
+/area/blackgold/middle/rooms/medical/operating/three
+	name = "\improper Medical Operating Room 3"
 
 //---------------------------------------------------------------------------------------//
 //--------------------------------------Upper Deck---------------------------------------//
@@ -426,6 +478,9 @@
 /area/blackgold/upper/hallways/star
 	icon_state = "starboard"
 
+/area/blackgold/upper/hallways/mid
+	icon_state = "stern"
+
 /area/blackgold/upper/hallways/port/fore
 	name = "\improper Upper Deck Port-Fore Hallway"
 
@@ -443,6 +498,15 @@
 
 /area/blackgold/upper/hallways/star/aft
 	name = "\improper Upper Deck Starboard-Aft Hallway"
+
+/area/blackgold/upper/hallways/mid/fore
+	name = "\improper Upper Deck Fore Hallway"
+
+/area/blackgold/upper/hallways/mid/mid
+	name = "\improper Upper Deck Midship Hallway"
+
+/area/blackgold/upper/hallways/mid/aft
+	name = "\improper Upper Deck Aft Hallway"
 
 //--------------------------------------Maintenance--------------------------------------//
 
@@ -524,29 +588,28 @@
 /area/blackgold/upper/rooms/companycommand/delta/cc
 	name = "\improper Delta Company Commander's Office"
 
-/area/blackgold/upper/rooms/staffbunks
-	name = "\improper Staff Officer Bunks"
-	icon_state = "livingspace"
+
 
 /area/blackgold/upper/rooms/commandbunks
 	name = "\improper Commanding Officer's Office"
 	icon_state = "livingspace"
 
+/area/blackgold/upper/rooms/commandbunks/staff
+	name = "\improper Staff Officer Bunks"
+
 /area/blackgold/upper/rooms/commandbunks/adjunct
 	name = "\improper Adjunct's Quarters"
+
+/area/blackgold/upper/rooms/commandbunks/xo
+	name = "\improper Executive Officer's Office"
+
+/area/blackgold/upper/rooms/commandbunks/synth
+	name = "\improper Upper Deck Synthetic Storage"
 
 /area/blackgold/upper/rooms/evacuation
 	name = "\improper Upper Deck Evacuation Lounge"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "shuttle2"
-
-/area/blackgold/upper/rooms/xobunks
-	name = "\improper Executive Officer's Office"
-	icon_state = "livingspace"
-
-/area/blackgold/upper/rooms/synthcloset
-	name = "\improper Upper Deck Synthetic Storage"
-	icon_state = "livingspace"
 
 /area/blackgold/upper/rooms/intel
 	name = "\improper Upper Deck Computer Lab"
@@ -666,15 +729,6 @@
 	name = "\improper Lower Deck Engineering Workshop"
 	icon_state = "workshop"
 
-/area/blackgold/engineering/lower/engine_core
-	name = "\improper Engine Reactor Core Room"
-	icon_state = "coreroom"
-	soundscape_playlist = SCAPE_PL_ENG
-	soundscape_interval = 15
-	hijack_evacuation_area = TRUE
-	hijack_evacuation_weight = 0.2
-	hijack_evacuation_type = EVACUATION_TYPE_ADDITIVE
-
 // upper deck
 
 /area/blackgold/engineering/upper_engineering
@@ -715,14 +769,6 @@
 /area/blackgold/shipboard
 	minimap_color = MINIMAP_AREA_SEC
 
-/area/blackgold/shipboard/navigation
-	name = "\improper Astronavigational Deck"
-	icon_state = "astronavigation"
-	fake_zlevel = 2 // lowerdeck
-	hijack_evacuation_area = TRUE
-	hijack_evacuation_weight = 1.1
-	hijack_evacuation_type = EVACUATION_TYPE_MULTIPLICATIVE
-
 /area/blackgold/shipboard/panic
 	name = "\improper Hangar Panic Room"
 	icon_state = "brig"
@@ -738,47 +784,6 @@
 	icon_state = "portmissile"
 	fake_zlevel = 1 // upperdeck
 
-/area/blackgold/shipboard/weapon_room
-	name = "\improper Lower Deck Weapon Control"
-	icon_state = "weaponroom"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/shipboard/weapon_room/notunnel
-	flags_area = AREA_NOTUNNEL
-	requires_power = FALSE
-
-/area/blackgold/shipboard/firing_range_north
-	name = "\improper Starboard Firing Range"
-	icon_state = "firingrange"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/shipboard/firing_range_south
-	name = "\improper Port Firing Range"
-	icon_state = "firingrange"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/hallways/hangar
-	name = "\improper Hangar"
-	icon_state = "hangar"
-	fake_zlevel = 2 // lowerdeck
-	soundscape_playlist = SCAPE_PL_HANGAR
-	soundscape_interval = 50
-
-/area/blackgold/hallways/lower
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/hallways/lower/repair_bay
-	name = "\improper Lower Deck Deployment Workshop"
-	icon_state = "dropshiprepair"
-
-/area/blackgold/hallways/lower/starboard_umbilical
-	name = "\improper Lower Deck Starboard Umbilical Hallway"
-	icon_state = "starboardumbilical"
-
-/area/blackgold/hallways/lower/port_umbilical
-	name = "\improper Lower Deck Port Umbilical Hallway"
-	icon_state = "portumbilical"
-
 /area/blackgold/living
 	minimap_color = MINIMAP_AREA_COLONY
 
@@ -786,26 +791,6 @@
 	name = "\improper Lower Deck Vehicle Crew Bunks"
 	icon_state = "livingspace"
 	fake_zlevel = 2
-
-/area/blackgold/living/cryo_cells
-	name = "\improper Lower Deck Cryo Cells"
-	icon_state = "cryo"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/living/briefing
-	name = "\improper Briefing Area"
-	icon_state = "briefing"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/living/port_emb
-	name = "\improper Lower Deck Port Extended Mission Bunks"
-	icon_state = "portemb"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/living/starboard_emb
-	name = "\improper Lower Deck Starboard Extended Mission Bunks"
-	icon_state = "starboardemb"
-	fake_zlevel = 2 // lowerdeck
 
 /area/blackgold/living/port_garden
 	name = "\improper Port Garden"
@@ -872,11 +857,6 @@
 	icon_state = "briefing"
 	fake_zlevel = 2 // lowerdeck
 
-/area/blackgold/living/offices/cryo
-	name = "\improper Support Crew Cryogenics Bay"
-	icon_state = "cryo"
-	fake_zlevel = 2 // lowerdeck
-
 /area/blackgold/living/offices/flight
 	name = "\improper Flight Office"
 
@@ -911,34 +891,6 @@
 	name = "\improper Morgue"
 	icon_state = "operating"
 	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/medical/operating_room_one
-	name = "\improper Medical Operating Room 1"
-	icon_state = "operating"
-	fake_zlevel = 2 // lowerdeck
-	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
-	soundscape_interval = 120
-
-/area/blackgold/medical/operating_room_two
-	name = "\improper Medical Operating Room 2"
-	icon_state = "operating"
-	fake_zlevel = 2 // lowerdeck
-	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
-	soundscape_interval = 120
-
-/area/blackgold/medical/operating_room_three
-	name = "\improper Medical Operating Room 3"
-	icon_state = "operating"
-	fake_zlevel = 2 // lowerdeck
-	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
-	soundscape_interval = 120
-
-/area/blackgold/medical/operating_room_four
-	name = "\improper Medical Operating Room 4"
-	icon_state = "operating"
-	fake_zlevel = 2 // lowerdeck
-	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
-	soundscape_interval = 120
 
 /area/blackgold/medical/medical_science
 	name = "\improper Medical Research laboratories"
