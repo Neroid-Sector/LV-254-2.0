@@ -187,6 +187,37 @@
 	hijack_evacuation_weight = 0.2
 	hijack_evacuation_type = EVACUATION_TYPE_ADDITIVE
 
+/area/blackgold/lower/rooms/aicore
+	name = "\improper AI Core"
+	icon_state = "airoom"
+	soundscape_playlist = SCAPE_PL_ARES
+	soundscape_interval = 120
+	flags_area = AREA_NOTUNNEL|AREA_UNWEEDABLE
+	can_build_special = FALSE
+	is_resin_allowed = FALSE
+	resin_construction_allowed = FALSE
+
+
+//-----------------------------------------Brig------------------------------------------//
+
+/area/blackgold/lower/rooms/brig
+	name = "\improper Lower Brig"
+	icon_state = "brig"
+
+/area/blackgold/lower/rooms/brig/evidence_storage
+	name = "\improper Lower Brig Evidence Storage"
+
+/area/blackgold/lower/rooms/brig/execution
+	name = "\improper Lower Brig Execution Room"
+
+/area/blackgold/lower/rooms/brig/cells
+	name = "\improper Lower Brig Cells"
+	icon_state = "brigcells"
+
+/area/blackgold/lower/rooms/brig/warden
+	name = "\improper Lower Brig Warden Office"
+	icon_state = "chiefmpoffice"
+
 //---------------------------------------------------------------------------------------//
 //--------------------------------------Middle Deck--------------------------------------//
 //---------------------------------------------------------------------------------------//
@@ -282,6 +313,26 @@
 //-----------------------------------------Rooms-----------------------------------------//
 
 /area/blackgold/middle/rooms
+
+/area/blackgold/middle/rooms/aientrance
+	name = "\improper AI Core Entrance"
+	icon_state = "airoom"
+	soundscape_playlist = SCAPE_PL_ARES
+	soundscape_interval = 120
+	flags_area = AREA_NOTUNNEL|AREA_UNWEEDABLE
+	can_build_special = FALSE
+	is_resin_allowed = FALSE
+	resin_construction_allowed = FALSE
+
+
+
+
+
+
+
+
+
+
 
 //---------------------------------------------------------------------------------------//
 //--------------------------------------Upper Deck---------------------------------------//
@@ -451,46 +502,51 @@
 	name = "\improper Upper Deck Synthetic Storage"
 	icon_state = "livingspace"
 
+/area/blackgold/upper/rooms/intel
+	name = "\improper Upper Deck Computer Lab"
+	icon_state = "ceroom"
+
+/area/blackgold/upper/rooms/intel/storage
+	name = "\improper Computer Lab Secure Storage"
+	icon_state = "corporatespace"
+
+/area/blackgold/upper/rooms/telecomms
+	name = "\improper Upper Deck Telecommunications"
+	icon_state = "tcomms"
+	flags_area = AREA_NOTUNNEL
+
+
+
+
+
+
+
 //------------------------------------------Brig-----------------------------------------//
 
 /area/blackgold/upper/rooms/brig
-	name = "\improper Brig"
+	name = "\improper Upper Brig"
 	icon_state = "brig"
 
 /area/blackgold/upper/rooms/brig/lobby
-	name = "\improper Brig Lobby"
+	name = "\improper Upper Brig Lobby"
 
 /area/blackgold/upper/rooms/brig/armory
-	name = "\improper Brig Armory"
+	name = "\improper Upper Brig Armory"
 
 /area/blackgold/upper/rooms/brig
-	name = "\improper Brig MP Bunks"
+	name = "\improper Upper Brig MP Bunks"
 
 /area/blackgold/upper/rooms/brig/cryo
-	name = "\improper Brig Cryo Pods"
+	name = "\improper Upper Brig Cryo Pods"
 
 /area/blackgold/upper/rooms/brig/medical
-	name = "\improper Brig Medical"
-
-/area/blackgold/upper/rooms/brig/evidence_storage
-	name = "\improper Brig Evidence Storage"
-
-/area/blackgold/upper/rooms/brig/execution
-	name = "\improper Brig Execution Room"
+	name = "\improper Upper Brig Medical"
 
 /area/blackgold/upper/rooms/brig/processing
-	name = "\improper Brig Processing and Holding"
-
-/area/blackgold/upper/rooms/brig/cells
-	name = "\improper Brig Cells"
-	icon_state = "brigcells"
+	name = "\improper Upper Brig Processing and Holding"
 
 /area/blackgold/upper/rooms/brig/chief
-	name = "\improper Brig Chief MP Office"
-	icon_state = "chiefmpoffice"
-
-/area/blackgold/upper/rooms/brig/warden
-	name = "\improper Brig Warden Office"
+	name = "\improper Upper Brig Chief MP Office"
 	icon_state = "chiefmpoffice"
 
 /area/blackgold/upper/rooms/brig/stairs
@@ -521,45 +577,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/area/blackgold/command/airoom
-	name = "\improper AI Core"
-	icon_state = "airoom"
-	fake_zlevel = 1 // upperdeck
-	soundscape_playlist = SCAPE_PL_ARES
-	soundscape_interval = 120
-	flags_area = AREA_NOTUNNEL|AREA_UNWEEDABLE
-	can_build_special = FALSE
-	is_resin_allowed = FALSE
-	resin_construction_allowed = FALSE
-
-/area/blackgold/command/securestorage
-	name = "\improper Computer Lab Secure Storage"
-	icon_state = "corporatespace"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/command/computerlab
-	name = "\improper Upper Deck Computer Lab"
-	icon_state = "ceroom"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/command/telecomms
-	name = "\improper Upper Deck Telecommunications"
-	icon_state = "tcomms"
-	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_NOTUNNEL
 
 /area/blackgold/command/corporateliaison
 	name = "\improper Corporate Liaison Office"
@@ -687,75 +704,6 @@
 	icon_state = "portpd"
 	fake_zlevel = 2 // lowerdeck
 
-// brig
-
-/area/blackgold/shipboard/brig
-	name = "\improper Brig"
-	icon_state = "brig"
-	fake_zlevel = 1 //upperdeck
-
-/area/blackgold/shipboard/brig/lobby
-	name = "\improper Brig Lobby"
-
-/area/blackgold/shipboard/brig/armory
-	name = "\improper Brig Armory"
-
-/area/blackgold/shipboard/brig/mp_bunks
-	name = "\improper Brig MP Bunks"
-
-/area/blackgold/shipboard/brig/starboard_hallway
-	name = "\improper Brig Starboard Hallway"
-
-/area/blackgold/shipboard/brig/perma
-	name = "\improper Brig Perma Cells"
-
-/area/blackgold/shipboard/brig/cryo
-	name = "\improper Brig Cryo Pods"
-
-/area/blackgold/shipboard/brig/medical
-	name = "\improper Brig Medical"
-
-/area/blackgold/shipboard/brig/interrogation
-	name = "\improper Brig Interrogation Room"
-
-/area/blackgold/shipboard/brig/general_equipment
-	name = "\improper Brig General Equipment"
-
-/area/blackgold/shipboard/brig/evidence_storage
-	name = "\improper Brig Evidence Storage"
-
-/area/blackgold/shipboard/brig/execution
-	name = "\improper Brig Execution Room"
-
-/area/blackgold/shipboard/brig/execution_storage
-	name = "\improper Brig Execution Storage"
-
-/area/blackgold/shipboard/brig/cic_hallway
-	name = "\improper Brig CiC Hallway"
-
-/area/blackgold/shipboard/brig/dress
-	name = "\improper CIC Dress Uniform Room"
-
-/area/blackgold/shipboard/brig/processing
-	name = "\improper Brig Processing and Holding"
-
-/area/blackgold/shipboard/brig/cells
-	name = "\improper Brig Cells"
-	icon_state = "brigcells"
-
-/area/blackgold/shipboard/brig/chief_mp_office
-	name = "\improper Brig Chief MP Office"
-	icon_state = "chiefmpoffice"
-
-/area/blackgold/shipboard/brig/warden_office
-	name = "\improper Brig Warden Office"
-	icon_state = "chiefmpoffice"
-
-/area/blackgold/shipboard/sea_office
-	name = "\improper Lower Deck Senior Enlisted Advisor Office"
-	icon_state = "chiefmpoffice"
-	fake_zlevel = 2 // lowerdeck
-
 /area/blackgold/shipboard/firing_range_north
 	name = "\improper Starboard Firing Range"
 	icon_state = "firingrange"
@@ -775,10 +723,6 @@
 
 /area/blackgold/hallways/lower
 	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/hallways/lower/vehiclehangar
-	name = "\improper Lower Deck Vehicle Storage"
-	icon_state = "exoarmor"
 
 /area/blackgold/hallways/lower/repair_bay
 	name = "\improper Lower Deck Deployment Workshop"
@@ -898,26 +842,6 @@
 	icon_state = "livingspace"
 	fake_zlevel = 1
 
-/area/blackgold/living/bridgebunks
-	name = "\improper Staff Officer Bunks"
-	icon_state = "livingspace"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/commandbunks
-	name = "\improper Commanding Officer's Bunk"
-	icon_state = "livingspace"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/synthcloset
-	name = "\improper Upper Deck Synthetic Storage Closet"
-	icon_state = "livingspace"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/numbertwobunks
-	name = "\improper Executive Officer's Bunk"
-	icon_state = "livingspace"
-	fake_zlevel = 1 // upperdeck
-
 /area/blackgold/living/chapel
 	name = "\improper blackgold Chapel"
 	icon_state = "officerrnr"
@@ -1024,34 +948,8 @@
 /area/blackgold/squads/alpha
 	name = "\improper Squad Alpha Preparation"
 	icon_state = "alpha"
-	fake_zlevel = 2 // lowerdeck
 
-/area/blackgold/squads/bravo
-	name = "\improper Squad Bravo Preparation"
-	icon_state = "bravo"
-	fake_zlevel = 2 // lowerdeck
 
-/area/blackgold/squads/charlie
-	name = "\improper Squad Charlie Preparation"
-	icon_state = "charlie"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/squads/delta
-	name = "\improper Squad Delta Preparation"
-	icon_state = "delta"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/squads/alpha_bravo_shared
-	name = "\improper Alpha Bravo Equipment Preparation"
-	icon_state = "ab_shared"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/squads/charlie_delta_shared
-	name = "\improper Charlie Delta Equipment Preparation"
-	icon_state = "cd_shared"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/squads/req
 	name = "\improper Requisitions"
 	icon_state = "req"
 	fake_zlevel = 2 // lowerdeck
@@ -1104,13 +1002,6 @@
 	fake_zlevel = 1 // upperdeck
 	flags_area = AREA_NOTUNNEL
 
-/area/blackgold/evacuation
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "shuttle2"
-	requires_power = 0
-	flags_area = AREA_NOTUNNEL
-
-//Placeholder.
 /area/blackgold/evacuation/pod1
 /area/blackgold/evacuation/pod2
 /area/blackgold/evacuation/pod3
@@ -1132,7 +1023,6 @@
 
 /area/blackgold/evacuation/stranded
 
-//Placeholder.
 /area/blackgold/evacuation/stranded/pod1
 /area/blackgold/evacuation/stranded/pod2
 /area/blackgold/evacuation/stranded/pod3
@@ -1151,23 +1041,3 @@
 /area/blackgold/evacuation/stranded/pod16
 /area/blackgold/evacuation/stranded/pod17
 /area/blackgold/evacuation/stranded/pod18
-
-
-//Admin Lower Level
-
-/area/blackgold/underdeck/
-	name = "USS blackgold - Under Deck"
-	allow_construction = FALSE
-	icon_state = "lowerhull"
-
-/area/blackgold/underdeck/hangar
-	name = "USS blackgold - Under Deck Hangar"
-	icon_state = "hangar"
-
-/area/blackgold/underdeck/req
-	name = "USS blackgold - Under Deck Cargo"
-	icon_state = "req"
-
-/area/blackgold/underdeck/vehicle
-	name = "USS blackgold - Under Deck Vehicle Bay"
-	icon_state = "req"
