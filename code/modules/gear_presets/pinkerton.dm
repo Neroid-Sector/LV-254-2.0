@@ -1,4 +1,4 @@
-/datum/equipment_preset/pinkerton
+/datum/equipment_preset/other/pinkerton
 	name = "pinkerton"
 	faction = FACTION_PINKERTON
 	faction_group = list(FACTION_PINKERTON, FACTION_MARINE)
@@ -6,14 +6,12 @@
 	idtype = /obj/item/card/id/pkt
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	minimap_background = "background_cmb"
-	var/human_versus_human = FALSE
-	var/headset_type = /obj/item/device/radio/headset/distress/CMB
 
-/datum/equipment_preset/pinkerton/New()
+/datum/equipment_preset/other/pinkerton/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE) //ACCESS_COME_BACK_TO_ME
 
-/datum/equipment_preset/pinkerton/load_name(mob/living/carbon/human/new_human, randomise)
+/datum/equipment_preset/other/pinkerton/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
@@ -31,16 +29,15 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/pinkerton/standard
+/datum/equipment_preset/other/pinkerton/standard
 	name = "pinkerton (Standard)"
-
 	assignment = JOB_PKT
 	rank = JOB_PKT
 	paygrades = list(PAY_SHORT_PKT = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Pkt"
 	skills = /datum/skills/cmb
 
-/datum/equipment_preset/pinkerton/standard/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/other/pinkerton/standard/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/dutch, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs, WEAR_R_EAR)
