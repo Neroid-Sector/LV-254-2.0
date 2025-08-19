@@ -11789,7 +11789,9 @@
 /area/blackgold/upper/rooms/companycommand/delta/cc)
 "lGu" = (
 /obj/structure/platform/metal/ship/west,
-/obj/structure/blocker/forcefield/human,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0
+	},
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
 "lGL" = (
@@ -13543,7 +13545,9 @@
 /area/blackgold/lower/rooms/req)
 "opP" = (
 /obj/structure/platform/metal/ship/east,
-/obj/structure/blocker/forcefield/human,
+/obj/structure/blocker/forcefield/human{
+	alpha = 0
+	},
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
 "oqf" = (
@@ -42175,7 +42179,7 @@ akw
 akw
 akw
 akw
-rQf
+akw
 akw
 aku
 akq
@@ -42262,7 +42266,7 @@ akw
 akw
 akw
 akw
-akw
+rQf
 akw
 aku
 akq
@@ -58531,7 +58535,7 @@ akx
 akx
 akx
 akx
-ukn
+akx
 akx
 akv
 aks
@@ -58618,7 +58622,7 @@ akx
 akx
 akx
 akx
-akx
+ukn
 akx
 akv
 aks
@@ -63048,11 +63052,11 @@ aiK
 aiK
 aiK
 aiK
-nJt
+cts
 wxx
 aio
 mPP
-eIE
+xTK
 ahX
 ahX
 ahX
@@ -63744,11 +63748,11 @@ aiK
 aiK
 aiK
 aiK
-nJt
+cts
 wxx
 aip
 mPP
-eIE
+xTK
 ahX
 ahX
 ahX
@@ -79404,11 +79408,11 @@ aiN
 aiN
 aiN
 aiN
-aiJ
+aiI
 aiF
 aiw
 ail
-aii
+aih
 ahZ
 ahZ
 ahZ
@@ -80100,11 +80104,11 @@ aiN
 aiN
 aiN
 aiN
-aiJ
+aiI
 aiF
 aix
 ail
-aii
+aih
 ahZ
 ahZ
 ahZ
