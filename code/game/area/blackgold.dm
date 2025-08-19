@@ -53,12 +53,19 @@
 	req_access = null
 	shuttle_tag = "Maintenance"
 
+/area/blackgold/powered //for objects not intended to lose power
+	name = "\improper Powered"
+	icon_state = "selfdestruct"
+	requires_power = 0
+
 //---------------------------------------------------------------------------------------//
 //-------------------------------------Service Deck--------------------------------------//
 //---------------------------------------------------------------------------------------//
 
 /area/blackgold/underdeck
 	name = "USS blackgold - Under Deck"
+	soundscape_playlist = SCAPE_PL_ENG
+	soundscape_interval = 15
 
 /area/blackgold/underdeck/req
 	name = "USS blackgold - Under Deck Cargo"
@@ -87,6 +94,8 @@
 //---------------------------------------------------------------------------------------//
 
 /area/blackgold/lower
+	soundscape_playlist = SCAPE_PL_ENG
+	soundscape_interval = 15
 
 //----------------------------------------Stairs-----------------------------------------//
 
@@ -181,8 +190,6 @@
 /area/blackgold/lower/rooms/engine_core
 	name = "\improper Engine Reactor Core Room"
 	icon_state = "coreroom"
-	soundscape_playlist = SCAPE_PL_ENG
-	soundscape_interval = 15
 	hijack_evacuation_area = TRUE
 	hijack_evacuation_weight = 0.2
 	hijack_evacuation_type = EVACUATION_TYPE_ADDITIVE
@@ -203,8 +210,17 @@
 	soundscape_playlist = SCAPE_PL_HANGAR
 	soundscape_interval = 50
 
+/area/blackgold/lower/rooms/shuttle
+	name = "\improper Shuttle Landing Bay"
+	icon_state = "starboardpd"
+	soundscape_playlist = SCAPE_PL_HANGAR
+	soundscape_interval = 50
 
+/area/blackgold/lower/rooms/shuttle/bow
+	name = "\improper Lower Deck Bow Shuttle Landing Bay"
 
+/area/blackgold/lower/rooms/shuttle/stern
+	name = "\improper Lower Deck Stern Shuttle Landing Bay"
 
 //-----------------------------------------Brig------------------------------------------//
 
@@ -225,6 +241,10 @@
 /area/blackgold/lower/rooms/brig/warden
 	name = "\improper Lower Brig Warden Office"
 	icon_state = "chiefmpoffice"
+
+/area/blackgold/lower/rooms/req
+	name = "\improper Lower Deck Requisitions Bay"
+	icon_state = "req"
 
 //---------------------------------------------------------------------------------------//
 //--------------------------------------Middle Deck--------------------------------------//
@@ -338,13 +358,27 @@
 	soundscape_playlist = SCAPE_PL_HANGAR
 	soundscape_interval = 50
 
+/area/blackgold/middle/rooms/orbital
+	name = "\improper Weapon Control Deck"
+	icon_state = "astronavigation"
+	hijack_evacuation_area = TRUE
+	hijack_evacuation_weight = 1.1
+	hijack_evacuation_type = EVACUATION_TYPE_MULTIPLICATIVE
 
+/area/blackgold/middle/rooms/squad
+	name = "\improper Marine Cryobay"
+	icon_state = "alpha"
 
+/area/blackgold/middle/rooms/squad/prep
+	name = "\improper Marine Squad Preparation"
 
+/area/blackgold/middle/rooms/req
+	name = "\improper Middle Deck Requisitions Bay"
+	icon_state = "req"
 
-
-
-
+/area/blackgold/middle/rooms/briefing
+	name = "\improper Briefing Hall"
+	icon_state = "briefing"
 
 //---------------------------------------------------------------------------------------//
 //--------------------------------------Upper Deck---------------------------------------//
@@ -527,6 +561,21 @@
 	icon_state = "tcomms"
 	flags_area = AREA_NOTUNNEL
 
+/area/blackgold/upper/rooms/lifeboat
+	name = "\improper Lifeboat Docking Port"
+	icon_state = "selfdestruct"
+
+/area/blackgold/upper/rooms/lifeboat/port
+	name = "\improper Upper Port Lifeboat Docking Port"
+
+/area/blackgold/upper/rooms/lifeboat/star
+	name = "\improper Upper Starboard Lifeboat Docking Port"
+
+/area/blackgold/upper/rooms/lifeboat/dock
+	name = "\improper Lifeboat Docking Area"
+	icon_state = "lifeboat"
+	flags_area = AREA_NOTUNNEL
+
 //------------------------------------------Brig-----------------------------------------//
 
 /area/blackgold/upper/rooms/brig
@@ -697,21 +746,6 @@
 /area/blackgold/shipboard/weapon_room/notunnel
 	flags_area = AREA_NOTUNNEL
 	requires_power = FALSE
-
-/area/blackgold/shipboard/starboard_point_defense
-	name = "\improper Lower Deck Starboard Point Defense"
-	icon_state = "starboardpd"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/shipboard/port_point_defense
-	name = "\improper Lower Deck Port Point Defense"
-	icon_state = "portpd"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/shipboard/stern_point_defense
-	name = "\improper Lower Deck Stern Point Defense"
-	icon_state = "portpd"
-	fake_zlevel = 2 // lowerdeck
 
 /area/blackgold/shipboard/firing_range_north
 	name = "\improper Starboard Firing Range"
@@ -954,26 +988,6 @@
 	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
 	soundscape_interval = 120
 
-/area/blackgold/squads/alpha
-	name = "\improper Squad Alpha Preparation"
-	icon_state = "alpha"
-
-
-	name = "\improper Requisitions"
-	icon_state = "req"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/powered //for objects not intended to lose power
-	name = "\improper Powered"
-	icon_state = "selfdestruct"
-	requires_power = 0
-
-/area/blackgold/powered/agent
-	name = "\improper Unknown Area"
-	icon_state = "selfdestruct"
-	fake_zlevel = 2 // lowerdeck
-	flags_area = AREA_AVOID_BIOSCAN|AREA_NOTUNNEL
-
 /area/blackgold/engineering/airmix
 	icon_state = "selfdestruct"
 	requires_power = 0
@@ -999,17 +1013,6 @@
 
 /area/blackgold/lifeboat_pumps/south2
 	name = "Port-Aft Lifeboat Fuel Pump"
-
-/area/blackgold/command/lifeboat
-	name = "\improper Lifeboat Docking Port"
-	icon_state = "selfdestruct"
-	fake_zlevel = 1 // upperdeck
-
-/area/space/blackgold/lifeboat_dock
-	name = "\improper Port Lifeboat Docking"
-	icon_state = "lifeboat"
-	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_NOTUNNEL
 
 /area/blackgold/evacuation/pod1
 /area/blackgold/evacuation/pod2
