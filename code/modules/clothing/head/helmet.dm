@@ -63,6 +63,25 @@
 	flags_inventory = COVEREYES|BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDETOPHAIR
 
+/obj/item/clothing/head/helmet/ulach
+	name = "Striker ULACH Helmet"
+	desc = "A cheap old fashioned helmet popular in the civilian security market for its reliability and lighter weight construction. It covers your ears."
+	icon_state = "ulach"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/MERC.dmi'
+	)
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+
 /obj/item/clothing/head/helmet/riot/vintage_riot
 	desc = "A scarred riot helmet covered in cobwebs. It still protects your ears."
 	icon_state = "old_riot"
@@ -1125,7 +1144,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/MP/provost/marshal
 	name = "\improper Provost Marshal Cap"
-	desc = "The expensive headwear of a Provost Marshal. Contains shards of kevlar to keep its valuable contents safe."
+	desc = "The expensive headwear of a Provost Marshal. Contains shards of Venlar to keep its valuable contents safe."
 	icon_state = "pvmarshalhat"
 	item_state = "pvmarshalhat"
 	icon = 'icons/obj/items/clothing/hats/hats_by_faction/UA.dmi'
@@ -1167,7 +1186,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc
 	name = "\improper PMC tactical cap"
-	desc = "A protective cap made from flexible kevlar. Standard issue for most security forms in the place of a helmet."
+	desc = "A protective cap made from flexible Venlar. Standard issue for most security forms in the place of a helmet."
 	icon_state = "pmc_hat"
 	icon = 'icons/obj/items/clothing/hats/hats_by_faction/WY.dmi'
 	item_icons = list(
@@ -1657,6 +1676,83 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A sturdy helmet worn by an unknown mercenary group. Features a toggleable welding screen for eye protection."
 	built_in_visors = list(new /obj/item/device/helmet_visor/welding_visor/mercenary)
 
+
+//===========================//PINKERTON - MERCENARY\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/head/helmet/marine/veteran/pinkerton
+	name = "\improper Striker ULACH Helmet"
+	desc = "A cheap old fashioned helmet popular in the civilian security market for its reliability and lighter weight construction. This one features the words Pinkerton Security along the back."
+	icon_state = "ulach_pinkerton"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/MERC.dmi'
+	)
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/security, /obj/item/device/helmet_visor/welding_visor)
+
+
+/obj/item/clothing/head/helmet/marine/veteran/pinkerton/sl
+	name = "\improper Striker ULACH Helmet"
+	desc = "A cheap old fashioned helmet popular in the civilian security market for its reliability and lighter weight construction. This one features the words Pinkerton Security Lead along the back, and a small comms booster array."
+	icon_state = "ulach_sl"
+
+/obj/item/clothing/head/helmet/marine/veteran/pinkerton/riot
+	name = "\improper M8 Riot Helmet"
+	desc = "A Sturdy riot helmet with custom modifications designed with frontier riot control and union busting in mind. This one features the words Pinkerton Security along the back."
+	icon_state = "pinkerton_riot"
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_HIGHPLUS
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/security, new /obj/item/device/helmet_visor/welding_visor, new /obj/item/device/helmet_visor/night_vision/marine_raider)
+
+//===========================//LASALLE BIOTECH - MERCENARY\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/head/helmet/marine/veteran/biomerc
+	name = "\improper Type Type-15 Haz-tech CBRN Helmet"
+	desc = "A Military grade Ballistic Helemt with included rebreather. Due to corner cutting measures, the helmet's air seal is notoriously poor, and suceptiable to dry-rot, and so most operatives opt to supplement it with a secondary gasmask or airsupply."
+	icon_state = "biomerc_helm"
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/MERC.dmi'
+	)
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_HIGHPLUS
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/security, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/night_vision/marine_raider)
+
+/obj/item/clothing/head/helmet/marine/veteran/biomerc/ldr
+	name = "\improper Type Type-15 Haz-tech CBRN Leader Helmet"
+	desc = "A Military grade Ballistic Helemt with included rebreather. The helmet's air seal is notoriously poor, and so most operatives opt to supplement it with a secondary gasmask or airsupply. This one features an improved communication suite."
+	icon_state = "biomerc_helm_ldr"
+
 //=============================//MEME\\==================================\\
 //=======================================================================\\
 
@@ -1803,16 +1899,27 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	time_to_equip = 20
 	equip_sounds = list('sound/handling/helmetscrew.mp3')
 
+//===========================//TRAUMA TEAM - MERCENARY\\================================\\
+//=====================================================================\\
+
 /obj/item/clothing/head/helmet/marine/odst/trauma_team
-	name = "\improper Decadencia Verde Pattern Tactical Armor"
+	name = "\improper Decadencia Verde Pattern Tactical Helmet"
 	desc = "A modification of the standard Nanotrasen Systems Decadencia armor. Designed with high-profile security operators and corporate mercenaries. This Varient features a large medical insignia."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/MERC.dmi',
+	)
 	icon_state = "trauma1"
 	start_down_visor_type = null
 	built_in_visors = list(new /obj/item/device/helmet_visor/pmc, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/night_vision/marine_raider, )
 
 /obj/item/clothing/head/helmet/marine/odst/trauma_team/alt
-	name = "\improper Decadencia Verde Pattern Tactical Armor"
+	name = "\improper Decadencia Verde Pattern Tactical Helmet"
 	desc = "A modification of the standard Nanotrasen Systems Decadencia armor. Designed with high-profile security operators and corporate mercenaries. This Varient features a large medical insignia."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/MERC.dmi',
+	)
 	icon_state = "trauma2"
 
 /obj/item/clothing/head/helmet/marine/headrig
