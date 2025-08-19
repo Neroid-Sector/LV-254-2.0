@@ -1,7 +1,6 @@
 /datum/equipment_preset/other/pinkerton
 	name = "pinkerton"
 	faction = FACTION_PINKERTON
-	faction_group = list(FACTION_PINKERTON, FACTION_MARINE)
 	rank = JOB_PKT
 	idtype = /obj/item/card/id/pkt
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
