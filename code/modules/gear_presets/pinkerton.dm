@@ -36,6 +36,7 @@
 	paygrades = list(PAY_SHORT_PKT = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Pkt"
 	skills = /datum/skills/cmb
+	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/other/pinkerton/standard/load_gear(mob/living/carbon/human/new_human)
 
