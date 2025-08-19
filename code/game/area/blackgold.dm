@@ -197,6 +197,14 @@
 	is_resin_allowed = FALSE
 	resin_construction_allowed = FALSE
 
+/area/blackgold/lower/rooms/hangar
+	name = "\improper Lower Hangar Bays"
+	icon_state = "hangar"
+	soundscape_playlist = SCAPE_PL_HANGAR
+	soundscape_interval = 50
+
+
+
 
 //-----------------------------------------Brig------------------------------------------//
 
@@ -324,7 +332,11 @@
 	is_resin_allowed = FALSE
 	resin_construction_allowed = FALSE
 
-
+/area/blackgold/middle/rooms/hangar
+	name = "\improper Hangar Bay"
+	icon_state = "hangar"
+	soundscape_playlist = SCAPE_PL_HANGAR
+	soundscape_interval = 50
 
 
 
@@ -515,12 +527,6 @@
 	icon_state = "tcomms"
 	flags_area = AREA_NOTUNNEL
 
-
-
-
-
-
-
 //------------------------------------------Brig-----------------------------------------//
 
 /area/blackgold/upper/rooms/brig
@@ -556,10 +562,13 @@
 
 
 
+//------------------------------------------Misc-----------------------------------------//
 
-
-
-
+/area/blackgold/upper/rooms/hangar
+	name = "\improper Upper Hangar Catwalk"
+	icon_state = "hangar"
+	soundscape_playlist = SCAPE_PL_HANGAR
+	soundscape_interval = 50
 
 
 
