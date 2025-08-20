@@ -56,7 +56,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/teargas, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/fsr, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/sec/full, WEAR_R_STORE)
@@ -66,13 +70,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 
-	if(prob(25))
+	if(prob(35))
 		new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
 		spawn_weapon(/obj/item/weapon/gun/rifle/kramer/sec, /obj/item/ammo_magazine/rifle/kramer/ap, new_human)
-	if(prob(30))
+	if(prob(40))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/full/random, WEAR_WAIST)
 		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717, WEAR_R_HAND)
-	if(prob(35))
+	else
 		new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
 		spawn_weapon(/obj/item/weapon/gun/rifle/l42a/sec, /obj/item/ammo_magazine/rifle/l42a/ap, new_human)
 
@@ -107,7 +111,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/teargas, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/fsr, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/sec/full, WEAR_R_STORE)
@@ -117,10 +125,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 
-	if(prob(15))
+	if(prob(25))
 		new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
 		spawn_weapon(/obj/item/weapon/gun/rifle/sa80/ugl/rifleman/sec, /obj/item/ammo_magazine/rifle/sa80/ap, new_human)
-	if(prob(25))
+	else
 		new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
 		spawn_weapon(/obj/item/weapon/gun/rifle/kramer/sec, /obj/item/ammo_magazine/rifle/kramer/ap, new_human)
 
@@ -150,6 +158,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/flashbang, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/fsr, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/sec/full, WEAR_R_STORE)
 
@@ -186,9 +198,19 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/cigarette, WEAR_FACE)
 
+	new_human.equip_to_slot_or_del(new /obj/item/tool/lighter/zippo, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/lucky_strikes, WEAR_IN_JACKET)
+
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/sec/full, WEAR_R_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/clue_scanner, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crew_monitor, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/fsr, WEAR_IN_BACK)
+
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/armpit, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/m44/custom, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/marksman, WEAR_IN_ACCESSORY)
@@ -222,14 +244,17 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/sec/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/structure/bed/portable_surgery(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_BACK)
-
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer(new_human), WEAR_WAIST)
 
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/surgical(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/fsr, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/roller/surgical(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/armpit, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
@@ -265,14 +290,15 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/hack_goggles, WEAR_EYES)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/jima, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/uav_drone, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv/hacked/pkt, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/concertina_wire, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv/hacked/pkt, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/fsr, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/uav_drone, WEAR_IN_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/armpit, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb/slugger, WEAR_IN_ACCESSORY)

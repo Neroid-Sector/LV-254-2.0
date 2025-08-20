@@ -1872,6 +1872,7 @@
 #include "code\modules\gear_presets\civilians.dm"
 #include "code\modules\gear_presets\clf.dm"
 #include "code\modules\gear_presets\cmb.dm"
+#include "code\modules\gear_presets\assorted_mercs.dm"
 #include "code\modules\gear_presets\colonist.dm"
 #include "code\modules\gear_presets\contractor.dm"
 #include "code\modules\gear_presets\corpses.dm"
