@@ -1187,6 +1187,7 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
 	)
+	pockets = 3
 
 /obj/item/clothing/suit/storage/marine/veteran/ua_riot/pinkerton
 	name = "\improper UA-M1 Pinkerton body armor"

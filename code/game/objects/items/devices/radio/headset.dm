@@ -1088,6 +1088,15 @@
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_WY
 
+/obj/item/device/radio/headset/distress/pinkerton
+	name = "Pinkerton Security headset"
+	desc = "A special headset used by small groups of trained operatives. To access the colony channel, use :h."
+	frequency = PKT_FREQ
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_PKT
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+	ignore_z = TRUE
+
 /obj/item/device/radio/headset/distress/dutch
 	name = "Dutch's Dozen headset"
 	desc = "A special headset used by small groups of trained operatives. Or terrorists. To access the colony channel, use :h."

@@ -1,8 +1,8 @@
-/datum/faction/pktn
+/datum/faction/pinkerton
 	name = "Pinkerton Private Security"
 	faction_tag = FACTION_PINKERTON
 
-/datum/faction/pkt/modify_hud_holder(image/holder, mob/living/carbon/human/H)
+/datum/faction/pinkerton/modify_hud_holder(image/holder, mob/living/carbon/human/H)
 	var/hud_icon_state
 	var/obj/item/card/id/ID = H.get_idcard()
 	var/_role

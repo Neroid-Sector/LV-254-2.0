@@ -41,13 +41,13 @@
 #define PAY_SHORT_REBC "REBC"
 
 /// PKT, Pinkerton
-#define PAY_SHORT_PKT "PKT"
+#define PAY_SHORT_PKT "Opr."
 
 /// PKTTL, Pinkerton Leader
-#define PAY_SHORT_PKT_TL "PKTTL"
+#define PAY_SHORT_PKT_TL "TL."
 
 /// PKTDir, Pinkerton Leader
-#define PAY_SHORT_PKT_CO "PKT Dir."
+#define PAY_SHORT_PKT_CO "Dir."
 
 /// PKT, Pinkerton Detective
 #define PAY_SHORT_PKT_DET "PI"

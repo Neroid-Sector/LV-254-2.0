@@ -77,6 +77,7 @@
 #define RADIO_CHANNEL_CMB "CMB"
 #define RADIO_CHANNEL_ROYAL_MARINE "Royal Marine"
 #define RADIO_CHANNEL_TIS "TIS"
+#define RADIO_CHANNEL_PKT "Pinkerton"
 
 #define RADIO_CHANNEL_YAUTJA "Yautja"
 
