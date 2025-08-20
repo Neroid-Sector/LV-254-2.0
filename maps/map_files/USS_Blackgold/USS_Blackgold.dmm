@@ -1,11 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aaa" = (
-/obj/structure/stairs/perspective{
-	dir = 1
-	},
-/mob/living/simple_animal/hostile/retaliate/giant_lizard,
-/turf/open/floor/plating/almayer/no_build,
-/area/blackgold/underdeck/req)
 "aab" = (
 /turf/closed/wall/almayer/outer,
 /area/blackgold/lower/rooms/brig/cells)
@@ -2120,6 +2113,15 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/fore)
+"ahR" = (
+/obj/structure/largecrate/supply/weapons/m39,
+/obj/structure/flora/jungle/vines/light_1,
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/underdeck/req)
+"ahS" = (
+/obj/structure/flora/pottedplant/random,
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/underdeck/req)
 "ahT" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
@@ -2370,6 +2372,23 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/aft)
+"aja" = (
+/obj/item/clothing/accessory/limb/skeleton/r_leg,
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/underdeck/req)
+"ajb" = (
+/obj/structure/bed/hybrisa/hospital/hospitaldivider{
+	dir = 1
+	},
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/underdeck/req)
+"ajc" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/underdeck/req)
 "ajd" = (
 /obj/structure/stairs/multiz/down{
 	dir = 4
@@ -2424,6 +2443,10 @@
 /obj/structure/machinery/light/blue,
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/middle/maint/star/aft)
+"ajl" = (
+/obj/item/clothing/accessory/limb/skeleton/head,
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/underdeck/req)
 "ajm" = (
 /obj/structure/stairs/multiz/down{
 	dir = 4
@@ -2471,6 +2494,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/orbital)
+"ajt" = (
+/obj/item/stack/sandbags/small_stack{
+	pixel_x = 13
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
 "aju" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
@@ -4978,6 +5007,102 @@
 /obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer/red/south,
 /area/blackgold/upper/rooms/lifeboat/star)
+"auN" = (
+/obj/item/paper{
+	pixel_y = 9;
+	layer = 2.3
+	},
+/obj/item/paper{
+	pixel_y = 4;
+	layer = 2.3;
+	pixel_x = 10
+	},
+/obj/item/paper{
+	pixel_y = 4;
+	layer = 2.3;
+	pixel_x = -4
+	},
+/obj/item/paper{
+	pixel_y = 9;
+	layer = 2.28;
+	pixel_x = 7
+	},
+/obj/item/paper{
+	pixel_y = 9;
+	layer = 2.3;
+	pixel_x = -9
+	},
+/obj/item/paper{
+	pixel_y = -4;
+	layer = 2.3;
+	pixel_x = -1
+	},
+/obj/item/bedsheet/mime{
+	pixel_y = -5;
+	layer = 3.9
+	},
+/obj/structure/bed/bedroll{
+	pixel_y = 8;
+	dir = 9;
+	pixel_x = -7;
+	layer = 2.6
+	},
+/obj/item/paper{
+	pixel_y = -6;
+	layer = 2.3;
+	pixel_x = 6
+	},
+/obj/item/paper{
+	pixel_y = 11;
+	layer = 2.3;
+	pixel_x = -17
+	},
+/obj/item/paper{
+	pixel_y = -6;
+	layer = 2.3;
+	pixel_x = -17
+	},
+/obj/item/tool/pen/clicky,
+/obj/item/tool/pen/clicky{
+	pixel_x = -17;
+	pixel_y = 11
+	},
+/obj/item/newspaper{
+	pixel_x = 9;
+	pixel_y = -5
+	},
+/obj/item/newspaper{
+	pixel_x = -19;
+	pixel_y = 5;
+	layer = 2.6
+	},
+/obj/item/stack/sheet/wood{
+	amount = 2;
+	pixel_x = 7;
+	pixel_y = -13
+	},
+/obj/item/stack/sheet/wood{
+	amount = 2;
+	pixel_x = 3;
+	pixel_y = 16
+	},
+/obj/item/stack/sheet/leather{
+	pixel_x = 9
+	},
+/obj/item/stack/sheet/cloth{
+	pixel_y = -11;
+	pixel_x = -13
+	},
+/obj/item/paper/crumpled{
+	pixel_y = 15;
+	pixel_x = -12
+	},
+/obj/item/paper/crumpled{
+	pixel_y = -15;
+	pixel_x = -8
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
 "auO" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/flora/pottedplant{
@@ -4987,6 +5112,66 @@
 	},
 /turf/open/floor/almayer/blue/west,
 /area/blackgold/upper/rooms/cic)
+"auP" = (
+/obj/item/clothing/accessory/limb/skeleton/l_leg,
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
+"auQ" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard/larry,
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
+"auR" = (
+/obj/structure/bed/hybrisa/hospital/hospitaldivider{
+	dir = 1
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
+"auS" = (
+/obj/structure/largecrate/supply/medicine/iv,
+/obj/structure/barricade/wooden{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
+"auT" = (
+/obj/structure/barricade/wooden{
+	dir = 1;
+	pixel_y = 17;
+	layer = 3.9
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
+"auU" = (
+/obj/item/clothing/accessory/limb/skeleton/torso,
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/underdeck/req)
+"auV" = (
+/obj/structure/barricade/wooden{
+	dir = 1;
+	pixel_y = 17;
+	layer = 3.9
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/underdeck/req)
+"auW" = (
+/obj/structure/bed/hybrisa/hospital/hospitaldivider{
+	layer = 3;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
+"auX" = (
+/obj/structure/flora/pottedplant/random{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/underdeck/req)
+"auY" = (
+/obj/structure/bed/hybrisa/hospital/hospitaldivider{
+	layer = 3
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/underdeck/req)
 "avj" = (
 /obj/item/device/radio/listening_bug/radio_linked/fax/uscm_hc{
 	nametag = "CIC"
@@ -31203,6 +31388,7 @@ obL
 obL
 obL
 obL
+xfB
 obL
 obL
 obL
@@ -31215,8 +31401,7 @@ obL
 obL
 obL
 obL
-obL
-obL
+xfB
 obL
 obL
 obL
@@ -31290,6 +31475,7 @@ obL
 obL
 obL
 obL
+xfB
 obL
 obL
 obL
@@ -31302,8 +31488,7 @@ obL
 obL
 obL
 obL
-obL
-obL
+xfB
 obL
 obL
 obL
@@ -31377,6 +31562,7 @@ obL
 obL
 obL
 obL
+xfB
 obL
 obL
 obL
@@ -31389,8 +31575,7 @@ obL
 obL
 obL
 obL
-obL
-obL
+xfB
 obL
 obL
 obL
@@ -34338,7 +34523,7 @@ ydL
 ydL
 kcB
 drY
-aaa
+rjH
 drY
 jzQ
 jzQ
@@ -35655,11 +35840,11 @@ kXK
 drY
 gOY
 ydL
+auR
 ydL
 ydL
-ydL
-kcB
-tiX
+ajb
+ahR
 nFn
 obL
 obL
@@ -35742,10 +35927,10 @@ kXK
 drY
 exk
 kCB
-eUd
+auS
 ydL
 ydL
-gSi
+ajc
 mvZ
 nFn
 obL
@@ -35830,9 +36015,9 @@ drY
 exk
 kfk
 eUd
-ydL
-ydL
-kcB
+auP
+ajt
+ajl
 drY
 nFn
 obL
@@ -35915,12 +36100,12 @@ drY
 kXK
 drY
 gOY
+auW
+auT
 ydL
-ydL
-ydL
-ydL
+auN
 kcB
-drY
+ahS
 nFn
 obL
 obL
@@ -36004,10 +36189,10 @@ drY
 gOY
 ydL
 ydL
-ydL
+auQ
 ydL
 kcB
-drY
+aja
 nFn
 obL
 obL
@@ -36089,8 +36274,8 @@ drY
 kXK
 drY
 sjp
-hhW
-hhW
+auX
+auU
 hhW
 hhW
 bWe
@@ -36159,10 +36344,10 @@ obL
 nFn
 mIx
 jak
-drY
+wDQ
 mIx
 mIx
-drY
+wDQ
 mIx
 mIx
 rjH
@@ -36174,10 +36359,10 @@ onU
 onU
 drY
 kXK
-wDQ
 drY
 drY
-wDQ
+auY
+auV
 drY
 iNb
 iNb
