@@ -675,17 +675,17 @@
 /obj/item/clothing/accessory/patch/pinkerton_patch
 	name = "Pinkerton Private Security Patch"
 	desc = "A white and black rectangle featuring the unblnking Pinkerton eye. The mere sight of this patch fills underpaid union workers with dread and wrath."
-	icon_state = "pinkerton_patch"
+	icon_state = "pkt_patch"
 
 /obj/item/clothing/accessory/patch/pinkerton_patch/small
 	name = "Pinkerton Private Security Patch"
 	desc = "A small white and black square featuring the unblnking Pinkerton eye. The mere sight of this patch fills underpaid union workers with dread and wrath."
-	icon_state = "pinkerton_patch_sml"
+	icon_state = "pkt_patch_sml"
 
 /obj/item/clothing/accessory/patch/pinkerton_patch/large
 	name = "Pinkerton Private Security Patch"
 	desc = "A Large white and black square featuring the unblnking Pinkerton eye. The mere sight of this patch fills underpaid union workers with dread and wrath."
-	icon_state = "pinkerton_patch_lrg"
+	icon_state = "pkt_patch_lrg"
 
 /obj/item/clothing/accessory/patch/biomerc_patch
 	name = "Lasalle Bionational Patch"

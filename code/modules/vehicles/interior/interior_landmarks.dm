@@ -186,6 +186,30 @@
 
 	qdel(src)
 
+// Gunner's seat spawner
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/untrained
+	name = "untrained gunner's seat spawner"
+	icon = 'icons/obj/structures/props/furniture/chairs.dmi'
+	icon_state = "comfychair"
+	color = "blue"
+
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/on_load(datum/interior/I)
+	var/obj/structure/bed/chair/comfy/vehicle/gunner/untrained/S = new(loc)
+
+	S.icon = icon
+	S.icon_state = icon_state
+	S.layer = layer
+	S.vehicle = I.exterior
+	S.setDir(dir)
+	S.alpha = alpha
+	S.update_icon()
+	S.handle_rotation()
+	S.pixel_x = pixel_x
+	S.pixel_y = pixel_y
+
+	qdel(src)
+
+
 /obj/effect/landmark/interior/spawn/interior_camera
 	name = "interior camera spawner"
 	icon = 'icons/obj/vehicles/interiors/general.dmi'

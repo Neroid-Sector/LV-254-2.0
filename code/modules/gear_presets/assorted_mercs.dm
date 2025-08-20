@@ -6,6 +6,6 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	minimap_background = "background_cmb"
 
-/datum/equipment_preset/other/pinkerton/New()
+/datum/equipment_preset/other/merc/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE) //ACCESS_COME_BACK_TO_ME

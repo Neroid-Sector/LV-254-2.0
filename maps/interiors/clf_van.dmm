@@ -152,7 +152,7 @@
 	name = "right entrance marker";
 	tag = "right"
 	},
-/obj/effect/landmark/interior/spawn/vehicle_gunner_seat{
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/untrained{
 	dir = 4
 	},
 /turf/open/shuttle/vehicle/floor_3_12,
