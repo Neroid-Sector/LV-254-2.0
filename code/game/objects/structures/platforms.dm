@@ -205,6 +205,7 @@
 	creaking_sound = 'sound/effects/metal_creaking.ogg'
 	breaking_sound = 'sound/effects/metalhit.ogg'
 	layer = ABOVE_OBJ_LAYER
+	density = 0
 
 /obj/structure/platform/stone
 	icon_state = "kutjevo_rock"
