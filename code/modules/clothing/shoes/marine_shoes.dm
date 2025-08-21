@@ -188,6 +188,16 @@
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	spawn_item_type = /obj/item/attachable/bayonet
 
+/obj/item/clothing/shoes/veteran/pmc/commando/cbrn/biomerc
+	name = "\improper Type-15 Haz-tech boots"
+	desc = "Type-15 Haz-tech boots have been designed to protect the wearer from contact with any possible infection vectors or hazardous substances that may have contaminated the area of operations."
+	icon_state = "bio_merc"
+	icon_state = "bio_merc"
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+	spawn_item_type = /obj/item/attachable/bayonet
+
+
 /obj/item/clothing/shoes/marine/corporate
 	name = "rugged boots"
 	desc = "These synth-leather boots seem high quality when first worn, but quickly detoriate, especially in the environments the corporate security members these are issued to operate in. Still, better than nothing."

@@ -19,6 +19,7 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_FACTION_PMC = new /datum/mob_hud/faction/pmc(),
 	MOB_HUD_FACTION_CMB = new /datum/mob_hud/faction/cmb(),
 	MOB_HUD_FACTION_NSPA = new /datum/mob_hud/faction/nspa(),
+	MOB_HUD_FACTION_PKT = new /datum/mob_hud/faction/pinkerton(),
 	MOB_HUD_FACTION_WO = new /datum/mob_hud/faction/wo(),
 	MOB_HUD_HUNTER = new /datum/mob_hud/hunter_hud(),
 	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan(),
@@ -224,6 +225,9 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 
 /datum/mob_hud/faction/nspa
 	faction_to_check = FACTION_NSPA
+
+/datum/mob_hud/faction/pinkerton
+	faction_to_check = FACTION_PINKERTON
 
 /datum/mob_hud/faction/cmb
 	faction_to_check = FACTION_MARSHAL
