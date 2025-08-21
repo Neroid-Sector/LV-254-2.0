@@ -1097,6 +1097,14 @@
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	ignore_z = TRUE
 
+/obj/item/device/radio/headset/distress/lasallle
+	name = "Lasalle Bionational headset"
+	desc = "A special headset used by small groups of trained operatives. To access the colony channel, use :h."
+	frequency = LASS_FREQ
+	has_hud = TRUE
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+	ignore_z = TRUE
+
 /obj/item/device/radio/headset/distress/dutch
 	name = "Dutch's Dozen headset"
 	desc = "A special headset used by small groups of trained operatives. Or terrorists. To access the colony channel, use :h."

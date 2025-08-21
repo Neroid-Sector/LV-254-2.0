@@ -78,6 +78,7 @@
 #define RADIO_CHANNEL_ROYAL_MARINE "Royal Marine"
 #define RADIO_CHANNEL_TIS "TIS"
 #define RADIO_CHANNEL_PKT "Pinkerton"
+#define RADIO_CHANNEL_LASS "Lasalle"
 
 #define RADIO_CHANNEL_YAUTJA "Yautja"
 

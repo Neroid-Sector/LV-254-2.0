@@ -8,7 +8,7 @@
 
 /datum/equipment_preset/other/pinkerton/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE) //ACCESS_COME_BACK_TO_ME
+	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE, ACCESS_LIST_MARINE_MAIN) //ACCESS_COME_BACK_TO_ME
 
 /datum/equipment_preset/other/pinkerton/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
@@ -47,7 +47,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_tshirt, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch/large, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/pinkerton, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
@@ -102,7 +102,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_tshirt, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch/large, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/pinkerton, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton/sl, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
@@ -152,7 +152,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_tshirt, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch/small, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/pinkerton, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/pinkerton, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
@@ -200,6 +200,8 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/tool/lighter/zippo, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/lucky_strikes, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen, WEAR_IN_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
@@ -210,6 +212,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crew_monitor, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/fsr, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/camera, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/camera_film, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/armpit, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/m44/custom, WEAR_IN_ACCESSORY)
@@ -236,7 +241,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_tshirt, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch/large, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/pinkerton, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
@@ -261,7 +266,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
 	spawn_weapon(/obj/item/weapon/gun/smg/m39, /obj/item/ammo_magazine/smg/m39/ap, new_human)
 
 //engi
@@ -284,7 +288,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_tshirt, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch/large, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/pinkerton, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/hack_goggles, WEAR_EYES)
@@ -339,7 +343,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_tshirt, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch/large, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/light/vest/pinkerton, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
@@ -355,6 +359,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer(new_human), WEAR_WAIST)
 
 //standard - RIOT
 
@@ -375,7 +380,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_jumpsuit, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/ua_riot/pinkerton, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton/riot, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
@@ -418,7 +423,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_jumpsuit, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/ua_riot/pinkerton, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton/riot, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
@@ -437,3 +442,92 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/riot, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/combat/riot, WEAR_R_HAND)
+
+//standard - death squad
+
+/datum/equipment_preset/other/pinkerton/death
+	name = "pinkerton security officer(DEATHSQUAD)"
+	assignment = JOB_PKT
+	rank = JOB_PKT
+	paygrades = list(PAY_SHORT_PKT = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Opr."
+	skills = /datum/skills/cmb
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/other/pinkerton/death/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pinkerton, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs, WEAR_R_EAR)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_jumpsuit, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/ua_riot/pinkerton, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton/riot, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ballistic/uscm(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/teargas, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/teargas, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/teargas, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/teargas, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/sec/full, WEAR_R_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/armpit, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/minigun, WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/minigun, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/minigun, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/minigun, WEAR_IN_BELT)
+
+//team lead - deathsquad
+
+/datum/equipment_preset/other/pinkerton/death_team_lead
+	name = "pinkerton team leader(DEATHSQUAD)"
+	assignment = JOB_PKT_TL
+	rank = JOB_PKT_TL
+	idtype = /obj/item/card/id/pktl
+	paygrades = list(PAY_SHORT_PKT_TL = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "TL"
+	skills = /datum/skills/cmb/leader
+	flags = EQUIPMENT_PRESET_EXTRA
+
+/datum/equipment_preset/other/pinkerton/death_team_lead/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pinkerton, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs, WEAR_R_EAR)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pinkerton_jumpsuit, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/pinkerton_patch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/ua_riot/pinkerton, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pinkerton/riot, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ballistic/uscm(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/teargas, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/sec/full, WEAR_R_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/armpit, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
+
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/minigun, WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/minigun, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/minigun, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/minigun, WEAR_IN_BELT)

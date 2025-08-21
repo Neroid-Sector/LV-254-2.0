@@ -1681,7 +1681,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 //=====================================================================\\
 
 /obj/item/clothing/head/helmet/marine/veteran/pinkerton
-	name = "\improper Striker ULACH Helmet"
+	name = "\improper HCSU-Mk3 Ballistic Helmet"
 	desc = "A cheap old fashioned helmet popular in the civilian security market for its reliability and lighter weight construction. This one features the words Pinkerton Security along the back."
 	icon_state = "ulach_pinkerton"
 	icon = 'icons/obj/items/clothing/hats/hats_by_faction/MERC.dmi'
@@ -1698,12 +1698,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDEALLHAIR
-	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
+	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 	built_in_visors = list(new /obj/item/device/helmet_visor/security, /obj/item/device/helmet_visor/welding_visor)
 
 
 /obj/item/clothing/head/helmet/marine/veteran/pinkerton/sl
-	name = "\improper Striker ULACH Helmet"
+	name = "\improper HCSU-Mk3 Ballistic Helmet"
 	desc = "A cheap old fashioned helmet popular in the civilian security market for its reliability and lighter weight construction. This one features the words Pinkerton Security Lead along the back, and a small comms booster array."
 	icon_state = "ulach_sl"
 

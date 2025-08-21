@@ -193,7 +193,7 @@
 	icon_state = "comfychair"
 	color = "blue"
 
-/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/on_load(datum/interior/I)
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/untrained/on_load(datum/interior/I)
 	var/obj/structure/bed/chair/comfy/vehicle/gunner/untrained/S = new(loc)
 
 	S.icon = icon
