@@ -33,6 +33,12 @@
 	var/gas_filter_strength = 1 //For gas mask filters
 	var/list/filtered_gases = list("phoron", "sleeping_agent", "carbon_dioxide", "CN20 Nerve Gas")
 
+//skull mask
+/obj/item/clothing/mask/gas/skull_gas_mask
+	name = "custom gas mask"
+	icon_state = "gas_skull"
+	item_state = "gas_skull"
+
 /obj/item/clothing/mask/gas/kutjevo
 	name = "kutjevo respirator"
 	desc = "A respirator worn on the face that filters out harmful air particles often present in the air of Kutjevo."
