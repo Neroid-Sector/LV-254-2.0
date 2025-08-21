@@ -523,30 +523,15 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the United Americas, An economic and political giant in both the Sol system and throughout the offworld colonies, the military might of the UA is unparalleled.."
 	icon_state = "uapatch"
 
-/obj/item/clothing/accessory/patch/uasquare
-	name = "United Americas patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the United Americas, An economic and political giant in both the Sol system and throughout the offworld colonies, the military might of the UA is unparalleled.."
-	icon_state = "uasquare"
-
-/obj/item/clothing/accessory/patch/falconalt
-	name = "USCM Falling Falcons UA patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the Falling Falcons, the 2nd battalion of the 4th brigade of the USCM."
-	icon_state = "fallingfalconsaltpatch"
-
 /obj/item/clothing/accessory/patch/twe
 	name = "Three World Empire patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women loyal to the Three World Empire, An older style symbol of the TWE."
 	icon_state = "twepatch"
 
-/obj/item/clothing/accessory/patch/uscmlarge
-	name = "USCM large chest patch"
-	desc = "A fire-resistant chest patch, worn by the men and women of the Falling Falcons, the 2nd battalion of the 4th brigade of the USCM."
-	icon_state = "fallingfalconsbigpatch"
-
 /obj/item/clothing/accessory/patch/tis
 	name = "UAAC-TIS patch"
 	desc = "An elusive patch worn by members of the UAAC-TIS, also known as Three Eyes."
-	icon_state = "tis_patch"
+	icon_state = "tispatch"
 
 /obj/item/clothing/accessory/patch/mudskippers
 	name = "USCM Mudskippers patch"
@@ -566,35 +551,10 @@
 	desc = "A fire-resistant black shoulder patch featuring the Weyland-Yutani logo. A symbol of loyalty to the corporation, or perhaps ironic mockery, depending on your viewpoint."
 	icon_state = "wypatch"
 
-/obj/item/clothing/accessory/patch/wysquare
-	name = "Weyland-Yutani patch"
-	desc = "A fire-resistant black shoulder patch featuring the Weyland-Yutani logo. A symbol of loyalty to the corporation, or perhaps ironic mockery, depending on your viewpoint."
-	icon_state = "wysquare"
-
-/obj/item/clothing/accessory/patch/wy_faction
-	name = "Weyland-Yutani patch" // For WY factions like PMC's - on the right shoulder rather then left.
-	desc = "A fire-resistant black shoulder patch featuring the Weyland-Yutani logo. A symbol of loyalty to the corporation."
-	icon_state = "wypatch_faction"
-
-/obj/item/clothing/accessory/patch/wy_white
-	name = "Weyland-Yutani patch"
-	desc = "A fire-resistant white shoulder patch featuring the Weyland-Yutani logo. A symbol of loyalty to the corporation, or perhaps ironic mockery, depending on your viewpoint."
-	icon_state = "wypatch_white"
-
-/obj/item/clothing/accessory/patch/wyfury
-	name = "Weyland-Yutani Fury '161' patch"
-	desc = "A fire-resistant shoulder patch. Was worn by workers and then later prisoners on the Fiorina 'Fury' 161 facility, a rare relic, after the facility went dark in 2179."
-	icon_state = "fury161patch"
-
-/obj/item/clothing/accessory/patch/upp/alt
-	name = "UPP patch"
-	desc = "An old fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Armed Collective."
-	icon_state = "upppatch_alt"
-
 /obj/item/clothing/accessory/patch/tis
 	name = "UAAC-TIS patch"
 	desc = "An elusive patch worn by members of the UAAC-TIS, also known as Three Eyes."
-	icon_state = "tis_patch"
+	icon_state = "tispatch"
 
 /obj/item/clothing/accessory/patch/falcon/squad_main
 	name = "USCM Falling Falcons squad patch"
