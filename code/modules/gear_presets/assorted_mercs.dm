@@ -101,8 +101,8 @@
 
 /datum/equipment_preset/other/merc/trauma
 	name = "Trauma team merc(Standard)"
-	assignment = JOB_LBM
-	rank = JOB_LBM
+	assignment = JOB_TTI_EMT
+	rank = JOB_TTI_EMT
 	paygrades = list(PAY_SHORT_FL_S = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Merc"
 	skills = /datum/skills/freelancer
