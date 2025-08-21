@@ -494,7 +494,7 @@
 	new /obj/item/device/clue_scanner(src)
 
 /obj/item/storage/belt/security/MP/full/synth/fill_preset_inventory()
-	new /obj/item/explosive/grenade/flashbang(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
@@ -528,17 +528,17 @@
 	new /obj/item/device/clue_scanner(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/explosive/grenade/flashbang(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
 
 /obj/item/storage/belt/security/MP/CMB/synth/fill_preset_inventory()
-	new /obj/item/explosive/grenade/flashbang(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
 	new /obj/item/device/flash(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/device/clue_scanner(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/explosive/grenade/flashbang(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
 
 /obj/item/storage/belt/marine
 	name = "\improper M276 pattern ammo load rig"
@@ -829,6 +829,10 @@
 /obj/item/storage/belt/shotgun/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/slug(src)
+
+/obj/item/storage/belt/shotgun/riot/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/beanbag(src)
 
 /obj/item/storage/belt/shotgun/full/random/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)

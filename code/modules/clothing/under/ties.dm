@@ -632,6 +632,25 @@
 	desc = "A circular, fire-resistant patch with a white border. The design features three white stars and a tricolor background: green, black, and red, symbolizing the Rebels' fight for independence and unity. This patch is worn by Insurgent fighters as a badge of defiance against corporate and governmental oppression, representing their struggle for a free and self-determined colonial future. Though feared and reviled by some, it remains a powerful symbol of resistance and revolution."
 	icon_state = "clfpatch"
 
+/obj/item/clothing/accessory/patch/pinkerton_patch
+	name = "Pinkerton Private Security Patch"
+	desc = "A white and black rectangle featuring the unblnking Pinkerton eye. The mere sight of this patch fills underpaid union workers with dread and wrath."
+	icon_state = "pkt_patch"
+
+/obj/item/clothing/accessory/patch/pinkerton_patch/small
+	name = "Pinkerton Private Security Patch"
+	desc = "A small white and black square featuring the unblnking Pinkerton eye. The mere sight of this patch fills underpaid union workers with dread and wrath."
+	icon_state = "pkt_patch_sml"
+
+/obj/item/clothing/accessory/patch/pinkerton_patch/large
+	name = "Pinkerton Private Security Patch"
+	desc = "A Large white and black square featuring the unblnking Pinkerton eye. The mere sight of this patch fills underpaid union workers with dread and wrath."
+	icon_state = "pkt_patch_lrg"
+
+/obj/item/clothing/accessory/patch/biomerc_patch
+	name = "Lasalle Bionational Patch"
+	desc = "A blue circle patch belonging to one of the dirtiest jobs in the galaxy. Great respect is held for those wearing the patch of the Lasalle Corps' Mercs due to the dangerous work they do dealing with biohazardous materials and entities day in and day out."
+	icon_state = "biomerc_patch"
 // Misc
 
 /obj/item/clothing/accessory/dogtags

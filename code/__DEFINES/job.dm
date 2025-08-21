@@ -366,6 +366,27 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 #define CONTRACTOR_JOB_LIST list(JOB_CONTRACTOR, JOB_CONTRACTOR_ST, JOB_CONTRACTOR_MEDIC, JOB_CONTRACTOR_ENGI, JOB_CONTRACTOR_MG, JOB_CONTRACTOR_TL, JOB_CONTRACTOR_COV, JOB_CONTRACTOR_COVST, JOB_CONTRACTOR_COVMED, JOB_CONTRACTOR_COVENG, JOB_CONTRACTOR_COVTL)
 
+//-------- Lasalle --------//
+#define JOB_LBM "Lasalle Biotech Haztech"
+#define JOB_LBM_MED "Lasalle Biotech Haztech Med-Tech Specialist"
+#define JOB_LBM_ENGI "Lasalle Biotech Haztech Containment Specialist"
+#define JOB_LBM_TL "Lasalle Biotech Haztech Team Leader"
+#define JOB_LBM_JOE "Lasalle Biotech Haz-Joe"
+#define JOB_LBM_FJOE "Lasalle Biotech Fight'n-Joe"
+
+#define LASALLE_JOB_LIST list(JOB_LBM, JOB_LBM_MED, JOB_LBM_ENGI, JOB_LBM_TL, JOB_LBM_JOE, JOB_LBM_FJOE)
+
+
+//-------- Trauma Team Interplanetary--------//
+#define JOB_TTI_EMT "Trauma Team EMT"
+#define JOB_TTI_TL "Trauma Team Team Leader"
+#define JOB_TTI_PO "Trauma Team Pilot"
+#define JOB_TTI_SYN "Trauma Team Synthetic"
+#define JOB_TTI_OW "Trauma Team Dispatch"
+
+
+#define TTI_JOB_LIST list(JOB_TTI_EMT, JOB_TTI_TL, JOB_TTI_PO, JOB_TTI_SYN, JOB_TTI_OW)
+
 //-------- CMB --------//
 #define JOB_CMB "CMB Deputy"
 #define JOB_CMB_TL "CMB Marshal"
@@ -392,6 +413,22 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_NSPA_COM "NSPA Commissioner"
 
 #define NSPA_GRUNT_LIST list(JOB_NSPA_CST, JOB_NSPA_SC, JOB_NSPA_SGT)
+
+//-------- Pinkertons --------//
+#define JOB_PKT "Pinkerton Security Operative"
+#define JOB_PKT_MED "Pinkerton Med-Tech Specialist"
+#define JOB_PKT_ENG "Pinkerton Sec-Tech Specialist"
+#define JOB_PKT_TL "Pinkerton Security Team Lead"
+#define JOB_PKT_CO "Pinkerton Site Security Superintendent"
+#define JOB_PKT_DET "Pinkerton Private Investigator"
+#define JOB_PKT_SPY "Pinkerton Intelligence Operative"
+#define JOB_PKT_SYN "Pinkerton Support Synthetic"
+
+#define JOB_PKT_RIOT "Pinkerton Strike Buster"
+#define JOB_PKT_RIOT_TL "Pinkerton Strike Buster Team lead"
+
+#define PKT_RIOT_LIST list(JOB_PKT_RIOT, JOB_PKT_RIOT_TL)
+#define PKT_GRUNT_LIST list(JOB_PKT, JOB_PKT_MED, JOB_PKT_ENGI, JOB_PKT_TL, JOB_PKT_CO, JOB_PKT_DET, JOB_PKT_SPY, JOB_PKT_SYN)
 
 //-------- FORECON --------//
 
@@ -582,7 +619,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //-------- Gangsters --------//
 #define JOB_GANGSTER "Gangster"
-#define JOB_GANGSTER_LEADER "Gangster"
+#define JOB_GANGSTER_LEADER "Gangster Boss"
 
 #define JOB_GANGSTER_CLOWN_LEADER "Insane Clown Posse Gang leader"
 #define JOB_GANGSTER_CLOWN "Insane Clown Posse Gangster"

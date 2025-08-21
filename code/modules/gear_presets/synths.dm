@@ -25,11 +25,11 @@
 			new_human.set_species(SYNTH_GEN_THREE)
 
 /datum/equipment_preset/synth/load_name(mob/living/carbon/human/new_human, randomise)
-	var/final_name = "David"
+	var/final_name = "Bishop"
 	if(new_human.client && new_human.client.prefs)
 		final_name = new_human.client.prefs.synthetic_name
 		if(!final_name || final_name == "Undefined")
-			final_name = "David"
+			final_name = "Bishop"
 	new_human.change_real_name(new_human, final_name)
 
 /datum/equipment_preset/synth/load_skills(mob/living/carbon/human/new_human, client/mob_client)

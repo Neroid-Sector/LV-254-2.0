@@ -537,6 +537,7 @@
 
 //*****************************************************************************************************/
 
+
 /datum/equipment_preset/other/business_person
 	name = "Business Person"
 	flags = EQUIPMENT_PRESET_EXTRA
