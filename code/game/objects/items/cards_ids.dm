@@ -289,6 +289,38 @@
 	item_state = "gold_id"
 	paygrade = PAY_SHORT_CINSP
 
+/obj/item/card/id/pktco
+	name = "\improper Pinkerton Security Badge"
+	desc = "A shiny gold badge indicating a Pinkerton Director"
+	icon_state = "cmbmar"
+	id_type = "Badge"
+	item_state = "cmbmar"
+	paygrade = PAY_SHORT_PKT_CO
+
+/obj/item/card/id/pktl
+	name = "\improper Pinkerton Security Badge"
+	desc = "A shiny copper and brass badge indicating a senior Pinkerton"
+	icon_state = "cmbmar"
+	id_type = "Badge"
+	item_state = "cmbmar"
+	paygrade = PAY_SHORT_PKT_TL
+
+/obj/item/card/id/pktdet
+	name = "\improper Pinkerton Security Badge"
+	desc = "The shiny badge of a Pinkerton Private Investigator."
+	icon_state = "cmbdep"
+	id_type = "Badge"
+	item_state = "cmbdep"
+	paygrade = PAY_SHORT_PKT_DET
+
+/obj/item/card/id/pkt
+	name = "\improper Pinkerton Security Badge"
+	desc = "The shiny badge of a Pinkerton Private security officer."
+	icon_state = "cmbdep"
+	id_type = "Badge"
+	item_state = "cmbdep"
+	paygrade = PAY_SHORT_PKT
+
 /obj/item/card/id/general
 	name = "general officer holo-badge"
 	desc = "Top brass of the top brass. Issued to only the most dedicated."

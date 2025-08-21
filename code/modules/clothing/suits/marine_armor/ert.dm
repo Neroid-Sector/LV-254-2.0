@@ -410,7 +410,7 @@
 
 /obj/item/clothing/suit/storage/marine/faction/UPP/mp
 	name = "\improper UL4 camouflaged jacket"
-	desc = "A lightweight jacket, issued to troops when they're not expected to engage in combat. Still studded to the brim with kevlar shards, though the synthread construction reduces its effectiveness."
+	desc = "A lightweight jacket, issued to troops when they're not expected to engage in combat. Still studded to the brim with Venlar shards, though the synthread construction reduces its effectiveness."
 	icon_state = "upp_coat_mp"
 	slowdown = SLOWDOWN_ARMOR_NONE
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
@@ -1145,3 +1145,88 @@
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+
+//===========================//TRAUMA TEAM - MERCENARY\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/suit/storage/marine/odst/trauma_team
+	name = "\improper Decadencia Verde Pattern Tactical Armor"
+	desc = "A modification of the standard Nanotrasen Systems Decadencia armor. Designed with high-profile security operators and corporate mercenaries. This Varient features a large medical insignia."
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi',
+	)
+	icon_state = "trauma1"
+	item_state = "trauma1"
+	item_state_slots = list(WEAR_JACKET = "trauma1")
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_melee = CLOTHING_ARMOR_HIGHPLUS
+	armor_bio = CLOTHING_ARMOR_HIGHPLUS
+	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/trauma_jumpsuit)
+
+/obj/item/clothing/suit/storage/marine/odst/trauma_team/alt
+	name = "\improper Decadencia Verde Pattern Tactical Armor"
+	desc = "A modification of the standard Nanotrasen Systems Decadencia armor. Designed with high-profile security operators and corporate mercenaries. This Varient features a large medical insignia."
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi',
+	)
+	icon_state = "trauma2"
+	item_state = "trauma2"
+	item_state_slots = list(WEAR_JACKET = "trauma2")
+
+//===========================//PINKERTON - MERCENARY\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/suit/storage/marine/light/vest/pinkerton
+	name = "\improper M2-pattern ballistics vest"
+	desc = "A Military grade Ballistic vest with included pouches, manufactured for the civilian security market using last-gen protective materials. This one proudly features a Pinkerton Security Badge on the back."
+	icon_state = "pinkerton_amr"
+	icon = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
+	)
+	storage_slots =  3
+
+/obj/item/clothing/suit/storage/marine/veteran/ua_riot/pinkerton
+	name = "\improper UA-M1 Pinkerton body armor"
+	desc = "Based on the M-3 pattern employed by the USCM, the UA-M1 body armor is employed by Pinkerton security, riot control and union-busting teams. While robust against melee and bullet attacks, it critically lacks coverage of the legs and arms."
+	icon_state = "pinkerton_riot"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
+	)
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT  // it's lighter
+	flags_atom = NO_GAMEMODE_SKIN
+	uniform_restricted = list(/obj/item/clothing/under)
+
+//===========================//LASALLE BIOTECH - MERCENARY\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/suit/storage/marine/veteran/biomerc
+	name = "\improper Type-15 Haz-tech CBRN vest"
+	desc = "A Military grade Ballistic vest with included pouches, manufactured for the civilian security market using last-gen protective materials."
+	icon_state = "biomerc_amr"
+	icon = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
+	)
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	flags_atom = NO_GAMEMODE_SKIN

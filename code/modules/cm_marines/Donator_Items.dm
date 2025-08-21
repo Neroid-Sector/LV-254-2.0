@@ -280,7 +280,7 @@
 
 /obj/item/clothing/suit/storage/marine/fluff/sas_juggernaut //CKEY=sasoperative (UNIQUE)
 	name = "Ranger Jacket"
-	desc = "An old Kevlar Jacket. DONOR ITEM"
+	desc = "An old Venlar Jacket. DONOR ITEM"
 	icon_state = "hunkjacket"
 	item_state = "hunkjacket"
 
@@ -735,7 +735,7 @@
 	name = "Ranger Beret"
 	icon_state = "hunkberet"
 	item_state = "hunkberet"
-	desc = "An old dusty beret lined with Kevlar. DONOR ITEM"
+	desc = "An old dusty beret lined with Venlar. DONOR ITEM"
 
 /obj/item/clothing/head/helmet/marine/fluff/tristan //CKEY=tristan63
 	name = "Fancy Helmet"

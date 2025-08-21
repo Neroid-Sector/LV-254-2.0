@@ -1193,3 +1193,24 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 /obj/item/clothing/head/beret/royal_marine/team_leader
 	icon_state = "rmc_beret_tl"
 	item_state = "rmc_beret_tl"
+
+/obj/item/clothing/head/beret/pinkerton
+	name = "\improper Pinkerton cap"
+	desc = "A cap featuring a large pinkerton insignia above the brim"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/CMB.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/CMB.dmi',
+	)
+	icon_state = "cmb_cap"
+	item_state = "cmb_cap"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	flags_cold_protection = BODY_FLAG_HEAD
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = NO_FLAGS

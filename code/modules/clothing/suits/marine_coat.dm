@@ -97,7 +97,7 @@
 //Marine service & tanker jacket + MP themed variants
 /obj/item/clothing/suit/storage/jacket/marine/service
 	name = "marine service jacket"
-	desc = "A service jacket typically worn by officers of the USCM. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A service jacket typically worn by officers of the USCM. It has shards of light Venlar to help protect against stabbing weapons and bullets."
 	has_buttons = TRUE
 	icon_state = "coat_officer"
 
@@ -532,7 +532,7 @@
 
 /obj/item/clothing/suit/storage/jacket/marine/rmc/service
 	name = "\improper Royal Marine Commando service jacket"
-	desc = "A service jacket typically worn by officers of the RMC. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A service jacket typically worn by officers of the RMC. It has shards of light Venlar to help protect against stabbing weapons and bullets."
 	icon_state = "rmc_service"
 	icon = 'icons/obj/items/clothing/suits/suits_by_faction/TWE.dmi'
 	item_icons = list(
@@ -543,17 +543,17 @@
 
 /obj/item/clothing/suit/storage/jacket/marine/rmc/service/co
 	name = "\improper Royal Marine Commando senior officer's service jacket"
-	desc = "A service jacket worn by the senior officers of the RMC. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A service jacket worn by the senior officers of the RMC. It has shards of light Venlar to help protect against stabbing weapons and bullets."
 	icon_state = "rmc_service_co"
 
 /obj/item/clothing/suit/storage/jacket/marine/rmc/service/black
 	name = "\improper Royal Marine Commando service jacket"
-	desc = "A service jacket typically worn by officers of the RMC. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A service jacket typically worn by officers of the RMC. It has shards of light Venlar to help protect against stabbing weapons and bullets."
 	icon_state = "rmc_service_black"
 
 /obj/item/clothing/suit/storage/jacket/marine/rmc/service/co/black
 	name = "\improper Royal Marine Commando senior officer's service jacket"
-	desc = "A service jacket worn by the senior officers of the RMC. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	desc = "A service jacket worn by the senior officers of the RMC. It has shards of light Venlar to help protect against stabbing weapons and bullets."
 	icon_state = "rmc_service_black_co"
 
 /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber/rmc
@@ -566,3 +566,17 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/TWE.dmi'
 	)
+
+/obj/item/clothing/suit/storage/jacket/marine/service/detective_trenchcoat
+	name = "battered trenchcoat"
+	desc = "A stylish if battered trenchcoat, well suited to a private investigator who lurks in dimly lit alleys smoking cigarettes."
+	has_buttons = TRUE
+	storage_slots = 4
+	icon = 'icons/mob/humans/onmob/clothing/suits/coats_robes.dmi'
+	icon_state = "marine_trenchcoat_tan"
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/coats_robes.dmi'
+	)
+	flags_atom = NO_GAMEMODE_SKIN
+	initial_icon_state = "marine_trenchcoat_tan"
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_MEDAL)

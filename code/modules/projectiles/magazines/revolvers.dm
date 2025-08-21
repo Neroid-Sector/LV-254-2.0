@@ -98,6 +98,12 @@
 	default_ammo = /datum/ammo/bullet/revolver/small/cmb
 	icon_state = "cmb"
 
+/obj/item/ammo_magazine/revolver/cmb/slugger
+	name = "\improper Spearhead slugger custom speed loader (.357)"
+	desc = "This speedloader is fitted with customised .357 slugger revolver bullets."
+	default_ammo = /datum/ammo/bullet/revolver/small/slugger
+	icon_state = "cmb"
+
 /**
  * MATEBA REVOLVER
  */
@@ -216,6 +222,11 @@
 
 /obj/item/ammo_magazine/internal/revolver/cmb/hollowpoint
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
+	caliber = ".357"
+	gun_type = /obj/item/weapon/gun/revolver/cmb
+
+/obj/item/ammo_magazine/internal/revolver/cmb/slugger
+	default_ammo = /datum/ammo/bullet/revolver/small/slugger
 	caliber = ".357"
 	gun_type = /obj/item/weapon/gun/revolver/cmb
 
