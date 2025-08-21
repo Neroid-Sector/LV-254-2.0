@@ -129,6 +129,13 @@
 		manual_unbuckle(X)
 		return
 
+/obj/structure/bed/chair/comfy/vehicle/gunner/untrained
+	name = "gunner's seat"
+	desc = "Comfortable seat for a gunner."
+	seat = VEHICLE_GUNNER
+	required_skill = SKILL_VEHICLE_DEFAULT
+
+
 //custom vehicle seats for armored vehicles
 //spawners located in interior_landmarks
 

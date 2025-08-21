@@ -551,6 +551,11 @@
 /obj/item/weapon/gun/rifle/kramer/tactical
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle, /obj/item/attachable/extended_barrel, /obj/item/attachable/flashlight/grip, /obj/item/attachable/reflex)
 
+
+/obj/item/weapon/gun/rifle/kramer/sec
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle, /obj/item/attachable/flashlight/grip, /obj/item/attachable/reflex)
+	current_mag = /obj/item/ammo_magazine/rifle/kramer/ap
+
 /obj/item/weapon/gun/rifle/kramer/dmr
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod, /obj/item/attachable/scope/mini)
 	current_mag = /obj/item/ammo_magazine/rifle/kramer/heap
@@ -2102,6 +2107,11 @@
 /obj/item/weapon/gun/rifle/l42a/training
 	current_mag = /obj/item/ammo_magazine/rifle/l42a/rubber
 
+
+/obj/item/weapon/gun/rifle/l42a/sec
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine, /obj/item/attachable/reddot)
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/ap
+
 /obj/item/weapon/gun/rifle/l42a/dmr
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod, /obj/item/attachable/scope/mini)
 	current_mag = /obj/item/ammo_magazine/rifle/l42a/heap
@@ -2469,6 +2479,9 @@
 	sa80_ugl.Attach(src)
 	update_attachable(sa80_ugl.slot)
 
+
+/obj/item/weapon/gun/rifle/sa80/ugl/rifleman/sec
+	current_mag = /obj/item/ammo_magazine/rifle/sa80/ap
 //sa80 Machinegun
 
 /obj/item/weapon/gun/rifle/sa80/lmg

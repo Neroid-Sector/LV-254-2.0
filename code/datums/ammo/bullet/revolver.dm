@@ -129,6 +129,10 @@
 	shrapnel_chance = 100
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
+/datum/ammo/bullet/revolver/small/slugger
+	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 35
+
 /datum/ammo/bullet/revolver/mateba
 	name = ".454 heavy revolver bullet"
 

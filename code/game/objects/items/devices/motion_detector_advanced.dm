@@ -274,4 +274,9 @@
 	desc = "A device that detects movement using sonar, but will try to filter out the movement of friendly IFF signatures. This one has been configured to detect all non TWE movement."
 	iff_signal = FACTION_TWE
 
+/obj/item/device/motiontracker/adv/hacked/pkt
+	name = "modified M717 motion tracker"
+	desc = "A device that detects movement using sonar, but will try to filter out the movement of friendly IFF signatures. This one has been configured to detect all non Pinkerton movement."
+	iff_signal = FACTION_PINKERTON
+
 #undef TRACKER_RANGE
