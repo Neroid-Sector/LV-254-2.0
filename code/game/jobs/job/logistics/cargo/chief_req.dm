@@ -15,7 +15,7 @@
 
 	job_options = list(QM_WO2 = "CWO2", QM_WO3 = "CWO3", QM_WO4 = "CWO4", QM_WO5 = "CWO5", QM_O1 = "2ndLT")
 
-/datum/job/uscm/mudskipper/msio/handle_job_options(option)
+/datum/job/logistics/requisition/handle_job_options(option)
 	if(option == QM_WO3)
 		gear_preset = /datum/equipment_preset/uscm_ship/qm/wo3
 	else if(option == QM_WO4)
