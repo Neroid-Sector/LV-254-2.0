@@ -78,47 +78,67 @@
 
 // Make the elevator shaft visible when the elevator leaves.
 /obj/docking_port/stationary/cargo_lift/on_departure(obj/docking_port/mobile/departing_shuttle)
-	SW.invisibility = 0
-	SE.invisibility = 0
-	NW.invisibility = 0
-	NE.invisibility = 0
+    . = ..() // Call parent departure logic
 
-// And make it invisible again when the elevator returns.
-/obj/docking_port/stationary/cargo_lift/on_arrival(obj/docking_port/mobile/arriving_shuttle)
-	SW.invisibility = INVISIBILITY_ABSTRACT
-	SE.invisibility = INVISIBILITY_ABSTRACT
-	NW.invisibility = INVISIBILITY_ABSTRACT
-	NE.invisibility = INVISIBILITY_ABSTRACT
+    // 1. Make lift corners visible again
+    if(SW) SW.invisibility = 0
+    if(SE) SE.invisibility = 0
+    if(NW) NW.invisibility = 0
+    if(NE) NE.invisibility = 0
+
+    // 2. Lock dock doors for launch
+    var/datum/door_controller/single/door_control = new()
+    door_control.doors = get_doors()
+    if(length(door_control.doors))
+        door_control.control_doors("force-lock-launch")
+    qdel(door_control)
+
+/obj/docking_port/stationary/cargo_lift
+    /// Cached list of dock doors to avoid repeated world scans
+    var/list/cached_doors
+
+/obj/docking_port/stationary/cargo_lift/proc/reset_invisibility()
+    if(SW) SW.invisibility = INVISIBILITY_ABSTRACT
+    if(SE) SE.invisibility = INVISIBILITY_ABSTRACT
+    if(NW) NW.invisibility = INVISIBILITY_ABSTRACT
+    if(NE) NE.invisibility = INVISIBILITY_ABSTRACT
 
 /obj/docking_port/stationary/cargo_lift/proc/get_doors()
-	. = list()
-	for(var/area/target_area in world)
-		if(istype(target_area, airlock_area))
-			for(var/obj/structure/machinery/door/door in target_area)
-				. += list(door)
+    // Return cached list if available
+    if(cached_doors && length(cached_doors))
+        return cached_doors
+
+    var/list/found_doors = list()
+    for(var/area/target_area in world)
+        if(istype(target_area, airlock_area))
+            for(var/obj/structure/machinery/door/door in target_area)
+                found_doors += door
+
+    cached_doors = found_doors
+    return cached_doors
 
 /obj/docking_port/stationary/cargo_lift/on_arrival(obj/docking_port/mobile/arriving_shuttle)
-	. = ..()
-	// open elevator doors
-	if(istype(arriving_shuttle, /obj/docking_port/mobile/cargo_lift))
-		var/obj/docking_port/mobile/cargo_lift/elevator = arriving_shuttle
-		elevator.door_control.control_doors("open", airlock_exit)
+    . = ..() // Call parent arrival logic
 
-	// open dock doors
-	var/datum/door_controller/single/door_control = new()
-	door_control.doors = get_doors()
-	door_control.control_doors("open", FALSE, FALSE)
-	qdel(door_control)
+    // 1. Reset lift corner invisibility
+    reset_invisibility()
 
-	playsound(src, 'sound/machines/ping.ogg', 25, 1)
-	playsound(arriving_shuttle, 'sound/machines/ping.ogg', 25, 1)
+    // 2. Open elevator doors if this is a cargo lift
+    if(istype(arriving_shuttle, /obj/docking_port/mobile/cargo_lift))
+        var/obj/docking_port/mobile/cargo_lift/elevator = arriving_shuttle
+        if(elevator.door_control)
+            elevator.door_control.control_doors("open", airlock_exit)
 
-/obj/docking_port/stationary/cargo_lift/on_departure(obj/docking_port/mobile/departing_shuttle)
-	. = ..()
-	var/datum/door_controller/single/door_control = new()
-	door_control.doors = get_doors()
-	door_control.control_doors("force-lock-launch")
-	qdel(door_control)
+    // 3. Open dock doors using cached list
+    var/datum/door_controller/single/door_control = new()
+    door_control.doors = get_doors()
+    if(length(door_control.doors))
+        door_control.control_doors("open", FALSE, FALSE)
+    qdel(door_control)
+
+    // 4. Play arrival sounds
+    playsound(src, 'sound/machines/ping.ogg', 25, 1)
+    playsound(arriving_shuttle, 'sound/machines/ping.ogg', 25, 1)
 
 /obj/docking_port/stationary/cargo_lift/occupied
 	name = "Lower Deck"

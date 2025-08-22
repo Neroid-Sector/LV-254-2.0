@@ -265,6 +265,9 @@
 /area/almayer/hallways/lower/port_midship_hallway)
 "abd" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4
+	},
 /turf/open/floor/almayer/no_build/plate,
 /area/almayer/hallways/lower/port_midship_hallway)
 "abe" = (
@@ -487,13 +490,13 @@
 /area/almayer/hallways/lower/port_midship_hallway)
 "abL" = (
 /obj/structure/platform/metal/ship/corner/north,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/test_floor6,
 /area/almayer/hallways/lower/port_midship_hallway)
 "abM" = (
 /obj/structure/platform/metal/ship/corner{
 	pixel_y = 8
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/test_floor6,
 /area/almayer/hallways/lower/port_midship_hallway)
 "abN" = (
 /obj/structure/stairs/multiz/up{
@@ -618,15 +621,33 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/lower/port_midship_hallway)
 "acj" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = -6
+	},
+/obj/item/paper_bin/wy{
+	pixel_y = 8;
+	pixel_x = 8
+	},
+/obj/item/tool/pen{
+	pixel_y = 4;
+	pixel_x = 6
+	},
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/almayer/hallways/lower/port_midship_hallway)
 "ack" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/hybrisa/carpet/rug_colorable,
 /area/almayer/hallways/lower/port_midship_hallway)
 "acl" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/cameras/containment{
+	name = "Research Cameras";
+	pixel_x = 2
+	},
+/obj/structure/machinery/computer/crew/alt{
+	pixel_x = -15
+	},
+/obj/structure/surface/table/almayer,
 /turf/open/floor/hybrisa/carpet/rug_colorable/northeast,
 /area/almayer/hallways/lower/port_midship_hallway)
 "acm" = (
@@ -1495,10 +1516,7 @@
 /area/blackgold/lower/rooms/req)
 "afk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/company/alpha,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
 "afl" = (
@@ -1757,6 +1775,10 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/star/mid)
+"ago" = (
+/obj/vehicle/train/cargo/trolley,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/req)
 "agp" = (
 /obj/structure/machinery/light/small/red{
 	dir = 8
@@ -1806,9 +1828,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/star/fore)
-"agy" = (
-/turf/closed/wall/almayer,
-/area/blackgold/lower/rooms/engine_core)
 "agz" = (
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/hallways/mid/mid)
@@ -2354,9 +2373,22 @@
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/middle/maint/star/aft)
+"aiW" = (
+/obj/vehicle/train/cargo/engine,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/req)
 "aiX" = (
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/mid)
+"aiY" = (
+/obj/structure/filingcabinet{
+	pixel_x = -8
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/green/west,
+/area/blackgold/lower/rooms/req)
 "aiZ" = (
 /obj/structure/platform/metal/ship/corner/west,
 /obj/structure/machinery/light/small/red{
@@ -3229,9 +3261,7 @@
 /turf/open/floor/almayer/red/north,
 /area/blackgold/middle/rooms/squad)
 "amn" = (
-/obj/structure/platform/metal/ship/corner/west{
-	density = 0
-	},
+/obj/structure/platform/metal/ship/corner/west,
 /turf/open/floor/almayer/red/northeast,
 /area/blackgold/middle/rooms/squad)
 "amo" = (
@@ -5317,6 +5347,30 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/mid)
+"avB" = (
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/blackgold/middle/rooms/squad)
+"avC" = (
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/blackgold/middle/rooms/squad)
+"avD" = (
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/blackgold/middle/rooms/squad)
+"avE" = (
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/blackgold/middle/hallways/mid/mid)
+"avF" = (
+/obj/structure/window/framed/almayer/white,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer,
+/turf/open/floor/plating,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avG" = (
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "avH" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8;
@@ -5324,14 +5378,168 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo)
+"avI" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
+"avJ" = (
+/obj/structure/machinery/light/spot,
+/obj/structure/machinery/auto_rack/uscm/m39_ammo/full,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
+"avK" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/almayer/no_build/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avL" = (
+/obj/structure/closet/secure_closet/personal/cabinet{
+	req_access_txt = "5";
+	pixel_x = -4
+	},
+/obj/item/clothing/accessory/stethoscope,
+/turf/open/floor/wood/ship,
+/area/almayer/hallways/lower/port_midship_hallway)
 "avM" = (
 /obj/structure/window/framed/almayer/hull,
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/brig/warden)
+"avN" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_17";
+	pixel_x = -20
+	},
+/obj/structure/machinery/computer/emails{
+	dir = 1;
+	pixel_y = 2;
+	layer = 3
+	},
+/turf/open/floor/wood/ship,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avO" = (
+/obj/structure/bed,
+/obj/item/bedsheet/medical,
+/turf/open/floor/wood/ship,
+/area/almayer/hallways/lower/port_midship_hallway)
 "avP" = (
 /obj/structure/platform/metal/almayer/west,
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
+"avQ" = (
+/obj/structure/machinery/auto_rack/uscm/m4ra/full,
+/turf/open/floor/almayer/green/west,
+/area/blackgold/middle/rooms/squad/prep)
+"avR" = (
+/obj/structure/machinery/smartfridge/chemistry{
+	pixel_x = -6
+	},
+/turf/closed/wall/almayer/white,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avS" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/hand_labeler{
+	pixel_y = 8;
+	pixel_x = -7;
+	layer = 3
+	},
+/obj/item/tool/hand_labeler{
+	pixel_y = 3;
+	pixel_x = -7;
+	layer = 3.01
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avT" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/reagentgrinder{
+	pixel_y = 8;
+	pixel_x = 3
+	},
+/obj/item/stack/sheet/mineral/phoron{
+	pixel_y = 12;
+	pixel_x = 3
+	},
+/obj/item/stack/sheet/mineral/phoron{
+	pixel_y = 12;
+	pixel_x = 3
+	},
+/obj/item/stack/sheet/mineral/phoron{
+	pixel_y = 12;
+	pixel_x = 3
+	},
+/obj/item/stack/sheet/mineral/phoron{
+	pixel_y = 12;
+	pixel_x = 3
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avU" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/wood/ship,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avV" = (
+/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full,
+/turf/open/floor/almayer/green/west,
+/area/blackgold/middle/rooms/squad/prep)
+"avW" = (
+/obj/structure/window/framed/almayer/white,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avX" = (
+/obj/structure/machinery/chem_dispenser/medbay{
+	pixel_x = -1
+	},
+/obj/item/reagent_container/glass/bucket/janibucket,
+/turf/open/floor/almayer/no_build/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avY" = (
+/obj/structure/bed/stool,
+/turf/open/floor/almayer/sterile_green_side/west,
+/area/almayer/hallways/lower/port_midship_hallway)
+"avZ" = (
+/obj/structure/bed/stool,
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awa" = (
+/obj/structure/bookcase{
+	icon_state = "book-5";
+	pixel_y = 19;
+	density = 0
+	},
+/turf/open/floor/wood/ship,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awb" = (
+/obj/structure/machinery/cm_vending/clothing/senior_officer{
+	pixel_y = 19;
+	density = 0
+	},
+/turf/open/floor/wood/ship,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awc" = (
+/obj/structure/machinery/chem_master{
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awd" = (
+/obj/structure/machinery/door/airlock/almayer/research/reinforced{
+	access_modified = 1;
+	name = "\improper CMO's Bedroom";
+	req_one_access_txt = "1;5";
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awe" = (
+/obj/structure/reagent_dispensers/fueltank/custom,
+/turf/open/floor/almayer/no_build/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
 "awf" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	closeOtherId = "ciclobby_s";
@@ -5340,6 +5548,48 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/cic)
+"awg" = (
+/obj/structure/machinery/computer/research/main_terminal{
+	dir = 4;
+	pixel_x = -16
+	},
+/turf/open/floor/almayer/sterile_green_corner/west,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awh" = (
+/obj/structure/closet/secure_closet/chemical,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
+/obj/item/reagent_container/glass/beaker/cryoxadone,
+/obj/item/reagent_container/glass/beaker/cryoxadone,
+/obj/item/reagent_container/glass/beaker/cryoxadone,
+/obj/item/reagent_container/dropper,
+/obj/item/reagent_container/dropper,
+/obj/item/device/mass_spectrometer,
+/obj/item/device/mass_spectrometer,
+/obj/item/reagent_container/glass/beaker/large,
+/obj/item/reagent_container/glass/beaker/large,
+/obj/item/reagent_container/glass/beaker,
+/obj/item/reagent_container/glass/beaker,
+/obj/item/reagent_container/glass/beaker,
+/turf/open/floor/almayer/no_build/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awi" = (
+/obj/structure/sink{
+	pixel_x = 1;
+	pixel_y = 20
+	},
+/turf/open/floor/almayer/sterile_green_corner/north,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awj" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 31;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/sterile_green_corner,
+/area/almayer/hallways/lower/port_midship_hallway)
 "awk" = (
 /obj/structure/platform/metal/ship/corner/east,
 /obj/effect/decal/warning_stripes{
@@ -5352,6 +5602,99 @@
 /obj/structure/closet/secure_closet/fridge/organic,
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/captain_mess)
+"awm" = (
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry,
+/obj/structure/medical_supply_link,
+/turf/open/floor/almayer/no_build/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awn" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 1
+	},
+/turf/open/floor/hybrisa/carpet/rug_colorable/east,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awo" = (
+/obj/structure/transmitter{
+	name = "CMO Office Telephone";
+	phone_category = "Offices";
+	phone_id = "CMO Office";
+	dir = 8;
+	pixel_x = 14
+	},
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awp" = (
+/obj/structure/machinery/cm_vending/sorted/attachments/squad,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/middle/rooms/squad/prep)
+"awq" = (
+/obj/structure/machinery/faxmachine/uscm/almayer/command{
+	sub_name = "CIC";
+	radio_alert_tag = ":V"
+	},
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awr" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/almayer/sterile_green_side/west,
+/area/almayer/hallways/lower/port_midship_hallway)
+"aws" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/hybrisa/carpet/rug_colorable/northwest,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awt" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass{
+	access_modified = 1;
+	name = "\improper CMO's Office";
+	req_one_access = null;
+	req_one_access_txt = "1;5"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awu" = (
+/obj/structure/closet/secure_closet/professor_dummy{
+	pixel_y = 31
+	},
+/turf/open/floor/almayer/sterile_green_corner/north,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awv" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/almayer/hallways/lower/port_midship_hallway)
+"aww" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/faxmachine/uscm/blackgold/medical/chief,
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awx" = (
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/item/folder/white,
+/obj/item/folder/black,
+/obj/item/folder/black,
+/obj/item/clipboard,
+/obj/item/clipboard,
+/obj/item/folder/blue{
+	pixel_y = 5;
+	pixel_x = 6
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awy" = (
+/obj/structure/machinery/photocopier,
+/turf/open/floor/almayer/sterile_green_corner,
+/area/almayer/hallways/lower/port_midship_hallway)
 "awz" = (
 /mob/living/silicon/decoy/ship_ai{
 	layer = 2.98;
@@ -5359,14 +5702,77 @@
 	},
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
+"awA" = (
+/obj/structure/machinery/cm_vending/clothing/k9_synth,
+/turf/open/floor/almayer/green/west,
+/area/blackgold/middle/rooms/squad/prep)
+"awB" = (
+/obj/structure/machinery/cm_vending/clothing/synth,
+/turf/open/floor/almayer/green/west,
+/area/blackgold/middle/rooms/squad/prep)
+"awC" = (
+/obj/structure/machinery/auto_rack/uscm/mk1/full,
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
+"awD" = (
+/obj/structure/machinery/light/spot{
+	dir = 1;
+	pixel_y = 10
+	},
+/obj/structure/machinery/auto_rack/uscm/m39/full,
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
 "awE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/company/charlie,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
+"awF" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer,
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awG" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer,
+/turf/open/floor/plating/plating_catwalk,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awH" = (
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awI" = (
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awJ" = (
+/obj/structure/platform/metal/ship/west{
+	layer = 3.01
+	},
+/obj/structure/platform/metal/ship/north,
+/obj/structure/platform/metal/ship/corner/west{
+	dir = 9;
+	layer = 4.1
+	},
+/turf/open_space,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awK" = (
+/obj/structure/platform/metal/ship/north,
+/turf/open_space,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awL" = (
+/obj/structure/platform/metal/ship/corner/east,
+/turf/open_space,
+/area/almayer/hallways/lower/port_midship_hallway)
+"awM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/spot/blue{
+	dir = 1
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/almayer/hallways/lower/port_midship_hallway)
 "axx" = (
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/floor/almayer/plating_striped/south,
@@ -5597,7 +6003,7 @@
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/lower/rooms/req)
 "aNs" = (
-/obj/docking_port/stationary/marine_dropship/almayer_hangar_2,
+/obj/docking_port/stationary/marine_dropship/bg_hangar_2,
 /turf/open_space,
 /area/blackgold/middle/rooms/hangar)
 "aNF" = (
@@ -5631,10 +6037,6 @@
 /obj/structure/machinery/computer/secure_data,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie)
-"aPM" = (
-/obj/structure/machinery/cm_vending/sorted/attachments/squad,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/middle/rooms/squad/prep)
 "aQf" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/brig/processing)
@@ -5692,13 +6094,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
-"aVv" = (
-/obj/structure/machinery/auto_rack/uscm/m39_ammo/full{
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
 "aXm" = (
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/upper/rooms/brig/processing)
@@ -5842,8 +6237,7 @@
 	can_block_movement = 0;
 	density = 0;
 	icon_state = "book-5";
-	pixel_y = 16;
-	opacity = 0
+	pixel_y = 16
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
@@ -6102,9 +6496,7 @@
 /area/blackgold/upper/maint/star/mid)
 "bFZ" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
-/turf/open/space/basic,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
+/turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/squad/prep)
 "bGc" = (
 /obj/structure/platform/metal/ship/corner,
@@ -6265,10 +6657,7 @@
 /area/blackgold/underdeck/req)
 "bWf" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/platoon/delta,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta)
 "bWq" = (
@@ -7430,10 +7819,7 @@
 /area/blackgold/upper/stairs/star/aft)
 "dZu" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/company/bravo,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
 "ebN" = (
@@ -8069,12 +8455,6 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/armory)
-"eYP" = (
-/obj/structure/machinery/power/fractal_reactor{
-	power_generation_rate = 20e+006
-	},
-/turf/open/floor/almayer/mono,
-/area/blackgold/middle/rooms/req)
 "eYQ" = (
 /obj/structure/machinery/door/poddoor/railing,
 /obj/structure/machinery/door/poddoor/railing{
@@ -8847,12 +9227,6 @@
 	icon_state = "plate"
 	},
 /area/blackgold/underdeck/vehicle)
-"gjp" = (
-/obj/structure/machinery/auto_rack/uscm/buckshot/full{
-	pixel_y = 32
-	},
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
 "gjr" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -9601,10 +9975,7 @@
 /area/blackgold/underdeck/req)
 "hvh" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/platoon/alpha,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "hvW" = (
@@ -9979,6 +10350,9 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/req)
 "ihE" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 8
+	},
 /turf/open/floor/almayer/no_build/plate,
 /area/almayer/hallways/lower/port_midship_hallway)
 "ihQ" = (
@@ -10427,20 +10801,6 @@
 "iLP" = (
 /turf/open/floor/almayer/red/northeast,
 /area/blackgold/lower/rooms/brig/cells)
-"iMf" = (
-/obj/structure/machinery/cm_vending/gear/tl{
-	pixel_y = -31;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
-"iMj" = (
-/obj/structure/machinery/cm_vending/clothing/tl/alpha{
-	pixel_y = -31;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
 "iMo" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced{
 	name = "\improper Combat Information Center";
@@ -11202,12 +11562,6 @@
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
-"klj" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
-	name = "\improper Spec Prep"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/middle/rooms/squad/prep)
 "klp" = (
 /turf/open/floor/almayer/red/southeast,
 /area/blackgold/lower/rooms/range)
@@ -11363,10 +11717,6 @@
 "kBJ" = (
 /turf/open/floor/almayer/redcorner/north,
 /area/blackgold/upper/rooms/evacuation)
-"kBZ" = (
-/obj/structure/machinery/light/spot,
-/turf/open/floor/almayer/green/south,
-/area/blackgold/middle/rooms/squad/prep)
 "kCh" = (
 /turf/open/floor/almayer_hull/outerhull_dir/southeast,
 /area/space)
@@ -11418,16 +11768,14 @@
 /area/blackgold/underdeck/req)
 "kDX" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/machinery/faxmachine/uscm/almayer/command/capt{
-	name = "Commanding Officer's Fax Machine";
-	pixel_x = -4;
-	pixel_y = 2;
-	radio_alert_tag = ":P"
-	},
 /obj/item/tool/stamp/hop{
 	name = "Commanding Officer's rubber stamp";
 	pixel_x = -8;
 	pixel_y = 11
+	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/co{
+	pixel_x = -4;
+	pixel_y = 2
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
@@ -11477,9 +11825,8 @@
 /area/almayer/hallways/lower/port_midship_hallway)
 "kIK" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
+/obj/structure/machinery/faxmachine/uscm/blackgold/command{
+	sub_name = "CIC"
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
@@ -12986,13 +13333,6 @@
 "nbJ" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/lower/rooms/brig/evidence_storage)
-"nbY" = (
-/obj/structure/machinery/light/spot{
-	dir = 1;
-	pixel_y = 10
-	},
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
 "ncz" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -13736,13 +14076,6 @@
 /obj/structure/platform/metal/ship/north,
 /turf/open_space,
 /area/blackgold/middle/maint/port/fore)
-"ofA" = (
-/obj/structure/machinery/auto_rack/uscm/m39/full{
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
 "ofS" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -14327,10 +14660,7 @@
 /obj/structure/prop/hybrisa/misc/machinery/screens/wood_clock{
 	pixel_y = 31
 	},
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/xo,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "pbm" = (
@@ -14994,11 +15324,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "qha" = (
-/obj/structure/machinery/cm_vending/clothing/specialist/alpha{
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo,
+/obj/structure/machinery/auto_rack/uscm/buckshot/full,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "qiC" = (
 /obj/structure/cargo_container/hybrisa/containersextended/greenleft,
@@ -15249,7 +15576,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/stairs/star/mid)
 "qBI" = (
-/obj/docking_port/stationary/marine_dropship/almayer_hangar_1,
+/obj/docking_port/stationary/marine_dropship/bg_hangar_1,
 /turf/open_space,
 /area/blackgold/middle/rooms/hangar)
 "qBL" = (
@@ -16195,11 +16522,8 @@
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
 "siC" = (
-/obj/structure/machinery/cm_vending/gear/spec{
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo,
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "sjj" = (
 /obj/structure/stairs/multiz/down,
@@ -17101,12 +17425,6 @@
 	icon_state = "plate"
 	},
 /area/blackgold/underdeck/vehicle)
-"tRH" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
-	name = "\improper Squad Leader Prep"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/middle/rooms/squad/prep)
 "tSn" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
 	name = "\improper Underdeck Access";
@@ -17374,10 +17692,7 @@
 /area/blackgold/upper/rooms/commandbunks/staff)
 "uqN" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/platoon/charlie,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie)
 "ura" = (
@@ -17912,10 +18227,7 @@
 /area/blackgold/upper/rooms/brig/stairs)
 "vhO" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/company/delta,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
 "vjX" = (
@@ -17985,10 +18297,6 @@
 /obj/structure/platform/metal/ship,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/cells)
-"voO" = (
-/obj/structure/window/framed/almayer/hull/hijack_bustable,
-/turf/open/floor/plating,
-/area/blackgold/middle/rooms/req)
 "voZ" = (
 /obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
 	dir = 4;
@@ -18030,6 +18338,7 @@
 /area/blackgold/upper/rooms/intel/storage)
 "vqD" = (
 /obj/structure/surface/table/almayer,
+/obj/structure/machinery/faxmachine/uscm/blackgold/brig,
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/brig/processing)
 "vrt" = (
@@ -18171,11 +18480,6 @@
 /area/blackgold/upper/rooms/intel)
 "vGW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V";
-	pixel_y = 7
-	},
 /obj/item/tool/stamp/uscm{
 	pixel_y = 15;
 	pixel_x = 1
@@ -18183,6 +18487,9 @@
 /obj/item/tool/pen/multicolor/provost{
 	pixel_y = -9;
 	pixel_x = 6
+	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/brig/chief{
+	pixel_y = 7
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
@@ -19178,7 +19485,7 @@
 /area/blackgold/underdeck/req)
 "xrf" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/machinery/faxmachine/uscm/almayer/ai_core,
+/obj/structure/machinery/faxmachine/uscm/blackgold/ai_core,
 /turf/open/floor/almayer/aicore/no_build/ai_cargo,
 /area/blackgold/lower/rooms/aicore)
 "xri" = (
@@ -19494,13 +19801,10 @@
 /area/blackgold/upper/rooms/cic)
 "xWj" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/faxmachine/uscm/almayer/command{
-	sub_name = "CIC";
-	radio_alert_tag = ":V"
-	},
 /obj/structure/sign/prop1{
 	pixel_y = 32
 	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command/platoon/bravo,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo)
 "xXq" = (
@@ -49614,7 +49918,7 @@ aky
 aky
 dXY
 akz
-akV
+ago
 akz
 jxq
 akO
@@ -49701,7 +50005,7 @@ piM
 vvm
 dXY
 akz
-akV
+ago
 akz
 eyj
 akI
@@ -49788,7 +50092,7 @@ akz
 bKw
 dXY
 akz
-akV
+ago
 akz
 hsd
 akP
@@ -49875,7 +50179,7 @@ akz
 vvm
 dXY
 akz
-akV
+aiW
 akz
 eyj
 ivz
@@ -50306,7 +50610,7 @@ agb
 aky
 pbm
 arZ
-arZ
+aiY
 arZ
 iQX
 akz
@@ -56398,35 +56702,35 @@ age
 agd
 agc
 agv
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
-agy
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
+agw
 agv
 afq
 afi
@@ -56488,7 +56792,6 @@ agv
 agw
 agw
 agw
-agy
 agw
 agw
 agw
@@ -56510,7 +56813,8 @@ agw
 agw
 agw
 agw
-agy
+agw
+agw
 agw
 agw
 agw
@@ -56575,7 +56879,6 @@ agv
 agw
 agw
 agw
-wMW
 agw
 agw
 agw
@@ -56597,7 +56900,8 @@ agw
 agw
 agw
 agw
-wMW
+agw
+agw
 agw
 agw
 agw
@@ -56662,7 +56966,6 @@ agv
 agw
 agw
 agw
-agy
 agw
 agw
 agw
@@ -56684,7 +56987,8 @@ agw
 agw
 agw
 agw
-agy
+agw
+agw
 agw
 agw
 agw
@@ -67723,7 +68027,7 @@ anD
 qXx
 anl
 ati
-atd
+avE
 asX
 alm
 alE
@@ -67894,7 +68198,7 @@ gCg
 anl
 anT
 anJ
-iMj
+qsV
 anl
 ati
 atb
@@ -67981,7 +68285,7 @@ anB
 lJw
 anQ
 anB
-iMj
+qsV
 anl
 ati
 atb
@@ -68068,7 +68372,7 @@ anB
 anK
 anQ
 anB
-iMf
+gae
 anl
 ati
 atb
@@ -68155,7 +68459,7 @@ phw
 anl
 anS
 anD
-iMf
+gae
 anl
 ati
 atc
@@ -68314,22 +68618,22 @@ aiA
 air
 air
 anl
-siC
-aoE
-aoB
-anl
-gjp
+klh
+awB
+awA
+anZ
+aol
 anK
 aoh
 aoq
 aoq
 aol
 anK
-phw
-anl
-anT
-anJ
-qsV
+aoh
+anZ
+avV
+avQ
+dTD
 anl
 ati
 atc
@@ -68402,21 +68706,21 @@ air
 air
 anl
 siC
-anQ
-anB
-klj
-anQ
+anK
+anK
+anK
+anK
 anK
 anU
 anU
 anU
 anU
 anK
-anB
-tRH
-anQ
-anB
-qsV
+anK
+anK
+anK
+anK
+avG
 anl
 ati
 atb
@@ -68489,21 +68793,21 @@ air
 air
 anl
 qha
-anQ
-anB
-anK
-anQ
 anK
 anU
 anU
 anU
 anU
+anU
+anU
+anU
+anU
+anU
+anU
+anU
+anU
 anK
-anB
-anK
-anQ
-anB
-gae
+avI
 anl
 ati
 atb
@@ -68575,22 +68879,22 @@ aiA
 air
 air
 anl
-qha
-anS
-anD
-anl
-lUr
+awC
 anK
+anU
+anU
+anU
+anU
 aos
 anL
 anL
 gLv
+anU
+anU
+anU
+anU
 anK
-gCg
-anl
-anS
-anD
-gae
+avI
 anl
 ati
 atb
@@ -68662,22 +68966,22 @@ aiA
 aow
 air
 anl
-anl
-anl
-anl
-anl
-nbY
+awD
 anK
+anU
+anU
+anU
+anU
 anB
-bFZ
-bFZ
+awp
+awp
 anQ
+anU
+anU
+anU
+anU
 anK
-kBZ
-anl
-anl
-anl
-anl
+avJ
 anl
 ati
 atc
@@ -68749,25 +69053,25 @@ aiA
 air
 air
 anl
-klh
-aPM
-aPM
-anZ
-aol
+siC
 anK
+anU
+anU
+anU
+anU
 aoh
 aoq
 aoq
 aol
+anU
+anU
+anU
+anU
 anK
-aoh
-anZ
-aPM
-aPM
-dTD
+avG
 anl
 ati
-atd
+avE
 asX
 alm
 alm
@@ -68838,18 +69142,18 @@ air
 anl
 anQ
 anK
-anK
-anK
-anK
-anK
 anU
 anU
 anU
 anU
-anK
-anK
-anK
-anK
+anU
+anU
+anU
+anU
+anU
+anU
+anU
+anU
 anK
 anB
 anm
@@ -68923,7 +69227,7 @@ aiA
 air
 air
 anl
-ofA
+anQ
 anK
 anU
 anU
@@ -68951,7 +69255,7 @@ alv
 alv
 alv
 alv
-alF
+avB
 alv
 alv
 alv
@@ -69010,7 +69314,7 @@ aiQ
 aiX
 aiX
 anl
-aVv
+anQ
 anK
 anU
 anU
@@ -69555,7 +69859,7 @@ asX
 alU
 amu
 alF
-alF
+avD
 alF
 alF
 alF
@@ -70169,7 +70473,7 @@ alv
 alv
 alv
 alv
-alF
+avC
 alv
 alv
 alv
@@ -70495,7 +70799,7 @@ anr
 anr
 anF
 anW
-eYP
+aod
 wBU
 gte
 vyH
@@ -70669,7 +70973,7 @@ anW
 anW
 anF
 anW
-voO
+ans
 aoj
 aoj
 aon
@@ -70756,7 +71060,7 @@ anW
 anW
 anF
 anW
-voO
+ans
 aoj
 aoj
 aoj
@@ -72922,6 +73226,7 @@ ahr
 dkN
 ahu
 ahu
+ahu
 eeb
 ahu
 ahu
@@ -72930,7 +73235,6 @@ ahu
 ahu
 cNr
 gEZ
-ahu
 ahu
 ahu
 ahu
@@ -72948,6 +73252,7 @@ ahB
 eRy
 ahu
 ahu
+ahu
 eeb
 ahu
 ahu
@@ -72956,7 +73261,6 @@ ahu
 ahu
 cNr
 gEZ
-ahu
 ahu
 ahu
 ahu
@@ -73009,8 +73313,8 @@ ahs
 nfm
 ahu
 ahu
-eeb
 ahu
+eeb
 ahu
 ahu
 ahu
@@ -73035,8 +73339,8 @@ ahB
 qGb
 ahu
 ahu
-eeb
 ahu
+eeb
 ahu
 ahu
 ahu
@@ -73096,8 +73400,8 @@ ahr
 dJM
 ahu
 ahu
-eYQ
 ahu
+eYQ
 ahu
 ahu
 ahu
@@ -73122,8 +73426,8 @@ ahB
 ive
 ahu
 ahu
-eYQ
 ahu
+eYQ
 ahu
 ahu
 ahu
@@ -73618,8 +73922,8 @@ ahr
 dkN
 ahu
 ahu
-uRY
 ahu
+uRY
 ahu
 ahu
 ahu
@@ -73644,8 +73948,8 @@ ahB
 eRy
 ahu
 ahu
-uRY
 ahu
+uRY
 ahu
 ahu
 ahu
@@ -73705,8 +74009,8 @@ ahs
 nfm
 ahu
 ahu
-eeb
 ahu
+eeb
 ahu
 ahu
 ahu
@@ -73731,8 +74035,8 @@ ahB
 qGb
 ahu
 ahu
-eeb
 ahu
+eeb
 ahu
 ahu
 ahu
@@ -73792,6 +74096,7 @@ ahr
 dJM
 ahu
 ahu
+ahu
 eeb
 ahu
 ahu
@@ -73800,7 +74105,6 @@ ahu
 ahu
 cNr
 gEZ
-ahu
 ahu
 ahu
 ahu
@@ -73818,6 +74122,7 @@ ahB
 ive
 ahu
 ahu
+ahu
 eeb
 ahu
 ahu
@@ -73826,7 +74131,6 @@ ahu
 ahu
 cNr
 gEZ
-ahu
 ahu
 ahu
 ahu
@@ -76938,10 +77242,10 @@ hOc
 aba
 aaS
 aaS
-aaW
-aaW
-aaW
-aaS
+avW
+avW
+avW
+avR
 abd
 aaS
 ato
@@ -77024,11 +77328,11 @@ aca
 hOc
 aba
 aaS
-ihE
-ihE
-ihE
-ihE
-ihE
+awh
+awe
+awc
+avX
+avS
 ihE
 aaS
 ato
@@ -77111,10 +77415,10 @@ acw
 hOc
 aba
 aaS
-abZ
+awi
 abo
 abo
-abo
+avY
 abo
 aaY
 aaS
@@ -77204,7 +77508,7 @@ hOc
 hOc
 hOc
 aba
-aaS
+avF
 ato
 asx
 asu
@@ -77291,7 +77595,7 @@ hOc
 hOc
 hOc
 aba
-aaS
+avF
 ato
 asz
 asu
@@ -77372,12 +77676,12 @@ aca
 hOc
 aba
 aaS
-aca
-hOc
-hOc
-hOc
-hOc
-aba
+awj
+abr
+abr
+avZ
+abr
+abe
 aaS
 ato
 asz
@@ -77459,12 +77763,12 @@ aca
 hOc
 aba
 aaS
-acc
-abr
-abr
-abr
-abr
-abe
+awm
+awe
+awc
+avX
+avT
+avK
 aaS
 ato
 asz
@@ -78588,7 +78892,7 @@ aiu
 aiD
 acc
 abr
-abr
+awq
 abr
 abr
 abe
@@ -78674,10 +78978,10 @@ aiu
 aiu
 aiD
 aaS
-aaO
+awt
 aaS
-aaW
-aaW
+avW
+avW
 aaS
 aaX
 aaX
@@ -78760,12 +79064,12 @@ aiG
 aiu
 aiu
 aiD
-abZ
+awu
 abo
-abo
+awr
 acj
 abo
-aaY
+awg
 aaS
 abP
 abz
@@ -78847,11 +79151,11 @@ aiG
 aiu
 aiu
 aiD
-aca
+awv
 acs
 acd
 ack
-acd
+awn
 aba
 aaS
 aaS
@@ -78934,16 +79238,16 @@ aiG
 aoz
 aiu
 aiD
-aca
+aww
 act
-ace
+aws
 acl
 ace
 aba
 aaS
+awa
 abn
-abn
-abn
+avL
 aaS
 ato
 asz
@@ -79021,16 +79325,16 @@ aiG
 aiu
 aiu
 aiD
-aca
+awx
 acm
 acf
 acm
 acf
 aba
-aaO
+awd
 abn
-abn
-abn
+avU
+avN
 aaS
 ato
 asz
@@ -79108,16 +79412,16 @@ aiG
 aiu
 aiu
 aiD
-acc
+awy
 abr
 abr
-abr
+awo
 abr
 abe
 aaS
+awb
 abn
-abn
-abn
+avO
 aaS
 atq
 asy
@@ -98420,7 +98724,7 @@ qeo
 qeo
 adg
 adW
-adN
+awM
 adE
 adE
 aew
@@ -98944,7 +99248,7 @@ qeo
 qeo
 qeo
 lyI
-aaS
+adg
 abZ
 abo
 abo
@@ -98955,7 +99259,7 @@ abo
 abo
 abo
 aaY
-aaS
+adg
 auB
 auh
 atT
@@ -99031,7 +99335,7 @@ qeo
 qeo
 qeo
 qeo
-aaS
+adg
 aca
 hOc
 hOc
@@ -99042,7 +99346,7 @@ hOc
 abX
 adA
 adm
-aaS
+adg
 auB
 aui
 atT
@@ -99118,7 +99422,7 @@ xmN
 xmN
 qeo
 qeo
-aaS
+adg
 aca
 hOc
 hOc
@@ -99127,9 +99431,9 @@ hOc
 hOc
 hOc
 adG
-rYx
-rYx
-aaS
+awJ
+awH
+adg
 auB
 aui
 atT
@@ -99205,7 +99509,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 aca
 hOc
 hOc
@@ -99214,9 +99518,9 @@ hOc
 hOc
 hOc
 adG
+awK
 rYx
-rYx
-aaS
+adg
 auB
 aui
 atT
@@ -99292,7 +99596,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 avr
 hOc
 hOc
@@ -99301,9 +99605,9 @@ abX
 adA
 adA
 adH
-rYx
+awK
 avp
-aaS
+adg
 auB
 auh
 atT
@@ -99379,7 +99683,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 aca
 hOc
 hOc
@@ -99387,10 +99691,10 @@ hOc
 aba
 adR
 adJ
+awH
+awL
 rYx
-rYx
-rYx
-aaS
+adg
 auB
 aue
 atT
@@ -99466,7 +99770,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 aca
 hOc
 hOc
@@ -99474,10 +99778,10 @@ hOc
 aba
 adS
 adK
-rYx
-rYx
-rYx
-aaS
+awI
+awI
+awI
+adg
 auB
 auh
 atT
@@ -99553,7 +99857,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 aca
 hOc
 hOc
@@ -99564,7 +99868,7 @@ adB
 adB
 adB
 adn
-aaS
+awF
 auB
 aui
 atT
@@ -99640,7 +99944,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 acc
 abr
 abr
@@ -99651,7 +99955,7 @@ abr
 abr
 abr
 abe
-aaS
+awG
 auB
 aui
 avn
@@ -99727,18 +100031,18 @@ lrC
 xmN
 qeo
 qeo
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
 auB
 aui
 atT
@@ -99814,7 +100118,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -99825,7 +100129,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 auh
 atT
@@ -99901,7 +100205,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -99912,7 +100216,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aue
 atT
@@ -99988,7 +100292,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -99999,7 +100303,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 auh
 atT
@@ -100075,8 +100379,8 @@ lrC
 xmN
 qeo
 qeo
-aaS
-aaS
+adg
+adg
 edV
 edV
 edV
@@ -100086,7 +100390,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 atT
@@ -100163,7 +100467,7 @@ xmN
 qeo
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100173,7 +100477,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 atT
@@ -100250,7 +100554,7 @@ xmN
 qeo
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100260,7 +100564,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 atT
@@ -100337,7 +100641,7 @@ xmN
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100347,7 +100651,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 auh
 atT
@@ -100424,7 +100728,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100434,7 +100738,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aue
 atT
@@ -100511,7 +100815,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100521,7 +100825,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 auh
 atT
@@ -100598,7 +100902,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100608,7 +100912,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 atT
@@ -100685,7 +100989,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100695,7 +100999,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 avn
@@ -100772,7 +101076,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100782,7 +101086,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 atT
@@ -100859,7 +101163,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100869,7 +101173,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 auh
 atT
@@ -100946,7 +101250,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -100956,7 +101260,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aue
 atT
@@ -101033,7 +101337,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -101043,7 +101347,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 auh
 atT
@@ -101120,7 +101424,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -101130,7 +101434,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 atT
@@ -101207,7 +101511,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -101217,7 +101521,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 atT
@@ -101294,7 +101598,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -101304,7 +101608,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 aui
 atT
@@ -101381,7 +101685,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -101391,7 +101695,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auB
 auh
 atT
@@ -101468,7 +101772,7 @@ lrC
 xmN
 qeo
 qeo
-aaS
+adg
 edV
 edV
 edV
@@ -101478,7 +101782,7 @@ edV
 edV
 edV
 edV
-aaS
+adg
 auD
 auf
 atU
@@ -101555,17 +101859,17 @@ lrC
 xmN
 qeo
 qeo
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
-aaS
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
+adg
 aaS
 acY
 qPE
