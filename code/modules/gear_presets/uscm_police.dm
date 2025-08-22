@@ -148,7 +148,7 @@
 	)
 	assignment = JOB_CHIEF_POLICE
 	rank = JOB_CHIEF_POLICE
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_WO1 = JOB_PLAYTIME_TIER_0)
 	minimum_age = 23
 	role_comm_title = "CMP"
 	skills = /datum/skills/CMP
@@ -181,7 +181,23 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 
+/datum/equipment_preset/uscm_ship/uscm_police/cmp/wo2
+	paygrades = list(PAY_SHORT_MW2)
 
+/datum/equipment_preset/uscm_ship/uscm_police/cmp/wo3
+	paygrades = list(PAY_SHORT_MW3)
+
+/datum/equipment_preset/uscm_ship/uscm_police/cmp/wo4
+	paygrades = list(PAY_SHORT_MW4)
+
+/datum/equipment_preset/uscm_ship/uscm_police/cmp/wo5
+	paygrades = list(PAY_SHORT_MW5)
+
+/datum/equipment_preset/uscm_ship/uscm_police/cmp/o1
+	paygrades = list(PAY_SHORT_MO1)
+
+/datum/equipment_preset/uscm_ship/uscm_police/cmp/o2
+	paygrades = list(PAY_SHORT_MO2)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/uscm_police/riot_mp

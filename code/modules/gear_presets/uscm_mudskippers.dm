@@ -419,16 +419,16 @@
 //weapon
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_J_STORE)
 
-/datum/equipment_preset/uscm_mudskippers/leader/full/e4
+/datum/equipment_preset/uscm_mudskippers/leader/e4
 	paygrades = list(PAY_SHORT_ME4)
 
-/datum/equipment_preset/uscm_mudskippers/leader/full/e6
+/datum/equipment_preset/uscm_mudskippers/leader/e6
 	paygrades = list(PAY_SHORT_ME6)
 
-/datum/equipment_preset/uscm_mudskippers/leader/full/e7
+/datum/equipment_preset/uscm_mudskippers/leader/e7
 	paygrades = list(PAY_SHORT_ME7)
 
-/datum/equipment_preset/uscm_mudskippers/leader/full/e8
+/datum/equipment_preset/uscm_mudskippers/leader/e8
 	paygrades = list(PAY_SHORT_ME8)
 
 //---SG---//
@@ -527,13 +527,13 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank(new_human), WEAR_IN_R_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank(new_human), WEAR_IN_R_STORE)
 
-/datum/equipment_preset/uscm_mudskippers/sg/full/e2
+/datum/equipment_preset/uscm_mudskippers/sg/e2
 	paygrades = list(PAY_SHORT_ME2)
 
-/datum/equipment_preset/uscm_mudskippers/sg/full/e3
+/datum/equipment_preset/uscm_mudskippers/sg/e3
 	paygrades = list(PAY_SHORT_ME3)
 
-/datum/equipment_preset/uscm_mudskippers/sg/full/e4
+/datum/equipment_preset/uscm_mudskippers/sg/e4
 	paygrades = list(PAY_SHORT_ME4)
 
 //---Medic---//
@@ -614,7 +614,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/mk1_heap(new_human), WEAR_R_STORE)
 
-/datum/equipment_preset/uscm_mudskippers/medic/full/e4
+/datum/equipment_preset/uscm_mudskippers/medic/e4
 	paygrades = list(PAY_SHORT_ME4)
 
 //---Engi---//
@@ -696,7 +696,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/heap(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/heap(new_human), WEAR_IN_JACKET)
 
-/datum/equipment_preset/uscm_mudskippers/engineer/full/e3
+/datum/equipment_preset/uscm_mudskippers/engineer/e3
 	paygrades = list(PAY_SHORT_ME3)
 
 /datum/equipment_preset/proc/pick_engi_kit(mob/living/carbon/human/new_human)
