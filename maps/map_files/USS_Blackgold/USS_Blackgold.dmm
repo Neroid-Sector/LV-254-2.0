@@ -1828,6 +1828,13 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/star/fore)
+"agy" = (
+/obj/docking_port/stationary/emergency_response/external/hangar_port{
+	dwidth = 8;
+	name = "Blackgold Port Umbillical Dock"
+	},
+/turf/open/space/basic,
+/area/space)
 "agz" = (
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/hallways/mid/mid)
@@ -2110,10 +2117,6 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/aft)
-"ahL" = (
-/turf/open/space/basic,
-/turf/open/floor/plating,
-/area/blackgold/middle/maint/port/mid)
 "ahM" = (
 /turf/closed/wall/almayer,
 /area/blackgold/middle/maint/port/aft)
@@ -2132,11 +2135,6 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/fore)
-"ahR" = (
-/obj/structure/largecrate/supply/weapons/m39,
-/obj/structure/flora/jungle/vines/light_1,
-/turf/open/floor/almayer/no_build/plate,
-/area/blackgold/underdeck/req)
 "ahS" = (
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer/no_build/plate,
@@ -2194,10 +2192,6 @@
 /obj/structure/window/framed/almayer,
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/middle/maint/port/aft)
-"aid" = (
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/blackgold/middle/maint/port/mid)
 "aie" = (
 /turf/open/floor/almayer/black/northwest,
 /area/blackgold/middle/rooms/hangar)
@@ -5773,16 +5767,299 @@
 	},
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/almayer/hallways/lower/port_midship_hallway)
+"awN" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	id = "s_umbilical";
+	name = "\improper Umbillical Airlock";
+	unacidable = 1;
+	explo_proof = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/port/aft)
+"awO" = (
+/turf/open/floor/almayer/plating_stripedcorner/west,
+/area/blackgold/lower/maint/port/aft)
+"awP" = (
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/lower/maint/port/aft)
+"awQ" = (
+/turf/open/floor/almayer/plating_stripedcorner/east,
+/area/blackgold/lower/maint/port/aft)
+"awR" = (
+/turf/open/floor/almayer/plating_striped/west,
+/area/blackgold/lower/maint/port/aft)
+"awS" = (
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/lower/maint/port/aft)
+"awT" = (
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/lower/maint/port/aft)
+"awU" = (
+/turf/open/floor/almayer/plating_stripedcorner/north,
+/area/blackgold/lower/maint/port/aft)
+"awV" = (
+/turf/open/floor/almayer/plating_striped/north,
+/area/blackgold/lower/maint/port/aft)
+"awW" = (
+/turf/open/floor/almayer/plating_stripedcorner/south,
+/area/blackgold/lower/maint/port/aft)
+"awX" = (
+/obj/structure/window/framed/almayer/chapel,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/fore)
+"awY" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
+	name = "\improper Chapel"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/maint/star/fore)
+"awZ" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/maint/star/fore)
+"axa" = (
+/obj/structure/bed/sofa/pews/flipped,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axb" = (
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axc" = (
+/obj/structure/bed/sofa/pews/flipped,
+/obj/structure/machinery/light/orange,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axd" = (
+/obj/structure/bed/sofa/pews,
+/obj/structure/machinery/light/orange,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axe" = (
+/obj/structure/bed/sofa/pews,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axf" = (
+/obj/structure/bed/sofa/pews/flipped{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axg" = (
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/lower/maint/star/fore)
+"axh" = (
+/obj/structure/bed/sofa/pews/flipped{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/lower/maint/star/fore)
+"axi" = (
+/obj/structure/bed/sofa/pews/flipped{
+	dir = 1
+	},
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/lower/maint/star/fore)
+"axj" = (
+/obj/structure/bed/sofa/pews{
+	dir = 1
+	},
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/lower/maint/star/fore)
+"axk" = (
+/obj/structure/bed/sofa/pews{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/lower/maint/star/fore)
+"axl" = (
+/obj/structure/bed/sofa/pews{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axm" = (
+/obj/structure/window/framed/almayer/chapel,
+/turf/open/floor/almayer/black/west,
+/area/blackgold/lower/hallways/star/fore)
+"axn" = (
+/obj/structure/bed/sofa/pews/flipped{
+	dir = 1
+	},
+/obj/structure/machinery/light/orange{
+	dir = 8
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axo" = (
+/obj/structure/bed/sofa/pews{
+	dir = 1
+	},
+/obj/structure/machinery/light/orange{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axp" = (
+/obj/structure/surface/table/woodentable,
+/obj/item/device/flashlight/lamp/menorah{
+	pixel_y = 8;
+	pixel_x = 16
+	},
+/obj/item/tool/candle{
+	pixel_x = -10;
+	pixel_y = -2
+	},
+/obj/item/storage/bible{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/lower/maint/star/fore)
+"axq" = (
+/obj/structure/surface/table/woodentable,
+/obj/item/tool/candle{
+	pixel_x = 12;
+	pixel_y = -2
+	},
+/obj/item/storage/fancy/candle_box{
+	pixel_y = 8;
+	pixel_x = 3
+	},
+/obj/item/prop/helmetgarb/rosary{
+	pixel_y = -4;
+	layer = 3
+	},
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/lower/maint/star/fore)
+"axr" = (
+/obj/structure/flora/pottedplant/random,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axs" = (
+/obj/structure/prop/church/jesus{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axt" = (
+/obj/structure/machinery/light/orange{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axu" = (
+/obj/structure/bookcase{
+	icon_state = "book-5";
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axv" = (
+/obj/structure/sign/cross{
+	pixel_x = 15;
+	pixel_y = 31
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
+"axw" = (
+/obj/structure/prop/church/mary{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/maint/star/fore)
 "axx" = (
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
+"axy" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
+	name = "\improper Gym"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/maint/star/fore)
+"axz" = (
+/obj/structure/machinery/conveyor{
+	dir = 4;
+	id = "gym_1";
+	name = "treadmill"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
+"axA" = (
+/obj/structure/machinery/conveyor{
+	dir = 4;
+	id = "gym_1";
+	name = "treadmill"
+	},
+/turf/open/floor/almayer/green/southwest,
+/area/blackgold/lower/maint/star/fore)
+"axB" = (
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/maint/star/fore)
 "axC" = (
 /obj/structure/coatrack{
 	pixel_x = 10
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/xo)
+"axD" = (
+/turf/open/floor/almayer/green/southeast,
+/area/blackgold/lower/maint/star/fore)
+"axE" = (
+/obj/structure/closet{
+	name = "boxing attire";
+	layer = 3.5
+	},
+/obj/item/clothing/under/shorts/blue,
+/obj/item/clothing/under/shorts/blue,
+/obj/item/clothing/under/shorts/red,
+/obj/item/clothing/under/shorts/red,
+/obj/item/clothing/under/shorts/green,
+/obj/item/clothing/under/shorts/green,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/grey,
+/obj/item/clothing/under/shorts/grey,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
+"axF" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/conveyor_switch{
+	id = "gym_1";
+	name = "treadmill switch"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
+"axG" = (
+/turf/open/floor/almayer/green/west,
+/area/blackgold/lower/maint/star/fore)
+"axH" = (
+/turf/open/floor/almayer,
+/area/blackgold/lower/maint/star/fore)
+"axI" = (
+/turf/open/floor/almayer/greencorner/east,
+/area/blackgold/lower/maint/star/fore)
+"axJ" = (
+/obj/structure/platform/metal/ship/corner/west,
+/turf/open/floor/almayer/green/north,
+/area/blackgold/lower/maint/star/fore)
+"axK" = (
+/obj/structure/platform/metal/ship/north,
+/turf/open/floor/almayer/green/north,
+/area/blackgold/lower/maint/star/fore)
+"axL" = (
+/obj/structure/platform/metal/ship/north,
+/turf/open/floor/almayer/green/northeast,
+/area/blackgold/lower/maint/star/fore)
+"axM" = (
+/obj/structure/platform/metal/ship/north,
+/obj/structure/closet/boxinggloves{
+	layer = 3.5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
 "axN" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/device/flashlight/lamp/green{
@@ -5790,25 +6067,637 @@
 	},
 /turf/open/floor/hybrisa/carpet/carpetreddeco,
 /area/blackgold/upper/rooms/cic/conference)
+"axO" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/fore)
+"axP" = (
+/obj/structure/machinery/conveyor{
+	dir = 4;
+	id = "gym_1";
+	name = "treadmill"
+	},
+/turf/open/floor/almayer/green/west,
+/area/blackgold/lower/maint/star/fore)
+"axQ" = (
+/turf/open/floor/almayer/green/east,
+/area/blackgold/lower/maint/star/fore)
+"axR" = (
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "ramptop"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
+"axS" = (
+/obj/structure/barricade/handrail{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/almayer/blue/southwest,
+/area/blackgold/lower/maint/star/fore)
+"axT" = (
+/obj/structure/barricade/handrail,
+/turf/open/floor/almayer,
+/area/blackgold/lower/maint/star/fore)
+"axU" = (
+/obj/structure/barricade/handrail,
+/turf/open/floor/almayer/emerald/southeast,
+/area/blackgold/lower/maint/star/fore)
+"axV" = (
+/turf/open/floor/almayer/green/northwest,
+/area/blackgold/lower/maint/star/fore)
+"axW" = (
+/turf/open/floor/almayer/green/north,
+/area/blackgold/lower/maint/star/fore)
+"axX" = (
+/turf/open/floor/almayer/green/northeast,
+/area/blackgold/lower/maint/star/fore)
+"axY" = (
+/obj/structure/barricade/handrail{
+	dir = 8;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer,
+/area/blackgold/lower/maint/star/fore)
 "axZ" = (
 /turf/open/floor/almayer/plating_stripedcorner/east,
 /area/blackgold/lower/hallways/mid/mid)
+"aya" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
+"ayb" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 3
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/maint/star/fore)
+"ayc" = (
+/obj/structure/machinery/door/window/eastright{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
+"ayd" = (
+/obj/structure/machinery/door/window/eastleft{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
+"aye" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 3
+	},
+/obj/structure/platform/metal/ship/east,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
 "ayf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
 	},
 /turf/open/floor/almayer/flooredge/east,
 /area/blackgold/lower/rooms/cryo)
+"ayg" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -12
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayh" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -12
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayi" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -12
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayj" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -12
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayk" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -12
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayl" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -12
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/metal/ship/east,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"aym" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3
+	},
+/turf/open/floor/almayer/red/northwest,
+/area/blackgold/lower/maint/star/fore)
+"ayn" = (
+/turf/open/floor/almayer/orange/northeast,
+/area/blackgold/lower/maint/star/fore)
+"ayo" = (
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/fore)
+"ayp" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayq" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayr" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_x = -6
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_x = 9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
 "ays" = (
 /obj/structure/platform/metal/ship,
 /turf/open/floor/almayer/orange/southeast,
 /area/blackgold/upper/rooms/cic)
+"ayt" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2;
+	pixel_y = 23
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 2;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayu" = (
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayv" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayw" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2;
+	pixel_y = 21
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8";
+	pixel_x = -2;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayx" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayy" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/metal/ship/corner,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayz" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8";
+	pixel_x = -16;
+	pixel_y = -16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 16;
+	pixel_y = -16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 8
+	},
+/obj/structure/holohoop{
+	dir = 4;
+	id = "basketball";
+	side = "left"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayA" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8";
+	pixel_x = -16;
+	pixel_y = -16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 16;
+	pixel_y = -16
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayB" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayC" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8";
+	pixel_x = -16;
+	pixel_y = -16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 16;
+	pixel_y = -16
+	},
+/obj/item/toy/beach_ball/holoball,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayD" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8";
+	pixel_x = -16;
+	pixel_y = -16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 16;
+	pixel_y = -16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayE" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8";
+	pixel_x = -16;
+	pixel_y = -16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 16;
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 16;
+	pixel_y = -16
+	},
+/obj/structure/holohoop{
+	dir = 8;
+	id = "basketball";
+	side = "right"
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayF" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayG" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 4
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8";
+	pixel_x = -2
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayH" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayI" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2;
+	pixel_y = -22
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal6";
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayJ" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
 "ayK" = (
 /obj/docking_port/stationary/vehicle_elevator/almayer{
 	name = "Blackgold Vehicle Elevator Dock"
 	},
 /turf/open/floor/almayer/empty/vehicle_bay,
 /area/blackgold/lower/rooms/req)
+"ayL" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2;
+	pixel_y = -21
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal5";
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayM" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayN" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 4
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal7";
+	pixel_x = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayO" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayP" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = -12
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 16
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayQ" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2
+	},
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayR" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 16
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayS" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayT" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2
+	},
+/obj/structure/machinery/scoreboard{
+	id = "basketball";
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayU" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 2
+	},
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayV" = (
+/obj/structure/desertdam/decals/road_edge{
+	pixel_x = 16
+	},
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 16
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/maint/star/fore)
+"ayW" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	id = "n_umbilical";
+	name = "\improper Umbillical Airlock";
+	unacidable = 1;
+	explo_proof = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/maint/star/aft)
+"ayX" = (
+/turf/open/floor/almayer/plating_stripedcorner/west,
+/area/blackgold/lower/maint/star/aft)
+"ayY" = (
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/lower/maint/star/aft)
+"ayZ" = (
+/turf/open/floor/almayer/plating_stripedcorner/east,
+/area/blackgold/lower/maint/star/aft)
+"aza" = (
+/turf/open/floor/almayer/plating_striped/west,
+/area/blackgold/lower/maint/star/aft)
+"azb" = (
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/lower/maint/star/aft)
+"azc" = (
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/lower/maint/star/aft)
+"azd" = (
+/turf/open/floor/almayer/plating_stripedcorner/north,
+/area/blackgold/lower/maint/star/aft)
+"aze" = (
+/turf/open/floor/almayer/plating_striped/north,
+/area/blackgold/lower/maint/star/aft)
+"azf" = (
+/turf/open/floor/almayer/plating_stripedcorner/south,
+/area/blackgold/lower/maint/star/aft)
+"azg" = (
+/obj/docking_port/stationary/emergency_response/external/hangar_starboard{
+	dwidth = 8;
+	name = "Blackgold Starboard Umbillical Dock"
+	},
+/turf/open/space/basic,
+/area/space)
 "azl" = (
 /turf/open/floor/almayer/red/northeast,
 /area/blackgold/upper/rooms/brig/lobby)
@@ -36282,7 +37171,7 @@ auR
 ydL
 ydL
 ajb
-ahR
+tiX
 nFn
 obL
 obL
@@ -46532,7 +47421,7 @@ aqJ
 aqJ
 aqJ
 aqJ
-aqJ
+axm
 arr
 aqJ
 aqJ
@@ -46780,14 +47669,14 @@ afU
 afW
 agW
 afX
+ayo
+ayo
+ayo
+ayo
 afX
 afX
 afX
-afX
-afX
-afX
-afX
-afX
+axO
 afX
 afX
 afX
@@ -46867,22 +47756,22 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+afX
+afX
+afX
+afX
+afX
+aya
+axF
+axz
+axF
+axz
+afX
+axr
+axb
+axn
+axf
+axa
 afX
 aqU
 agg
@@ -46954,23 +47843,23 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayP
+ayF
+ayz
+ayp
+ayg
+ayb
+axV
+axP
+axG
+axA
 afX
+axs
+axg
+axg
+axg
+axb
+awX
 aqU
 agz
 afE
@@ -47041,22 +47930,22 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayQ
+ayG
+ayu
+ayq
+ayh
+ayb
+axW
+axH
+axH
+axB
+awX
+axb
+axg
+axi
+axh
+axa
 afX
 aqU
 agC
@@ -47128,22 +48017,22 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayR
+ayH
+ayu
+ayr
+ayi
+ayb
+axW
+axH
+axH
+axB
+axy
+axb
+axg
+axg
+axg
+axb
 afX
 aqU
 agz
@@ -47155,10 +48044,10 @@ aeV
 aeV
 aeV
 aeV
-aeV
-aeV
-aeV
-aeV
+aeT
+aeT
+aeT
+aeT
 aeV
 aeV
 aeV
@@ -47215,22 +48104,22 @@ afU
 afW
 agW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayR
+ayI
+ayA
+ayt
+ayi
+ayc
+axW
+axH
+axH
+axB
+awZ
+axb
+axg
+axi
+axh
+axa
 afX
 aqU
 agg
@@ -47242,10 +48131,10 @@ aeV
 aeV
 aeV
 aeV
-aeV
-aeV
-aeV
-aeV
+aeT
+aeT
+aeT
+aeT
 aeV
 aeV
 aeV
@@ -47302,23 +48191,23 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afX
+ayR
+ayu
+ayu
+ayu
+ayj
+ayd
+axW
+axH
+axH
+axB
+awX
+axb
+axg
+axg
+axg
+axb
+awX
 aqU
 agg
 afE
@@ -47329,7 +48218,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -47389,22 +48278,22 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayS
+ayu
+ayB
+ayu
+ayj
+ayb
+axW
+axH
+axH
+axB
+afX
+axt
+axg
+axg
+axi
+axc
 afX
 aqU
 agg
@@ -47416,7 +48305,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -47476,43 +48365,43 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayT
+ayJ
+ayC
+ayv
+ayk
+ayb
+axW
+axH
+axH
+axB
+afX
+axu
+axg
+axg
+axg
+axb
 afX
 aqU
 agz
 afE
 aeW
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
 aeW
 aeV
 aeV
@@ -47563,27 +48452,27 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayS
+ayB
+ayu
+ayu
+ayi
+ayb
+axW
+axH
+axH
+axB
 afX
+axv
+axp
+axg
+axg
+axb
+awY
 aqU
 agC
 afE
-aeW
+aeV
 aeV
 aeV
 aeV
@@ -47650,27 +48539,27 @@ afU
 afW
 agW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayS
+ayu
+ayu
+ayu
+ayi
+ayc
+axW
+axH
+axH
+axB
 afX
+axb
+axq
+axg
+axg
+axb
+awZ
 aqU
 agz
 afE
-aeW
+aeV
 aeV
 aeV
 aeV
@@ -47737,43 +48626,43 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayR
+ayL
+ayD
+ayw
+ayi
+ayd
+axW
+axH
+axH
+axB
+afX
+axu
+axg
+axg
+axg
+axb
 afX
 aqU
 agg
 afE
 aeW
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
+aeW
 aeW
 aeV
 aeV
@@ -47824,22 +48713,22 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayR
+ayM
+ayu
+ayr
+ayi
+ayb
+axW
+axH
+axH
+axB
+afX
+axt
+axg
+axg
+axj
+axd
 afX
 aqU
 agg
@@ -47851,7 +48740,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -47911,23 +48800,23 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afX
+ayU
+ayN
+ayu
+ayx
+ayh
+ayb
+axX
+axQ
+axI
+axB
+awX
+axb
+axg
+axg
+axg
+axb
+awX
 aqU
 agg
 afE
@@ -47938,7 +48827,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -47998,22 +48887,22 @@ afU
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayV
+ayO
+ayE
+ayy
+ayl
+aye
+axR
+axR
+axJ
+axB
+axy
+axb
+axg
+axj
+axk
+axe
 afX
 aqU
 agz
@@ -48025,7 +48914,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -48089,18 +48978,18 @@ afX
 afX
 afX
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+aym
+axY
+axY
+axS
+axK
+axB
+awZ
+axb
+axg
+axg
+axg
+axb
 afX
 aqU
 agC
@@ -48112,7 +49001,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -48176,18 +49065,18 @@ afW
 afW
 agp
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+axH
+axH
+axH
+axT
+axK
+axB
+awX
+axb
+axg
+axj
+axk
+axe
 afX
 aqU
 agz
@@ -48199,7 +49088,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -48263,19 +49152,19 @@ afW
 afW
 afW
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+axH
+axH
+axH
+axT
+axL
+axD
 afX
+axw
+axg
+axg
+axg
+axb
+awX
 aqU
 agg
 afE
@@ -48286,7 +49175,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -48350,18 +49239,18 @@ afU
 afX
 agN
 afX
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
-afW
+ayn
+axH
+axH
+axU
+axM
+axE
+afX
+axr
+axb
+axo
+axl
+axe
 afX
 aqU
 agg
@@ -48373,7 +49262,7 @@ aeV
 aeV
 aeV
 aeV
-aeV
+aeW
 aeV
 aeV
 aeV
@@ -56073,7 +56962,7 @@ kPX
 kPX
 kPX
 kPX
-kPX
+azg
 kPX
 kPX
 akL
@@ -56141,7 +57030,7 @@ akL
 kPX
 kPX
 kPX
-kPX
+agy
 kPX
 kPX
 kPX
@@ -56779,10 +57668,10 @@ lrC
 lrC
 lrC
 lrC
-lrC
-lrC
-lrC
-lrC
+agm
+agm
+agm
+agm
 agm
 age
 age
@@ -56824,10 +57713,10 @@ afi
 afe
 afe
 afb
-lrC
-lrC
-lrC
-lrC
+afb
+afb
+afb
+afb
 lrC
 lrC
 lrC
@@ -56866,11 +57755,11 @@ lrC
 lrC
 lrC
 lrC
-lrC
-lrC
-lrC
-lrC
-agm
+ayW
+azd
+aza
+ayX
+ayW
 age
 age
 agd
@@ -56910,11 +57799,11 @@ afq
 afi
 afe
 afe
-afb
-lrC
-lrC
-lrC
-lrC
+awN
+awU
+awR
+awO
+awN
 lrC
 lrC
 lrC
@@ -56953,11 +57842,11 @@ lrC
 lrC
 lrC
 lrC
-lrC
-lrC
-lrC
-lrC
-agm
+ayW
+aze
+azb
+ayY
+ayW
 age
 age
 agd
@@ -56997,11 +57886,11 @@ afq
 afi
 afe
 afe
-afb
-lrC
-lrC
-lrC
-lrC
+awN
+awV
+awS
+awP
+awN
 lrC
 lrC
 lrC
@@ -57040,11 +57929,11 @@ lrC
 lrC
 lrC
 lrC
-lrC
-lrC
-lrC
-lrC
-agm
+ayW
+aze
+azb
+ayY
+ayW
 age
 agM
 agd
@@ -57084,11 +57973,11 @@ afi
 afi
 aff
 afe
-afb
-lrC
-lrC
-lrC
-lrC
+awN
+awV
+awS
+awP
+awN
 lrC
 lrC
 lrC
@@ -57127,11 +58016,11 @@ lrC
 lrC
 lrC
 lrC
-lrC
-lrC
-lrC
-lrC
-agm
+ayW
+azf
+azc
+ayZ
+ayW
 age
 age
 agQ
@@ -57171,11 +58060,11 @@ afe
 afl
 afe
 afe
-afb
-lrC
-lrC
-lrC
-lrC
+awN
+awW
+awT
+awQ
+awN
 lrC
 lrC
 lrC
@@ -57214,10 +58103,10 @@ lrC
 lrC
 lrC
 lrC
-lrC
-lrC
-lrC
-lrC
+agm
+agm
+agm
+agm
 agm
 age
 age
@@ -57259,10 +58148,10 @@ afi
 afe
 afe
 afb
-lrC
-lrC
-lrC
-lrC
+afb
+afb
+afb
+afb
 lrC
 lrC
 lrC
@@ -72469,19 +73358,19 @@ asX
 asU
 asP
 ahz
-aid
-ahL
-ahL
-ahL
-ahL
-ahL
-ahL
-ahL
-ahL
-ahL
-ahL
-ahL
-ahL
+ahn
+ahn
+ahn
+ahn
+ahn
+ahn
+ahn
+ahn
+ahn
+ahn
+ahn
+ahn
+ahn
 ahn
 ahn
 ahn
@@ -73320,8 +74209,8 @@ ahu
 ahu
 ahu
 ahu
-ahu
-ahu
+cNr
+gEZ
 ahu
 ahu
 ahu
@@ -73346,8 +74235,8 @@ ahu
 ahu
 ahu
 ahu
-ahu
-ahu
+cNr
+gEZ
 ahu
 ahu
 ahu
@@ -74016,8 +74905,8 @@ ahu
 ahu
 ahu
 ahu
-ahu
-ahu
+cNr
+gEZ
 ahu
 ahu
 ahu
@@ -74042,8 +74931,8 @@ ahu
 ahu
 ahu
 ahu
-ahu
-ahu
+cNr
+gEZ
 ahu
 ahu
 ahu

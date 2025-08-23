@@ -181,6 +181,10 @@
 	desc = "A lighting fixture that is fitted with a bright red fluorescent light tube. Looking at it for too long makes your eyes go watery."
 	light_color = LIGHT_COLOR_RED
 
+/obj/structure/machinery/light/orange
+	desc = "A lighting fixture that is fitted with a soft orange fluorescent light tube. Somewhat soothing to look at."
+	light_color = LIGHT_COLOR_LAVA
+
 // the smaller bulb light fixture
 
 /obj/structure/machinery/light/small
