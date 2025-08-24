@@ -1,13 +1,13 @@
 /obj/structure/pallet
 	name = "wooden pallet"
 	desc = "A pallet made of cheap synthwood used for storing large amounts of items."
-	icon = 'icons/obj/structures/gun_racks.dmi'
+	icon = 'icons/obj/structures/crates.dmi'
 	icon_state = "pallet"
 	density = TRUE
 	anchored = FALSE
 	var/allowed_type
 	var/populate_type
-	var/max_stored = 9
+	var/max_stored = 18
 	var/initial_stored = 0
 
 /obj/structure/pallet/Initialize()
@@ -49,11 +49,9 @@
 
 /obj/structure/pallet/standard
 	allowed_type = /obj/item
-	populate_type = /obj/item
-
-/obj/structure/pallet/standard
 	populate_type = /obj/item/storage/box
+	initial_stored = 18
 
-/obj/structure/pallet/empty
+/obj/structure/pallet/standard/empty
 	initial_stored = 0
 
