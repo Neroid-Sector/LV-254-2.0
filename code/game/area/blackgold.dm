@@ -249,6 +249,14 @@
 /area/blackgold/lower/rooms/range/star
 	name = "\improper Lower Deck Starboard Firing Range"
 
+/area/blackgold/lower/rooms/chapel
+	name = "\improper Lower Deck Chapel"
+	icon_state = "officerrnr"
+
+/area/blackgold/lower/rooms/gym
+	name = "\improper Lower Deck Gym"
+	icon_state = "officerrnr"
+
 //-----------------------------------------Brig------------------------------------------//
 
 /area/blackgold/lower/rooms/brig
@@ -588,8 +596,6 @@
 /area/blackgold/upper/rooms/companycommand/delta/cc
 	name = "\improper Delta Company Commander's Office"
 
-
-
 /area/blackgold/upper/rooms/commandbunks
 	name = "\improper Commanding Officer's Office"
 	icon_state = "livingspace"
@@ -638,6 +644,11 @@
 	name = "\improper Lifeboat Docking Area"
 	icon_state = "lifeboat"
 	flags_area = AREA_NOTUNNEL
+
+/area/blackgold/upper/rooms/medical/cells
+	name = "\improper Medical Research containment cells"
+	icon_state = "science"
+	flags_area = AREA_AVOID_BIOSCAN|AREA_NOTUNNEL|AREA_CONTAINMENT
 
 //------------------------------------------Brig-----------------------------------------//
 
@@ -842,11 +853,6 @@
 	icon_state = "food"
 	fake_zlevel = 2 // lowerdeck
 
-/area/blackgold/living/gym
-	name = "\improper Lower Deck Gym"
-	icon_state = "officerrnr"
-	fake_zlevel = 2 // lowerdeck
-
 /area/blackgold/living/cafeteria_officer
 	name = "\improper Upper Deck Officer Cafeteria"
 	icon_state = "food"
@@ -864,11 +870,6 @@
 	name = "\improper Pilot's Bunks"
 	icon_state = "livingspace"
 	fake_zlevel = 1
-
-/area/blackgold/living/chapel
-	name = "\improper blackgold Chapel"
-	icon_state = "officerrnr"
-	fake_zlevel = 1 // upperdeck
 
 /area/blackgold/medical
 	minimap_color = MINIMAP_AREA_MEDBAY
@@ -901,17 +902,6 @@
 	name = "\improper Medical Research hydroponics"
 	icon_state = "science"
 	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/medical/containment
-	name = "\improper Medical Research containment"
-	icon_state = "science"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/medical/containment/cell
-	name = "\improper Medical Research containment cells"
-	icon_state = "science"
-	fake_zlevel = 1 // upperdeck
-	flags_area = AREA_AVOID_BIOSCAN|AREA_NOTUNNEL|AREA_CONTAINMENT
 
 /area/blackgold/medical/containment/cell/cl
 	name = "\improper Storage Room"
