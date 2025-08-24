@@ -1393,6 +1393,7 @@
 #include "code\game\objects\structures\morgue.dm"
 #include "code\game\objects\structures\musician.dm"
 #include "code\game\objects\structures\noticeboard.dm"
+#include "code\game\objects\structures\pallets.dm"
 #include "code\game\objects\structures\platforms.dm"
 #include "code\game\objects\structures\prop_mech.dm"
 #include "code\game\objects\structures\props.dm"
