@@ -144,14 +144,33 @@
 /obj/structure/pallet/standard
 	name = "Pallet of - (Empty Boxes)"
 	desc = "This pallet contains empty boxes."
-	fill_type = /obj/item/storage/box
+	fill_type = /obj/item/storage/box/wood
 	initial_stored = 18
+
+/obj/structure/pallet/standard/med
+	name = "Pallet of - (Empty Med Boxes)"
+	desc = "This pallet contains empty med boxes."
+	fill_type = /obj/item/storage/box/wood/med
+
+/obj/structure/pallet/standard/med
+	name = "Pallet of - (Empty Engi Boxes)"
+	desc = "This pallet contains empty engi boxes."
+	fill_type = /obj/item/storage/box/wood/engi
+
+/obj/structure/pallet/standard/med
+	name = "Pallet of - (Empty Food Boxes)"
+	desc = "This pallet contains empty Foodd boxes."
+	fill_type = /obj/item/storage/box/wood/food
+
+/obj/structure/pallet/standard/weapon
+	name = "Pallet of - (Empty Weapon Boxes)"
+	desc = "This pallet contains empty Weapon boxes."
+	fill_type = /obj/item/storage/box/wood/weapon
 
 /obj/structure/pallet/standard/he_mortar
 	name = "Pallet of - (HE Mortar Shells)"
 	desc = "This pallet contains HE mortar shells"
 	fill_type = /obj/item/storage/box/nade_box/mortar/he
-	initial_stored = 18
 
 /obj/structure/pallet/standard/empty
 	name = "wooden pallet"
