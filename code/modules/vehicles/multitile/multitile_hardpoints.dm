@@ -60,6 +60,28 @@
 /obj/vehicle/multitile/proc/remove_all_players()
 	return
 
+
+/obj/vehicle/multitile/proc/load_cargo(obj/item/O, mob/user)
+	if((istype(O,/obj/structure/pallet) || istype(O,/obj/structure/closet)) && contents.len < max_stored)
+		user.drop_inv_item_to_loc(O, src)
+		contents += O
+		O.forceMove(src)
+		to_chat(user, SPAN_NOTICE("You load \the [O] on \the [src]."))
+		playsound(loc, 'sound/machines/hydraulics_2.ogg',40,1)
+		update_icon()
+
+/obj/vehicle/multitile/proc/remove_cargo(obj/item/O, mob/user)
+	if(!contents.len)
+		to_chat(user, SPAN_WARNING("[src] is empty."))
+		return
+
+	var/obj/stored_obj = contents[contents.len]
+	contents -= stored_obj
+	user.put_in_hands(stored_obj)
+	to_chat(user, SPAN_NOTICE("You grab a [stored_obj] from [src]."))
+	playsound(src, "gun_rustle", 25, TRUE)
+	update_icon()
+
 //Putting on hardpoints
 //Similar to repairing stuff, down to the time delay
 /obj/vehicle/multitile/proc/install_hardpoint(obj/item/O, mob/user)

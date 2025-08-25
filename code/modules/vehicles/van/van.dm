@@ -29,7 +29,7 @@
 
 	vehicle_flags = VEHICLE_CLASS_WEAK
 
-	passengers_slots = 8
+	passengers_slots = 9
 	xenos_slots = 2
 
 	misc_multipliers = list(
@@ -238,6 +238,25 @@
 		return FALSE
 
 	return ..()
+
+/obj/vehicle/multitile/van/flatbed
+	name = "Colony Flatbed"
+	desc = "A rather old hunk of metal with four wheels, you know what to do. Entrance on the back and sides."
+	layer = ABOVE_XENO_LAYER
+
+	icon_state = "truck_base"
+	passengers_slots = 3
+	xenos_slots = 2
+	flatbed	= TRUE
+	max_stored = 2
+
+	interior_map = /datum/map_template/interior/truck
+
+	entrances = list(
+		"left" = list(2, 0),
+		"right" = list(-1, 0),
+	)
+
 
 /*
 ** PRESETS SPAWNERS

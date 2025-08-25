@@ -13,6 +13,16 @@
 			install_hardpoint(PC, user)
 			return
 
+		if(PC.linked_powerloader && PC.loaded && istype(PC.loaded, /obj/structure) && flatbed == TRUE)
+			load_cargo(PC.loaded, user)
+			PC.loaded = null
+			PC.update_icon()
+			return
+
+		if(ispowerclamp(O) && flatbed == TRUE)
+			remove_cargo(PC, user)
+			return
+
 	// Are we trying to remove stuff?
 	if(HAS_TRAIT(O, TRAIT_TOOL_CROWBAR) || ispowerclamp(O))
 		uninstall_hardpoint(O, user)

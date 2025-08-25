@@ -165,7 +165,7 @@
 		unpack()
 
 /obj/structure/pallet/proc/check_weight()
-	if(contents.len > 8)
+	if(contents.len > 9)
 		anchored = TRUE
 		heavy = TRUE
 		return
@@ -188,32 +188,38 @@
 /obj/structure/pallet/standard
 	name = "Pallet of - (Empty Boxes)"
 	desc = "This pallet contains empty boxes."
+	anchored = TRUE
 	fill_type = /obj/item/storage/box/wood
 	initial_stored = 18
 
 /obj/structure/pallet/standard/med
 	name = "Pallet of - (Empty Med Boxes)"
 	desc = "This pallet contains empty med boxes."
+	anchored = TRUE
 	fill_type = /obj/item/storage/box/wood/med
 
 /obj/structure/pallet/standard/med
 	name = "Pallet of - (Empty Engi Boxes)"
 	desc = "This pallet contains empty engi boxes."
+	anchored = TRUE
 	fill_type = /obj/item/storage/box/wood/engi
 
 /obj/structure/pallet/standard/med
 	name = "Pallet of - (Empty Food Boxes)"
 	desc = "This pallet contains empty Foodd boxes."
+	anchored = TRUE
 	fill_type = /obj/item/storage/box/wood/food
 
 /obj/structure/pallet/standard/weapon
 	name = "Pallet of - (Empty Weapon Boxes)"
 	desc = "This pallet contains empty Weapon boxes."
+	anchored = TRUE
 	fill_type = /obj/item/storage/box/wood/weapon
 
 /obj/structure/pallet/standard/he_mortar
 	name = "Pallet of - (HE Mortar Shells)"
 	desc = "This pallet contains HE mortar shells"
+	anchored = TRUE
 	fill_type = /obj/item/storage/box/nade_box/mortar/he
 
 /obj/structure/pallet/standard/empty

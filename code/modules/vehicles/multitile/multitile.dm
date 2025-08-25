@@ -63,6 +63,15 @@
 	//whether MP vehicle clamps are applied
 	var/clamped = FALSE
 
+	//whether vehicle has flatbed storage
+	var/flatbed = FALSE
+
+	var/allowed_type = list(/obj/structure)
+	var/max_stored = 0
+	var/initial_stored = 0
+	var/fill_type = /obj/structure/pallet
+
+
 	// The amount of skill required to drive the vehicle
 	var/required_skill = SKILL_VEHICLE_SMALL
 
@@ -186,6 +195,15 @@
 	light_pixel_x = -bound_x
 	light_pixel_y = -bound_y
 
+	if(!allowed_type)
+		icon_state = "cargo_0"
+		return
+
+	if(initial_stored)
+		var/i = 0
+		while(i < initial_stored)
+			contents += new fill_type(src)
+			i++
 	healthcheck()
 	update_icon()
 
@@ -253,6 +271,10 @@
 	if(clamped)
 		var/image/J = image(icon, icon_state = "vehicle_clamp", layer = layer+0.1)
 		overlays += J
+
+	if(flatbed)
+		var/cargo_overlay = "cargo_[contents.len]"
+		overlays += image(icon, cargo_overlay)
 
 //Normal examine() but tells the player what is installed and if it's broken
 /obj/vehicle/multitile/get_examine_text(mob/user)
