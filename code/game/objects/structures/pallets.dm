@@ -7,9 +7,10 @@
 	anchored = FALSE
 	climbable = TRUE
 	climb_delay = CLIMB_DELAY_SHORT
+	throwpass = 1
 	projectile_coverage = PROJECTILE_COVERAGE_NONE
-	var/allowed_type
-	var/fill_type
+	var/allowed_type = /obj/item
+	var/fill_type = /obj/item/storage/box
 	var/max_stored = 18
 	var/initial_stored = 0
 	var/parts_type = /obj/item/stack/sheet/wood
@@ -38,9 +39,14 @@
 			i++
 	update_icon()
 
+/obj/structure/pallet/initialize_pass_flags(datum/pass_flags_container/PF)
+	..()
+	if (PF)
+		PF.flags_can_pass_all = PASS_OVER|PASS_AROUND
+
 /obj/structure/pallet/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/tool/pen))
-		var/pallet_action_choice = tgui_input_list(user,"Label this pallet","Pallet Sign",list("WIP do not use","Change Manifest","Change Name"))
+		var/pallet_action_choice = tgui_input_list(user,"Label this pallet","Pallet Info",list("Change Manifest","Change Name"))
 
 		if(pallet_action_choice == null) return
 		switch(pallet_action_choice)
@@ -53,13 +59,8 @@
 			if("Change Manifest")
 				var/new_desc = tgui_input_text(user,"Enter New Content Manifest","Pallet")
 				if(new_desc == null) return
-				if(new_desc != desc) desc = "This pallet contains [new_desc]"
+				if(new_desc != desc) desc = "This pallet contains [new_desc]."
 				to_chat(user, SPAN_NOTICE("You finish writing a list of the contents for the pallet."))
-				return
-			if("Change Label")
-				var/pallet_label_choice= tgui_input_list(user, "Which supply label", "Supply Type", labels)
-				//Change Overlay Icon?
-				to_chat(user, SPAN_NOTICE("You finish attaching the (WIP) label on the pallet."))
 				return
 	if(istype(O, /obj/item))
 		if(HAS_TRAIT(O, TRAIT_TOOL_WRENCH))
@@ -69,7 +70,23 @@
 				playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 				anchored = !anchored
 				to_chat(user, SPAN_NOTICE("You [anchored ? "wrench" : "unwrench"] \the [src]."))
+				return
+	if(istype(O, /obj/item))
+		if(HAS_TRAIT(O, TRAIT_TOOL_CROWBAR))
+			if(user.action_busy)
+				return
+			else
+				playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
+				to_chat(user, SPAN_NOTICE("You dismantle \the [src]."))
+				unpack()
 			return
+	if(istype(O, /obj/item/powerloader_clamp))
+		return
+	if(istype(O, /obj/item/tool/stamp))
+		var/pallet_label_choice= tgui_input_list(user, "Which supply label", "Supply Type", labels)
+		//Change Overlay Icon?
+		to_chat(user, SPAN_NOTICE("You finish stamping the (WIP) label on the pallet."))
+		return
 	if(istype(O, allowed_type) && contents.len < max_stored)
 		user.drop_inv_item_to_loc(O, src)
 		contents += O
@@ -125,17 +142,19 @@
 //---Actual Pallet---\\
 
 /obj/structure/pallet/standard
-	allowed_type = /obj/item
+	name = "Pallet of - (Empty Boxes)"
+	desc = "This pallet contains empty boxes."
 	fill_type = /obj/item/storage/box
 	initial_stored = 18
 
 /obj/structure/pallet/standard/he_mortar
 	name = "Pallet of - (HE Mortar Shells)"
 	desc = "This pallet contains HE mortar shells"
-	allowed_type = /obj/item
-	fill_type = /obj/item/storage/backpack/marine/mortarpack/he
+	fill_type = /obj/item/storage/box/nade_box/mortar/he
 	initial_stored = 18
 
 /obj/structure/pallet/standard/empty
+	name = "wooden pallet"
+	desc = "A pallet made of cheap synthwood used for storing large amounts of items."
 	initial_stored = 0
 

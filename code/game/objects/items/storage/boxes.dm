@@ -770,21 +770,6 @@
 	. = ..()
 	if(!(flags_atom & NO_GAMEMODE_SKIN))
 		select_gamemode_skin()
-	RegisterSignal(src, COMSIG_ITEM_DROPPED, PROC_REF(try_forced_folding))
-
-/obj/item/storage/box/nade_box/proc/try_forced_folding(datum/source, mob/user)
-	SIGNAL_HANDLER
-
-	if(!isturf(loc))
-		return
-
-	if(length(contents))
-		return
-
-	UnregisterSignal(src, COMSIG_ITEM_DROPPED)
-	storage_close(user)
-	to_chat(user, SPAN_NOTICE("You throw away [src]."))
-	qdel(src)
 
 /obj/item/storage/box/nade_box/post_skin_selection()
 	base_icon = icon_state
@@ -881,6 +866,26 @@
 				qdel(grenade)
 			grenade_count++
 	UnregisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP)
+
+
+/obj/item/storage/box/nade_box/mortar
+	name = "\improper Watertight Mortar Shell Box"
+	desc = "A secure box holding 16 80mm Mortar shells. High explosive, don't store near the flamer fuel."
+	item_state = "mortar_shell_placeholder"
+	icon_state = "mortar_shell_placeholder"
+	model_icon = "hedp"
+	w_class = SIZE_HUGE
+	storage_slots = 16
+	max_storage_space = 50
+	can_hold = list(/obj/item/mortar_shell)
+	grenade_type = 0
+	bypass_w_limit = list(
+	/obj/item/mortar_shell,
+	)
+
+/obj/item/storage/box/nade_box/mortar/he
+	name = "\improper Watertight Mortar Shell Box"
+	grenade_type = /obj/item/mortar_shell/he
 
 
 //ITEMS-----------------------------------//
@@ -1121,6 +1126,54 @@
 /obj/item/storage/box/whitebeet/fill_preset_inventory()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_container/food/snacks/grown/whitebeet(src)
+
+
+//bulk boxes
+
+/obj/item/storage/box/wood
+	name = "Wooden box"
+	desc = "A wooden box for storing stuff on a pallet."
+	icon = 'icons/obj/items/storage/boxes.dmi'
+	icon_state = "wood"
+	item_state = "wood"
+	storage_slots = null
+	foldable = null
+	max_storage_space = 15
+	w_class = SIZE_HUGE
+	can_hold = list(/obj/item/clothing, /obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/clothing, /obj/item/storage/belt, /obj/item/device, /obj/item/device, /obj/item/explosive, /obj/item/storage/pill_bottle, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/firstaid)
+	bypass_w_limit = list(/obj/item/clothing, /obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/clothing, /obj/item/storage/belt, /obj/item/device, /obj/item/device, /obj/item/explosive, /obj/item/storage/pill_bottle, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/firstaid)
+
+/obj/item/storage/box/wood/med
+	name = "Medical box"
+	desc = "A wooden box for storing stuff on a pallet."
+	icon_state = "med"
+	item_state = "med"
+	can_hold = list(/obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/storage/firstaid, /obj/item/device, /obj/item/storage/syringe_case, /obj/item/storage/pill_bottle, /obj/item/storage/belt, /obj/item/storage/pouch, /obj/item/storage/backpack)
+	bypass_w_limit = list(/obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/storage/firstaid, /obj/item/device, /obj/item/storage/syringe_case, /obj/item/storage/pill_bottle, /obj/item/storage/belt, /obj/item/storage/pouch, /obj/item/storage/backpack)
+
+/obj/item/storage/box/wood/engi
+	name = "Engineering box"
+	desc = "A wooden box for storing engineering stuff on a pallet."
+	icon_state = "engi"
+	item_state = "engi"
+	can_hold = list(/obj/item/tool, /obj/item/cell, /obj/item/circuitboard, /obj/item/reagent_container, /obj/item/device, /obj/item/storage/belt, /obj/item/storage/toolkit, /obj/item/stack, /obj/item/storage/pouch, /obj/item/storage/backpack)
+	bypass_w_limit = list(/obj/item/tool, /obj/item/cell, /obj/item/circuitboard, /obj/item/reagent_container, /obj/item/device, /obj/item/storage/belt, /obj/item/storage/toolkit, /obj/item/stack, /obj/item/storage/pouch, /obj/item/storage/backpack)
+
+/obj/item/storage/box/wood/food
+	name = "Food box"
+	desc = "An insulated wooden box for storing foodstuffs on a pallet."
+	icon_state = "food"
+	item_state = "food"
+	can_hold = list(/obj/item/reagent_container, /obj/item/storage/box/mre, /obj/item/storage/backpack, /obj/item/pizzabox)
+	bypass_w_limit = list(/obj/item/reagent_container, /obj/item/storage/box/mre, /obj/item/storage/backpack, /obj/item/pizzabox)
+
+/obj/item/storage/box/wood/weapon
+	name = "Weapon Case"
+	desc = "A wooden box for weapons on a pallet."
+	icon_state = "guncase"
+	item_state = "guncase"
+	can_hold = list(/obj/item/weapon, /obj/item/explosive, /obj/item/storage/box/packet, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/large_holster)
+	bypass_w_limit = list(/obj/item/weapon, /obj/item/explosive, /obj/item/storage/box/packet, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/large_holster)
 
 // OWLF Containment Case
 
