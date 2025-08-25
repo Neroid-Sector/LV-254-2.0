@@ -795,6 +795,9 @@
 /obj/item/weapon/gun/revolver/cmb/normalpoint
 	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
 
+/obj/item/weapon/gun/revolver/cmb/slugger
+	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb/slugger
+
 /obj/item/weapon/gun/revolver/cmb/custom
 	name = "\improper Spearhead custom autorevolver"
 	desc = "An automatic revolver chambered in .357, custom made of darker metal and with a wooden handle, clearly made for a person with taste in mind."

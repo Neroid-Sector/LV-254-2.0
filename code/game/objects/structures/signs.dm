@@ -114,10 +114,77 @@
 	desc = "This banner depicts Delta Squad's motto. The Marines of Delta Squad adopted it after picking an old bomber movie for movie night a while back."
 	icon_state = "maximumeffort"
 
+//---paintings
+
 /obj/structure/sign/banners/flork
 	name = "\improper Modern Art"
 	desc = "This painting depicts an abstract scene with an unknown meaning. It has recently appeared in Ltcol Blackbriar's office after a series of unsuccessful operations, but it is high unlikely to be connected to the incident."
 	icon_state = "welldone"
+
+/obj/structure/sign/banners/forest
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "forest"
+
+/obj/structure/sign/banners/city
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "city"
+
+/obj/structure/sign/banners/city2
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "city2"
+
+/obj/structure/sign/banners/jungle
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "jungle"
+
+/obj/structure/sign/banners/ship
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "ship"
+
+/obj/structure/sign/banners/ruins
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "ruins"
+
+/obj/structure/sign/banners/mountain
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "mountain"
+
+/obj/structure/sign/banners/mesa
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "mesa"
+
+/obj/structure/sign/banners/base
+	name = "\improper Modern Art"
+	desc = "This painting depicts an abstract scene with an unknown meaning."
+	icon_state = "base"
+
+/obj/structure/sign/banners/blackbriar
+	name = "\improper Lt.Col Blackbriar's Portrait"
+	desc = "This painting depicts Lt.Col James Blackbriar in his field uniform some time around 2180 on chinook station. The painting's eyes seems to follow you around the room."
+	icon_state = "blackbriar"
+
+/obj/structure/sign/banners/vandervork
+	name = "\improper Maj. Vandervork's Portrait"
+	desc = "This painting depicts Maj. Canton Vandervork in his field uniform some time around 2180 on chinook station. Nobody but Lt.Col Blackbriar has seen him in person in over a year and nobody knows why."
+	icon_state = "vandervork"
+
+/obj/structure/sign/banners/splat
+	name = "\improper Defaced Portrait"
+	desc = "This painting depicts an unknown USCM officer. The painting was been vandalised by a mischievious marine during battalion's the new years eve party. Supposedly he is still rotting in brig."
+	icon_state = "splat"
+
+/obj/structure/sign/banners/hatred
+	name = "\improper Defaced Portrait"
+	desc = "This painting depicts an unknown businessman. Nobody knows what they did to deserve being used as a dartboard."
+	icon_state = "hatred"
 
 /obj/structure/sign/banners/united_americas_flag
 	name = "\improper United Americas flag"

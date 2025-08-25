@@ -240,3 +240,19 @@
 	item_state = "cbrn"
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+/obj/item/clothing/gloves/marine/veteran/biomerc
+	name = "\improper Type-15 Haz-tech gloves"
+	desc = "M3 MOPP gloves are made of treated venlar designed to protect the user’s hands against contamination whilst working in CBRN environments. Special care has been taken to give the user’s hands enough dexterity to fully service a rifle or utilize most handheld tools, while circular adhesive patterns on the fingers provide the user with enhanced grips. Standard CBRN protocol dictates that the gloves are expected to have a lifespan of maximum effectiveness of around twenty-four hours once exposed to moderate levels of contamination and that users are recommended to discard and replace them afterwards."
+	icon_state = "bio_merc"
+	item_state = "bio_merc"
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+/obj/item/clothing/gloves/marine/veteran/trauma
+	name = "\improper Decadencia Roja Pattern Surgical gloves"
+	desc = "A pair of red rubber comnbat surgical gloves designed to allow tactile feel for delicate operation of surgical tools and triggers alike, perfect for all your tactical extraction needs."
+	icon_state = "trauma"
+	item_state = "trauma"
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS

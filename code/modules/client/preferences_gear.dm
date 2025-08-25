@@ -319,16 +319,22 @@ GLOBAL_LIST_EMPTY(roles_with_gear)
 	display_name = "USCM balaclava, tan"
 	path = /obj/item/clothing/mask/rebreather/scarf/tan
 
+/datum/gear/mask/uscm/skull_gas_mask
+	display_name = "Custom Gasmask(skull)"
+	path = /obj/item/clothing/mask/gas/skull_gas_mask
+	fluff_cost = 2
+	slot = WEAR_FACE
+
 /datum/gear/mask/uscm/skull_balaclava_blue
 	display_name = "USCM balaclava, blue skull"
 	path = /obj/item/clothing/mask/rebreather/skull
-	fluff_cost = 4 //same as skull facepaint
+	fluff_cost = 2 //same as skull facepaint
 	slot = WEAR_FACE
 
 /datum/gear/mask/uscm/skull_balaclava_black
 	display_name = "USCM balaclava, black skull"
 	path = /obj/item/clothing/mask/rebreather/skull/black
-	fluff_cost = 4
+	fluff_cost = 2
 	slot = WEAR_FACE
 
 /datum/gear/headwear
@@ -1222,18 +1228,6 @@ GLOBAL_LIST_EMPTY(roles_with_gear)
 	path = /obj/item/clothing/accessory/patch/wy
 	fluff_cost = 1
 	slot = WEAR_IN_ACCESSORY
-
-/datum/gear/civilian/patch/wysquare
-	display_name = "Weyland-Yutani shoulder patch"
-	path = /obj/item/clothing/accessory/patch/wysquare
-
-/datum/gear/civilian/patch/wy_white
-	display_name = "Weyland-Yutani shoulder patch, white"
-	path = /obj/item/clothing/accessory/patch/wy_white
-
-/datum/gear/civilian/patch/wy_fury
-	display_name = "Weyland-Yutani Fury '161' patch"
-	path = /obj/item/clothing/accessory/patch/wyfury
 
 /datum/gear/civilian/patch/twepatch
 	display_name = "Three World Empire shoulder patch"

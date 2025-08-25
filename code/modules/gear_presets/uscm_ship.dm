@@ -292,10 +292,13 @@
 		ACCESS_MARINE_CHARLIE,
 		ACCESS_MARINE_DELTA,
 		ACCESS_MARINE_PREP,
+		ACCESS_MARINE_MEDBAY,
+		ACCESS_MARINE_AI,
+		ACCESS_MARINE_ENGINEERING
 	)
 	assignment = JOB_CHIEF_REQUISITION
 	rank = JOB_CHIEF_REQUISITION
-	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_3)
+	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "QM"
 	minimum_age = 25
 	skills = /datum/skills/RO
@@ -320,6 +323,18 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flash(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+
+/datum/equipment_preset/uscm_ship/qm/wo3
+	paygrades = list(PAY_SHORT_MW3)
+
+/datum/equipment_preset/uscm_ship/qm/wo4
+	paygrades = list(PAY_SHORT_MW4)
+
+/datum/equipment_preset/uscm_ship/qm/wo5
+	paygrades = list(PAY_SHORT_MW5)
+
+/datum/equipment_preset/uscm_ship/qm/o1
+	paygrades = list(PAY_SHORT_MO1)
 
 //*****************************************************************************************************/
 
