@@ -285,9 +285,6 @@
 
 	else if(istype(target, /obj/structure/pallet))
 		var/obj/structure/pallet/PD = target
-		if(PD.anchored)
-			to_chat(user, SPAN_WARNING("\The [src] can't grab \the [target] as it appears to be anchored to the ground."))
-			return
 		load_target_tag = "big_crate"
 
 	else if(istype(target, /obj/structure/reagent_dispensers))

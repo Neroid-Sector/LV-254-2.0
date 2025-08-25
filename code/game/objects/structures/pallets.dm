@@ -12,7 +12,9 @@
 	var/allowed_type = /obj/item
 	var/fill_type = /obj/item/storage/box
 	var/max_stored = 18
+	var/type_icon = "overlay_none"
 	var/initial_stored = 0
+	var/heavy = FALSE
 	var/parts_type = /obj/item/stack/sheet/wood
 	var/unpacking_sound = 'sound/effects/woodhit.ogg'
 
@@ -66,6 +68,9 @@
 		if(HAS_TRAIT(O, TRAIT_TOOL_WRENCH))
 			if(user.action_busy)
 				return
+			if(heavy == TRUE)
+				to_chat(user, SPAN_NOTICE("\The [src], is too heavy to adjust."))
+				return
 			else
 				playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 				anchored = !anchored
@@ -84,14 +89,39 @@
 		return
 	if(istype(O, /obj/item/tool/stamp))
 		var/pallet_label_choice= tgui_input_list(user, "Which supply label", "Supply Type", labels)
-		//Change Overlay Icon?
-		to_chat(user, SPAN_NOTICE("You finish stamping the (WIP) label on the pallet."))
+		if(pallet_label_choice == null) return
+		switch(pallet_label_choice)
+			if("None")
+				type_icon = "overlay_none"
+				to_chat(user, SPAN_NOTICE("You remove any label on the pallet."))
+				update_icon()
+			if("Supplies")
+				type_icon = "overlay_storage"
+				to_chat(user, SPAN_NOTICE("You finish stamping the <b>Supplies</b> label on the pallet."))
+				update_icon()
+			if("Ammo")
+				type_icon = "overlay_ammo"
+				to_chat(user, SPAN_NOTICE("You finish stamping the <b>Ammo</b> label on the pallet."))
+				update_icon()
+			if("Med")
+				type_icon = "overlay_med"
+				to_chat(user, SPAN_NOTICE("You finish stamping the <b>Meical</b> label on the pallet."))
+				update_icon()
+			if("Food")
+				type_icon = "overlay_food"
+				to_chat(user, SPAN_NOTICE("You finish stamping the <b>Food</b> label on the pallet."))
+				update_icon()
+			if("Construction")
+				type_icon = "overlay_construction"
+				to_chat(user, SPAN_NOTICE("You finish stamping the <b>Construction</b> label on the pallet."))
+				update_icon()
 		return
 	if(istype(O, allowed_type) && contents.len < max_stored)
 		user.drop_inv_item_to_loc(O, src)
 		contents += O
 		playsound(src, 'sound/effects/glassbash.ogg', 25, TRUE)
 		update_icon()
+		check_weight()
 
 /obj/structure/pallet/attack_hand(mob/living/user)
 	if(!contents.len)
@@ -104,6 +134,7 @@
 	to_chat(user, SPAN_NOTICE("You grab a [stored_obj] from [src]."))
 	playsound(src, "gun_rustle", 25, TRUE)
 	update_icon()
+	check_weight()
 
 /obj/structure/pallet/proc/unpack()
 	var/turf/current_turf = get_turf(src) // Get the turf the crate is on
@@ -133,11 +164,24 @@
 	if(health <= 0)
 		unpack()
 
+/obj/structure/pallet/proc/check_weight()
+	if(contents.len > 8)
+		anchored = TRUE
+		heavy = TRUE
+		return
+	if(contents.len < 8)
+		anchored = FALSE
+		heavy = FALSE
+		return
+
 /obj/structure/pallet/update_icon()
 	if(contents.len)
+		overlays.Cut()
 		icon_state = "[initial(icon_state)]_[contents.len]"
+		overlays += image(icon, type_icon)
 	else
 		icon_state = "[initial(icon_state)]_0"
+		overlays += image(icon, type_icon)
 
 //---Actual Pallet---\\
 
