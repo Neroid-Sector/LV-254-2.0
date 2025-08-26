@@ -1,6 +1,6 @@
 /obj/structure/pallet
 	name = "wooden pallet"
-	desc = "A pallet made of cheap synthwood used for storing large amounts of items."
+	desc = "A pallet made of cheap synthwood used for storing large amounts of items. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
 	icon = 'icons/obj/structures/crates.dmi'
 	icon_state = "pallet"
 	density = TRUE
@@ -62,7 +62,7 @@
 			if("Change Manifest")
 				var/new_desc = tgui_input_text(user,"Enter New Content Manifest","Pallet")
 				if(new_desc == null) return
-				if(new_desc != desc) desc = "This pallet contains [new_desc]."
+				if(new_desc != desc) desc = "This pallet contains [new_desc].  <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
 				to_chat(user, SPAN_NOTICE("You finish writing a list of the contents for the pallet."))
 				return
 	if(istype(O, /obj/item))
@@ -188,37 +188,73 @@
 
 /obj/structure/pallet/standard
 	name = "Pallet of - (Empty Boxes)"
-	desc = "This pallet contains empty boxes."
+	desc = "This pallet contains x18 empty boxes.<b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
 	fill_type = /obj/item/storage/box/wood
 	initial_stored = 18
 
+/obj/structure/pallet/standard/empty
+	name = "wooden pallet"
+	desc = "A pallet made of cheap synthwood used for storing large amounts of items. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
+	initial_stored = 0
+
 /obj/structure/pallet/standard/med
 	name = "Pallet of - (Empty Med Boxes)"
-	desc = "This pallet contains empty med boxes."
+	desc = "This pallet contains x18 empty med boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
 	fill_type = /obj/item/storage/box/wood/med
+	type_icon = "overlay_med"
 
-/obj/structure/pallet/standard/med
-	name = "Pallet of - (Empty Engi Boxes)"
-	desc = "This pallet contains empty engi boxes."
+/obj/structure/pallet/standard/med/firstaid
+	name = "Pallet of - (First Aid kit Boxes)"
+	desc = "This pallet contains x18 med boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
+	fill_type = /obj/item/storage/box/wood/med/full
+
+/obj/structure/pallet/standard/engi
+	name = "Pallet of - (Empty Engineering Boxes)"
+	desc = "This pallet contains x18 empty engi boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
 	fill_type = /obj/item/storage/box/wood/engi
+	type_icon = "overlay_construction"
 
-/obj/structure/pallet/standard/med
+/obj/structure/pallet/standard/engi/fob
+	name = "Pallet of - (FOB Mats Boxes)"
+	desc = "This pallet contains x18 assorted FOB material engi boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
+	fill_type = /obj/item/storage/box/wood/engi/full
+
+/obj/structure/pallet/standard/food
 	name = "Pallet of - (Empty Food Boxes)"
-	desc = "This pallet contains empty Foodd boxes."
+	desc = "This pallet contains x18 empty Food boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
 	fill_type = /obj/item/storage/box/wood/food
+	type_icon = "overlay_food"
+
+/obj/structure/pallet/standard/food/groceries
+	name = "Pallet of - (Asst. Food Boxes)"
+	desc = "This pallet contains x18 assorted raw food boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
+	fill_type = /obj/item/storage/box/wood/food/groceries
+
+/obj/structure/pallet/standard/food/mres
+	name = "Pallet of - (MRE Boxes)"
+	desc = "This pallet contains x18 MRE Food boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
+	fill_type = /obj/item/ammo_box/magazine/misc/mre
 
 /obj/structure/pallet/standard/weapon
 	name = "Pallet of - (Empty Weapon Boxes)"
-	desc = "This pallet contains empty Weapon boxes."
+	desc = "This pallet contains x18 empty Weapon boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
 	fill_type = /obj/item/storage/box/wood/weapon
+	type_icon = "overlay_ammo"
+
+/obj/structure/pallet/standard/weapon/mk1
+	name = "Pallet of - (Mk1 Pulse Rifle Boxes)"
+	desc = "This pallet contains x54 Mk1 Pulse Rifles. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
+	fill_type = /obj/item/storage/box/wood/weapon/mk1
 
 /obj/structure/pallet/standard/he_mortar
 	name = "Pallet of - (HE Mortar Shells)"
-	desc = "This pallet contains HE mortar shells"
+	desc = "This pallet contains x288 HE mortar shells <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
 	fill_type = /obj/item/storage/box/nade_box/mortar/he
+	type_icon = "overlay_ammo"
 
-/obj/structure/pallet/standard/empty
-	name = "wooden pallet"
-	desc = "A pallet made of cheap synthwood used for storing large amounts of items."
-	initial_stored = 0
+/obj/structure/pallet/standard/ammo_mk1
+	name = "Pallet of - (MK1 AP Magazine Boxes)"
+	desc = "This pallet contains x18 M41A MK1 AP Magazine Boxes. <b>Use a Wrench to Unanchor Wrench to Dismantle Pen to re-lable Stamp to Mark and powerloader to move.</b>."
+	fill_type = /obj/item/ammo_box/magazine/mk1/ap
+	type_icon = "overlay_ammo"
 

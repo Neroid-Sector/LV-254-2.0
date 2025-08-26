@@ -1140,26 +1140,44 @@
 	foldable = null
 	max_storage_space = 15
 	w_class = SIZE_HUGE
-	can_hold = list(/obj/item/clothing, /obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/clothing, /obj/item/storage/belt, /obj/item/device, /obj/item/device, /obj/item/explosive, /obj/item/storage/pill_bottle, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/firstaid)
-	bypass_w_limit = list(/obj/item/clothing, /obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/clothing, /obj/item/storage/belt, /obj/item/device, /obj/item/device, /obj/item/explosive, /obj/item/storage/pill_bottle, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/firstaid)
+	can_hold = list(/obj/item/clothing, /obj/item/tool, /obj/item/reagent_container, /obj/item/clothing, /obj/item/storage/belt, /obj/item/device, /obj/item/device, /obj/item/explosive, /obj/item/storage/pill_bottle, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/firstaid, /obj/item/storage/fancy, /obj/item/book)
+	bypass_w_limit = list(/obj/item/clothing, /obj/item/tool, /obj/item/reagent_container, /obj/item/clothing, /obj/item/storage/belt, /obj/item/device, /obj/item/device, /obj/item/explosive, /obj/item/storage/pill_bottle, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/firstaid, /obj/item/storage/fancy, /obj/item/book)
 	ground_offset_x = 7
 	ground_offset_y = 6
 
+//--med
+
 /obj/item/storage/box/wood/med
 	name = "Medical box"
-	desc = "A wooden box for storing stuff on a pallet."
+	desc = "A wooden box for storing medical supplies on a pallet."
 	icon_state = "med"
 	item_state = "med"
-	can_hold = list(/obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/storage/firstaid, /obj/item/device, /obj/item/storage/syringe_case, /obj/item/storage/pill_bottle, /obj/item/storage/belt, /obj/item/storage/pouch, /obj/item/storage/backpack)
-	bypass_w_limit = list(/obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/storage/firstaid, /obj/item/device, /obj/item/storage/syringe_case, /obj/item/storage/pill_bottle, /obj/item/storage/belt, /obj/item/storage/pouch, /obj/item/storage/backpack)
+	can_hold = list(/obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/storage/firstaid, /obj/item/device, /obj/item/storage/syringe_case, /obj/item/storage/pill_bottle, /obj/item/storage/belt, /obj/item/storage/pouch, /obj/item/storage/surgical_case, /obj/item/storage/backpack)
+	bypass_w_limit = list(/obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/storage/firstaid, /obj/item/device, /obj/item/storage/syringe_case, /obj/item/storage/pill_bottle, /obj/item/storage/belt, /obj/item/storage/pouch, /obj/item/storage/surgical_case, /obj/item/storage/backpack)
+
+/obj/item/storage/box/wood/med/full/fill_preset_inventory()
+	for(var/i in 1 to 10)
+		new /obj/item/storage/firstaid(src)
+
+//--engi
 
 /obj/item/storage/box/wood/engi
 	name = "Engineering box"
-	desc = "A wooden box for storing engineering stuff on a pallet."
+	desc = "A wooden box for storing construction and engineering materials on a pallet."
 	icon_state = "engi"
 	item_state = "engi"
-	can_hold = list(/obj/item/tool, /obj/item/cell, /obj/item/circuitboard, /obj/item/reagent_container, /obj/item/device, /obj/item/storage/belt, /obj/item/storage/toolkit, /obj/item/stack, /obj/item/storage/pouch, /obj/item/storage/backpack)
-	bypass_w_limit = list(/obj/item/tool, /obj/item/cell, /obj/item/circuitboard, /obj/item/reagent_container, /obj/item/device, /obj/item/storage/belt, /obj/item/storage/toolkit, /obj/item/stack, /obj/item/storage/pouch, /obj/item/storage/backpack)
+	can_hold = list(/obj/item/tool, /obj/item/cell, /obj/item/storage/toolkit, /obj/item/reagent_container, /obj/item/device, /obj/item/storage/belt, /obj/item/storage/toolkit, /obj/item/stack, /obj/item/storage/pouch, /obj/item/storage/backpack)
+	bypass_w_limit = list(/obj/item/tool, /obj/item/cell, /obj/item/storage/toolkit, /obj/item/reagent_container, /obj/item/device, /obj/item/storage/belt, /obj/item/storage/toolkit, /obj/item/stack, /obj/item/storage/pouch, /obj/item/storage/backpack)
+
+/obj/item/storage/box/wood/engi/full/fill_preset_inventory()
+	new /obj/item/stack/sheet/plasteel(src, 50)
+	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/sandbags_empty(src, 50)
+	new /obj/item/stack/sandbags_empty(src, 50)
+	new /obj/item/stack/sandbags_empty(src, 50)
+
+//--food
 
 /obj/item/storage/box/wood/food
 	name = "Food box"
@@ -1169,13 +1187,52 @@
 	can_hold = list(/obj/item/reagent_container, /obj/item/storage/box/mre, /obj/item/storage/backpack, /obj/item/pizzabox)
 	bypass_w_limit = list(/obj/item/reagent_container, /obj/item/storage/box/mre, /obj/item/storage/backpack, /obj/item/pizzabox)
 
+
+/obj/item/storage/box/wood/food/groceries/fill_preset_inventory()
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/apple(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/cabbage(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/carrot(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/mushroom/chanterelle(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/chili(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/corn(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/eggplant(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/potato(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/tomato(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/whitebeet(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/cherries(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/lime(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/lemon(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/orange(src)
+	for(var/i = 0, i < 2, i++)
+		new /obj/item/reagent_container/food/snacks/grown/banana(src)
+
+//--guns
+
 /obj/item/storage/box/wood/weapon
 	name = "Weapon Case"
-	desc = "A wooden box for weapons on a pallet."
+	desc = "A wooden box for weapons and ammo on a pallet."
 	icon_state = "guncase"
 	item_state = "guncase"
 	can_hold = list(/obj/item/weapon, /obj/item/explosive, /obj/item/storage/box/packet, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/large_holster)
 	bypass_w_limit = list(/obj/item/weapon, /obj/item/explosive, /obj/item/storage/box/packet, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/large_holster)
+
+/obj/item/storage/box/wood/weapon/mk1/fill_preset_inventory()
+	for(var/i in 1 to 3)
+		new /obj/item/weapon/gun/rifle/m41aMK1(src)
 
 // OWLF Containment Case
 
