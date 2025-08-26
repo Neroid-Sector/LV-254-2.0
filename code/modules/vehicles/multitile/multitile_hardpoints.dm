@@ -61,7 +61,7 @@
 	return
 
 
-/obj/vehicle/multitile/proc/load_cargo(obj/item/O, mob/user)
+/obj/vehicle/multitile/proc/load_cargo(obj/structure/O, mob/user)
 	if((istype(O,/obj/structure/pallet) || istype(O,/obj/structure/closet)) && contents.len < max_stored)
 		user.drop_inv_item_to_loc(O, src)
 		contents += O
