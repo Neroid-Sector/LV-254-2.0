@@ -1156,8 +1156,8 @@
 	bypass_w_limit = list(/obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/storage/firstaid, /obj/item/device, /obj/item/storage/syringe_case, /obj/item/storage/pill_bottle, /obj/item/storage/belt, /obj/item/storage/pouch, /obj/item/storage/surgical_case, /obj/item/storage/backpack)
 
 /obj/item/storage/box/wood/med/full/fill_preset_inventory()
-	for(var/i in 1 to 10)
-		new /obj/item/storage/firstaid(src)
+	for(var/i in 1 to 5)
+		new /obj/item/storage/firstaid/regular(src)
 
 //--engi
 
