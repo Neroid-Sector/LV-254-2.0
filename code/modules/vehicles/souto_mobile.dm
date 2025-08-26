@@ -1,8 +1,8 @@
 /obj/vehicle/souto
-	name = "\improper Soutomobile"
+	name = "\improper ATV"
 	icon_state = "soutomobile"
 	desc = "Almost, but not quite, the best ride in the universe."
-	move_delay = 3 //The speed of a fed but shoeless pajamarine, or a bit slower than a heavy-armor marine.
+	move_delay = 2 //The speed of a fed but shoeless pajamarine, or a bit slower than a heavy-armor marine.
 	buckling_y = 4
 	layer = ABOVE_LYING_MOB_LAYER //Allows it to drive over people, but is below the driver.
 
@@ -24,6 +24,7 @@
 		. = step(src, direction)
 
 /obj/vehicle/souto/super
+	name = "\improper Soutomobile"
 	desc = "The best ride in the universe, for the one-and-only Souto Man!"
 	health = 1000
 	locked = FALSE
