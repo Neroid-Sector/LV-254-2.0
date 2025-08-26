@@ -184,6 +184,11 @@
 	qdel(src)
 	return FALSE
 
+/obj/structure/pallet/handle_vehicle_bump(obj/vehicle/multitile/V)
+	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
+	unpack()
+	return TRUE
+
 //med-heavy tank crushes boulders
 /obj/structure/prop/dam/large_boulder/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM || V.vehicle_flags & VEHICLE_CLASS_HEAVY)

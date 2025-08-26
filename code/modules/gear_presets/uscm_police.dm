@@ -148,7 +148,7 @@
 	)
 	assignment = JOB_CHIEF_POLICE
 	rank = JOB_CHIEF_POLICE
-	paygrades = list(PAY_SHORT_WO1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MW1 = JOB_PLAYTIME_TIER_0)
 	minimum_age = 23
 	role_comm_title = "CMP"
 	skills = /datum/skills/CMP

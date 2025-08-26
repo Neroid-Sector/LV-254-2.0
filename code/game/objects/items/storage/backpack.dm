@@ -786,6 +786,18 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	can_hold = list(/obj/item/mortar_shell)
 	xeno_types = null
 
+/obj/item/storage/backpack/marine/mortarpack/he/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/mortar_shell/he(src)
+
+/obj/item/storage/backpack/marine/mortarpack/smoke/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/mortar_shell/smoke(src)
+
+/obj/item/storage/backpack/marine/mortarpack/incendiary/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/mortar_shell/incendiary(src)
+
 /// G-8-a general pouch belt
 /obj/item/storage/backpack/general_belt
 	name = "\improper G8-A general utility pouch"

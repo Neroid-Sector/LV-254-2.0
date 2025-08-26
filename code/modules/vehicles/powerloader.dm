@@ -283,6 +283,10 @@
 			return
 		load_target_tag = "big_crate"
 
+	else if(istype(target, /obj/structure/pallet))
+		var/obj/structure/pallet/PD = target
+		load_target_tag = "big_crate"
+
 	else if(istype(target, /obj/structure/reagent_dispensers))
 		var/obj/structure/reagent_dispensers/RD = target
 		if(RD.anchored)
