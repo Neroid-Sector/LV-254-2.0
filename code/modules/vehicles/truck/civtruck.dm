@@ -88,4 +88,4 @@
 	civtruck.update_icon()
 
 /obj/effect/vehicle_spawner/civtruck/fixed/load_hardpoints(obj/vehicle/multitile/civtruck/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civtruck)
