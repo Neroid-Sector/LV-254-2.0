@@ -1142,6 +1142,8 @@
 	w_class = SIZE_HUGE
 	can_hold = list(/obj/item/clothing, /obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/clothing, /obj/item/storage/belt, /obj/item/device, /obj/item/device, /obj/item/explosive, /obj/item/storage/pill_bottle, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/firstaid)
 	bypass_w_limit = list(/obj/item/clothing, /obj/item/tool, /obj/item/reagent_container, /obj/item/stack, /obj/item/clothing, /obj/item/storage/belt, /obj/item/device, /obj/item/device, /obj/item/explosive, /obj/item/storage/pill_bottle, /obj/item/storage/pouch, /obj/item/storage/backpack, /obj/item/storage/firstaid)
+	ground_offset_x = 7
+	ground_offset_y = 6
 
 /obj/item/storage/box/wood/med
 	name = "Medical box"
