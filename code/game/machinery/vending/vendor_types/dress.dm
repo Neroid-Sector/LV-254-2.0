@@ -292,3 +292,7 @@
 /obj/structure/machinery/cm_vending/clothing/super_snowflake/weapon
 	name = "\improper Super Snowflake Vendor, Weapons"
 	item_types = list(/obj/item/weapon)
+
+/obj/structure/machinery/cm_vending/clothing/super_snowflake/everything
+	name = "\improper Super Snowflake Vendor, Everything"
+	item_types = list(/obj/item)
