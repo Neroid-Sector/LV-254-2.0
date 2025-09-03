@@ -13,36 +13,39 @@
 	..()
 
 	var/turf/open/T = user.loc
-	if(!(istype(T) && T.allow_construction))
-		to_chat(user, SPAN_WARNING("[src] must be placed on a proper surface!"))
+	if(user.action_busy)
 		return
-	if(locate(/obj/item/explosive/mine) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
-		return
-	if(locate(/obj/item/explosive/atmine) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
-		return
-	if(locate(/obj/structure/device/razorwire) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
-		return
-	if(locate(/obj/item/explosive/fragwire) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
-		return
-	if(locate(/obj/structure/barricade) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
-		return
-	if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
-		playsound(loc, 'sound/handling/smartgun_open.ogg', 25, TRUE)
-		to_chat(user, SPAN_NOTICE(" You deploy [src]."))
-		var/obj/structure/device/razorwire/R = new deployconcertina(usr.loc)
-		src.transfer_fingerprints_to(R)
-		R.add_fingerprint(user)
-		if (amount <= 1)
-			qdel(src)
-		else {
-			amount = amount - 1
-			update_icon()
-		}
+	else
+		if(!(istype(T) && T.allow_construction))
+			to_chat(user, SPAN_WARNING("[src] must be placed on a proper surface!"))
+			return
+		if(locate(/obj/item/explosive/mine) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
+			return
+		if(locate(/obj/item/explosive/atmine) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
+			return
+		if(locate(/obj/structure/device/razorwire) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+			return
+		if(locate(/obj/item/explosive/fragwire) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+			return
+		if(locate(/obj/structure/barricade) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+			return
+		if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
+			playsound(loc, 'sound/handling/smartgun_open.ogg', 25, TRUE)
+			to_chat(user, SPAN_NOTICE(" You deploy [src]."))
+			var/obj/structure/device/razorwire/R = new deployconcertina(usr.loc)
+			src.transfer_fingerprints_to(R)
+			R.add_fingerprint(user)
+			if (amount <= 1)
+				qdel(src)
+			else {
+				amount = amount - 1
+				update_icon()
+			}
 
 /obj/structure/device/razorwire
 	name = "razorwire"
@@ -71,12 +74,15 @@
 	if(!istype(H))
 		return
 
-	to_chat(AM, SPAN_DANGER("The barbed wire slices into you!"))
-	H.apply_armoured_damage(damage, penetration = penetration, def_zone = pick(target_limbs))
+	if(!H.body_position == LYING_DOWN)
+		to_chat(AM, SPAN_DANGER("The barbed wire slices into you!"))
+		H.apply_armoured_damage(damage, penetration = penetration, def_zone = pick(target_limbs))
+		playsound(loc, 'sound/effects/rip1.ogg', 25)
+	if(H.body_position == LYING_DOWN)
+		to_chat(AM, SPAN_DANGER("The barbed wire scratches along your back!"))
+		H.apply_armoured_damage(5, penetration = penetration, def_zone = "chest")
 	H.apply_effect(3, SUPERSLOW)
 	playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 25)
-	playsound(loc, 'sound/effects/rip1.ogg', 25)
-
 
 /obj/structure/device/razorwire/attackby(obj/item/W, mob/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
@@ -136,36 +142,39 @@
 /obj/item/stack/fragwire/attack_self(mob/user)
 	..()
 	var/turf/open/T = user.loc
-	if(!(istype(T) && T.allow_construction))
-		to_chat(user, SPAN_WARNING("[src] must be placed on a proper surface!"))
+	if(user.action_busy)
 		return
-	if(locate(/obj/item/explosive/mine) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
-		return
-	if(locate(/obj/item/explosive/atmine) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
-		return
-	if(locate(/obj/structure/device/razorwire) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
-		return
-	if(locate(/obj/item/explosive/fragwire) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
-		return
-	if(locate(/obj/structure/barricade) in get_turf(src))
-		to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
-		return
-	if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
-		playsound(loc, 'sound/handling/smartgun_open.ogg', 25, TRUE)
-		to_chat(user, SPAN_NOTICE(" You deploy [src]."))
-		var/obj/item/explosive/fragwire/R = new deployfragconcertina(usr.loc)
-		src.transfer_fingerprints_to(R)
-		R.add_fingerprint(user)
-		if (amount <= 1)
-			qdel(src)
-		else {
-			amount = amount - 1
-			update_icon()
-		}
+	else
+		if(!(istype(T) && T.allow_construction))
+			to_chat(user, SPAN_WARNING("[src] must be placed on a proper surface!"))
+			return
+		if(locate(/obj/item/explosive/mine) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
+			return
+		if(locate(/obj/item/explosive/atmine) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a mine at this position!"))
+			return
+		if(locate(/obj/structure/device/razorwire) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+			return
+		if(locate(/obj/item/explosive/fragwire) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+			return
+		if(locate(/obj/structure/barricade) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+			return
+		if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
+			playsound(loc, 'sound/handling/smartgun_open.ogg', 25, TRUE)
+			to_chat(user, SPAN_NOTICE(" You deploy [src]."))
+			var/obj/item/explosive/fragwire/R = new deployfragconcertina(usr.loc)
+			src.transfer_fingerprints_to(R)
+			R.add_fingerprint(user)
+			if (amount <= 1)
+				qdel(src)
+			else {
+				amount = amount - 1
+				update_icon()
+			}
 
 /obj/item/explosive/fragwire
 	name = "fragwire"
@@ -192,18 +201,23 @@
 /obj/item/explosive/fragwire/Crossed(atom/movable/AM)
 	. = ..()
 	var/mob/living/carbon/H = AM
-	if(!istype(H))
-		return
+	var/obj/vehicle/multitile/V = AM
 
-	to_chat(AM, SPAN_DANGER("The barbed wire slices into you!"))
-	H.apply_armoured_damage(damage, penetration = penetration, def_zone = pick(target_limbs))
-	H.apply_effect(3, SUPERSLOW)
-	playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 25)
-	playsound(loc, 'sound/effects/zippo_close.ogg', 25)
-	playsound(loc, 'sound/effects/rip1.ogg', 25)
-	create_shrapnel(loc, 50, dir, angle, , cause_data)
-	cell_explosion(loc, 10, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
-	qdel(src)
+	if(istype(H))
+		to_chat(AM, SPAN_DANGER("The barbed wire slices into you!"))
+		H.apply_armoured_damage(damage, penetration = penetration, def_zone = pick(target_limbs))
+		H.apply_effect(3, SUPERSLOW)
+		playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 25)
+		playsound(loc, 'sound/effects/zippo_close.ogg', 25)
+		playsound(loc, 'sound/effects/rip1.ogg', 25)
+		create_shrapnel(loc, 50, dir, angle, , cause_data)
+		cell_explosion(loc, 10, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		qdel(src)
+	if(istype(V))
+		playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 25)
+		playsound(loc, 'sound/effects/zippo_close.ogg', 25)
+		create_shrapnel(loc, 50, dir, angle, , cause_data)
+		cell_explosion(loc, 10, 20, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
 
 /obj/item/explosive/fragwire/ex_act()
 	create_shrapnel(loc, 50, dir, angle, , cause_data)
