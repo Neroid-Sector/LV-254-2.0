@@ -17,6 +17,7 @@
 
 	accurate_range_min = 0
 	damage = 10
+	stamina_damage = 1
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_1
 	shrapnel_type = /obj/item/shard/shrapnel
 	shell_speed = AMMO_SPEED_TIER_4
