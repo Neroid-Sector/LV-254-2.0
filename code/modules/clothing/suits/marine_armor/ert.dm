@@ -1163,6 +1163,7 @@
 	armor_melee = CLOTHING_ARMOR_HIGHPLUS
 	armor_bio = CLOTHING_ARMOR_HIGHPLUS
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/trauma_jumpsuit)
 
 /obj/item/clothing/suit/storage/marine/odst/trauma_team/alt
@@ -1174,6 +1175,7 @@
 	)
 	icon_state = "trauma2"
 	item_state = "trauma2"
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	item_state_slots = list(WEAR_JACKET = "trauma2")
 
 //===========================//PINKERTON - MERCENARY\\================================\\
@@ -1187,6 +1189,7 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
 	)
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	storage_slots =  3
 
 /obj/item/clothing/suit/storage/marine/veteran/ua_riot/pinkerton
@@ -1207,7 +1210,7 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT  // it's lighter
-	flags_atom = NO_GAMEMODE_SKIN
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	uniform_restricted = list(/obj/item/clothing/under)
 
 //===========================//LASALLE BIOTECH - MERCENARY\\================================\\
@@ -1229,4 +1232,4 @@
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
-	flags_atom = NO_GAMEMODE_SKIN
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
