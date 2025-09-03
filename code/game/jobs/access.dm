@@ -298,6 +298,19 @@
 				ACCESS_UPP_SENIOR_LEAD,
 			) + get_access(ACCESS_LIST_COLONIAL_ALL) + get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
 
+		if(ACCESS_LIST_PINKERTON)
+			return list(
+				ACCESS_MARINE_COMMAND,
+				ACCESS_MARINE_CARGO,
+				ACCESS_MARINE_BRIG,
+				ACCESS_WY_GENERAL,
+				ACCESS_WY_COLONIAL,
+				ACCESS_MARINE_MAINT,
+				ACCESS_MARINE_MEDBAY,
+				ACCESS_MARINE_KITCHEN,
+			) + get_access(ACCESS_LIST_COLONIAL_ALL)
+
+
 /proc/get_region_accesses(code)
 	switch(code)
 		if(0)//Everything

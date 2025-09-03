@@ -4,6 +4,7 @@
 	desc = "Almost, but not quite, the best ride in the universe."
 	move_delay = 1 //The speed of a fed but shoeless pajamarine, or a bit slower than a heavy-armor marine.
 	buckling_y = 4
+	health = 200
 	layer = ABOVE_LYING_MOB_LAYER //Allows it to drive over people, but is below the driver.
 	//Sound to play when moving
 	var/movement_sound = 'sound/vehicles/bike.mp3'

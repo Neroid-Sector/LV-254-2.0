@@ -74,7 +74,7 @@
 #define NV_COLOR_ORANGE "#FFCC66"
 #define NV_COLOR_YELLOW "#FFFF66" //crazy ? i was crazy once
 #define NV_COLOR_RED "#FF3333"
-#define NV_COLOR_BLUE "#66CCFF"
+#define NV_COLOR_BLUE "#a4e1ff"
 
 /// Number of weighted marine players for 1 gear_scale. gear_scale is clamped to 1 minimum
 #define MARINE_GEAR_SCALING_NORMAL 50

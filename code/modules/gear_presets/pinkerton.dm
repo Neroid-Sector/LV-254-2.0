@@ -8,7 +8,7 @@
 
 /datum/equipment_preset/other/pinkerton/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_COLONIAL_ALL) //ACCESS_COME_BACK_TO_ME
+	access = get_access(ACCESS_LIST_PINKERTON) //access to marine and Wey-Yu brig and public areas, and all Colonial areas
 
 /datum/equipment_preset/other/pinkerton/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
@@ -325,7 +325,7 @@
 
 /datum/equipment_preset/synth/pinkerton/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
+	access = get_access(ACCESS_LIST_PINKERTON)
 
 /datum/equipment_preset/synth/pinkerton/load_gear(mob/living/carbon/human/new_human)
 	new_human.allow_gun_usage = TRUE

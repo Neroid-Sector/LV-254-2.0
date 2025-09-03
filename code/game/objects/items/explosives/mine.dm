@@ -329,7 +329,7 @@
 
 /obj/item/atmine
 	name = "m20 anti-vehicle mine"
-	desc = "An anti vehicle mine designed by Armat Systems for use by the United States Colonial Marines."
+	desc = "An anti vehicle mine designed by Armat Systems for use by the United States Colonial Marines. The mine is triggered by combo weight and RFID IFF sensors."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "m20at"
 	w_class = SIZE_MEDIUM
@@ -357,7 +357,7 @@
 
 /obj/item/explosive/atmine
 	name = "m20 anti-vehicle mine"
-	desc = "An anti vehicle mine."
+	desc = "An anti vehicle mine, triggered by combo weight and RFID IFF sensors."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "m20at_active"
 	health = 50
@@ -369,18 +369,31 @@
 /obj/item/explosive/atmine/proc/det_atmine(mob/user)
 	playsound(loc, 'sound/weapons/mine_tripped.ogg', 25)
 	create_shrapnel(loc, 10, dir, angle, , cause_data)
-	cell_explosion(loc, 1500, 300, EXPLOSION_FALLOFF_SHAPE_LINEAR, , cause_data)
+	cell_explosion(loc, 1500, 1500, EXPLOSION_FALLOFF_SHAPE_LINEAR, , cause_data)
 	qdel(src)
 
 /obj/item/explosive/atmine/Crossed(atom/movable/AM)
 	. = ..()
 	var/obj/vehicle/multitile/V = AM
-	if(!istype(V))
-		return
-	if(V.get_target_lock(iff_signal))
-		return
-	det_atmine()
+	var/mob/living/carbon/xenomorph/XN = AM
 
+	if(istype(V))
+		if(!V.get_target_lock(iff_signal))
+			visible_message(SPAN_WARNING("<b>CLICK!</b>"))
+			det_atmine()
+
+	if(istype(XN))
+		if(XN.stat == DEAD)
+			return
+		if(XN.get_target_lock(iff_signal))
+			return
+		if(HAS_TRAIT(XN, TRAIT_ABILITY_BURROWED))
+			return
+		if(istype(XN, /mob/living/carbon/xenomorph/queen) || istype(XN, /mob/living/carbon/xenomorph/crusher) || istype(XN, /mob/living/carbon/xenomorph/king))
+			XN.visible_message(SPAN_DANGER("[icon2html(src, viewers(src))] The [name] clicks as [XN] steps on it."),
+			SPAN_DANGER("[icon2html(src, XN)] The [name] clicks as you step on it."),
+			SPAN_DANGER("You hear a click."))
+			det_atmine()
 
 /obj/item/explosive/atmine/attackby(obj/item/W, mob/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))
@@ -410,7 +423,6 @@
 
 /obj/item/atmine/upp
 	name = "m20 anti-vehicle mine"
-	desc = "An anti vehicle mine."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "m20at"
 	w_class = SIZE_MEDIUM
@@ -418,7 +430,6 @@
 
 /obj/item/atmine/clf
 	name = "m20 anti-vehicle mine"
-	desc = "An anti vehicle mine."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "m20at"
 	w_class = SIZE_MEDIUM
@@ -426,12 +437,10 @@
 
 /obj/item/atmine/twe
 	name = "m20 anti-vehicle mine"
-	desc = "An anti vehicle mine."
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "m20at"
 	w_class = SIZE_MEDIUM
 	deploy_atmine = /obj/item/explosive/atmine/twe
-
 
 /obj/item/explosive/atmine/upp
 	iff_signal = FACTION_UPP

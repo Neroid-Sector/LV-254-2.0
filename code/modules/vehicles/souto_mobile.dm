@@ -5,6 +5,10 @@
 	move_delay = 2 //The speed of a fed but shoeless pajamarine, or a bit slower than a heavy-armor marine.
 	buckling_y = 4
 	layer = ABOVE_LYING_MOB_LAYER //Allows it to drive over people, but is below the driver.
+	//Sound to play when moving
+	var/movement_sound = 'sound/vehicles/jeep_driving.mp3'
+	//Cooldown for next sound to play
+	var/move_next_sound_play = 0
 
 /obj/vehicle/souto/Initialize()
 	. = ..()
@@ -22,7 +26,9 @@
 		return
 	if(world.time > l_move_time + move_delay)
 		. = step(src, direction)
-
+		if(movement_sound && world.time > move_next_sound_play)
+			playsound(src, movement_sound, vol = 20, sound_range = 30)
+			move_next_sound_play = world.time + 15
 /obj/vehicle/souto/super
 	name = "\improper Soutomobile"
 	desc = "The best ride in the universe, for the one-and-only Souto Man!"

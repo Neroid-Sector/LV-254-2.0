@@ -105,7 +105,6 @@
 
 /datum/ammo/bullet/rifle/heap
 	name = "high-explosive armor-piercing rifle bullet"
-	sound_hit = 'sound/effects/thud1.ogg'
 
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 35//big damage, doesn't actually blow up because thats stupid.
