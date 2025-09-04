@@ -1,0 +1,78 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/shuttle/elevator,
+/area/space)
+"e" = (
+/turf/open/shuttle/escapepod/floor0/west,
+/area/space)
+"k" = (
+/turf/open/shuttle/escapepod/floor0/north{
+	dir = 4
+	},
+/area/space)
+"r" = (
+/turf/closed/shuttle/elevator{
+	dir = 9
+	},
+/area/space)
+"v" = (
+/turf/closed/shuttle/elevator{
+	dir = 5
+	},
+/area/space)
+"x" = (
+/obj/structure/machinery/door/poddoor/hybrisa/shutters{
+	id = "east"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/space)
+"z" = (
+/turf/open/shuttle/escapepod/floor2/east,
+/area/space)
+"L" = (
+/turf/closed/shuttle/elevator{
+	dir = 1
+	},
+/area/space)
+"T" = (
+/turf/closed/shuttle/elevator/gears,
+/area/space)
+"U" = (
+/turf/open/shuttle/escapepod/floor2/west,
+/area/space)
+"X" = (
+/obj/docking_port/mobile/elevator_small,
+/turf/closed/shuttle/elevator{
+	dir = 10
+	},
+/area/space)
+"Z" = (
+/turf/closed/shuttle/elevator{
+	dir = 6
+	},
+/area/space)
+
+(1,1,1) = {"
+r
+a
+a
+X
+"}
+(2,1,1) = {"
+T
+k
+z
+x
+"}
+(3,1,1) = {"
+T
+U
+e
+x
+"}
+(4,1,1) = {"
+v
+L
+L
+Z
+"}

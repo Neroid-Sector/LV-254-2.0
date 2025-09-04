@@ -47,44 +47,44 @@
 	var/elevator_network
 
 	//elevator effects (four so the entire elevator doesn't vanish when there's one opaque obstacle between you and the actual elevator loc).
-	//var/obj/effect/elevator/cargo/SW
-	//var/obj/effect/elevator/cargo/SE
-	//var/obj/effect/elevator/cargo/NW
-	//var/obj/effect/elevator/cargo/NE
+	var/obj/effect/elevator/cargo/SW
+	var/obj/effect/elevator/cargo/SE
+	var/obj/effect/elevator/cargo/NW
+	var/obj/effect/elevator/cargo/NE
 
 /obj/docking_port/stationary/elevator_small/Initialize(mapload)
 	. = ..()
 	// Create and offset some effects for the elevator shaft sprite.
-	//SW = new(locate(src.x - 2, src.y - 2, src.z))
-	//SW.pixel_x = 64
-	//SW.pixel_y = 64
+	SW = new(locate(src.x - 2, src.y - 2, src.z))
+	SW.pixel_x = 0
+	SW.pixel_y = 0
 
-	//SE = new(locate(src.x + 2, src.y - 2, src.z))
-	//SE.pixel_x = -64
-	//SE.pixel_y = 64
+	SE = new(locate(src.x + 2, src.y - 2, src.z))
+	SE.pixel_x = 0
+	SE.pixel_y = 0
 
-	//NW = new(locate(src.x - 2, src.y + 2, src.z))
-	//NW.pixel_x = 64
-	//NW.pixel_y = -64
+	NW = new(locate(src.x - 2, src.y + 2, src.z))
+	NW.pixel_x = 0
+	NW.pixel_y = 0
 
-	//NE = new(locate(src.x + 2, src.y + 2, src.z))
-	//NE.pixel_x = -64
-	//NE.pixel_y = -64
+	NE = new(locate(src.x + 2, src.y + 2, src.z))
+	NE.pixel_x = 0
+	NE.pixel_y = 0
 
-	//SW.invisibility = INVISIBILITY_ABSTRACT
-	//SE.invisibility = INVISIBILITY_ABSTRACT
-	//NW.invisibility = INVISIBILITY_ABSTRACT
-	//NE.invisibility = INVISIBILITY_ABSTRACT
+	SW.invisibility = INVISIBILITY_ABSTRACT
+	SE.invisibility = INVISIBILITY_ABSTRACT
+	NW.invisibility = INVISIBILITY_ABSTRACT
+	NE.invisibility = INVISIBILITY_ABSTRACT
 
 // Make the elevator shaft visible when the elevator leaves.
 /obj/docking_port/stationary/elevator_small/on_departure(obj/docking_port/mobile/departing_shuttle)
     . = ..() // Call parent departure logic
 
     // 1. Make lift corners visible again
-    //if(SW) SW.invisibility = 0
-    //if(SE) SE.invisibility = 0
-    //if(NW) NW.invisibility = 0
-    //if(NE) NE.invisibility = 0
+    if(SW) SW.invisibility = 0
+    if(SE) SE.invisibility = 0
+    if(NW) NW.invisibility = 0
+    if(NE) NE.invisibility = 0
 
     // 2. Lock dock doors for launch
     var/datum/door_controller/single/door_control = new()
@@ -98,10 +98,10 @@
     var/list/cached_doors
 
 /obj/docking_port/stationary/elevator_small/proc/reset_invisibility()
-    //if(SW) SW.invisibility = INVISIBILITY_ABSTRACT
-    //if(SE) SE.invisibility = INVISIBILITY_ABSTRACT
-    //if(NW) NW.invisibility = INVISIBILITY_ABSTRACT
-    //if(NE) NE.invisibility = INVISIBILITY_ABSTRACT
+    if(SW) SW.invisibility = INVISIBILITY_ABSTRACT
+    if(SE) SE.invisibility = INVISIBILITY_ABSTRACT
+    if(NW) NW.invisibility = INVISIBILITY_ABSTRACT
+    if(NE) NE.invisibility = INVISIBILITY_ABSTRACT
 
 /obj/docking_port/stationary/elevator_small/proc/get_doors()
     // Return cached list if available
@@ -121,7 +121,7 @@
     . = ..() // Call parent arrival logic
 
     // 1. Reset lift corner invisibility
-    //reset_invisibility()
+    reset_invisibility()
 
     // 2. Open elevator doors if this is a cargo lift
     if(istype(arriving_shuttle, /obj/docking_port/mobile/elevator_small))
