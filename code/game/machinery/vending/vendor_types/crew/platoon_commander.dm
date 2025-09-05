@@ -1,15 +1,15 @@
-/obj/structure/machinery/cm_vending/clothing/staff_officer
+/obj/structure/machinery/cm_vending/clothing/platoon_commander
 	name = "\improper ColMarTech Staff Officer Equipment Rack"
 	desc = "An automated equipment vendor for Staff Officers."
 	req_access = list(ACCESS_MARINE_COMMAND)
-	vendor_role = list(JOB_SO)
+	vendor_role = list(JOB_MS_PC, JOB_FORECON_CO)
 
-/obj/structure/machinery/cm_vending/clothing/staff_officer/get_listed_products(mob/user)
-	return GLOB.cm_vending_clothing_staff_officer
+/obj/structure/machinery/cm_vending/clothing/platoon_commander/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_platoon_officer
 
 //------------CLOTHING---------------
 
-GLOBAL_LIST_INIT(cm_vending_clothing_staff_officer, list(
+GLOBAL_LIST_INIT(cm_vending_clothing_platoon_officer, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_COMBAT_SHOES, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/almayer/mcom, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
@@ -23,6 +23,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_staff_officer, list(
 
 		list("JACKET (CHOOSE 1)", 0, null, null, null),
 		list("Service Jacket", 0, /obj/item/clothing/suit/storage/jacket/marine/service, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("Marine Trenchcoat", 0, /obj/item/clothing/suit/storage/jacket/marine/service/trenchcoat, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("Combat Webbing Vest", 0, /obj/item/clothing/suit/storage/webbing, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 
 		list("HAT (CHOOSE 1)", 0, null, null, null),
 		list("Beret, Green", 0, /obj/item/clothing/head/beret/cm, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
@@ -32,7 +34,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_staff_officer, list(
 		list("Service Peaked Cap", 0, /obj/item/clothing/head/marine/peaked/service, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
 
 		list("PATCHES", 0, null, null, null),
-		list("Falling Falcons Shoulder Patch", 1, /obj/item/clothing/accessory/patch/falcon, null, VENDOR_ITEM_REGULAR),
 		list("USCM Shoulder Patch", 1, /obj/item/clothing/accessory/patch, null, VENDOR_ITEM_REGULAR),
 		list("United Americas Shoulder patch", 1, /obj/item/clothing/accessory/patch/ua, null, VENDOR_ITEM_REGULAR),
 
@@ -41,6 +42,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_staff_officer, list(
 		list("Mod 88 Pistol", 0, /obj/item/storage/belt/gun/m4a3/mod88, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_RECOMMENDED),
 		list("M4A3 Pistol", 0, /obj/item/storage/belt/gun/m4a3/commander, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_RECOMMENDED),
 		list("VP78 Pistol", 0, /obj/item/storage/belt/gun/m4a3/vp78, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_RECOMMENDED),
+		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("Military Police Belt", 0, /obj/item/storage/belt/security/MP/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Medical Lifesaver Rig", 0, /obj/item/storage/belt/medical/lifesaver/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Ammo Load Rig", 0, /obj/item/storage/belt/marine, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Holster Toolrig", 0, /obj/item/storage/belt/gun/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
 		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
@@ -51,45 +59,48 @@ GLOBAL_LIST_INIT(cm_vending_clothing_staff_officer, list(
 		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-		list("Backpack", 0, /obj/item/storage/backpack/marine, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("IMP Backpack", 0, /obj/item/storage/backpack/marine, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Lightweight IMP Backpack", 0, /obj/item/storage/backpack/marine/satchel/squad, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 		list("Satchel", 0, /obj/item/storage/backpack/marine/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 
 
 		list("OTHER SUPPLIES", 0, null, null, null),
 		list("Binoculars", 5,/obj/item/device/binoculars, null, VENDOR_ITEM_REGULAR),
+		list("Binoculars", 5,/obj/item/clothing/glasses/night/medhud, null, VENDOR_ITEM_REGULAR),
 		list("Rangefinder", 8, /obj/item/device/binoculars/range, null,  VENDOR_ITEM_REGULAR),
 		list("Laser Designator", 12, /obj/item/device/binoculars/range/designator, null, VENDOR_ITEM_RECOMMENDED),
 		list("Flashlight", 1, /obj/item/device/flashlight, null, VENDOR_ITEM_REGULAR),
 		list("Motion Detector", 5, /obj/item/device/motiontracker/adv, null, VENDOR_ITEM_RECOMMENDED),
-		list("Space Cleaner", 2, /obj/item/reagent_container/spray/cleaner, null, VENDOR_ITEM_REGULAR),
 		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
+		list("Whistle(Trench)", 5, /obj/item/device/trench_whistle, null, VENDOR_ITEM_REGULAR),
 	))
 
-/obj/structure/machinery/cm_vending/gear/staff_officer_armory
+/obj/structure/machinery/cm_vending/gear/platoon_commander_armory
 	name = "\improper ColMarTech Staff Officer Armory Equipment Rack"
 	desc = "An automated combat equipment vendor for Staff Officers."
 	req_access = list(ACCESS_MARINE_COMMAND)
 	icon_state = "mar_rack"
-	vendor_role = list(JOB_SO)
+	vendor_role = list(JOB_MS_PC, JOB_FORECON_CO)
 
-/obj/structure/machinery/cm_vending/gear/staff_officer_armory/get_listed_products(mob/user)
-	return GLOB.cm_vending_gear_staff_officer_armory
+/obj/structure/machinery/cm_vending/gear/platoon_commander_armory/get_listed_products(mob/user)
+	return GLOB.cm_vending_gear_platoon_officer_armory
 
 //------------ARMORY---------------
 
-GLOBAL_LIST_INIT(cm_vending_gear_staff_officer_armory, list(
+GLOBAL_LIST_INIT(cm_vending_gear_platoon_officer_armory, list(
 		list("COMBAT EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Officer M3 Armor", 0, /obj/item/clothing/suit/storage/marine/MP/SO, MARINE_CAN_BUY_COMBAT_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Officer M10 Helmet", 0, /obj/item/clothing/head/helmet/marine/MP/SO, MARINE_CAN_BUY_COMBAT_HELMET, VENDOR_ITEM_MANDATORY),
 		list("Marine Combat Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_COMBAT_SHOES, VENDOR_ITEM_MANDATORY),
 		list("Marine Combat Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
-		list("Aviator Shades", 0, /obj/item/clothing/glasses/sunglasses/aviator, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
-		list("Bayonet", 0, /obj/item/attachable/bayonet, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
 
 		list("SPECIALISATION KIT (CHOOSE 1)", 0, null, null, null),
+		list("Essential Officer Set", 0, /obj/effect/essentials_set/platoon_officer, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Leader Set", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Essential Engineer Set", 0, /obj/effect/essentials_set/engi, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Smartgunner Set", 0, /obj/effect/essentials_set/smartgunner/m56, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -126,6 +137,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_staff_officer_armory, list(
 		list("Heat Absorbent Coif", 0, /obj/item/clothing/mask/rebreather/scarf, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 
 		list("OTHER SUPPLIES", 0, null, null, null),
+		list("Automated Supply Beacon", 10, /obj/item/device/whiskey_supply_beacon, null, VENDOR_ITEM_REGULAR),
 		list("Welding Visor", 5, /obj/item/device/helmet_visor/welding_visor, null, VENDOR_ITEM_REGULAR),
 		list("Insulated Gloves", 3, /obj/item/clothing/gloves/yellow, null, VENDOR_ITEM_REGULAR),
 		list("Entrenching Tool", 1, /obj/item/tool/shovel/etool, null, VENDOR_ITEM_REGULAR),
@@ -141,3 +153,21 @@ GLOBAL_LIST_INIT(cm_vending_gear_staff_officer_armory, list(
 		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
 		list("Flashlight", 1, /obj/item/device/flashlight, null, VENDOR_ITEM_REGULAR),
 	))
+
+/obj/effect/essentials_set/platoon_officer
+	spawned_gear_list = list(
+		/obj/item/device/binoculars/range/designator,
+		/obj/item/map/current_map,
+		/obj/item/device/trench_whistle,
+		/obj/item/weapon/gun/energy/taser,
+		/obj/item/device/megaphone,
+		/obj/item/device/motiontracker/adv,
+		/obj/item/clothing/accessory/health/ceramic_plate,
+		/obj/item/device/cotablet,
+		/obj/item/tool/crew_monitor,
+		/obj/item/device/whiskey_supply_beacon,
+		/obj/item/device/whiskey_supply_beacon,
+		/obj/item/device/whiskey_supply_beacon,
+		/obj/item/device/whiskey_supply_beacon,
+		/obj/item/device/whiskey_supply_beacon,
+	)
