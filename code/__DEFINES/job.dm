@@ -416,7 +416,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //-------- Pinkertons --------//
 #define JOB_PKT "Pinkerton Security Operative"
-#define JOB_PKT_MED "Pinkerton Med-Tech Specialist"
+#define JOB_PKT_MED "Pinkerton Field Paramedic"
 #define JOB_PKT_ENG "Pinkerton Sec-Tech Specialist"
 #define JOB_PKT_TL "Pinkerton Security Team Lead"
 #define JOB_PKT_CO "Pinkerton Site Security Superintendent"

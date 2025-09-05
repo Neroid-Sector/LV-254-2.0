@@ -8,7 +8,7 @@
 
 /datum/equipment_preset/other/pinkerton/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE, ACCESS_LIST_MARINE_MAIN) //ACCESS_COME_BACK_TO_ME
+	access = get_access(ACCESS_LIST_PINKERTON) //access to marine and Wey-Yu brig and public areas, and all Colonial areas
 
 /datum/equipment_preset/other/pinkerton/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
@@ -224,7 +224,7 @@
 //medic
 
 /datum/equipment_preset/other/pinkerton/emt
-	name = "pinkerton med-tech specialist"
+	name = "pinkerton paramedic"
 	assignment = JOB_PKT_MED
 	rank = JOB_PKT_MED
 	idtype = /obj/item/card/id/pkt
@@ -297,7 +297,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/stack/concertina_wire, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv/hacked/pkt, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv/hacked/pkt, WEAR_L_HAND)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full(new_human), WEAR_R_STORE)
@@ -325,7 +325,7 @@
 
 /datum/equipment_preset/synth/pinkerton/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
+	access = get_access(ACCESS_LIST_PINKERTON)
 
 /datum/equipment_preset/synth/pinkerton/load_gear(mob/living/carbon/human/new_human)
 	new_human.allow_gun_usage = TRUE
@@ -349,10 +349,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud, WEAR_EYES)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/synthetic, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/sec/full, WEAR_R_STORE)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/attachments(new_human), WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/armpit, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/cmb/slugger, WEAR_IN_ACCESSORY)

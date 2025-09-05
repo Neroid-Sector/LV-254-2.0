@@ -66,7 +66,7 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 	var/xeno_ability_click_mode = XENO_ABILITY_CLICK_MIDDLE
 	var/auto_fit_viewport = FALSE
 	var/adaptive_zoom = 0
-	var/UI_style = "midnight"
+	var/UI_style = "dark"
 	var/toggles_admin = TOGGLES_ADMIN_DEFAULT
 	var/toggles_chat = TOGGLES_CHAT_DEFAULT
 	var/toggles_ghost = TOGGLES_GHOST_DEFAULT
@@ -190,15 +190,6 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 	var/body_type = "Lean" // Body Type
 	var/language = "None" //Secondary language
 	var/preferred_squad = "None"
-	var/night_vision_preference = "Green"
-	var/list/nv_color_list = list(
-						"Green" = NV_COLOR_GREEN,
-						"White" = NV_COLOR_WHITE,
-						"Yellow" = NV_COLOR_YELLOW,
-						"Orange" = NV_COLOR_ORANGE,
-						"Red" = NV_COLOR_RED,
-						"Blue" = NV_COLOR_BLUE
-					)
 		//Some faction information.
 	var/origin = ORIGIN_USCM
 	var/faction = "None" //Antag faction/general associated faction.
@@ -454,7 +445,6 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 
 			dat += "<b>Show Job Gear:</b> <a href='byond://?_src_=prefs;preference=toggle_job_gear'><b>[show_job_gear ? "True" : "False"]</b></a><br>"
 			dat += "<b>Background:</b> <a href='byond://?_src_=prefs;preference=cycle_bg'><b>Cycle Background</b></a><br><br>"
-			dat += "<b>Night Vision Color:</b> <a href='byond://?_src_=prefs;preference=prefnvg;task=input'><b>[night_vision_preference]</b></a><br>"
 
 			dat += "<b>Custom Loadout:</b> "
 			var/total_cost = 0
@@ -1624,12 +1614,6 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 					var/new_pref_squad = input(user, "Choose your preferred squad.", "Character Preference")  as null|anything in list("Alpha", "Bravo", "Charlie", "Delta", "None")
 					if(new_pref_squad)
 						preferred_squad = new_pref_squad
-
-				if("prefnvg")
-					var/new_nvg_color = tgui_input_list(user, "Choose the color of your night-vision", "Character Preferences", GLOB.nvg_color_list)
-					if(!new_nvg_color)
-						return
-					night_vision_preference = new_nvg_color
 
 				if("prefarmor")
 					var/new_pref_armor = tgui_input_list(user, "Choose your character's default style of armor:", "Character Preferences", GLOB.armor_style_list)

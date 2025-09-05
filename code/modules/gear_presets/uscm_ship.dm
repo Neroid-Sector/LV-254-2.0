@@ -298,7 +298,7 @@
 	)
 	assignment = JOB_CHIEF_REQUISITION
 	rank = JOB_CHIEF_REQUISITION
-	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MW1= JOB_PLAYTIME_TIER_0)
 	role_comm_title = "QM"
 	minimum_age = 25
 	skills = /datum/skills/RO
@@ -321,8 +321,15 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/req/ro(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reqcard/uscm(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clipboard(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/stamp/ro(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flash(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+
+/datum/equipment_preset/uscm_ship/qm/wo2
+	paygrades = list(PAY_SHORT_MW2)
 
 /datum/equipment_preset/uscm_ship/qm/wo3
 	paygrades = list(PAY_SHORT_MW3)

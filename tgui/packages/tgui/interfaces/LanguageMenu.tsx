@@ -13,8 +13,8 @@ export const LanguageMenu = (props) => {
   const height = 20 + languages.length * 95;
 
   return (
-    <Window width={300} height={height}>
-      <Window.Content>
+    <Window width={300} height={900}>
+      <Window.Content scrollable>
         <Section>
           <LanguagesView />
         </Section>
