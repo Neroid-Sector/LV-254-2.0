@@ -544,6 +544,12 @@
 	max_storage_space = 15
 	xeno_types = null
 
+/obj/item/storage/backpack/marine/satchel/squad
+	name = "\improper USCM IMP pack"
+	desc = "A heavy-duty IMP based backpack that can be slung around the front or to the side, and can quickly be accessed with only one hand."
+	icon_state = "marinebigsatch"
+	max_storage_space = 15
+
 /obj/item/storage/backpack/marine/satchel/big //wacky squad marine loadout item, its the IO backpack.
 	name = "\improper USCM logistics IMP backpack"
 	desc = "A standard-issue backpack worn by logistics personnel. It is occasionally issued to combat personnel for longer term expeditions and deep space incursions."
