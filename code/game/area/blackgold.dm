@@ -199,12 +199,23 @@
 
 /area/blackgold/lower/rooms
 
-/area/blackgold/lower/rooms/engine_core
-	name = "\improper Engine Reactor Core Room"
+/area/blackgold/lower/rooms/engineering
+	name = "\improper Lower Deck Engineering"
+	icon_state = "lowerengineering"
+
+/area/blackgold/lower/rooms/engineering/storage
+	name = "\improper Lower Deck Engineering Storage"
+
+/area/blackgold/lower/rooms/engineering/reactor
+	name = "\improper Lower Deck Reactor Core"
 	icon_state = "coreroom"
 	hijack_evacuation_area = TRUE
 	hijack_evacuation_weight = 0.2
 	hijack_evacuation_type = EVACUATION_TYPE_ADDITIVE
+
+/area/blackgold/lower/rooms/engineering/ce
+	name = "\improper Lower Deck Chief Engineer Office"
+	icon_state = "ceroom"
 
 /area/blackgold/lower/rooms/aicore
 	name = "\improper AI Core"
@@ -256,6 +267,10 @@
 /area/blackgold/lower/rooms/gym
 	name = "\improper Lower Deck Gym"
 	icon_state = "officerrnr"
+
+/area/blackgold/lower/rooms/conference
+	name = "\improper Lower Deck Squad Conference Office"
+	icon_state = "shared"
 
 //-----------------------------------------Brig------------------------------------------//
 
@@ -353,7 +368,6 @@
 /area/blackgold/middle/hallways/mid/aft
 	name = "\improper Middle Deck Aft Hallway"
 
-
 //--------------------------------------Maintenance--------------------------------------//
 
 /area/blackgold/middle/maint
@@ -424,9 +438,12 @@
 	name = "\improper Briefing Hall"
 	icon_state = "briefing"
 
-/area/blackgold/middle/rooms/medical/
+/area/blackgold/middle/rooms/medical
+	name = "\improper Medical Lower Lobby"
+	icon_state = "medical"
 	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
 	soundscape_interval = 120
+	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/blackgold/middle/rooms/medical/operating
 	icon_state = "operating"
@@ -439,6 +456,40 @@
 
 /area/blackgold/middle/rooms/medical/operating/three
 	name = "\improper Medical Operating Room 3"
+
+/area/blackgold/middle/rooms/medical/chemistry
+	name = "\improper Middle Deck Medbay Pharmacy"
+	icon_state = "chemistry"
+
+/area/blackgold/middle/rooms/medical/cmo
+	name = "\improper Middle Deck Chief Medical Officer's Office"
+
+/area/blackgold/middle/rooms/pumps
+	name = "Lifeboat Fuel Pumps"
+	icon_state = "lifeboat_pump"
+	requires_power = 1
+	hijack_evacuation_area = TRUE
+	hijack_evacuation_weight = 0.1
+	hijack_evacuation_type = EVACUATION_TYPE_ADDITIVE
+
+/area/blackgold/middle/rooms/pumps/port
+	name = "Port Lifeboat Fuel Pumps"
+
+/area/blackgold/middle/rooms/pumps/starboard
+	name = "Starboard Lifeboat Fuel Pumps"
+
+//-------------------------------------Engineering---------------------------------------//
+
+/area/blackgold/middle/rooms/engineering
+	name = "\improper Middle Deck Aft Engineering"
+	icon_state = "lowerengineering"
+	minimap_color = MINIMAP_AREA_ENGI
+
+/area/blackgold/middle/rooms/engineering/ot
+	name = "\improper Middle Deck Aft Ordinance Lab"
+
+
+
 
 //---------------------------------------------------------------------------------------//
 //--------------------------------------Upper Deck---------------------------------------//
@@ -613,7 +664,12 @@
 	name = "\improper Upper Deck Synthetic Storage"
 
 /area/blackgold/upper/rooms/evacuation
-	name = "\improper Upper Deck Evacuation Lounge"
+	name = "\improper Upper Deck Fore Evacuation Lounge"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "shuttle2"
+
+/area/blackgold/upper/rooms/evacuation/aft
+	name = "\improper Upper Deck Aft Evacuation Lounge"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "shuttle2"
 
@@ -644,11 +700,6 @@
 	name = "\improper Lifeboat Docking Area"
 	icon_state = "lifeboat"
 	flags_area = AREA_NOTUNNEL
-
-/area/blackgold/upper/rooms/medical/cells
-	name = "\improper Medical Research containment cells"
-	icon_state = "science"
-	flags_area = AREA_AVOID_BIOSCAN|AREA_NOTUNNEL|AREA_CONTAINMENT
 
 //------------------------------------------Brig-----------------------------------------//
 
@@ -682,9 +733,6 @@
 	name = "\improper Brig Stairwell"
 	icon_state = "stairs_lowerdeck"
 
-
-
-
 //------------------------------------------Misc-----------------------------------------//
 
 /area/blackgold/upper/rooms/hangar
@@ -693,13 +741,27 @@
 	soundscape_playlist = SCAPE_PL_HANGAR
 	soundscape_interval = 50
 
+/area/blackgold/upper/rooms/kitchen
+	name = "\improper Upper Deck Kitchen"
+	icon_state = "gruntrnr"
 
+/area/blackgold/upper/rooms/medical
+	name = "\improper Upper Deck Aft Medbay"
+	icon_state = "medical"
+	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
+	soundscape_interval = 120
 
+/area/blackgold/upper/rooms/medical/research
+	name = "\improper Upper Deck Aft Research Lab"
 
+/area/blackgold/upper/rooms/medical/morgue
+	name = "\improper Upper Deck Aft Morgue"
+	icon_state = "operating"
 
-
-
-
+/area/blackgold/upper/rooms/medical/containment
+	name = "\improper Upper Deck Aft Research Containment"
+	icon_state = "operating"
+	flags_area = AREA_NOTUNNEL | AREA_CONTAINMENT
 
 
 
@@ -720,26 +782,6 @@
 	icon_state = "selfdestruct"
 	fake_zlevel = 1 // upperdeck
 
-// engineering
-
-/area/blackgold/engineering
-	minimap_color = MINIMAP_AREA_ENGI
-
-// lower deck
-
-/area/blackgold/engineering/lower
-	name = "\improper Lower Deck Engineering"
-	icon_state = "lowerengineering"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/engineering/lower/engine_monitoring//this is not used  so could be remove?
-	name = "\improper Lower Deck Engine Reactor Monitoring"
-	icon_state = "lowermonitoring"
-
-/area/blackgold/engineering/lower/workshop
-	name = "\improper Lower Deck Engineering Workshop"
-	icon_state = "workshop"
-
 // upper deck
 
 /area/blackgold/engineering/upper_engineering
@@ -756,11 +798,6 @@
 /area/blackgold/engineering/upper_engineering/notunnel
 	flags_area = AREA_NOTUNNEL
 	requires_power = FALSE
-
-/area/blackgold/engineering/ce_room
-	name = "\improper Upper Deck Chief Engineer Office"
-	icon_state = "ceroom"
-	fake_zlevel = 1 // upperdeck
 
 /area/blackgold/engineering/starboard_atmos
 	name = "\improper Upper Deck Starboard Atmospherics"
@@ -779,11 +816,6 @@
 
 /area/blackgold/shipboard
 	minimap_color = MINIMAP_AREA_SEC
-
-/area/blackgold/shipboard/panic
-	name = "\improper Hangar Panic Room"
-	icon_state = "brig"
-	fake_zlevel = 2 // lowerdeck
 
 /area/blackgold/shipboard/starboard_missiles
 	name = "\improper Upper Deck Starboard Missile Tubes"
@@ -813,55 +845,10 @@
 	icon_state = "starboardemb"
 	fake_zlevel = 1 // upperdeck
 
-/area/blackgold/living/basketball
-	name = "\improper Basketball Court"
-	icon_state = "basketball"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/grunt_rnr
-	name = "\improper Lounge"
-	icon_state = "gruntrnr"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/living/officer_rnr
-	name = "\improper Upper Deck Officer's Lounge"
-	icon_state = "officerrnr"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/officer_study
-	name = "\improper Upper Deck Officer's Study"
-	icon_state = "officerstudy"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/auxiliary_officer_office
-	name = "\improper Upper Deck Auxiliary Support Officer office"
-	icon_state = "livingspace"
-	fake_zlevel = 1 // upperdeck
-
 /area/blackgold/living/intel
 	name = "\improper Intelligence Officer's Bunks"
 	icon_state = "livingspace"
 	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/cafeteria_port
-	name = "\improper Cafeteria Port"
-	icon_state = "food"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/living/cafeteria_starboard
-	name = "\improper Cafeteria Starboard"
-	icon_state = "food"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/living/cafeteria_officer
-	name = "\improper Upper Deck Officer Cafeteria"
-	icon_state = "food"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/offices
-	name = "\improper Lower Deck Conference Office"
-	icon_state = "briefing"
-	fake_zlevel = 2 // lowerdeck
 
 /area/blackgold/living/offices/flight
 	name = "\improper Flight Office"
@@ -871,90 +858,7 @@
 	icon_state = "livingspace"
 	fake_zlevel = 1
 
-/area/blackgold/medical
-	minimap_color = MINIMAP_AREA_MEDBAY
 
-/area/blackgold/medical/lower_medical_lobby
-	name = "\improper Medical Lower Lobby"
-	icon_state = "medical"
-	fake_zlevel = 2 // lowerdeck
-	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
-	soundscape_interval = 120
-
-/area/blackgold/medical/upper_medical
-	name = "\improper Medical Upper"
-	icon_state = "medical"
-	fake_zlevel = 1 // upperdeck
-	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
-	soundscape_interval = 120
-
-/area/blackgold/medical/morgue
-	name = "\improper Morgue"
-	icon_state = "operating"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/medical/medical_science
-	name = "\improper Medical Research laboratories"
-	icon_state = "science"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/medical/hydroponics
-	name = "\improper Medical Research hydroponics"
-	icon_state = "science"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/medical/containment/cell/cl
-	name = "\improper Storage Room"
-
-/area/blackgold/medical/chemistry
-	name = "\improper Medical Chemical laboratory"
-	icon_state = "chemistry"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/medical/lockerroom
-	name = "\improper Medical Locker Room"
-	icon_state = "science"
-	fake_zlevel = 2 // lowerdeck
-
-/area/blackgold/medical/cryo_tubes
-	name = "\improper Medical Cryogenics Tubes"
-	icon_state = "medical"
-	fake_zlevel = 2 // lowerdeck
-	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
-	soundscape_interval = 120
-
-/area/blackgold/medical/lower_medical_medbay
-	name = "\improper Medical Lower Medbay"
-	icon_state = "medical"
-	fake_zlevel = 2 // lowerdeck
-	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
-	soundscape_interval = 120
-
-/area/blackgold/engineering/airmix
-	icon_state = "selfdestruct"
-	requires_power = 0
-	flags_area = AREA_NOTUNNEL
-
-/area/blackgold/lifeboat_pumps
-	name = "Lifeboat Fuel Pumps"
-	icon_state = "lifeboat_pump"
-	requires_power = 1
-	fake_zlevel = 1
-	hijack_evacuation_area = TRUE
-	hijack_evacuation_weight = 0.1
-	hijack_evacuation_type = EVACUATION_TYPE_ADDITIVE
-
-/area/blackgold/lifeboat_pumps/north1
-	name = "Starboard-Fore Lifeboat Fuel Pump"
-
-/area/blackgold/lifeboat_pumps/north2
-	name = "Starboard-Aft Lifeboat Fuel Pump"
-
-/area/blackgold/lifeboat_pumps/south1
-	name = "Port-Fore Lifeboat Fuel Pump"
-
-/area/blackgold/lifeboat_pumps/south2
-	name = "Port-Aft Lifeboat Fuel Pump"
 
 /area/blackgold/evacuation/pod1
 /area/blackgold/evacuation/pod2
