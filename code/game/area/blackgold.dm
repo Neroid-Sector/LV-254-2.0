@@ -217,6 +217,10 @@
 	name = "\improper Lower Deck Chief Engineer Office"
 	icon_state = "ceroom"
 
+/area/blackgold/lower/rooms/engineering/laundry
+	name = "\improper Upper Deck Laundry Room"
+	icon_state = "laundry"
+
 /area/blackgold/lower/rooms/aicore
 	name = "\improper AI Core"
 	icon_state = "airoom"
@@ -477,6 +481,14 @@
 
 /area/blackgold/middle/rooms/pumps/starboard
 	name = "Starboard Lifeboat Fuel Pumps"
+
+/area/blackgold/middle/rooms/liaison
+	name = "\improper Middle Deck Corporate Liaison Office"
+	icon_state = "corporatespace"
+
+/area/blackgold/middle/rooms/reporter
+	name = "\improper Middle Deck Combat Correspondent Office"
+	icon_state = "selfdestruct"
 
 //-------------------------------------Engineering---------------------------------------//
 
@@ -765,45 +777,6 @@
 
 
 
-
-
-
-
-
-
-
-/area/blackgold/command/corporateliaison
-	name = "\improper Corporate Liaison Office"
-	icon_state = "corporatespace"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/command/combat_correspondent
-	name = "\improper Upper Deck Combat Correspondent Office"
-	icon_state = "selfdestruct"
-	fake_zlevel = 1 // upperdeck
-
-// upper deck
-
-/area/blackgold/engineering/upper_engineering
-	name = "\improper Upper Deck Engineering"
-	icon_state = "upperengineering"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/engineering/upper_engineering/starboard
-	name = "\improper Upper Deck Starboard Engineering"
-
-/area/blackgold/engineering/upper_engineering/port
-	name = "\improper Upper Deck Port Engineering"
-
-/area/blackgold/engineering/upper_engineering/notunnel
-	flags_area = AREA_NOTUNNEL
-	requires_power = FALSE
-
-/area/blackgold/engineering/starboard_atmos
-	name = "\improper Upper Deck Starboard Atmospherics"
-	icon_state = "starboardatmos"
-	fake_zlevel = 1 // upperdeck
-
 /area/blackgold/command/intel_bunks
 	name = "\improper Upper Deck Intel Officer's Bunks"
 	icon_state = "blue"
@@ -812,19 +785,6 @@
 /area/blackgold/engineering/laundry
 	name = "\improper Upper Deck Laundry Room"
 	icon_state = "laundry"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/shipboard
-	minimap_color = MINIMAP_AREA_SEC
-
-/area/blackgold/shipboard/starboard_missiles
-	name = "\improper Upper Deck Starboard Missile Tubes"
-	icon_state = "starboardmissile"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/shipboard/port_missiles
-	name = "\improper Upper Deck Port Missile Tubes"
-	icon_state = "portmissile"
 	fake_zlevel = 1 // upperdeck
 
 /area/blackgold/living
