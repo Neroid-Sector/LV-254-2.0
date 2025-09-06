@@ -713,6 +713,10 @@
 	icon_state = "lifeboat"
 	flags_area = AREA_NOTUNNEL
 
+/area/blackgold/upper/rooms/garden
+	name = "\improper Upper Deck Garden"
+	icon_state = "portemb"
+
 //------------------------------------------Brig-----------------------------------------//
 
 /area/blackgold/upper/rooms/brig
@@ -782,11 +786,6 @@
 	icon_state = "blue"
 	fake_zlevel = 1 // upperdeck
 
-/area/blackgold/engineering/laundry
-	name = "\improper Upper Deck Laundry Room"
-	icon_state = "laundry"
-	fake_zlevel = 1 // upperdeck
-
 /area/blackgold/living
 	minimap_color = MINIMAP_AREA_COLONY
 
@@ -795,23 +794,10 @@
 	icon_state = "livingspace"
 	fake_zlevel = 2
 
-/area/blackgold/living/port_garden
-	name = "\improper Port Garden"
-	icon_state = "portemb"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/starboard_garden
-	name = "\improper Starboard Garden"
-	icon_state = "starboardemb"
-	fake_zlevel = 1 // upperdeck
-
 /area/blackgold/living/intel
 	name = "\improper Intelligence Officer's Bunks"
 	icon_state = "livingspace"
 	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/offices/flight
-	name = "\improper Flight Office"
 
 /area/blackgold/living/pilotbunks
 	name = "\improper Pilot's Bunks"
