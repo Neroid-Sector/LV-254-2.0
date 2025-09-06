@@ -1,7 +1,7 @@
 //------------GEAR VENDOR---------------
 
-GLOBAL_LIST_INIT(cm_vending_gear_commanding_officer, list(
-		list("COMMANDER'S PRIMARY (CHOOSE 1)", 0, null, null, null),
+GLOBAL_LIST_INIT(cm_vending_gear_company_commander, list(
+		list("COMPANY COMMANDER'S PRIMARY (CHOOSE 1)", 0, null, null, null),
 		list("M46C Pulse Rifle", 0, /obj/effect/essentials_set/co/riflepreset, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
 		list("M56C Smartgun", 0, /obj/item/storage/box/m56c_system, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
 
@@ -53,36 +53,39 @@ GLOBAL_LIST_INIT(cm_vending_gear_commanding_officer, list(
 		list("Suppressor", 15, /obj/item/attachable/suppressor, null, VENDOR_ITEM_REGULAR),
 ))
 
-/obj/structure/machinery/cm_vending/gear/commanding_officer
-	name = "\improper ColMarTech Commanding Officer Weapon Rack"
-	desc = "An automated weapons rack for the Commanding Officer. It features a robust selection of weaponry meant only for the USCM's top officers."
+/obj/structure/machinery/cm_vending/gear/company_commander
+	name = "\improper ColMarTech Company Commander Weapon Rack"
+	desc = "An automated weapons rack for the Company Commander. It features a robust selection of weaponry meant only for the USCM's top officers."
 	req_access = list(ACCESS_MARINE_SENIOR)
-	vendor_role = list(JOB_CO, JOB_WO_CO, JOB_MS_CO)
+	vendor_role = list(JOB_MS_GC)
 	icon_state = "guns"
 	use_snowflake_points = TRUE
 
-/obj/structure/machinery/cm_vending/gear/commanding_officer/get_listed_products(mob/user)
-	return GLOB.cm_vending_gear_commanding_officer
+/obj/structure/machinery/cm_vending/gear/company_commander/get_listed_products(mob/user)
+	return GLOB.cm_vending_gear_company_commander
 
 //------------CLOTHING VENDOR---------------
 
-GLOBAL_LIST_INIT(cm_vending_clothing_commanding_officer, list(
+GLOBAL_LIST_INIT(cm_vending_clothing_company_commander, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Headset", 0, /obj/item/device/radio/headset/almayer/mcom/cdrcom, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 
-		list("COMMANDING OFFICER ESSENTIALS KIT (TAKE ALL)", 0, null, null, null),
-		list("Commanding Officer Essentials Kit", 0, /obj/effect/essentials_set/commanding_officer, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("COMPANY COMMANDER ESSENTIALS KIT (TAKE ALL)", 0, null, null, null),
+		list("Company Commander Essentials Kit", 0, /obj/effect/essentials_set/ground_officer, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("BAGS (CHOOSE 1)", 0, null, null, null),
-		list("Commanding Officer Backpack", 0, /obj/item/storage/backpack/mcommander, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
+		list("Company Commander Backpack", 0, /obj/item/storage/backpack/mcommander, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
 		list("Secure Satchel", 0, /obj/item/storage/backpack/satchel/lockable, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
 		list("RTO Telephone Pack", 0, /obj/item/storage/backpack/marine/satchel/rto, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
-		list("Intel Expedition Pack", 0, /obj/item/storage/backpack/marine/satchel/intel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
+		list("Intel Expedition Pack", 0, /obj/item/storage/backpack/marine/satchel/squad, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
+		list("IMP Backpack", 0, /obj/item/storage/backpack/marine, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Lightweight IMP Backpack", 0, /obj/item/storage/backpack/marine/satchel/squad, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Commanding Officer's M3 Armor", 0, /obj/item/clothing/suit/storage/marine/MP/CO, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
-		list("Commanding Officer's M3 Armor", 0, /obj/item/clothing/suit/storage/marine/MP/CO/bomber, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+		list("Company Commander's M3 Armor", 0, /obj/item/clothing/suit/storage/marine/MP/CO, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+		list("Company Commander's M3 Armor", 0, /obj/item/clothing/suit/storage/marine/MP/CO/bomber, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
+		list("Combat Webbing Vest", 0, /obj/item/clothing/suit/storage/webbing, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 
 		list("COMBAT EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("M11C Helmet", 0, /obj/item/clothing/head/helmet/marine/leader/CO, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
@@ -109,7 +112,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_commanding_officer, list(
 		list("M276 Ammo Load Rig", 0, /obj/item/storage/belt/marine, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 Holster Toolrig", 0, /obj/item/storage/belt/gun/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("Custom Revolver Belt", 0, /obj/item/storage/belt/gun/m44/gunslinger, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("First-Aid Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
@@ -134,27 +136,24 @@ GLOBAL_LIST_INIT(cm_vending_clothing_commanding_officer, list(
 		list("United Americas Shoulder patch", 0, /obj/item/clothing/accessory/patch/ua, null, VENDOR_ITEM_REGULAR),
 ))
 
-/obj/structure/machinery/cm_vending/clothing/commanding_officer
-	name = "\improper ColMarTech Commanding Officer Equipment Rack"
-	desc = "An automated equipment vendor for the Commanding Officer. Contains a prime selection of equipment for only the USCM's top officers."
+/obj/structure/machinery/cm_vending/clothing/company_commander
+	name = "\improper ColMarTech Company Commander Equipment Rack"
+	desc = "An automated equipment vendor for the Company Commander. Contains a prime selection of equipment for only the USCM's top officers."
 	req_access = list(ACCESS_MARINE_SENIOR)
-	vendor_role = list(JOB_CO, JOB_MS_CO, JOB_WO_CO)
+	vendor_role = list(JOB_MS_GC)
 
-/obj/structure/machinery/cm_vending/clothing/commanding_officer/get_listed_products(mob/user)
-	return GLOB.cm_vending_clothing_commanding_officer
+/obj/structure/machinery/cm_vending/clothing/company_commander/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_company_commander
 
-/obj/effect/essentials_set/commanding_officer
+/obj/effect/essentials_set/ground_officer
 	spawned_gear_list = list(
 		/obj/item/device/binoculars/range/designator,
 		/obj/item/map/current_map,
-		/obj/item/device/whistle,
+		/obj/item/device/trench_whistle,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/device/megaphone,
-	)
-
-// This gets around the COs' weapon not spawning without incendiary mag.
-/obj/effect/essentials_set/co/riflepreset
-	spawned_gear_list = list(
-		/obj/item/weapon/gun/rifle/m46c,
-		/obj/item/clothing/glasses/night/medhud,
+		/obj/item/device/motiontracker/adv,
+		/obj/item/clothing/accessory/health/ceramic_plate,
+		/obj/item/device/cotablet,
+		/obj/item/tool/crew_monitor,
 	)

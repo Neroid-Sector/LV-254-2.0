@@ -307,18 +307,20 @@
 ///CO pouch. This pouch can hold only 1 of each type of item: 1 sidearm, 1 pair of binoculars, 1 CO tablet
 /obj/item/storage/pouch/pistol/command
 	name = "command pouch"
-	desc = "A specialized, sturdy pouch issued to Commanding Officers. Can hold their sidearm, the command tablet and a set of binoculars."
-	storage_slots = 3
+	desc = "A specialized, sturdy pouch issued to Commanding Officers. Can hold their sidearm, the command tablet, crew tracker and a set of binoculars."
+	storage_slots = 4
 	icon_state = "command_pouch"
 	can_hold = list(
 		/obj/item/weapon/gun/revolver,
 		/obj/item/weapon/gun/pistol,
 		/obj/item/device/binoculars,
 		/obj/item/device/cotablet,
+		/obj/item/tool/crew_monitor,
 	)
 
 	var/obj/item/device/binoculars/binos
 	var/obj/item/device/cotablet/tablet
+	var/obj/item/tool/crew_monitor/tracker
 	icon_x = -6
 	icon_y = 0
 
@@ -331,6 +333,8 @@
 	..()
 	if(AM == binos)
 		binos = null
+	if(AM == tracker)
+		tracker = null
 	else if(AM == tablet)
 		tablet = null
 
@@ -342,6 +346,10 @@
 		if(!stop_messages)
 			to_chat(usr, SPAN_WARNING("[src] already holds a pair of binoculars."))
 		return FALSE
+	if(tracker && istype(I, /obj/item/tool/crew_monitor))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] already holds a crew tracker."))
+		return FALSE
 	else if(tablet && istype(I, /obj/item/device/cotablet))
 		if(!stop_messages)
 			to_chat(usr, SPAN_WARNING("[src] already holds a tablet."))
@@ -349,6 +357,8 @@
 
 /obj/item/storage/pouch/pistol/command/_item_insertion(obj/item/I, prevent_warning = 0, mob/user)
 	if(istype(I, /obj/item/device/binoculars))
+		binos = I
+	if(istype(I, /obj/item/tool/crew_monitor))
 		binos = I
 	else if(istype(I, /obj/item/device/cotablet))
 		tablet = I
@@ -387,6 +397,12 @@
 			current_gun.attack_hand(user)
 		return
 	..()
+
+/obj/item/storage/pouch/pistol/command/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
+	new /obj/item/device/cotablet(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/tool/crew_monitor(src)
 
 //// MAGAZINE POUCHES /////
 

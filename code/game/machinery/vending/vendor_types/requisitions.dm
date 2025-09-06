@@ -510,7 +510,8 @@
 		list("Marine Urban Combat Boots", 5, /obj/item/clothing/shoes/marine/urban, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACKS", -1, null, null),
-		list("Lightweight IMP Backpack", 20, /obj/item/storage/backpack/marine, VENDOR_ITEM_REGULAR),
+		list("IMP Backpack", 20, /obj/item/storage/backpack/marine, VENDOR_ITEM_REGULAR),
+		list("Lightweight IMP Backpack", 20, /obj/item/storage/backpack/marine/satchel/squad, VENDOR_ITEM_REGULAR),
 		list("USCM Satchel", 20, /obj/item/storage/backpack/marine/satchel, VENDOR_ITEM_REGULAR),
 		list("USCM Chestrig", 10, /obj/item/storage/backpack/marine/satchel/chestrig, VENDOR_ITEM_REGULAR),
 		list("USCM Technician Backpack", 10, /obj/item/storage/backpack/marine/tech, VENDOR_ITEM_REGULAR),
