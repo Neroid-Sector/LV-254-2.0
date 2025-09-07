@@ -463,7 +463,7 @@
 //****************************************** CIVILLIANS & MEDBAY ************************************************/
 
 /obj/effect/landmark/start/whiskey/liaison
-	icon_state = "cc_spawn"
+	icon_state = "cr_spawn"
 	job = /datum/job/civilian/liaison/whiskey
 
 /obj/effect/landmark/start/whiskey/cmo

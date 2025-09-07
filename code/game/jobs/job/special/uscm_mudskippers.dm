@@ -45,7 +45,7 @@
 	entry_message_body = "Greetings Commander" //Middle paragraph. This one is typically written per role and declared here.
 /obj/effect/landmark/start/mudskipper/msco
 	name = JOB_MS_CO
-	icon_state = "xo_spawn"
+	icon_state = "co_spawn"
 	job = /datum/job/uscm/mudskipper/msco
 
 /datum/job/uscm/mudskipper/msco/announce_entry_message(mob/living/carbon/human/H)
@@ -89,7 +89,7 @@
 	entry_message_body = "You are a staff officer on the USS-Blackgold. You are responsible for managing the the operations on the ship.  Ensure that you read SOP <a href='https://neroid-sector.com/wiki/index.php?title=Mudskippers_SOP'>" //Middle paragraph. This one is typically written per role and declared here.
 /obj/effect/landmark/start/mudskipper/mslt
 	name = JOB_MS_LT
-	icon_state = "xo_spawn"
+	icon_state = "so_spawn"
 	job = /datum/job/uscm/mudskipper/mslt
 
 /datum/job/uscm/mudskipper/msgc
@@ -104,7 +104,7 @@
 	entry_message_body = "You are a Company commander of the  502nd Engineering Corps' 4th Division 3rd brigade 15th Bat. aka. The 'Mudskippers.' You are resposible for the platoons under your command and making sure they operate at peak performance.  Ensure that you read SOP <a href='https://neroid-sector.com/wiki/index.php?title=Mudskippers_SOP'>" //Middle paragraph. This one is typically written per role and declared here.
 /obj/effect/landmark/start/mudskipper/msgc
 	name = JOB_MS_GC
-	icon_state = "xo_spawn"
+	icon_state = "cc_spawn"
 	job = /datum/job/uscm/mudskipper/msgc
 
 /datum/job/uscm/mudskipper/msgc/announce_entry_message(mob/living/carbon/human/H)
@@ -135,7 +135,7 @@
 
 /obj/effect/landmark/start/mudskipper/mspc
 	name = JOB_MS_PC
-	icon_state = "xo_spawn"
+	icon_state = "pc_spawn"
 	job = /datum/job/uscm/mudskipper/mspc
 
 //-----SQUAD-----///
@@ -166,7 +166,7 @@
 
 /obj/effect/landmark/start/mudskipper/mssl
 	name = JOB_MS_SL
-	icon_state = "xo_spawn"
+	icon_state = "leader_spawn"
 	job = /datum/job/uscm/mudskipper/mssl
 
 /datum/job/uscm/mudskipper/msengie
@@ -191,7 +191,7 @@
 
 /obj/effect/landmark/start/mudskipper/msengie
 	name = JOB_MS_ENGINEER
-	icon_state = "xo_spawn"
+	icon_state = "engi_spawn"
 	job = /datum/job/uscm/mudskipper/msengie
 
 /datum/job/uscm/mudskipper/msmedic
@@ -215,7 +215,7 @@
 
 /obj/effect/landmark/start/mudskipper/msmedic
 	name = JOB_MS_MEDIC
-	icon_state = "xo_spawn"
+	icon_state = "medic_spawn"
 	job = /datum/job/uscm/mudskipper/msmedic
 
 /datum/job/uscm/mudskipper/mssg
@@ -242,7 +242,7 @@
 
 /obj/effect/landmark/start/mudskipper/mssg
 	name = JOB_MS_SMARTGUNNER
-	icon_state = "xo_spawn"
+	icon_state = "smartgunner_spawn"
 	job = /datum/job/uscm/mudskipper/mssg
 
 /datum/job/uscm/mudskipper/msrfm
@@ -270,7 +270,7 @@
 
 /obj/effect/landmark/start/mudskipper/msrfm
 	name = JOB_MS_RFM
-	icon_state = "xo_spawn"
+	icon_state = "marine_spawn"
 	job = /datum/job/uscm/mudskipper/msrfm
 
 //----------Support----------//
@@ -318,9 +318,10 @@
 	gear_preset = /datum/equipment_preset/uscm_mudskippers/po
 	entry_message_intro = "" // Shown on roundstart and latejoin. Top paragraph. Replaced with a generic "You are a [role name]" if not included
 	entry_message_body = "He just flies the bomber.  Ensure that you read SOP <a href='https://neroid-sector.com/wiki/index.php?title=Mudskippers_SOP'>" //Middle paragraph. This one is typically written per role and declared here.
+
 /obj/effect/landmark/start/mudskipper/mspo
 	name = JOB_MS_PILOT
-	icon_state = "po_spawn"
+	icon_state = "dp_spawn"
 	job = /datum/job/uscm/mudskipper/mspo
 
 //TANK
@@ -334,9 +335,10 @@
 	gear_preset = /datum/equipment_preset/uscm_mudskippers/tank
 	entry_message_intro = "" // Shown on roundstart and latejoin. Top paragraph. Replaced with a generic "You are a [role name]" if not included
 	entry_message_body = "Drive Tank.  Ensure that you read SOP <a href='https://neroid-sector.com/wiki/index.php?title=Mudskippers_SOP'>" //Middle paragraph. This one is typically written per role and declared here.
+
 /obj/effect/landmark/start/mudskipper/msvc
 	name = JOB_MS_CREWMAN
-	icon_state = "po_spawn"
+	icon_state = "vc_spawn"
 	job = /datum/job/uscm/mudskipper/msvc
 
 /datum/job/uscm/mudskipper/synth
@@ -352,5 +354,5 @@
 
 /obj/effect/landmark/start/mudskipper/synth
 	name = JOB_MS_SYNTH
-	icon_state = "po_spawn"
+	icon_state = "syn_spawn"
 	job = /datum/job/uscm/mudskipper/synth
