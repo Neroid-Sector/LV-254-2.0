@@ -16,6 +16,42 @@
 
 	attack_verb = list("flogged", "whipped", "lashed", "disciplined")
 
+/obj/item/weapon/flail
+	name = "flail"
+	desc = "A weapon of terror."
+	icon_state = "chain"
+	item_state = "chain"
+	icon = 'icons/obj/items/weapons/melee/misc.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/misc_weapons_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/misc_weapons_righthand.dmi'
+	)
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
+	flags_equip_slot = SLOT_WAIST
+	force = MELEE_FORCE_VERY_STRONG
+	throwforce = MELEE_FORCE_STRONG
+	w_class = SIZE_MEDIUM
+
+	attack_verb = list("flogged", "whipped", "lashed", "disciplined")
+
+/obj/item/weapon/bikechain
+	name = "Bike Chain"
+	desc = "A humble tool used to great effect."
+	icon_state = "chain"
+	item_state = "chain"
+	icon = 'icons/obj/items/weapons/melee/misc.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/misc_weapons_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/misc_weapons_righthand.dmi'
+	)
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
+	flags_equip_slot = SLOT_WAIST
+	force = MELEE_FORCE_STRONG
+	throwforce = MELEE_FORCE_STRONG
+	w_class = SIZE_MEDIUM
+
+	attack_verb = list("whipped", "lashed", "batttered", "abused")
+
 /obj/item/weapon/broken_bottle
 	name = "broken bottle"
 	desc = "A bottle with a sharp broken bottom."
