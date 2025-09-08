@@ -306,10 +306,15 @@
 
 /obj/structure/stairs/multiz/proc/on_turf_entered(turf/source, atom/movable/enterer)
 	if(!istype(enterer, /mob))
-		return
 
-	RegisterSignal(enterer, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_premove))
-	RegisterSignal(enterer, COMSIG_MOVABLE_MOVED, PROC_REF(on_leave))
+		RegisterSignal(enterer, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_premove))
+		RegisterSignal(enterer, COMSIG_MOVABLE_MOVED, PROC_REF(on_leave))
+	if(!istype(enterer, /obj/vehicle))
+
+		RegisterSignal(enterer, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_premove))
+		RegisterSignal(enterer, COMSIG_MOVABLE_MOVED, PROC_REF(on_leave))
+	else
+		return
 
 /obj/structure/stairs/multiz/proc/on_leave(atom/movable/mover, atom/oldloc, newDir)
 	SIGNAL_HANDLER
@@ -329,7 +334,7 @@
 		actual_turf = SSmapping.get_turf_above(target_turf)
 	else
 		actual_turf = SSmapping.get_turf_below(target_turf)
-	
+
 	if(actual_turf)
 		if(istype(mover, /mob))
 			var/mob/mover_mob = mover
