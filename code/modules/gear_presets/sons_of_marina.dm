@@ -221,7 +221,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som/acolyte(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cultist_hood/skull_mask(new_human), WEAR_HEAD)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/implanter/rejuv(new_human), WEAR_IN_BACK)
@@ -230,8 +229,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/chainofcommand(new_human), WEAR_R_HAND)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/chainofcommand(new_human), WEAR_L_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/flail(new_human), WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/flail(new_human), WEAR_L_HAND)
 
 	. = ..()
 
@@ -251,7 +250,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/frontier(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/cultist_hoodie/som(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cultist_hood/som(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/chainofcommand(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/flail(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/chloralhydrate(new_human), WEAR_IN_BACK)
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)

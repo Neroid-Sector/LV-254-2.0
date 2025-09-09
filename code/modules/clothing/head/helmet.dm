@@ -83,7 +83,7 @@
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
 
-/obj/item/clothing/head/helmet/ulach/should_block_game_interaction(atom/target, include_hunting_grounds)
+/obj/item/clothing/head/helmet/ulach/biker
 	name = "Biker Helmet"
 	desc = "A simple biker helmet. Safety first kids!."
 
