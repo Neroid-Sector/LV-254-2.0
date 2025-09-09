@@ -11532,6 +11532,13 @@
 	},
 /turf/open/floor/hybrisa/carpet/carpetdarkerblue,
 /area/blackgold/middle/rooms/workshop)
+"aPQ" = (
+/obj/effect/landmark/start/mudskipper/mspo,
+/obj/structure/machinery/light/blue{
+	pixel_x = 16
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/workshop)
 "aPR" = (
 /obj/structure/machinery/cryopod/right{
 	layer = 3.1;
@@ -11561,11 +11568,16 @@
 /area/blackgold/middle/rooms/reporter)
 "aPX" = (
 /obj/structure/machinery/cryopod/right,
-/obj/structure/machinery/light/red{
-	dir = 8
-	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/workshop)
+"aPY" = (
+/obj/structure/stairs,
+/obj/structure/platform/metal/ship/west,
+/obj/structure/machinery/light/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/upper/stairs/star/mid)
 "aPZ" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine{
@@ -11652,6 +11664,12 @@
 /obj/structure/platform/metal/ship/corner/north,
 /turf/open/floor/almayer/blue/south,
 /area/blackgold/middle/rooms/workshop)
+"aQk" = (
+/obj/structure/machinery/light/blue{
+	dir = 4
+	},
+/turf/open_space,
+/area/blackgold/upper/stairs/star/mid)
 "aQl" = (
 /obj/structure/platform/metal/ship/corner/north,
 /obj/structure/surface/table/almayer,
@@ -11676,11 +11694,25 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/workshop)
+"aQp" = (
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "ramptop"
+	},
+/obj/structure/machinery/light/blue,
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/upper/stairs/star/aft)
 "aQq" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/working_joe,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
+"aQr" = (
+/obj/structure/machinery/light/blue{
+	dir = 1
+	},
+/turf/open_space,
+/area/blackgold/upper/stairs/star/aft)
 "aQt" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -12063,6 +12095,9 @@
 /area/blackgold/middle/rooms/workshop)
 "aRR" = (
 /obj/structure/platform/metal/ship/east,
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_22"
+	},
 /turf/open/floor/almayer/blue/southeast,
 /area/blackgold/middle/rooms/workshop)
 "aRS" = (
@@ -12176,10 +12211,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
 "aSm" = (
-/obj/structure/machinery/disposal{
-	pixel_x = 5;
-	pixel_y = 4
-	},
+/obj/structure/machinery/disposal,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
 "aSn" = (
@@ -12640,10 +12672,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/tanker)
-"aTT" = (
-/obj/structure/machinery/light,
-/turf/open/floor/hybrisa/carpet/carpetred,
-/area/blackgold/upper/rooms/tanker)
 "aTU" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -12651,6 +12679,7 @@
 	pixel_y = 2;
 	layer = 3
 	},
+/obj/structure/machinery/light,
 /turf/open/floor/hybrisa/carpet/carpetred,
 /area/blackgold/upper/rooms/tanker)
 "aTV" = (
@@ -12787,6 +12816,9 @@
 "aUo" = (
 /obj/effect/landmark/start/mudskipper/msvc,
 /obj/structure/platform/metal/ship/corner/west,
+/obj/structure/sign/poster{
+	pixel_y = 31
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/tanker)
 "aUp" = (
@@ -12844,6 +12876,10 @@
 /turf/open/floor/almayer/blue/east,
 /area/blackgold/upper/rooms/tanker)
 "aUz" = (
+/obj/structure/sign/prop1{
+	pixel_y = 32;
+	pixel_x = 16
+	},
 /turf/open/floor/almayer/blue/northwest,
 /area/blackgold/upper/rooms/tanker)
 "aUA" = (
@@ -12851,13 +12887,13 @@
 /area/blackgold/upper/rooms/tanker)
 "aUB" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/tanker)
 "aUC" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/maint/star/mid)
 "aUD" = (
@@ -21663,16 +21699,6 @@
 	icon_state = "plate"
 	},
 /area/blackgold/underdeck/vehicle)
-"pGH" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/obj/structure/platform/metal/ship/west,
-/obj/structure/machinery/light/blue{
-	dir = 8
-	},
-/turf/open/floor/plating/almayer/no_build,
-/area/blackgold/middle/stairs/star/mid)
 "pGK" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
@@ -25527,7 +25553,6 @@
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
 "wuO" = (
 /obj/structure/platform/metal/ship,
-/obj/structure/machinery/light/blue,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/stairs/star/mid)
 "wvf" = (
@@ -78745,7 +78770,7 @@ ant
 ant
 ftp
 dHA
-pGH
+dHA
 dHA
 lwN
 ati
@@ -82044,8 +82069,8 @@ aQG
 aSj
 aQA
 aQv
-aSr
 aSd
+aSr
 aSd
 aQi
 aRL
@@ -82660,7 +82685,7 @@ aQj
 aQg
 aQd
 aPS
-aPS
+aPQ
 aRA
 asT
 atm
@@ -95348,9 +95373,9 @@ lrC
 bSc
 oDc
 aUE
-ewM
-ewM
-ewM
+oDc
+oDc
+oDc
 oDc
 oDc
 oDc
@@ -95384,9 +95409,9 @@ oZQ
 oZQ
 oZQ
 oZQ
-aSv
-aSv
-aSv
+lTH
+lTH
+lTH
 aST
 lTH
 tZu
@@ -99276,7 +99301,7 @@ sJe
 fMW
 bPj
 kkM
-kkM
+aPY
 gvL
 gvL
 gvL
@@ -99798,7 +99823,7 @@ dtx
 gcY
 rnF
 bcX
-oon
+aQk
 oon
 oon
 oon
@@ -102754,7 +102779,7 @@ aUi
 aTK
 orm
 aTZ
-aTT
+aTZ
 aTK
 aTE
 aTx
@@ -103444,13 +103469,13 @@ apy
 uCW
 bEV
 qjV
-hJH
+aQr
 hJH
 hJH
 kIs
 uNm
 uNm
-uNm
+aQp
 aTM
 aRq
 aRp
