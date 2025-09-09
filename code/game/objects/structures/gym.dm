@@ -84,7 +84,7 @@
 		animate(user, pixel_z = -2, time = 3, delay = 3)
 		animate(pixel_z = -4, time = 3)
 		stoplag(9 DECISECONDS)
-		playsound(user, 'sound/effects/spring.ogg', 40, TRUE, 2)
+		playsound(user, 'sound/effects/bamf.ogg', 40, TRUE, 2)
 
 /obj/structure/weightmachine/weightlifter
 	icon = 'icons/obj/structures/fitness.dmi'
@@ -102,7 +102,7 @@
 		for(var/innerReps = max(reps, 1), innerReps > 0, innerReps--)
 			stoplag(3 DECISECONDS)
 			animate(user, pixel_z = (user.pixel_z == 3) ? 5 : 3, time = 3)
-		playsound(user, 'sound/effects/spring.ogg', 40, TRUE, 2)
+		playsound(user, 'sound/effects/bamf.ogg', 40, TRUE, 2)
 	animate(user, pixel_z = 2, time = 3, delay = 3)
 	stoplag(6 DECISECONDS)
 	overlays -= swole_overlay
