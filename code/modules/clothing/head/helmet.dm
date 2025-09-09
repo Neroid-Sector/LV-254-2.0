@@ -82,6 +82,11 @@
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
+
+/obj/item/clothing/head/helmet/ulach/should_block_game_interaction(atom/target, include_hunting_grounds)
+	name = "Biker Helmet"
+	desc = "A simple biker helmet. Safety first kids!."
+
 /obj/item/clothing/head/helmet/riot/vintage_riot
 	desc = "A scarred riot helmet covered in cobwebs. It still protects your ears."
 	icon_state = "old_riot"
