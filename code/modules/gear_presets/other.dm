@@ -615,9 +615,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs(new_human), WEAR_R_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/joe(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/synthetic/seegson(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/wood/large_stack(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/scavin_joe(new_human.back), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/hugetank, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher(new_human), WEAR_L_HAND)
 	new_human.equip_to_slot_or_del(new /obj/item/maintenance_jack(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/webbing(new_human), WEAR_JACKET)
 
 	switch(choice)
 		if(1)
@@ -626,13 +629,13 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe/engi/overalls(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/sling(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/working_joe_pda(new_human.back), WEAR_IN_L_STORE)
 	new_human.equip_to_slot(new /obj/item/weapon/chloroform(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot(new /obj/item/storage/box/zipcuffs/small(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/synth/working_joe/scav/load_name(mob/living/carbon/human/new_human, randomise)
-	var/nam_choice = rand(1,5)
+	var/nam_choice = rand(1,10)
 	switch(nam_choice)
 		if(1)
 			new_human.change_real_name(new_human, "Scav'in Joe #[rand(100)][rand(100)]")
@@ -644,6 +647,17 @@
 			new_human.change_real_name(new_human, "Working Joey #[rand(100)][rand(100)]")
 		if(5)
 			new_human.change_real_name(new_human, "Johnathan Freeman #[rand(10)]")
+		if(6)
+			new_human.change_real_name(new_human, "Robbin' Joe #[rand(100)][rand(100)]")
+		if(7)
+			new_human.change_real_name(new_human, "Sticky Fingers Steve #[rand(100)][rand(100)]")
+		if(8)
+			new_human.change_real_name(new_human, "Plunderin Pete #[rand(100)][rand(100)]")
+		if(9)
+			new_human.change_real_name(new_human, "Dopey Dave #[rand(100)][rand(100)]")
+		if(10)
+			new_human.change_real_name(new_human, "блять Bot #[rand(100)][rand(100)]")
+
 
 //*****************************************************************************************************
 /datum/equipment_preset/other/business_person
