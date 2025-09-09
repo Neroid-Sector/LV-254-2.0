@@ -490,6 +490,10 @@
 	name = "\improper Middle Deck Combat Correspondent Office"
 	icon_state = "selfdestruct"
 
+/area/blackgold/middle/rooms/workshop
+	name = "\improper Middle Deck Vehicle Workshop"
+	icon_state = "dropshiprepair"
+
 //-------------------------------------Engineering---------------------------------------//
 
 /area/blackgold/middle/rooms/engineering
@@ -499,9 +503,6 @@
 
 /area/blackgold/middle/rooms/engineering/ot
 	name = "\improper Middle Deck Aft Ordinance Lab"
-
-
-
 
 //---------------------------------------------------------------------------------------//
 //--------------------------------------Upper Deck---------------------------------------//
@@ -685,11 +686,11 @@
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "shuttle2"
 
-/area/blackgold/upper/rooms/intel
+/area/blackgold/upper/rooms/computer
 	name = "\improper Upper Deck Computer Lab"
 	icon_state = "ceroom"
 
-/area/blackgold/upper/rooms/intel/storage
+/area/blackgold/upper/rooms/computer/storage
 	name = "\improper Computer Lab Secure Storage"
 	icon_state = "corporatespace"
 
@@ -716,6 +717,14 @@
 /area/blackgold/upper/rooms/garden
 	name = "\improper Upper Deck Garden"
 	icon_state = "portemb"
+
+/area/blackgold/upper/rooms/tanker
+	name = "\improper Upper Deck Vehicle Crew Bunks"
+	icon_state = "livingspace"
+
+/area/blackgold/upper/rooms/intel
+	name = "\improper Upper Deck Intelligence Officer's Bunks"
+	icon_state = "livingspace"
 
 //------------------------------------------Brig-----------------------------------------//
 
@@ -778,33 +787,6 @@
 	name = "\improper Upper Deck Aft Research Containment"
 	icon_state = "operating"
 	flags_area = AREA_NOTUNNEL | AREA_CONTAINMENT
-
-
-
-/area/blackgold/command/intel_bunks
-	name = "\improper Upper Deck Intel Officer's Bunks"
-	icon_state = "blue"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living
-	minimap_color = MINIMAP_AREA_COLONY
-
-/area/blackgold/living/tankerbunks
-	name = "\improper Lower Deck Vehicle Crew Bunks"
-	icon_state = "livingspace"
-	fake_zlevel = 2
-
-/area/blackgold/living/intel
-	name = "\improper Intelligence Officer's Bunks"
-	icon_state = "livingspace"
-	fake_zlevel = 1 // upperdeck
-
-/area/blackgold/living/pilotbunks
-	name = "\improper Pilot's Bunks"
-	icon_state = "livingspace"
-	fake_zlevel = 1
-
-
 
 /area/blackgold/evacuation/pod1
 /area/blackgold/evacuation/pod2
