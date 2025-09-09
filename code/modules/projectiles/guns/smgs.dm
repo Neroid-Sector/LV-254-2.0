@@ -894,7 +894,6 @@
 	. = ..()
 	if(!HAS_TRAIT(src, TRAIT_GUN_SILENCED))
 		if(!HAS_TRAIT(user, TRAIT_EAR_PROTECTION) && ishuman(user))
-			var/mob/living/carbon/human/huser = user
 			to_chat(user, SPAN_WARNING("Augh!! \The [src]'s firing resonates extremely loudly in your ears! You'll be paying for that in a few years."))
 
 /obj/item/weapon/gun/smg/nailgun/unique_action(mob/user)

@@ -204,6 +204,10 @@
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/revolver/cmb(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/revolver/cmb(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/revolver/cmb(new_human), WEAR_IN_BACK)
+	var/obj/vehicle/motorbike/V = new
+	V.forceMove(new_human.loc)
+	V.buckle_mob(new_human, new_human)
+
 
 	if(prob(50))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ulach/biker, WEAR_HEAD)
@@ -242,6 +246,9 @@
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/smg/nailgun(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/revolver/cmb(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/revolver/cmb(new_human), WEAR_IN_BACK)
+	var/obj/vehicle/motorbike/V = new
+	V.forceMove(new_human.loc)
+	V.buckle_mob(new_human, new_human)
 
 	if(prob(50))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ulach/biker, WEAR_HEAD)
@@ -277,6 +284,9 @@
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/pistol/heavy/super/highimpact(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/pistol/heavy(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/pistol/heavy(new_human), WEAR_IN_BACK)
+	var/obj/vehicle/motorbike/V = new
+	V.forceMove(new_human.loc)
+	V.buckle_mob(new_human, new_human)
 
 	. = ..()
 
@@ -561,6 +571,48 @@
 	new_human.equip_to_slot(new /obj/item/reagent_container/syringe/drugs(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot(new /obj/item/reagent_container/syringe/drugs(new_human), WEAR_IN_BACK)
 	. = ..()
+
+
+//====Dionysis-Kidnapping synth====//
+/datum/equipment_preset/synth/working_joe/dionysus
+	name = "Gangster Synth (Dionysus)"
+
+/datum/equipment_preset/synth/working_joe/dionysus/load_gear(mob/living/carbon/human/new_human)
+	new_human.gender = FEMALE
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/schoolgirl(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/dress(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/blue(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+
+	new_human.equip_to_slot(new /obj/item/attachable/bayonet(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot(new /obj/item/device/flashlight(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot(new /obj/item/weapon/chloroform(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/storage/box/zipcuffs/small(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/reagent_container/syringe/drugs(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/reagent_container/syringe/drugs(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/storage/pill_bottle/ultrazine/skillless(new_human), WEAR_IN_BACK)
+	new_human.allow_gun_usage = TRUE
+
+/datum/equipment_preset/synth/working_joe/dionysus/load_race(mob/living/carbon/human/new_human)
+	. = ..()
+	new_human.h_style = "Bald"
+	new_human.f_style = "Shaved"
+	if(prob(5))
+		new_human.grad_style = "None" //No gradients for Working Joes
+		new_human.h_style = "Shoulder-length Hair" //Added the chance of hair as per Monkeyfist lore accuracy
+	new_human.r_eyes = 0
+	new_human.g_eyes = 0
+	new_human.b_eyes = 0
+	new_human.r_hair = 100
+	new_human.g_hair = 88
+	new_human.b_hair = 74
+	new_human.r_facial = 255
+	new_human.g_facial = 255
+	new_human.b_facial = 255
+
+/datum/equipment_preset/synth/working_joe/dionysus/load_name(mob/living/carbon/human/new_human, randomise)
+	new_human.change_real_name(new_human, "Werkin Joe #[rand(100)][rand(100)]")
 
 //====Syndicate-Gangster====//
 /datum/equipment_preset/gangster/Syndicate
