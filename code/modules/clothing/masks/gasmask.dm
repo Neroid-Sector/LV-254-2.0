@@ -187,3 +187,19 @@
 	desc = "The cap, goggles, and rebreather for the mk5 combat wetsuit, used by the USCM FORECON during amphibious and underwater combat."
 	icon_state = "forecon_scuba"
 	item_state = "forecon_scuba"
+
+/obj/item/clothing/mask/gas/space_ninja
+	name = "ninja mask"
+	desc = "A close-fitting mask that acts both as an air filter and a post-modern fashion statement."
+	icon_state = "s-ninja"
+	item_state = "s-ninja_mask"
+	siemens_coefficient = 0.2
+	vision_impair = VISION_IMPAIR_NONE
+
+/obj/item/clothing/mask/gas/scavin_joe
+	name = "crude mask"
+	desc = "A close-fitting mask that was fashioned by bored scavengers to decorate their working joe."
+	icon_state = "scavin_joe"
+	item_state = "scavin_joe"
+	siemens_coefficient = 0.2
+	vision_impair = VISION_IMPAIR_NONE

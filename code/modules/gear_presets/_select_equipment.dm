@@ -15,7 +15,7 @@
 	var/list/access = list()
 	var/assignment
 	var/rank
-	var/list/paygrades = list("???")
+	var/list/paygrades = list("")
 	var/role_comm_title
 	var/minimum_age
 	var/faction = FACTION_NEUTRAL

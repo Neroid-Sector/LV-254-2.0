@@ -151,6 +151,9 @@
 /obj/item/weapon/pole/fancy_cane/this_is_a_knife/katana
 	stored_item = new /obj/item/weapon/sword/katana
 
+/obj/item/weapon/pole/fancy_cane/this_is_a_knife/katana_sharp
+	stored_item = new /obj/item/weapon/sword/katana/sharp
+
 /obj/item/research//Makes testing much less of a pain -Sieve
 	name = "research"
 	icon = 'icons/obj/items/stock_parts.dmi'

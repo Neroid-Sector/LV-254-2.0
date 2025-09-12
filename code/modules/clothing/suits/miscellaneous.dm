@@ -378,6 +378,12 @@
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/underwear_uniforms.dmi',
 	)
 
+/obj/item/clothing/under/swimsuit/mankini
+	name = "the mankini"
+	desc = "No honest man would wear this abomination"
+	icon_state = "mankini"
+	siemens_coefficient = 1
+
 /obj/item/clothing/under/swimsuit/black
 	name = "black swimsuit"
 	desc = "An old-fashioned black swimsuit."
