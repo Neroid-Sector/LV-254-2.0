@@ -1,4 +1,4 @@
-/obj/structure/machinery/computer/shuttle/cargo_lift/elevator_call
+/obj/structure/machinery/computer/shuttle/cargo/elevator_call
 	name = "\improper Elevator Call"
 	desc = "Control panel for the elevator"
 	shuttleId = MOBILE_CARGO_ELEVATOR
@@ -6,22 +6,22 @@
 	var/dockId
 	var/datum/elevator/destination/site
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/elevator_call/get_landing_zones()
+/obj/structure/machinery/computer/shuttle/cargo/elevator_call/get_landing_zones()
 	return list(SSshuttle.getDock(dockId))
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/elevator_call/occupied
+/obj/structure/machinery/computer/shuttle/cargo/elevator_call/occupied
 	dockId = STAT_CARGO_OCCUPIED
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/elevator_call/empty
+/obj/structure/machinery/computer/shuttle/cargo/elevator_call/empty
 	dockId = STAT_CARGO_EMPTY
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/elevator_call/A
+/obj/structure/machinery/computer/shuttle/cargo/elevator_call/A
 	dockId = STAT_CARGO_A
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/elevator_call/B
+/obj/structure/machinery/computer/shuttle/cargo/elevator_call/B
 	dockId = STAT_CARGO_B
 
-/obj/structure/machinery/computer/shuttle/cargo_lift
+/obj/structure/machinery/computer/shuttle/cargo
 	name = "\improper Elevator Panel"
 	desc = "Control panel for the elevator"
 	icon = 'icons/obj/structures/machinery/computer.dmi'
@@ -35,11 +35,11 @@
 	needs_power = TRUE
 	var/is_call = FALSE
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/proc/get_landing_zones()
+/obj/structure/machinery/computer/shuttle/cargo/proc/get_landing_zones()
 	. = list()
-	var/obj/docking_port/mobile/cargo_lift/shuttle = SSshuttle.getShuttle(shuttleId)
+	var/obj/docking_port/mobile/cargo/shuttle = SSshuttle.getShuttle(shuttleId)
 
-	for(var/obj/docking_port/stationary/cargo_lift/elev in SSshuttle.stationary)
+	for(var/obj/docking_port/stationary/cargo/elev in SSshuttle.stationary)
 		if(!shuttle.elevator_network)
 			. += list(elev)
 			continue
@@ -47,22 +47,22 @@
 			. += list(elev)
 			continue
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/tgui_interact(mob/user, datum/tgui/ui)
+/obj/structure/machinery/computer/shuttle/cargo/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
 		ui = new(user, src, "ElevatorControl", "Elevator Panel")
 		ui.open()
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/ui_state(mob/user)
+/obj/structure/machinery/computer/shuttle/cargo/ui_state(mob/user)
 	return GLOB.not_incapacitated_and_adjacent_strict_state
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/ui_status(mob/user, datum/ui_state/state)
+/obj/structure/machinery/computer/shuttle/cargo/ui_status(mob/user, datum/ui_state/state)
 	. = ..()
 	if(inoperable())
 		to_chat(user, SPAN_WARNING("The panel is inoperable."))
 		return UI_CLOSE
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/ui_data(mob/user)
+/obj/structure/machinery/computer/shuttle/cargo/ui_data(mob/user)
 	. = ..()
 	var/obj/docking_port/mobile/shuttle = SSshuttle.getShuttle(shuttleId)
 	var/obj/docking_port/stationary/dockedAt = shuttle.get_docked()
@@ -71,7 +71,7 @@
 	.["mode"] = shuttle.mode
 	.["eta"] = shuttle.timeLeft(0)
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/ui_static_data(mob/user)
+/obj/structure/machinery/computer/shuttle/cargo/ui_static_data(mob/user)
 	. = ..()
 	var/obj/docking_port/mobile/shuttle = SSshuttle.getShuttle(shuttleId)
 	var/list/stops = get_landing_zones()
@@ -88,14 +88,14 @@
 	.["max_engine_start_duration"] = shuttle.ignitionTime / 10
 	.["is_call_button"] = is_call
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/attack_hand(mob/user)
+/obj/structure/machinery/computer/shuttle/cargo/attack_hand(mob/user)
 	. = ..(user)
 	if(.)
 		return TRUE
 
 	tgui_interact(user)
 
-/obj/structure/machinery/computer/shuttle/cargo_lift/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+/obj/structure/machinery/computer/shuttle/cargo/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
 		return

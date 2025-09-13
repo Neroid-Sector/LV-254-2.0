@@ -6,6 +6,10 @@
 /turf/open/shuttle/escapepod/floor0/west,
 /area/space)
 "k" = (
+/obj/structure/machinery/computer/shuttle/elevator_small/elevator_call{
+	pixel_y = 32;
+	pixel_x = 18
+	},
 /turf/open/shuttle/escapepod/floor0/north{
 	dir = 4
 	},

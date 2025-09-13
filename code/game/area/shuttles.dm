@@ -71,44 +71,21 @@
 	name = "Trijent Omega"
 
 // Cargo lift
-/area/shuttle/cargo_lift
+/area/shuttle/cargo
 	name = "Cargo Lift"
 	icon = 'icons/turf/area_almayer.dmi'
 	icon_state = "lifeboat"
 
-/area/shuttle/cargo_lift/elevator
+/area/shuttle/cargo/elevator
 	requires_power = TRUE
 	unlimited_power = FALSE
 	powernet_name = "ship"
 
-/area/shuttle/cargo_lift/a
+/area/shuttle/cargo/a
 	name = "Cargo Lift A"
 
-/area/shuttle/cargo_lift/b
+/area/shuttle/cargo/b
 	name = "Cargo Lift A"
-
-// Small elevator
-/area/shuttle/elevator_small
-	name = "Service Elevator"
-	icon = 'icons/turf/area_almayer.dmi'
-	icon_state = "lifeboat"
-
-/area/shuttle/elevator_small/elevator
-	requires_power = TRUE
-	unlimited_power = FALSE
-	powernet_name = "ship"
-
-/area/shuttle/elevator_small/port_upper
-	name = "Service Elevator Lower Deck Port Dock"
-
-/area/shuttle/elevator_small/port_lower
-	name = "Service Elevator Under Deck Port Dock"
-
-/area/shuttle/elevator_small/star_upper
-	name = "Service Elevator Lower Deck Starboard Dock"
-
-/area/shuttle/elevator_small/star_lower
-	name = "Service Elevator Under Deck Starboard Dock"
 
 /area/shuttle/generic_shuttle
 	name = "Freight Tram"

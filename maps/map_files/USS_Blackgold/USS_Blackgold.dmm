@@ -2328,9 +2328,8 @@
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/aft)
 "ahL" = (
-/obj/docking_port/stationary/elevator_small/empty,
 /turf/open/floor/almayer/empty,
-/area/blackgold/underdeck/stairs/port)
+/area/blackgold/underdeck)
 "ahM" = (
 /turf/closed/wall/almayer,
 /area/blackgold/middle/maint/port/aft)
@@ -2355,10 +2354,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/fore)
-"ahR" = (
-/obj/docking_port/stationary/elevator_small/empty/north,
-/turf/open/floor/almayer/empty,
-/area/blackgold/underdeck/stairs/star)
 "ahS" = (
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer/no_build/plate,
@@ -2418,9 +2413,8 @@
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/middle/maint/port/aft)
 "aid" = (
-/obj/docking_port/stationary/elevator_small/occupied,
 /turf/open_space,
-/area/blackgold/underdeck/stairs/port)
+/area/blackgold/lower/maint/port/mid)
 "aie" = (
 /turf/open/floor/almayer/black/northwest,
 /area/blackgold/middle/rooms/hangar)
@@ -7386,9 +7380,8 @@
 /turf/closed/wall/almayer,
 /area/blackgold/lower/hallways/star/fore)
 "azA" = (
-/obj/docking_port/stationary/elevator_small/occupied/north,
 /turf/open_space,
-/area/blackgold/underdeck/stairs/star)
+/area/blackgold/lower/maint/star/mid)
 "azB" = (
 /obj/structure/machinery/computer/crew,
 /turf/open/floor/almayer/sterile_green_corner/west,
@@ -16834,7 +16827,8 @@
 /area/blackgold/lower/rooms/aicore)
 "bbv" = (
 /obj/structure/machinery/conveyor_switch{
-	id = "BG Garbage"
+	id = "BG Garbage";
+	position = 1
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 1
@@ -25608,7 +25602,7 @@
 /turf/open/floor/almayer/redfull2,
 /area/blackgold/middle/rooms/briefing)
 "cRX" = (
-/obj/structure/machinery/computer/shuttle/cargo_lift{
+/obj/structure/machinery/computer/shuttle/cargo{
 	pixel_y = 9;
 	pixel_x = -23;
 	req_one_access = list(19,21)
@@ -27284,7 +27278,7 @@
 	name = "\improper Elevator Lock"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/shuttle/cargo_lift/b)
+/area/shuttle/cargo/b)
 "fEx" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced{
 	name = "\improper Officer Bunks"
@@ -27334,7 +27328,7 @@
 /area/blackgold/middle/rooms/squad/prep)
 "fKh" = (
 /turf/closed/wall/almayer/outer,
-/area/shuttle/cargo_lift/a)
+/area/shuttle/cargo/a)
 "fKJ" = (
 /obj/structure/machinery/cm_vending/sorted/medical,
 /obj/structure/medical_supply_link,
@@ -27864,9 +27858,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/rooms/cryo)
-"gCa" = (
-/turf/open/floor/almayer/empty,
-/area/blackgold/underdeck/stairs/port)
 "gCd" = (
 /obj/structure/toilet{
 	dir = 4
@@ -27910,9 +27901,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
-"gEK" = (
-/turf/open_space,
-/area/blackgold/underdeck/stairs/port)
 "gEO" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1;
@@ -28622,7 +28610,7 @@
 "hMl" = (
 /obj/structure/platform/metal/ship/corner/east,
 /obj/structure/platform/metal/ship/corner/west,
-/obj/structure/machinery/computer/shuttle/cargo_lift{
+/obj/structure/machinery/computer/shuttle/cargo{
 	pixel_y = 9;
 	pixel_x = -23;
 	req_one_access = list(19,21)
@@ -29832,9 +29820,6 @@
 /turf/open/space/basic,
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/computer/storage)
-"jVV" = (
-/turf/open/floor/almayer/empty,
-/area/blackgold/underdeck/stairs/star)
 "jVY" = (
 /obj/structure/stairs{
 	icon_state = "ramptop";
@@ -30114,9 +30099,9 @@
 	},
 /area/blackgold/lower/rooms/aicore)
 "kyF" = (
-/obj/docking_port/stationary/cargo_lift/empty,
+/obj/docking_port/stationary/cargo/empty,
 /turf/open_space,
-/area/shuttle/cargo_lift/a)
+/area/shuttle/cargo/a)
 "kzg" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/maint/star/mid)
@@ -31891,7 +31876,7 @@
 	name = "\improper Elevator Lock"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/shuttle/cargo_lift/a)
+/area/shuttle/cargo/a)
 "neR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
 	name = "\improper Orbital Cannon";
@@ -33604,7 +33589,7 @@
 	name = "\improper Elevator Lock"
 	},
 /turf/open/floor/almayer/test_floor6,
-/area/shuttle/cargo_lift/a)
+/area/shuttle/cargo/a)
 "pHJ" = (
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/wood/ship,
@@ -33769,7 +33754,7 @@
 /area/blackgold/upper/rooms/captain_mess)
 "pWy" = (
 /turf/closed/wall/almayer/outer,
-/area/shuttle/cargo_lift/b)
+/area/shuttle/cargo/b)
 "pXl" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/hybrisa/coffee_machine{
@@ -34740,9 +34725,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
-"rxR" = (
-/turf/open_space,
-/area/blackgold/underdeck/stairs/star)
 "ryM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -36301,9 +36283,9 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/telecomms)
 "uom" = (
-/obj/docking_port/stationary/cargo_lift/occupied,
+/obj/docking_port/stationary/cargo/occupied,
 /turf/open/floor/almayer/empty/requisitions,
-/area/shuttle/cargo_lift/b)
+/area/shuttle/cargo/b)
 "upt" = (
 /obj/structure/machinery/computer/cameras/wooden_tv/almayer{
 	dir = 8;
@@ -37192,7 +37174,7 @@
 	name = "\improper Elevator Lock"
 	},
 /turf/open/floor/almayer/test_floor6,
-/area/shuttle/cargo_lift/b)
+/area/shuttle/cargo/b)
 "vKH" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/execution)
@@ -38291,7 +38273,7 @@
 /area/blackgold/lower/rooms/aicore)
 "xzN" = (
 /turf/open/floor/almayer/empty/requisitions,
-/area/shuttle/cargo_lift/b)
+/area/shuttle/cargo/b)
 "xAb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -38460,7 +38442,7 @@
 /area/blackgold/middle/maint/port/fore)
 "xTU" = (
 /turf/open_space,
-/area/shuttle/cargo_lift/a)
+/area/shuttle/cargo/a)
 "xUi" = (
 /obj/structure/barricade/metal/plasteel{
 	dir = 4
@@ -49676,10 +49658,10 @@ obL
 obL
 obL
 obL
-jVV
-jVV
-jVV
-ahR
+ahL
+ahL
+ahL
+ahL
 obL
 etm
 jrx
@@ -49725,9 +49707,9 @@ obL
 etm
 jrx
 obL
-gCa
-gCa
-gCa
+ahL
+ahL
+ahL
 ahL
 obL
 obL
@@ -49763,10 +49745,10 @@ obL
 obL
 obL
 obL
-jVV
-jVV
-jVV
-jVV
+ahL
+ahL
+ahL
+ahL
 rbX
 pIF
 pIF
@@ -49812,10 +49794,10 @@ tSn
 pIF
 pIF
 rbX
-gCa
-gCa
-gCa
-gCa
+ahL
+ahL
+ahL
+ahL
 obL
 obL
 obL
@@ -49850,10 +49832,10 @@ obL
 obL
 obL
 obL
-jVV
-jVV
-jVV
-jVV
+ahL
+ahL
+ahL
+ahL
 rbX
 pIF
 pIF
@@ -49899,10 +49881,10 @@ hRn
 pIF
 pIF
 rbX
-gCa
-gCa
-gCa
-gCa
+ahL
+ahL
+ahL
+ahL
 obL
 obL
 obL
@@ -49937,10 +49919,10 @@ obL
 obL
 obL
 obL
-jVV
-jVV
-jVV
-jVV
+ahL
+ahL
+ahL
+ahL
 obL
 jKP
 xYd
@@ -49986,10 +49968,10 @@ obL
 jKP
 xYd
 obL
-gCa
-gCa
-gCa
-gCa
+ahL
+ahL
+ahL
+ahL
 obL
 obL
 obL
@@ -70557,9 +70539,9 @@ agR
 agb
 bjB
 agR
-rxR
-rxR
-rxR
+azA
+azA
+azA
 azA
 agR
 ahd
@@ -70606,9 +70588,9 @@ aeF
 iph
 rqd
 aeF
-gEK
-gEK
-gEK
+aid
+aid
+aid
 aid
 aeF
 bbo
@@ -70644,10 +70626,10 @@ agR
 agb
 bjB
 agR
-rxR
-rxR
-rxR
-rxR
+azA
+azA
+azA
+azA
 ahf
 agZ
 agZ
@@ -70693,10 +70675,10 @@ aeF
 lcA
 lcA
 ebN
-gEK
-gEK
-gEK
-gEK
+aid
+aid
+aid
+aid
 aeF
 bbo
 aeH
@@ -70731,10 +70713,10 @@ agR
 agb
 bjB
 agR
-rxR
-rxR
-rxR
-rxR
+azA
+azA
+azA
+azA
 ahf
 agZ
 agZ
@@ -70780,10 +70762,10 @@ aeF
 lcA
 lcA
 ebN
-gEK
-gEK
-gEK
-gEK
+aid
+aid
+aid
+aid
 aeF
 bbp
 aeH
@@ -70818,10 +70800,10 @@ agR
 agb
 bjB
 agR
-rxR
-rxR
-rxR
-rxR
+azA
+azA
+azA
+azA
 agR
 ahe
 aha
@@ -70867,10 +70849,10 @@ aeF
 jrq
 gyA
 aeF
-gEK
-gEK
-gEK
-gEK
+aid
+aid
+aid
+aid
 aeF
 aer
 aeH
