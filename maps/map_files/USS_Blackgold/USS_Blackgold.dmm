@@ -60,6 +60,11 @@
 /area/blackgold/middle/rooms/liaison)
 "aap" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Lobby";
+	name = "\improper AI Core Shutters";
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -78,6 +83,13 @@
 /area/blackgold/middle/rooms/aientrance)
 "aas" = (
 /obj/structure/platform_decoration/metal/almayer/west,
+/obj/structure/machinery/door_control{
+	id = "BG AI Lobby";
+	name = "AI Core Shutter Control";
+	pixel_x = 23;
+	pixel_y = 22;
+	req_one_access = list(90,91,92)
+	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/middle/rooms/aientrance)
 "aat" = (
@@ -104,6 +116,7 @@
 /area/blackgold/middle/rooms/liaison)
 "aax" = (
 /obj/structure/window/framed/almayer/aicore/hull,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/aientrance)
 "aay" = (
@@ -127,18 +140,15 @@
 	},
 /area/blackgold/middle/rooms/aientrance)
 "aaD" = (
-/obj/structure/machinery/photocopier/wyphotocopier{
-	pixel_y = 5;
-	pixel_x = -3
+/obj/structure/surface/table/almayer,
+/obj/item/folder/black{
+	pixel_x = -8;
+	pixel_y = 10;
+	layer = 3.01
 	},
 /obj/item/device/toner{
 	pixel_x = -5;
-	pixel_y = 8
-	},
-/obj/item/folder/black{
-	pixel_x = -8;
-	pixel_y = 14;
-	layer = 3.01
+	pixel_y = 3
 	},
 /turf/open/floor/almayer/silver/northwest,
 /area/blackgold/middle/rooms/reporter)
@@ -154,8 +164,12 @@
 /turf/open/floor/almayer/black/south,
 /area/blackgold/middle/hallways/port/fore)
 "aaG" = (
-/obj/structure/machinery/light{
-	dir = 8
+/obj/structure/machinery/door_control{
+	id = "BG AI Exit";
+	name = "AI Core Shutter Control";
+	pixel_x = -22;
+	pixel_y = -10;
+	req_one_access = list(90,91,92)
 	},
 /turf/open/floor/almayer/black/west,
 /area/blackgold/middle/hallways/mid/aft)
@@ -214,7 +228,8 @@
 "aaO" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/solid{
 	dir = 1;
-	name = "\improper Vehicle Workshop"
+	name = "\improper Flight Crew Equipment Room";
+	req_access = list(23)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/workshop)
@@ -279,14 +294,17 @@
 "abc" = (
 /obj/structure/machinery/line_nexter/med{
 	layer = 4.5;
-	pixel_x = -1
+	pixel_x = -1;
+	id = "BG Medbay Chemistry Skip"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical)
 "abd" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Medbay Chemistry";
+	name = "\improper Chemistry Shutters"
 	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/middle/rooms/medical/chemistry)
@@ -436,6 +454,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical/cmo)
 "abB" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	dir = 4
+	},
 /turf/open/floor/almayer/silver/west,
 /area/blackgold/middle/rooms/reporter)
 "abC" = (
@@ -497,12 +519,14 @@
 /area/blackgold/middle/rooms/medical)
 "abL" = (
 /obj/structure/platform/metal/ship/corner/north,
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/medical)
 "abM" = (
 /obj/structure/platform/metal/ship/corner{
 	pixel_y = 8
 	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/medical)
 "abN" = (
@@ -666,6 +690,14 @@
 /area/blackgold/middle/rooms/medical/cmo)
 "ack" = (
 /obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control{
+	id = "BG Medbay CMO";
+	name = "\improper Storage Shutter Control";
+	pixel_y = -1;
+	throw_range = 15;
+	pixel_x = -9;
+	req_one_access = list(1,5)
+	},
 /turf/open/floor/hybrisa/carpet/rug_colorable,
 /area/blackgold/middle/rooms/medical/cmo)
 "acl" = (
@@ -737,20 +769,11 @@
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/middle/rooms/medical)
 "acy" = (
-/obj/structure/machinery/door/airlock/almayer/medical{
-	name = "\improper Field Medical Equipment Storage";
-	req_one_access = null;
-	req_one_access_txt = "1;5;39";
-	dir = 1
-	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	layer = 1.9
-	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "fieldmedequipment";
+	id = "BG Medbay Storage";
 	name = "\improper Field Medical Equipment Shutters"
 	},
-/turf/open/floor/almayer/test_floor4,
+/turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/medical)
 "acz" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
@@ -1050,7 +1073,11 @@
 	},
 /area/blackgold/upper/rooms/medical/containment)
 "adk" = (
-/turf/closed/wall/almayer/research/containment/wall/south,
+/obj/structure/machinery/smartfridge/chemistry{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
 /area/blackgold/upper/rooms/medical/containment)
 "adl" = (
 /turf/closed/wall/almayer/research/containment/wall/corner,
@@ -1089,8 +1116,9 @@
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/upper/rooms/telecomms)
 "adu" = (
-/turf/closed/wall/almayer/research/containment/wall/west,
-/area/blackgold/upper/rooms/medical/containment)
+/obj/structure/foamed_metal/iron,
+/turf/open/floor/plating,
+/area/blackgold/upper/hallways/mid/aft)
 "adv" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1126,7 +1154,9 @@
 /turf/open/floor/almayer/flooredgesmooth/east,
 /area/blackgold/upper/rooms/commandbunks/staff)
 "adz" = (
-/turf/closed/wall/almayer/research/containment/wall/east,
+/turf/closed/wall/almayer/research/containment/wall/east{
+	unacidable = 1
+	},
 /area/blackgold/upper/rooms/medical/containment)
 "adA" = (
 /obj/structure/barricade/handrail/medical{
@@ -1211,18 +1241,6 @@
 	},
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/blackgold/upper/rooms/medical/containment)
-"adO" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	layer = 2.5;
-	pixel_y = 1
-	},
-/turf/open/floor/almayer/research/containment/floor2/north,
-/area/blackgold/upper/rooms/medical/containment)
 "adP" = (
 /obj/structure/stairs/multiz/down{
 	dir = 4
@@ -1267,28 +1285,20 @@
 /turf/open/floor/almayer/blue/south,
 /area/blackgold/upper/rooms/cic)
 "adW" = (
-/turf/closed/wall/almayer/research/containment/wall/north,
-/area/blackgold/upper/rooms/medical/containment)
-"adX" = (
-/turf/closed/wall/almayer/research/containment/wall/purple{
-	dir = 8;
-	icon_state = "containment_window_h"
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_y = -1
 	},
-/area/blackgold/upper/rooms/medical/containment)
-"adY" = (
-/obj/structure/machinery/door/airlock/almayer/research/glass/reinforced{
-	locked = 1;
-	name = "\improper Containment Cell";
-	unacidable = 1;
-	dir = 1
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
 	},
-/turf/open/floor/almayer/test_floor6,
+/turf/open/floor/almayer/research/containment/entrance/west{
+	dir = 4
+	},
 /area/blackgold/upper/rooms/medical/containment)
 "adZ" = (
-/turf/closed/wall/almayer/research/containment/wall/purple{
-	dir = 4;
-	icon_state = "containment_window_h"
-	},
+/turf/open/floor/almayer/sterile_green_side/southeast,
 /area/blackgold/upper/rooms/medical/containment)
 "aea" = (
 /turf/closed/wall/almayer/research/containment/wall/corner{
@@ -1315,6 +1325,14 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/solid{
 	dir = 1;
 	name = "\improper Research Containment"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Lab";
+	name = "\improper Research Lab Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/medical)
@@ -1346,12 +1364,6 @@
 /obj/structure/stairs,
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
-"aep" = (
-/turf/closed/wall/almayer/research/containment/wall/purple{
-	dir = 1;
-	icon_state = "containment_window_h"
-	},
-/area/blackgold/upper/rooms/medical/containment)
 "aeq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -1363,12 +1375,8 @@
 	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
-"aer" = (
-/turf/closed/wall/almayer/research/containment/wall/purple{
-	icon_state = "containment_window_h"
-	},
-/area/blackgold/upper/rooms/medical/containment)
 "aes" = (
+/obj/structure/platform/metal/ship/corner/north,
 /turf/open/floor/almayer/silver/southwest,
 /area/blackgold/upper/rooms/computer/storage)
 "aet" = (
@@ -1382,15 +1390,12 @@
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/telecomms)
 "aew" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_y = -1
+/obj/structure/platform/metal/ship/west,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out";
-	pixel_y = -1
-	},
-/turf/open/floor/almayer/research/containment/floor2/north,
+/turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/upper/rooms/medical/containment)
 "aex" = (
 /turf/open/floor/almayer/mono,
@@ -1419,6 +1424,14 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/hallways/port/fore)
 "aeE" = (
+/obj/structure/machinery/door_control{
+	id = "BG Intel Maintenance";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = 22;
+	throw_range = 15;
+	pixel_x = 23;
+	req_one_access = list(19,28)
+	},
 /turf/open/floor/almayer/silver/north,
 /area/blackgold/upper/rooms/computer/storage)
 "aeF" = (
@@ -1436,7 +1449,6 @@
 /area/blackgold/lower/maint/port/mid)
 "aeJ" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -1468,7 +1480,6 @@
 /area/blackgold/upper/rooms/companycommand/delta)
 "aeP" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -1516,7 +1527,6 @@
 /area/blackgold/lower/maint/port/aft)
 "afc" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -1557,7 +1567,6 @@
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
 "afl" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -1574,17 +1583,9 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/fore)
-"afo" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
-/turf/open/floor/plating,
-/area/blackgold/lower/maint/port/fore)
 "afp" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
-/turf/open/floor/plating,
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/maint/port/mid)
 "afq" = (
 /obj/structure/foamed_metal/iron,
@@ -1616,7 +1617,9 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/shuttle/bow)
 "afx" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/blastdoor,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/blastdoor{
+	req_access = list()
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/shuttle/stern)
 "afy" = (
@@ -1699,8 +1702,7 @@
 	dir = 4
 	},
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 8
+	dir = 1
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/cryo)
@@ -1755,9 +1757,7 @@
 /turf/open/floor/almayer/black/west,
 /area/blackgold/lower/hallways/mid/mid)
 "aga" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
+/obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/maint/star/mid)
 "agb" = (
@@ -1789,10 +1789,9 @@
 /area/blackgold/lower/maint/star/mid)
 "agj" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/plating,
 /area/blackgold/lower/maint/star/mid)
 "agk" = (
 /obj/structure/foamed_metal/iron,
@@ -1804,13 +1803,6 @@
 "agm" = (
 /turf/closed/wall/almayer/outer,
 /area/blackgold/lower/maint/star/aft)
-"agn" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/blackgold/lower/maint/star/mid)
 "ago" = (
 /obj/vehicle/train/cargo/trolley,
 /turf/open/floor/plating/plating_catwalk,
@@ -1941,7 +1933,6 @@
 /area/blackgold/lower/maint/star/aft)
 "agL" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -1951,25 +1942,14 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/star/aft)
 "agN" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
-/turf/open/space/basic,
-/turf/open/floor/plating,
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/maint/star/fore)
-"agO" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
-/turf/open/space/basic,
-/turf/open/floor/plating,
-/area/blackgold/lower/maint/star/mid)
 "agP" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/hallways/port/fore)
 "agQ" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -2283,8 +2263,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office";
-	req_access = null;
-	req_access_txt = "31"
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
@@ -2305,9 +2284,7 @@
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/fore)
 "ait" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
+/obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/maint/star/aft)
 "aiu" = (
@@ -2412,7 +2389,8 @@
 "aiU" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Firing Range";
-	dir = 1
+	dir = 1;
+	req_access = list()
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/range)
@@ -2559,8 +2537,7 @@
 "ajs" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
 	name = "\improper AA Cannon";
-	req_access = list();
-	req_one_access = list(7,19);
+	req_access = list(19);
 	no_panel = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -2731,13 +2708,13 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad)
 "akc" = (
+/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+	layer = 2.9
+	},
 /obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
 	dir = 4;
 	name = "\improper Cargo Lock";
-	id = "blackgold underdeck cargo"
-	},
-/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
-	layer = 2.9
+	id = "BG Under Cargo"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/underdeck/req)
@@ -2758,13 +2735,13 @@
 /turf/open/floor/almayer/no_build,
 /area/blackgold/underdeck/req)
 "akg" = (
+/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+	layer = 2.9
+	},
 /obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
 	dir = 4;
 	name = "\improper Cargo Lock";
-	id = "blackgold underdeck cargo"
-	},
-/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
-	layer = 2.9
+	id = "BG Under Cargo"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/underdeck/req)
@@ -2963,10 +2940,10 @@
 /area/blackgold/lower/rooms/req)
 "akX" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
-	dir = 1
+	dir = 1;
+	req_one_access = list(19,21)
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/req)
 "akY" = (
 /obj/structure/machinery/cryopod,
@@ -3164,7 +3141,14 @@
 	name = "Commanding Officer's Office";
 	phone_category = "Offices";
 	phone_id = "Commanding Officer's Office";
-	pixel_x = 6
+	pixel_x = -4
+	},
+/obj/structure/machinery/door_control{
+	id = "BG CO";
+	name = "Privacy Shutters";
+	pixel_x = 6;
+	pixel_y = -3;
+	req_access = list(19)
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
@@ -3571,14 +3555,6 @@
 "ann" = (
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/squad/prep)
-"ano" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
-/turf/open/floor/almayer/test_floor6,
-/area/blackgold/middle/rooms/req)
-"anp" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
-/turf/open/floor/almayer/test_floor4,
-/area/blackgold/middle/rooms/req)
 "anq" = (
 /turf/closed/wall/almayer,
 /area/blackgold/middle/rooms/req)
@@ -3655,10 +3631,6 @@
 "anH" = (
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/req)
-"anI" = (
-/obj/structure/machinery/light/spot,
-/turf/open/floor/almayer/green/southeast,
-/area/blackgold/middle/rooms/req)
 "anJ" = (
 /obj/structure/machinery/light/blue{
 	dir = 8
@@ -3672,7 +3644,7 @@
 /turf/open/floor/almayer/green/east,
 /area/blackgold/middle/rooms/squad/prep)
 "anM" = (
-/turf/open/floor/almayer/cargo_arrow,
+/turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/req)
 "anN" = (
 /turf/open/floor/almayer/green/west,
@@ -3731,9 +3703,6 @@
 	},
 /turf/open/floor/almayer/no_build/test_floor4,
 /area/blackgold/underdeck/req)
-"aoc" = (
-/turf/open/floor/almayer/flooredge/north,
-/area/blackgold/middle/rooms/req)
 "aod" = (
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/req)
@@ -3778,15 +3747,6 @@
 "aol" = (
 /turf/open/floor/almayer/greencorner/north,
 /area/blackgold/middle/rooms/squad/prep)
-"aom" = (
-/turf/open/floor/almayer/flooredge/northwest,
-/area/blackgold/middle/rooms/req)
-"aon" = (
-/obj/structure/machinery/light/blue{
-	dir = 8
-	},
-/turf/open_space,
-/area/blackgold/middle/rooms/req)
 "aoo" = (
 /obj/structure/machinery/light/spot{
 	dir = 8
@@ -3809,9 +3769,6 @@
 "aos" = (
 /turf/open/floor/almayer/greencorner/south,
 /area/blackgold/middle/rooms/squad/prep)
-"aot" = (
-/turf/open/floor/almayer/greencorner/south,
-/area/blackgold/middle/rooms/req)
 "aou" = (
 /turf/open/floor/almayer/green/southeast,
 /area/blackgold/middle/rooms/req)
@@ -3845,16 +3802,16 @@
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/aft)
 "aoA" = (
-/turf/open/floor/almayer/cargo,
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
 "aoB" = (
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
 "aoC" = (
 /turf/open/floor/almayer/green/southwest,
-/area/blackgold/middle/rooms/req)
-"aoD" = (
-/turf/open/floor/almayer/greencorner/west,
 /area/blackgold/middle/rooms/req)
 "aoE" = (
 /obj/structure/machinery/light/blue{
@@ -4027,7 +3984,7 @@
 /obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
 	dir = 4;
 	name = "\improper Cargo Lock";
-	id = "blackgold underdeck vehicle"
+	id = "BG Under Vehicle"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/underdeck/vehicle)
@@ -4302,7 +4259,7 @@
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "aqF" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/cryo)
 "aqG" = (
 /turf/open/floor/almayer,
@@ -4477,7 +4434,8 @@
 "arv" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Firing Range";
-	dir = 1
+	dir = 1;
+	req_access = list()
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/range/star)
@@ -4521,7 +4479,8 @@
 /obj/structure/platform/metal/ship/north,
 /obj/structure/machinery/door_control/railings{
 	id = "vehicle";
-	pixel_x = 24
+	pixel_x = 24;
+	req_one_access = list(19,21)
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
@@ -4662,6 +4621,11 @@
 /area/blackgold/middle/rooms/orbital)
 "asq" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/orbital)
 "asr" = (
@@ -4728,6 +4692,10 @@
 /area/blackgold/middle/hallways/mid/aft)
 "asL" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/middle/rooms/orbital)
 "asM" = (
@@ -4750,8 +4718,8 @@
 "asR" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
-	id = "Hangar Lockdown";
-	name = "\improper Hangar Lockdown Blast Door"
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/hallways/mid/aft)
@@ -4767,8 +4735,8 @@
 "asV" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
-	id = "Hangar Lockdown";
-	name = "\improper Hangar Lockdown Blast Door"
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/hallways/mid/aft)
@@ -5006,6 +4974,11 @@
 /area/blackgold/upper/hallways/mid/aft)
 "aur" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/hallways/mid/fore)
 "aus" = (
@@ -5413,7 +5386,10 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Medbay Chemistry";
+	name = "\improper Chemistry Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/medical/chemistry)
 "avG" = (
@@ -5496,6 +5472,22 @@
 	pixel_x = -7;
 	layer = 3.01
 	},
+/obj/structure/machinery/door_control{
+	id = "BG Medbay Storage";
+	name = "\improper Line Shutter Control";
+	pixel_y = -2;
+	throw_range = 15;
+	pixel_x = 8;
+	req_one_access = list(8,19)
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Medbay Chemistry Skip";
+	name = "Next Button";
+	pixel_y = 5;
+	throw_range = 15;
+	pixel_x = 8;
+	req_one_access = list(8,19)
+	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/middle/rooms/medical/chemistry)
 "avT" = (
@@ -5536,7 +5528,9 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Medbay Chemistry";
+	name = "\improper Chemistry Shutters"
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/medical/chemistry)
@@ -5578,10 +5572,9 @@
 /area/blackgold/middle/rooms/medical/chemistry)
 "awd" = (
 /obj/structure/machinery/door/airlock/almayer/research/reinforced{
-	access_modified = 1;
 	name = "\improper CMO's Bedroom";
-	req_one_access_txt = "1;5";
-	dir = 1
+	dir = 1;
+	req_one_access = list(1,5)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical/cmo)
@@ -5594,6 +5587,11 @@
 	closeOtherId = "ciclobby_s";
 	id_tag = "cic_exterior";
 	name = "\improper Combat Information Center"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/cic)
@@ -5691,14 +5689,10 @@
 /turf/open/floor/hybrisa/carpet/rug_colorable/northwest,
 /area/blackgold/middle/rooms/medical/cmo)
 "awt" = (
-/obj/structure/machinery/door/airlock/almayer/medical/glass{
-	access_modified = 1;
+/obj/structure/machinery/door/airlock/almayer/medical{
 	name = "\improper CMO's Office";
-	req_one_access = null;
-	req_one_access_txt = "1;5"
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	req_one_access = list(1,5);
+	req_access = null
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical/cmo)
@@ -5776,12 +5770,22 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "awF" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research{
+	req_one_access = list(8,19)
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Research";
+	name = "\improper Upper Medbay Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/medical)
 "awG" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Research";
+	name = "\improper Upper Medbay Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/medical)
 "awH" = (
@@ -5862,7 +5866,8 @@
 /area/blackgold/lower/rooms/chapel)
 "awY" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	name = "\improper Chapel"
+	name = "\improper Chapel";
+	req_access = list()
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/chapel)
@@ -6027,7 +6032,8 @@
 /area/blackgold/underdeck/req)
 "axy" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	name = "\improper Gym"
+	name = "\improper Gym";
+	req_access = list()
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/chapel)
@@ -6142,20 +6148,19 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
 "axS" = (
-/obj/structure/barricade/handrail{
-	dir = 8;
-	pixel_x = -1
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 8
 	},
-/obj/structure/barricade/handrail,
-/turf/open/floor/almayer/blue/southwest,
+/obj/structure/barricade/handrail/boxing_ring,
+/turf/open/floor/almayer/arena/west,
 /area/blackgold/lower/rooms/gym)
 "axT" = (
-/obj/structure/barricade/handrail,
-/turf/open/floor/almayer,
+/obj/structure/barricade/handrail/boxing_ring,
+/turf/open/floor/almayer/silverfull2,
 /area/blackgold/lower/rooms/gym)
 "axU" = (
-/obj/structure/barricade/handrail,
-/turf/open/floor/almayer/emerald/southeast,
+/obj/structure/barricade/handrail/boxing_ring,
+/turf/open/floor/almayer/arena/east,
 /area/blackgold/lower/rooms/gym)
 "axV" = (
 /turf/open/floor/almayer/green/northwest,
@@ -6167,11 +6172,10 @@
 /turf/open/floor/almayer/green/northeast,
 /area/blackgold/lower/rooms/gym)
 "axY" = (
-/obj/structure/barricade/handrail{
-	dir = 8;
-	pixel_x = -1
+/obj/structure/barricade/handrail/boxing_ring{
+	dir = 8
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/silverfull2,
 /area/blackgold/lower/rooms/gym)
 "axZ" = (
 /turf/open/floor/almayer/plating_stripedcorner/east,
@@ -6277,10 +6281,10 @@
 	dir = 8;
 	layer = 3
 	},
-/turf/open/floor/almayer/red/northwest,
+/turf/open/floor/almayer/arena,
 /area/blackgold/lower/rooms/gym)
 "ayn" = (
-/turf/open/floor/almayer/orange/northeast,
+/turf/open/floor/almayer/arena/north,
 /area/blackgold/lower/rooms/gym)
 "ayo" = (
 /obj/structure/prop/almayer/whiteboard,
@@ -6759,10 +6763,9 @@
 /area/blackgold/lower/hallways/port/fore)
 "azi" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/hallways/port/fore)
 "azj" = (
 /turf/closed/wall/almayer,
@@ -6792,7 +6795,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/black/east,
-/area/blackgold/lower/hallways/port/fore)
+/area/blackgold/lower/hallways/star/fore)
 "azq" = (
 /turf/closed/wall/almayer,
 /area/blackgold/lower/rooms/chapel)
@@ -6827,14 +6830,13 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/silverfull2,
 /area/blackgold/lower/rooms/gym)
 "azy" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/hallways/star/fore)
 "azz" = (
 /turf/closed/wall/almayer,
@@ -6999,6 +7001,8 @@
 /area/blackgold/upper/rooms/medical/containment)
 "azS" = (
 /obj/structure/surface/table/almayer,
+/obj/item/clothing/accessory/storage/black_vest/acid_harness,
+/obj/item/clothing/accessory/storage/black_vest/acid_harness,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/medical/research)
 "azT" = (
@@ -7007,6 +7011,10 @@
 	},
 /obj/structure/filingcabinet/filingcabinet{
 	pixel_x = 8
+	},
+/obj/item/reagent_container/food/drinks/cans/waterbottle{
+	pixel_y = 17;
+	pixel_x = 10
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/medical/research)
@@ -7060,8 +7068,10 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/medical/research)
 "aAc" = (
-/obj/structure/surface/rack,
-/turf/open/floor/almayer/mono,
+/obj/structure/closet/secure_closet/hydroresearch,
+/obj/item/reagent_container/glass/watertank,
+/obj/item/reagent_container/glass/watertank,
+/turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/medical/research)
 "aAd" = (
 /obj/structure/machinery/chem_storage/research{
@@ -7100,7 +7110,7 @@
 	},
 /obj/item/tool/hand_labeler{
 	pixel_x = -6;
-	pixel_y = -5
+	pixel_y = -8
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/medical/research)
@@ -7229,8 +7239,16 @@
 	dir = 1;
 	name = "\improper Research Containment"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Cells";
+	name = "\improper Research Cell Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
 /turf/open/floor/almayer/test_floor6,
-/area/blackgold/upper/rooms/medical/containment)
+/area/blackgold/upper/rooms/medical)
 "aAI" = (
 /obj/structure/bed/chair/office/light,
 /turf/open/floor/almayer/sterile_green_side,
@@ -7242,22 +7260,33 @@
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/medical/research)
-"aAK" = (
-/turf/open/floor/almayer/sterile_green_corner/north,
-/area/blackgold/upper/rooms/medical/containment)
 "aAL" = (
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/blackgold/upper/rooms/medical/containment)
 "aAM" = (
-/obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/almayer/sterile_green_side/north,
-/area/blackgold/upper/rooms/medical/containment)
-"aAN" = (
-/turf/open/floor/almayer/sterile_green_corner,
+/obj/structure/machinery/light/spot{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/sterile_green,
 /area/blackgold/upper/rooms/medical/containment)
 "aAO" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Cells";
+	name = "\improper Research Cell Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
 /turf/open/floor/almayer/test_floor6,
-/area/blackgold/upper/rooms/medical/containment)
+/area/blackgold/upper/rooms/medical)
 "aAP" = (
 /obj/structure/stairs/perspective{
 	dir = 1;
@@ -7418,15 +7447,16 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/medical)
 "aBi" = (
-/obj/structure/machinery/light/spot{
-	dir = 1;
-	pixel_y = 10
-	},
+/obj/structure/closet/l3closet/scientist,
 /obj/structure/barricade/handrail/medical{
 	dir = 8;
 	layer = 3.1
 	},
-/turf/open/floor/almayer/plate,
+/obj/structure/machinery/light/spot{
+	dir = 1;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/medical)
 "aBj" = (
 /obj/structure/closet/l3closet/scientist,
@@ -7798,7 +7828,9 @@
 /area/blackgold/lower/rooms/engineering)
 "aCE" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	name = "\improper Secure Storage Shutters";
+	id = "BG Eng Storage"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/engineering/storage)
@@ -7859,7 +7891,9 @@
 /area/blackgold/lower/rooms/engineering)
 "aCT" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	name = "\improper Secure Storage Shutters";
+	id = "BG Eng Storage"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/engineering/storage)
@@ -8070,6 +8104,13 @@
 /turf/open/floor/almayer/flooredge/northeast,
 /area/blackgold/lower/rooms/engineering)
 "aDL" = (
+/obj/structure/machinery/door_control{
+	id = "BG Eng Storage";
+	name = "Secure Storage Shutter Control";
+	pixel_x = -22;
+	pixel_y = 23;
+	req_one_access = list(7,19)
+	},
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/engineering/storage)
 "aDM" = (
@@ -8283,10 +8324,8 @@
 /area/blackgold/lower/rooms/brig/cells)
 "aEC" = (
 /obj/structure/machinery/door/airlock/almayer/engineering{
-	access_modified = 1;
 	name = "\improper Chief Engineer's Office";
-	req_one_access = null;
-	req_one_access_txt = "1;6"
+	req_one_access = list(6,19)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/engineering/ce)
@@ -8373,6 +8412,11 @@
 /area/blackgold/lower/rooms/engineering/ce)
 "aES" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 8;
+	id = "BG Eng CE";
+	name = "\improper Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/engineering/ce)
 "aET" = (
@@ -8387,6 +8431,13 @@
 "aEU" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/landmark/map_item,
+/obj/structure/machinery/door_control{
+	id = "BG Eng CE";
+	name = "Privacy Shutter Control";
+	pixel_x = 8;
+	pixel_y = 7;
+	req_one_access = list(6,19)
+	},
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/engineering/ce)
 "aEV" = (
@@ -8413,7 +8464,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/engineering/ce)
 "aEY" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass{
+	name = "\improper Main Power Storage"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/engineering)
 "aEZ" = (
@@ -8427,10 +8480,8 @@
 /area/blackgold/upper/rooms/captain_mess)
 "aFb" = (
 /obj/structure/machinery/door/airlock/almayer/engineering{
-	access_modified = 1;
 	name = "\improper Chief Engineer's Quarters";
-	req_one_access = null;
-	req_one_access_txt = "1;6"
+	req_one_access = list(1, 6)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/engineering/ce)
@@ -8655,7 +8706,9 @@
 	},
 /obj/structure/platform/metal/ship,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Port Pump";
+	name = "\improper Fuel Pump Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/pumps/port)
@@ -8675,7 +8728,9 @@
 	icon_state = "p_stair_full"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Port Pump";
+	name = "\improper Fuel Pump Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/pumps/port)
@@ -8705,12 +8760,21 @@
 	icon_state = "ship_platform_stair"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Port Pump";
+	name = "\improper Fuel Pump Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/pumps/port)
 "aFY" = (
 /obj/structure/platform/metal/ship/corner/east,
+/obj/structure/machinery/door_control{
+	pixel_x = -23;
+	pixel_y = 24;
+	name = "Pump Shutters Control";
+	id = "BG Port Pump";
+	req_access = list(1)
+	},
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/middle/rooms/pumps/port)
 "aFZ" = (
@@ -9066,6 +9130,13 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/structure/machinery/door_control{
+	id = "BG Eng OT Port Storage";
+	name = "\improper Storage Shutter Control";
+	pixel_x = -24;
+	pixel_y = 22;
+	req_one_access = list(19,35)
+	},
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHq" = (
@@ -9129,7 +9200,10 @@
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHy" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Chemical Storage Shutters";
+	id = "BG Eng OT Port Storage"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHz" = (
@@ -9225,9 +9299,12 @@
 /turf/open/floor/almayer/orange/southeast,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHP" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_one_access = list(19,35)
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Eng OT Maintenance"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering/ot)
@@ -9301,6 +9378,13 @@
 /turf/open/floor/almayer/orange/north,
 /area/blackgold/middle/rooms/engineering/ot)
 "aId" = (
+/obj/structure/machinery/door_control{
+	id = "BG Eng OT Maintenance";
+	name = "\improper Maintenance Shutter Control";
+	pixel_x = 23;
+	pixel_y = -8;
+	req_one_access = list(19,35)
+	},
 /turf/open/floor/almayer/orange/northeast,
 /area/blackgold/middle/rooms/engineering/ot)
 "aIe" = (
@@ -9356,6 +9440,13 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Eng OT Star Storage";
+	name = "\improper Storage Shutter Control";
+	pixel_x = -24;
+	pixel_y = -21;
+	req_one_access = list(19,35)
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/middle/rooms/engineering/ot)
@@ -9430,6 +9521,20 @@
 	density = 0;
 	can_block_movement = 0
 	},
+/obj/structure/machinery/door_control{
+	id = "BG Eng OT";
+	name = "\improper Line Shutter Control";
+	pixel_x = -8;
+	pixel_y = 22;
+	req_one_access = list(19,35)
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Eng OT Skip";
+	name = "Next button";
+	pixel_x = -8;
+	pixel_y = 30;
+	req_one_access = list(19,35)
+	},
 /turf/open/floor/almayer/orange/north,
 /area/blackgold/middle/rooms/engineering/ot)
 "aIw" = (
@@ -9441,21 +9546,14 @@
 "aIx" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/working_joe{
-	pixel_x = 6
-	},
-/obj/structure/machinery/door_control{
-	id = "MTline";
-	name = "Next button";
-	pixel_x = -8;
-	pixel_y = 4;
-	req_one_access_txt = "19;35"
+	pixel_x = 2
 	},
 /turf/open/floor/almayer/orange/north,
 /area/blackgold/middle/rooms/engineering/ot)
 "aIy" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/demo_sim{
-	pixel_x = -9
+	pixel_x = -12
 	},
 /obj/item/paper_bin/uscm{
 	pixel_y = 8;
@@ -9528,7 +9626,7 @@
 /area/blackgold/middle/rooms/engineering)
 "aIL" = (
 /obj/structure/disposalpipe/up/almayer{
-	id = "almayerlink_OT_req"
+	id = "BG OT-Cargo Link"
 	},
 /turf/closed/wall/almayer,
 /area/blackgold/middle/rooms/engineering/ot)
@@ -9549,7 +9647,10 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Eng OT";
+	name = "\improper OT Line Shutters"
+	},
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering/ot)
 "aIN" = (
@@ -9557,7 +9658,10 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Eng OT";
+	name = "\improper OT Line Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/engineering/ot)
 "aIO" = (
@@ -9616,7 +9720,7 @@
 "aIU" = (
 /obj/structure/machinery/line_nexter{
 	dir = 1;
-	id = "MTline";
+	id = "BG Eng OT Skip";
 	pixel_y = 11
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
@@ -9633,7 +9737,7 @@
 	dir = 1;
 	pixel_y = 10
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/cargo,
 /area/blackgold/middle/hallways/mid/aft)
 "aIX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -9687,7 +9791,8 @@
 	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Medbay CMO"
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/medical/cmo)
@@ -9790,8 +9895,8 @@
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
-	id = "ROlobby2";
-	name = "\improper RO Line 2"
+	id = s;
+	name = "\improper Requisitions Shutter"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer,
 /obj/structure/surface/table/reinforced/almayer_blend,
@@ -9955,12 +10060,21 @@
 	},
 /obj/structure/platform/metal/ship,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Star Pump";
+	name = "\improper Fuel Pump Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/pumps/starboard)
 "aKg" = (
 /obj/structure/platform/metal/ship/corner/north,
+/obj/structure/machinery/door_control{
+	pixel_x = -23;
+	pixel_y = -24;
+	name = "Pump Shutters Control";
+	id = "BG Star Pump";
+	req_access = list(1)
+	},
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/middle/rooms/pumps/starboard)
 "aKh" = (
@@ -9983,7 +10097,9 @@
 	icon_state = "p_stair_full"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Star Pump";
+	name = "\improper Fuel Pump Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/pumps/starboard)
@@ -10013,7 +10129,9 @@
 	icon_state = "ship_platform_stair"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Star Pump";
+	name = "\improper Fuel Pump Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/pumps/starboard)
@@ -10385,9 +10503,8 @@
 /area/blackgold/upper/rooms/kitchen)
 "aLN" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
-	access_modified = 1;
-	name = "Kitchen";
-	req_one_access_txt = "30;19"
+	name = "\improper Kitchen";
+	req_access = list(30)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/kitchen)
@@ -10467,6 +10584,14 @@
 	dir = 4;
 	pixel_x = -16
 	},
+/obj/structure/machinery/door_control{
+	id = "BG Kitchen";
+	name = "\improper Research Lab Shutter Control";
+	pixel_y = 11;
+	throw_range = 15;
+	pixel_x = -22;
+	req_access = list(30)
+	},
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/kitchen)
 "aMc" = (
@@ -10520,7 +10645,9 @@
 "aMm" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Kitchen";
+	name = "\improper Kitchen Shutters"
 	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/upper/rooms/kitchen)
@@ -10624,9 +10751,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aMB" = (
-/obj/structure/window/framed/almayer,
+/obj/structure/window/framed/almayer/white,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	id = "BG Medbay Morgue";
+	name = "\improper Privacy Shutters"
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/medical/morgue)
@@ -10692,6 +10821,14 @@
 	pixel_x = -5;
 	pixel_y = 12;
 	name = "Medical Examiner's rubber stamp"
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Medbay Morgue";
+	name = "\improper Research Lab Shutter Control";
+	pixel_y = -2;
+	throw_range = 15;
+	pixel_x = -5;
+	req_one_access = list(8,19)
 	},
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/blackgold/upper/rooms/medical/morgue)
@@ -10815,7 +10952,8 @@
 "aNf" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/solid{
 	name = "Morgue";
-	req_one_access = list(25)
+	req_one_access = null;
+	req_access = list(25)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/medical/morgue)
@@ -10890,6 +11028,14 @@
 /turf/open_space,
 /area/blackgold/upper/rooms/medical)
 "aNv" = (
+/obj/structure/machinery/door_control{
+	id = "BG Research";
+	name = "\improper Research Lab Shutter Control";
+	pixel_y = -9;
+	throw_range = 15;
+	pixel_x = 24;
+	req_one_access = list(8,19)
+	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/upper/rooms/medical)
 "aNw" = (
@@ -10904,14 +11050,6 @@
 "aNz" = (
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/medical/research)
-"aNA" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/obj/structure/machinery/light/spot/blue/containment,
-/turf/open/floor/almayer/research/containment/floor2/north,
-/area/blackgold/upper/rooms/medical/containment)
 "aNB" = (
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/blackgold/upper/rooms/medical)
@@ -10961,10 +11099,6 @@
 "aNP" = (
 /turf/open/floor/almayer/sterile_green_side/southwest,
 /area/blackgold/upper/rooms/medical)
-"aNQ" = (
-/obj/structure/machinery/light/spot/blue/containment,
-/turf/open/floor/almayer/sterile_green_side,
-/area/blackgold/upper/rooms/medical/containment)
 "aNR" = (
 /turf/open/floor/almayer/sterile_green_side/southwest,
 /area/blackgold/upper/rooms/medical/research)
@@ -10989,6 +11123,14 @@
 /turf/open/floor/almayer/sterile_green_side/northwest,
 /area/blackgold/upper/rooms/medical)
 "aNX" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Lab";
+	name = "\improper Research Lab Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/medical)
 "aNY" = (
@@ -11004,6 +11146,14 @@
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
 "aOa" = (
+/obj/structure/machinery/door_control{
+	id = "BG Research Lab";
+	name = "\improper Research Lab Shutter Control";
+	pixel_y = -10;
+	throw_range = 15;
+	pixel_x = 23;
+	req_one_access = list(19,28)
+	},
 /turf/open/floor/almayer/sterile_green_corner,
 /area/blackgold/upper/rooms/medical)
 "aOb" = (
@@ -11015,24 +11165,12 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/medical/research)
-"aOd" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/machinery/light/spot/blue/containment{
-	dir = 1
-	},
-/turf/open/floor/almayer/research/containment/floor2/north,
-/area/blackgold/upper/rooms/medical/containment)
 "aOe" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/lower/rooms/engineering/laundry)
 "aOf" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
-/turf/open/floor/plating,
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/engineering/laundry)
 "aOg" = (
 /obj/structure/closet/crate/trashcart{
@@ -11404,6 +11542,14 @@
 	pixel_x = 5;
 	pixel_y = 3
 	},
+/obj/structure/machinery/door_control/cl/office/window{
+	pixel_x = -5;
+	pixel_y = 9;
+	id = "BG Corporate";
+	name = "Office Shutter Control";
+	req_access = list(200);
+	req_access_txt = null
+	},
 /turf/open/floor/hybrisa/carpet/carpetblack,
 /area/blackgold/middle/rooms/liaison)
 "aPu" = (
@@ -11431,6 +11577,9 @@
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2;
 	name = "\improper Weyland-Yutani Office"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/door{
+	id = "BG Corporate"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/liaison)
@@ -11464,24 +11613,15 @@
 /turf/closed/wall/almayer,
 /area/blackgold/middle/rooms/reporter)
 "aPH" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/emails{
-	dir = 4
+/obj/structure/machinery/photocopier/wyphotocopier{
+	pixel_x = -3
 	},
 /turf/open/floor/almayer/silver/southwest,
-/area/blackgold/middle/rooms/reporter)
-"aPI" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 8
-	},
-/turf/open/floor/almayer/silver,
 /area/blackgold/middle/rooms/reporter)
 "aPJ" = (
 /turf/open/floor/almayer/silver,
 /area/blackgold/middle/rooms/reporter)
 "aPK" = (
-/obj/structure/machinery/power/apc/almayer/south,
-/obj/structure/machinery/light,
 /turf/open/floor/almayer/silver/southeast,
 /area/blackgold/middle/rooms/reporter)
 "aPL" = (
@@ -11554,16 +11694,11 @@
 /obj/effect/landmark/start/crew_chief,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/workshop)
-"aPU" = (
-/obj/structure/machinery/door/airlock/almayer/generic/press{
-	name = "\improper Combat Correspondent Room"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/middle/rooms/reporter)
 "aPV" = (
 /turf/open/floor/almayer/silver/east,
 /area/blackgold/middle/rooms/reporter)
 "aPW" = (
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/wood/ship,
 /area/blackgold/middle/rooms/reporter)
 "aPX" = (
@@ -11713,6 +11848,17 @@
 	},
 /turf/open_space,
 /area/blackgold/upper/stairs/star/aft)
+"aQs" = (
+/obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
+	dir = 4;
+	name = "\improper Cargo Lock";
+	id = "BG Under Cargo"
+	},
+/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+	layer = 2.9
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/underdeck/req)
 "aQt" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -11740,12 +11886,56 @@
 	},
 /turf/open/floor/almayer/blue/northwest,
 /area/blackgold/middle/rooms/workshop)
+"aQz" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/maint/port/fore)
 "aQA" = (
 /turf/open/floor/almayer/plating_striped/north,
 /area/blackgold/middle/rooms/workshop)
+"aQB" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/conference)
+"aQC" = (
+/obj/structure/machinery/status_display{
+	pixel_y = -30
+	},
+/turf/open/floor/almayer/blue/south,
+/area/blackgold/lower/rooms/conference)
+"aQD" = (
+/obj/structure/machinery/flasher{
+	id = "BG Brig Cell 3";
+	pixel_x = 22
+	},
+/turf/open/floor/almayer/red/southeast,
+/area/blackgold/lower/rooms/brig/cells)
+"aQE" = (
+/obj/structure/machinery/flasher{
+	id = "BG Brig Cell 2";
+	pixel_x = 22
+	},
+/turf/open/floor/almayer/red/southeast,
+/area/blackgold/lower/rooms/brig/cells)
+"aQF" = (
+/obj/structure/machinery/flasher{
+	id = "BG Brig Cell 1";
+	pixel_x = 22
+	},
+/turf/open/floor/almayer/red/southeast,
+/area/blackgold/lower/rooms/brig/cells)
 "aQG" = (
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/workshop)
+"aQH" = (
+/obj/structure/machinery/door/poddoor/hybrisa/shutters{
+	id = "BG Brig Cell 3";
+	name = "\improper Cell 3 Shutters"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
 "aQI" = (
 /obj/structure/platform/metal/ship/corner/east,
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
@@ -11754,6 +11944,13 @@
 /obj/structure/machinery/cm_vending/gear/vehicle_crew,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
+"aQJ" = (
+/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
+	name = "\improper Cell 1 Shutters";
+	id = "BG Brig Cell 2"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
 "aQK" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
@@ -11865,6 +12062,13 @@
 "aRe" = (
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/rooms/garden)
+"aRf" = (
+/obj/structure/machinery/door/poddoor/hybrisa/shutters{
+	id = "BG Brig Cell 2";
+	name = "\improper Cell 2 Shutters"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
 "aRg" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -12067,7 +12271,9 @@
 /area/blackgold/middle/rooms/workshop)
 "aRN" = (
 /obj/structure/machinery/door/airlock/almayer/command{
-	dir = 1
+	dir = 1;
+	name = "\improper Flight Crew Bunks";
+	req_access = list(23)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/workshop)
@@ -12265,93 +12471,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
-"aSy" = (
-/obj/structure/surface/rack,
-/obj/structure/dropship_equipment/fuel/cooling_system{
-	layer = 3.5
-	},
-/obj/item/clothing/glasses/welding{
-	layer = 3.6;
-	pixel_x = 2;
-	pixel_y = 7
-	},
-/turf/open/floor/almayer/blue/north,
-/area/space)
-"aSz" = (
-/obj/structure/platform/metal/ship/corner/west,
-/obj/structure/surface/rack,
-/turf/open/floor/almayer/blue/north,
-/area/space)
-"aSA" = (
-/obj/structure/platform/metal/ship/corner/east,
-/obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
-	req_one_access = null;
-	req_one_access_txt = "7;23;27;102"
-	},
-/turf/open/floor/almayer/blue/northeast,
-/area/space)
-"aSB" = (
-/obj/vehicle/powerloader{
-	dir = 4;
-	pixel_y = 6
-	},
-/turf/open/floor/almayer/cargo,
-/area/space)
-"aSC" = (
-/turf/open/floor/almayer/cargo_arrow/east,
-/area/space)
-"aSD" = (
-/turf/open/floor/almayer/plate,
-/area/space)
-"aSE" = (
-/turf/open/floor/almayer/cargo_arrow/west,
-/area/space)
-"aSF" = (
-/obj/vehicle/powerloader{
-	dir = 8;
-	pixel_y = 6
-	},
-/turf/open/floor/almayer/cargo,
-/area/space)
-"aSG" = (
-/obj/structure/surface/rack,
-/obj/structure/dropship_equipment/fuel/fuel_enhancer,
-/turf/open/floor/almayer/cargo,
-/area/space)
-"aSH" = (
-/obj/structure/surface/rack,
-/obj/structure/dropship_equipment/medevac_system,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/almayer/cargo,
-/area/space)
-"aSI" = (
-/obj/structure/machinery/recharge_station{
-	layer = 2.9
-	},
-/turf/open/floor/almayer/cargo,
-/area/space)
-"aSJ" = (
-/obj/vehicle/powerloader{
-	dir = 4;
-	pixel_y = 6;
-	layer = 3.59
-	},
-/turf/open/floor/almayer/cargo,
-/area/space)
-"aSK" = (
-/obj/vehicle/powerloader{
-	dir = 8;
-	pixel_y = 6;
-	layer = 3.59
-	},
-/turf/open/floor/almayer/cargo,
-/area/space)
-"aSL" = (
-/obj/structure/platform/metal/ship/corner/north,
-/turf/open/floor/almayer/plate,
-/area/space)
 "aSM" = (
 /obj/structure/largecrate/supply/supplies/flares,
 /obj/structure/largecrate/supply/supplies/flares{
@@ -12361,38 +12480,12 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/underdeck/req)
-"aSN" = (
-/obj/vehicle/powerloader{
-	dir = 4;
-	pixel_y = 6;
-	layer = 3.58
-	},
-/turf/open/floor/almayer/cargo,
-/area/space)
-"aSO" = (
-/obj/structure/machinery/light/red{
-	light_color = "#BB3F3F";
-	dir = 1
-	},
-/turf/open/floor/almayer/plate,
-/area/space)
-"aSP" = (
-/obj/vehicle/powerloader{
-	dir = 8;
-	pixel_y = 6;
-	layer = 3.58
-	},
-/turf/open/floor/almayer/cargo,
-/area/space)
 "aSQ" = (
 /obj/structure/sign/prop1{
 	pixel_y = 32
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
-"aSR" = (
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/space)
 "aSS" = (
 /obj/structure/machinery/light/small/red{
 	dir = 8
@@ -12402,6 +12495,11 @@
 "aST" = (
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
 	name = "\improper Secure Maintenance Hatch"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/fore)
@@ -12476,7 +12574,8 @@
 "aTi" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Cryogenics Bay";
-	dir = 1
+	dir = 1;
+	req_access = list()
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/cryo)
@@ -12499,6 +12598,9 @@
 /area/blackgold/upper/rooms/intel)
 "aTm" = (
 /obj/structure/machinery/light,
+/obj/structure/bed/bedroll{
+	name = "mouse bed"
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/medical/research)
 "aTn" = (
@@ -12672,6 +12774,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/tanker)
+"aTT" = (
+/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
+	name = "\improper Cell 1 Shutters";
+	id = "BG Brig Cell 1"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
 "aTU" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -12768,10 +12877,10 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/tanker)
 "aUf" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
+/obj/structure/machinery/door/airlock/almayer/command{
 	dir = 1;
-	name = "\improper Tanker Quarters";
-	req_one_access = list(19,27)
+	name = "\improper Crewman Bunks";
+	req_access = list(27)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/tanker)
@@ -12833,7 +12942,14 @@
 /area/blackgold/upper/rooms/tanker)
 "aUq" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Hangar Workshop";
+	name = "\improper Vehicle Workshop Shutters";
 	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/workshop)
@@ -12873,6 +12989,13 @@
 /turf/open_space,
 /area/blackgold/upper/rooms/tanker)
 "aUy" = (
+/obj/structure/machinery/door_control{
+	id = "BG Hangar Tanker Maintenance";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = 10;
+	req_one_access = list(19,21);
+	pixel_x = 23
+	},
 /turf/open/floor/almayer/blue/east,
 /area/blackgold/upper/rooms/tanker)
 "aUz" = (
@@ -12888,7 +13011,9 @@
 "aUB" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
+	dir = 4;
+	name = "\improper Maintenance Shutters";
+	id = "BG Hangar Tanker Maintenance"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/tanker)
@@ -12906,17 +13031,2338 @@
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
 	name = "\improper Secure Maintenance Hatch"
 	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/fore)
+"aUF" = (
+/obj/structure/machinery/door/poddoor/hybrisa/shutters{
+	id = "BG Brig Cell 1";
+	name = "\improper Cell 1 Shutters"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
+"aUG" = (
+/obj/structure/machinery/flasher{
+	id = "BG Brig Cell 4";
+	pixel_y = -21
+	},
+/turf/open/floor/almayer/red/southwest,
+/area/blackgold/lower/rooms/brig/cells)
+"aUH" = (
+/obj/structure/machinery/brig_cell/cell_3{
+	pixel_y = -29;
+	id = "BG Brig Cell 3"
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/rooms/brig/cells)
+"aUI" = (
+/obj/structure/machinery/brig_cell/cell_2{
+	pixel_y = -29;
+	id = "BG Brig Cell 2"
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/rooms/brig/cells)
+"aUJ" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
+	closeOtherId = "BG Brig Cells";
+	dir = 1;
+	name = "\improper Brig Cells";
+	id_tag = "BG Brig Cell Entrance"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/brig/cells)
+"aUK" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
+	closeOtherId = "BG Brig Cells";
+	dir = 1;
+	name = "\improper Brig Cells";
+	id_tag = "BG Brig Cell Exit"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/brig/cells)
+"aUL" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/hallways/port/fore)
+"aUM" = (
+/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
+	name = "\improper Cell 1 Shutters";
+	id = "BG Brig Cell 4";
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
+"aUN" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/brig/cells)
+"aUO" = (
+/obj/structure/machinery/door_control{
+	pixel_y = 24;
+	name = "\improper Maintenance Shutters Control";
+	id = "BG Brig Cell Maintenance";
+	req_access = list(3)
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
+"aUP" = (
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/lower/rooms/conference)
+"aUQ" = (
+/obj/structure/machinery/brig_cell/cell_4{
+	pixel_x = -32;
+	id = "BG Brig Cell 4"
+	},
+/turf/open/floor/almayer/green/west,
+/area/blackgold/lower/rooms/brig/cells)
+"aUR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/machinery/light/spot{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
+"aUS" = (
+/obj/structure/machinery/flasher{
+	id = "BG Brig Cell 5";
+	pixel_y = -21
+	},
+/turf/open/floor/almayer/red/southwest,
+/area/blackgold/lower/rooms/brig/cells)
+"aUT" = (
+/obj/structure/machinery/door/poddoor/hybrisa/shutters{
+	id = "BG Brig Cell 5";
+	name = "\improper Cell 5 Shutters";
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
+"aUU" = (
+/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
+	name = "\improper Cell 1 Shutters";
+	id = "BG Brig Cell 5";
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/cells)
+"aUV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Mainframe";
+	name = "AI Core Shutter Control";
+	pixel_x = 23;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/blackgold/lower/rooms/aicore)
+"aUW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Office";
+	name = "AI Core Shutter Control";
+	pixel_x = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/blackgold/lower/rooms/aicore)
+"aUX" = (
+/obj/structure/machinery/status_display{
+	pixel_y = -30
+	},
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/lower/rooms/engineering)
+"aUY" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/mainframe,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Mainframe";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/aicore)
+"aUZ" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/public{
+	alert_id = "AresStairs";
+	alert_message = "Caution: Movement detected in ARES Core.";
+	cooldown_duration = 1200
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Stairs";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/lower/rooms/aicore)
+"aVa" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Office";
+	name = "\improper AI Core Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/terminals,
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/aicore)
+"aVb" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/terminals,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Office";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/lower/rooms/aicore)
+"aVc" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/terminals,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Office";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/aicore)
+"aVd" = (
+/obj/structure/machinery/door_control{
+	id = "BG AI Mainframe";
+	name = "AI Core Shutter Control";
+	pixel_x = -9;
+	pixel_y = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build/ai_silver,
+/area/blackgold/lower/rooms/aicore)
+"aVe" = (
+/obj/structure/machinery/door_control{
+	id = "BG AI Office";
+	name = "AI Core Shutter Control";
+	pixel_x = 10;
+	pixel_y = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build/ai_silver,
+/area/blackgold/lower/rooms/aicore)
+"aVf" = (
+/obj/structure/machinery/door_control{
+	id = "BG Eng Storage";
+	name = "Secure Storage Shutter Control";
+	pixel_x = 23;
+	pixel_y = 23;
+	req_one_access = list(7,19)
+	},
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/lower/rooms/engineering)
+"aVg" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/lower/rooms/brig/cells)
+"aVh" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/lower/rooms/conference)
+"aVi" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/core,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Outer";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/lower/rooms/aicore)
+"aVj" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/core,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Outer";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/aicore)
+"aVk" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/terminals,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Vault";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/aicore)
+"aVl" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/terminals,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Vault";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/lower/rooms/aicore)
+"aVm" = (
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
+/obj/structure/machinery/door_control{
+	id = "BG AI Outer";
+	name = "AI Core Shutter Control";
+	pixel_x = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build/ai_silver/west,
+/area/blackgold/lower/rooms/aicore)
+"aVn" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Vault";
+	name = "AI Core Shutter Control";
+	pixel_x = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/blackgold/lower/rooms/aicore)
+"aVo" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass{
+	dir = 1;
+	name = "\improper Reactor Room"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/engineering/reactor)
+"aVp" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
+"aVq" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/black/north,
+/area/blackgold/lower/hallways/mid/mid)
+"aVr" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/maint/star/mid)
+"aVs" = (
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
+/obj/structure/machinery/door_control{
+	id = "BG AI Inner";
+	name = "AI Core Shutter Control";
+	pixel_x = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build/ai_silver/west,
+/area/blackgold/lower/rooms/aicore)
+"aVt" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
+/obj/effect/step_trigger/ares_alert/core,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Inner";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/aicore)
+"aVu" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/core,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Inner";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/lower/rooms/aicore)
+"aVv" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/core,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Inner";
+	name = "\improper AI Core Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/aicore)
+"aVw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Inner";
+	name = "AI Core Shutter Control";
+	pixel_x = 10;
+	pixel_y = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/blackgold/lower/rooms/aicore)
+"aVx" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/lower/rooms/engineering)
+"aVy" = (
+/obj/structure/machinery/status_display{
+	pixel_y = -30
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/hallways/star/fore)
+"aVz" = (
+/turf/open/floor/almayer/silverfull2,
+/area/blackgold/lower/rooms/gym)
+"aVA" = (
+/obj/structure/machinery/power/apc/almayer/hardened/north{
+	alpha = 0
+	},
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/blackgold/lower/rooms/aicore)
+"aVB" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/lower/rooms/req)
+"aVC" = (
+/obj/structure/machinery/door_control{
+	pixel_y = 24;
+	name = "Storage Shutter Control";
+	id = "BG Cargo Storage";
+	req_access = list(21);
+	pixel_x = -9
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/lower/rooms/req)
+"aVD" = (
+/obj/structure/machinery/door_control{
+	name = "Storage Shutter Control";
+	id = "BG Cargo Storage";
+	req_access = list(21);
+	pixel_x = 23
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/rooms/req)
+"aVE" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = 16
+	},
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/plating,
+/area/blackgold/lower/rooms/gym)
+"aVF" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1;
+	req_one_access = list(19,21)
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/rooms/req)
+"aVG" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/maint/port/mid)
+"aVH" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/maint/port/mid)
+"aVI" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/orbital)
+"aVJ" = (
+/obj/structure/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/open/floor/almayer/red/east,
+/area/blackgold/middle/rooms/orbital)
+"aVK" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/squad)
+"aVL" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
+"aVM" = (
+/obj/structure/machinery/door_control{
+	pixel_x = 23;
+	pixel_y = -8;
+	name = "Pump Shutters Control";
+	id = s;
+	req_access = list(1)
+	},
+/turf/open/floor/almayer/red/northeast,
+/area/blackgold/middle/rooms/orbital)
+"aVN" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/orbital)
+"aVO" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
+	name = "\improper Orbital Cannon";
+	req_access = list(19);
+	no_panel = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/orbital)
+"aVP" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/fore)
+"aVQ" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer/black/east,
+/area/blackgold/middle/hallways/mid/aft)
+"aVR" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/maint/port/fore)
+"aVS" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/squad)
+"aVT" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/black/north,
+/area/blackgold/middle/hallways/port/fore)
+"aVU" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/blackgold/middle/maint/port/fore)
+"aVV" = (
+/obj/structure/platform/metal/ship,
+/turf/open_space,
+/area/blackgold/middle/maint/port/fore)
+"aVW" = (
+/obj/structure/platform/metal/ship/east,
+/obj/structure/platform/metal/ship,
+/turf/open_space,
+/area/blackgold/middle/maint/port/fore)
+"aVX" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_17";
+	pixel_x = -7;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/aicore/no_build/ai_silver{
+	dir = 1
+	},
+/area/blackgold/middle/rooms/aientrance)
+"aVY" = (
+/obj/structure/machinery/door_control{
+	id = "BG Eng OT Port Storage";
+	name = "\improper Storage Shutter Control";
+	pixel_x = 8;
+	pixel_y = -21;
+	req_one_access = list(19,35)
+	},
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/rooms/engineering/ot)
+"aVZ" = (
+/obj/structure/platform/metal/ship/west,
+/obj/structure/platform/metal/ship,
+/turf/open_space,
+/area/blackgold/middle/maint/port/aft)
+"aWa" = (
+/obj/structure/platform/metal/ship,
+/turf/open_space,
+/area/blackgold/middle/maint/port/aft)
+"aWb" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/blackgold/middle/maint/port/aft)
+"aWc" = (
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/blackgold/middle/maint/port/fore)
+"aWd" = (
+/obj/structure/machinery/door_control{
+	id = "BG Eng OT Star Storage";
+	name = "\improper Storage Shutter Control";
+	pixel_x = 8;
+	pixel_y = 22;
+	req_one_access = list(19,35)
+	},
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/middle/rooms/engineering/ot)
+"aWe" = (
+/obj/structure/machinery/door_control{
+	id = "BG Eng OT Maintenance";
+	name = "\improper Maintenance Shutter Control";
+	pixel_x = -22;
+	pixel_y = -8;
+	req_one_access = list(19,35)
+	},
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/aft)
+"aWf" = (
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/blackgold/middle/maint/port/aft)
+"aWg" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Eng OT Star Storage";
+	name = "\improper Chemical Storage Shutters"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Eng OT Star Storage";
+	name = "\improper Chemical Storage Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/rooms/engineering/ot)
+"aWh" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Eng OT Star Storage";
+	name = "\improper Chemical Storage Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/rooms/engineering/ot)
+"aWi" = (
+/obj/structure/platform/metal/ship/north,
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/blackgold/middle/maint/port/fore)
+"aWj" = (
+/obj/structure/platform/metal/ship/north,
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/blackgold/middle/maint/port/aft)
+"aWk" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/black/north,
+/area/blackgold/middle/hallways/mid/mid)
+"aWl" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/silver/north,
+/area/blackgold/middle/hallways/mid/aft)
+"aWm" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/blackgold/middle/maint/star/fore)
+"aWn" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/curtain/open/shower{
+	name = "hypersleep curtain"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/plating,
+/area/blackgold/middle/hallways/mid/mid)
+"aWo" = (
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	name = "\improper Passenger Cryogenics Bay";
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/hallways/mid/mid)
+"aWp" = (
+/turf/closed/wall/almayer/outer,
+/area/blackgold/middle/hallways/mid/mid)
+"aWq" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/blackfull2,
+/area/blackgold/middle/hallways/mid/aft)
+"aWr" = (
+/turf/closed/wall/almayer/white/reinforced,
+/area/blackgold/middle/rooms/medical)
+"aWs" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/blackgold/middle/maint/star/aft)
+"aWt" = (
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/blackgold/middle/maint/star/fore)
+"aWu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aWv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aWw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aWx" = (
+/obj/structure/machinery/light/spot,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/req)
+"aWy" = (
+/obj/structure/machinery/cryopod/right{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/middle/hallways/mid/mid)
+"aWz" = (
+/obj/structure/machinery/light,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/landmark/start/liaison,
+/turf/open/floor/almayer/silver/southwest,
+/area/blackgold/middle/hallways/mid/mid)
+"aWA" = (
+/turf/open/floor/almayer/silver/southeast,
+/area/blackgold/middle/hallways/mid/mid)
+"aWB" = (
+/obj/structure/machinery/door/airlock/almayer/generic/press{
+	name = "\improper Combat Correspondent Room";
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/reporter)
+"aWC" = (
+/obj/effect/landmark/start/professor,
+/obj/effect/landmark/late_join/cmo,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/medical)
+"aWD" = (
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/blackgold/middle/maint/star/aft)
+"aWE" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/fore)
+"aWF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aWG" = (
+/obj/structure/machinery/cryopod/right,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/middle/hallways/mid/mid)
+"aWH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/landmark/start/reporter,
+/turf/open/floor/almayer/silver/west,
+/area/blackgold/middle/hallways/mid/mid)
+"aWI" = (
+/turf/open/floor/almayer/silver/east,
+/area/blackgold/middle/hallways/mid/mid)
+"aWJ" = (
+/obj/structure/machinery/light,
+/turf/open/floor/almayer/silver,
+/area/blackgold/middle/rooms/reporter)
+"aWK" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer/silver/east,
+/area/blackgold/middle/hallways/mid/aft)
+"aWL" = (
+/obj/effect/landmark/start/field_doctor,
+/obj/effect/landmark/late_join/field_doctor,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/medical)
+"aWM" = (
+/obj/structure/flora/pottedplant/random{
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/hallways/mid/mid)
+"aWN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/bed/sofa/south/white/left{
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/silver/northwest,
+/area/blackgold/middle/hallways/mid/mid)
+"aWO" = (
+/obj/structure/bed/sofa/south/white/right{
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/silver/northeast,
+/area/blackgold/middle/hallways/mid/mid)
+"aWP" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/reporter)
+"aWQ" = (
+/obj/effect/landmark/start/doctor,
+/obj/effect/landmark/late_join/doctor,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/medical)
+"aWR" = (
+/obj/structure/platform/metal/ship/north,
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/blackgold/middle/maint/star/fore)
+"aWS" = (
+/obj/structure/platform/metal/ship/north,
+/turf/open_space,
+/area/blackgold/middle/maint/star/fore)
+"aWT" = (
+/obj/structure/platform/metal/ship/east,
+/obj/structure/platform/metal/ship/north,
+/turf/open_space,
+/area/blackgold/middle/maint/star/fore)
+"aWU" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
+/turf/open_space,
+/area/blackgold/middle/rooms/req)
+"aWV" = (
+/obj/structure/platform/metal/ship/west,
+/obj/structure/platform/metal/ship/north,
+/turf/open_space,
+/area/blackgold/middle/maint/star/aft)
+"aWW" = (
+/obj/structure/platform/metal/ship/north,
+/turf/open_space,
+/area/blackgold/middle/maint/star/aft)
+"aWX" = (
+/obj/structure/platform/metal/ship/north,
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/blackgold/middle/maint/star/aft)
+"aWY" = (
+/obj/structure/machinery/status_display{
+	pixel_y = -30
+	},
+/turf/open/floor/almayer/black/south,
+/area/blackgold/middle/hallways/star/fore)
+"aWZ" = (
+/obj/structure/machinery/light/spot{
+	dir = 4
+	},
+/turf/open/floor/almayer/green/east,
+/area/blackgold/middle/rooms/req)
+"aXa" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/maint/star/fore)
+"aXb" = (
+/obj/structure/barricade/handrail{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/blackgold/middle/rooms/squad/prep)
+"aXc" = (
+/obj/structure/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/open/floor/almayer/green/east,
+/area/blackgold/middle/rooms/req)
+"aXd" = (
+/obj/structure/platform/metal/ship/corner/west,
+/turf/open/floor/almayer/green/east,
+/area/blackgold/middle/rooms/req)
+"aXe" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXf" = (
+/obj/structure/machinery/vending/snack/packaged{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXg" = (
+/obj/structure/machinery/vending/coffee{
+	pixel_x = 4
+	},
+/obj/structure/machinery/vending/cigarette/koorlander{
+	pixel_x = -18;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXh" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/maint/star/mid)
+"aXi" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXj" = (
+/obj/structure/flora/pottedplant/random{
+	pixel_x = 7
+	},
+/turf/open/floor/almayer/green/southeast,
+/area/blackgold/middle/rooms/req)
+"aXk" = (
+/obj/structure/machinery/door_control{
+	id = "BG Medbay Storage";
+	name = "\improper Storage Shutter Control";
+	pixel_y = 23;
+	throw_range = 15;
+	pixel_x = -22;
+	req_one_access = list(5,19,39)
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/middle/rooms/medical)
+"aXl" = (
+/obj/structure/platform/metal/ship/north{
+	icon_state = "ship_platform_stair_alt"
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap";
+	layer = 3.5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
 "aXm" = (
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/upper/rooms/brig/processing)
+"aXn" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/req)
+"aXo" = (
+/obj/structure/surface/table/almayer,
+/obj/item/toy/deck/uno,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/req)
+"aXp" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8
+	},
+/turf/open/floor/almayer/green/east,
+/area/blackgold/middle/rooms/req)
+"aXq" = (
+/obj/structure/machinery/door_control{
+	id = "BG Hangar Workshop";
+	name = "Vehicle Bay Shutters Control";
+	pixel_y = -6;
+	req_one_access = list(19,23,27);
+	pixel_x = 22
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"aXr" = (
+/obj/structure/machinery/door_control{
+	id = "BG Hangar Workshop";
+	name = "Vehicle Bay Shutters Control";
+	pixel_y = -6;
+	req_one_access = list(19,23,27);
+	pixel_x = -22
+	},
+/turf/open/floor/almayer/blue/west,
+/area/blackgold/middle/rooms/workshop)
+"aXs" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1;
+	req_one_access = list(8,19)
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/medical)
+"aXt" = (
+/obj/structure/platform/metal/ship/east,
+/turf/open/floor/almayer/green/east,
+/area/blackgold/middle/rooms/req)
+"aXu" = (
+/obj/structure/barricade/handrail,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/bed/chair/comfy/lime{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXv" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/req)
+"aXw" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control{
+	id = "BG Cargo Vehicle Entrance";
+	name = "Vehicle Bay Shutters Control";
+	pixel_y = 6;
+	req_one_access = list(19,21)
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/req)
+"aXx" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8
+	},
+/turf/open/floor/almayer/green/northeast,
+/area/blackgold/middle/rooms/req)
+"aXy" = (
+/obj/structure/machinery/door_control{
+	id = "BG Cargo Vehicle Entrance";
+	name = "Vehicle Bay Shutters Control";
+	pixel_y = 6;
+	req_one_access = list(19,21);
+	pixel_x = -22
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"aXz" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/solid{
+	dir = 1;
+	name = "\improper Vehicle Workshop"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/workshop)
+"aXA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Medbay Storage";
+	name = "\improper Storage Shutter Control";
+	pixel_y = -21;
+	throw_range = 15;
+	pixel_x = -22;
+	req_one_access = list(5,19,39)
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/middle/rooms/medical)
+"aXB" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
+	name = "\improper AA Cannon";
+	req_access = list();
+	req_one_access = list(7,19);
+	no_panel = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/orbital)
+"aXC" = (
+/obj/structure/platform/metal/ship/east,
+/turf/open/floor/almayer/green/northeast,
+/area/blackgold/middle/rooms/req)
+"aXD" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/machinery/computer/supply/asrs{
+	pixel_x = 2;
+	layer = 3.51
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXE" = (
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/maint/star/mid)
+"aXF" = (
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/middle/maint/star/mid)
+"aXG" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/workshop)
+"aXH" = (
+/obj/structure/platform/metal/ship/corner/west,
+/obj/structure/machinery/door_control{
+	pixel_x = 23;
+	pixel_y = 8;
+	name = "Pump Shutters Control";
+	id = "BG Star Pump";
+	req_access = list(1)
+	},
+/turf/open/floor/almayer/red/southeast,
+/area/blackgold/middle/rooms/orbital)
+"aXI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/platform/metal/ship/corner,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXK" = (
+/obj/structure/platform/metal/ship,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/platform/metal/ship,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aXM" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Cargo Vehicle Entrance";
+	name = "\improper Requisition Vehicle Bay Shutters";
+	dir = 4
+	},
+/obj/structure/platform/metal/ship/corner/north,
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/rooms/req)
+"aXN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/maint/star/mid)
+"aXO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/maint/star/mid)
+"aXP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/maint/star/mid)
+"aXQ" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Cargo Vehicle Entrance";
+	name = "\improper Requisition Vehicle Bay Shutters";
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/maint/star/mid)
+"aXR" = (
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/blackgold/middle/rooms/req)
+"aXS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/req)
+"aXT" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Cargo Vehicle Entrance";
+	name = "\improper Requisition Vehicle Bay Shutters";
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/middle/rooms/req)
+"aXU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/maint/star/mid)
+"aXV" = (
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/blackgold/middle/maint/star/mid)
+"aXW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/maint/star/mid)
+"aXX" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Cargo Vehicle Entrance";
+	name = "\improper Requisition Vehicle Bay Shutters";
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/middle/maint/star/mid)
+"aXY" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1;
+	req_one_access = list(19,23)
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/workshop)
+"aXZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	layer = 3.33;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aYa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	layer = 3.33;
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/spot{
+	dir = 1;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"aYb" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Cargo Vehicle Entrance";
+	name = "\improper Requisition Vehicle Bay Shutters";
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/rooms/req)
+"aYc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	layer = 3.33;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/maint/star/mid)
+"aYd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	layer = 3.33;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/maint/star/mid)
+"aYe" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	layer = 3.33;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/maint/star/mid)
+"aYf" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/squad/prep)
+"aYg" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1;
+	req_one_access = list(19,21)
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/req)
+"aYh" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/maint/star/mid)
+"aYi" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/fore)
+"aYj" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/captain_mess)
+"aYk" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/maint/port/fore)
+"aYl" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/rooms/brig/processing)
+"aYm" = (
+/obj/structure/machinery/door_control{
+	id = "BG Brig Armory";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = 22;
+	throw_range = 15;
+	pixel_x = -23;
+	req_access = list(4)
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/rooms/brig/processing)
+"aYn" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/blue/north,
+/area/blackgold/upper/hallways/mid/fore)
+"aYo" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/brig/lobby)
+"aYp" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CIC Armory";
+	name = "\improper Armory Shutters"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/upper/rooms/cic)
+"aYq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Brig Armory";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = -21;
+	throw_range = 15;
+	pixel_x = -23;
+	req_access = list(4)
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/brig/armory)
+"aYr" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/upper/rooms/medical/morgue)
+"aYs" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/brig/lobby)
+"aYt" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Medbay Morgue";
+	name = "\improper Privacy Shutters"
+	},
+/obj/structure/window/framed/almayer/white,
+/turf/open/floor/plating,
+/area/blackgold/upper/rooms/medical/morgue)
+"aYu" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/cic)
+"aYv" = (
+/obj/structure/machinery/door_control{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown";
+	pixel_x = 22;
+	pixel_y = 15;
+	req_access = list(19)
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/cic)
+"aYw" = (
+/obj/structure/window/framed/almayer/hull,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/turf/open/floor/plating,
+/area/blackgold/upper/rooms/cic)
+"aYx" = (
+/obj/structure/machinery/door_control{
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown";
+	pixel_x = 22;
+	pixel_y = -7;
+	req_access = list(19)
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/cic)
+"aYy" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/upper/hallways/mid/fore)
+"aYz" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/black/north,
+/area/blackgold/upper/hallways/mid/mid)
+"aYA" = (
+/obj/structure/machinery/door_control{
+	id = "BG Research";
+	name = "\improper Research Lab Shutter Control";
+	pixel_y = 23;
+	throw_range = 15;
+	pixel_x = -8;
+	req_one_access = list(8,19)
+	},
+/turf/open/floor/almayer/silver/north,
+/area/blackgold/upper/hallways/mid/aft)
+"aYB" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/silver/north,
+/area/blackgold/upper/hallways/mid/aft)
+"aYC" = (
+/turf/open/floor/almayer/silverfull2,
+/area/blackgold/upper/hallways/mid/aft)
+"aYD" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/silverfull2,
+/area/blackgold/upper/hallways/mid/aft)
+"aYE" = (
+/turf/closed/wall/almayer/white/reinforced,
+/area/blackgold/upper/hallways/mid/aft)
+"aYF" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/biohazard_lockdown{
+	pixel_y = 5
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/medical/research)
+"aYG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/item/reagent_container/food/snacks/cheesewedge{
+	pixel_x = -5;
+	pixel_y = 1
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -4;
+	anchored = 1;
+	layer = 2.5
+	},
+/obj/item/trash/snack_bowl{
+	pixel_x = 14;
+	pixel_y = -4;
+	anchored = 1;
+	name = "Water bowl"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/medical/research)
+"aYH" = (
+/obj/effect/landmark/start/researcher,
+/obj/effect/landmark/late_join/researcher,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/medical/research)
+"aYI" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/cameras/almayer/containment{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/medical/research)
+"aYJ" = (
+/mob/living/simple_animal/mouse/white/Doc{
+	desc = "Senior mouse researcher. Likes: cheese, experiments, explosions."
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/medical/research)
+"aYK" = (
+/turf/closed/wall/almayer/research/containment/wall/south{
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aYL" = (
+/obj/structure/machinery/power/apc/almayer/hardened/east,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aYM" = (
+/turf/closed/wall/almayer/research/containment/wall/west{
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aYN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/machinery/flasher{
+	alpha = 1;
+	id = "BG Research Cell 2";
+	layer = 2.1;
+	name = "Mounted Flash";
+	pixel_y = -23
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/blackgold/upper/rooms/medical/containment)
+"aYO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/machinery/light/spot/blue/containment{
+	pixel_x = -16
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/blackgold/upper/rooms/medical/containment)
+"aYP" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_display/research_cell{
+	id = "BG Research Cell 2";
+	name = "Cell 1 Control";
+	dir = 1;
+	pixel_x = 5;
+	has_wall_divider = 1
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Research Cell 2 Lockdown";
+	name = "Containment Lockdown";
+	pixel_x = -9;
+	pixel_y = 5;
+	req_one_access_txt = "19;28"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/medical/containment)
+"aYQ" = (
+/obj/structure/bed/roller/heavy,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/medical/containment)
+"aYR" = (
+/obj/structure/surface/rack{
+	pixel_x = -1
+	},
+/obj/item/storage/box/monkeycubes,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/medical/containment)
+"aYS" = (
+/obj/structure/surface/rack{
+	pixel_x = -1
+	},
+/obj/item/tool/extinguisher,
+/obj/item/tool/extinguisher{
+	pixel_x = -8
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/medical/containment)
+"aYT" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/transmitter/rotary{
+	name = "Research Containment Telephone";
+	phone_category = "Medical & Research Dept.";
+	phone_id = "Research Containment";
+	pixel_y = 3;
+	pixel_x = -4
+	},
+/obj/structure/machinery/power/apc/almayer/hardened/south,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/medical/containment)
+"aYU" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/biohazard_lockdown{
+	pixel_x = 9
+	},
+/obj/item/paper_bin/wy{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/tool/pen{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/medical/containment)
+"aYV" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/glass/beaker{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/glass/beaker{
+	pixel_x = -7;
+	pixel_y = 12
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/medical/containment)
+"aYW" = (
+/obj/structure/machinery/status_display{
+	pixel_x = -32
+	},
+/turf/open/floor/almayer/sterile_green_side/west,
+/area/blackgold/upper/rooms/medical)
+"aYX" = (
+/obj/structure/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/blackgold/upper/rooms/medical)
+"aYY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/computer/working_joe{
+	pixel_y = 15
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/medical/research)
+"aYZ" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Cell 2 Lockdown";
+	name = "\improper Research Cell Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aZa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
+/turf/open/floor/almayer/sterile_green_corner/west,
+/area/blackgold/upper/rooms/medical/containment)
+"aZb" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/almayer/sterile_green_corner/east,
+/area/blackgold/upper/rooms/medical/containment)
+"aZc" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/cameras/almayer/containment{
+	dir = 8;
+	pixel_x = -2;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/medical/containment)
+"aZd" = (
+/obj/structure/machinery/door/airlock/almayer/research/glass/reinforced{
+	locked = 1;
+	name = "\improper Containment Cell 2";
+	unacidable = 1;
+	id = "BG Research Cell 2"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Cell 2";
+	name = "\improper Research Cell Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/upper/rooms/medical/containment)
+"aZe" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out"
+	},
+/turf/open/floor/almayer/sterile_green_side/west,
+/area/blackgold/upper/rooms/medical/containment)
+"aZf" = (
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/upper/rooms/medical/containment)
+"aZg" = (
+/obj/structure/machinery/light/spot,
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/upper/rooms/medical/containment)
+"aZh" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_29"
+	},
+/turf/open/floor/almayer/sterile_green_corner/east,
+/area/blackgold/upper/rooms/medical/containment)
+"aZi" = (
+/obj/structure/machinery/door_control{
+	id = "BG Research Cells";
+	name = "\improper Line Shutter Control";
+	pixel_y = 10;
+	throw_range = 15;
+	pixel_x = -22;
+	req_one_access = list(19,28)
+	},
+/turf/open/floor/almayer/sterile_green_side/west,
+/area/blackgold/upper/rooms/medical)
+"aZj" = (
+/obj/structure/surface/table/almayer,
+/obj/item/stack/sheet/mineral/plastic{
+	amount = 15
+	},
+/obj/item/stack/sheet/glass{
+	amount = 20;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aZk" = (
+/obj/item/storage/box/autoinjectors{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/obj/item/storage/box/beakers{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/obj/item/storage/box/sprays{
+	pixel_y = -3
+	},
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aZl" = (
+/obj/structure/machinery/disposal/delivery{
+	density = 0;
+	desc = "A pneumatic delivery unit. Sends items to the requisitions.";
+	icon_state = "delivery_med";
+	name = "Requisitions Delivery Unit";
+	pixel_x = 22
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/surface/rack,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aZm" = (
+/obj/structure/disposalpipe/up/almayer{
+	dir = 8;
+	id = "BG Research-Cargo Link"
+	},
+/turf/closed/wall/almayer/white,
+/area/blackgold/upper/rooms/medical/research)
+"aZn" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Cell 2 Lockdown";
+	name = "\improper Research Cell Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	dir = 1;
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aZo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
+/turf/open/floor/almayer/sterile_green_side/west,
+/area/blackgold/upper/rooms/medical/containment)
+"aZp" = (
+/turf/open/floor/almayer/sterile_green_side/northeast,
+/area/blackgold/upper/rooms/medical/containment)
+"aZq" = (
+/obj/structure/machinery/door_control{
+	id = "BG Research Cells";
+	name = "\improper Research Cell Shutter Control";
+	pixel_y = -22;
+	throw_range = 15;
+	pixel_x = 23;
+	req_one_access = list(19,28)
+	},
+/turf/open/floor/almayer/sterile_green_corner,
+/area/blackgold/upper/rooms/medical/containment)
+"aZr" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/turf/open/floor/almayer/sterile_green_corner/east,
+/area/blackgold/upper/rooms/medical/research)
+"aZs" = (
+/turf/closed/wall/almayer/research/containment/wall/connect_w{
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aZt" = (
+/turf/closed/wall/almayer/research/containment/wall/divide{
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aZu" = (
+/turf/closed/wall/almayer/research/containment/wall/connect_e2{
+	icon_state = "containment_wall_connect_e";
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aZv" = (
+/turf/open/floor/almayer/sterile_green,
+/area/blackgold/upper/rooms/medical/containment)
+"aZw" = (
+/obj/item/stool{
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/upper/rooms/medical/research)
+"aZx" = (
+/obj/structure/surface/rack{
+	layer = 3.51
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/computer/storage)
+"aZy" = (
+/turf/closed/wall/almayer/white/reinforced,
+/area/blackgold/upper/rooms/lifeboat/star)
+"aZz" = (
+/obj/structure/foamed_metal/iron,
+/turf/open/floor/plating,
+/area/blackgold/upper/rooms/lifeboat/star)
+"aZA" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Cell 1 Lockdown";
+	name = "\improper Research Cell Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aZB" = (
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	layer = 2.9;
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	layer = 2.9;
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/sterile_green_corner,
+/area/blackgold/upper/rooms/medical/containment)
+"aZC" = (
+/obj/structure/machinery/door_control{
+	id = "BG Research Lab";
+	name = "\improper Research Lab Shutter Control";
+	pixel_y = -10;
+	throw_range = 15;
+	pixel_x = -23;
+	req_one_access = list(19,28)
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aZD" = (
+/obj/structure/machinery/chem_dispenser/research,
+/obj/item/reagent_container/glass/bucket/janibucket,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aZE" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aZF" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/fancy/vials/empty,
+/obj/item/storage/fancy/vials/empty,
+/obj/item/storage/fancy/vials/empty,
+/obj/item/storage/fancy/vials/empty,
+/obj/item/storage/fancy/vials/empty,
+/obj/item/storage/fancy/vials/empty,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aZG" = (
+/obj/structure/surface/rack,
+/obj/item/storage/box/pillbottles{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/storage/box/pillbottles{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/storage/box/pillbottles,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"aZH" = (
+/obj/structure/machinery/door/airlock/almayer/research/glass/reinforced{
+	locked = 1;
+	name = "\improper Containment Cell 1";
+	unacidable = 1;
+	id = "BG Research Cell 1"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Cell 1";
+	name = "\improper Research Cell Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/upper/rooms/medical/containment)
+"aZI" = (
+/obj/structure/barricade/handrail/medical{
+	dir = 4
+	},
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/blackgold/upper/rooms/medical/containment)
+"aZJ" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/upper/rooms/medical/containment)
+"aZK" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/turf/open/floor/almayer/plating_stripedcorner/east,
+/area/blackgold/upper/rooms/medical/containment)
 "aZL" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "aZM" = (
 /turf/open/floor/almayer/cargo_arrow,
 /area/blackgold/upper/rooms/evacuation)
+"aZN" = (
+/obj/structure/machinery/door_control{
+	id = "BG Research Maintenance";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = 22;
+	throw_range = 15;
+	pixel_x = 23;
+	req_one_access = list(19,28)
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/medical)
+"aZO" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Research Cell 1 Lockdown";
+	name = "\improper Research Cell Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	dir = 1;
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"aZP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
+/turf/open/floor/almayer/sterile_green_corner/north,
+/area/blackgold/upper/rooms/medical/containment)
+"aZQ" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/upper/rooms/medical/containment)
+"aZR" = (
+/obj/structure/barricade/handrail/medical{
+	dir = 4
+	},
+/turf/open/floor/almayer/sterile_green_corner,
+/area/blackgold/upper/rooms/medical/containment)
+"aZS" = (
+/obj/structure/platform/metal/ship/west,
+/turf/open/floor/almayer/plating_striped/west,
+/area/blackgold/upper/rooms/medical/containment)
+"aZT" = (
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/upper/rooms/medical/containment)
+"aZU" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/upper/rooms/medical/containment)
+"aZV" = (
+/obj/structure/foamed_metal/iron,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/aft)
+"aZW" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1;
+	req_one_access = list(8,19)
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Research Maintenance";
+	name = "\improper Maintenance Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/biohazard/white,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/medical)
+"aZX" = (
+/obj/structure/surface/rack,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/computer/storage)
+"aZY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/flasher{
+	alpha = 1;
+	id = "BG Research Cell 1";
+	layer = 2.1;
+	name = "Mounted Flash";
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/blackgold/upper/rooms/medical/containment)
+"aZZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/spot/blue/containment{
+	dir = 1;
+	pixel_x = -16
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/blackgold/upper/rooms/medical/containment)
+"baa" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_display/research_cell{
+	has_wall_divider = 1;
+	id = "BG Research Cell 1";
+	layer = 3.2;
+	name = "Cell 2 Control";
+	pixel_y = 2;
+	pixel_x = 5
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Research Cell 1 Lockdown";
+	name = "Containment Lockdown";
+	pixel_x = -9;
+	pixel_y = 5;
+	req_one_access_txt = "19;28"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/medical/containment)
+"bab" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/xeno_tag_case/full{
+	pixel_x = 2
+	},
+/obj/item/device/camera{
+	pixel_x = -7;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/medical/containment)
+"bac" = (
+/obj/structure/reagent_dispensers/fueltank/custom,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/medical/containment)
+"bad" = (
+/obj/structure/barricade/handrail/medical{
+	dir = 4
+	},
+/obj/structure/surface/rack{
+	pixel_x = -1
+	},
+/obj/item/device/reagent_scanner/adv,
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/medical/containment)
+"bae" = (
+/obj/structure/machinery/iv_drip,
+/obj/structure/platform/metal/ship/west,
+/turf/open/floor/almayer/plating_stripedcorner/north,
+/area/blackgold/upper/rooms/medical/containment)
+"baf" = (
+/obj/structure/machinery/optable,
+/turf/open/floor/almayer/plating_striped/north,
+/area/blackgold/upper/rooms/medical/containment)
+"bag" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/closet/secure_closet/surgical{
+	pixel_y = 28
+	},
+/obj/item/reagent_container/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner"
+	},
+/turf/open/floor/almayer/plating_stripedcorner/south,
+/area/blackgold/upper/rooms/medical/containment)
+"bah" = (
+/turf/closed/wall/almayer/white/reinforced,
+/area/blackgold/upper/maint/star/aft)
+"bai" = (
+/obj/structure/machinery/door_control{
+	id = "BG Research Maintenance";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = -21;
+	throw_range = 15;
+	pixel_x = 23;
+	req_one_access = list(19,28)
+	},
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/aft)
+"baj" = (
+/obj/structure/surface/rack,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/computer/storage)
+"bak" = (
+/turf/closed/wall/almayer/research/containment/wall/north{
+	unacidable = 1
+	},
+/area/blackgold/upper/rooms/medical/containment)
+"bal" = (
+/obj/structure/machinery/door_control{
+	id = "BG Hangar Tanker Maintenance";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = -22;
+	req_one_access = list(19,21);
+	pixel_x = -6
+	},
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/mid)
+"bam" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/cic/conference)
+"ban" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Maintenance Shutters";
+	id = "BG Intel Maintenance"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/computer/storage)
+"bao" = (
+/obj/structure/machinery/door_control{
+	id = "BG Intel Maintenance";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = -21;
+	throw_range = 15;
+	pixel_x = 23;
+	req_one_access = list(19,28)
+	},
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/mid)
 "bas" = (
 /obj/structure/bed/chair/comfy/alpha{
 	dir = 4
@@ -12967,6 +15413,11 @@
 /area/blackgold/upper/stairs/star/mid)
 "bdH" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown";
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/brig/lobby)
 "bfR" = (
@@ -13095,7 +15546,7 @@
 "bpO" = (
 /obj/structure/closet/secure_closet{
 	name = "secure evidence locker";
-	req_access_txt = "3"
+	req_access = list(3)
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/evidence_storage)
@@ -13345,7 +15796,10 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "bKw" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Cargo Storage";
+	name = "\improper Storage Shutters"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/req)
 "bKx" = (
@@ -13369,7 +15823,8 @@
 /area/blackgold/upper/rooms/captain_mess)
 "bMm" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	name = "\improper Company Commander's Quarters"
+	name = "\improper Company Commander's Quarters";
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
@@ -13721,9 +16176,7 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "cpF" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
+/obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/plating,
 /area/blackgold/underdeck)
 "cqw" = (
@@ -13791,11 +16244,19 @@
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -5
 	},
+/obj/structure/machinery/door_control{
+	id = "BG CC Alpha";
+	name = "Privacy Shutters";
+	pixel_x = 7;
+	pixel_y = -3;
+	req_access = list(19)
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
 "cyb" = (
 /obj/structure/machinery/door/airlock/almayer/security/reinforced{
-	name = "\improper Chief MP's Bedroom"
+	name = "\improper Chief MP's Bedroom";
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/chief)
@@ -13995,7 +16456,10 @@
 /area/blackgold/upper/rooms/companycommand/bravo)
 "cOz" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CC Bravo";
+	name = "\improper Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
 "cOS" = (
@@ -14023,12 +16487,19 @@
 "cRX" = (
 /obj/structure/machinery/computer/shuttle/cargo_lift{
 	pixel_y = 9;
-	pixel_x = -23
+	pixel_x = -23;
+	req_one_access = list(19,21)
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
 "cSa" = (
-/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
+/obj/structure/machinery/door/poddoor/hybrisa/shutters{
+	id = "BG Brig Cell 4";
+	name = "\improper Cell 4 Shutters";
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
@@ -14469,7 +16940,10 @@
 /area/blackgold/upper/rooms/captain_mess)
 "dIg" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CC Alpha";
+	name = "\improper Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
 "dIC" = (
@@ -14553,6 +17027,18 @@
 /area/blackgold/middle/rooms/aientrance)
 "dPn" = (
 /obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/door_control{
+	id = "BG AI Exit";
+	name = "Exterior Shutter Control";
+	pixel_x = 9;
+	req_one_access = list(90,91,92)
+	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Lobby";
+	name = "Interior Shutter Control";
+	pixel_x = -2;
+	req_one_access = list(90,91,92)
+	},
 /turf/open/floor/almayer/aicore/no_build/ai_silver,
 /area/blackgold/middle/rooms/aientrance)
 "dPq" = (
@@ -14627,10 +17113,10 @@
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/maint/port/mid)
 "ebO" = (
-/obj/structure/machinery/vending/snack{
-	density = 0;
+/obj/structure/machinery/vending/snack/packaged{
 	pixel_y = 16;
-	pixel_x = 10
+	pixel_x = 10;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/lower/rooms/brig/cells)
@@ -14935,7 +17421,12 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/underdeck/req)
 "eyd" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Exit";
+	name = "\improper AI Core Shutters";
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -14950,6 +17441,10 @@
 "ezY" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/captain_mess)
@@ -15194,6 +17689,13 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -5
+	},
+/obj/structure/machinery/door_control{
+	id = "BG CC Delta";
+	name = "Privacy Shutters";
+	pixel_x = 10;
+	pixel_y = -3;
+	req_access = list(19)
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
@@ -15720,18 +18222,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
-"fMy" = (
-/obj/structure/machinery/light/spot{
-	dir = 4
-	},
-/turf/open/floor/almayer/green/east,
-/area/blackgold/lower/rooms/brig/cells)
 "fMH" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES StairsLower";
-	name = "\improper ARES Core Shutters"
-	},
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/mainframe,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Mainframe";
+	name = "\improper AI Core Shutters"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/aicore)
 "fMR" = (
@@ -15790,6 +18287,7 @@
 	dir = 4;
 	icon_state = "p_stair_full"
 	},
+/obj/structure/platform/metal/ship,
 /turf/open/space/basic,
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/computer/storage)
@@ -15859,8 +18357,7 @@
 "fUE" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	name = "\improper Commanding Officer's Quarters";
-	req_access = null;
-	req_access_txt = "31";
+	req_access = list(31);
 	dir = 2
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -15870,6 +18367,9 @@
 /area/blackgold/upper/rooms/brig/cryo)
 "fWQ" = (
 /obj/structure/window/framed/almayer/aicore/hull,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/aicore)
 "fXr" = (
@@ -15920,8 +18420,7 @@
 	dir = 1;
 	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office";
-	req_access = null;
-	req_access_txt = "31"
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
@@ -15965,6 +18464,11 @@
 /area/blackgold/upper/rooms/evacuation)
 "geR" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/hallways/mid/fore)
 "gfS" = (
@@ -15995,8 +18499,8 @@
 "gjr" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
-	id = "Hangar Lockdown";
-	name = "\improper Hangar Lockdown Blast Door"
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/hallways/mid/mid)
@@ -16113,8 +18617,7 @@
 	dir = 1;
 	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office";
-	req_access = null;
-	req_access_txt = "31"
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
@@ -16507,7 +19010,12 @@
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "hcB" = (
 /obj/structure/platform_decoration/metal/almayer/north,
-/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Exit";
+	name = "\improper AI Core Shutters";
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor6,
@@ -16587,7 +19095,10 @@
 /area/blackgold/upper/rooms/cic)
 "hip" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CMP";
+	name = "\improper Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/brig/chief)
 "hiJ" = (
@@ -16597,9 +19108,7 @@
 /turf/open/floor/almayer/aicore/no_build/ai_silver,
 /area/blackgold/lower/rooms/aicore)
 "hkz" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
+/obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/plating,
 /area/blackgold/underdeck/vehicle)
 "hlj" = (
@@ -16687,6 +19196,11 @@
 	req_one_access = list(7,19);
 	req_access = list();
 	no_panel = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/orbital)
@@ -16861,6 +19375,8 @@
 "hFs" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CC Charlie";
+	name = "\improper Privacy Shutters";
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -16938,7 +19454,8 @@
 /obj/structure/platform/metal/ship/corner/west,
 /obj/structure/machinery/computer/shuttle/cargo_lift{
 	pixel_y = 9;
-	pixel_x = -23
+	pixel_x = -23;
+	req_one_access = list(19,21)
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
@@ -16976,12 +19493,14 @@
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/upper/rooms/telecomms)
 "hQz" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
-	closeOtherId = "brigcells";
-	dir = 1;
-	name = "\improper Brig Lobby"
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/brig_cell/cell_1{
+	id = "BG Brig Cell 1";
+	pixel_y = -29
+	},
+/turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/cells)
 "hQO" = (
 /obj/structure/prop/almayer/cannon_cables,
@@ -17020,10 +19539,7 @@
 /area/blackgold/lower/rooms/brig/execution)
 "hVI" = (
 /obj/structure/machinery/door/airlock/almayer/marine/requisitions{
-	access_modified = 1;
-	name = "\improper Requisition's Office";
-	req_one_access = null;
-	req_one_access_txt = "1;26"
+	name = "\improper Requisition's Office"
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/req)
@@ -17312,15 +19828,6 @@
 /turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/req)
-"iwt" = (
-/obj/structure/stairs,
-/obj/structure/platform/metal/ship/west,
-/obj/structure/machinery/light/small/blue{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/blackgold/lower/rooms/req)
 "iwv" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/hybrisa/carpet/carpetbeige,
@@ -17410,7 +19917,10 @@
 /area/space)
 "iBn" = (
 /obj/structure/window/framed/almayer/hull,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CO";
+	name = "\improper Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/commandbunks)
 "iBv" = (
@@ -17474,7 +19984,12 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/captain_mess)
 "iHj" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Exit";
+	name = "\improper AI Core Shutters";
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor6,
@@ -17524,6 +20039,11 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced{
 	name = "\improper Combat Information Center";
 	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/cic)
@@ -17641,7 +20161,6 @@
 /area/blackgold/upper/rooms/evacuation)
 "jbg" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass/reinforced{
-	closeOtherId = "brigwarden";
 	name = "\improper Warden's Office"
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -17726,7 +20245,8 @@
 "jiS" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	name = "\improper Company Commander's Quarters"
+	name = "\improper Company Commander's Quarters";
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
@@ -17889,6 +20409,10 @@
 "jtV" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/evacuation)
@@ -18088,10 +20612,6 @@
 "jRZ" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/lower/rooms/brig/execution)
-"jTS" = (
-/obj/structure/machinery/power/terminal,
-/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
-/area/blackgold/underdeck)
 "jUN" = (
 /turf/open/floor/almayer/red/southeast,
 /area/blackgold/upper/rooms/evacuation)
@@ -18201,10 +20721,11 @@
 /area/blackgold/underdeck/req)
 "kcN" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES StairsLower";
-	name = "\improper ARES Core Shutters"
+	id = "BG AI Mainframe";
+	name = "\improper AI Core Shutters"
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/effect/step_trigger/ares_alert/mainframe,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "kdE" = (
@@ -18242,8 +20763,7 @@
 	dir = 8
 	},
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 12
+	dir = 1
 	},
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/commandbunks/synth)
@@ -18445,12 +20965,19 @@
 	icon_state = "delivery_outlet";
 	name = "returns outlet";
 	pixel_x = -7;
-	pixel_y = 28;
+	pixel_y = 26;
 	range = 0
 	},
 /obj/structure/stairs{
 	dir = 8;
 	icon_state = "ramptop"
+	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Lobby";
+	name = "AI Core Shutter Control";
+	pixel_x = 9;
+	pixel_y = 22;
+	req_one_access = list(90,91,92)
 	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/middle/rooms/aientrance)
@@ -18508,8 +21035,7 @@
 /area/blackgold/upper/rooms/companycommand/charlie)
 "kHZ" = (
 /obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 1
+	dir = 4
 	},
 /turf/open/floor/almayer/silver/east,
 /area/blackgold/upper/rooms/computer)
@@ -18529,6 +21055,11 @@
 "kIO" = (
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
 	name = "\improper Secure Maintenance Hatch"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/mid)
@@ -18645,7 +21176,8 @@
 /area/blackgold/middle/rooms/briefing)
 "kRV" = (
 /obj/structure/closet/secure_closet{
-	name = "\improper Execution Firearms"
+	name = "\improper Execution Firearms";
+	req_access = list(4)
 	},
 /obj/item/weapon/gun/rifle/m4ra,
 /obj/item/weapon/gun/rifle/m4ra,
@@ -18665,7 +21197,8 @@
 /area/blackgold/upper/rooms/brig/processing)
 "kTZ" = (
 /obj/structure/machinery/door/airlock/almayer/security/reinforced{
-	name = "\improper Chief MP's Office"
+	name = "\improper Chief MP's Office";
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/chief)
@@ -18700,8 +21233,9 @@
 	desc = "A pneumatic delivery unit.";
 	icon_state = "delivery_engi";
 	name = "Security Vault";
-	pixel_x = -24;
-	pixel_y = 28
+	pixel_x = -39;
+	pixel_y = 38;
+	layer = 3.1
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -18755,10 +21289,15 @@
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/lower/rooms/brig/cells)
 "kYw" = (
+/obj/structure/platform/metal/almayer,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Lobby";
+	name = "\improper AI Core Shutters";
 	dir = 4
 	},
-/obj/structure/platform/metal/almayer,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	dir = 4
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/aientrance)
 "kZH" = (
@@ -18800,9 +21339,7 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "lcF" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
-	},
+/obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/plating,
 /area/blackgold/underdeck/req)
 "lfJ" = (
@@ -18901,12 +21438,19 @@
 	pixel_x = -5
 	},
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
-	pixel_x = 5;
-	pixel_y = -2
+	pixel_x = 6;
+	pixel_y = 9
 	},
 /obj/item/tool/stamp/hos{
 	pixel_y = -1;
 	pixel_x = -5
+	},
+/obj/structure/machinery/door_control{
+	id = "BG CMP";
+	name = "Privacy Shutters";
+	pixel_x = 7;
+	pixel_y = -3;
+	req_access = list(19)
 	},
 /turf/open/floor/hybrisa/carpet/carpetreddeco,
 /area/blackgold/upper/rooms/brig/chief)
@@ -19138,7 +21682,9 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/synth)
 "lFS" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Brig Armory"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/brig/armory)
 "lGr" = (
@@ -19269,7 +21815,7 @@
 	name = "\improper Telecommunications Proper"
 	},
 /obj/structure/machinery/door/poddoor/almayer{
-	id = "tcomms_inner";
+	id = "BG Comms Inner";
 	name = "\improper Telecommunications Blast Door"
 	},
 /obj/effect/step_trigger/ares_alert/comms,
@@ -19462,7 +22008,7 @@
 /area/blackgold/middle/rooms/squad/prep)
 "min" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
-	closeOtherId = "briglobby";
+	closeOtherId = "BG Brig Lobby";
 	dir = 1;
 	name = "\improper Brig Lobby"
 	},
@@ -19531,12 +22077,12 @@
 /area/blackgold/underdeck/req)
 "moS" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer,
+/obj/structure/window/framed/almayer/hull/hijack_bustable,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
-	id = "ROlobby2";
-	name = "\improper RO Line 2"
+	id = "BG Cargo Line";
+	name = "\improper Requisitions Shutter"
 	},
-/obj/structure/window/framed/almayer/hull/hijack_bustable,
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/req)
 "mpd" = (
@@ -19851,6 +22397,11 @@
 	name = "\improper Brig Lobby";
 	req_access = null
 	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown";
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/lobby)
 "mQz" = (
@@ -19970,8 +22521,7 @@
 	dir = 8
 	},
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 8
+	dir = 1
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/cryo)
@@ -20008,6 +22558,10 @@
 "nav" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/commandbunks/staff)
@@ -20048,24 +22602,20 @@
 "ndG" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/door_control{
-	pixel_y = -2;
-	pixel_x = 3
-	},
-/obj/structure/machinery/door_control{
+	pixel_x = 2;
 	pixel_y = 10;
-	pixel_x = 3
+	name = "Exit Control";
+	normaldoorcontrol = 1;
+	id = "BG Brig Cell Exit";
+	req_access = list(3)
 	},
 /obj/structure/machinery/door_control{
-	pixel_y = 4;
-	pixel_x = 3
-	},
-/obj/structure/machinery/door_control{
-	pixel_y = -2;
-	pixel_x = -5
-	},
-/obj/structure/machinery/door_control{
-	pixel_y = 4;
-	pixel_x = -5
+	pixel_x = -8;
+	pixel_y = 10;
+	name = "Entrance Control";
+	normaldoorcontrol = 1;
+	id = "BG Brig Cell Entrance";
+	req_access = list(3)
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/warden)
@@ -20083,6 +22633,10 @@
 	req_one_access = list(7,19);
 	req_access = list();
 	no_panel = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/orbital)
@@ -20157,10 +22711,6 @@
 	},
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
-"nmU" = (
-/obj/structure/largecrate/random/case/double,
-/turf/open/floor/almayer/cargo,
-/area/blackgold/lower/rooms/req)
 "nnQ" = (
 /turf/open/floor/almayer/flooredge/southeast,
 /area/blackgold/upper/rooms/brig/processing)
@@ -20318,6 +22868,13 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -5
+	},
+/obj/structure/machinery/door_control{
+	id = "BG CC Charlie";
+	name = "Privacy Shutters";
+	pixel_x = 7;
+	pixel_y = -3;
+	req_access = list(19)
 	},
 /turf/open/floor/hybrisa/carpet/carpet_deco_colorable{
 	color = "#C55AD6"
@@ -20519,11 +23076,11 @@
 /area/blackgold/lower/rooms/aicore)
 "nNC" = (
 /obj/structure/window/framed/almayer/hull,
+/obj/effect/step_trigger/ares_alert/comms,
 /obj/structure/machinery/door/poddoor/almayer{
-	id = "tcomms_inner";
+	id = "BG Comms Inner";
 	name = "\improper Telecommunications Blast Door"
 	},
-/obj/effect/step_trigger/ares_alert/comms,
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/telecomms)
 "nNM" = (
@@ -20631,6 +23188,11 @@
 "nSG" = (
 /obj/structure/platform_decoration/metal/almayer/east,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Lobby";
+	name = "\improper AI Core Shutters";
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor6,
@@ -20953,6 +23515,13 @@
 	pixel_x = -7;
 	pixel_y = -1
 	},
+/obj/structure/machinery/door_control{
+	id = "BG XO";
+	name = "Privacy Shutters";
+	pixel_x = 7;
+	pixel_y = -3;
+	req_access = list(19)
+	},
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "oui" = (
@@ -21245,6 +23814,13 @@
 	pixel_y = 16;
 	pixel_x = -7
 	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Outer";
+	name = "AI Core Shutter Control";
+	pixel_x = 9;
+	pixel_y = 22;
+	req_one_access = list(90,91,92)
+	},
 /turf/open/floor/almayer/aicore/no_build/ai_silver{
 	dir = 1
 	},
@@ -21495,10 +24071,8 @@
 /area/blackgold/upper/rooms/captain_mess)
 "pnP" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	id_tag = "CO-Office";
 	name = "\improper Commanding Officer's Office";
-	req_access = null;
-	req_access_txt = "31"
+	req_access = list(31)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks)
@@ -21568,8 +24142,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	id_tag = "XO-Office";
 	name = "\improper Executive Officer's Office";
-	req_access = null;
-	req_access_txt = "1";
+	req_access = list(1);
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -21610,6 +24183,10 @@
 "pwy" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/hallways/mid/fore)
@@ -21662,7 +24239,6 @@
 /area/blackgold/lower/rooms/brig/cells)
 "pCe" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -21685,7 +24261,8 @@
 /area/blackgold/upper/rooms/commandbunks/synth)
 "pDI" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
-	name = "\improper Requisitions Bay"
+	name = "\improper Requisitions Bay";
+	req_one_access = s
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/req)
@@ -21702,7 +24279,8 @@
 "pGK" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	name = "\improper Company Commander's Quarters"
+	name = "\improper Company Commander's Quarters";
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
@@ -21848,7 +24426,10 @@
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
 "pVt" = (
-/obj/structure/machinery/door/poddoor/hybrisa/open_shutters,
+/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
+	name = "\improper Cell 1 Shutters";
+	id = "BG Brig Cell 3"
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/cells)
 "pVH" = (
@@ -21885,12 +24466,6 @@
 /obj/structure/target/alien,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/lower/rooms/range)
-"pYB" = (
-/obj/structure/machinery/power/smes{
-	charge = 200000
-	},
-/turf/open/floor/almayer/test_floor6,
-/area/blackgold/underdeck)
 "pZa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -22100,7 +24675,6 @@
 /turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig/stairs)
 "qrg" = (
-/obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/lower/rooms/brig/cells)
 "qrz" = (
@@ -22134,7 +24708,10 @@
 /area/blackgold/upper/rooms/brig/cryo)
 "qsg" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CC Delta";
+	name = "\improper Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
 "qsn" = (
@@ -22261,7 +24838,7 @@
 "qBL" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/door_control{
-	id = "tcomms_inner";
+	id = "BG Comms Inner";
 	name = "Inner Telecommunications Controls";
 	pixel_x = -3;
 	pixel_y = 8;
@@ -22269,7 +24846,7 @@
 	req_one_access_txt = "7;19"
 	},
 /obj/structure/machinery/door_control{
-	id = "tcomms_outer";
+	id = "BG Comms Outer";
 	name = "Outer Telecommunications Controls";
 	pixel_x = -3;
 	req_one_access_txt = "7;19";
@@ -22284,9 +24861,17 @@
 /area/blackgold/upper/rooms/telecomms)
 "qBP" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
+	req_access = list(3);
+	req_one_access = null
 	},
-/obj/structure/machinery/door/poddoor/almayer/closed{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Brig Cell Maintenance";
+	name = "\improper Maintenance Shutter"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown";
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -22306,7 +24891,9 @@
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/maint/port/fore)
 "qDB" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/blastdoor,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/blastdoor{
+	req_access = list()
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/shuttle/bow)
 "qEG" = (
@@ -22317,11 +24904,11 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/prop/tableflag/uscm2{
 	pixel_x = 5;
-	pixel_y = 8
+	pixel_y = -2
 	},
 /obj/item/prop/tableflag/uscm{
 	pixel_x = -5;
-	pixel_y = 8
+	pixel_y = -2
 	},
 /turf/open/floor/hybrisa/carpet/carpet_deco_colorable{
 	color = "#FEC165"
@@ -22390,14 +24977,6 @@
 	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
-"qKg" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 1
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer,
-/turf/open/floor/almayer/test_floor6,
-/area/blackgold/middle/rooms/req)
 "qKi" = (
 /obj/structure/machinery/vending/cigarette/koorlander{
 	pixel_y = 16;
@@ -22501,8 +25080,7 @@
 /area/blackgold/upper/rooms/cic)
 "qRv" = (
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 8
+	dir = 1
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/cryo)
@@ -22595,10 +25173,6 @@
 	},
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/upper/rooms/computer)
-"rbR" = (
-/obj/structure/machinery/light/spot,
-/turf/open/floor/almayer/green/southwest,
-/area/blackgold/middle/rooms/req)
 "rbX" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = null;
@@ -22615,6 +25189,7 @@
 /area/blackgold/upper/rooms/computer)
 "rdz" = (
 /obj/structure/window/reinforced/ultra,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
 "rfp" = (
@@ -22724,6 +25299,13 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -5
+	},
+/obj/structure/machinery/door_control{
+	id = "BG CC Bravo";
+	name = "Privacy Shutters";
+	pixel_x = 10;
+	pixel_y = 11;
+	req_access = list(19)
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
@@ -22919,7 +25501,7 @@
 	pixel_x = -7
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	id = "IO Lab Shutters";
+	id = "BG Intel";
 	name = "\improper Privacy Shutters";
 	dir = 4
 	},
@@ -22999,6 +25581,11 @@
 	req_one_access = list(7,19);
 	no_panel = 1
 	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/orbital)
 "rOf" = (
@@ -23014,12 +25601,17 @@
 	},
 /area/blackgold/upper/rooms/companycommand/bravo)
 "rPV" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES StairsLower";
-	name = "\improper ARES Core Shutters"
-	},
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/structure/platform_decoration/metal/almayer,
+/obj/effect/step_trigger/ares_alert/public{
+	alert_id = "AresStairs";
+	alert_message = "Caution: Movement detected in ARES Core.";
+	cooldown_duration = 1200
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG AI Stairs";
+	name = "\improper AI Core Shutters"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "rQf" = (
@@ -23041,12 +25633,18 @@
 /obj/structure/machinery/door/airlock/almayer/security/glass{
 	name = "Evidence Room"
 	},
-/turf/open/space/basic,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/brig/cells)
 "rSE" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Hangar Workshop";
+	name = "\improper Vehicle Workshop Shutters";
 	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/workshop)
@@ -23101,17 +25699,17 @@
 "sbV" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/line_nexter_control{
-	id = "line2";
+	id = "BG Cargo Line Skip";
 	pixel_x = -7;
 	pixel_y = 10;
-	req_one_access_txt = "1;21"
+	req_one_access = list(19,21)
 	},
 /obj/structure/machinery/door_control{
-	id = "ROlobby2";
-	name = "RO Line 2 Shutters";
+	id = "BG Cargo Line";
+	name = "Line Shutters Control";
 	pixel_x = -7;
 	pixel_y = 2;
-	req_one_access_txt = "1;21"
+	req_one_access = list(19,21)
 	},
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/req)
@@ -23123,7 +25721,10 @@
 /turf/open/floor/plating/almayer/no_build,
 /area/almayer/hallways/lower/port_midship_hallway)
 "scI" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CIC Armory";
+	name = "\improper Armory Shutters"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/cic)
 "sdm" = (
@@ -23264,8 +25865,12 @@
 /area/blackgold/upper/rooms/cic)
 "sqr" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced{
-	closeOtherId = "briglobby";
+	closeOtherId = "BG Brig Lobby";
 	name = "\improper Brig Lobby"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/lobby)
@@ -23341,7 +25946,10 @@
 /area/blackgold/lower/rooms/aicore)
 "suU" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG XO";
+	name = "\improper Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "svI" = (
@@ -23363,7 +25971,7 @@
 /obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
 	dir = 4;
 	name = "\improper Cargo Lock";
-	id = "blackgold underdeck vehicle"
+	id = "BG Under Vehicle"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/underdeck/vehicle)
@@ -23443,8 +26051,7 @@
 /area/blackgold/upper/rooms/cic/conference)
 "sCu" = (
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 8
+	dir = 1
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/cryo)
@@ -23476,12 +26083,20 @@
 /area/blackgold/lower/rooms/req)
 "sGd" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null
+	req_access = list(3);
+	req_one_access = null
 	},
-/obj/structure/machinery/door/poddoor/almayer/closed{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG Brig Cell Maintenance";
+	name = "\improper Maintenance Shutter"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown";
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/brig/cells)
 "sGt" = (
 /obj/structure/bed/chair/office/dark{
@@ -23493,6 +26108,13 @@
 /obj/structure/machinery/computer/skills{
 	pixel_y = 16;
 	pixel_x = -8
+	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Vault";
+	name = "AI Core Shutter Control";
+	pixel_x = 9;
+	pixel_y = 22;
+	req_one_access = list(90,91,92)
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_silver{
 	dir = 1
@@ -23569,6 +26191,8 @@
 "sLs" = (
 /obj/structure/window/framed/almayer/hull,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CO";
+	name = "\improper Privacy Shutters";
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -23619,6 +26243,8 @@
 "sRq" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CC Alpha";
+	name = "\improper Privacy Shutters";
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -23778,11 +26404,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/hallways/port/fore)
 "tiT" = (
+/obj/effect/step_trigger/ares_alert/comms,
 /obj/structure/machinery/door/poddoor/almayer{
-	id = "tcomms_inner";
+	id = "BG Comms Inner";
 	name = "\improper Telecommunications Blast Door"
 	},
-/obj/effect/step_trigger/ares_alert/comms,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/telecomms)
 "tiX" = (
@@ -23946,7 +26572,6 @@
 /area/blackgold/upper/rooms/evacuation)
 "tGG" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -24064,8 +26689,10 @@
 /area/blackgold/upper/rooms/commandbunks)
 "tPc" = (
 /obj/structure/machinery/door/window/ultra{
-	dir = 2
+	dir = 2;
+	req_access = list(91)
 	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
 "tPg" = (
@@ -24100,7 +26727,7 @@
 /area/blackgold/underdeck)
 "tSt" = (
 /obj/structure/machinery/line_nexter{
-	id = "line2";
+	id = "BG Cargo Line Skip";
 	pixel_x = -3
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
@@ -24353,6 +26980,14 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/surface/rack,
+/obj/structure/ship_ammo/heavygun{
+	pixel_y = 2;
+	layer = 2.99
+	},
+/obj/structure/ship_ammo/heavygun{
+	pixel_y = 11
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
 "utf" = (
@@ -24394,12 +27029,6 @@
 /obj/structure/closet/bombclosetsecurity,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/armory)
-"uvX" = (
-/obj/structure/machinery/power/terminal{
-	dir = 1
-	},
-/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
-/area/blackgold/underdeck)
 "uwt" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8;
@@ -24476,7 +27105,8 @@
 /area/blackgold/upper/rooms/computer/storage)
 "uBp" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	name = "\improper Company Commander's Quarters"
+	name = "\improper Company Commander's Quarters";
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
@@ -24609,7 +27239,7 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
 	name = "\improper Telecommunications Reception";
-	id = "tcomms_outer"
+	id = "BG Comms Outer"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/telecomms)
@@ -24677,6 +27307,8 @@
 /area/blackgold/lower/rooms/req)
 "uOB" = (
 /obj/structure/platform/metal/ship/east,
+/obj/effect/landmark/start/nurse,
+/obj/effect/landmark/late_join/nurse,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical)
 "uOL" = (
@@ -24698,17 +27330,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/hangar)
-"uSd" = (
-/obj/structure/ship_ammo/heavygun{
-	pixel_y = 2;
-	layer = 2.99
-	},
-/obj/structure/surface/rack,
-/obj/structure/ship_ammo/heavygun{
-	pixel_y = 11
-	},
-/turf/open/floor/almayer/blue/northwest,
-/area/blackgold/middle/rooms/workshop)
 "uSo" = (
 /turf/open/floor/plating/bare_catwalk,
 /area/supply/dock/uscm)
@@ -24858,11 +27479,9 @@
 /area/blackgold/powered)
 "vfZ" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	access_modified = 1;
 	dir = 1;
 	name = "\improper XO's Quarters";
-	req_access = null;
-	req_access_txt = "1"
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/xo)
@@ -24928,12 +27547,20 @@
 /area/blackgold/upper/rooms/telecomms)
 "vnJ" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG CC Charlie";
+	name = "\improper Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "vog" = (
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
 	name = "\improper Secure Maintenance Hatch"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/mid)
@@ -24949,7 +27576,7 @@
 /obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
 	dir = 4;
 	name = "\improper Cargo Lock";
-	id = "blackgold underdeck cargo"
+	id = "BG Under Cargo"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/underdeck/req)
@@ -25014,6 +27641,9 @@
 "vss" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine,
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/lower/rooms/req)
 "vsy" = (
@@ -25033,7 +27663,10 @@
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
 "vvm" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Cargo Storage";
+	name = "\improper Storage Shutters"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/req)
 "vvv" = (
@@ -25227,12 +27860,11 @@
 /turf/open/floor/almayer/greencorner/west,
 /area/blackgold/lower/rooms/req)
 "vPX" = (
-/obj/structure/barricade/handrail{
-	dir = 4;
-	pixel_x = 1
-	},
 /obj/structure/machinery/vending/coffee{
 	pixel_x = -2
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
 	},
 /turf/open/floor/almayer/silver/southeast,
 /area/blackgold/upper/rooms/computer)
@@ -25461,6 +28093,8 @@
 /area/blackgold/lower/rooms/aicore)
 "wni" = (
 /obj/structure/platform/metal/ship/corner/west,
+/obj/effect/landmark/start/doctor,
+/obj/effect/landmark/late_join/doctor,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical)
 "wnP" = (
@@ -25546,8 +28180,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office";
-	req_access = null;
-	req_access_txt = "31"
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
@@ -25565,7 +28198,7 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
 	name = "\improper Telecommunications Reception";
-	id = "tcomms_outer"
+	id = "BG Comms Outer"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/telecomms)
@@ -25596,9 +28229,8 @@
 /obj/structure/stairs/perspective,
 /obj/structure/machinery/door_control{
 	pixel_x = 24;
-	id = "blackgold underdeck vehicle";
-	req_one_access = list(91,92,125);
-	req_access = list();
+	id = "BG Under Vehicle";
+	req_one_access = list(1,19);
 	name = "Vehicle Lock"
 	},
 /turf/open/floor/plating/almayer/no_build,
@@ -25719,10 +28351,9 @@
 /area/blackgold/underdeck/req)
 "wMW" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = null;
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/engineering)
 "wPK" = (
 /obj/structure/surface/table/almayer,
@@ -25744,7 +28375,15 @@
 	},
 /obj/structure/machinery/computer/working_joe{
 	layer = 3.3;
-	pixel_y = 16
+	pixel_y = 16;
+	pixel_x = -6
+	},
+/obj/structure/machinery/door_control{
+	id = "BG AI Exit";
+	name = "AI Core Shutter Control";
+	pixel_x = 9;
+	pixel_y = 22;
+	req_one_access = list(90,91,92)
 	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/middle/rooms/aientrance)
@@ -25783,8 +28422,7 @@
 	dir = 4
 	},
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 12
+	dir = 1
 	},
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/commandbunks/synth)
@@ -25860,6 +28498,11 @@
 	name = "\improper Secure Maintenance Hatch";
 	no_panel = 1
 	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/orbital)
 "wXn" = (
@@ -25924,7 +28567,7 @@
 "xbr" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 16;
-	pixel_x = -8;
+	pixel_x = 8;
 	density = 0
 	},
 /turf/open/floor/almayer/silver/northeast,
@@ -25983,8 +28626,8 @@
 "xfH" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
-	id = "Hangar Lockdown";
-	name = "\improper Hangar Lockdown Blast Door"
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/hallways/mid/mid)
@@ -26100,12 +28743,12 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
 "xpR" = (
-/obj/structure/closet/secure_closet{
-	name = "secure evidence locker";
-	req_access_txt = "3"
-	},
 /obj/structure/machinery/light/spot/blue{
 	dir = 4
+	},
+/obj/structure/closet/secure_closet{
+	name = "secure evidence locker";
+	req_access = list(3)
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/evidence_storage)
@@ -26177,11 +28820,12 @@
 /area/blackgold/middle/rooms/briefing)
 "xwF" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES StairsLower";
-	name = "\improper ARES Core Shutters"
+	id = "BG AI Outer";
+	name = "\improper AI Core Shutters"
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
+/obj/effect/step_trigger/ares_alert/core,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "xwG" = (
@@ -26201,7 +28845,15 @@
 "xxB" = (
 /obj/structure/machinery/computer/working_joe{
 	dir = 8;
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 8
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = 23;
+	pixel_y = -8;
+	name = "\improper Maintenance Shutters Control";
+	id = "BG Brig Cell Maintenance";
+	req_access = list(3)
 	},
 /turf/open/floor/almayer/red/east,
 /area/blackgold/lower/rooms/brig/cells)
@@ -26210,11 +28862,16 @@
 /area/blackgold/upper/rooms/commandbunks/staff)
 "xyQ" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "ARES StairsLower";
-	name = "\improper ARES Core Shutters"
+	id = "BG AI Stairs";
+	name = "\improper AI Core Shutters"
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/structure/platform_decoration/metal/almayer/north,
+/obj/effect/step_trigger/ares_alert/public{
+	alert_id = "AresStairs";
+	alert_message = "Caution: Movement detected in ARES Core.";
+	cooldown_duration = 1200
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "xzn" = (
@@ -26520,6 +29177,10 @@
 /area/blackgold/upper/rooms/captain_mess)
 "ybQ" = (
 /obj/structure/platform/metal/ship/corner/east,
+/obj/structure/machinery/brig_cell/cell_5{
+	pixel_x = -32;
+	id = "BG Brig Cell 5"
+	},
 /turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/brig/cells)
 "ycH" = (
@@ -26563,9 +29224,8 @@
 "yfr" = (
 /obj/structure/machinery/door_control{
 	pixel_x = -24;
-	id = "blackgold underdeck cargo";
-	req_one_access = list(91,92,125);
-	req_access = list();
+	id = "BG Under Cargo";
+	req_one_access = list(1,19);
 	name = "Cargo Lock"
 	},
 /turf/open/floor/almayer/no_build/plate,
@@ -26595,7 +29255,7 @@
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/firedoor/border_only/almayer,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	id = "IO Lab Shutters";
+	id = "BG Intel";
 	name = "\improper Privacy Shutters";
 	dir = 4
 	},
@@ -37968,9 +40628,9 @@ obL
 obL
 obL
 obL
-mRf
-mWA
-lMw
+obL
+obL
+obL
 obL
 obL
 obL
@@ -38054,11 +40714,11 @@ obL
 obL
 obL
 obL
-pYB
-uvX
-pIF
-jTS
-pYB
+obL
+mRf
+mWA
+lMw
+obL
 obL
 obL
 obL
@@ -39272,7 +41932,7 @@ ewF
 xYI
 nFn
 nFn
-akc
+aQs
 akg
 voZ
 akg
@@ -50662,7 +53322,7 @@ afW
 afW
 afX
 afX
-afX
+aqe
 aqe
 aqe
 aqe
@@ -50682,7 +53342,7 @@ aqe
 aqe
 aqe
 aqe
-aeW
+aqe
 aeW
 aeW
 aeV
@@ -50749,10 +53409,10 @@ afW
 afW
 afW
 afW
-afW
 aqe
-aqk
-aqk
+aqf
+aqf
+aqf
 vDn
 cIu
 aqv
@@ -50766,10 +53426,10 @@ aqv
 aqr
 nOf
 sCu
-aqk
-aqk
+aqf
+aqf
+aqf
 aqe
-aeV
 aeV
 aeV
 aeV
@@ -50836,8 +53496,8 @@ afW
 afW
 afW
 afW
-afW
 aqe
+aqf
 uGd
 jXt
 tlq
@@ -50855,8 +53515,8 @@ igS
 qRv
 uGd
 jXt
+aqf
 aqe
-aeV
 aeV
 aeV
 aeV
@@ -50923,8 +53583,8 @@ afW
 afW
 afW
 afW
-afW
 aqe
+aqf
 pjs
 una
 tlq
@@ -50942,8 +53602,8 @@ igS
 qRv
 pjs
 una
+aqf
 aqe
-aeV
 aeV
 aeV
 aeV
@@ -51010,8 +53670,8 @@ afW
 afW
 afW
 afW
-afW
 aqe
+aqf
 pjs
 una
 rMI
@@ -51029,8 +53689,8 @@ ltn
 afQ
 pjs
 una
+aqf
 aqe
-aeV
 aeV
 aeV
 aeV
@@ -51087,7 +53747,7 @@ lrC
 lrC
 afU
 afX
-agU
+agN
 afX
 afX
 afX
@@ -51098,7 +53758,7 @@ afX
 afX
 afX
 aqe
-aqe
+aqf
 pjs
 arF
 ojO
@@ -51116,8 +53776,8 @@ eOn
 uGG
 aqo
 una
+aqf
 aqe
-aqe
 aeW
 aeW
 aeW
@@ -51127,7 +53787,7 @@ aeW
 aeW
 aeW
 aeW
-aeY
+aQz
 aeW
 aeT
 lrC
@@ -51534,8 +54194,8 @@ arQ
 arN
 aqe
 aqf
-aqk
-aqk
+aqf
+aqf
 vDn
 qPZ
 puF
@@ -51549,8 +54209,8 @@ puF
 fDq
 dNR
 sCu
-aqk
-aqk
+aqf
+aqf
 aqf
 aqe
 pxt
@@ -51618,7 +54278,7 @@ arY
 arT
 arh
 arQ
-arO
+aVy
 aqe
 aqe
 aqp
@@ -51640,7 +54300,7 @@ aqp
 aTi
 aqe
 aqe
-agP
+aUL
 mZx
 aeD
 uPM
@@ -53195,7 +55855,7 @@ arr
 aqJ
 aqJ
 aqJ
-poy
+aqJ
 poy
 poy
 poy
@@ -53369,7 +56029,7 @@ aqK
 aqK
 aqK
 aqT
-aeD
+arh
 sWG
 bPZ
 bPZ
@@ -53455,7 +56115,7 @@ azq
 azq
 azq
 azq
-aqU
+aVq
 agg
 afE
 asc
@@ -53981,7 +56641,7 @@ aqU
 agg
 afE
 asc
-aEh
+aVh
 aBs
 aDt
 aDt
@@ -53997,7 +56657,7 @@ aBB
 aBB
 aBs
 axm
-asc
+aQB
 aeV
 aeV
 aeT
@@ -54241,7 +56901,7 @@ awY
 aqU
 agC
 afE
-azk
+aUP
 aEj
 aCv
 aCv
@@ -54308,7 +56968,7 @@ afU
 afW
 agW
 azu
-ayS
+aVE
 ayu
 ayu
 ayu
@@ -54328,7 +56988,7 @@ awZ
 aqU
 agz
 afE
-azk
+aUP
 aCy
 aCM
 aCM
@@ -54431,7 +57091,7 @@ aBs
 aBs
 aBD
 aBx
-aBp
+aQC
 asc
 aeV
 aeV
@@ -54834,9 +57494,9 @@ afW
 afW
 agp
 azu
-axH
-axH
-axH
+aVz
+aVz
+aVz
 axT
 axK
 axB
@@ -54922,8 +57582,8 @@ afW
 afW
 azu
 azx
-axH
-axH
+aVz
+aVz
 axT
 axL
 axD
@@ -55009,8 +57669,8 @@ afX
 agN
 azu
 ayn
-axH
-axH
+aVz
+aVz
 axU
 axM
 axE
@@ -55038,7 +57698,7 @@ aBW
 aam
 aBL
 asc
-afo
+aQz
 aeW
 aeT
 aeT
@@ -55118,8 +57778,8 @@ aDN
 asc
 asc
 azk
-azk
-azk
+aUP
+aUP
 azk
 asc
 asc
@@ -55528,7 +58188,7 @@ agR
 agR
 agR
 agi
-agO
+aga
 pWy
 xzN
 xzN
@@ -55543,7 +58203,7 @@ xzN
 xzN
 uom
 pWy
-aqU
+aVq
 agg
 afE
 afd
@@ -55814,10 +58474,10 @@ ylZ
 aah
 gwV
 nXu
-aac
+aUS
 gwV
 nXu
-aac
+aUG
 ihW
 kVN
 afd
@@ -55987,10 +58647,10 @@ ihW
 thf
 voC
 gwV
-cSa
-cSa
+aUU
+aUT
 gwV
-cSa
+aUM
 cSa
 ihW
 ihW
@@ -56076,7 +58736,7 @@ xcs
 ybQ
 pKh
 pKh
-pKh
+aUQ
 pKh
 qrg
 pVt
@@ -56166,9 +58826,9 @@ sAd
 sAd
 aaV
 peP
-pVt
+aQH
 iLP
-aae
+aQD
 hFc
 ihW
 kVN
@@ -56252,7 +58912,7 @@ ktH
 ktH
 bsq
 qbs
-peP
+aUH
 gwV
 gwV
 gwV
@@ -56340,7 +59000,7 @@ iEj
 bsq
 qbs
 peP
-pVt
+aQJ
 lAS
 kYk
 uHP
@@ -56427,9 +59087,9 @@ iBv
 bsq
 qbs
 peP
-pVt
+aRf
 iLP
-aae
+aQE
 hFc
 ihW
 kVN
@@ -56482,7 +59142,7 @@ lrC
 agR
 agb
 agb
-akX
+aVF
 akZ
 ala
 akZ
@@ -56513,7 +59173,7 @@ mqU
 mqU
 bsq
 qbs
-peP
+aUI
 gwV
 gwV
 gwV
@@ -56574,7 +59234,7 @@ aky
 aky
 aky
 aky
-dXY
+aVB
 akz
 ago
 akz
@@ -56601,7 +59261,7 @@ pKh
 pKh
 gwW
 peP
-pVt
+aTT
 lAS
 kYk
 uHP
@@ -56685,12 +59345,12 @@ sAd
 sAd
 sAd
 sAd
-fMy
+sAd
 sAd
 dtl
-pVt
+aUF
 iLP
-aae
+aQF
 hFc
 ihW
 kVN
@@ -56754,7 +59414,7 @@ ago
 akz
 hsd
 akP
-iwt
+akP
 ihp
 akI
 vMB
@@ -56772,8 +59432,8 @@ jIj
 jIj
 jIj
 jIj
-gwV
-aah
+aUR
+jIj
 hQz
 gwV
 gwV
@@ -56860,8 +59520,8 @@ ioW
 qzz
 jkE
 gwV
-lAS
-rvX
+aUN
+aUJ
 wWh
 waq
 stT
@@ -56947,8 +59607,8 @@ xXw
 xXw
 xXw
 xXw
-llH
-aad
+lAS
+rvX
 avM
 ndG
 moL
@@ -57093,8 +59753,8 @@ agb
 agb
 aky
 piM
-nmU
 fga
+aVD
 vvm
 dXY
 akz
@@ -57183,7 +59843,7 @@ aky
 aky
 aky
 aky
-dXY
+aVC
 akz
 akV
 akV
@@ -57296,7 +59956,7 @@ abC
 xXw
 xXw
 aah
-hQz
+aUK
 wWh
 wWh
 jbg
@@ -57463,7 +60123,7 @@ afE
 afd
 kVN
 ihW
-llH
+aVg
 iQP
 aah
 aah
@@ -57650,7 +60310,7 @@ xby
 aab
 aab
 aab
-aab
+aeF
 aeF
 aeH
 aeH
@@ -57730,14 +60390,14 @@ dky
 fCT
 gLR
 nbJ
-aeH
+aUO
 aab
 pMe
 rgn
 aab
-aab
-aab
-aab
+aeF
+aeF
+aeF
 aeF
 aeH
 aeH
@@ -57805,7 +60465,7 @@ uXl
 uXl
 uXl
 aky
-aqU
+aVq
 agz
 afE
 afd
@@ -57822,9 +60482,9 @@ aab
 hCq
 npV
 aab
-aab
-aab
-aab
+aeF
+aeF
+aeF
 aeF
 aeH
 aeH
@@ -57909,9 +60569,9 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
+aeF
+aeF
+aeF
 aeF
 aeH
 aeH
@@ -57992,13 +60652,13 @@ nbJ
 nbJ
 nbJ
 aeH
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aeF
+aeF
+aeF
+aeF
+aeF
+aeF
+aeF
 aeF
 aeZ
 aeH
@@ -58079,13 +60739,13 @@ kVN
 kVN
 afd
 aeH
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aeF
+aeF
+aeF
+aeF
+aeF
+aeF
+aeF
 aeF
 aeH
 aeH
@@ -58166,13 +60826,13 @@ afd
 afd
 afd
 qBP
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aeF
+aeF
+aeF
+aeF
+aeF
+aeF
+aeF
 aeF
 aeH
 aeH
@@ -58239,7 +60899,7 @@ agb
 agb
 agb
 agb
-agj
+aVr
 aqU
 agg
 afE
@@ -59460,7 +62120,7 @@ aeS
 aeQ
 agj
 agb
-aeP
+aeJ
 aeQ
 aeS
 aeR
@@ -59484,7 +62144,7 @@ aeR
 aeR
 aeS
 aeQ
-aeP
+aeJ
 aeH
 aeH
 aeH
@@ -60068,7 +62728,7 @@ agi
 agi
 agi
 agi
-afp
+aVp
 aeI
 aeI
 aeI
@@ -60215,7 +62875,7 @@ lrC
 agR
 agb
 agb
-agn
+agj
 agb
 agb
 agb
@@ -60240,7 +62900,7 @@ agb
 agb
 agb
 agb
-agn
+agj
 agb
 aeH
 aeH
@@ -61119,8 +63779,8 @@ suE
 dLx
 dPq
 hjb
-kcN
-kNH
+aUY
+aUV
 sga
 sga
 lwO
@@ -61205,7 +63865,7 @@ pre
 pre
 oQw
 ufj
-hjb
+aVd
 pre
 pre
 gMs
@@ -61281,7 +63941,7 @@ iuK
 nik
 gCT
 hdo
-iuK
+aVw
 pre
 pre
 pre
@@ -61369,13 +64029,13 @@ nik
 eNV
 qJT
 wYg
-xwF
-syG
+aVt
+aVs
 syG
 wvf
 syG
 syG
-syG
+aVm
 xwF
 qnb
 pVs
@@ -61448,7 +64108,7 @@ agc
 xzn
 xzn
 xzn
-aaj
+aVA
 tPc
 sTH
 sTH
@@ -61456,18 +64116,18 @@ ihQ
 laE
 uVD
 sTH
-fMH
+aVu
 jNt
 aaj
 wQb
 vSf
 aaj
 dmj
-fMH
+aVi
 jNt
 dPq
 dmj
-fMH
+aUZ
 bwT
 bwT
 pll
@@ -61543,14 +64203,14 @@ nik
 mVG
 nZG
 mtq
-kcN
+aVv
 auG
 auG
 auG
 auG
 auG
 auG
-kcN
+aVj
 ffs
 dPq
 hjb
@@ -61727,7 +64387,7 @@ pre
 pre
 sGI
 ufj
-hjb
+aVe
 pre
 pre
 was
@@ -61810,13 +64470,13 @@ aeq
 uAE
 uAE
 uAE
-xId
-kcN
+aVn
+aVk
 ffs
 dPq
 hjb
-kcN
-aeq
+aVa
+aUW
 uAE
 uAE
 xId
@@ -61898,11 +64558,11 @@ bAV
 bAV
 bAV
 hxz
-fMH
+aVl
 jNt
 xhF
 dmj
-fMH
+aVb
 upO
 bAV
 bAV
@@ -61985,11 +64645,11 @@ sga
 sga
 sga
 lwO
-kcN
+aVk
 ffs
 vSf
 hjb
-kcN
+aVc
 kNH
 sga
 sga
@@ -63714,23 +66374,23 @@ agv
 agv
 aCf
 aCf
-aDX
+aVx
 aDJ
 aDk
 aOI
 aDM
 aDM
 aqD
-kLV
+aVo
 aDM
 aqD
-kLV
+aVo
 aDM
 aDM
 aOs
 aDJ
 aDk
-aCh
+aUX
 aOo
 aOo
 avr
@@ -64076,7 +66736,7 @@ yhd
 bWq
 aDM
 aDY
-aCD
+aVf
 aCD
 aCD
 aCD
@@ -69896,7 +72556,7 @@ aok
 air
 air
 air
-aiO
+aWE
 air
 air
 air
@@ -69904,7 +72564,7 @@ alC
 ahy
 ahy
 ahy
-ahT
+aVP
 ahy
 ahy
 ahy
@@ -70153,23 +72813,23 @@ asf
 asf
 asf
 asf
-aiK
-aiK
-aiK
-aiK
-aiK
-aiK
-cts
+aWR
+aWt
+aWt
+aWt
+aWt
+aWt
+aWm
 wxx
 aio
 mPP
-xTK
-ahX
-ahX
-ahX
-ahX
-ahX
-ahX
+aWi
+aWc
+aWc
+aWc
+aWc
+aWc
+aVU
 asf
 asf
 asf
@@ -70240,7 +72900,7 @@ asf
 kKX
 kKX
 asf
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70256,7 +72916,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 asf
 kKX
 kKX
@@ -70327,7 +72987,7 @@ asf
 spl
 spl
 asf
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70343,7 +73003,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 asf
 spl
 spl
@@ -70414,7 +73074,7 @@ asf
 spl
 kmU
 asf
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70430,7 +73090,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 asf
 lip
 spl
@@ -70501,7 +73161,7 @@ ajs
 ahW
 ahW
 asL
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70517,11 +73177,11 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 asL
 ahW
 ahW
-neR
+aVO
 aso
 asn
 ocQ
@@ -70588,7 +73248,7 @@ asm
 ahW
 ahW
 asL
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70604,7 +73264,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 asL
 asE
 ahW
@@ -70675,7 +73335,7 @@ asf
 asf
 asf
 asf
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70691,7 +73351,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 asf
 asf
 asf
@@ -70762,7 +73422,7 @@ aiA
 aiK
 aiK
 aiA
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70778,7 +73438,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 ahw
 ahX
 ahX
@@ -70849,7 +73509,7 @@ aiA
 aiK
 aiK
 aiA
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70865,7 +73525,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 ahw
 ahX
 ahX
@@ -70936,7 +73596,7 @@ aiA
 aiK
 aiK
 aiA
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -70952,7 +73612,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 ahw
 ahX
 ahX
@@ -71023,7 +73683,7 @@ aiA
 ajm
 ajd
 aiA
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -71039,7 +73699,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 ahw
 aia
 dIC
@@ -71110,7 +73770,7 @@ aiA
 ajn
 aje
 aiA
-aiK
+aWS
 aiK
 aiK
 aiK
@@ -71126,7 +73786,7 @@ ahX
 ahX
 ahX
 ahX
-ahX
+aVV
 ahw
 aib
 ahY
@@ -71186,7 +73846,7 @@ lrC
 asf
 ass
 asl
-asl
+aVJ
 asl
 asl
 uxB
@@ -71197,7 +73857,7 @@ aiA
 ajo
 ajf
 aiA
-aiL
+aWT
 aiL
 aiL
 aiL
@@ -71213,7 +73873,7 @@ csV
 csV
 csV
 csV
-csV
+aVW
 ahw
 dVV
 ctw
@@ -71224,7 +73884,7 @@ ygs
 wKu
 ygs
 ygs
-asl
+aVJ
 asl
 asi
 asf
@@ -71271,7 +73931,7 @@ aEL
 lrC
 lrC
 asf
-asm
+aVI
 rNz
 asg
 asq
@@ -71312,7 +73972,7 @@ asg
 asq
 asq
 asg
-asm
+aVI
 htg
 asf
 lrC
@@ -71364,7 +74024,7 @@ asn
 asn
 asn
 ash
-ajs
+aXB
 air
 air
 aiC
@@ -71450,11 +74110,11 @@ asl
 asl
 asl
 aFN
-aFH
-asm
+aXH
+aVN
 air
 air
-aiO
+aWE
 air
 air
 air
@@ -71478,11 +74138,11 @@ amz
 ahy
 ahy
 ahy
-ahT
+aVP
 ahy
 ahy
-asm
-ass
+aVN
+aVM
 asl
 asl
 asl
@@ -71543,7 +74203,7 @@ aow
 air
 aiC
 aiC
-ais
+aXa
 aiC
 amA
 amA
@@ -71563,7 +74223,7 @@ amA
 amA
 amA
 ahx
-ahD
+aVR
 ahx
 ahx
 ahy
@@ -71976,7 +74636,7 @@ aJU
 aJG
 air
 air
-aiC
+aiO
 atB
 att
 atw
@@ -72000,7 +74660,7 @@ amA
 asN
 asH
 asB
-ahx
+ahT
 ahy
 ahy
 aFI
@@ -72936,7 +75596,7 @@ air
 aiC
 atB
 atg
-atw
+aWY
 amA
 amN
 vXU
@@ -72954,7 +75614,7 @@ amN
 mQZ
 amN
 amA
-asN
+aVT
 asG
 asB
 ahx
@@ -75206,7 +77866,7 @@ anl
 anl
 anl
 anl
-ati
+aWk
 avE
 asX
 alm
@@ -75884,7 +78544,7 @@ lrC
 aiA
 air
 air
-anl
+aYf
 anQ
 anK
 anU
@@ -76241,7 +78901,7 @@ aox
 nyF
 ehu
 nyF
-aoa
+aXb
 nyF
 ehu
 aoi
@@ -76531,7 +79191,7 @@ aGe
 aGe
 alG
 alv
-alm
+aVK
 ahn
 ahn
 ahk
@@ -76669,7 +79329,7 @@ aiX
 aiX
 anq
 aoG
-anW
+anr
 aoy
 fKh
 xTU
@@ -76756,7 +79416,7 @@ aiX
 aiX
 anq
 aoH
-aod
+anW
 anH
 fKh
 xTU
@@ -76842,9 +79502,9 @@ aiQ
 aoL
 aiX
 anq
-aoI
-anO
-aou
+aoH
+aod
+anH
 fKh
 xTU
 xTU
@@ -76929,9 +79589,9 @@ aiQ
 aiX
 aiX
 anq
-aoJ
-anN
-aoC
+aoI
+anO
+aou
 fKh
 fKh
 pHE
@@ -76946,7 +79606,7 @@ ndT
 pHE
 fKh
 fKh
-ati
+aWk
 atb
 asX
 and
@@ -77016,23 +79676,23 @@ aiQ
 aiX
 aiX
 anq
-aoH
-anF
-anH
-fRT
+aXZ
+aWF
+aWF
+aWF
 cRX
-anF
-anF
-anF
-anF
-anF
-anF
-anF
-anF
-anF
-anF
-anF
-ano
+aWF
+aWF
+aWF
+aWF
+aWF
+aWF
+aWF
+aWF
+aWF
+aWF
+aWu
+anq
 ati
 atb
 asX
@@ -77102,24 +79762,24 @@ lrC
 aiQ
 aiX
 aiX
-anq
-aoH
-anF
-anH
+aYg
 fRT
-aoc
+anW
 anM
-anV
-aoc
+anW
+anW
 anM
-aom
-anV
+anW
+anW
 anM
-aoc
-anV
+anW
+anW
 anM
-anF
-anp
+anW
+anW
+anM
+aWv
+ans
 ati
 atb
 asX
@@ -77190,10 +79850,9 @@ aiQ
 aiX
 aiX
 anq
-aoH
-anF
-anH
-erX
+fRT
+anW
+aXI
 anG
 anG
 anG
@@ -77206,7 +79865,8 @@ anG
 anG
 anG
 anG
-qKg
+aWw
+ans
 ati
 atc
 asX
@@ -77277,9 +79937,10 @@ aiQ
 aiX
 aiX
 anq
-aoH
-anF
-aoD
+fRT
+aXR
+aWv
+aoJ
 anN
 anN
 anN
@@ -77291,9 +79952,8 @@ anN
 anN
 anN
 anN
-anN
-rbR
-anq
+aoC
+ans
 ati
 atd
 asX
@@ -77364,6 +80024,9 @@ aiQ
 aiX
 aiX
 anq
+aYa
+anW
+aWv
 aoH
 anF
 anF
@@ -77376,10 +80039,7 @@ anF
 anF
 anF
 anF
-anF
-anF
-anF
-anH
+aWx
 anq
 ati
 atc
@@ -77451,10 +80111,10 @@ aiQ
 aoL
 aiX
 anq
+fRT
+anW
+aWv
 aoH
-anF
-anr
-anr
 anF
 anW
 aod
@@ -77538,10 +80198,10 @@ aiQ
 aiX
 aiX
 anq
+fRT
+aXR
+aWv
 aoH
-anF
-aoA
-aoA
 anF
 anW
 ant
@@ -77625,17 +80285,17 @@ aiQ
 aiX
 aiX
 anq
-aoG
-anF
+fRT
 anW
-anW
+aWv
+aoH
 anF
 anW
 ans
 aoj
 aoj
-aon
 aoj
+aWU
 aoj
 peu
 uUW
@@ -77712,10 +80372,10 @@ aiQ
 aiX
 aiX
 anq
+fRT
+anW
+aWv
 aoH
-anF
-anW
-anW
 anF
 anW
 ans
@@ -77799,10 +80459,10 @@ aiQ
 aiX
 aiX
 anq
+fRT
+aXR
+aWv
 aoH
-anF
-aoA
-aoA
 anF
 anW
 ant
@@ -77886,10 +80546,10 @@ aiQ
 aiX
 aiX
 anq
+aYa
+anW
+aWv
 aoH
-anF
-anr
-anr
 anF
 anW
 aod
@@ -77901,7 +80561,7 @@ anV
 aod
 anW
 anF
-anH
+aWx
 anq
 ati
 atc
@@ -77973,10 +80633,10 @@ aiQ
 aiX
 aiX
 anq
+fRT
+anW
+aWv
 aoH
-anF
-anF
-anF
 anF
 anF
 anF
@@ -78060,11 +80720,11 @@ aiQ
 aoL
 aiX
 anq
+fRT
+aXR
+aWv
 aoH
 anF
-anr
-anr
-anr
 anr
 anr
 anr
@@ -78147,11 +80807,11 @@ aiQ
 aiX
 aiX
 anq
+fRT
+anW
+aWv
 aoH
 anF
-anr
-aoA
-anr
 anF
 anF
 anF
@@ -78234,22 +80894,22 @@ aiQ
 aiX
 aiX
 anq
-aoH
-anF
-anr
-aod
-anr
-anF
-aot
+fRT
+anW
+aXJ
+aXC
+aXt
+aXd
+anO
+aXd
+aXc
+aWZ
 anO
 anO
 anO
 anO
 anO
-anO
-anO
-anO
-anI
+aou
 anq
 ati
 atc
@@ -78321,23 +80981,23 @@ aiQ
 aiX
 aiX
 anq
-aoH
-anF
-anr
-anW
-anr
-anF
-anH
+fRT
+aXR
+aXK
+aXD
+aXu
+aXl
+aXi
 ant
 ant
 ant
 ant
 ant
 ant
-ant
-ant
-ant
-ant
+anq
+anq
+anq
+anq
 abU
 atd
 asX
@@ -78408,23 +81068,23 @@ aiQ
 aiX
 aiX
 anq
-aoH
-anF
-anr
+fRT
+anW
+aXK
 aoA
-anr
-anF
-anH
+aoJ
+anN
+aoC
 ant
 ant
 ant
 ant
 ant
 ant
-ant
-ant
-ant
-ant
+aWM
+aWG
+aWy
+aWn
 ati
 atc
 asX
@@ -78495,23 +81155,23 @@ aiQ
 aiX
 aiX
 anq
-aoG
-anF
-anr
+aYa
 anW
-anr
-anF
-anH
+aXK
+aoA
+aoH
+aod
+aWx
 ant
 ant
 ant
 ant
 ant
 ant
-ant
-ant
-ant
-ant
+aWN
+aWH
+aWz
+asP
 ati
 atb
 asX
@@ -78582,23 +81242,23 @@ aiQ
 aiX
 aiX
 anq
+fRT
+aXR
+aXK
+aoA
 aoH
-anF
-anr
-aod
-anr
-anF
+anW
 anH
+aXe
 ant
 ant
 ant
 ant
 ant
-ant
-ant
-ant
-ant
-ant
+aWO
+aWI
+aWA
+aWo
 ati
 atb
 asX
@@ -78669,24 +81329,24 @@ aiQ
 aoL
 aiX
 anq
-aoH
-anF
-anr
+fRT
+anW
+aXK
 aoA
+aoH
 anr
-anF
 anH
+aXf
 ant
 ant
 ant
 ant
 ant
-ant
-ant
-ant
-ant
-ant
-ati
+aWp
+aWp
+aWp
+aWp
+aWk
 atb
 asX
 alm
@@ -78756,14 +81416,14 @@ aiQ
 aiX
 aiX
 anq
-aoH
-anF
-anr
-anr
-anr
-anF
+fRT
+anW
+aXK
+aoA
+aXv
+aXn
 anH
-ant
+aXg
 ant
 ant
 ant
@@ -78843,12 +81503,12 @@ aiQ
 aiX
 ajB
 anq
-aoH
-anF
-anF
-anF
-anF
-anF
+fRT
+aXR
+aXK
+aoA
+aXw
+aXo
 anH
 ant
 ant
@@ -78930,13 +81590,13 @@ aiQ
 aiX
 aiX
 anq
-aoI
-anO
-anO
-anO
-anO
-anO
-aou
+erX
+aXS
+aXL
+aoA
+aXx
+aXp
+aXj
 ant
 ant
 ant
@@ -79017,9 +81677,9 @@ aiQ
 aiR
 ajz
 anq
-anq
-anq
-anq
+aYb
+aXT
+aXM
 anq
 anq
 anq
@@ -79045,7 +81705,7 @@ alm
 alm
 alm
 alm
-alm
+aVS
 alm
 aln
 aln
@@ -79103,11 +81763,11 @@ aiX
 aiX
 aiX
 aiX
-aiX
-aiX
-aiX
-aiX
-aiX
+aXE
+aYc
+aXU
+aXN
+aXE
 aiX
 aiX
 aiX
@@ -79190,11 +81850,11 @@ aiX
 aiX
 aiX
 aiX
-aiX
-aiX
-aiX
-aiX
-aiX
+aXF
+aYd
+aXV
+aXO
+aXF
 aiX
 aiX
 aiX
@@ -79270,8 +81930,18 @@ aiQ
 aiX
 aiX
 aiX
+aop
 aiX
 aiX
+aiX
+aiX
+aop
+aiX
+aXE
+aYe
+aXW
+aXP
+aXE
 aiX
 aop
 aiX
@@ -79280,18 +81950,8 @@ aiX
 aiX
 aiX
 aiX
-aop
-aiX
-aiX
-aiX
-aiX
-aiX
 aiX
 aop
-aiX
-aiX
-aiX
-aiX
 aiX
 asP
 asU
@@ -79365,14 +82025,14 @@ aiT
 aiT
 aiT
 aiT
+aXQ
+aXX
+aXQ
 aiT
 aiT
 aiT
 aiT
-aiT
-aiT
-aiT
-aiT
+aXh
 aiT
 aiT
 aiT
@@ -79394,7 +82054,7 @@ aho
 aho
 aho
 aho
-aho
+aVH
 aho
 aho
 aho
@@ -79456,7 +82116,7 @@ ahq
 ahq
 ahq
 ahq
-ahq
+aXy
 ahq
 ahq
 ahq
@@ -80313,7 +82973,7 @@ lrC
 aiQ
 aiX
 aiX
-aiS
+aYh
 ahq
 ahs
 nfm
@@ -80367,7 +83027,7 @@ ahv
 jjV
 ahs
 ahq
-ahp
+aVG
 ahn
 ahn
 ahk
@@ -81197,7 +83857,7 @@ ahq
 ahq
 ahq
 ahq
-ahq
+aXq
 ahq
 ahq
 ahq
@@ -81275,15 +83935,15 @@ aiT
 aiT
 aiT
 aiT
-aiT
+aXh
 aiT
 aiT
 aiT
 aiT
 aRK
 aRK
-aSe
-aaO
+aXG
+aXz
 aRK
 rSE
 aUq
@@ -81292,7 +83952,7 @@ aUq
 aRK
 aRK
 aPF
-aPU
+aPF
 aPF
 aPF
 asV
@@ -81319,7 +83979,7 @@ aho
 aho
 aho
 aho
-aho
+aVH
 aho
 aho
 aho
@@ -81367,11 +84027,11 @@ aiX
 aiX
 aiX
 aoK
-aRA
-uSd
+aXY
+aSf
 aQm
 aQm
-aQm
+aXr
 aQm
 aRT
 aDW
@@ -81466,10 +84126,10 @@ aRZ
 aRQ
 aRA
 aPZ
-abD
-aPI
+aWP
+aPJ
 aPG
-asT
+aWq
 atm
 asz
 asu
@@ -81554,9 +84214,9 @@ aRR
 aRA
 aQa
 abD
-aPJ
+aWJ
 aPG
-asT
+acq
 atm
 asz
 asu
@@ -81642,7 +84302,7 @@ aRA
 abQ
 aPV
 aPK
-aPG
+aWB
 asT
 atm
 asz
@@ -81730,7 +84390,7 @@ aQb
 abF
 aPM
 aPG
-acq
+asT
 atm
 asx
 asu
@@ -82045,9 +84705,9 @@ kPX
 kPX
 kPX
 kPX
-aSG
 kPX
-aSy
+kPX
+kPX
 kPX
 akL
 kPX
@@ -82132,9 +84792,9 @@ kPX
 kPX
 kPX
 kPX
-aSH
 kPX
-aSz
+kPX
+kPX
 kPX
 akL
 kPX
@@ -82165,7 +84825,7 @@ aRA
 ycH
 nXb
 aRA
-asT
+acq
 atm
 asz
 asu
@@ -82219,9 +84879,9 @@ kPX
 kPX
 kPX
 kPX
-aSI
 kPX
-aSA
+kPX
+kPX
 kPX
 akL
 kPX
@@ -82392,9 +85052,9 @@ kPX
 kPX
 kPX
 kPX
-aSN
-aSJ
-aSB
+kPX
+kPX
+kPX
 kPX
 kPX
 akL
@@ -82479,9 +85139,9 @@ kPX
 kPX
 kPX
 kPX
-aSC
-aSC
-aSC
+kPX
+kPX
+kPX
 kPX
 kPX
 akL
@@ -82566,9 +85226,9 @@ kPX
 kPX
 kPX
 kPX
-aSO
-aSD
-aSD
+kPX
+kPX
+kPX
 kPX
 kPX
 akL
@@ -82610,7 +85270,7 @@ alK
 alK
 alK
 aal
-aaC
+aVX
 aaA
 ijg
 aal
@@ -82653,9 +85313,9 @@ kPX
 kPX
 kPX
 kPX
-aSE
-aSE
-aSE
+kPX
+kPX
+kPX
 kPX
 kPX
 akL
@@ -82740,9 +85400,9 @@ kPX
 kPX
 kPX
 kPX
-aSP
-aSK
-aSF
+kPX
+kPX
+kPX
 kPX
 kPX
 akL
@@ -82774,7 +85434,7 @@ aQe
 aPT
 aPT
 aRA
-asT
+acq
 atm
 asx
 asu
@@ -83001,8 +85661,8 @@ kPX
 kPX
 kPX
 kPX
-aSR
-aSL
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -83026,14 +85686,14 @@ asw
 asw
 asw
 asw
-aaG
 asw
 asw
 asw
 asw
 asw
 asw
-aaG
+asw
+asw
 asw
 asw
 atn
@@ -83041,7 +85701,7 @@ asz
 asZ
 asw
 asw
-aaG
+asw
 asw
 asw
 asw
@@ -83088,8 +85748,8 @@ kPX
 kPX
 kPX
 kPX
-aSR
-aSD
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -83175,8 +85835,8 @@ kPX
 kPX
 kPX
 kPX
-aSR
-aSD
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -83200,14 +85860,14 @@ eDG
 eDG
 eDG
 eDG
+aWK
 eDG
 eDG
 eDG
 eDG
 eDG
 eDG
-eDG
-eDG
+aWK
 eDG
 eDG
 aaR
@@ -83215,14 +85875,14 @@ asz
 ata
 asy
 asy
+aVQ
 asy
 asy
 asy
 asy
 asy
 asy
-asy
-asy
+aVQ
 asy
 asy
 asy
@@ -83262,8 +85922,8 @@ kPX
 kPX
 kPX
 kPX
-aSR
-aSD
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -83297,7 +85957,7 @@ tUQ
 aaS
 aaW
 aaS
-ato
+aWl
 asz
 asu
 aGb
@@ -83458,9 +86118,9 @@ aiu
 aaS
 acQ
 acF
-acF
+aXA
 acy
-aca
+aXk
 hOc
 aba
 aaS
@@ -84685,9 +87345,9 @@ aaS
 uOB
 uOB
 wni
-aJd
-aJd
-aJd
+aWQ
+aWL
+aWC
 aaS
 ato
 asx
@@ -84707,7 +87367,7 @@ aGr
 aGr
 aGr
 aGh
-aGb
+aVL
 ahJ
 ahJ
 ahI
@@ -84946,10 +87606,10 @@ aaS
 aJd
 abW
 aaS
-aaS
-aaS
-aaS
-aaS
+aWr
+aWr
+aWr
+aWr
 ato
 asz
 asu
@@ -85036,7 +87696,7 @@ aJg
 abL
 abu
 abh
-aaS
+aWr
 ato
 asx
 asu
@@ -85123,7 +87783,7 @@ aba
 abM
 abv
 abi
-aaS
+aWr
 ato
 asK
 asu
@@ -85304,7 +87964,7 @@ asu
 aIW
 aIN
 aIx
-aHa
+aIk
 aHm
 aHa
 aHJ
@@ -85391,7 +88051,7 @@ asu
 aIV
 aGF
 aIy
-aIk
+aHa
 aHm
 aHa
 aHH
@@ -85547,7 +88207,7 @@ lrC
 aiG
 aiu
 aiu
-aaS
+aXs
 acc
 aJl
 aJl
@@ -85646,7 +88306,7 @@ aJa
 aJa
 aJa
 aJa
-ato
+aWl
 asK
 asu
 aGG
@@ -85741,8 +88401,8 @@ aIP
 aHd
 aIm
 aGG
-aIb
-aHM
+aWd
+aVY
 aGG
 aHo
 aHd
@@ -85827,7 +88487,7 @@ aGG
 aIQ
 aHe
 aIn
-aHy
+aWg
 aIb
 aHM
 aHy
@@ -85914,7 +88574,7 @@ aGG
 aHq
 aHf
 aGS
-aHy
+aWh
 aIb
 aHM
 aHy
@@ -86263,7 +88923,7 @@ ahJ
 ahJ
 ahJ
 ahJ
-ahJ
+aWe
 ahJ
 ahJ
 ahJ
@@ -86509,7 +89169,7 @@ aiG
 ajp
 aji
 aiG
-aiM
+aWV
 aiM
 aiM
 aiM
@@ -86525,7 +89185,7 @@ msS
 msS
 msS
 msS
-msS
+aVZ
 ahI
 mpe
 fUt
@@ -86596,7 +89256,7 @@ aiG
 ajq
 ajj
 aiG
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -86612,7 +89272,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahI
 pnR
 hxr
@@ -86683,7 +89343,7 @@ aiG
 ajr
 ajk
 aiG
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -86699,7 +89359,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahI
 ddD
 uhW
@@ -86770,7 +89430,7 @@ aiG
 aiN
 aiN
 aiG
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -86786,7 +89446,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahI
 ahZ
 ahZ
@@ -86857,7 +89517,7 @@ aiH
 aiN
 aiN
 aiH
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -86873,7 +89533,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahM
 ahZ
 ahZ
@@ -86944,7 +89604,7 @@ aiH
 aiN
 aiN
 aiH
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -86960,7 +89620,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahM
 ahZ
 ahZ
@@ -87031,7 +89691,7 @@ aiH
 aiN
 aiN
 aiH
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -87047,7 +89707,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahM
 ahZ
 ahZ
@@ -87118,7 +89778,7 @@ aiH
 aiN
 aiN
 aiH
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -87134,7 +89794,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahM
 ahZ
 ahZ
@@ -87205,7 +89865,7 @@ aiH
 aiH
 aiH
 aiH
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -87221,7 +89881,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahM
 ahM
 ahM
@@ -87292,7 +89952,7 @@ aiH
 aiu
 aiu
 aiH
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -87308,7 +89968,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahM
 ahJ
 ahJ
@@ -87379,7 +90039,7 @@ aiH
 aiu
 aor
 aiH
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -87395,7 +90055,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahM
 amx
 ahJ
@@ -87466,7 +90126,7 @@ aju
 aiu
 aiu
 aiH
-aiN
+aWW
 aiN
 aiN
 aiN
@@ -87482,7 +90142,7 @@ ahZ
 ahZ
 ahZ
 ahZ
-ahZ
+aWa
 ahM
 ahJ
 ahJ
@@ -87553,23 +90213,23 @@ aiH
 aiu
 aiu
 aiH
-aiN
-aiN
-aiN
-aiN
-aiN
-aiN
-aiI
+aWX
+aWD
+aWD
+aWD
+aWD
+aWD
+aWs
 aiF
 aix
 ail
-aih
-ahZ
-ahZ
-ahZ
-ahZ
-ahZ
-ahZ
+aWj
+aWf
+aWf
+aWf
+aWf
+aWf
+aWb
 ahM
 ahJ
 ahJ
@@ -91563,9 +94223,9 @@ hUa
 utl
 dMJ
 agA
-wdO
+aYx
 bpc
-wdO
+aYv
 csx
 xir
 gnr
@@ -91991,7 +94651,7 @@ aKQ
 lTz
 xTd
 iME
-scI
+aYp
 ugv
 eXH
 yjW
@@ -92007,7 +94667,7 @@ aaT
 agV
 eXH
 lQV
-scI
+aYp
 xTd
 iME
 nhJ
@@ -92099,7 +94759,7 @@ xTd
 iME
 qZp
 aKQ
-dcQ
+aYj
 dcQ
 mXo
 mBq
@@ -92155,7 +94815,7 @@ bSc
 gfS
 gfS
 otU
-pXI
+bam
 apP
 ckW
 dmU
@@ -92344,12 +95004,12 @@ aKQ
 aKQ
 aKQ
 aKQ
-jat
+aYu
 iMo
 aKQ
-moD
+aYw
 aKQ
-jat
+aYu
 iMo
 aKQ
 aKQ
@@ -92869,7 +95529,7 @@ aKQ
 aKQ
 aKQ
 awf
-moD
+aYw
 awf
 aKQ
 aKQ
@@ -93303,7 +95963,7 @@ nQf
 pnP
 nQf
 gzN
-atW
+aYn
 atK
 atH
 qnW
@@ -95739,7 +98399,7 @@ itp
 nOH
 oaJ
 uek
-auu
+aYy
 atM
 avl
 pVH
@@ -96455,7 +99115,7 @@ dhB
 dhB
 dhB
 dhB
-ugJ
+aYi
 dhB
 dhB
 tZu
@@ -96533,7 +99193,7 @@ wpc
 wpc
 wpc
 aSv
-aSv
+aYk
 svI
 svI
 svI
@@ -97054,7 +99714,7 @@ pDH
 hYV
 jAn
 wpc
-atW
+aYn
 atH
 suU
 nvW
@@ -97566,13 +100226,13 @@ cJV
 cJV
 tGd
 tGd
-atW
+aYn
 atY
 atH
 wYc
 bdH
 wYc
-odb
+aYs
 mQa
 wYc
 bdH
@@ -97984,14 +100644,14 @@ qjV
 bEV
 bEV
 adT
-aeb
-aeb
-aeb
-aeb
-aeb
+baj
+baj
+baj
+baj
+aZX
 jVv
 fRu
-aeb
+aZx
 aeb
 ecA
 adT
@@ -98011,7 +100671,7 @@ tJc
 tJc
 tJc
 cnQ
-odb
+aYo
 mwI
 tba
 uCQ
@@ -98156,8 +100816,8 @@ lrC
 lrC
 qjV
 bEV
-bEV
-adT
+bao
+ban
 aeE
 xUG
 aen
@@ -99230,7 +101890,7 @@ xiO
 mCc
 fQB
 fVM
-jND
+aYl
 laz
 ndv
 aSQ
@@ -99567,7 +102227,7 @@ ade
 ade
 ade
 ade
-auw
+aYz
 aug
 atQ
 uEF
@@ -99663,9 +102323,9 @@ omY
 omY
 omY
 omY
-omY
+aYq
 lFS
-jND
+aYm
 laz
 uwO
 gGa
@@ -102699,7 +105359,7 @@ ado
 ado
 aTd
 ada
-auw
+aYz
 auc
 atQ
 aQW
@@ -103119,7 +105779,7 @@ apE
 apA
 apx
 uCW
-bEV
+bal
 qjV
 pwV
 gVM
@@ -104162,28 +106822,28 @@ apT
 apE
 apA
 apx
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
-azR
+aZy
+aZy
+aZy
+aZy
+aZy
+aZy
+aZy
+aYE
+aYE
+aYE
+aYE
+aYE
+aYE
+aYE
+aYE
+aYC
 auB
 auh
 atT
 aKv
 aKv
-aMB
+aYt
 aMB
 aKv
 aKv
@@ -104249,22 +106909,22 @@ apR
 apF
 apB
 apy
-azR
-adU
+aZy
+aZz
+aZz
+aZz
+aZz
+aZz
+aZz
 adu
 adu
 adu
 adu
-adj
-aAK
-aAE
-adU
 adu
 adu
 adu
-adu
-adj
-azR
+aYE
+aYC
 auB
 aue
 aNl
@@ -104336,22 +106996,22 @@ apR
 apF
 apB
 apy
-azR
-adW
-adM
-adD
-adD
-adv
-adk
-aAL
-aAF
-adW
-adM
-adD
-adD
-adv
-adk
-azR
+aZy
+aZz
+adU
+aYM
+aYM
+aYM
+aYM
+aZs
+aYM
+aYM
+aYM
+aYM
+adj
+adu
+aYE
+aYC
 auB
 auh
 atT
@@ -104423,22 +107083,22 @@ apR
 avx
 apK
 apy
-azR
-adW
-adN
-adE
-adE
-adw
-adk
-aAL
-aNQ
-adW
-adN
-adE
-adE
-adw
-adk
-azR
+aZy
+aZz
+bak
+adM
+adD
+adD
+adv
+aZt
+adM
+adD
+adD
+adv
+aYK
+adu
+aYE
+aYC
 auB
 aui
 atT
@@ -104510,22 +107170,22 @@ apR
 apF
 apL
 apy
-azR
-adW
-adN
+aZy
+aZz
+bak
+aZY
 adE
 adE
 adw
-aep
-aAL
-aAF
-adX
+aZt
 adN
 adE
 adE
-adw
-adk
-azR
+aYN
+aYK
+adu
+aYE
+aYC
 auB
 aui
 avn
@@ -104535,7 +107195,7 @@ aMJ
 aMD
 aMw
 aKv
-aMe
+aYr
 aLT
 aLD
 aKv
@@ -104597,22 +107257,22 @@ apR
 apF
 apB
 apy
-azR
-adW
-aOd
+aZy
+aZz
+bak
+adN
 adE
 adE
-aew
-adY
-aAL
-aAF
-adY
-adO
+adw
+aZt
+adN
 adE
 adE
-aNA
-adk
-azR
+adw
+aYK
+adu
+aYE
+aYC
 auB
 aui
 atT
@@ -104684,22 +107344,22 @@ apR
 apF
 apB
 apy
-azR
-adW
-adN
+aZy
+aZz
+bak
+aZZ
 adE
 adE
 adw
-aer
-aAL
-aAF
-adZ
+aZt
 adN
 adE
 adE
-adw
-adk
-azR
+aYO
+aYK
+adu
+aYE
+aYC
 auB
 auh
 atT
@@ -104771,22 +107431,22 @@ apR
 apG
 apC
 apz
-azR
-adW
+aZy
+aZz
+bak
 adN
 adE
 adE
 adw
-adk
-aAL
-aAF
-adW
+aZt
 adN
 adE
 adE
 adw
-adk
-azR
+aYK
+adu
+aYE
+aYC
 auB
 aue
 atT
@@ -104858,22 +107518,22 @@ apR
 apR
 apM
 apH
-azR
-adW
+aZy
+aZz
+bak
 adQ
 adF
-adF
-adx
-adk
-aAL
-aAF
 adW
+adx
+aZt
 adQ
-adF
+adW
 adF
 adx
-adk
-azR
+aYK
+adu
+aYE
+aYD
 auB
 auh
 atT
@@ -104945,22 +107605,22 @@ lrC
 xmN
 qeo
 qeo
-azR
+bah
+aZV
 aea
 adz
-adz
-adz
-adz
-adl
-aAL
-aAF
-aea
-adz
-adz
-adz
+aZO
+aZH
+aZA
+aZu
+aZn
+aZd
+aYZ
 adz
 adl
-azR
+adu
+aYE
+aYC
 auB
 aui
 atT
@@ -105032,22 +107692,22 @@ lrC
 xmN
 qeo
 qeo
+bah
+aZV
 azR
-adU
-adu
-adu
-adu
-adu
-adj
+baa
+aZP
+aZe
+aZo
 aAM
-aAF
-adU
-adu
-adu
-adu
-adu
-adj
+aZo
+aZe
+aZa
+aYP
 azR
+adu
+aYE
+aYC
 auB
 aui
 atT
@@ -105119,22 +107779,22 @@ lrC
 xmN
 aUv
 qeo
+bah
+aZV
 azR
-adW
-adM
-adD
-adD
-adv
-adk
-aAL
+bab
+aZQ
+aZf
+aZf
+aZv
+aZp
+aZf
 aAF
-adW
-adM
-adD
-adD
-adv
-adk
+aYQ
 azR
+adu
+aYE
+aYC
 auB
 aui
 atT
@@ -105206,22 +107866,22 @@ lrC
 xmN
 qeo
 qeo
+bah
+aZV
 azR
-adW
-adN
-adE
-adE
-adw
-adk
+bac
 aAL
+aZf
+aZf
+aAE
+aAL
+aZf
 aAF
-adW
-adN
-adE
-adE
-adw
-adk
+aYR
 azR
+adu
+aYE
+aYC
 auB
 auh
 atT
@@ -105293,22 +107953,22 @@ lrC
 xmN
 qeo
 qeo
+bah
+aZV
 azR
-adW
-adN
-adE
-adE
-adw
-aep
-aAL
+bad
+aZR
+aZI
+aZp
 aAF
-adX
-adN
-adE
-adE
-adw
-adk
+aAL
+aZf
+aAF
+aYS
 azR
+adu
+aYE
+aYC
 auB
 aue
 atT
@@ -105380,22 +108040,22 @@ lrC
 xmN
 qeo
 qeo
+bah
+aZV
 azR
-adW
-aOd
-adE
-adE
+bae
+aZS
 aew
-adY
 aAL
 aAF
-adY
-adO
-adE
-adE
-aNA
-adk
+aAL
+aZf
+aAF
+aYT
 azR
+adu
+aYE
+aYC
 auB
 auh
 atT
@@ -105467,22 +108127,22 @@ lrC
 xmN
 qeo
 qeo
+bah
+aZV
 azR
-adW
-adN
-adE
-adE
-adw
-aer
+baf
+aZT
+aZJ
 aAL
 aAF
+aAL
 adZ
-adN
-adE
-adE
-adw
-adk
+aZb
+aYU
 azR
+adu
+aYE
+aYC
 auB
 aui
 atT
@@ -105554,22 +108214,22 @@ lrC
 xmN
 qeo
 qeo
+bah
+aZV
 azR
-adW
-adN
-adE
-adE
-adw
-adk
+bag
+aZU
+aZK
 aAL
-aNQ
-adW
-adN
-adE
-adE
-adw
-adk
+aAF
+aAL
+aAF
+aZc
+aYV
 azR
+adu
+aYE
+aYC
 auB
 aui
 avn
@@ -105641,22 +108301,22 @@ lrC
 xmN
 qeo
 qeo
+bah
+aZV
 azR
-adW
-adQ
-adF
-adF
-adx
+azR
+azR
+azR
 adk
-aAL
 aAF
-adW
-adQ
-adF
-adF
-adx
-adk
+aAL
+aZg
 azR
+azR
+azR
+adu
+aYE
+aYC
 auB
 aui
 atT
@@ -105666,7 +108326,7 @@ aKO
 aKE
 aKz
 aKv
-aMe
+aYr
 aLT
 aLD
 aKv
@@ -105728,22 +108388,22 @@ lrC
 xmN
 qeo
 qeo
+bah
+aZV
+aZV
+aZV
+aZV
 azR
-aea
-adz
-adz
-adz
-adz
-adl
-aAN
+aZB
 aAG
-aea
-adz
-adz
-adz
-adz
-adl
+aZq
+aZh
 azR
+adu
+adu
+adu
+aYE
+aYC
 auB
 auh
 atT
@@ -105815,22 +108475,22 @@ lrC
 xmN
 aUv
 qeo
-azR
-azR
-azR
-azR
-azR
-azR
-azR
+bah
+bah
+bah
+bah
+adg
+adg
+adg
 aAO
 aAH
-azR
-azR
-azR
-azR
-azR
-azR
-azR
+adg
+adg
+adg
+adg
+adg
+adg
+adg
 auC
 aue
 atT
@@ -105911,9 +108571,9 @@ aBe
 aAP
 aNU
 aNB
-aNB
+aZi
 aTN
-aNB
+aYW
 aNB
 aNB
 aNt
@@ -106440,7 +109100,7 @@ awI
 awI
 awI
 adg
-auB
+aNp
 auh
 atT
 aKV
@@ -106514,9 +109174,9 @@ lrC
 lrC
 xmN
 qeo
-qeo
-adg
-aBj
+bai
+aZW
+aZN
 aNV
 aNL
 aNL
@@ -106609,7 +109269,7 @@ aNC
 aNC
 aNC
 aTO
-aNC
+aYX
 aNC
 aNC
 aNv
@@ -106701,7 +109361,7 @@ adg
 adg
 adg
 adg
-aNp
+aYA
 aui
 atT
 aNh
@@ -106778,14 +109438,14 @@ qeo
 qeo
 aNr
 aBk
-aNz
+aZC
 abZ
 aNG
 aAy
 aAw
 aAn
 aAi
-azS
+aYI
 azS
 aNr
 auB
@@ -106873,7 +109533,7 @@ aAw
 aNw
 aNw
 aAe
-azS
+aYF
 aNr
 auB
 aue
@@ -107133,7 +109793,7 @@ aNz
 aNx
 aNw
 aNw
-aNw
+aYJ
 aTm
 aNr
 auB
@@ -107213,15 +109873,15 @@ qeo
 qeo
 qeo
 aNr
-aAg
-aNM
+aZD
+aZw
 aND
 aAA
 aNy
+aYY
 azV
 azV
-azV
-azV
+aYG
 aNr
 auB
 aui
@@ -107307,10 +109967,10 @@ aAB
 aAw
 aAp
 aNx
-aNx
-aNx
+aYH
+aYH
 aNr
-auB
+aYB
 auh
 atT
 aNj
@@ -107387,13 +110047,13 @@ xmN
 qeo
 qeo
 aNr
-aNz
+aZE
 aNM
 aND
-aAg
+aZj
 aAw
 aAq
-aNz
+aYL
 aAf
 azW
 aNr
@@ -107474,10 +110134,10 @@ xmN
 aUv
 qeo
 aNr
-aAg
+aZF
 aNM
 aAI
-aAg
+aZk
 aNy
 aNy
 aNy
@@ -107735,7 +110395,7 @@ xmN
 qeo
 qeo
 aNr
-aAg
+aZG
 aNM
 aND
 aNz
@@ -107912,7 +110572,7 @@ aNr
 aNz
 aNK
 aNE
-aNz
+aZl
 aNy
 aAu
 aTC
@@ -107999,7 +110659,7 @@ aNr
 aNy
 aNY
 aAJ
-aNy
+aZm
 aNy
 aNy
 aNy
@@ -108433,7 +111093,7 @@ qeo
 aNr
 aBd
 aNK
-aNE
+aZr
 aAv
 aTQ
 aAv
