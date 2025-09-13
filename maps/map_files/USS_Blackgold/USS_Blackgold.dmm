@@ -24311,10 +24311,6 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/star/mid)
-"bya" = (
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/space/basic,
-/area/space)
 "byb" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/plating,
@@ -99981,7 +99977,7 @@ kPX
 kPX
 kPX
 kPX
-bya
+kPX
 ajS
 "}
 (224,1,3) = {"
