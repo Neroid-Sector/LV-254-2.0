@@ -1241,6 +1241,16 @@
 	},
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/blackgold/upper/rooms/medical/containment)
+"adO" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "adP" = (
 /obj/structure/stairs/multiz/down{
 	dir = 4
@@ -1297,6 +1307,19 @@
 	dir = 4
 	},
 /area/blackgold/upper/rooms/medical/containment)
+"adX" = (
+/turf/closed/wall/almayer/reinforced,
+/area/blackgold/lower/maint/star/mid)
+"adY" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
 "adZ" = (
 /turf/open/floor/almayer/sterile_green_side/southeast,
 /area/blackgold/upper/rooms/medical/containment)
@@ -2586,7 +2609,7 @@
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/mid)
 "ajD" = (
-/turf/closed/wall/almayer,
+/turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/hangar)
 "ajE" = (
 /turf/open_space,
@@ -2604,6 +2627,11 @@
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
 "ajH" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/hangar)
 "ajI" = (
@@ -2611,6 +2639,11 @@
 /turf/open/floor/plating/plating_catwalk/no_build,
 /area/blackgold/upper/rooms/hangar)
 "ajJ" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/rooms/hangar)
 "ajK" = (
@@ -2637,6 +2670,11 @@
 /area/blackgold/upper/rooms/hangar)
 "ajO" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/hangar)
 "ajP" = (
@@ -61492,43 +61530,43 @@ agR
 agR
 agR
 agR
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
 aga
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
 aeF
 aeF
 aeF
@@ -61572,7 +61610,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 bYw
 aeQ
 aeQ
@@ -61596,9 +61634,9 @@ aeQ
 aeQ
 aeQ
 bYw
-agi
+adX
 agb
-aeI
+afd
 bYw
 aeQ
 aeQ
@@ -61622,7 +61660,7 @@ aeQ
 aeQ
 aeQ
 bYw
-aeI
+afd
 aeH
 aeH
 aeH
@@ -61659,7 +61697,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 aeQ
 aeR
 aeS
@@ -61683,9 +61721,9 @@ aeR
 aeS
 aeR
 aeQ
-agi
+adX
 agb
-aeI
+afd
 aeQ
 aeR
 aeS
@@ -61709,7 +61747,7 @@ aeR
 aeS
 aeR
 aeQ
-aeI
+afd
 aeH
 aeH
 aeH
@@ -61746,7 +61784,7 @@ agb
 agb
 agb
 vIi
-agi
+adX
 aeQ
 aeS
 aeU
@@ -61770,9 +61808,9 @@ aeU
 aeU
 aeS
 aeQ
-agi
+adX
 agb
-aeI
+afd
 aeQ
 aeS
 aeU
@@ -61796,7 +61834,7 @@ aeU
 aeU
 aeS
 aeQ
-aeI
+afd
 tis
 aeH
 aeH
@@ -61833,7 +61871,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 aeQ
 aeR
 aeU
@@ -61857,9 +61895,9 @@ aeU
 aeU
 aeR
 aeQ
-agi
+adX
 aEs
-aeI
+afd
 aeQ
 aeR
 aeU
@@ -61883,7 +61921,7 @@ aeU
 aeU
 aeR
 aeQ
-aeI
+afd
 aeH
 aeH
 aeH
@@ -61920,7 +61958,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 aeQ
 aeR
 aeU
@@ -61944,9 +61982,9 @@ aeU
 aeU
 aeR
 aeQ
-agi
+adX
 agb
-aeI
+afd
 aeQ
 aeR
 aeU
@@ -61970,7 +62008,7 @@ aeU
 aeU
 aeR
 aeQ
-aeI
+afd
 aeH
 aeH
 aeH
@@ -62007,7 +62045,7 @@ agb
 agb
 agb
 ahh
-agi
+adX
 aeQ
 aeR
 aeU
@@ -62031,9 +62069,9 @@ aeU
 aeU
 aeR
 aeQ
-agi
+adX
 agb
-aeI
+afd
 aeQ
 aeR
 aeU
@@ -62057,7 +62095,7 @@ aeU
 aeU
 aeR
 aeQ
-aeI
+afd
 aeN
 aeH
 aeH
@@ -62094,7 +62132,7 @@ agb
 agb
 agb
 agb
-agj
+adY
 aeQ
 aeS
 aeR
@@ -62118,9 +62156,9 @@ aeR
 aeR
 aeS
 aeQ
-agj
+adY
 agb
-aeJ
+adO
 aeQ
 aeS
 aeR
@@ -62144,7 +62182,7 @@ aeR
 aeR
 aeS
 aeQ
-aeJ
+adO
 aeH
 aeH
 aeH
@@ -62181,7 +62219,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 aeQ
 aeR
 aeU
@@ -62205,9 +62243,9 @@ aeU
 aeU
 aeR
 aeQ
-agi
+adX
 agb
-aeI
+afd
 aeQ
 aeR
 aeU
@@ -62231,7 +62269,7 @@ aeU
 aeU
 aeR
 aeQ
-aeI
+afd
 aeH
 aeH
 aeH
@@ -62268,7 +62306,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 aeQ
 aeR
 aeU
@@ -62292,9 +62330,9 @@ aeU
 aeU
 aeR
 aeQ
-agi
+adX
 aeH
-aeI
+afd
 aeQ
 aeR
 aeU
@@ -62318,7 +62356,7 @@ aeU
 aeU
 aeR
 aeQ
-aeI
+afd
 aeH
 aeH
 aeH
@@ -62355,7 +62393,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 aeQ
 aeR
 aeU
@@ -62379,9 +62417,9 @@ aeU
 aeU
 aeR
 aeQ
-agi
+adX
 aeZ
-aeI
+afd
 aeQ
 aeR
 aeU
@@ -62405,7 +62443,7 @@ aeU
 aeU
 aeR
 aeQ
-aeI
+afd
 aeH
 aeH
 aeH
@@ -62442,7 +62480,7 @@ agb
 agb
 agb
 vIi
-agi
+adX
 aeQ
 aeS
 aeU
@@ -62466,9 +62504,9 @@ aeU
 aeU
 aeS
 aeQ
-agi
+adX
 aeH
-aeI
+afd
 aeQ
 aeS
 aeU
@@ -62492,7 +62530,7 @@ aeU
 aeU
 aeS
 aeQ
-aeI
+afd
 tis
 aeH
 aeH
@@ -62529,7 +62567,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 aeQ
 aeR
 aeS
@@ -62553,9 +62591,9 @@ aeR
 aeS
 aeR
 aeQ
-agi
+adX
 aeH
-aeI
+afd
 aeQ
 aeR
 aeS
@@ -62579,7 +62617,7 @@ aeR
 aeS
 aeR
 aeQ
-aeI
+afd
 aeH
 aeH
 aeH
@@ -62616,7 +62654,7 @@ agb
 agb
 agb
 agb
-agi
+adX
 bYw
 aeQ
 aeQ
@@ -62640,9 +62678,9 @@ aeQ
 aeQ
 aeQ
 bYw
-agi
+adX
 aeH
-aeI
+afd
 bYw
 aeQ
 aeQ
@@ -62666,7 +62704,7 @@ aeQ
 aeQ
 aeQ
 bYw
-aeI
+afd
 aeH
 aeH
 aeH
@@ -62703,57 +62741,57 @@ ahi
 ahi
 agi
 agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
-agi
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
+adX
 aVp
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
-aeI
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
+afd
 aeI
 aeI
 iuN
