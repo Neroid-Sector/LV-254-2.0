@@ -1,14 +1,14 @@
-/obj/docking_port/mobile/cargo_lift
-	name="Cargo Lift"
-	id=MOBILE_CARGO_ELEVATOR
+/obj/docking_port/mobile/small
+	name="Service Lift"
+	id=MOBILE_SMALL_ELEVATOR
 
 	// Map information
-	height=12
-	width=6
+	height=4
+	width=4
 	preferred_direction = NORTH
 	port_direction = SOUTH
 
-	area_type = /area/shuttle/cargo_lift/elevator
+	area_type = /area/shuttle/small/elevator
 
 	// Shuttle timings
 	callTime = 5 SECONDS
@@ -21,7 +21,7 @@
 	var/datum/door_controller/aggregate/door_control
 	var/elevator_network
 
-/obj/docking_port/mobile/cargo_lift/Initialize(mapload, ...)
+/obj/docking_port/mobile/small/Initialize(mapload, ...)
 	. = ..()
 	door_control = new()
 	door_control.label = "elevator"
@@ -29,30 +29,36 @@
 		for(var/obj/structure/machinery/door/door in shuttle_area)
 			door_control.add_door(door, door.id)
 
-/obj/docking_port/mobile/cargo_lift/Destroy(force, ...)
+/obj/docking_port/mobile/small/Destroy(force, ...)
 	. = ..()
 	QDEL_NULL(door_control)
 
-/obj/docking_port/mobile/cargo_lift/beforeShuttleMove(turf/newT, rotation, move_mode, obj/docking_port/mobile/moving_dock)
+/obj/docking_port/mobile/small/beforeShuttleMove(turf/newT, rotation, move_mode, obj/docking_port/mobile/moving_dock)
 	. = ..()
 	door_control.control_doors("force-lock-launch", "all", force=TRUE)
 
-/obj/docking_port/stationary/cargo_lift
+/obj/docking_port/mobile/small/north
+	elevator_network = "north"
+
+/obj/docking_port/mobile/small/south
+	elevator_network = "south"
+
+/obj/docking_port/stationary/small
 	dir=NORTH
-	height=12
-	width=6
+	height=4
+	width=4
 	// shutters to clear the area
 	var/airlock_area
 	var/airlock_exit
 	var/elevator_network
 
 	//elevator effects (four so the entire elevator doesn't vanish when there's one opaque obstacle between you and the actual elevator loc).
-	var/obj/effect/elevator/cargo/SW
-	var/obj/effect/elevator/cargo/SE
-	var/obj/effect/elevator/cargo/NW
-	var/obj/effect/elevator/cargo/NE
+	var/obj/effect/elevator/small/SW
+	var/obj/effect/elevator/small/SE
+	var/obj/effect/elevator/small/NW
+	var/obj/effect/elevator/small/NE
 
-/obj/docking_port/stationary/cargo_lift/Initialize(mapload)
+/obj/docking_port/stationary/small/Initialize(mapload)
 	. = ..()
 	// Create and offset some effects for the elevator shaft sprite.
 	SW = new(locate(src.x - 2, src.y - 2, src.z))
@@ -77,7 +83,7 @@
 	NE.invisibility = INVISIBILITY_ABSTRACT
 
 // Make the elevator shaft visible when the elevator leaves.
-/obj/docking_port/stationary/cargo_lift/on_departure(obj/docking_port/mobile/departing_shuttle)
+/obj/docking_port/stationary/small/on_departure(obj/docking_port/mobile/departing_shuttle)
     . = ..() // Call parent departure logic
 
     // 1. Make lift corners visible again
@@ -93,17 +99,17 @@
         door_control.control_doors("force-lock-launch")
     qdel(door_control)
 
-/obj/docking_port/stationary/cargo_lift
+/obj/docking_port/stationary/small
     /// Cached list of dock doors to avoid repeated world scans
     var/list/cached_doors
 
-/obj/docking_port/stationary/cargo_lift/proc/reset_invisibility()
+/obj/docking_port/stationary/small/proc/reset_invisibility()
     if(SW) SW.invisibility = INVISIBILITY_ABSTRACT
     if(SE) SE.invisibility = INVISIBILITY_ABSTRACT
     if(NW) NW.invisibility = INVISIBILITY_ABSTRACT
     if(NE) NE.invisibility = INVISIBILITY_ABSTRACT
 
-/obj/docking_port/stationary/cargo_lift/proc/get_doors()
+/obj/docking_port/stationary/small/proc/get_doors()
     // Return cached list if available
     if(cached_doors && length(cached_doors))
         return cached_doors
@@ -117,15 +123,15 @@
     cached_doors = found_doors
     return cached_doors
 
-/obj/docking_port/stationary/cargo_lift/on_arrival(obj/docking_port/mobile/arriving_shuttle)
+/obj/docking_port/stationary/small/on_arrival(obj/docking_port/mobile/arriving_shuttle)
     . = ..() // Call parent arrival logic
 
     // 1. Reset lift corner invisibility
     reset_invisibility()
 
-    // 2. Open elevator doors if this is a cargo lift
-    if(istype(arriving_shuttle, /obj/docking_port/mobile/cargo_lift))
-        var/obj/docking_port/mobile/cargo_lift/elevator = arriving_shuttle
+    // 2. Open elevator doors if this is a service lift
+    if(istype(arriving_shuttle, /obj/docking_port/mobile/small))
+        var/obj/docking_port/mobile/small/elevator = arriving_shuttle
         if(elevator.door_control)
             elevator.door_control.control_doors("open", airlock_exit)
 
@@ -140,15 +146,35 @@
     playsound(src, 'sound/machines/ping.ogg', 25, 1)
     playsound(arriving_shuttle, 'sound/machines/ping.ogg', 25, 1)
 
-/obj/docking_port/stationary/cargo_lift/occupied
-	name = "Lower Deck"
-	id = STAT_CARGO_OCCUPIED
-	airlock_area=/area/shuttle/cargo_lift/b
-	airlock_exit = "east"
-	roundstart_template = /datum/map_template/shuttle/cargo_lift
+/obj/docking_port/stationary/small/occupied
+	name = "Starboard Lower Deck"
+	id = STAT_SMALL_A
+	airlock_area=/area/shuttle/small/a
+	airlock_exit = "south"
+	roundstart_template = /datum/map_template/shuttle/small
+	elevator_network = "south"
 
-/obj/docking_port/stationary/cargo_lift/empty
-	name = "Middle Deck"
-	id = STAT_CARGO_EMPTY
-	airlock_exit = "east"
-	airlock_area=/area/shuttle/cargo_lift/a
+/obj/docking_port/stationary/small/empty
+	name = "Starboard UnderDeck"
+	id = STAT_SMALL_A
+	airlock_exit = "south"
+	airlock_area=/area/shuttle/small/c
+	elevator_network = "south"
+
+
+// North facing version
+/obj/docking_port/stationary/small/occupied/north
+	name = "Port Lower Deck"
+	id = STAT_SMALL_B
+	airlock_area=/area/shuttle/small/b
+	airlock_exit = "north"
+	roundstart_template = /datum/map_template/shuttle/small/north
+	elevator_network = "north"
+
+/obj/docking_port/stationary/small/empty/north
+	name = "Port Underdeck"
+	id = STAT_SMALL_B
+	airlock_exit = "north"
+	airlock_area=/area/shuttle/small/d
+	elevator_network = "north"
+

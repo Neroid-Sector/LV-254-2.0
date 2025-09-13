@@ -119,6 +119,13 @@
 #define STAT_CARGO_A "cargo_a"
 #define STAT_CARGO_B "cargo_b"
 
+#define MOBILE_SMALL_ELEVATOR "elevator_small"
+#define MOBILE_SMALL_ELEVATOR_NORTH "elevator_small_north"
+#define STAT_SMALL_EMPTY "elevator_small_empty"
+#define STAT_SMALL_OCCUPIED "elevator_small_occupied"
+#define STAT_SMALL_A "north"
+#define STAT_SMALL_B "south"
+
 #define MOBILE_SHUTTLE_LIFEBOAT_PORT "lifeboat-port"
 #define MOBILE_SHUTTLE_LIFEBOAT_STARBOARD "lifeboat-starboard"
 #define MOBILE_SHUTTLE_VEHICLE_ELEVATOR "vehicle_elevator"

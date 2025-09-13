@@ -2157,7 +2157,9 @@
 	req_access = list();
 	no_panel = 1;
 	dir = 1;
-	health = 1000
+	health = 9999999;
+	emp_proof = 1;
+	explo_proof = 1
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/maint/star/mid)
@@ -2188,6 +2190,9 @@
 	},
 /area/blackgold/lower/maint/star/mid)
 "ahe" = (
+/obj/structure/machinery/computer/working_joe{
+	pixel_y = 16
+	},
 /turf/open/floor/almayer/aicore/no_build/ai_silver{
 	dir = 5
 	},
@@ -2198,7 +2203,7 @@
 	name = "\improper Elevator Lock"
 	},
 /turf/open/floor/almayer/test_floor6,
-/area/blackgold/lower/maint/star/mid)
+/area/shuttle/small/a)
 "ahg" = (
 /obj/structure/machinery/light/small/red{
 	dir = 8
@@ -2328,8 +2333,9 @@
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/aft)
 "ahL" = (
+/obj/docking_port/stationary/small/empty/north,
 /turf/open/floor/almayer/empty,
-/area/blackgold/underdeck)
+/area/shuttle/small/d)
 "ahM" = (
 /turf/closed/wall/almayer,
 /area/blackgold/middle/maint/port/aft)
@@ -2354,6 +2360,9 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/fore)
+"ahR" = (
+/turf/closed/wall/almayer/outer,
+/area/shuttle/small/d)
 "ahS" = (
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer/no_build/plate,
@@ -2413,8 +2422,9 @@
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/middle/maint/port/aft)
 "aid" = (
+/obj/docking_port/stationary/small/occupied/north,
 /turf/open_space,
-/area/blackgold/lower/maint/port/mid)
+/area/shuttle/small/b)
 "aie" = (
 /turf/open/floor/almayer/black/northwest,
 /area/blackgold/middle/rooms/hangar)
@@ -7214,7 +7224,7 @@
 	pixel_x = 2
 	},
 /obj/structure/machinery/scoreboard{
-	id = "basketball";
+	id = "BG Basketball";
 	pixel_y = 30
 	},
 /turf/open/floor/almayer/plating,
@@ -7380,8 +7390,9 @@
 /turf/closed/wall/almayer,
 /area/blackgold/lower/hallways/star/fore)
 "azA" = (
+/obj/docking_port/stationary/small/occupied,
 /turf/open_space,
-/area/blackgold/lower/maint/star/mid)
+/area/shuttle/small/a)
 "azB" = (
 /obj/structure/machinery/computer/crew,
 /turf/open/floor/almayer/sterile_green_corner/west,
@@ -10940,7 +10951,9 @@
 /turf/closed/wall/almayer,
 /area/blackgold/upper/rooms/evacuation/aft)
 "aKW" = (
-/obj/structure/morgue/crematorium,
+/obj/structure/morgue/crematorium{
+	id = "BG Morgue"
+	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/upper/rooms/medical/morgue)
 "aKX" = (
@@ -24757,6 +24770,55 @@
 /obj/structure/surface/rack,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/mid)
+"bzS" = (
+/turf/open/floor/almayer/empty,
+/area/shuttle/small/d)
+"bzT" = (
+/turf/closed/wall/almayer/outer,
+/area/shuttle/small/c)
+"bzU" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = null;
+	name = "\improper Elevator Lock"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/shuttle/small/c)
+"bzV" = (
+/obj/docking_port/stationary/small/empty,
+/turf/open/floor/almayer/empty,
+/area/shuttle/small/c)
+"bzW" = (
+/turf/open/floor/almayer/empty,
+/area/shuttle/small/c)
+"bzX" = (
+/turf/closed/wall/almayer/outer,
+/area/shuttle/small/b)
+"bzY" = (
+/turf/open_space,
+/area/shuttle/small/b)
+"bzZ" = (
+/obj/structure/machinery/scoreboard_button{
+	id = "BG Basketball";
+	name = "Scoreboard Reset Button";
+	pixel_y = -21
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/rooms/gym)
+"bAa" = (
+/turf/closed/wall/almayer/outer,
+/area/shuttle/small/a)
+"bAb" = (
+/turf/open_space,
+/area/shuttle/small/a)
+"bAc" = (
+/obj/structure/machinery/crema_switch{
+	pixel_x = -23;
+	req_access_txt = "25";
+	pixel_y = 25;
+	id = "BG Morgue"
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/upper/rooms/medical/morgue)
 "bAh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -25601,18 +25663,6 @@
 /obj/structure/bed/chair/comfy/alpha,
 /turf/open/floor/almayer/redfull2,
 /area/blackgold/middle/rooms/briefing)
-"cRX" = (
-/obj/structure/machinery/computer/shuttle/cargo{
-	pixel_y = 9;
-	pixel_x = -23;
-	req_one_access = list(19,21)
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 3.3
-	},
-/turf/open/floor/almayer/plate,
-/area/blackgold/middle/rooms/req)
 "cSa" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced/external{
 	name = "\improper Cell 4";
@@ -26230,7 +26280,7 @@
 	name = "\improper Elevator Lock"
 	},
 /turf/open/floor/almayer/test_floor6,
-/area/blackgold/lower/maint/port/mid)
+/area/shuttle/small/b)
 "ebO" = (
 /obj/structure/machinery/vending/snack/packaged{
 	pixel_y = 16;
@@ -28196,7 +28246,7 @@
 /area/blackgold/middle/rooms/orbital)
 "hfb" = (
 /obj/structure/machinery/flasher{
-	id = "briefing_flash";
+	id = "BG Briefing";
 	range = 12;
 	pixel_y = 8;
 	pixel_x = -8;
@@ -28610,11 +28660,6 @@
 "hMl" = (
 /obj/structure/platform/metal/ship/corner/east,
 /obj/structure/platform/metal/ship/corner/west,
-/obj/structure/machinery/computer/shuttle/cargo{
-	pixel_y = 9;
-	pixel_x = -23;
-	req_one_access = list(19,21)
-	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
 "hMY" = (
@@ -29559,6 +29604,9 @@
 /turf/open/floor/plating/almayer/no_build,
 /area/almayer/hallways/lower/port_midship_hallway)
 "jrq" = (
+/obj/structure/machinery/computer/working_joe{
+	pixel_y = 16
+	},
 /turf/open/floor/almayer/aicore/no_build/ai_silver{
 	dir = 5
 	},
@@ -30007,7 +30055,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/flasher_button{
-	id = "briefing_flash";
+	id = "BG Briefing";
 	name = "Briefing Flasher";
 	pixel_y = 5;
 	req_access_txt = "19"
@@ -30099,7 +30147,9 @@
 	},
 /area/blackgold/lower/rooms/aicore)
 "kyF" = (
-/obj/docking_port/stationary/cargo/empty,
+/obj/docking_port/stationary/cargo/empty{
+	elevator_network = "BG Elevator Cargo"
+	},
 /turf/open_space,
 /area/shuttle/cargo/a)
 "kzg" = (
@@ -34496,7 +34546,7 @@
 	name = "\improper Elevator Lock"
 	},
 /turf/open/floor/almayer/test_floor6,
-/area/blackgold/underdeck)
+/area/shuttle/small/d)
 "rdo" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1;
@@ -35887,7 +35937,9 @@
 	req_access = list();
 	no_panel = 1;
 	dir = 1;
-	health = 1000
+	health = 9999999;
+	emp_proof = 1;
+	explo_proof = 1
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/maint/port/mid)
@@ -36065,8 +36117,9 @@
 	req_one_access = list(31,91,92,125);
 	req_access = list();
 	no_panel = 1;
-	health = 1000;
-	locked = 1
+	health = 9999999;
+	emp_proof = 1;
+	explo_proof = 1
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/underdeck)
@@ -36283,7 +36336,9 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/telecomms)
 "uom" = (
-/obj/docking_port/stationary/cargo/occupied,
+/obj/docking_port/stationary/cargo/occupied{
+	elevator_network = "BG Elevator Cargo"
+	},
 /turf/open/floor/almayer/empty/requisitions,
 /area/shuttle/cargo/b)
 "upt" = (
@@ -49570,39 +49625,12 @@ lrC
 obL
 obL
 obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-xfB
-xfB
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
+bzT
+bzT
+bzT
+bzT
+bzT
+bzT
 obL
 obL
 obL
@@ -49625,6 +49653,33 @@ obL
 obL
 obL
 obL
+obL
+obL
+obL
+obL
+obL
+obL
+obL
+obL
+obL
+obL
+obL
+obL
+xfB
+xfB
+obL
+obL
+obL
+obL
+obL
+obL
+obL
+ahR
+ahR
+ahR
+ahR
+ahR
+ahR
 obL
 obL
 obL
@@ -49657,12 +49712,12 @@ lrC
 obL
 obL
 obL
-obL
-ahL
-ahL
-ahL
-ahL
-obL
+bzT
+bzW
+bzW
+bzW
+bzV
+bzT
 etm
 jrx
 obL
@@ -49706,12 +49761,12 @@ obL
 obL
 etm
 jrx
-obL
+ahR
+bzS
+bzS
+bzS
 ahL
-ahL
-ahL
-ahL
-obL
+ahR
 obL
 obL
 obL
@@ -49744,12 +49799,12 @@ lrC
 obL
 obL
 obL
-obL
-ahL
-ahL
-ahL
-ahL
-rbX
+bzT
+bzW
+bzW
+bzW
+bzW
+bzU
 pIF
 pIF
 tSn
@@ -49794,11 +49849,11 @@ tSn
 pIF
 pIF
 rbX
-ahL
-ahL
-ahL
-ahL
-obL
+bzS
+bzS
+bzS
+bzS
+ahR
 obL
 obL
 obL
@@ -49831,12 +49886,12 @@ lrC
 obL
 obL
 obL
-obL
-ahL
-ahL
-ahL
-ahL
-rbX
+bzT
+bzW
+bzW
+bzW
+bzW
+bzU
 pIF
 pIF
 hRn
@@ -49881,11 +49936,11 @@ hRn
 pIF
 pIF
 rbX
-ahL
-ahL
-ahL
-ahL
-obL
+bzS
+bzS
+bzS
+bzS
+ahR
 obL
 obL
 obL
@@ -49918,12 +49973,12 @@ lrC
 obL
 obL
 obL
-obL
-ahL
-ahL
-ahL
-ahL
-obL
+bzT
+bzW
+bzW
+bzW
+bzW
+bzT
 jKP
 xYd
 obL
@@ -49967,12 +50022,12 @@ obL
 obL
 jKP
 xYd
-obL
-ahL
-ahL
-ahL
-ahL
-obL
+ahR
+bzS
+bzS
+bzS
+bzS
+ahR
 obL
 obL
 obL
@@ -50005,6 +50060,28 @@ lrC
 obL
 obL
 obL
+bzT
+bzT
+bzT
+bzT
+bzT
+bzT
+obL
+obL
+obL
+obL
+obL
+obL
+obL
+xfB
+xfB
+obL
+obL
+xfB
+xfB
+xfB
+obL
+obL
 obL
 obL
 obL
@@ -50020,28 +50097,6 @@ obL
 obL
 xfB
 xfB
-obL
-obL
-xfB
-xfB
-xfB
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-obL
-xfB
-xfB
 xfB
 obL
 obL
@@ -50054,12 +50109,12 @@ obL
 obL
 obL
 obL
-obL
-obL
-obL
-obL
-obL
-obL
+ahR
+ahR
+ahR
+ahR
+ahR
+ahR
 obL
 obL
 obL
@@ -66206,7 +66261,7 @@ ayb
 axW
 axH
 axH
-axB
+bzZ
 azq
 axu
 axg
@@ -70451,12 +70506,12 @@ lrC
 agR
 agb
 bjB
-agR
-agR
-agR
-agR
-agR
-agR
+bAa
+bAa
+bAa
+bAa
+bAa
+bAa
 ahc
 agX
 agR
@@ -70500,12 +70555,12 @@ aeI
 aeF
 afa
 tAM
-aeF
-aeF
-aeF
-aeF
-aeF
-aeF
+bzX
+bzX
+bzX
+bzX
+bzX
+bzX
 aer
 aeH
 aeF
@@ -70538,12 +70593,12 @@ lrC
 agR
 agb
 bjB
-agR
+bAa
+bAb
+bAb
+bAb
 azA
-azA
-azA
-azA
-agR
+bAa
 ahd
 agY
 agR
@@ -70587,12 +70642,12 @@ aeH
 aeF
 iph
 rqd
-aeF
+bzX
+bzY
+bzY
+bzY
 aid
-aid
-aid
-aid
-aeF
+bzX
 bbo
 aeH
 aeF
@@ -70625,11 +70680,11 @@ lrC
 agR
 agb
 bjB
-agR
-azA
-azA
-azA
-azA
+bAa
+bAb
+bAb
+bAb
+bAb
 ahf
 agZ
 agZ
@@ -70675,11 +70730,11 @@ aeF
 lcA
 lcA
 ebN
-aid
-aid
-aid
-aid
-aeF
+bzY
+bzY
+bzY
+bzY
+bzX
 bbo
 aeH
 aeF
@@ -70712,11 +70767,11 @@ lrC
 agR
 agb
 bjB
-agR
-azA
-azA
-azA
-azA
+bAa
+bAb
+bAb
+bAb
+bAb
 ahf
 agZ
 agZ
@@ -70762,11 +70817,11 @@ aeF
 lcA
 lcA
 ebN
-aid
-aid
-aid
-aid
-aeF
+bzY
+bzY
+bzY
+bzY
+bzX
 bbp
 aeH
 aeF
@@ -70799,12 +70854,12 @@ lrC
 agR
 agb
 bjB
-agR
-azA
-azA
-azA
-azA
-agR
+bAa
+bAb
+bAb
+bAb
+bAb
+bAa
 ahe
 aha
 agR
@@ -70848,12 +70903,12 @@ aeH
 aeF
 jrq
 gyA
-aeF
-aid
-aid
-aid
-aid
-aeF
+bzX
+bzY
+bzY
+bzY
+bzY
+bzX
 aer
 aeH
 aeF
@@ -70886,12 +70941,12 @@ lrC
 agR
 ahi
 blM
-agR
-agR
-agR
-agR
-agR
-agR
+bAa
+bAa
+bAa
+bAa
+bAa
+bAa
 agR
 agR
 agR
@@ -70935,12 +70990,12 @@ afd
 aeF
 aeF
 aeF
-aeF
-aeF
-aeF
-aeF
-aeF
-aeF
+bzX
+bzX
+bzX
+bzX
+bzX
+bzX
 afo
 iuN
 aeF
@@ -89083,7 +89138,7 @@ aXZ
 aWF
 aWF
 aWF
-cRX
+aWF
 aWF
 aWF
 aWF
@@ -116342,7 +116397,7 @@ aLS
 aLC
 aKv
 aKW
-aKH
+bAc
 aKG
 aKw
 aKw

@@ -85,7 +85,31 @@
 	name = "Cargo Lift A"
 
 /area/shuttle/cargo/b
-	name = "Cargo Lift A"
+	name = "Cargo Lift B"
+
+
+// Service lift
+/area/shuttle/small
+	name = "Service Lift"
+	icon = 'icons/turf/area_almayer.dmi'
+	icon_state = "lifeboat"
+
+/area/shuttle/small/elevator
+	requires_power = TRUE
+	unlimited_power = FALSE
+	powernet_name = "ship"
+
+/area/shuttle/small/a
+	name = "Service Lift A"
+
+/area/shuttle/small/b
+	name = "Service Lift B"
+
+/area/shuttle/small/c
+	name = "Service Lift C"
+
+/area/shuttle/small/d
+	name = "Service Lift D"
 
 /area/shuttle/generic_shuttle
 	name = "Freight Tram"
