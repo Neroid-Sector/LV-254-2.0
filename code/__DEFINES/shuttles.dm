@@ -119,7 +119,7 @@
 #define STAT_CARGO_A "cargo_a"
 #define STAT_CARGO_B "cargo_b"
 
-#define MOBILE_ELEVATOR_SMALL "elevator_small"
+#define MOBILE_SMALL_ELEVATOR "elevator_small"
 #define STAT_SMALL_EMPTY "elevator_small_empty"
 #define STAT_SMALL_OCCUPIED "elevator_small_occupied"
 #define STAT_SMALL_PORT_LOWER "small_port_lower"

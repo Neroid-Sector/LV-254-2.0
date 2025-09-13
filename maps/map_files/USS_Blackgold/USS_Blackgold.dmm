@@ -223,6 +223,7 @@
 /obj/structure/machinery/light/spot{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/rooms/engineering)
 "aaO" = (
@@ -236,6 +237,10 @@
 "aaP" = (
 /obj/structure/machinery/light{
 	dir = 8
+	},
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/middle/rooms/liaison)
@@ -309,6 +314,9 @@
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/middle/rooms/medical/chemistry)
 "abe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/middle/rooms/medical/chemistry)
 "abf" = (
@@ -663,6 +671,7 @@
 	name = "\improper Treatment Center";
 	req_access = null
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical)
 "aci" = (
@@ -671,6 +680,7 @@
 	name = "\improper Pharmacy";
 	req_access = null
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical/chemistry)
 "acj" = (
@@ -790,6 +800,7 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical/operating/one)
 "acB" = (
@@ -852,6 +863,9 @@
 /area/blackgold/middle/rooms/medical/operating/one)
 "acI" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/middle/rooms/medical/operating/one)
 "acJ" = (
@@ -1336,6 +1350,10 @@
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/upper/rooms/computer/storage)
 "aed" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/upper/rooms/computer/storage)
 "aee" = (
@@ -1387,6 +1405,13 @@
 /obj/structure/stairs,
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
+"aep" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "aeq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -1398,6 +1423,12 @@
 	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
+"aer" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "aes" = (
 /obj/structure/platform/metal/ship/corner/north,
 /turf/open/floor/almayer/silver/southwest,
@@ -1480,6 +1511,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/flooredge/southeast,
 /area/blackgold/upper/rooms/cic)
 "aeL" = (
@@ -1505,6 +1537,7 @@
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/maint/port/mid)
 "aeQ" = (
@@ -1592,6 +1625,7 @@
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/aft)
 "afm" = (
@@ -1606,6 +1640,13 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/fore)
+"afo" = (
+/obj/structure/curtain/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "afp" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/plating/plating_catwalk,
@@ -1765,6 +1806,9 @@
 	pixel_y = -3;
 	pixel_x = 5
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo)
 "afW" = (
@@ -1826,6 +1870,13 @@
 "agm" = (
 /turf/closed/wall/almayer/outer,
 /area/blackgold/lower/maint/star/aft)
+"agn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "ago" = (
 /obj/vehicle/train/cargo/trolley,
 /turf/open/floor/plating/plating_catwalk,
@@ -1901,6 +1952,9 @@
 /obj/structure/window/reinforced/toughened{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "agB" = (
@@ -1968,6 +2022,10 @@
 /obj/structure/machinery/door/airlock/almayer/maint,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/maint/star/fore)
+"agO" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "agP" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/hallways/port/fore)
@@ -2287,6 +2345,9 @@
 	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office";
 	req_access = list(1)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
@@ -3105,6 +3166,9 @@
 /area/blackgold/middle/rooms/squad)
 "alu" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad)
 "alv" = (
@@ -3119,6 +3183,9 @@
 "alx" = (
 /obj/structure/prop/hybrisa/misc/machinery/screens/wood_clock{
 	pixel_y = 31
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
@@ -3177,7 +3244,7 @@
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/transmitter/rotary{
 	name = "Commanding Officer's Office";
-	phone_category = "Offices";
+	phone_category = "Blackgold";
 	phone_id = "Commanding Officer's Office";
 	pixel_x = -4
 	},
@@ -3284,6 +3351,7 @@
 /area/blackgold/middle/rooms/squad)
 "ame" = (
 /obj/structure/roof/hybrisa/lattice_prop/lattice_1,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/squad)
 "amf" = (
@@ -3352,6 +3420,7 @@
 	pixel_y = -12;
 	layer = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/squad)
 "amr" = (
@@ -3393,6 +3462,7 @@
 /area/blackgold/middle/maint/port/aft)
 "amy" = (
 /obj/structure/roof/hybrisa/lattice_prop/lattice_2,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/squad)
 "amz" = (
@@ -3565,6 +3635,9 @@
 	pixel_y = -7;
 	layer = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/hangar)
 "ani" = (
@@ -3593,6 +3666,15 @@
 "ann" = (
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/squad/prep)
+"ano" = (
+/turf/closed/wall/almayer,
+/area/blackgold/lower/rooms/sea)
+"anp" = (
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
 "anq" = (
 /turf/closed/wall/almayer,
 /area/blackgold/middle/rooms/req)
@@ -3669,6 +3751,31 @@
 "anH" = (
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/req)
+"anI" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/transmitter/rotary{
+	name = "Senior Enlisted Advisor Office Telephone";
+	phone_category = "Blackgold";
+	phone_id = "Senior Enlisted Advisor's Office";
+	pixel_x = -7
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Brig Cell 5";
+	name = "SEA Office Shutters";
+	pixel_y = -1;
+	pixel_x = 6;
+	req_one_access_txt = "19;29"
+	},
+/obj/item/paper_bin/uscm{
+	pixel_y = 19;
+	pixel_x = 6
+	},
+/obj/item/tool/pen{
+	pixel_x = 5;
+	pixel_y = 15
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
 "anJ" = (
 /obj/structure/machinery/light/blue{
 	dir = 8
@@ -3721,6 +3828,9 @@
 /area/blackgold/middle/rooms/workshop)
 "anY" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
 "anZ" = (
@@ -3741,6 +3851,13 @@
 	},
 /turf/open/floor/almayer/no_build/test_floor4,
 /area/blackgold/underdeck/req)
+"aoc" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/machinery/light,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
 "aod" = (
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/req)
@@ -3785,6 +3902,16 @@
 "aol" = (
 /turf/open/floor/almayer/greencorner/north,
 /area/blackgold/middle/rooms/squad/prep)
+"aom" = (
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
+"aon" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/faxmachine/uscm/almayer{
+	sub_name = "SEA"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
 "aoo" = (
 /obj/structure/machinery/light/spot{
 	dir = 8
@@ -3807,6 +3934,16 @@
 "aos" = (
 /turf/open/floor/almayer/greencorner/south,
 /area/blackgold/middle/rooms/squad/prep)
+"aot" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG SEA";
+	name = "\improper Privacy Shutters"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/turf/open/floor/plating,
+/area/blackgold/lower/rooms/sea)
 "aou" = (
 /turf/open/floor/almayer/green/southeast,
 /area/blackgold/middle/rooms/req)
@@ -3851,6 +3988,13 @@
 "aoC" = (
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/req)
+"aoD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "aoE" = (
 /obj/structure/machinery/light/blue{
 	dir = 8
@@ -4222,6 +4366,7 @@
 /obj/structure/coatrack{
 	pixel_x = -8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
 "aqk" = (
@@ -4243,6 +4388,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/cryo)
 "aqq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/range)
 "aqr" = (
@@ -4400,6 +4548,9 @@
 /area/blackgold/lower/hallways/star/fore)
 "ari" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/range/star)
 "arj" = (
@@ -4475,6 +4626,9 @@
 	dir = 1;
 	req_access = list()
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/range/star)
 "arw" = (
@@ -4485,9 +4639,16 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta)
 "arx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/lower/rooms/range/star)
 "ary" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/redcorner/west,
 /area/blackgold/lower/rooms/range/star)
 "arz" = (
@@ -4700,7 +4861,10 @@
 /turf/open/floor/almayer/black/south,
 /area/blackgold/middle/hallways/port/fore)
 "asC" = (
-/obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
 /turf/open/floor/almayer/black/south,
 /area/blackgold/middle/hallways/port/fore)
 "asD" = (
@@ -4794,15 +4958,27 @@
 /turf/open/floor/almayer/blackcorner/south,
 /area/blackgold/middle/hallways/mid/aft)
 "atb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/hallways/mid/mid)
 "atc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/hallways/mid/mid)
 "atd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/blackgold/middle/hallways/mid/mid)
 "ate" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/black/east,
 /area/blackgold/middle/hallways/mid/mid)
 "atf" = (
@@ -4844,6 +5020,7 @@
 /turf/open/floor/almayer/silver/northeast,
 /area/blackgold/middle/hallways/mid/aft)
 "atr" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/flooredge/northeast,
 /area/blackgold/upper/rooms/cic)
 "ats" = (
@@ -4878,7 +5055,9 @@
 /turf/open/floor/almayer/black/north,
 /area/blackgold/middle/hallways/star/fore)
 "atC" = (
-/obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera"
+	},
 /turf/open/floor/almayer/black/north,
 /area/blackgold/middle/hallways/star/fore)
 "atD" = (
@@ -4949,6 +5128,10 @@
 /turf/open/floor/almayer/blue/northeast,
 /area/blackgold/upper/hallways/mid/fore)
 "atY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer,
 /area/blackgold/upper/hallways/mid/fore)
 "atZ" = (
@@ -5414,9 +5597,13 @@
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/blackgold/middle/rooms/squad)
 "avD" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad)
 "avE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/blackgold/middle/hallways/mid/mid)
 "avF" = (
@@ -5452,6 +5639,9 @@
 /area/blackgold/middle/rooms/squad/prep)
 "avK" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/middle/rooms/medical/chemistry)
 "avL" = (
@@ -5701,7 +5891,7 @@
 "awo" = (
 /obj/structure/transmitter{
 	name = "CMO Office Telephone";
-	phone_category = "Offices";
+	phone_category = "Blackgold";
 	phone_id = "CMO Office";
 	dir = 8;
 	pixel_x = 14
@@ -5824,6 +6014,7 @@
 	name = "\improper Upper Medbay Shutters"
 	},
 /obj/structure/machinery/door/poddoor/almayer/biohazard/white,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/medical)
 "awH" = (
@@ -6076,19 +6267,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/chapel)
 "axz" = (
-/obj/structure/machinery/conveyor{
-	dir = 4;
-	id = "gym_1";
-	name = "treadmill"
-	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
 "axA" = (
-/obj/structure/machinery/conveyor{
-	dir = 4;
-	id = "gym_1";
-	name = "treadmill"
-	},
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/lower/rooms/gym)
 "axB" = (
@@ -6121,10 +6302,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
 "axF" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/conveyor_switch{
-	id = "gym_1";
-	name = "treadmill switch"
+/obj/structure/machinery/treadmill/console{
+	dir = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
@@ -6167,14 +6346,6 @@
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/gym)
-"axP" = (
-/obj/structure/machinery/conveyor{
-	dir = 4;
-	id = "gym_1";
-	name = "treadmill"
-	},
-/turf/open/floor/almayer/green/west,
-/area/blackgold/lower/rooms/gym)
 "axQ" = (
 /turf/open/floor/almayer/green/east,
 /area/blackgold/lower/rooms/gym)
@@ -6201,6 +6372,9 @@
 /turf/open/floor/almayer/arena/east,
 /area/blackgold/lower/rooms/gym)
 "axV" = (
+/obj/structure/machinery/treadmill{
+	dir = 8
+	},
 /turf/open/floor/almayer/green/northwest,
 /area/blackgold/lower/rooms/gym)
 "axW" = (
@@ -6226,6 +6400,9 @@
 /obj/structure/window/reinforced{
 	dir = 1;
 	layer = 3
+	},
+/obj/structure/bed/chair{
+	dir = 1
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/gym)
@@ -6363,6 +6540,9 @@
 /area/blackgold/lower/rooms/gym)
 "ays" = (
 /obj/structure/platform/metal/ship,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/orange/southeast,
 /area/blackgold/upper/rooms/cic)
 "ayt" = (
@@ -6832,6 +7012,7 @@
 /obj/structure/machinery/light/blue{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/black/east,
 /area/blackgold/lower/hallways/star/fore)
 "azq" = (
@@ -7198,12 +7379,18 @@
 /obj/structure/machinery/disposal{
 	pixel_x = -1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/medical/research)
 "aAs" = (
 /obj/structure/reagent_dispensers/water_cooler/walk_past{
 	pixel_y = 16;
 	pixel_x = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/sterile_green_corner/north,
 /area/blackgold/upper/rooms/medical/research)
@@ -7230,6 +7417,7 @@
 	name = "\improper Research Reception Laboratory";
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/medical/research)
 "aAy" = (
@@ -7298,6 +7486,15 @@
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/medical/research)
+"aAK" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "aAL" = (
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/blackgold/upper/rooms/medical/containment)
@@ -7314,6 +7511,12 @@
 	},
 /turf/open/floor/almayer/sterile_green,
 /area/blackgold/upper/rooms/medical/containment)
+"aAN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/aft)
 "aAO" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -7501,9 +7704,8 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/medical)
 "aBk" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_10"
-	},
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/medical/research)
 "aBl" = (
@@ -7511,8 +7713,11 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/medical/research)
 "aBm" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/machinery/light/spot,
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/emerald/southeast,
 /area/blackgold/lower/rooms/conference)
 "aBn" = (
@@ -7544,6 +7749,7 @@
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/conference)
 "aBu" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/emerald/east,
 /area/blackgold/lower/rooms/conference)
 "aBv" = (
@@ -7649,6 +7855,7 @@
 /turf/open/floor/almayer/emerald/northwest,
 /area/blackgold/lower/rooms/conference)
 "aBS" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/emerald/northeast,
 /area/blackgold/lower/rooms/conference)
 "aBT" = (
@@ -7825,6 +8032,10 @@
 	density = 0;
 	layer = 2.9
 	},
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
 /turf/open/floor/almayer/red/west,
 /area/blackgold/lower/rooms/conference)
 "aCu" = (
@@ -7919,6 +8130,10 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/engineering)
 "aCQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/orangecorner/west,
 /area/blackgold/lower/rooms/engineering)
 "aCR" = (
@@ -8567,7 +8782,7 @@
 "aFj" = (
 /obj/structure/transmitter{
 	name = "CE Office Telephone";
-	phone_category = "Offices";
+	phone_category = "Blackgold";
 	phone_id = "CE Office";
 	pixel_x = -8;
 	pixel_y = 24
@@ -8834,6 +9049,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/pumps/port)
 "aGe" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/squad)
 "aGf" = (
@@ -8927,6 +9143,9 @@
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering)
 "aGD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/engineering)
 "aGE" = (
@@ -8950,6 +9169,9 @@
 /area/blackgold/middle/rooms/engineering)
 "aGJ" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/orange/southwest,
 /area/blackgold/middle/rooms/engineering/ot)
 "aGK" = (
@@ -9053,6 +9275,9 @@
 	req_one_access = list(19,35);
 	name = "\improper Ordnance Workshop";
 	dir = 2
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering/ot)
@@ -9251,6 +9476,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/rooms/engineering)
 "aHB" = (
@@ -9269,6 +9495,9 @@
 "aHE" = (
 /obj/structure/bed/chair{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/blue/north,
 /area/blackgold/middle/rooms/workshop)
@@ -9647,6 +9876,8 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/orange/northeast,
 /area/blackgold/middle/rooms/engineering)
 "aII" = (
@@ -9794,6 +10025,10 @@
 /turf/closed/wall/almayer/white,
 /area/blackgold/middle/rooms/medical/cmo)
 "aJc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/sterile_green_side,
 /area/blackgold/middle/rooms/medical/chemistry)
 "aJd" = (
@@ -9864,6 +10099,7 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical/operating/two)
 "aJu" = (
@@ -9880,6 +10116,7 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/medical/operating/three)
 "aJx" = (
@@ -9897,6 +10134,9 @@
 /area/blackgold/middle/rooms/medical/operating/two)
 "aJB" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/middle/rooms/medical/operating/two)
 "aJC" = (
@@ -9908,6 +10148,9 @@
 /area/blackgold/middle/rooms/medical/operating/three)
 "aJE" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/middle/rooms/medical/operating/three)
 "aJF" = (
@@ -10498,6 +10741,10 @@
 /turf/open/floor/plating/plating_catwalk/no_build,
 /area/blackgold/upper/rooms/hangar)
 "aLC" = (
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/blackgold/upper/rooms/medical/morgue)
 "aLD" = (
@@ -10543,6 +10790,9 @@
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "\improper Kitchen";
 	req_access = list(30)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/kitchen)
@@ -10611,12 +10861,13 @@
 /obj/structure/bed/chair/comfy/beige{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/kitchen)
 "aMb" = (
 /obj/structure/transmitter{
 	name = "Kitchen Telephone";
-	phone_category = "Almayer";
+	phone_category = "Blackgold";
 	phone_id = "Kitchen";
 	pixel_y = -5;
 	dir = 4;
@@ -10728,6 +10979,9 @@
 /area/blackgold/upper/rooms/kitchen)
 "aMt" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/kitchen)
 "aMu" = (
@@ -10993,6 +11247,7 @@
 	req_one_access = null;
 	req_access = list(25)
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/medical/morgue)
 "aNg" = (
@@ -11060,6 +11315,7 @@
 /turf/open_space,
 /area/blackgold/middle/rooms/hangar)
 "aNt" = (
+/obj/structure/machinery/disposal,
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/blackgold/upper/rooms/medical)
 "aNu" = (
@@ -11074,6 +11330,7 @@
 	pixel_x = 24;
 	req_one_access = list(8,19)
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/upper/rooms/medical)
 "aNw" = (
@@ -11088,10 +11345,20 @@
 "aNz" = (
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/medical/research)
+"aNA" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/aft)
 "aNB" = (
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/blackgold/upper/rooms/medical)
 "aNC" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/blackgold/upper/rooms/medical)
 "aND" = (
@@ -11137,6 +11404,13 @@
 "aNP" = (
 /turf/open/floor/almayer/sterile_green_side/southwest,
 /area/blackgold/upper/rooms/medical)
+"aNQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/aft)
 "aNR" = (
 /turf/open/floor/almayer/sterile_green_side/southwest,
 /area/blackgold/upper/rooms/medical/research)
@@ -11167,6 +11441,9 @@
 	name = "\improper Research Lab Shutters"
 	},
 /obj/structure/machinery/door/poddoor/almayer/biohazard/white{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor6,
@@ -11203,6 +11480,10 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/medical/research)
+"aOd" = (
+/obj/structure/machinery/power/apc/almayer/west,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
 "aOe" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/lower/rooms/engineering/laundry)
@@ -11261,6 +11542,9 @@
 /area/blackgold/lower/rooms/engineering/laundry)
 "aOn" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/engineering/laundry)
 "aOo" = (
@@ -11280,6 +11564,7 @@
 	},
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "aOr" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/engineering/laundry)
 "aOs" = (
@@ -11619,6 +11904,7 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/door{
 	id = "BG Corporate"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/liaison)
 "aPz" = (
@@ -11656,6 +11942,15 @@
 	},
 /turf/open/floor/almayer/silver/southwest,
 /area/blackgold/middle/rooms/reporter)
+"aPI" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	dir = 8;
+	pixel_y = 4;
+	pixel_x = -2
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
 "aPJ" = (
 /turf/open/floor/almayer/silver,
 /area/blackgold/middle/rooms/reporter)
@@ -11732,6 +12027,12 @@
 /obj/effect/landmark/start/crew_chief,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/workshop)
+"aPU" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
 "aPV" = (
 /turf/open/floor/almayer/silver/east,
 /area/blackgold/middle/rooms/reporter)
@@ -11764,7 +12065,7 @@
 	},
 /obj/structure/transmitter/rotary{
 	name = "Reporter Telephone";
-	phone_category = "Almayer";
+	phone_category = "Blackgold";
 	phone_id = "Reporter";
 	pixel_x = 8;
 	pixel_y = -3
@@ -11902,6 +12203,9 @@
 	dir = 4;
 	icon_state = "p_stair_full"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/middle/rooms/workshop)
 "aQu" = (
@@ -11909,6 +12213,10 @@
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/brig/medical)
 "aQv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/plating_striped/northeast,
 /area/blackgold/middle/rooms/workshop)
 "aQw" = (
@@ -11968,10 +12276,6 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/workshop)
 "aQH" = (
-/obj/structure/machinery/door/poddoor/hybrisa/shutters{
-	id = "BG Brig Cell 3";
-	name = "\improper Cell 3 Shutters"
-	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/cells)
 "aQI" = (
@@ -11983,8 +12287,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
 "aQJ" = (
-/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
-	name = "\improper Cell 1 Shutters";
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced/external{
+	name = "\improper Cell 2";
 	id = "BG Brig Cell 2"
 	},
 /turf/open/floor/almayer/plate,
@@ -12100,13 +12404,6 @@
 "aRe" = (
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/rooms/garden)
-"aRf" = (
-/obj/structure/machinery/door/poddoor/hybrisa/shutters{
-	id = "BG Brig Cell 2";
-	name = "\improper Cell 2 Shutters"
-	},
-/turf/open/floor/almayer/plate,
-/area/blackgold/lower/rooms/brig/cells)
 "aRg" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -12138,6 +12435,9 @@
 /area/blackgold/upper/rooms/garden)
 "aRm" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/intel)
 "aRn" = (
@@ -12401,9 +12701,16 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/workshop)
 "aSd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/middle/rooms/workshop)
 "aSe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/workshop)
 "aSf" = (
@@ -12421,6 +12728,10 @@
 /obj/item/tool/lighter/zippo{
 	pixel_y = 10;
 	pixel_x = 7
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/almayer/blue/northeast,
 /area/blackgold/middle/rooms/workshop)
@@ -12456,6 +12767,7 @@
 /area/blackgold/middle/rooms/workshop)
 "aSm" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
 "aSn" = (
@@ -12479,6 +12791,7 @@
 /area/blackgold/middle/rooms/workshop)
 "aSr" = (
 /obj/structure/machinery/power/apc/almayer/west,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/middle/rooms/workshop)
 "aSs" = (
@@ -12509,6 +12822,100 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
+"aSy" = (
+/obj/structure/flora/pottedplant/random{
+	layer = 3.1
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
+"aSz" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "BG SEA";
+	name = "\improper Privacy Shutters"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/rooms/sea)
+"aSA" = (
+/turf/open/floor/almayer/plating_stripedcorner/west,
+/area/blackgold/lower/rooms/sea)
+"aSB" = (
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/lower/rooms/sea)
+"aSC" = (
+/turf/open/floor/almayer/plating_stripedcorner/east,
+/area/blackgold/lower/rooms/sea)
+"aSD" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/aft)
+"aSE" = (
+/obj/structure/machinery/vending/sea{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/almayer/plating_stripedcorner/north,
+/area/blackgold/lower/rooms/sea)
+"aSF" = (
+/obj/structure/filingcabinet/documentation/uscm_mp{
+	pixel_y = 16;
+	pixel_x = 8;
+	density = 0
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 16;
+	pixel_x = -8;
+	density = 0
+	},
+/obj/item/storage/fancy/cigar/tarbacks{
+	pixel_x = -8;
+	pixel_y = 23
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/blackgold/lower/rooms/sea)
+"aSG" = (
+/turf/open/floor/almayer/plating_striped/north,
+/area/blackgold/lower/rooms/sea)
+"aSH" = (
+/obj/structure/sign/prop2{
+	pixel_y = 32;
+	layer = 3
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/blackgold/lower/rooms/sea)
+"aSI" = (
+/turf/open/floor/almayer/plating_stripedcorner/south,
+/area/blackgold/lower/rooms/sea)
+"aSJ" = (
+/obj/structure/machinery/door/airlock/almayer/command{
+	name = "\improper Senior Enlisted Advisor's Office";
+	req_access = null;
+	req_one_access = list(19, 29)
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/sea)
+"aSK" = (
+/obj/structure/machinery/door/airlock/almayer/command{
+	name = "\improper Senior Enlisted Advisor's Quarters";
+	req_access = null;
+	req_access_txt = list(19, 29);
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/sea)
+"aSL" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/black/south,
+/area/blackgold/lower/hallways/port/fore)
 "aSM" = (
 /obj/structure/largecrate/supply/supplies/flares,
 /obj/structure/largecrate/supply/supplies/flares{
@@ -12518,12 +12925,40 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/underdeck/req)
+"aSN" = (
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/aft)
+"aSO" = (
+/obj/structure/bed,
+/obj/item/bedsheet/brown,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
+"aSP" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/sea)
 "aSQ" = (
 /obj/structure/sign/prop1{
 	pixel_y = 32
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
+"aSR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/lower/hallways/port/fore)
 "aSS" = (
 /obj/structure/machinery/light/small/red{
 	dir = 8
@@ -12566,6 +13001,7 @@
 /area/blackgold/upper/rooms/commandbunks/staff)
 "aSY" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/red/northeast,
 /area/blackgold/upper/rooms/brig/processing)
 "aSZ" = (
@@ -12653,9 +13089,15 @@
 /area/blackgold/upper/rooms/intel)
 "aTq" = (
 /obj/structure/bed/chair,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/intel)
 "aTr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/blue/east,
 /area/blackgold/upper/rooms/intel)
 "aTs" = (
@@ -12663,9 +13105,16 @@
 	name = "\improper Intelligence Officer Bunks";
 	req_access = list(19)
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/intel)
 "aTt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/intel)
 "aTu" = (
@@ -12781,6 +13230,7 @@
 /obj/structure/machinery/light/spot{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/blackgold/upper/rooms/medical)
 "aTP" = (
@@ -12813,8 +13263,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/tanker)
 "aTT" = (
-/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
-	name = "\improper Cell 1 Shutters";
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced/external{
+	name = "\improper Cell 1";
 	id = "BG Brig Cell 1"
 	},
 /turf/open/floor/almayer/plate,
@@ -13076,13 +13526,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/fore)
-"aUF" = (
-/obj/structure/machinery/door/poddoor/hybrisa/shutters{
-	id = "BG Brig Cell 1";
-	name = "\improper Cell 1 Shutters"
-	},
-/turf/open/floor/almayer/plate,
-/area/blackgold/lower/rooms/brig/cells)
 "aUG" = (
 /obj/structure/machinery/flasher{
 	id = "BG Brig Cell 4";
@@ -13133,14 +13576,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/hallways/port/fore)
-"aUM" = (
-/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
-	name = "\improper Cell 1 Shutters";
-	id = "BG Brig Cell 4";
-	dir = 4
-	},
-/turf/open/floor/almayer/plate,
-/area/blackgold/lower/rooms/brig/cells)
 "aUN" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "\improper Brig Lockdown Shutter";
@@ -13185,18 +13620,10 @@
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/lower/rooms/brig/cells)
 "aUT" = (
-/obj/structure/machinery/door/poddoor/hybrisa/shutters{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced/external{
+	name = "\improper Cell 5";
 	id = "BG Brig Cell 5";
-	name = "\improper Cell 5 Shutters";
-	dir = 4
-	},
-/turf/open/floor/almayer/plate,
-/area/blackgold/lower/rooms/brig/cells)
-"aUU" = (
-/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
-	name = "\improper Cell 1 Shutters";
-	id = "BG Brig Cell 5";
-	dir = 4
+	dir = 1
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/cells)
@@ -13236,6 +13663,9 @@
 "aUX" = (
 /obj/structure/machinery/status_display{
 	pixel_y = -30
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/lower/rooms/engineering)
@@ -13414,6 +13844,7 @@
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/maint/star/mid)
 "aVs" = (
@@ -14086,9 +14517,14 @@
 /obj/structure/machinery/door_control{
 	id = "BG Hangar Workshop";
 	name = "Vehicle Bay Shutters Control";
-	pixel_y = -6;
+	pixel_y = -9;
 	req_one_access = list(19,23,27);
-	pixel_x = 22
+	pixel_x = 23
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 8;
+	name = "ship-grade camera";
+	pixel_y = 6
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -14096,7 +14532,7 @@
 /obj/structure/machinery/door_control{
 	id = "BG Hangar Workshop";
 	name = "Vehicle Bay Shutters Control";
-	pixel_y = -6;
+	pixel_y = -9;
 	req_one_access = list(19,23,27);
 	pixel_x = -22
 	},
@@ -14512,6 +14948,7 @@
 	name = "\improper Brig Lockdown Shutter";
 	id = "BG Brig Lockdown"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/lobby)
 "aYp" = (
@@ -14768,7 +15205,7 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/transmitter/rotary{
 	name = "Research Containment Telephone";
-	phone_category = "Medical & Research Dept.";
+	phone_category = "Blackgold";
 	phone_id = "Research Containment";
 	pixel_y = 3;
 	pixel_x = -4
@@ -14813,6 +15250,7 @@
 /obj/structure/machinery/status_display{
 	pixel_x = 32
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/blackgold/upper/rooms/medical)
 "aYY" = (
@@ -15022,6 +15460,9 @@
 /obj/item/stool{
 	pixel_y = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/blackgold/upper/rooms/medical/research)
 "aZx" = (
@@ -15077,6 +15518,7 @@
 	pixel_x = -23;
 	req_one_access = list(19,28)
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/medical/research)
 "aZD" = (
@@ -15401,12 +15843,200 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/mid)
+"bap" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/lower/hallways/port/fore)
+"baq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/hallways/port/fore)
+"bar" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/lower/hallways/port/fore)
 "bas" = (
 /obj/structure/bed/chair/comfy/alpha{
 	dir = 4
 	},
 /turf/open/floor/almayer/redfull2,
 /area/blackgold/middle/rooms/briefing)
+"bat" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/lower/hallways/port/fore)
+"bau" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/sea)
+"bav" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Bathroom"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/sea)
+"baw" = (
+/obj/structure/sink{
+	pixel_y = 1;
+	dir = 4;
+	pixel_x = 9
+	},
+/obj/structure/mirror{
+	pixel_y = -1;
+	pixel_x = 23
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/lower/rooms/sea)
+"bax" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/blackgold/lower/hallways/port/fore)
+"bay" = (
+/obj/structure/machinery/cm_vending/gear/sea{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/sea)
+"baz" = (
+/obj/structure/machinery/cm_vending/clothing/sea{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/sea)
+"baA" = (
+/obj/structure/machinery/shower{
+	pixel_y = 15
+	},
+/obj/structure/machinery/door/window/tinted{
+	dir = 2
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/sea)
+"baB" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/east,
+/area/blackgold/lower/hallways/port/fore)
+"baC" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/mono,
+/area/blackgold/lower/hallways/port/fore)
+"baD" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/conference)
+"baE" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/engineering)
+"baF" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/hallways/port/fore)
+"baG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/engineering/laundry)
+"baH" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/orange/southwest,
+/area/blackgold/lower/rooms/engineering)
+"baI" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/orange/west,
+/area/blackgold/lower/rooms/engineering)
+"baJ" = (
+/obj/effect/landmark/start/otech,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/engineering)
+"baK" = (
+/obj/effect/landmark/start/maint,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/engineering)
+"baL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/lower/rooms/engineering)
+"baM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/lower/rooms/engineering)
+"baN" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/aicore/no_build/ai_silver,
+/area/blackgold/lower/rooms/aicore)
+"baO" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/black/east,
+/area/blackgold/lower/hallways/port/fore)
+"baP" = (
+/obj/effect/landmark/ert_spawns/distress_cryo,
+/obj/effect/landmark/late_join,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/cryo)
+"baQ" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/west,
+/area/blackgold/lower/rooms/range)
+"baR" = (
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/range)
+"baS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/red/west,
+/area/blackgold/lower/rooms/range)
+"baT" = (
+/obj/effect/landmark/start/engineering,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/engineering)
+"baU" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/conference)
 "baV" = (
 /obj/structure/platform/metal/ship,
 /obj/structure/machinery/cryopod/right{
@@ -15415,10 +16045,402 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/cryo)
+"baW" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/south,
+/area/blackgold/lower/hallways/mid/mid)
+"baX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/lower/hallways/port/fore)
+"baY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/hallways/star/fore)
+"baZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/hallways/mid/mid)
+"bba" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/lower/hallways/mid/mid)
+"bbb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/lower/hallways/mid/mid)
+"bbc" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/lower/hallways/mid/mid)
+"bbd" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/hallways/mid/mid)
+"bbe" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/lower/rooms/engineering)
+"bbf" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/east,
+/area/blackgold/lower/hallways/star/fore)
+"bbg" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/black/north,
+/area/blackgold/lower/hallways/mid/mid)
+"bbh" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/north,
+/area/blackgold/lower/hallways/mid/mid)
+"bbi" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/red/west,
+/area/blackgold/lower/rooms/range/star)
+"bbj" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbk" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/west,
+/area/blackgold/lower/rooms/range/star)
+"bbl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/black/east,
+/area/blackgold/lower/hallways/star/fore)
+"bbm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/blackgold/lower/rooms/aicore)
+"bbn" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/range/star)
+"bbo" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbp" = (
+/obj/structure/disposalpipe/up/almayer{
+	dir = 8;
+	id = "BG Upperdeck"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbq" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/rooms/gym)
+"bbr" = (
+/obj/structure/machinery/treadmill{
+	dir = 8
+	},
+/turf/open/floor/almayer/green/west,
+/area/blackgold/lower/rooms/gym)
+"bbs" = (
+/obj/structure/disposalpipe/up/almayer{
+	dir = 8;
+	id = "BG Middeck"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/blackgold/lower/rooms/aicore)
+"bbu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/blackgold/lower/rooms/aicore)
+"bbv" = (
+/obj/structure/machinery/conveyor_switch{
+	id = "BG Garbage"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbw" = (
+/obj/structure/machinery/recycler,
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -3
+	},
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbx" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/green/east,
+/area/blackgold/lower/rooms/req)
+"bby" = (
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage"
+	},
+/obj/structure/plasticflaps,
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -3
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbB" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbD" = (
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbE" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/black/north,
+/area/blackgold/lower/hallways/star/fore)
+"bbF" = (
+/obj/structure/disposaloutlet{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbG" = (
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage";
+	dir = 1
+	},
+/obj/structure/machinery/light/red{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbH" = (
+/obj/structure/machinery/light/red{
+	light_color = "#BB3F3F";
+	dir = 4
+	},
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage"
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbI" = (
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbJ" = (
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage";
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbK" = (
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
 "bbL" = (
 /obj/structure/target/alien,
 /turf/open/floor/almayer/plating_striped/north,
 /area/blackgold/lower/rooms/range)
+"bbM" = (
+/obj/structure/machinery/conveyor{
+	id = "BG Garbage";
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bbN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/purple/south,
+/area/blackgold/middle/rooms/squad)
+"bbO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/purple/south,
+/area/blackgold/middle/rooms/squad)
+"bbP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/purple/south,
+/area/blackgold/middle/rooms/squad)
+"bbQ" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/spawner/random/toolbox,
+/turf/open/floor/almayer/red/south,
+/area/blackgold/middle/rooms/orbital)
+"bbR" = (
+/turf/open/floor/almayer/squad_arrow_charlie,
+/area/blackgold/middle/rooms/squad)
+"bbS" = (
+/turf/open/floor/almayer/squad_arrow_delta,
+/area/blackgold/middle/rooms/squad)
+"bbT" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/orbital)
+"bbU" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bbV" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bbW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/middle/rooms/engineering)
+"bbX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/orange/west,
+/area/blackgold/middle/rooms/engineering)
+"bbY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering)
+"bbZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
+"bca" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/flooredge/south,
+/area/blackgold/middle/rooms/engineering)
+"bcb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/flooredge/west,
+/area/blackgold/middle/rooms/engineering)
+"bcc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
+"bcd" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/orange/west,
+/area/blackgold/middle/rooms/engineering)
+"bce" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/middle/rooms/engineering)
 "bcf" = (
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
@@ -15430,9 +16452,201 @@
 /obj/item/tool/soap/deluxe,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks)
+"bcg" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
+"bch" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
+"bci" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/middle/rooms/engineering)
+"bcj" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/orange/west,
+/area/blackgold/middle/rooms/engineering/ot)
+"bck" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/middle/rooms/engineering)
+"bcl" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/almayer/black/north,
+/area/blackgold/middle/hallways/port/fore)
+"bcm" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/red/west,
+/area/blackgold/middle/rooms/squad)
+"bcn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/carpet/carpetblack,
+/area/blackgold/middle/rooms/liaison)
+"bco" = (
+/obj/structure/bed/chair/comfy/orange,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/hybrisa/carpet/carpetblack,
+/area/blackgold/middle/rooms/liaison)
+"bcp" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/rooms/engineering)
+"bcq" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/carpet/carpetblack,
+/area/blackgold/middle/rooms/liaison)
+"bcr" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering)
+"bcs" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood/ship,
+/area/blackgold/middle/rooms/liaison)
+"bct" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/engineering)
+"bcu" = (
+/turf/open/floor/almayer/squad_arrow_alpha/east{
+	dir = 2
+	},
+/area/blackgold/middle/rooms/squad)
+"bcv" = (
+/turf/open/floor/almayer/squad_arrow_bravo/south,
+/area/blackgold/middle/rooms/squad)
+"bcw" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/middle/rooms/squad)
 "bcx" = (
 /turf/open/floor/almayer/test_floor5,
 /area/supply/dock/uscm)
+"bcy" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/hallways/mid/aft)
+"bcz" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/middle/rooms/squad)
+"bcA" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blackfull2,
+/area/blackgold/middle/hallways/mid/aft)
+"bcB" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/blackfull2,
+/area/blackgold/middle/hallways/mid/aft)
+"bcC" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/black/south,
+/area/blackgold/middle/hallways/mid/mid)
+"bcD" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/south,
+/area/blackgold/middle/hallways/mid/mid)
+"bcE" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/south,
+/area/blackgold/middle/hallways/mid/aft)
+"bcF" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/black/south,
+/area/blackgold/middle/hallways/mid/aft)
+"bcG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/briefing)
+"bcH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/briefing)
+"bcI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/middle/rooms/briefing)
+"bcJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/black/west,
+/area/blackgold/middle/hallways/port/fore)
+"bcK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/hallways/port/fore)
+"bcL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/hallways/port/fore)
+"bcM" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/hallways/mid/mid)
+"bcN" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/hallways/mid/mid)
+"bcO" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/middle/hallways/mid/mid)
+"bcP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/black/west,
+/area/blackgold/middle/rooms/hangar)
 "bcQ" = (
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
@@ -15442,6 +16656,37 @@
 	},
 /turf/open/floor/almayer/blue/south,
 /area/blackgold/upper/rooms/cic)
+"bcS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/hangar)
+"bcT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/hangar)
+"bcU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/hangar)
+"bcV" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/hangar)
+"bcW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/black/east,
+/area/blackgold/middle/rooms/hangar)
 "bcX" = (
 /obj/structure/stairs/multiz/down{
 	dir = 1
@@ -15449,6 +16694,214 @@
 /obj/structure/platform/metal/ship/east,
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/upper/stairs/star/mid)
+"bcY" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/middle/hallways/mid/aft)
+"bcZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/black/west,
+/area/blackgold/middle/hallways/mid/aft)
+"bda" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/hallways/mid/aft)
+"bdb" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/hallways/mid/aft)
+"bdc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/hallways/mid/aft)
+"bdd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/hallways/mid/aft)
+"bde" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/hallways/mid/aft)
+"bdf" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/hallways/mid/aft)
+"bdg" = (
+/obj/structure/disposalpipe/down/almayer{
+	dir = 8;
+	id = "BG Middeck"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/hallways/mid/aft)
+"bdh" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/briefing)
+"bdi" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/north,
+/area/blackgold/middle/hallways/mid/mid)
+"bdj" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/north,
+/area/blackgold/middle/rooms/hangar)
+"bdk" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/silver/north,
+/area/blackgold/middle/hallways/mid/aft)
+"bdl" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/rooms/squad/prep)
+"bdm" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blackfull2,
+/area/blackgold/middle/rooms/hangar)
+"bdn" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/rooms/medical)
+"bdo" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
+"bdp" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
+"bdq" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/middle/rooms/medical)
+"bdr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/middle/rooms/medical/chemistry)
+"bds" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/squad/prep)
+"bdt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/squad/prep)
+"bdu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/squad/prep)
+"bdv" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical)
+"bdw" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical/chemistry)
+"bdx" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/squad/prep)
+"bdy" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/south,
+/area/blackgold/middle/rooms/hangar)
+"bdz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/briefing)
+"bdA" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/disposal/delivery{
+	density = 0;
+	desc = "A pneumatic delivery unit. Sends items to the requisitions.";
+	icon_state = "delivery_engi";
+	name = "Requisitions Delivery Unit";
+	pixel_x = 23
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/floor/almayer/green/east,
+/area/blackgold/middle/rooms/req)
+"bdB" = (
+/obj/structure/disposalpipe/up/almayer{
+	dir = 8;
+	id = "BG OT-Cargo Link"
+	},
+/turf/closed/wall/almayer/outer,
+/area/blackgold/middle/rooms/req)
+"bdC" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/hangar)
+"bdD" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/disposal/delivery{
+	density = 0;
+	desc = "A pneumatic delivery unit. Sends items to the requisitions.";
+	icon_state = "delivery_med";
+	name = "Requisitions Delivery Unit";
+	pixel_x = 23
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/floor/almayer/green/east,
+/area/blackgold/middle/rooms/req)
+"bdE" = (
+/obj/structure/disposalpipe/up/almayer{
+	dir = 8;
+	id = "BG Research-Cargo Link"
+	},
+/turf/closed/wall/almayer/outer,
+/area/blackgold/middle/rooms/req)
+"bdF" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/middle/rooms/medical)
+"bdG" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/middle/rooms/medical/chemistry)
 "bdH" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -15458,15 +16911,1365 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/brig/lobby)
+"bdI" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/turf/open/floor/almayer/black/south,
+/area/blackgold/middle/hallways/star/fore)
+"bdJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/middle/rooms/workshop)
+"bdK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/northwest,
+/area/blackgold/middle/rooms/workshop)
+"bdL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/north,
+/area/blackgold/middle/rooms/workshop)
+"bdM" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plating_striped/west,
+/area/blackgold/middle/rooms/workshop)
+"bdN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical)
+"bdO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical)
+"bdP" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical)
+"bdQ" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical)
+"bdR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical)
+"bdS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/hangar)
+"bdT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bdU" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Hangar Workshop";
+	name = "\improper Vehicle Workshop Shutters";
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/rooms/workshop)
+"bdV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/west,
+/area/blackgold/middle/rooms/workshop)
+"bdW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/workshop)
+"bdX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/east,
+/area/blackgold/middle/rooms/workshop)
+"bdY" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/middle/rooms/medical)
+"bdZ" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/almayer/red/southeast,
+/area/blackgold/middle/rooms/orbital)
+"bea" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/req)
+"beb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/middle/rooms/medical/operating/one)
+"bec" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/middle/rooms/medical/operating/two)
+"bed" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/middle/rooms/medical/operating/three)
+"bee" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/red/northwest,
+/area/blackgold/middle/rooms/orbital)
+"bef" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer/red/north,
+/area/blackgold/middle/rooms/orbital)
+"beg" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/orbital)
+"beh" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/almayer/red/northwest,
+/area/blackgold/middle/rooms/orbital)
+"bei" = (
+/obj/structure/machinery/prop/almayer/computer,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/red/north,
+/area/blackgold/middle/rooms/orbital)
+"bej" = (
+/obj/structure/machinery/computer/working_joe{
+	layer = 3.3
+	},
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/red/north,
+/area/blackgold/middle/rooms/orbital)
+"bek" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/rooms/lifeboat/port)
+"bel" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/brig/chief)
+"bem" = (
+/obj/structure/machinery/cm_vending/clothing/senior_officer{
+	req_access = null;
+	req_access_txt = 19;
+	req_one_access = null;
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/brig/chief)
+"ben" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/commandbunks/xo)
+"beo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/commandbunks/xo)
+"bep" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/commandbunks/xo)
+"beq" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/carpet/blue_grey,
+/area/blackgold/upper/rooms/commandbunks/xo)
+"ber" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/brig/chief)
+"bes" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/brig/chief)
+"bet" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/commandbunks/xo)
+"beu" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/east,
+/area/blackgold/upper/rooms/brig/processing)
+"bev" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/rooms/brig/lobby)
+"bew" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/red/west,
+/area/blackgold/upper/rooms/brig/processing)
+"bex" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/rooms/brig/processing)
+"bey" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/rooms/brig/processing)
+"bez" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/rooms/brig/processing)
+"beA" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/upper/rooms/kitchen)
+"beB" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/flooredgesmooth/east,
+/area/blackgold/upper/rooms/commandbunks/staff)
+"beC" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/charlie)
+"beD" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blue/south,
+/area/blackgold/upper/hallways/mid/fore)
+"beE" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/rooms/brig/lobby)
+"beF" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/rooms/brig/processing)
+"beG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/upper/rooms/medical/morgue)
+"beH" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/upper/rooms/medical/morgue)
+"beI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
+"beJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
+"beK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/green/east,
+/area/blackgold/upper/rooms/kitchen)
+"beL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/prison/kitchen,
+/area/blackgold/upper/rooms/kitchen)
+"beM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/prison/kitchen,
+/area/blackgold/upper/rooms/kitchen)
+"beN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/delta/cc)
+"beO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/north,
+/area/blackgold/upper/hallways/mid/fore)
+"beP" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/north,
+/area/blackgold/upper/hallways/mid/fore)
+"beQ" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/north,
+/area/blackgold/upper/hallways/mid/fore)
+"beR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/northeast,
+/area/blackgold/upper/hallways/mid/fore)
+"beS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/west,
+/area/blackgold/upper/hallways/mid/fore)
+"beT" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/southeast,
+/area/blackgold/upper/rooms/brig/processing)
+"beU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/hallways/mid/mid)
+"beV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/black/east,
+/area/blackgold/upper/hallways/mid/mid)
+"beW" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Hangar Lockdown";
+	name = "\improper Hangar Lockdown Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/upper/rooms/hangar)
+"beX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/upper/rooms/hangar)
+"beY" = (
+/obj/structure/machinery/light/spot/blue{
+	dir = 4;
+	pixel_x = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/upper/rooms/hangar)
+"beZ" = (
+/obj/structure/roof/hybrisa/lattice_prop/lattice_3,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/upper/rooms/hangar)
+"bfa" = (
+/obj/structure/machinery/light/spot/blue{
+	dir = 8;
+	pixel_x = -6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/blackgold/upper/rooms/hangar)
+"bfb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/black/west,
+/area/blackgold/upper/hallways/mid/mid)
+"bfc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/upper/hallways/mid/mid)
+"bfd" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/upper/rooms/medical/morgue)
+"bfe" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/prison/kitchen,
+/area/blackgold/upper/rooms/kitchen)
+"bff" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/hallways/mid/fore)
+"bfg" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/southeast,
+/area/blackgold/upper/rooms/brig/lobby)
+"bfh" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/mid)
+"bfi" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/hallways/mid/mid)
+"bfj" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/upper/rooms/medical/morgue)
+"bfk" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/blue/south,
+/area/blackgold/upper/rooms/cic)
+"bfl" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/delta)
+"bfm" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/fore)
+"bfn" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/east,
+/area/blackgold/upper/rooms/brig/lobby)
+"bfo" = (
+/obj/structure/curtain/medical,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/medical/morgue)
+"bfp" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/prison/kitchen,
+/area/blackgold/upper/rooms/kitchen)
+"bfq" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/companycommand/charlie)
+"bfr" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/companycommand/delta)
+"bfs" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/fore)
+"bft" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/east,
+/area/blackgold/upper/hallways/mid/fore)
+"bfu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/red/west,
+/area/blackgold/upper/rooms/brig/lobby)
+"bfv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/flooredge/east,
+/area/blackgold/upper/rooms/brig/lobby)
+"bfw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/red/east,
+/area/blackgold/upper/rooms/brig/lobby)
+"bfx" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/upper/rooms/medical/morgue)
+"bfy" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/flooredge/southwest,
+/area/blackgold/upper/rooms/commandbunks/staff)
+"bfz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#C55AD6"
+	},
+/area/blackgold/upper/rooms/companycommand/charlie)
+"bfA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#C55AD6"
+	},
+/area/blackgold/upper/rooms/companycommand/charlie)
+"bfB" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#5A81D6"
+	},
+/area/blackgold/upper/rooms/companycommand/delta)
+"bfC" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#5A81D6"
+	},
+/area/blackgold/upper/rooms/companycommand/delta)
+"bfD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/companycommand/delta)
+"bfE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/delta)
+"bfF" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control{
+	id = "BG Brig Lockdown";
+	name = "\improper Brig Lockdown Control";
+	throw_range = 15;
+	req_access = list(3)
+	},
+/turf/open/floor/almayer/red/west,
+/area/blackgold/upper/rooms/brig/processing)
+"bfG" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
+"bfH" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#C55AD6"
+	},
+/area/blackgold/upper/rooms/companycommand/charlie)
+"bfI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#C55AD6"
+	},
+/area/blackgold/upper/rooms/companycommand/charlie)
+"bfJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/charlie/cc)
+"bfK" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#5A81D6"
+	},
+/area/blackgold/upper/rooms/companycommand/delta)
+"bfL" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/blackgold/upper/hallways/mid/mid)
+"bfM" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blue/north,
+/area/blackgold/upper/rooms/commandbunks/staff)
+"bfN" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#C55AD6"
+	},
+/area/blackgold/upper/rooms/companycommand/charlie)
+"bfO" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blue/north,
+/area/blackgold/upper/hallways/mid/fore)
+"bfP" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/green/north,
+/area/blackgold/upper/rooms/kitchen)
+"bfQ" = (
+/obj/structure/transmitter/no_dnd{
+	phone_category = "Blackgold";
+	phone_id = "Combat Information Center";
+	pixel_y = 29;
+	pixel_x = -16
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/cic)
 "bfR" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
 	},
 /turf/open/floor/almayer/flooredge/northwest,
 /area/blackgold/upper/rooms/commandbunks/staff)
+"bfS" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/upper/rooms/kitchen)
+"bfT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/upper/rooms/cic)
+"bfU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/east,
+/area/blackgold/upper/rooms/cic)
+"bfV" = (
+/obj/structure/machinery/door/airlock/almayer/command/reinforced{
+	closeOtherId = "ciclobby_s";
+	id_tag = "cic_exterior";
+	name = "\improper Combat Information Center"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/cic)
+"bfW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/blue/southwest,
+/area/blackgold/upper/hallways/mid/fore)
+"bfX" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/blue/south,
+/area/blackgold/upper/hallways/mid/fore)
+"bfY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/purple/south,
+/area/blackgold/upper/hallways/mid/fore)
+"bfZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/purple/south,
+/area/blackgold/upper/hallways/mid/fore)
+"bga" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/blue/south,
+/area/blackgold/upper/hallways/mid/fore)
+"bgb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/blue/south,
+/area/blackgold/upper/hallways/mid/fore)
+"bgc" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/bluecorner/south,
+/area/blackgold/upper/hallways/mid/fore)
+"bgd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/blue/southeast,
+/area/blackgold/upper/hallways/mid/fore)
+"bge" = (
+/obj/structure/machinery/door/airlock/almayer/command/reinforced,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/fore)
+"bgf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/black/southwest,
+/area/blackgold/upper/hallways/mid/mid)
+"bgg" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/black/south,
+/area/blackgold/upper/hallways/mid/mid)
+"bgh" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/south,
+/area/blackgold/upper/hallways/mid/aft)
+"bgi" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/black/south,
+/area/blackgold/upper/hallways/mid/aft)
+"bgj" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/blackgold/upper/rooms/cic)
+"bgk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/blue/west,
+/area/blackgold/upper/hallways/mid/fore)
+"bgl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/fore)
+"bgm" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/fore)
+"bgn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/hallways/mid/fore)
+"bgo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/upper/hallways/mid/fore)
+"bgp" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/fore)
+"bgq" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/upper/hallways/mid/fore)
+"bgr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/blue/east,
+/area/blackgold/upper/hallways/mid/fore)
+"bgs" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/black/west,
+/area/blackgold/upper/hallways/mid/mid)
+"bgt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/mid)
+"bgu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/hallways/mid/mid)
+"bgv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/upper/hallways/mid/mid)
+"bgw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/mid)
+"bgx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/mid)
+"bgy" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/hallways/mid/mid)
+"bgz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/aft)
+"bgA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/hallways/mid/aft)
+"bgB" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/upper/hallways/mid/aft)
+"bgC" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/hallways/mid/aft)
 "bgD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/flooredge/southwest,
 /area/blackgold/upper/rooms/brig/lobby)
+"bgE" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/aft)
+"bgF" = (
+/obj/structure/disposalpipe/down/almayer{
+	dir = 8;
+	id = "BG Upperdeck"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/hallways/mid/aft)
+"bgG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/hallways/mid/fore)
+"bgH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/hallways/mid/fore)
+"bgI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/upper/hallways/mid/fore)
+"bgJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/upper/hallways/mid/fore)
+"bgK" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/black/north,
+/area/blackgold/upper/hallways/mid/mid)
+"bgL" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/silver/north,
+/area/blackgold/upper/hallways/mid/aft)
+"bgM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/cic)
+"bgN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/cic)
+"bgO" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/east,
+/obj/structure/platform/metal/ship/corner/west{
+	dir = 6;
+	layer = 4.1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/red/southeast,
+/area/blackgold/upper/rooms/cic)
+"bgP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/cic)
+"bgQ" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/west,
+/obj/structure/platform/metal/ship/corner/west{
+	dir = 10;
+	layer = 4.1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/orange/southwest,
+/area/blackgold/upper/rooms/cic)
+"bgR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/upper/rooms/cic)
+"bgS" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced{
+	name = "\improper Combat Information Center";
+	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/cic)
+"bgT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue/west,
+/area/blackgold/upper/rooms/cic)
+"bgU" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/cic)
+"bgV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/cic)
+"bgW" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/intel)
+"bgX" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/cic)
+"bgY" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/cic)
+"bgZ" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/commandbunks/adjunct)
+"bha" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#FE6363"
+	},
+/area/blackgold/upper/rooms/companycommand/alpha)
+"bhb" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#FEC165"
+	},
+/area/blackgold/upper/rooms/companycommand/bravo)
+"bhc" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blue/south,
+/area/blackgold/upper/rooms/intel)
+"bhd" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blue/north,
+/area/blackgold/upper/rooms/cic)
+"bhe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/commandbunks/adjunct)
+"bhf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/commandbunks)
+"bhg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/carpet/carpetbluedeco,
+/area/blackgold/upper/rooms/commandbunks)
+"bhh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/hybrisa/carpet/carpetbluedeco,
+/area/blackgold/upper/rooms/commandbunks)
+"bhi" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#FE6363"
+	},
+/area/blackgold/upper/rooms/companycommand/alpha)
+"bhj" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#FE6363"
+	},
+/area/blackgold/upper/rooms/companycommand/alpha)
+"bhk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/alpha/cc)
+"bhl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/blackgold/upper/rooms/intel)
+"bhm" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#FE6363"
+	},
+/area/blackgold/upper/rooms/companycommand/alpha)
+"bhn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#FE6363"
+	},
+/area/blackgold/upper/rooms/companycommand/alpha)
+"bho" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#FEC165"
+	},
+/area/blackgold/upper/rooms/companycommand/bravo)
+"bhp" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/open/floor/hybrisa/carpet/carpet_colorable{
+	color = "#FEC165"
+	},
+/area/blackgold/upper/rooms/companycommand/bravo)
+"bhq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/companycommand/bravo)
+"bhr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/bravo)
+"bhs" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blue/southeast,
+/area/blackgold/upper/rooms/cic/conference)
+"bht" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/carpet/carpetbluedeco,
+/area/blackgold/upper/rooms/commandbunks)
+"bhu" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/companycommand/alpha)
+"bhv" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/companycommand/bravo)
+"bhw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/upper/rooms/medical/research)
+"bhx" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/blue/east,
+/area/blackgold/upper/rooms/cic/conference)
+"bhy" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/alpha)
+"bhz" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/bravo)
+"bhA" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/orange/west,
+/area/blackgold/upper/rooms/telecomms)
+"bhB" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/mono,
+/area/blackgold/upper/rooms/medical/research)
+"bhC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/bravo/cc)
+"bhD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/companycommand/bravo/cc)
+"bhE" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/upper/rooms/medical/research)
+"bhF" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/carpet/carpet_deco_colorable{
+	color = "#FEC165"
+	},
+/area/blackgold/upper/rooms/companycommand/bravo/cc)
+"bhG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/blackgold/upper/rooms/medical)
+"bhH" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/open/floor/almayer/sterile_green_corner/north,
+/area/blackgold/upper/rooms/medical/research)
+"bhI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/upper/rooms/medical/research)
+"bhJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/blackgold/upper/rooms/medical/research)
+"bhK" = (
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/cic/conference)
+"bhL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/cic/conference)
+"bhM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/cic/conference)
+"bhN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/blue/southwest,
+/area/blackgold/upper/rooms/cic/conference)
+"bhO" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/rooms/lifeboat/star)
 "bhV" = (
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
@@ -15558,6 +18361,9 @@
 /obj/structure/machinery/disposal{
 	pixel_y = -3;
 	pixel_x = -6
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
@@ -15752,6 +18558,7 @@
 	density = 0;
 	pixel_x = 9
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "bCf" = (
@@ -15987,6 +18794,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/flooredge/southwest,
 /area/blackgold/upper/rooms/commandbunks/staff)
 "bYs" = (
@@ -16199,6 +19007,9 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "cnQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/red/southeast,
 /area/blackgold/upper/rooms/brig/lobby)
 "cox" = (
@@ -16385,6 +19196,9 @@
 	pixel_y = -3;
 	pixel_x = -6
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/blue/south,
 /area/blackgold/upper/rooms/commandbunks/staff)
 "cFF" = (
@@ -16505,7 +19319,7 @@
 /obj/structure/platform/metal/ship,
 /obj/structure/transmitter/rotary/no_dnd{
 	name = "Delta Overwatch Telephone";
-	phone_category = "Command";
+	phone_category = "Blackgold";
 	phone_id = "Delta Overwatch"
 	},
 /turf/open/floor/almayer/plate,
@@ -16535,10 +19349,10 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
 "cSa" = (
-/obj/structure/machinery/door/poddoor/hybrisa/shutters{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced/external{
+	name = "\improper Cell 4";
 	id = "BG Brig Cell 4";
-	name = "\improper Cell 4 Shutters";
-	dir = 4
+	dir = 1
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/cells)
@@ -16835,6 +19649,7 @@
 	pixel_y = 13;
 	density = 0
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "dtI" = (
@@ -17166,6 +19981,7 @@
 	req_access = null;
 	req_access_txt = "31"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/bravo)
 "eca" = (
@@ -17280,6 +20096,9 @@
 /area/blackgold/upper/rooms/evacuation)
 "eiB" = (
 /obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "ejs" = (
@@ -17497,6 +20316,7 @@
 /obj/structure/bed/chair/comfy/blue{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "eDG" = (
@@ -17641,6 +20461,9 @@
 	pixel_x = -28;
 	pixel_y = 28
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
 "ePT" = (
@@ -17668,6 +20491,9 @@
 /obj/structure/platform/metal/ship/north{
 	icon_state = "ship_platform_stair";
 	density = 0
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
@@ -18188,6 +21014,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced{
 	name = "\improper Officer Bunks"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/staff)
 "fEC" = (
@@ -18224,6 +21051,9 @@
 /area/blackgold/upper/rooms/brig/stairs)
 "fJG" = (
 /obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "fKh" = (
@@ -18657,6 +21487,7 @@
 	name = "\improper Company Commander's Office";
 	req_access = list(1)
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
 "guj" = (
@@ -18890,6 +21721,7 @@
 	req_access = null;
 	req_access_txt = "31"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/charlie)
 "gIQ" = (
@@ -19140,6 +21972,9 @@
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/brig/chief)
 "hiJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/flooredge/south,
 /area/blackgold/upper/rooms/brig/lobby)
 "hjb" = (
@@ -19632,6 +22467,8 @@
 /area/supply/station/uscm)
 "igS" = (
 /obj/structure/platform/metal/ship,
+/obj/effect/landmark/ert_spawns/distress_cryo,
+/obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/cryo)
 "igW" = (
@@ -19678,7 +22515,7 @@
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/transmitter/rotary{
 	name = "AI Reception Telephone";
-	phone_category = "ARES";
+	phone_category = "Blackgold";
 	phone_color = "blue";
 	phone_id = "AI Reception";
 	pixel_y = 5;
@@ -19969,6 +22806,7 @@
 /obj/structure/machinery/disposal{
 	pixel_y = 13
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "iBX" = (
@@ -20140,6 +22978,10 @@
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/middle/rooms/orbital)
 "iUj" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/flooredgesmooth/east,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "iWm" = (
@@ -20148,6 +22990,9 @@
 	layer = 3.5;
 	pixel_y = -4;
 	pixel_x = -6
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
@@ -20441,7 +23286,7 @@
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/lower/rooms/aicore)
 "jtH" = (
-/obj/structure/machinery/disposal,
+/obj/structure/surface/rack,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/range)
 "jtV" = (
@@ -20514,6 +23359,7 @@
 /obj/structure/machinery/light/spot{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
 "jBO" = (
@@ -20547,6 +23393,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "jFd" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/hallways/mid/fore)
 "jFR" = (
@@ -20752,6 +23599,12 @@
 	pixel_x = -9
 	},
 /obj/structure/surface/table/almayer,
+/obj/structure/transmitter/rotary{
+	name = "Company Telephone";
+	phone_category = "Blackgold";
+	phone_id = "Charlie Company Office";
+	pixel_x = 7
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie)
 "kcB" = (
@@ -20823,6 +23676,9 @@
 	pixel_x = -16;
 	pixel_y = -29
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie)
 "klh" = (
@@ -20879,6 +23735,7 @@
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/middle/rooms/orbital)
 "kov" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "koL" = (
@@ -21238,6 +24095,9 @@
 	name = "\improper Chief MP's Office";
 	req_access = list(1)
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/chief)
 "kUn" = (
@@ -21258,6 +24118,9 @@
 	density = 0;
 	layer = 3.5;
 	pixel_x = -6
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
@@ -21579,6 +24442,9 @@
 	pixel_y = 16;
 	density = 0
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
 "lsP" = (
@@ -21671,6 +24537,7 @@
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/aft)
 "lyT" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/cic/conference)
 "lAi" = (
@@ -21730,6 +24597,9 @@
 	pixel_y = 13;
 	density = 0;
 	layer = 3.5
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
@@ -21888,6 +24758,8 @@
 /area/blackgold/underdeck/vehicle)
 "lXQ" = (
 /obj/structure/platform/metal/ship/north,
+/obj/effect/landmark/ert_spawns/distress_cryo,
+/obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/cryo)
 "lYf" = (
@@ -21985,7 +24857,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/transmitter/rotary/no_dnd{
 	name = "Bravo Overwatch Telephone";
-	phone_category = "Command";
+	phone_category = "Blackgold";
 	phone_id = "Bravo Overwatch"
 	},
 /turf/open/floor/almayer/plate,
@@ -22049,6 +24921,9 @@
 	closeOtherId = "BG Brig Lobby";
 	dir = 1;
 	name = "\improper Brig Lobby"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/lobby)
@@ -22153,7 +25028,7 @@
 /obj/structure/platform/metal/ship,
 /obj/structure/transmitter/rotary/no_dnd{
 	name = "Charlie Overwatch Telephone";
-	phone_category = "Command";
+	phone_category = "Blackgold";
 	phone_id = "Charlie Overwatch"
 	},
 /turf/open/floor/almayer/plate,
@@ -22242,7 +25117,7 @@
 	},
 /obj/structure/transmitter/rotary{
 	name = "Intelligence Center Telephone";
-	phone_category = "Almayer";
+	phone_category = "Blackgold";
 	phone_id = "Intelligence Center Telephone";
 	pixel_x = -7;
 	pixel_y = -3
@@ -22250,6 +25125,10 @@
 /turf/open/floor/almayer/plating_stripedcorner/east,
 /area/blackgold/upper/rooms/computer)
 "mBd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig/processing)
 "mBq" = (
@@ -22357,6 +25236,7 @@
 /area/blackgold/upper/rooms/companycommand/delta)
 "mJJ" = (
 /obj/structure/platform/metal/ship/corner,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig/processing)
 "mLc" = (
@@ -22440,6 +25320,9 @@
 	id = "BG Brig Lockdown";
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/lobby)
 "mQz" = (
@@ -22479,6 +25362,7 @@
 	req_access = null;
 	req_access_txt = "31"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "mSE" = (
@@ -22625,6 +25509,7 @@
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
 "ncG" = (
@@ -22654,6 +25539,13 @@
 	normaldoorcontrol = 1;
 	id = "BG Brig Cell Entrance";
 	req_access = list(3)
+	},
+/obj/structure/machinery/door_control{
+	id = "BG Brig Lockdown";
+	name = "\improper Brig Lockdown Control";
+	throw_range = 15;
+	req_access = list(3);
+	pixel_x = -8
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/warden)
@@ -22798,6 +25690,7 @@
 /turf/open/floor/almayer/orange/northeast,
 /area/blackgold/middle/rooms/squad)
 "nrv" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/flooredge/northwest,
 /area/blackgold/upper/rooms/commandbunks/staff)
 "nsi" = (
@@ -22844,6 +25737,7 @@
 	density = 0;
 	layer = 3.5
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "nwh" = (
@@ -23083,6 +25977,10 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/blue/north,
 /area/blackgold/upper/hallways/mid/fore)
 "nKT" = (
@@ -23221,6 +26119,10 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
 "nSE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/redcorner/north,
 /area/blackgold/lower/rooms/range)
 "nSG" = (
@@ -23378,6 +26280,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/commandbunks/staff)
 "ofT" = (
@@ -23411,6 +26314,10 @@
 /obj/structure/coatrack{
 	pixel_x = 2;
 	pixel_y = 16
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
@@ -23461,14 +26368,6 @@
 	},
 /turf/open/floor/almayer/no_build,
 /area/blackgold/underdeck/req)
-"ooh" = (
-/obj/structure/machinery/cm_vending/clothing/senior_officer{
-	req_access = null;
-	req_access_txt = 19;
-	req_one_access = null
-	},
-/turf/open/floor/wood/ship,
-/area/blackgold/upper/rooms/brig/chief)
 "oon" = (
 /turf/open_space,
 /area/blackgold/upper/stairs/star/mid)
@@ -23785,6 +26684,7 @@
 /area/blackgold/upper/rooms/cic/conference)
 "oOm" = (
 /obj/structure/platform/metal/ship/corner/west,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig/processing)
 "oOF" = (
@@ -23919,6 +26819,10 @@
 /turf/open/floor/almayer/aicore/no_build/ai_silver,
 /area/blackgold/middle/rooms/aientrance)
 "oWY" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
 /turf/open/floor/almayer/redcorner/south,
 /area/blackgold/upper/rooms/brig/processing)
 "oXh" = (
@@ -23983,6 +26887,9 @@
 /area/blackgold/upper/rooms/commandbunks/staff)
 "pbY" = (
 /obj/structure/platform/metal/ship,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/upper/rooms/cic)
 "pcJ" = (
@@ -24021,6 +26928,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/flooredgesmooth/east,
 /area/blackgold/upper/rooms/commandbunks/staff)
 "pfK" = (
@@ -24112,6 +27020,9 @@
 	name = "\improper Commanding Officer's Office";
 	req_access = list(31)
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks)
 "pnR" = (
@@ -24183,6 +27094,7 @@
 	req_access = list(1);
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "puD" = (
@@ -24376,6 +27288,9 @@
 	pixel_x = -8;
 	pixel_y = 16
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
 "pLM" = (
@@ -24442,6 +27357,10 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 8;
+	name = "ship-grade camera"
+	},
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
 "pUo" = (
@@ -24464,8 +27383,8 @@
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
 "pVt" = (
-/obj/structure/machinery/door/poddoor/hybrisa/open_shutters{
-	name = "\improper Cell 1 Shutters";
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass/reinforced/external{
+	name = "\improper Cell 3";
 	id = "BG Brig Cell 3"
 	},
 /turf/open/floor/almayer/plate,
@@ -24565,6 +27484,9 @@
 "qdu" = (
 /obj/structure/sign/prop1{
 	pixel_y = 32
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
@@ -24678,10 +27600,16 @@
 /area/blackgold/lower/rooms/aicore)
 "qnc" = (
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
-	pixel_x = 4;
+	pixel_x = 7;
 	pixel_y = 7
 	},
 /obj/structure/surface/table/almayer,
+/obj/structure/transmitter/rotary{
+	name = "Company Telephone";
+	phone_category = "Blackgold";
+	phone_id = "Alpha Company Office";
+	pixel_x = -6
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "qnf" = (
@@ -25077,6 +28005,7 @@
 	req_access = null;
 	req_access_txt = "31"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/delta)
 "qPZ" = (
@@ -25487,6 +28416,9 @@
 	pixel_y = 5;
 	pixel_x = 6
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
 "rDU" = (
@@ -25689,6 +28621,9 @@
 "rTk" = (
 /obj/structure/machinery/disposal{
 	pixel_y = -3
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta)
@@ -26027,6 +28962,9 @@
 	icon_state = "ship_platform_stair_alt";
 	density = 0
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "syG" = (
@@ -26076,6 +29014,10 @@
 	icon_state = "pottedplant_18";
 	pixel_y = 17;
 	pixel_x = -11
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
@@ -26243,6 +29185,9 @@
 /obj/structure/sign/prop1{
 	pixel_y = -30
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/cic/conference)
 "sOq" = (
@@ -26380,6 +29325,10 @@
 /area/blackgold/underdeck/req)
 "tba" = (
 /obj/structure/machinery/light/spot,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/red/south,
 /area/blackgold/upper/rooms/brig/lobby)
 "tbp" = (
@@ -26830,6 +29779,9 @@
 /area/blackgold/upper/rooms/companycommand/bravo)
 "uey" = (
 /obj/structure/machinery/light,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/cic/conference)
 "ueL" = (
@@ -26891,6 +29843,9 @@
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/fore)
 "ugP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/red/northwest,
 /area/blackgold/lower/rooms/range)
 "uhW" = (
@@ -27177,14 +30132,6 @@
 /obj/structure/machinery/prop/almayer/CICmap/glass/target,
 /turf/open/floor/almayer/blue/south,
 /area/blackgold/upper/rooms/commandbunks/staff)
-"uFz" = (
-/obj/structure/transmitter/no_dnd{
-	phone_category = "Command";
-	phone_id = "Combat Information Center";
-	pixel_y = 25
-	},
-/turf/open/floor/almayer/blue/north,
-/area/blackgold/upper/rooms/cic)
 "uGd" = (
 /turf/open/floor/almayer/silver/northwest,
 /area/blackgold/lower/rooms/cryo)
@@ -27209,6 +30156,7 @@
 /obj/structure/machinery/light/small/red{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "uIM" = (
@@ -27733,6 +30681,7 @@
 /turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/req)
 "vzT" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/blackcorner/east,
 /area/blackgold/lower/hallways/port/fore)
 "vAu" = (
@@ -27983,6 +30932,9 @@
 	pixel_y = 16;
 	density = 0
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
 "vWw" = (
@@ -28001,7 +30953,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/transmitter/rotary/no_dnd{
 	name = "Alpha Overwatch Telephone";
-	phone_category = "Command";
+	phone_category = "Blackgold";
 	phone_id = "Alpha Overwatch"
 	},
 /turf/open/floor/almayer/plate,
@@ -28172,6 +31124,10 @@
 /obj/structure/coatrack{
 	pixel_x = 11
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo)
 "wrT" = (
@@ -28202,10 +31158,11 @@
 /area/blackgold/upper/rooms/commandbunks)
 "wua" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/transmitter/rotary/no_dnd{
-	name = "Brig Cells Telephone";
-	phone_category = "MP Dept.";
-	phone_id = "Brig Cells"
+/obj/structure/transmitter/rotary{
+	name = "Brig Telephone";
+	phone_category = "Blackgold";
+	phone_id = "Brig Office";
+	pixel_x = 7
 	},
 /turf/open/floor/almayer/flooredge/southeast,
 /area/blackgold/upper/rooms/brig/processing)
@@ -28219,6 +31176,9 @@
 	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office";
 	req_access = list(1)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
@@ -28314,6 +31274,9 @@
 /obj/structure/window/reinforced/toughened{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "wGV" = (
@@ -28328,6 +31291,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/briefing)
 "wJy" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/blue/northeast,
 /area/blackgold/upper/rooms/cic/conference)
 "wJG" = (
@@ -28350,6 +31314,12 @@
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
 	pixel_x = -9
+	},
+/obj/structure/transmitter/rotary{
+	name = "Company Telephone";
+	phone_category = "Blackgold";
+	phone_id = "Bravo Company Office";
+	pixel_x = 7
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo)
@@ -28843,6 +31813,12 @@
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
 	pixel_x = -9
 	},
+/obj/structure/transmitter/rotary{
+	name = "Company Telephone";
+	phone_category = "Blackgold";
+	phone_id = "Delta Company Office";
+	pixel_x = 7
+	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta)
 "xwA" = (
@@ -28984,6 +31960,9 @@
 	density = 0;
 	pixel_y = 16;
 	pixel_x = -9
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera"
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/lower/rooms/brig/cells)
@@ -29373,6 +32352,9 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "ykg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/blackgold/upper/rooms/cic)
 "ykq" = (
@@ -53295,14 +56277,14 @@ afA
 aeV
 aeV
 aeV
-aeW
-aeW
-aeW
-aeW
-aeW
-aeW
-aeW
-aeW
+ano
+ano
+ano
+ano
+ano
+ano
+ano
+ano
 aeV
 aeV
 aeT
@@ -53381,15 +56363,15 @@ aqe
 aqe
 aqe
 aqe
-aeW
-aeW
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeW
+ano
+ano
+aSO
+ano
+aSE
+aSA
+aOd
+anp
+ano
 aeV
 aeV
 aeT
@@ -53468,15 +56450,15 @@ aqf
 aqf
 aqf
 aqe
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeW
+bay
+bau
+aom
+ano
+aSF
+aSB
+aPI
+anI
+ano
 aeV
 aeV
 aeT
@@ -53540,30 +56522,30 @@ uGd
 jXt
 tlq
 lXQ
-aqp
-aqp
-aqp
+baP
+baP
+baP
 gAb
 aqG
 wyB
-aqp
-aqp
-aqp
+baP
+baP
+baP
 igS
 qRv
 uGd
 jXt
 aqf
 aqe
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeW
+baz
+aom
+aom
+aSK
+aSG
+aSB
+aPU
+aoc
+ano
 pdP
 aeV
 aeT
@@ -53627,30 +56609,30 @@ pjs
 una
 tlq
 lXQ
-aqp
-aqp
-aqp
+baP
+baP
+baP
 gAb
 aqG
 wyB
-aqp
-aqp
-aqp
+baP
+baP
+baP
 igS
 qRv
 pjs
 una
 aqf
 aqe
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeW
+ano
+bav
+ano
+ano
+aSH
+aSB
+aom
+aom
+ano
 aeV
 aeV
 aeT
@@ -53729,15 +56711,15 @@ pjs
 una
 aqf
 aqe
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeV
-aeW
+baA
+baw
+aSP
+ano
+aSI
+aSC
+aSy
+aon
+ano
 aeV
 aeV
 aeT
@@ -53816,15 +56798,15 @@ aqo
 una
 aqf
 aqe
-aeW
-aeW
-aeW
-aeW
-aeW
-aeW
-aeW
-aeW
-aeW
+ano
+ano
+ano
+ano
+aSJ
+ano
+aSz
+aot
+ano
 aQz
 aeW
 aeT
@@ -54062,15 +57044,15 @@ pjs
 una
 tlq
 lXQ
-aqp
-aqp
-aqp
+baP
+baP
+baP
 gAb
 aqG
 wyB
-aqp
-aqp
-aqp
+baP
+baP
+baP
 igS
 qRv
 pjs
@@ -54149,15 +57131,15 @@ oIJ
 jmV
 tlq
 lXQ
-aqp
-aqp
-aqp
+baP
+baP
+baP
 gAb
 aqG
 wyB
-aqp
-aqp
-aqp
+baP
+baP
+baP
 igS
 qRv
 oIJ
@@ -54496,25 +57478,25 @@ aqK
 aqK
 aqK
 aqK
-aqK
-aqK
-aqK
-aqK
-aqK
+bbl
+bbf
+bbf
+bbf
+bbf
 azp
-bPZ
-bPZ
-bPZ
-bPZ
-bPZ
-bPZ
-bPZ
-bPZ
-bPZ
-bPZ
-bPZ
+baB
+baB
+baB
+baB
+baO
+baB
+baB
+baB
+baB
+baB
+baB
 vzT
-aeB
+aSR
 kZS
 acW
 lrC
@@ -54601,7 +57583,7 @@ aaZ
 anR
 anR
 mZx
-acZ
+bap
 uPM
 acW
 lrC
@@ -54667,8 +57649,8 @@ arQ
 aqL
 aqM
 aqZ
-ari
-aqZ
+bbn
+bbn
 arB
 arx
 aqZ
@@ -54678,17 +57660,17 @@ aqM
 anR
 rmW
 kYe
-jtH
+baR
 kYe
 ugP
 tNr
-kYe
+jtH
 jtH
 kYe
 rmW
 anR
 mZx
-aeD
+baq
 uPM
 acW
 lrC
@@ -54758,15 +57740,15 @@ ara
 ara
 arC
 ary
-ara
-ara
+bbk
+bbi
 ara
 aqN
 anR
 eif
 vXV
-vXV
-vXV
+baS
+baQ
 nSE
 yds
 vXV
@@ -54775,7 +57757,7 @@ vXV
 lJx
 anR
 mZx
-aeD
+baq
 uPM
 acW
 lrC
@@ -54862,7 +57844,7 @@ mNa
 klp
 anR
 mZx
-aeD
+baq
 uPM
 acW
 lrC
@@ -54949,7 +57931,7 @@ chD
 anR
 anR
 mZx
-acZ
+bap
 uPM
 acW
 lrC
@@ -55009,7 +57991,7 @@ aEL
 lrC
 lrC
 arY
-arT
+bbE
 arE
 arQ
 aqL
@@ -55036,8 +58018,8 @@ aqg
 fEC
 anR
 mZx
-aeB
-uPM
+bar
+aSL
 acW
 lrC
 lrC
@@ -55123,7 +58105,7 @@ aqh
 fEC
 anR
 mZx
-acZ
+bap
 uPM
 acW
 lrC
@@ -55210,7 +58192,7 @@ aqh
 fEC
 anR
 agB
-aeD
+baq
 uPM
 acW
 lrC
@@ -55297,7 +58279,7 @@ aqh
 fEC
 anR
 mZx
-aeD
+baq
 uPM
 acW
 lrC
@@ -55384,7 +58366,7 @@ aqh
 bKH
 anR
 mZx
-aeD
+baq
 kZS
 acW
 lrC
@@ -55471,7 +58453,7 @@ aqh
 fEC
 anR
 mZx
-acZ
+bap
 uPM
 acW
 lrC
@@ -55558,7 +58540,7 @@ vdV
 fEC
 anR
 mZx
-aeB
+bar
 uPM
 acW
 lrC
@@ -55645,7 +58627,7 @@ aqh
 fEC
 anR
 mZx
-acZ
+bap
 uPM
 acW
 lrC
@@ -55732,7 +58714,7 @@ aqi
 fEC
 anR
 mZx
-aeD
+baq
 uPM
 acW
 lrC
@@ -55819,7 +58801,7 @@ mcK
 mcK
 anR
 mZx
-aeD
+baq
 uPM
 acW
 lrC
@@ -55906,7 +58888,7 @@ poy
 poy
 azh
 ylc
-aeD
+baq
 uPM
 acW
 acW
@@ -55980,20 +58962,20 @@ arh
 arh
 arh
 aqS
-aeB
-acZ
-aeD
-aeD
-aeD
-acZ
-aeB
-acZ
-aeD
-aeD
-aeD
-acZ
-aeB
-acZ
+baX
+baC
+baF
+baF
+baF
+baC
+bax
+baC
+baF
+baF
+baF
+baC
+bax
+bat
 uOL
 azh
 poy
@@ -56067,7 +59049,7 @@ aqK
 aqK
 aqK
 aqT
-arh
+baY
 sWG
 bPZ
 bPZ
@@ -56154,7 +59136,7 @@ azq
 azq
 azq
 aVq
-agg
+baZ
 afE
 asc
 asc
@@ -56241,7 +59223,7 @@ axf
 axa
 azq
 aqU
-agg
+baZ
 azo
 asc
 aEg
@@ -56317,8 +59299,8 @@ ayp
 ayg
 ayb
 axV
-axP
 axG
+bbr
 axA
 azq
 axs
@@ -56328,7 +59310,7 @@ axg
 axb
 awX
 aqU
-agz
+bba
 afE
 asc
 aEh
@@ -56415,7 +59397,7 @@ axh
 axa
 azq
 aqU
-agC
+bbb
 afE
 asc
 aEh
@@ -56502,7 +59484,7 @@ axg
 axb
 azq
 aqU
-agz
+bba
 afE
 aDN
 aEh
@@ -56589,7 +59571,7 @@ axh
 axa
 azq
 aqU
-agg
+baZ
 afE
 asc
 aEh
@@ -56676,7 +59658,7 @@ axg
 axb
 awX
 aqU
-agg
+baZ
 afE
 asc
 aVh
@@ -56763,7 +59745,7 @@ axi
 axc
 azq
 aqU
-agg
+baZ
 azo
 asc
 aEi
@@ -56850,18 +59832,18 @@ axg
 axb
 azq
 aqU
-agz
-afE
-azk
-aBv
-aBv
-aBv
-aBv
-aBv
-aBv
-aBv
-aBv
-aBv
+bbc
+baW
+baU
+baD
+baD
+baD
+baD
+baD
+baD
+baD
+baD
+baD
 aBS
 aBu
 aBu
@@ -56937,7 +59919,7 @@ axg
 axb
 awY
 aqU
-agC
+bbb
 afE
 aUP
 aEj
@@ -57015,7 +59997,7 @@ ayc
 axW
 axH
 axH
-axB
+bbq
 azq
 axb
 axq
@@ -57024,7 +60006,7 @@ axg
 axb
 awZ
 aqU
-agz
+bba
 afE
 aUP
 aCy
@@ -57111,7 +60093,7 @@ axg
 axb
 azq
 aqU
-agg
+baZ
 afE
 azk
 aBv
@@ -57198,7 +60180,7 @@ axj
 axd
 azq
 aqU
-agg
+baZ
 azo
 asc
 aEk
@@ -57285,7 +60267,7 @@ axg
 axb
 awX
 aqU
-agg
+baZ
 afE
 asc
 aEl
@@ -57372,7 +60354,7 @@ axk
 axe
 azq
 aqU
-agz
+bba
 afE
 asc
 aEl
@@ -57459,7 +60441,7 @@ axg
 azr
 azq
 aqU
-agC
+bbb
 afE
 aDN
 aEl
@@ -57546,7 +60528,7 @@ axk
 axe
 azq
 aqU
-agz
+bba
 afE
 asc
 aEl
@@ -57633,7 +60615,7 @@ axg
 axb
 awX
 aqU
-agg
+baZ
 afE
 asc
 aEl
@@ -57720,7 +60702,7 @@ axl
 axe
 azq
 aqU
-agg
+baZ
 azo
 asc
 aEm
@@ -57807,7 +60789,7 @@ azq
 azq
 azq
 aqU
-agg
+baZ
 afE
 asc
 asc
@@ -57894,7 +60876,7 @@ afZ
 afZ
 afZ
 aqV
-agz
+bba
 aqB
 afZ
 afZ
@@ -57981,7 +60963,7 @@ agg
 agg
 agg
 agz
-agC
+bbb
 agz
 agg
 agg
@@ -58068,7 +61050,7 @@ agt
 agt
 azm
 aqW
-agz
+bba
 aqC
 azm
 agt
@@ -58155,7 +61137,7 @@ pWy
 pWy
 pWy
 aqU
-agg
+baZ
 afE
 afd
 afd
@@ -58242,7 +61224,7 @@ xzN
 uom
 pWy
 aVq
-agg
+baZ
 afE
 afd
 kVN
@@ -58329,7 +61311,7 @@ xzN
 xzN
 pWy
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -58416,7 +61398,7 @@ xzN
 xzN
 pWy
 aqU
-agz
+bba
 afE
 afd
 kVN
@@ -58503,7 +61485,7 @@ xzN
 xzN
 pWy
 aqU
-agC
+bbb
 azo
 afd
 kVN
@@ -58590,7 +61572,7 @@ xzN
 xzN
 pWy
 aqU
-agz
+bba
 afE
 afd
 kVN
@@ -58677,7 +61659,7 @@ xzN
 xzN
 pWy
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -58685,10 +61667,10 @@ ihW
 thf
 voC
 gwV
-aUU
+aQH
 aUT
 gwV
-aUM
+aQH
 cSa
 ihW
 ihW
@@ -58764,7 +61746,7 @@ vKp
 pWy
 pWy
 aqX
-agg
+baZ
 afE
 afd
 kVN
@@ -58851,7 +61833,7 @@ akz
 akz
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -58937,8 +61919,8 @@ akE
 akB
 akA
 aky
-aqU
-agz
+bbg
+bba
 afE
 afd
 kVN
@@ -59025,7 +62007,7 @@ akC
 akz
 aky
 aqU
-agC
+bbb
 afE
 afd
 kVN
@@ -59112,7 +62094,7 @@ akD
 akz
 aky
 aqU
-agz
+bba
 azo
 afd
 kVN
@@ -59125,7 +62107,7 @@ iBv
 bsq
 qbs
 peP
-aRf
+aQH
 iLP
 aQE
 hFc
@@ -59199,7 +62181,7 @@ akE
 akz
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -59286,7 +62268,7 @@ akB
 akz
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -59373,7 +62355,7 @@ akD
 akz
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -59386,7 +62368,7 @@ sAd
 sAd
 sAd
 dtl
-aUF
+aQH
 iLP
 aQF
 hFc
@@ -59460,7 +62442,7 @@ akF
 akz
 aky
 aqU
-agz
+bba
 afE
 afd
 kVN
@@ -59547,7 +62529,7 @@ mFg
 akz
 aky
 aqU
-agC
+bbb
 afE
 afd
 kVN
@@ -59634,7 +62616,7 @@ akD
 akz
 aky
 aqU
-agz
+bba
 afE
 afd
 kVN
@@ -59721,7 +62703,7 @@ akE
 akz
 aky
 aqU
-agg
+baZ
 azo
 afd
 kVN
@@ -59808,7 +62790,7 @@ akF
 akz
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -59895,7 +62877,7 @@ akD
 akz
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -59908,7 +62890,7 @@ rzR
 xXw
 iLP
 tqV
-wWh
+avM
 vZg
 rLN
 kKE
@@ -59982,7 +62964,7 @@ akE
 akz
 aky
 aqU
-agz
+bba
 afE
 afd
 kVN
@@ -60069,7 +63051,7 @@ mFg
 akz
 aky
 aqU
-agC
+bbb
 afE
 afd
 kVN
@@ -60156,7 +63138,7 @@ akD
 akA
 aky
 aqU
-agz
+bba
 afE
 afd
 kVN
@@ -60231,7 +63213,7 @@ nMo
 nMo
 nMo
 nMo
-nMo
+bbx
 nMo
 nMo
 eGQ
@@ -60243,7 +63225,7 @@ akz
 akz
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -60330,7 +63312,7 @@ ars
 cnl
 aky
 aqU
-agg
+baZ
 azo
 afd
 kVN
@@ -60417,7 +63399,7 @@ uXl
 uXl
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -60504,7 +63486,7 @@ uXl
 uXl
 aky
 aVq
-agz
+bba
 afE
 afd
 kVN
@@ -60591,7 +63573,7 @@ uXl
 uXl
 aky
 aqU
-agC
+bbb
 afE
 afd
 kVN
@@ -60678,7 +63660,7 @@ uXl
 uXl
 aky
 aqU
-agz
+bba
 afE
 afd
 kVN
@@ -60765,7 +63747,7 @@ uXl
 uXl
 aky
 aqU
-agg
+baZ
 afE
 afd
 kVN
@@ -60852,7 +63834,7 @@ aky
 aky
 aky
 aqU
-agg
+baZ
 afE
 afd
 afd
@@ -60926,48 +63908,48 @@ agb
 agb
 agb
 agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
+bbz
+bbj
+bbj
+bbo
+bbj
+bbo
+bbj
+bbj
+bbj
+bbj
+bbj
 aVr
-aqU
-agg
-afE
+bbh
+bbd
+baW
 aeP
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+agO
+aep
 aeG
 aeF
 lrC
@@ -61013,12 +63995,12 @@ agu
 agb
 agb
 agb
-agb
+bbA
 agu
 agb
+bbs
 agb
-agb
-agb
+bbp
 agu
 agb
 agb
@@ -61054,7 +64036,7 @@ aeH
 aeH
 aeH
 lul
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61100,7 +64082,7 @@ agi
 agi
 agi
 agi
-agi
+bbB
 agi
 agi
 agi
@@ -61141,7 +64123,7 @@ aeF
 aeF
 aeF
 aeF
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61182,15 +64164,15 @@ agR
 ahd
 agY
 agR
+bbJ
+bbI
+bbI
+bbG
+bbF
+bbC
 agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
+bbv
+agi
 agb
 agb
 agb
@@ -61228,7 +64210,7 @@ gEK
 gEK
 aid
 aeF
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61269,6 +64251,7 @@ ahf
 agZ
 agZ
 agR
+bbK
 agb
 agb
 agb
@@ -61276,8 +64259,7 @@ agb
 agb
 agb
 agb
-agb
-agb
+agi
 agb
 agb
 agb
@@ -61315,7 +64297,7 @@ gEK
 gEK
 gEK
 aeF
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61356,6 +64338,7 @@ ahf
 agZ
 agZ
 agR
+bbK
 agb
 agb
 agb
@@ -61363,8 +64346,7 @@ agb
 agb
 agb
 agb
-agb
-agb
+agi
 agb
 agb
 agb
@@ -61402,7 +64384,7 @@ gEK
 gEK
 gEK
 aeF
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61443,15 +64425,15 @@ agR
 ahe
 aha
 agR
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
+bbM
+bbD
+bbD
+bbH
+bbD
+bbD
+bby
+bbw
+agi
 agb
 agb
 agb
@@ -61489,7 +64471,7 @@ gEK
 gEK
 gEK
 aeF
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61576,7 +64558,7 @@ aeF
 aeF
 aeF
 aeF
-iuN
+afo
 iuN
 aeF
 lrC
@@ -61663,7 +64645,7 @@ bYw
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61750,7 +64732,7 @@ aeQ
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61837,7 +64819,7 @@ aeQ
 afd
 tis
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -61924,7 +64906,7 @@ aeQ
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62011,7 +64993,7 @@ aeQ
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62098,7 +65080,7 @@ aeQ
 afd
 aeN
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62185,7 +65167,7 @@ aeQ
 adO
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62272,7 +65254,7 @@ aeQ
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62359,7 +65341,7 @@ aeQ
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62446,7 +65428,7 @@ aeQ
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62533,7 +65515,7 @@ aeQ
 afd
 tis
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62620,7 +65602,7 @@ aeQ
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62707,7 +65689,7 @@ bYw
 afd
 aeH
 aeH
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62794,7 +65776,7 @@ afd
 afd
 aeI
 aeI
-iuN
+afo
 iuN
 aeF
 lrC
@@ -62881,7 +65863,7 @@ aeH
 aeH
 aeH
 aeI
-aeH
+aer
 aeH
 aeF
 lrC
@@ -62968,7 +65950,7 @@ aeH
 aeH
 aeH
 aeJ
-aeH
+aer
 aeH
 aeF
 lrC
@@ -63055,7 +66037,7 @@ aeH
 aeH
 aeH
 aeI
-aeH
+aer
 aeH
 aeF
 lrC
@@ -63142,7 +66124,7 @@ aeI
 aeI
 aeI
 aeI
-aeH
+aer
 aeH
 aeF
 lrC
@@ -63219,17 +66201,17 @@ kVN
 kVN
 kVN
 aeI
-aeH
-aeH
-aeH
-aeH
+aoD
+agO
+agO
+agO
 uId
-aeH
-aeH
-aeH
-aeH
+agO
+agO
+agO
+agO
 uId
-aeH
+agn
 aeH
 aeF
 lrC
@@ -63306,7 +66288,7 @@ xzn
 xzn
 kVN
 aeI
-aeH
+aer
 aeH
 aeH
 aeH
@@ -63393,7 +66375,7 @@ xzn
 xzn
 kVN
 aeI
-aeZ
+aAK
 aeH
 aeF
 aeF
@@ -63480,7 +66462,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -63567,7 +66549,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -63654,7 +66636,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -63741,7 +66723,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -63828,7 +66810,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -63887,12 +66869,12 @@ xzn
 xzn
 sAa
 sic
-bCf
+bbt
 iuK
 sTH
 upO
 hdo
-iuK
+bbm
 pre
 pre
 gyU
@@ -63915,7 +66897,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64002,7 +66984,7 @@ xzn
 xzn
 afq
 afi
-aff
+aNA
 afe
 afb
 lrC
@@ -64089,7 +67071,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64176,7 +67158,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64263,7 +67245,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64338,7 +67320,7 @@ pre
 pre
 sCP
 ufj
-hjb
+baN
 xzn
 xzn
 xzn
@@ -64350,7 +67332,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64409,7 +67391,7 @@ xzn
 xzn
 muw
 sei
-bCf
+bbu
 iuK
 sTH
 upO
@@ -64437,7 +67419,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64524,7 +67506,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64611,7 +67593,7 @@ xzn
 xzn
 afq
 afi
-aff
+aNA
 afe
 afb
 lrC
@@ -64698,7 +67680,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64785,7 +67767,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64872,7 +67854,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -64959,7 +67941,7 @@ xzn
 xzn
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65046,7 +68028,7 @@ xzn
 xzn
 gkC
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65133,7 +68115,7 @@ afq
 afq
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65220,7 +68202,7 @@ avr
 avr
 afq
 afi
-aff
+aNA
 afe
 afb
 lrC
@@ -65307,7 +68289,7 @@ agw
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65394,7 +68376,7 @@ agw
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65481,7 +68463,7 @@ awM
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65568,7 +68550,7 @@ azn
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65655,7 +68637,7 @@ agw
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65727,12 +68709,12 @@ aDX
 aCR
 aCh
 aEr
-aCO
-aCO
+baT
+baK
 aDS
 aDD
-aCO
-aCO
+baJ
+baJ
 aOo
 agw
 aOe
@@ -65742,7 +68724,7 @@ agw
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -65814,12 +68796,12 @@ aDX
 aCR
 aCh
 aEr
-aCO
-aCO
+baK
+baK
 aDT
 aDE
-aCO
-aCO
+baK
+baK
 aOo
 agw
 aOe
@@ -65829,7 +68811,7 @@ agw
 avr
 afq
 afi
-aff
+aNA
 afe
 afb
 lrC
@@ -65916,7 +68898,7 @@ azn
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -66003,7 +68985,7 @@ agw
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -66090,7 +69072,7 @@ awM
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 lrC
@@ -66177,7 +69159,7 @@ agw
 avr
 afq
 afi
-afe
+aAN
 afe
 afb
 afb
@@ -66254,9 +69236,9 @@ aCh
 aDX
 aCR
 aDk
-aCh
+baL
 aOr
-aOm
+baG
 aOe
 aOe
 aOe
@@ -66264,7 +69246,7 @@ azn
 avr
 afq
 afi
-afe
+aAN
 afe
 awN
 awU
@@ -66333,7 +69315,7 @@ aDY
 aCD
 aCD
 aCD
-aCD
+bbe
 aCD
 aCD
 aCD
@@ -66341,7 +69323,7 @@ aCi
 aDX
 aDJ
 aDk
-aCh
+baM
 aOo
 aOn
 aOe
@@ -66351,7 +69333,7 @@ azn
 avr
 afq
 afi
-afe
+aAN
 afe
 awN
 awV
@@ -66438,7 +69420,7 @@ avr
 avr
 afi
 afi
-aff
+aNA
 afe
 awN
 awV
@@ -66516,16 +69498,16 @@ aDX
 aDJ
 aDk
 aCQ
-aCz
-aCg
-wMW
-afe
-afe
-afm
-afe
-afe
+baI
+baH
+baE
+aSD
+aSD
+aSN
+aSD
+aSD
 afl
-afe
+aNQ
 afe
 awN
 awW
@@ -73192,7 +76174,7 @@ asf
 asm
 asm
 asf
-aso
+bee
 asn
 ash
 ajs
@@ -73279,7 +76261,7 @@ asf
 wcr
 wcr
 asf
-pvi
+bef
 ask
 eXM
 asm
@@ -73360,7 +76342,7 @@ aEL
 lrC
 lrC
 asf
-aso
+beh
 asn
 ash
 heC
@@ -73447,8 +76429,8 @@ aEL
 lrC
 lrC
 asf
-hKf
-ask
+bei
+beg
 eXM
 heC
 heC
@@ -73483,7 +76465,7 @@ ahX
 ahw
 hKf
 ask
-ask
+bbT
 sVH
 uuM
 uuM
@@ -73534,7 +76516,7 @@ aEL
 lrC
 lrC
 asf
-owx
+bej
 ask
 eXM
 heC
@@ -73571,7 +76553,7 @@ ahw
 owx
 ask
 ask
-sVH
+bbQ
 uuM
 uuM
 pvi
@@ -73890,7 +76872,7 @@ asl
 uxB
 asl
 asl
-asi
+bdZ
 aiA
 ajo
 ajf
@@ -74764,7 +77746,7 @@ air
 aiC
 atB
 atu
-atw
+bdI
 amA
 tqA
 vXU
@@ -74782,7 +77764,7 @@ amN
 mQZ
 asQ
 amA
-asN
+bcl
 asI
 asB
 ahx
@@ -76507,13 +79489,13 @@ atg
 atw
 amA
 hpw
-amR
-amR
-amR
-amR
-amR
-amR
-amR
+bdz
+bdh
+bdh
+bdh
+bdh
+bdh
+bcG
 amR
 amR
 amR
@@ -76600,7 +79582,7 @@ amK
 amM
 amN
 amN
-amN
+bcH
 amN
 amN
 amM
@@ -76687,7 +79669,7 @@ amC
 amA
 amA
 amD
-amE
+bcI
 amD
 amA
 amA
@@ -76774,7 +79756,7 @@ atf
 atf
 atf
 atf
-asF
+bcJ
 asF
 asF
 asF
@@ -76861,7 +79843,7 @@ att
 atg
 atg
 atg
-asH
+bcK
 asG
 asG
 asG
@@ -76948,7 +79930,7 @@ ats
 ats
 ats
 ath
-asI
+bcL
 asW
 asJ
 asJ
@@ -77198,10 +80180,10 @@ vpI
 anQ
 anK
 anK
-anK
-anK
-anK
-anK
+bdu
+bdx
+bdx
+bds
 anB
 qnf
 anQ
@@ -77288,7 +80270,7 @@ anU
 anU
 anU
 anU
-anK
+bdt
 anB
 anK
 anQ
@@ -77375,7 +80357,7 @@ anU
 anU
 anU
 anU
-anK
+bdt
 cKx
 anl
 anS
@@ -77462,7 +80444,7 @@ aos
 anL
 anL
 gLv
-anK
+bdt
 nEn
 anl
 anl
@@ -77549,7 +80531,7 @@ anB
 bFZ
 bFZ
 anQ
-anK
+bdt
 gCg
 anl
 anT
@@ -77558,7 +80540,7 @@ qsV
 anl
 ati
 atb
-asX
+bcC
 alm
 aRz
 aRx
@@ -77636,7 +80618,7 @@ aoh
 aoq
 aoq
 aol
-anK
+bdt
 anB
 lJw
 anQ
@@ -77723,7 +80705,7 @@ anU
 anU
 anU
 anU
-anK
+bdt
 anB
 anK
 anQ
@@ -77736,7 +80718,7 @@ asX
 alm
 tjs
 alF
-alF
+bcu
 gdO
 oPL
 alB
@@ -77747,7 +80729,7 @@ alU
 alB
 bRi
 sWw
-alF
+bbR
 alF
 elB
 alm
@@ -77810,7 +80792,7 @@ anU
 anU
 anU
 anU
-anK
+bdt
 phw
 anl
 anS
@@ -77897,7 +80879,7 @@ aos
 anL
 anL
 gLv
-anK
+bdt
 nZA
 anl
 anl
@@ -77984,7 +80966,7 @@ anB
 bFZ
 bFZ
 anQ
-anK
+bdt
 aoh
 anZ
 avV
@@ -78071,11 +81053,11 @@ aoh
 aoq
 aoq
 aol
-anK
-anK
-anK
-anK
-anK
+bdu
+bdx
+bdx
+bdx
+bds
 avG
 anl
 ati
@@ -78162,7 +81144,7 @@ anU
 anU
 anU
 anU
-anK
+bdt
 avI
 anl
 ati
@@ -78249,7 +81231,7 @@ anU
 anU
 anU
 anU
-anK
+bdt
 aPE
 anl
 ati
@@ -78336,7 +81318,7 @@ anL
 gLv
 anU
 anU
-anK
+bdt
 avJ
 anl
 ati
@@ -78423,8 +81405,8 @@ aQh
 anQ
 anU
 anU
-anK
-avG
+bdt
+bdo
 anl
 abU
 avE
@@ -78510,11 +81492,11 @@ aoq
 aol
 anU
 anU
-anK
-anB
-anm
-ati
-atc
+bdu
+bdp
+bdl
+bdi
+bcM
 asX
 alm
 xnH
@@ -78523,7 +81505,7 @@ amp
 amp
 amO
 amp
-amp
+bcm
 amp
 amd
 alV
@@ -78879,7 +81861,7 @@ dAD
 dAD
 ydj
 alv
-alG
+bbN
 alu
 alm
 ahn
@@ -78966,7 +81948,7 @@ dAD
 dAD
 ydj
 alv
-alG
+bbO
 bBn
 alm
 ahn
@@ -79053,7 +82035,7 @@ alv
 alv
 alv
 alv
-alG
+bbO
 cjp
 alm
 ahn
@@ -79140,7 +82122,7 @@ alF
 alF
 alF
 alF
-alG
+bbO
 wSo
 alm
 ahn
@@ -79210,10 +82192,10 @@ xTU
 xTU
 fKh
 ati
-atb
-asX
-alU
-amu
+bcN
+bcD
+bcz
+bcw
 aGe
 avD
 aGe
@@ -79227,7 +82209,7 @@ aGe
 aGe
 aGe
 aGe
-alG
+bbP
 alv
 aVK
 ahn
@@ -80429,7 +83411,7 @@ anH
 anr
 ati
 atc
-asX
+bcC
 alm
 alD
 alr
@@ -80502,7 +83484,7 @@ aXR
 aWv
 aoH
 anF
-anW
+bea
 ant
 ant
 ant
@@ -80694,7 +83676,7 @@ asX
 alm
 tjs
 alF
-alF
+bcv
 gdO
 oPL
 alB
@@ -80705,7 +83687,7 @@ alU
 alB
 bRi
 sWw
-alF
+bbS
 alF
 elB
 alm
@@ -80943,8 +83925,8 @@ aXd
 aXc
 aWZ
 anO
-anO
-anO
+bdD
+bdA
 anO
 anO
 aou
@@ -81030,8 +84012,8 @@ ant
 ant
 ant
 ant
-ant
-ant
+bdE
+bdB
 anq
 anq
 anq
@@ -82081,7 +85063,7 @@ aiT
 aPB
 gjr
 xfH
-gjr
+bcO
 xfH
 gjr
 aPB
@@ -82155,7 +85137,7 @@ ahq
 ahq
 ahq
 aXy
-ahq
+bbU
 ahq
 ahq
 ahq
@@ -82168,7 +85150,7 @@ ahq
 ahq
 ahq
 aie
-ahG
+bcP
 ahA
 ahq
 ahq
@@ -82181,7 +85163,7 @@ ahq
 ahq
 ahq
 ahq
-ahq
+bbU
 ahq
 ahq
 ahq
@@ -82255,7 +85237,7 @@ aht
 aht
 jGC
 aif
-ahv
+bcS
 ahB
 aht
 aht
@@ -82342,7 +85324,7 @@ aht
 aht
 aht
 aif
-ahv
+bcS
 ahB
 aht
 aht
@@ -82429,7 +85411,7 @@ aht
 aht
 aht
 aif
-ahv
+bcS
 ahB
 aht
 aht
@@ -82516,7 +85498,7 @@ eTP
 jCM
 nXF
 aif
-ahr
+bcT
 ahB
 nXF
 bZV
@@ -82603,7 +85585,7 @@ aFF
 aFB
 xYi
 aif
-ahs
+bcU
 ahB
 eRy
 aIA
@@ -82690,7 +85672,7 @@ ahu
 aFC
 rIh
 aif
-ahr
+bcT
 ahB
 qGb
 aIB
@@ -82777,7 +85759,7 @@ ahu
 aFC
 bOF
 aif
-ahv
+bcS
 ahB
 ive
 aIB
@@ -82864,7 +85846,7 @@ ahu
 aFC
 lgP
 aif
-ahv
+bcS
 ahB
 alR
 aIB
@@ -82951,7 +85933,7 @@ jyI
 jyI
 xYi
 aif
-ahv
+bcS
 ahB
 eRy
 aIB
@@ -83125,7 +86107,7 @@ wXn
 wXn
 bOF
 aif
-ahv
+bcS
 ahB
 ive
 aIB
@@ -83212,7 +86194,7 @@ ahu
 aFC
 lgP
 aif
-ahv
+bcS
 ahB
 alR
 aIB
@@ -83299,7 +86281,7 @@ ahu
 aFC
 xYi
 aif
-ahv
+bcS
 ahB
 eRy
 aIB
@@ -83386,7 +86368,7 @@ ahu
 aFC
 rIh
 aif
-ahr
+bcT
 ahB
 qGb
 aIB
@@ -83473,7 +86455,7 @@ aFG
 aFD
 bOF
 aif
-ahs
+bcU
 ahB
 ive
 aIC
@@ -83560,7 +86542,7 @@ owX
 ela
 nXF
 aif
-ahr
+bcT
 ahB
 nXF
 iHD
@@ -83647,7 +86629,7 @@ aht
 aht
 jGC
 aif
-ahv
+bcS
 ahB
 aht
 aht
@@ -83722,19 +86704,19 @@ ahv
 ahv
 ahv
 ahv
-ahv
-ahv
-ahv
-ahv
-ahv
-ahv
-ahv
-ahB
-aht
-aht
-aht
-aif
-ahv
+bdS
+bdC
+bdC
+bdC
+bdC
+bdC
+bdC
+bdy
+bdm
+bdm
+bdm
+bdj
+bcV
 ahB
 aht
 aht
@@ -83809,7 +86791,7 @@ ahH
 ahH
 ahH
 ahH
-ahH
+bcW
 ahH
 ahH
 ahH
@@ -83821,7 +86803,7 @@ aht
 aht
 aht
 aif
-ahv
+bcS
 ahB
 aht
 aht
@@ -83896,7 +86878,7 @@ ahq
 ahq
 ahq
 aXq
-ahq
+bdT
 ahq
 ahq
 ahq
@@ -83908,7 +86890,7 @@ ahq
 ahq
 ahq
 aig
-ahH
+bcW
 ahC
 ahq
 ahq
@@ -83921,7 +86903,7 @@ ahq
 ahq
 ahq
 ahq
-ahq
+bbV
 ahq
 ahq
 ahq
@@ -83983,7 +86965,7 @@ aRK
 aXG
 aXz
 aRK
-rSE
+bdU
 aUq
 rSE
 aUq
@@ -83995,7 +86977,7 @@ aPF
 aPF
 asV
 asR
-asV
+bcY
 asR
 asV
 aPC
@@ -84070,7 +87052,7 @@ aSf
 aQm
 aQm
 aXr
-aQm
+bdV
 aRT
 aDW
 aQm
@@ -84082,7 +87064,7 @@ aPH
 aPG
 asT
 atl
-asw
+bcZ
 ast
 asT
 asS
@@ -84157,7 +87139,7 @@ aSg
 aRZ
 aRZ
 aRZ
-aRZ
+bdW
 aRZ
 aRZ
 aRZ
@@ -84169,7 +87151,7 @@ aPJ
 aPG
 aWq
 atm
-asz
+bda
 asu
 asT
 asS
@@ -84177,7 +87159,7 @@ aOW
 aaK
 aOZ
 aPq
-aPq
+bcn
 aPq
 aPq
 aOZ
@@ -84244,7 +87226,7 @@ qPE
 aSt
 aSt
 aSt
-aSt
+bdX
 aSn
 aSa
 aSa
@@ -84256,7 +87238,7 @@ aWJ
 aPG
 acq
 atm
-asz
+bda
 asu
 asT
 aPD
@@ -84264,7 +87246,7 @@ aOW
 aOZ
 aOZ
 aPq
-aPq
+bcn
 aPq
 aPq
 aOZ
@@ -84331,7 +87313,7 @@ bzc
 bzc
 aSs
 aQy
-aQm
+bdV
 aSo
 aSi
 aSb
@@ -84343,15 +87325,15 @@ aPK
 aWB
 asT
 atm
-asz
-asu
-asT
-aPD
+bdb
+bcE
+bcA
+bcy
 aPy
-aOZ
-aOZ
-aPq
-aPw
+bcs
+bcs
+bcq
+bco
 aPt
 aPq
 aOZ
@@ -84418,7 +87400,7 @@ aRh
 bzc
 aSs
 aSg
-aRZ
+bdW
 aSp
 aSj
 aDW
@@ -84430,7 +87412,7 @@ aPM
 aPG
 asT
 atm
-asx
+bdc
 asu
 asT
 aPD
@@ -84505,7 +87487,7 @@ faH
 faH
 aSs
 aSg
-aRZ
+bdW
 aSp
 aSj
 aRT
@@ -84517,7 +87499,7 @@ aPN
 aPG
 asT
 atm
-asK
+bdd
 asu
 asT
 asS
@@ -84592,7 +87574,7 @@ aSs
 aSs
 aSs
 qPE
-aSt
+bdX
 aSq
 aSk
 aSc
@@ -84604,7 +87586,7 @@ aPO
 aPG
 asT
 atm
-asx
+bdc
 asu
 asT
 asS
@@ -84691,7 +87673,7 @@ aRA
 aRA
 asT
 atm
-asz
+bda
 asu
 asT
 asS
@@ -84767,7 +87749,7 @@ aQG
 aSj
 aQA
 aQv
-aSd
+bdM
 aSr
 aSd
 aQi
@@ -84778,7 +87760,7 @@ xwG
 aRA
 asT
 atm
-asz
+bda
 asu
 asT
 asS
@@ -84856,7 +87838,7 @@ aQA
 iFz
 aRV
 aRV
-aRV
+bdJ
 aRV
 aRM
 aRA
@@ -84865,9 +87847,9 @@ nXb
 aRA
 acq
 atm
-asz
+bda
 asu
-asT
+bcB
 asS
 alK
 alK
@@ -84952,7 +87934,7 @@ aRA
 aRA
 asT
 atm
-asx
+bdc
 asu
 asT
 asS
@@ -85030,7 +88012,7 @@ aSw
 aQx
 aRA
 aQn
-aSf
+bdK
 aRW
 aRA
 aRF
@@ -85039,7 +88021,7 @@ aRB
 aRA
 asT
 atm
-asK
+bdd
 asu
 asT
 asS
@@ -85117,7 +88099,7 @@ aSs
 aSs
 aSs
 aQn
-aSg
+bdL
 aRX
 aRN
 aRG
@@ -85126,7 +88108,7 @@ aPP
 aRA
 asT
 atm
-asx
+bdc
 asu
 asT
 asS
@@ -85204,7 +88186,7 @@ aSs
 aSs
 aSs
 aQo
-aSg
+bdL
 anX
 aRA
 aRA
@@ -85213,7 +88195,7 @@ aRA
 aRA
 asT
 atm
-asz
+bda
 asu
 asT
 asS
@@ -85291,7 +88273,7 @@ fMR
 fMR
 aSs
 aQo
-aSg
+bdL
 aRY
 aRA
 aRH
@@ -85300,7 +88282,7 @@ aPR
 aRA
 asT
 atm
-asz
+bda
 asu
 asT
 asS
@@ -85378,7 +88360,7 @@ xBM
 xBM
 aSs
 aSl
-aSg
+bdL
 aQj
 aQg
 aQd
@@ -85387,7 +88369,7 @@ aPQ
 aRA
 asT
 atm
-asz
+bda
 asu
 asT
 asS
@@ -85474,7 +88456,7 @@ aPT
 aRA
 acq
 atm
-asx
+bdc
 asu
 asT
 asS
@@ -85561,7 +88543,7 @@ aRC
 aRA
 asT
 atm
-asK
+bdd
 asu
 asT
 asS
@@ -85648,7 +88630,7 @@ aRA
 aRA
 asT
 atm
-asx
+bdc
 asu
 asT
 asS
@@ -85735,7 +88717,7 @@ asw
 asw
 asw
 atn
-asz
+bda
 asZ
 asw
 asw
@@ -85822,7 +88804,7 @@ asK
 asx
 asz
 asz
-asz
+bda
 asz
 asz
 asx
@@ -85909,7 +88891,7 @@ aWK
 eDG
 eDG
 aaR
-asz
+bda
 ata
 asy
 asy
@@ -85996,7 +88978,7 @@ aaS
 aaW
 aaS
 aWl
-asz
+bda
 asu
 aGb
 aGb
@@ -86083,7 +89065,7 @@ abo
 azB
 aaW
 ato
-asz
+bda
 asu
 aGb
 aIE
@@ -86095,7 +89077,7 @@ aHz
 aaI
 aGn
 aGn
-aGn
+bcd
 aGn
 aGn
 aGn
@@ -86170,7 +89152,7 @@ hOc
 aba
 aaS
 ato
-asx
+bdc
 asu
 aIT
 aIF
@@ -86246,18 +89228,18 @@ acK
 acG
 aaS
 acv
-hOc
-aba
+bdN
+bdq
 ach
-aca
-hOc
-hOc
-hOc
-hOc
-aba
-tUQ
-ato
-asK
+bdF
+bdv
+bdv
+bdv
+bdv
+bdq
+bdn
+bdk
+bde
 asu
 aIT
 aIF
@@ -86333,7 +89315,7 @@ aJq
 aJq
 aJq
 acv
-hOc
+bdO
 aba
 aJd
 aca
@@ -86344,7 +89326,7 @@ hOc
 aba
 tUQ
 ato
-asx
+bdc
 asu
 aIT
 aIF
@@ -86420,7 +89402,7 @@ acL
 acH
 aJr
 aca
-hOc
+bdO
 aba
 aaS
 acb
@@ -86431,7 +89413,7 @@ abp
 abb
 aaS
 acg
-asz
+bda
 asu
 aGb
 abT
@@ -86507,7 +89489,7 @@ acM
 aJy
 acz
 aca
-hOc
+bdO
 aba
 aaS
 rsO
@@ -86518,7 +89500,7 @@ abq
 abc
 aaW
 ato
-asz
+bda
 asu
 aGb
 aHt
@@ -86591,10 +89573,10 @@ aiu
 aJq
 acU
 aJI
-aJy
+beb
 acA
-aca
-hOc
+bdF
+bdP
 azE
 aIZ
 aIZ
@@ -86605,7 +89587,7 @@ avR
 abd
 aIZ
 ato
-asz
+bda
 asu
 aIT
 aIG
@@ -86681,7 +89663,7 @@ acN
 acI
 aJr
 aca
-hOc
+bdO
 azF
 aIZ
 awh
@@ -86692,7 +89674,7 @@ avS
 ihE
 aIZ
 ato
-asx
+bdc
 asu
 aIT
 aHj
@@ -86768,7 +89750,7 @@ aJq
 aJq
 aJq
 acw
-hOc
+bdO
 aba
 aIZ
 awi
@@ -86779,20 +89761,20 @@ aJe
 aaY
 aIZ
 ato
-asK
+bdd
 asu
 aIT
 aIH
 aHA
-aGq
-aGq
+bce
+bce
 aHA
 aHA
 aaN
-aGq
-aGq
-aGq
-aGq
+bce
+bce
+bce
+bbW
 aGq
 aGq
 aGi
@@ -86855,18 +89837,18 @@ aJL
 aJz
 aJs
 aca
-hOc
-aba
+bdQ
+bdq
 aci
-aJk
-aJf
-aJf
-aJf
-aJf
+bdG
+bdw
+bdw
+bdw
+bdw
 aJc
 avF
 ato
-asx
+bdc
 asu
 aGb
 aII
@@ -86942,7 +89924,7 @@ aJM
 aJA
 acB
 aca
-hOc
+bdO
 aba
 aJp
 aJk
@@ -86950,10 +89932,10 @@ aJf
 aJf
 aJf
 aJf
-aJc
+bdr
 avF
 ato
-asz
+bda
 asu
 aGb
 aIJ
@@ -86966,7 +89948,7 @@ aGb
 aHh
 aGW
 aGn
-aGn
+bbX
 aGn
 aGn
 aGj
@@ -87026,10 +90008,10 @@ aiu
 aJu
 aJZ
 aJN
-aJA
+bec
 aJt
-aca
-hOc
+bdF
+bdP
 aba
 aIZ
 awj
@@ -87040,7 +90022,7 @@ abr
 abe
 aIZ
 ato
-asz
+bda
 asu
 aGb
 aIK
@@ -87053,7 +90035,7 @@ aGb
 aHi
 aGp
 aGo
-aGo
+bbY
 aGo
 aGo
 aGk
@@ -87116,7 +90098,7 @@ aJO
 aJB
 aJs
 aca
-hOc
+bdO
 aba
 aIZ
 awm
@@ -87127,7 +90109,7 @@ avT
 avK
 aIZ
 atp
-asz
+bda
 asu
 aGb
 aGb
@@ -87140,7 +90122,7 @@ aGb
 aHj
 aGX
 aGr
-aGr
+bbZ
 aGr
 aGr
 aGl
@@ -87203,7 +90185,7 @@ aJu
 aJu
 aJu
 acw
-hOc
+bdO
 azG
 aIZ
 aIZ
@@ -87214,7 +90196,7 @@ aIZ
 aIZ
 aIZ
 acg
-asx
+bdc
 asu
 aGb
 aHt
@@ -87227,7 +90209,7 @@ aGb
 aHj
 aGz
 aGE
-aGt
+bca
 aGt
 aGs
 aav
@@ -87290,7 +90272,7 @@ aJP
 aJC
 aJv
 aca
-hOc
+bdO
 azH
 aaS
 nPV
@@ -87301,7 +90283,7 @@ nPV
 oBU
 aaS
 ato
-asK
+bdd
 asu
 aHv
 aHk
@@ -87314,7 +90296,7 @@ aHv
 aHk
 aGE
 aGs
-aGE
+bcb
 aGy
 aGt
 aGh
@@ -87377,7 +90359,7 @@ aJQ
 aJD
 acC
 aca
-hOc
+bdO
 aco
 aaS
 uOB
@@ -87388,20 +90370,20 @@ aWL
 aWC
 aaS
 ato
-asx
-asu
-aGr
-aHk
-aGo
-aGz
-aGz
-aGo
-aGh
-aGr
-aHk
-aGr
-aGr
-aGr
+bdf
+bcE
+bcg
+bck
+bcr
+bct
+bct
+bcr
+bcp
+bcg
+bck
+bch
+bcg
+bcc
 aGr
 aGr
 aGh
@@ -87461,10 +90443,10 @@ aiu
 aJx
 aKd
 aJR
-aJD
+bed
 aJw
-aca
-hOc
+bdF
+bdR
 aco
 aaS
 abV
@@ -87475,8 +90457,8 @@ abs
 abf
 aaS
 ato
-asz
-asu
+bda
+bcF
 aGb
 aHl
 aGq
@@ -87486,7 +90468,7 @@ aGq
 aGm
 aGb
 aHk
-aGo
+bbY
 aGo
 aGo
 aGo
@@ -87562,7 +90544,7 @@ abt
 abg
 aaS
 ato
-asz
+bda
 asu
 aGb
 aGb
@@ -87573,7 +90555,7 @@ aGb
 aGb
 aGb
 aHl
-aGq
+bci
 aGq
 aGq
 aGq
@@ -87637,7 +90619,7 @@ aJx
 aJx
 aJx
 aJx
-aca
+bdY
 hOc
 aba
 aaS
@@ -87649,7 +90631,7 @@ aWr
 aWr
 aWr
 ato
-asz
+bda
 asu
 aIU
 aIL
@@ -87736,7 +90718,7 @@ abu
 abh
 aWr
 ato
-asx
+bdc
 asu
 aIV
 aIM
@@ -87747,7 +90729,7 @@ aHG
 aHG
 aHw
 aGZ
-aGZ
+bcj
 aGJ
 aGF
 ahO
@@ -87823,7 +90805,7 @@ abv
 abi
 aWr
 ato
-asK
+bdd
 asu
 aIW
 aGF
@@ -87910,7 +90892,7 @@ abw
 lpC
 aaX
 acg
-asx
+bdc
 asu
 aIV
 aIN
@@ -87997,7 +90979,7 @@ abw
 acx
 aaX
 ato
-asz
+bda
 asu
 aIW
 aIN
@@ -88084,7 +91066,7 @@ abw
 lpC
 aaX
 ato
-asz
+bdg
 asu
 aIV
 aGF
@@ -93820,12 +96802,12 @@ rYx
 rYx
 xDc
 iBC
-ugv
-krM
+bhd
+bgX
 atr
 aeK
-krM
-jat
+bgX
+bgM
 laA
 bHp
 eDY
@@ -93912,7 +96894,7 @@ krM
 yeO
 niN
 ncG
-jat
+bgN
 jat
 jat
 jat
@@ -94173,7 +97155,7 @@ eXH
 vXl
 hdW
 hEa
-dMJ
+bgO
 wdO
 avj
 wdO
@@ -94336,18 +97318,18 @@ pXI
 pXI
 pXI
 pXI
-fpn
+bhK
 aKQ
 abY
 tee
 aKQ
 aKQ
-uFz
+ugv
 eXH
 sZH
 wdO
 wdO
-wdO
+bgP
 krM
 krM
 gNC
@@ -94356,7 +97338,7 @@ wdO
 wdO
 fpp
 eXH
-lQV
+bfk
 aKQ
 aKQ
 sHo
@@ -94423,7 +97405,7 @@ wol
 eca
 eca
 wol
-pXI
+bhL
 aKQ
 spy
 iFS
@@ -94434,11 +97416,11 @@ eXH
 sZH
 wdO
 wdO
-wdO
+bgP
 krM
 krM
 krM
-wdO
+bfQ
 wdO
 wdO
 fpp
@@ -94597,7 +97579,7 @@ apP
 ckW
 ckW
 vSF
-pXI
+bhL
 aKQ
 qZp
 xTd
@@ -94608,7 +97590,7 @@ eXH
 mdM
 pDW
 gFd
-lUa
+bgQ
 wdO
 wdO
 wdO
@@ -94771,7 +97753,7 @@ apP
 ckW
 ckW
 vSF
-pXI
+bhL
 aKQ
 qZp
 xTd
@@ -94858,7 +97840,7 @@ apP
 ckW
 dmU
 vSF
-pXI
+bhL
 aKQ
 xnV
 erw
@@ -94869,7 +97851,7 @@ eXH
 eXH
 eXH
 eXH
-eXH
+bgR
 eXH
 eXH
 eXH
@@ -94945,7 +97927,7 @@ wol
 wKB
 wKB
 wol
-pXI
+bhL
 aKQ
 abY
 abY
@@ -94956,7 +97938,7 @@ oQr
 oQr
 bno
 oQr
-oQr
+bfU
 oQr
 oQr
 oQr
@@ -95032,7 +98014,7 @@ pXI
 pXI
 pXI
 pXI
-pXI
+bhL
 aKQ
 aKQ
 aKQ
@@ -95043,7 +98025,7 @@ aKQ
 aKQ
 aKQ
 aYu
-iMo
+bgS
 aKQ
 aYw
 aKQ
@@ -95119,7 +98101,7 @@ urw
 urw
 urw
 urw
-urw
+bhM
 hho
 cch
 qfH
@@ -95130,7 +98112,7 @@ dqK
 vxQ
 qNy
 kNR
-kNR
+bgT
 kNR
 ehL
 kNR
@@ -95206,18 +98188,18 @@ qfH
 qfH
 qfH
 qfH
-dqK
+bhN
 lyT
 wJy
-bVm
-bVm
-bVm
-bVm
-nLp
-jat
-ugv
-jat
-krM
+bhx
+bhx
+bhx
+bhx
+bhs
+bgY
+bhd
+bgY
+bgU
 rDX
 bjY
 rDX
@@ -95304,10 +98286,10 @@ vIJ
 aKQ
 qRj
 jat
-krM
-eXH
-eXH
-eXH
+bgV
+bgj
+bgj
+bfT
 krM
 jat
 wGV
@@ -95481,7 +98463,7 @@ oQr
 oQr
 oQr
 oQr
-oQr
+bfU
 oQr
 oQr
 rTW
@@ -95568,7 +98550,7 @@ aKQ
 aKQ
 awf
 aYw
-awf
+bfV
 aKQ
 aKQ
 aKQ
@@ -95654,8 +98636,8 @@ aZL
 ahV
 noE
 atV
-atJ
-atG
+bgk
+bfW
 qnW
 ixh
 mgV
@@ -95741,7 +98723,7 @@ cNB
 aZL
 eip
 atW
-atM
+bgl
 atH
 qnW
 aDb
@@ -95825,10 +98807,10 @@ wEi
 aeA
 fRZ
 iUj
-aZL
+bgZ
 kov
-atW
-atM
+bfO
+bgm
 atH
 qnW
 cEY
@@ -95911,11 +98893,11 @@ nQf
 nQf
 cnt
 eOS
-aZL
+bhe
 vLl
 noE
 atW
-atM
+bgl
 atH
 qnW
 okN
@@ -96002,7 +98984,7 @@ pnP
 nQf
 gzN
 aYn
-atK
+bgn
 atH
 qnW
 uxc
@@ -96085,11 +99067,11 @@ bhV
 fUE
 bhV
 hWL
-bhV
+bhf
 bvx
 gzN
 atW
-atY
+bgo
 atH
 oGK
 gOt
@@ -96172,11 +99154,11 @@ bhV
 nQf
 bns
 joJ
-joJ
+bhg
 wkd
 gzN
 atW
-atK
+bgn
 atH
 oGK
 gOt
@@ -96259,11 +99241,11 @@ fjz
 nQf
 ahl
 joJ
-joJ
+bhg
 kDX
 iBn
 atW
-atM
+bgl
 avl
 qnW
 qKi
@@ -96346,21 +99328,21 @@ nQf
 nQf
 ofT
 joJ
-joJ
+bhg
 kQN
 iBn
 atW
-atM
-atH
+bgp
+beD
 fEx
-gOt
-uqe
-cVS
+bfM
+beB
+bfy
 ofS
 bYq
 peY
 nrv
-uqe
+beB
 cFE
 qnW
 dhB
@@ -96433,11 +99415,11 @@ cLp
 bhV
 bhV
 joJ
-joJ
+bhg
 bhV
 iBn
 atW
-atM
+bgl
 atH
 gHs
 dvB
@@ -96517,15 +99499,15 @@ nQf
 nDT
 nQf
 sCn
-joJ
-joJ
+bht
+bht
 ncz
-joJ
+bhh
 cjF
 iBn
 atW
-atK
-atH
+bgn
+bfX
 qnW
 aSX
 xGi
@@ -96611,7 +99593,7 @@ eIQ
 alL
 gzN
 atW
-atY
+bgo
 atH
 qnW
 aSX
@@ -96698,7 +99680,7 @@ nFE
 bhV
 gzN
 atW
-atK
+bgn
 atH
 qnW
 wJJ
@@ -96785,7 +99767,7 @@ htD
 bhV
 gzN
 gxy
-atM
+bgl
 qNr
 qnW
 wJJ
@@ -96872,7 +99854,7 @@ nQf
 nQf
 gzN
 nZR
-atM
+bgl
 ajW
 qnW
 okN
@@ -96959,7 +99941,7 @@ nZl
 aOX
 jVl
 aus
-atM
+bgl
 kXu
 kHR
 rGe
@@ -97046,7 +100028,7 @@ oEj
 ovC
 jVl
 aus
-atK
+bgn
 kXu
 kHR
 jxo
@@ -97123,27 +100105,27 @@ gfS
 gfS
 jVl
 bCb
-nZl
-nZl
-nZl
-nZl
-qge
-auj
+bhy
+bhy
+bhy
+bhy
+bhu
+bhm
 auj
 auj
 wsj
-aus
-atY
+bgG
+bgq
 kXu
 pVc
 rCk
 rCk
-rCk
-fdn
-sOq
-sOq
-sOq
-sOq
+bfz
+bfq
+beC
+beC
+beC
+beC
 kkQ
 kHR
 dhB
@@ -97215,17 +100197,17 @@ qnc
 nZl
 nZl
 uXP
-auj
-auj
-auj
+bhn
+bhi
+bha
 mSA
-aus
-atK
-kXu
+bgH
+bgn
+bfY
 gIl
-rCk
-rCk
-rCk
+bfN
+bfH
+bfA
 aaE
 sOq
 sOq
@@ -97303,15 +100285,15 @@ nZl
 gxE
 ptL
 auj
-auj
+bhj
 pKD
 wsj
 aus
-atM
-kXu
+bgp
+bfZ
 pVc
 qwO
-rCk
+bfI
 rCk
 hyk
 fNI
@@ -97394,7 +100376,7 @@ wuE
 xLs
 wcA
 aus
-atM
+bgl
 avm
 rpd
 haT
@@ -97477,15 +100459,15 @@ xLs
 jjT
 gKS
 gKS
-gKS
+bhk
 boz
 wcA
 aus
-atM
+bgl
 kXu
 rpd
 dtz
-woC
+bfJ
 woC
 woC
 wBa
@@ -97568,7 +100550,7 @@ nYf
 rxM
 wcA
 aus
-atK
+bgn
 kXu
 rpd
 qrP
@@ -97655,7 +100637,7 @@ nYf
 gKS
 dIg
 aus
-atY
+bgo
 kXu
 vnJ
 woC
@@ -97742,7 +100724,7 @@ nYf
 pvW
 dIg
 aus
-atK
+bgn
 kXu
 vnJ
 hag
@@ -97829,7 +100811,7 @@ ags
 cuc
 dIg
 aus
-atM
+bgl
 kXu
 vnJ
 lcD
@@ -97916,7 +100898,7 @@ fRh
 vUZ
 wcA
 aus
-atM
+bgl
 kXu
 rpd
 cpw
@@ -98003,7 +100985,7 @@ gKS
 iIn
 wcA
 aut
-atM
+bgl
 shj
 rpd
 yfg
@@ -98090,7 +101072,7 @@ lmX
 lmX
 uek
 dCJ
-atK
+bgn
 jgN
 pVH
 uiL
@@ -98176,8 +101158,8 @@ fcX
 fcX
 rOL
 ipu
-auu
-atY
+bgI
+bgq
 atH
 lVS
 vNy
@@ -98259,17 +101241,17 @@ xXv
 joi
 cGV
 lxX
-fcX
-fcX
-fcX
+bho
+bhb
+bhb
 ebQ
-auu
-atK
-atH
+bgJ
+bgn
+bga
 qPT
-aeO
-aeO
-aeO
+bfK
+bfK
+bfB
 hhf
 pJt
 aro
@@ -98342,25 +101324,25 @@ qFv
 bDM
 gdb
 gdb
-xXv
+bhC
 gtL
-jWX
-itp
-fcX
+bhz
+bhv
+bhp
 fcX
 fcX
 ipu
 auu
-atM
-atH
+bgp
+bgb
 lVS
 aeO
 aeO
-aeO
-hPP
-pJt
+bfC
+bfr
+bfl
 gbT
-biH
+beN
 ibA
 ibA
 sYX
@@ -98424,26 +101406,26 @@ ewM
 xci
 rMM
 ojW
-gdb
-gdb
-gdb
-gdb
-gdb
-xXv
+bhF
+bhF
+bhF
+bhF
+bhF
+bhD
 joi
 bQO
 itp
-itp
+bhq
 nOH
 oaJ
 uek
 aYy
-atM
+bgl
 avl
 pVH
 mmu
 jdV
-hPP
+bfD
 hPP
 eoM
 aro
@@ -98520,18 +101502,18 @@ pHJ
 cOz
 jWX
 jWX
-jWX
+bhr
 jWX
 avH
 uek
 auu
-atM
+bgl
 atH
 pVH
 uwt
 pJt
-pJt
-pJt
+bfE
+bfl
 rTk
 qsg
 lGr
@@ -98607,12 +101589,12 @@ joi
 joi
 rtr
 jWX
-jWX
+bhr
 jWX
 jWX
 uek
 auu
-atK
+bgn
 atH
 pVH
 ffC
@@ -98694,12 +101676,12 @@ xoH
 joi
 xWj
 jWX
-jWX
+bhr
 wKq
 cOw
 ipu
 auu
-atY
+bgo
 atH
 lVS
 gnV
@@ -98781,12 +101763,12 @@ iXH
 joi
 vRs
 jWX
-jWX
+bhr
 jWX
 avH
 uek
 auu
-atK
+bgn
 atH
 pVH
 arw
@@ -98873,7 +101855,7 @@ afV
 pGZ
 uek
 auu
-atM
+bgl
 atH
 pVH
 fxU
@@ -98960,7 +101942,7 @@ uek
 uek
 uek
 gIQ
-atM
+bgl
 qNr
 pVH
 pVH
@@ -99047,8 +102029,8 @@ irP
 qat
 tGd
 mDd
-atM
-jgN
+bgl
+bgc
 atF
 dhB
 dhB
@@ -99134,7 +102116,7 @@ irP
 irP
 tGd
 atW
-atK
+bgn
 atH
 pwy
 dhB
@@ -99221,7 +102203,7 @@ irP
 irP
 tGd
 atW
-atY
+bgo
 atH
 wpc
 wpc
@@ -99308,7 +102290,7 @@ irP
 irP
 tGd
 atW
-atK
+bgn
 atH
 wpc
 xAb
@@ -99395,7 +102377,7 @@ irP
 irP
 tGd
 atW
-atM
+bgl
 avl
 wpc
 rZt
@@ -99405,12 +102387,12 @@ bGc
 jnr
 wpc
 nJI
-atH
+beD
 puz
-aaU
-klU
-klU
-aaU
+bet
+beq
+beq
+ben
 vfZ
 aaU
 jNK
@@ -99482,7 +102464,7 @@ irP
 qat
 tGd
 auv
-atM
+bgl
 atH
 wpc
 mki
@@ -99491,13 +102473,13 @@ tSF
 fDz
 kjN
 wpc
-atW
+beO
 atH
 svI
 pVT
 klU
 klU
-aaU
+beo
 svI
 yfN
 aaU
@@ -99569,7 +102551,7 @@ irP
 irP
 tGd
 atW
-atM
+bgl
 atH
 wpc
 qfX
@@ -99578,7 +102560,7 @@ rVh
 eeF
 cPi
 vMY
-atW
+beO
 atH
 suU
 rwx
@@ -99656,7 +102638,7 @@ irP
 irP
 tGd
 atW
-atK
+bgn
 atH
 wpc
 nCZ
@@ -99665,13 +102647,13 @@ tSF
 fDz
 wTy
 wpc
-atW
+beO
 atH
 suU
 nCz
 eRV
 oue
-aaU
+beo
 svI
 dlA
 bMY
@@ -99743,7 +102725,7 @@ irP
 irP
 tGd
 atW
-atY
+bgo
 atH
 wpc
 rjr
@@ -99752,13 +102734,13 @@ pDH
 hYV
 jAn
 wpc
-aYn
+beP
 atH
 suU
 nvW
 eCy
-klU
-aaU
+beq
+bep
 svI
 hJc
 fOb
@@ -99830,7 +102812,7 @@ irP
 irP
 tGd
 atW
-atK
+bgn
 atH
 wpc
 lFK
@@ -99839,7 +102821,7 @@ fuD
 rLZ
 rLZ
 wpc
-nJI
+beQ
 atH
 svI
 gHv
@@ -99917,7 +102899,7 @@ tGd
 tGd
 tGd
 atW
-atM
+bgl
 atH
 wpc
 wpc
@@ -99926,7 +102908,7 @@ wpc
 wpc
 wpc
 wpc
-atX
+beR
 atI
 svI
 svI
@@ -100004,7 +102986,7 @@ lfJ
 pSl
 psU
 atW
-atM
+bgl
 atH
 aum
 atV
@@ -100013,7 +102995,7 @@ aaH
 atJ
 atJ
 atJ
-atJ
+beS
 atJ
 atJ
 atJ
@@ -100091,15 +103073,15 @@ uSJ
 eiy
 rtU
 atW
-atM
-atH
+bgp
+beD
 jFd
-atW
-atK
-atM
-atM
-atM
-atK
+bfO
+bff
+bfm
+bfs
+bfm
+bff
 atY
 atK
 atM
@@ -100178,13 +103160,13 @@ fwS
 jUN
 psU
 atW
-atK
+bgn
 atH
 aum
 atX
 atL
 atL
-atL
+bft
 atL
 atL
 atL
@@ -100265,7 +103247,7 @@ cJV
 tGd
 tGd
 aYn
-atY
+bgo
 atH
 wYc
 bdH
@@ -100352,13 +103334,13 @@ iZQ
 vjX
 aSZ
 atW
-atK
+bgn
 atH
 wYc
 kKN
 imy
 imy
-imy
+bfu
 nBp
 wdI
 wYc
@@ -100439,7 +103421,7 @@ aTn
 lpH
 adb
 atW
-atM
+bgl
 avl
 wYc
 aJF
@@ -100526,13 +103508,13 @@ aTn
 lpH
 adc
 atW
-atM
+bgl
 atH
 wYc
 rkp
 odb
 vWF
-rwU
+bfv
 odb
 nJu
 wYc
@@ -100613,7 +103595,7 @@ aTn
 lpH
 adb
 atW
-atM
+bgl
 atH
 wYc
 oNl
@@ -100700,17 +103682,17 @@ qkF
 nyH
 aSZ
 atW
-atK
+bgn
 atH
 wYc
 lvY
 tJc
 tJc
-tJc
-tJc
-cnQ
+bfw
+bfn
+bfg
 aYo
-mwI
+beE
 tba
 uCQ
 tFK
@@ -100787,7 +103769,7 @@ ygv
 rGQ
 aSZ
 atW
-atY
+bgo
 atH
 wYc
 wYc
@@ -100798,7 +103780,7 @@ wYc
 wYc
 wYc
 mwI
-kls
+bev
 uCQ
 tFK
 laz
@@ -100874,7 +103856,7 @@ bzq
 ugn
 aSZ
 atW
-atK
+bgn
 atH
 wzb
 wLT
@@ -100885,7 +103867,7 @@ pTn
 jXk
 xnW
 mwI
-kls
+bev
 uCQ
 tFK
 laz
@@ -100961,7 +103943,7 @@ adp
 adh
 aSZ
 atW
-atM
+bgl
 atH
 wzb
 lYN
@@ -100972,7 +103954,7 @@ vlu
 nUF
 fdT
 mwI
-kls
+bev
 uCQ
 jND
 laz
@@ -101048,7 +104030,7 @@ adp
 nqA
 aSZ
 atW
-atM
+bgl
 atH
 wzb
 cfM
@@ -101135,7 +104117,7 @@ adp
 aJJ
 aSZ
 atW
-atM
+bgl
 atH
 wzb
 xnW
@@ -101222,18 +104204,18 @@ kHZ
 vPX
 aSZ
 atW
-atK
+bgn
 atH
 aQf
 gtf
 izV
-oqm
+bfF
 opd
 fAl
 oqm
 aXm
 oUK
-izV
+bew
 izV
 qJy
 laz
@@ -101309,7 +104291,7 @@ adq
 dgf
 aSZ
 atW
-atY
+bgo
 atH
 aQf
 wWF
@@ -101321,7 +104303,7 @@ lDv
 laz
 jND
 oWY
-mBd
+beu
 mBd
 lyy
 ndv
@@ -101396,7 +104378,7 @@ adr
 mSk
 aSZ
 atW
-atK
+bgn
 avl
 aQf
 bnQ
@@ -101407,12 +104389,12 @@ lDv
 nnQ
 laz
 jND
-laz
+bex
 ndv
 kTZ
 ndv
 ndv
-uIT
+bem
 nCr
 bzg
 ruB
@@ -101483,7 +104465,7 @@ hBX
 rbz
 aSZ
 atW
-atM
+bgl
 atH
 aQf
 gIe
@@ -101494,12 +104476,12 @@ vqD
 dwv
 laz
 jND
-laz
+bey
 ndv
-bcQ
+ber
 gGv
 ndv
-koV
+uIT
 nCr
 grq
 ruB
@@ -101570,7 +104552,7 @@ maL
 mAD
 aSZ
 atW
-atM
+bgl
 atH
 aQf
 iSp
@@ -101581,12 +104563,12 @@ kHE
 fqf
 laz
 jND
-laz
+bey
 ndv
 pKF
 uUE
 ndv
-ooh
+koV
 nCr
 gaF
 ruB
@@ -101657,7 +104639,7 @@ add
 add
 add
 pTb
-atM
+bgl
 atH
 aQf
 bnQ
@@ -101668,9 +104650,9 @@ lDv
 dwv
 laz
 jND
-laz
+bey
 hip
-bcQ
+ber
 bcQ
 ndv
 ndv
@@ -101737,31 +104719,31 @@ lUW
 aem
 ads
 ads
-ads
+bhA
 ads
 aPa
 ads
 guR
 uMG
 atW
-atK
+bgn
 atH
 aQf
 aSY
-mBd
-mBd
+beu
+beu
 mJJ
 oOm
-mBd
-lyy
-jND
-laz
+beu
+beT
+beF
+bez
 hip
-bcQ
-bcQ
+bes
+bel
 jAC
 aqj
-bcQ
+bel
 iWm
 ruB
 pJM
@@ -101831,8 +104813,8 @@ adt
 adi
 wwk
 atX
-atL
-atI
+bgr
+bgd
 kAH
 fVM
 fVM
@@ -101919,7 +104901,7 @@ ade
 ade
 geR
 aur
-geR
+bge
 kAH
 mVJ
 xiO
@@ -102005,8 +104987,8 @@ gvL
 gvL
 sLH
 auI
-atZ
-atP
+bgs
+bgf
 kAH
 edw
 oCq
@@ -102092,7 +105074,7 @@ tHr
 tHr
 pUz
 auw
-aug
+bgt
 atQ
 kAH
 bCL
@@ -102179,7 +105161,7 @@ jVY
 jVY
 lYs
 auw
-aug
+bgt
 atQ
 uEF
 uEF
@@ -102266,7 +105248,7 @@ ade
 ade
 ade
 aYz
-aug
+bgt
 atQ
 uEF
 hEA
@@ -102353,7 +105335,7 @@ oon
 oon
 ade
 avo
-aua
+bgu
 atQ
 uEF
 skx
@@ -102440,7 +105422,7 @@ oon
 oon
 aTa
 auw
-auc
+bgv
 atQ
 uEF
 dDd
@@ -102527,7 +105509,7 @@ oon
 oon
 ade
 auw
-aua
+bgu
 atQ
 uEF
 qtG
@@ -102614,8 +105596,8 @@ ade
 ade
 ade
 auw
-aug
-atQ
+bgt
+bgg
 uEF
 uEF
 uEF
@@ -102701,7 +105683,7 @@ atZ
 atZ
 atZ
 aux
-aug
+bgt
 aun
 atZ
 atZ
@@ -102788,16 +105770,16 @@ auc
 auc
 aua
 aug
-aug
-aug
-aua
-auc
-auc
-aua
-aug
-aug
-aug
-aua
+bgw
+bfh
+bfi
+bfL
+bfL
+bfi
+bfh
+bfh
+bfh
+beU
 atQ
 atO
 pJM
@@ -102884,7 +105866,7 @@ aub
 aub
 aub
 aub
-aub
+beV
 atR
 atN
 pJM
@@ -102971,7 +105953,7 @@ ajO
 ajO
 ajD
 ajH
-ajJ
+beW
 ajH
 ajD
 ajD
@@ -103058,7 +106040,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -103145,7 +106127,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -103232,7 +106214,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -103319,7 +106301,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -103406,7 +106388,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -103493,7 +106475,7 @@ ajE
 ajE
 ajN
 ajL
-ajK
+beX
 ajI
 ajG
 ajE
@@ -103580,7 +106562,7 @@ ajE
 ajE
 ajN
 ajL
-ajK
+beX
 ajI
 ajG
 ajE
@@ -103667,7 +106649,7 @@ ajE
 ajE
 ajN
 ajL
-ajK
+beX
 ajI
 ajG
 ajE
@@ -103754,7 +106736,7 @@ opP
 opP
 sOM
 ajL
-ajK
+beX
 ajI
 ajG
 ajE
@@ -103841,7 +106823,7 @@ htE
 htE
 htE
 tbp
-aLP
+beY
 ajI
 ajG
 ajE
@@ -103928,7 +106910,7 @@ aLQ
 aLQ
 aLQ
 aLQ
-aLQ
+beZ
 aLB
 aLg
 aKu
@@ -104015,7 +106997,7 @@ mPK
 mPK
 mPK
 tbp
-aLR
+bfa
 ajI
 ajG
 ajE
@@ -104102,7 +107084,7 @@ lGu
 lGu
 izl
 ajL
-ajK
+beX
 ajI
 ajG
 ajE
@@ -104189,7 +107171,7 @@ ajE
 ajE
 ajN
 ajL
-ajK
+beX
 ajI
 ajG
 ajE
@@ -104276,7 +107258,7 @@ ajE
 ajE
 ajN
 ajL
-ajK
+beX
 ajI
 ajG
 ajE
@@ -104363,7 +107345,7 @@ ajE
 ajE
 ajN
 ajL
-ajK
+beX
 ajI
 ajG
 ajE
@@ -104450,7 +107432,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -104537,7 +107519,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -104624,7 +107606,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -104711,7 +107693,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -104798,7 +107780,7 @@ ajE
 ajE
 ajM
 ajL
-ajK
+beX
 ajI
 ajF
 ajE
@@ -104885,7 +107867,7 @@ ajO
 ajO
 ajD
 ajH
-ajJ
+beW
 ajH
 ajD
 ajD
@@ -104972,7 +107954,7 @@ atZ
 atZ
 atZ
 atZ
-atZ
+bfb
 atP
 apu
 apo
@@ -105050,16 +108032,16 @@ aua
 auc
 aua
 aug
-aug
-aug
-aua
-auc
-aua
-aug
-aug
-aug
-aua
-auc
+bgx
+bfh
+bfi
+bfL
+bfi
+bfh
+bfh
+bfh
+bfi
+bfc
 atQ
 aoZ
 apq
@@ -105137,7 +108119,7 @@ aub
 aub
 aub
 auy
-aug
+bgt
 auo
 aub
 aub
@@ -105224,8 +108206,8 @@ ada
 ada
 ada
 auw
-aug
-atQ
+bgt
+bgg
 aRj
 aRj
 aQW
@@ -105311,7 +108293,7 @@ aTo
 aTc
 ada
 auw
-aua
+bgu
 atQ
 aRj
 aRk
@@ -105398,7 +108380,7 @@ ado
 aTd
 ada
 aYz
-auc
+bgv
 atQ
 aQW
 aRk
@@ -105485,7 +108467,7 @@ aTp
 aTe
 ada
 auw
-aua
+bgu
 atQ
 aQW
 aRk
@@ -105572,7 +108554,7 @@ acX
 ada
 ada
 auw
-aug
+bgt
 atQ
 aRj
 aul
@@ -105659,7 +108641,7 @@ arV
 aTf
 ada
 auw
-aug
+bgt
 atQ
 aRj
 aRk
@@ -105746,7 +108728,7 @@ adI
 aTg
 aTb
 auw
-aug
+bgt
 atQ
 auk
 aRk
@@ -105829,11 +108811,11 @@ gVD
 aTM
 aTG
 aTz
-adI
-aTg
-ado
-auw
-aua
+bhl
+bhc
+bgW
+bgK
+bgy
 atQ
 aRe
 aRk
@@ -105900,7 +108882,7 @@ aoP
 aoP
 apW
 apR
-apF
+bhO
 apB
 apy
 uCW
@@ -105920,7 +108902,7 @@ aTq
 aTh
 ada
 auw
-auc
+bgv
 atQ
 aRe
 aRk
@@ -105940,7 +108922,7 @@ pJM
 vct
 apq
 apj
-apc
+bek
 aoW
 aoR
 aoP
@@ -106007,7 +108989,7 @@ aTr
 cFU
 ada
 auw
-aua
+bgu
 atQ
 auk
 aRk
@@ -106094,7 +109076,7 @@ aTs
 ada
 ada
 auw
-aug
+bgt
 atQ
 aRj
 aRk
@@ -106181,7 +109163,7 @@ aTt
 aRm
 ada
 auw
-aug
+bgt
 atQ
 aRj
 aul
@@ -106268,7 +109250,7 @@ aTu
 aTk
 ada
 auw
-aug
+bgt
 atQ
 aQW
 aRk
@@ -106355,7 +109337,7 @@ aTv
 aTl
 ada
 auw
-aua
+bgu
 atQ
 aQW
 aRk
@@ -106442,7 +109424,7 @@ aRo
 aRn
 ada
 auw
-auc
+bgv
 atQ
 aRj
 aRk
@@ -106529,7 +109511,7 @@ ada
 ada
 ada
 auw
-aua
+bgu
 atQ
 aRj
 aRj
@@ -106616,7 +109598,7 @@ aud
 aud
 aud
 auz
-aui
+bgz
 aup
 aud
 aud
@@ -106703,7 +109685,7 @@ auh
 aue
 auh
 aui
-aui
+bgz
 aui
 auh
 aue
@@ -106790,7 +109772,7 @@ auE
 auE
 auE
 auA
-aui
+bgz
 auq
 auf
 auf
@@ -106877,7 +109859,7 @@ aYE
 aYE
 aYC
 auB
-auh
+bgA
 atT
 aKv
 aKv
@@ -106964,7 +109946,7 @@ adu
 aYE
 aYC
 auB
-aue
+bgB
 aNl
 aKv
 aMN
@@ -107051,17 +110033,17 @@ adu
 aYE
 aYC
 auB
-auh
-atT
+bgC
+bgh
 aNf
-aMe
-aLT
-aLT
-aLD
-aLi
-aMe
-aLT
-aLD
+bfj
+bfd
+bfd
+bfx
+bfo
+bfj
+bfd
+beG
 aLh
 aKx
 aKB
@@ -107138,7 +110120,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 atT
 aKB
 aMe
@@ -107225,7 +110207,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 avn
 aKv
 aMO
@@ -107312,7 +110294,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 atT
 aKv
 aKv
@@ -107399,7 +110381,7 @@ adu
 aYE
 aYC
 auB
-auh
+bgA
 atT
 aKv
 aKY
@@ -107486,7 +110468,7 @@ adu
 aYE
 aYC
 auB
-aue
+bgB
 atT
 aKv
 aKY
@@ -107573,7 +110555,7 @@ adu
 aYE
 aYD
 auB
-auh
+bgA
 atT
 aKv
 aMP
@@ -107660,7 +110642,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 atT
 aKv
 aKY
@@ -107747,7 +110729,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 atT
 aKv
 aKY
@@ -107757,7 +110739,7 @@ aKz
 aKv
 aMe
 aLT
-aLD
+beH
 aKv
 aKY
 aKO
@@ -107834,7 +110816,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 atT
 aKv
 aKY
@@ -107921,7 +110903,7 @@ adu
 aYE
 aYC
 auB
-auh
+bgA
 atT
 aKv
 aKv
@@ -108008,7 +110990,7 @@ adu
 aYE
 aYC
 auB
-aue
+bgB
 atT
 aKv
 aKY
@@ -108095,7 +111077,7 @@ adu
 aYE
 aYC
 auB
-auh
+bgA
 atT
 aKv
 aKY
@@ -108182,7 +111164,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 atT
 aKv
 aMP
@@ -108269,7 +111251,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 avn
 aKv
 aKY
@@ -108356,7 +111338,7 @@ adu
 aYE
 aYC
 auB
-aui
+bgz
 atT
 aKv
 aKY
@@ -108443,7 +111425,7 @@ adu
 aYE
 aYC
 auB
-auh
+bgA
 atT
 aKv
 aKY
@@ -108530,7 +111512,7 @@ adg
 adg
 adg
 auC
-aue
+bgB
 atT
 aKv
 aKv
@@ -108617,7 +111599,7 @@ aNB
 aNt
 adg
 auB
-auh
+bgA
 atT
 aKT
 jJD
@@ -108704,7 +111686,7 @@ adA
 adm
 adg
 auB
-aui
+bgz
 atT
 aNg
 jJD
@@ -108791,7 +111773,7 @@ awJ
 awH
 adg
 auB
-aui
+bgz
 atT
 aKV
 aKV
@@ -108878,7 +111860,7 @@ awK
 aNu
 adg
 auB
-aui
+bgz
 atT
 aKV
 aLa
@@ -108965,7 +111947,7 @@ awK
 avp
 adg
 auB
-auh
+bgA
 atT
 aKV
 aLa
@@ -109052,8 +112034,8 @@ awL
 aNu
 adg
 auB
-aue
-atT
+bgB
+bgi
 aKV
 aLa
 aLa
@@ -109139,7 +112121,7 @@ awI
 awI
 adg
 aNp
-auh
+bgA
 atT
 aKV
 aLa
@@ -109226,7 +112208,7 @@ adB
 adn
 awF
 auB
-aui
+bgz
 atT
 aKV
 aKV
@@ -109303,7 +112285,7 @@ qeo
 adg
 aOb
 aOa
-aNC
+bhG
 aNC
 aNC
 aTO
@@ -109312,8 +112294,8 @@ aNC
 aNC
 aNv
 awG
-auB
-aui
+bgL
+bgE
 avn
 aKV
 aMQ
@@ -109400,7 +112382,7 @@ adg
 adg
 adg
 aYA
-aui
+bgz
 atT
 aNh
 aMR
@@ -109477,7 +112459,7 @@ qeo
 aNr
 aBk
 aZC
-abZ
+bhH
 aNG
 aAy
 aAw
@@ -109487,7 +112469,7 @@ aYI
 azS
 aNr
 auB
-auh
+bgA
 atT
 aNi
 aMR
@@ -109564,7 +112546,7 @@ qeo
 aNr
 aBl
 aNz
-aNM
+bhI
 aND
 aAz
 aAw
@@ -109574,7 +112556,7 @@ aAe
 aYF
 aNr
 auB
-aue
+bgB
 atT
 aNh
 aMS
@@ -109651,7 +112633,7 @@ qeo
 aNr
 aOc
 aNz
-aNM
+bhI
 aND
 aTW
 aNy
@@ -109661,7 +112643,7 @@ aNw
 azT
 aNr
 auB
-auh
+bgA
 atT
 aKV
 aMT
@@ -109738,7 +112720,7 @@ qeo
 aNr
 aNr
 aAS
-aNM
+bhI
 aND
 aNz
 aNx
@@ -109748,7 +112730,7 @@ aNw
 azU
 aNr
 auB
-aui
+bgz
 atT
 aKV
 aKV
@@ -109825,7 +112807,7 @@ qeo
 qeo
 aNr
 aAT
-aNM
+bhI
 aND
 aNz
 aNx
@@ -109835,7 +112817,7 @@ aYJ
 aTm
 aNr
 auB
-aui
+bgz
 atT
 aLf
 aMU
@@ -109922,7 +112904,7 @@ azV
 aYG
 aNr
 auB
-aui
+bgz
 atT
 aLf
 aMV
@@ -109999,7 +112981,7 @@ qeo
 qeo
 aNr
 aAV
-aNM
+bhI
 aND
 aAB
 aAw
@@ -110009,7 +112991,7 @@ aYH
 aYH
 aNr
 aYB
-auh
+bgA
 atT
 aNj
 aMW
@@ -110086,7 +113068,7 @@ qeo
 qeo
 aNr
 aZE
-aNM
+bhI
 aND
 aZj
 aAw
@@ -110096,7 +113078,7 @@ aAf
 azW
 aNr
 auB
-aue
+bgB
 atT
 aNk
 aMW
@@ -110173,7 +113155,7 @@ aUv
 qeo
 aNr
 aZF
-aNM
+bhI
 aAI
 aZk
 aNy
@@ -110183,18 +113165,18 @@ aNy
 aNy
 aNr
 auB
-auh
-atT
-aNk
-aMW
-aLL
-aLL
+bgC
+bgh
+bfS
+bfP
+bfG
+bfG
 aMa
 aMa
 aMa
 aMa
-aLL
-aLq
+beI
+beA
 aLf
 jJD
 aSU
@@ -110260,7 +113242,7 @@ qeo
 qeo
 aNr
 aAW
-aNM
+bhI
 aND
 aAC
 aNy
@@ -110270,7 +113252,7 @@ aAg
 azX
 aNr
 auB
-aui
+bgz
 atT
 aNj
 aMW
@@ -110280,7 +113262,7 @@ aLL
 aLL
 aLL
 aLL
-aLL
+beJ
 aLr
 aLf
 jJD
@@ -110347,7 +113329,7 @@ qeo
 qeo
 aNr
 aAX
-aNM
+bhI
 aND
 aAD
 aNy
@@ -110357,7 +113339,7 @@ aAh
 aNz
 aNr
 auB
-aui
+bgz
 avn
 aLf
 aMX
@@ -110367,7 +113349,7 @@ aLL
 aLL
 aLL
 aLL
-aLL
+beJ
 aLq
 aLf
 jJD
@@ -110434,17 +113416,17 @@ qeo
 qeo
 aNr
 aZG
-aNM
-aND
-aNz
+bhJ
+bhE
+bhB
 aAx
-aNM
+bhw
 aNI
 aND
 azY
 aNr
 auB
-aui
+bgz
 atT
 aLf
 aMY
@@ -110454,7 +113436,7 @@ aMl
 aMl
 aMl
 aLM
-aLM
+beK
 aLs
 aLf
 jJD
@@ -110531,7 +113513,7 @@ aNE
 azZ
 aNr
 auB
-auh
+bgA
 atT
 aLf
 aLf
@@ -110618,7 +113600,7 @@ aNz
 aAa
 aNr
 auB
-aue
+bgB
 atT
 aLf
 aMZ
@@ -110628,7 +113610,7 @@ aLO
 aLO
 aLO
 aMb
-aLO
+beL
 aLt
 aLf
 jJD
@@ -110705,7 +113687,7 @@ aNy
 aNy
 aNr
 auB
-auh
+bgA
 atT
 aLf
 aNa
@@ -110715,7 +113697,7 @@ aLO
 aLO
 aLO
 aLO
-aLO
+beL
 aLu
 aLf
 jJD
@@ -110792,7 +113774,7 @@ aNG
 aAb
 aNr
 auB
-aui
+bgz
 atT
 aLf
 aNb
@@ -110802,7 +113784,7 @@ aMy
 aMs
 aMn
 aLO
-aLO
+beL
 aLv
 aLf
 jJD
@@ -110879,7 +113861,7 @@ aND
 aNz
 aNr
 auB
-aui
+bgF
 atT
 aLf
 aNb
@@ -110889,7 +113871,7 @@ aMz
 aMt
 aMo
 aLO
-aLO
+beL
 aLx
 aLf
 jJD
@@ -110973,10 +113955,10 @@ aNc
 aLO
 aLO
 aLO
-aLO
-aLO
-aLO
-aLO
+bfp
+bfe
+bfe
+beM
 aLy
 aLf
 jJD

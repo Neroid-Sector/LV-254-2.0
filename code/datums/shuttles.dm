@@ -134,13 +134,13 @@
 
 /datum/map_template/shuttle/cargo_lift/post_load(obj/docking_port/mobile/M)
 	. = ..()
-	var/obj/docking_port/mobile/elevator_small/elev = M
+	var/obj/docking_port/mobile/cargo_lift/elev = M
 	elev.elevator_network = elevator_network
 	log_debug("Adding network [elevator_network] to [M.id]")
 
 /datum/map_template/shuttle/elevator_small
 	name = "Service Elevator"
-	shuttle_id = MOBILE_ELEVATOR_SMALL
+	shuttle_id = MOBILE_SMALL_ELEVATOR
 	var/elevator_network
 
 /datum/map_template/shuttle/elevator_small/A

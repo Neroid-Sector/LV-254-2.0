@@ -253,6 +253,10 @@
 	name = "\improper Lower Deck Cryo Cells"
 	icon_state = "cryo"
 
+/area/blackgold/lower/rooms/sea
+	name = "\improper Lower Deck Senior Enlisted Advisor's Office"
+	icon_state = "chiefmpoffice"
+
 /area/blackgold/lower/rooms/req
 	name = "\improper Lower Deck Requisitions Bay"
 	icon_state = "req"

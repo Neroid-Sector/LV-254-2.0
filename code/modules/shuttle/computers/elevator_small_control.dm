@@ -1,7 +1,7 @@
 /obj/structure/machinery/computer/shuttle/elevator_small/elevator_call
 	name = "\improper Elevator Call"
 	desc = "Control panel for the elevator"
-	shuttleId = MOBILE_CARGO_ELEVATOR
+	shuttleId = MOBILE_SMALL_ELEVATOR
 	is_call = TRUE
 	var/dockId
 	var/datum/elevator/destination/site
@@ -10,16 +10,16 @@
 	return list(SSshuttle.getDock(dockId))
 
 /obj/structure/machinery/computer/shuttle/elevator_small/elevator_call/occupied
-	dockId = MOBILE_ELEVATOR_SMALL
+	dockId = STAT_SMALL_OCCUPIED
 
 /obj/structure/machinery/computer/shuttle/elevator_small/elevator_call/empty
 	dockId = STAT_SMALL_EMPTY
 
 /obj/structure/machinery/computer/shuttle/elevator_small/elevator_call/A
-	dockId = STAT_CARGO_A
+	dockId = STAT_SMALL_PORT_LOWER
 
 /obj/structure/machinery/computer/shuttle/elevator_small/elevator_call/B
-	dockId = STAT_CARGO_B
+	dockId = STAT_SMALL_STAR_LOWER
 
 /obj/structure/machinery/computer/shuttle/elevator_small
 	name = "\improper Elevator Panel"
