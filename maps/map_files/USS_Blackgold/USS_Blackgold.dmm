@@ -24875,6 +24875,10 @@
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
+"bAe" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/brig/cells)
 "bAf" = (
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/plating,
@@ -25013,6 +25017,12 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/lower/rooms/gym)
+"bAB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/evidence_storage)
 "bAC" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	name = "\improper Gym";
@@ -25295,6 +25305,20 @@
 /obj/structure/platform/metal/ship/west,
 /turf/open_space,
 /area/blackgold/upper/rooms/tanker)
+"bBx" = (
+/obj/structure/machinery/landinglight/ds2/delayone{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = -4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
 "bBy" = (
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/brig/evidence_storage)
@@ -25321,9 +25345,15 @@
 /obj/structure/machinery/light/spot/blue{
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/evidence_storage)
 "bBB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/evidence_storage)
 "bBC" = (
@@ -25789,6 +25819,92 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/evidence_storage)
+"bCp" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/railing,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/hangar)
+"bCq" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8
+	},
+/obj/structure/machinery/door/poddoor/railing,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/hangar)
+"bCr" = (
+/obj/structure/machinery/landinglight/ds2/delaytwo{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = 5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bCs" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = -4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bCt" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/railing,
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/hangar)
+"bCu" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/railing,
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/hangar)
+"bCv" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
 "bCJ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -28975,6 +29091,9 @@
 "gLR" = (
 /obj/structure/closet/crate/secure{
 	req_access = list(3)
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/evidence_storage)
@@ -70580,8 +70699,8 @@ bCj
 bAi
 biP
 biM
+bAe
 axy
-aah
 aah
 iQP
 aad
@@ -70836,7 +70955,7 @@ kVN
 nbJ
 bCn
 xhG
-bBB
+bAB
 gLR
 gLR
 nbJ
@@ -92919,7 +93038,7 @@ tLv
 eTP
 jCM
 tMq
-erZ
+bCs
 eTP
 bBX
 tMq
@@ -92945,7 +93064,7 @@ lCH
 uWG
 bZV
 xgh
-xhh
+bBx
 uWG
 bBL
 xgh
@@ -93006,7 +93125,7 @@ gEZ
 aFF
 aFF
 aFF
-aFF
+bCt
 aFF
 aFF
 aFF
@@ -93032,7 +93151,7 @@ gEZ
 aFF
 aFF
 aFF
-aFF
+bCp
 aFF
 aFF
 aFF
@@ -93876,7 +93995,7 @@ gEZ
 aFG
 aFG
 aFG
-aFG
+bCu
 aFG
 aFG
 aFG
@@ -93902,7 +94021,7 @@ gEZ
 aFG
 aFG
 aFG
-aFG
+bCq
 aFG
 aFG
 aFG
@@ -93963,7 +94082,7 @@ pqs
 owX
 ela
 xSF
-sQy
+bCv
 owX
 bBY
 xSF
@@ -93989,7 +94108,7 @@ fXG
 qBT
 fmO
 hdh
-hdh
+bCr
 hdh
 bBM
 hdh
