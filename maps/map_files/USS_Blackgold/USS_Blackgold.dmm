@@ -13460,7 +13460,8 @@
 "aSX" = (
 /obj/structure/machinery/cm_vending/gear/platoon_commander_armory{
 	pixel_y = 16;
-	density = 0
+	density = 0;
+	name = "\improper ColMarTech Platoon Commander Armory Equipment Rack"
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/commandbunks/staff)
@@ -25007,7 +25008,7 @@
 	name = "\improper Storage Shutter Control";
 	pixel_x = 9;
 	pixel_y = -21;
-	req_one_access = list(19,35)
+	req_access = list(200)
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/hallways/mid/aft)
