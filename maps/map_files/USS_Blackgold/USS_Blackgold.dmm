@@ -24927,13 +24927,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
-"bAn" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/space/basic,
-/area/blackgold/lower/maint/port/mid)
 "bAo" = (
 /obj/structure/machinery/light/red{
 	light_color = "#BB3F3F";
@@ -24996,7 +24989,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/blackgold/lower/maint/star/mid)
 "bAx" = (
 /obj/structure/machinery/light/red{
@@ -71665,7 +71658,7 @@ aeI
 aeI
 aeI
 aeI
-bAn
+aVp
 aeI
 aeI
 aeI
