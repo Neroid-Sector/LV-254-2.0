@@ -26,7 +26,11 @@
 /area/blackgold/lower/rooms/brig/cells)
 "aai" = (
 /obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/closet/secure_closet{
+	name = "secure evidence locker";
+	req_access = list(3)
+	},
+/turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/evidence_storage)
 "aaj" = (
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
@@ -466,10 +470,6 @@
 	},
 /turf/open/floor/almayer/silver/west,
 /area/blackgold/middle/rooms/reporter)
-"abC" = (
-/obj/structure/window/framed/almayer/hull,
-/turf/open/floor/plating,
-/area/blackgold/lower/rooms/brig/execution)
 "abD" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/reporter)
@@ -1523,7 +1523,7 @@
 	pixel_y = 22;
 	throw_range = 15;
 	pixel_x = 23;
-	req_one_access = list(19,28)
+	req_access = list(19)
 	},
 /turf/open/floor/almayer/silver/north,
 /area/blackgold/upper/rooms/computer/storage)
@@ -2466,8 +2466,7 @@
 "ain" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	id_tag = "CO-Office";
-	name = "\improper Company Commander's Office";
-	req_access = list(1)
+	name = "\improper Company Commander's Office"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3464,6 +3463,10 @@
 /area/blackgold/middle/rooms/squad)
 "alR" = (
 /obj/structure/machinery/landinglight/ds2/delaythree,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "alS" = (
@@ -3821,6 +3824,15 @@
 "ane" = (
 /obj/structure/machinery/landinglight/ds2/delayone,
 /obj/structure/roof/hybrisa/lattice_prop/lattice_1,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 10;
+	anchored = 1;
+	pixel_x = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "anf" = (
@@ -6582,6 +6594,10 @@
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
+"axy" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/brig/cells)
 "axz" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
@@ -13460,8 +13476,7 @@
 "aSX" = (
 /obj/structure/machinery/cm_vending/gear/platoon_commander_armory{
 	pixel_y = 16;
-	density = 0;
-	name = "\improper ColMarTech Platoon Commander Armory Equipment Rack"
+	density = 0
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/commandbunks/staff)
@@ -14266,8 +14281,12 @@
 /obj/structure/machinery/status_display{
 	pixel_y = 30
 	},
-/turf/open/floor/almayer/red/north,
-/area/blackgold/lower/rooms/brig/cells)
+/obj/structure/closet/secure_closet{
+	name = "secure evidence locker";
+	req_access = list(3)
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/rooms/brig/evidence_storage)
 "aVh" = (
 /obj/structure/machinery/status_display{
 	pixel_y = 30
@@ -16432,7 +16451,7 @@
 	pixel_y = -21;
 	throw_range = 15;
 	pixel_x = 23;
-	req_one_access = list(19,28)
+	req_access = list(19)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -16810,6 +16829,20 @@
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/lower/rooms/gym)
+"bbr" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 24;
+	name = "\improper Maintenance Shutters Control";
+	id = "BG Brig Cell Maintenance";
+	req_access = list(3);
+	pixel_x = -23
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "bbs" = (
 /obj/structure/surface/rack,
 /turf/open/floor/plating,
@@ -19590,7 +19623,9 @@
 /turf/open/floor/almayer/red/west,
 /area/blackgold/lower/rooms/brig/cells)
 "biM" = (
-/obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/rooms/brig/cells)
 "biN" = (
@@ -19604,8 +19639,7 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/brig/cells)
 "biP" = (
-/obj/structure/pipes/vents/pump,
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer/red/north,
 /area/blackgold/lower/rooms/brig/cells)
 "biQ" = (
 /obj/structure/pipes/vents/pump{
@@ -19843,6 +19877,9 @@
 "bjD" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
@@ -24625,6 +24662,13 @@
 /area/blackgold/upper/maint/port/mid)
 "bzq" = (
 /obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control{
+	id = "BG Intel";
+	name = "\improper Maintenance Shutters Control";
+	pixel_y = -1;
+	throw_range = 15;
+	req_access = list(19)
+	},
 /turf/open/floor/almayer/silver/west,
 /area/blackgold/upper/rooms/computer)
 "bzr" = (
@@ -24815,6 +24859,12 @@
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
+"bAe" = (
+/obj/structure/machinery/computer/working_joe{
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/red/northwest,
+/area/blackgold/lower/rooms/brig/cells)
 "bAf" = (
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/plating,
@@ -24842,6 +24892,9 @@
 	},
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
+"bAi" = (
+/turf/closed/wall/almayer,
+/area/blackgold/lower/rooms/brig/evidence_storage)
 "bAj" = (
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/plating,
@@ -24950,6 +25003,13 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/lower/rooms/gym)
+"bAB" = (
+/obj/structure/machinery/door/airlock/almayer/security/glass{
+	name = "Evidence Room";
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/brig/evidence_storage)
 "bAC" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	name = "\improper Gym";
@@ -25051,6 +25111,10 @@
 /obj/structure/machinery/landinglight/ds2/delaythree{
 	dir = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "bAU" = (
@@ -25099,7 +25163,6 @@
 /area/blackgold/upper/rooms/commandbunks/staff)
 "bBb" = (
 /obj/structure/machinery/cm_vending/clothing/platoon_commander{
-	name = "\improper ColMarTech Platoon Commander Equipment Rack";
 	density = 0;
 	pixel_y = 16
 	},
@@ -25229,6 +25292,352 @@
 /obj/structure/platform/metal/ship/west,
 /turf/open_space,
 /area/blackgold/upper/rooms/tanker)
+"bBx" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bBy" = (
+/turf/open/floor/almayer,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bBz" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/tapes{
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/obj/item/storage/box/tapes{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/storage/box/tapes{
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bBA" = (
+/obj/structure/machinery/light/spot/blue{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bBB" = (
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bBC" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_29";
+	pixel_y = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bBD" = (
+/obj/structure/machinery/door_control/railings{
+	id = "BG Vehicle Railing";
+	pixel_x = -8;
+	req_one_access = list(19,21,27);
+	name = "\improper Railing Control";
+	req_access = list();
+	pixel_y = 23
+	},
+/turf/open/floor/almayer/black/north,
+/area/blackgold/lower/hallways/mid/mid)
+"bBE" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	name = "\improper Lower Requisitions Bay Shutters";
+	id = "BG Cargo Exterior"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/req)
+"bBF" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	name = "\improper Lower Requisitions Bay Shutters";
+	id = "BG Cargo Exterior"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/lower/rooms/req)
+"bBG" = (
+/obj/structure/machinery/door_control/railings{
+	id = "BG Vehicle Railing";
+	pixel_x = -8;
+	req_one_access = list(19,21,27);
+	name = "\improper Railing Control";
+	req_access = list();
+	pixel_y = -22
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
+"bBH" = (
+/obj/structure/machinery/landinglight/ds2/delayone{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBI" = (
+/obj/structure/machinery/landinglight/ds2{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBJ" = (
+/obj/structure/machinery/landinglight/ds2/delaytwo{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBK" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = -2;
+	pixel_x = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = -4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBL" = (
+/obj/structure/machinery/landinglight/ds2/delaythree{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -7;
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBM" = (
+/obj/structure/machinery/landinglight/ds2/delaythree{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBN" = (
+/obj/structure/machinery/landinglight/ds2{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBO" = (
+/obj/structure/machinery/landinglight/ds2/delaytwo{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBP" = (
+/obj/structure/machinery/landinglight/ds2/delayone{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -7;
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBQ" = (
+/obj/structure/machinery/landinglight/ds2/delayone{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBR" = (
+/obj/structure/machinery/landinglight/ds2/delaytwo{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = -4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBS" = (
+/obj/structure/machinery/landinglight/ds2{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = 5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBT" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_y = 2;
+	pixel_x = -2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = -4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_y = 5;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBU" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = 5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = 2;
+	pixel_x = 3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBV" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBW" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBX" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -7;
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBY" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bBZ" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bCa" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
 "bCb" = (
 /obj/structure/machinery/disposal{
 	pixel_y = 13;
@@ -25238,9 +25647,81 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
+"bCc" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -7;
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bCd" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bCe" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = -4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
 "bCf" = (
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
+"bCg" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
+"bCh" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 10;
+	anchored = 1;
+	pixel_x = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/hangar)
 "bCJ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -25360,6 +25841,10 @@
 "bOF" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -25518,6 +26003,10 @@
 "bZV" = (
 /obj/structure/machinery/landinglight/ds2/delaythree{
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -25777,7 +26266,7 @@
 	name = "Privacy Shutters";
 	pixel_x = 7;
 	pixel_y = -3;
-	req_access = list(19)
+	req_access = list(1)
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
@@ -25888,11 +26377,15 @@
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
 "cFL" = (
-/obj/structure/machinery/light{
-	dir = 4
+/obj/structure/surface/table/almayer,
+/obj/item/folder/red{
+	pixel_x = -4
 	},
-/turf/open/floor/almayer/red/east,
-/area/blackgold/lower/rooms/brig/cells)
+/obj/item/folder/blue{
+	pixel_x = 4
+	},
+/turf/open/floor/almayer,
+/area/blackgold/lower/rooms/brig/evidence_storage)
 "cFU" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/flora/pottedplant{
@@ -26211,20 +26704,12 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer/aicore/glowing/no_build,
 /area/blackgold/lower/rooms/aicore)
-"dky" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	layer = 3.33;
-	pixel_y = 1
-	},
-/turf/open/floor/almayer/plate,
-/area/blackgold/lower/rooms/brig/evidence_storage)
 "dkN" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "dlA" = (
@@ -26478,6 +26963,10 @@
 /area/blackgold/underdeck/vehicle)
 "dJM" = (
 /obj/structure/machinery/landinglight/ds1,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "dKZ" = (
@@ -26638,9 +27127,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
 	id_tag = "CO-Office";
-	name = "\improper Bravo Company Command";
-	req_access = null;
-	req_access_txt = "31"
+	name = "\improper Bravo Company Command"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -26777,6 +27264,10 @@
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "elA" = (
@@ -26874,6 +27365,10 @@
 "erZ" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -27170,6 +27665,10 @@
 /area/blackgold/upper/rooms/brig/stairs)
 "eRy" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "eRV" = (
@@ -27201,6 +27700,10 @@
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "eUd" = (
@@ -27224,7 +27727,7 @@
 	name = "Privacy Shutters";
 	pixel_x = 10;
 	pixel_y = -3;
-	req_access = list(19)
+	req_access = list(1)
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
@@ -27478,6 +27981,10 @@
 /obj/structure/machinery/landinglight/ds2/delaythree{
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "fnB" = (
@@ -27628,20 +28135,6 @@
 /obj/structure/bed/chair/ob_chair,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/orbital)
-"fCT" = (
-/obj/structure/surface/table/almayer,
-/obj/item/folder/red{
-	pixel_x = -4
-	},
-/obj/item/folder/blue{
-	pixel_x = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer/plate,
-/area/blackgold/lower/rooms/brig/evidence_storage)
 "fDq" = (
 /obj/structure/machinery/cryopod,
 /turf/open/floor/almayer/cargo,
@@ -27914,6 +28407,10 @@
 	dir = 8
 	},
 /obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "fZA" = (
@@ -27952,8 +28449,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
 	id_tag = "CO-Office";
-	name = "\improper Company Commander's Office";
-	req_access = list(1)
+	name = "\improper Company Commander's Office"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -28153,8 +28649,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
 	id_tag = "CO-Office";
-	name = "\improper Company Commander's Office";
-	req_access = list(1)
+	name = "\improper Company Commander's Office"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -28384,9 +28879,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
 	id_tag = "CO-Office";
-	name = "\improper Charlie Company Command";
-	req_access = null;
-	req_access_txt = "31"
+	name = "\improper Charlie Company Command"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -28419,22 +28912,8 @@
 /turf/open/floor/almayer/blue/west,
 /area/blackgold/upper/rooms/cic)
 "gLR" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/tapes{
-	pixel_x = 7;
-	pixel_y = 6
-	},
-/obj/item/storage/box/tapes{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/storage/box/tapes{
-	pixel_x = 1;
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/structure/closet/crate/secure{
+	req_access = list(3)
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/evidence_storage)
@@ -28567,6 +29046,10 @@
 "hdh" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -29377,6 +29860,10 @@
 /area/blackgold/lower/maint/port/mid)
 "ive" = (
 /obj/structure/machinery/landinglight/ds2,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "ivz" = (
@@ -29555,6 +30042,10 @@
 "iHD" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -30075,6 +30566,10 @@
 "jCM" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -30790,8 +31285,7 @@
 /area/blackgold/upper/rooms/brig/processing)
 "kTZ" = (
 /obj/structure/machinery/door/airlock/almayer/security/reinforced{
-	name = "\improper Chief MP's Office";
-	req_access = list(1)
+	name = "\improper Chief MP's Office"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -30955,6 +31449,10 @@
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "lhl" = (
@@ -31052,7 +31550,7 @@
 	name = "Privacy Shutters";
 	pixel_x = 7;
 	pixel_y = -3;
-	req_access = list(19)
+	req_access = list(1)
 	},
 /turf/open/floor/hybrisa/carpet/carpetreddeco,
 /area/blackgold/upper/rooms/brig/chief)
@@ -31278,6 +31776,10 @@
 	dir = 4
 	},
 /obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "lDv" = (
@@ -32075,9 +32577,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
 	id_tag = "CO-Office";
-	name = "\improper Alpha Company Command";
-	req_access = null;
-	req_access_txt = "31"
+	name = "\improper Alpha Company Command"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -32204,7 +32704,7 @@
 	name = "\improper Command Lockdown Shutters"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/staff)
 "naR" = (
 /obj/structure/surface/table/almayer,
@@ -32295,6 +32795,10 @@
 /area/blackgold/underdeck)
 "nfm" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "ngn" = (
@@ -32527,7 +33031,7 @@
 	name = "Privacy Shutters";
 	pixel_x = 7;
 	pixel_y = -3;
-	req_access = list(19)
+	req_access = list(1)
 	},
 /turf/open/floor/hybrisa/carpet/carpet_deco_colorable{
 	color = "#C55AD6"
@@ -32777,6 +33281,10 @@
 /obj/structure/machinery/landinglight/ds2{
 	dir = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "nPo" = (
@@ -32901,6 +33409,19 @@
 /area/blackgold/lower/rooms/engineering/reactor)
 "nXF" = (
 /obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = -4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = -3;
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "nYf" = (
@@ -33183,7 +33704,7 @@
 	name = "Privacy Shutters";
 	pixel_x = 7;
 	pixel_y = -3;
-	req_access = list(19)
+	req_access = list(1)
 	},
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/blackgold/upper/rooms/commandbunks/xo)
@@ -33219,6 +33740,10 @@
 "owX" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -33338,7 +33863,8 @@
 "oEU" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	name = "\improper Adjunct's Quarters"
+	name = "\improper Adjunct's Quarters";
+	req_access = list(1)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
@@ -33752,7 +34278,7 @@
 "pnP" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	name = "\improper Commanding Officer's Office";
-	req_access = list(31)
+	req_access = list(1)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -33787,6 +34313,10 @@
 	dir = 8
 	},
 /obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "pqH" = (
@@ -34060,6 +34590,10 @@
 /area/blackgold/lower/rooms/aicore)
 "pQB" = (
 /obj/structure/machinery/landinglight/ds1/delaythree,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "pRZ" = (
@@ -34594,6 +35128,10 @@
 /obj/structure/machinery/landinglight/ds2{
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "qBV" = (
@@ -34637,6 +35175,10 @@
 /area/blackgold/upper/rooms/cic)
 "qGb" = (
 /obj/structure/machinery/landinglight/ds2/delayone,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "qGZ" = (
@@ -34749,9 +35291,7 @@
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
 	id_tag = "CO-Office";
-	name = "\improper Delta Company Command";
-	req_access = null;
-	req_access_txt = "31"
+	name = "\improper Delta Company Command"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -35021,7 +35561,7 @@
 	name = "Privacy Shutters";
 	pixel_x = 10;
 	pixel_y = 11;
-	req_access = list(19)
+	req_access = list(1)
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
@@ -35253,6 +35793,10 @@
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "rIV" = (
@@ -35349,12 +35893,6 @@
 "rRN" = (
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/rooms/brig/execution)
-"rSD" = (
-/obj/structure/machinery/door/airlock/almayer/security/glass{
-	name = "Evidence Room"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/lower/rooms/brig/cells)
 "rSE" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG Hangar Workshop";
@@ -35973,6 +36511,10 @@
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "sRi" = (
@@ -36388,6 +36930,10 @@
 	dir = 4
 	},
 /obj/structure/machinery/floodlight/landing/floor,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "tLH" = (
@@ -36399,6 +36945,10 @@
 "tMq" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -36984,6 +37534,10 @@
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	dir = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "uMG" = (
@@ -37154,6 +37708,10 @@
 "uWG" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -37954,8 +38512,7 @@
 "wuE" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	id_tag = "CO-Office";
-	name = "\improper Company Commander's Office";
-	req_access = list(1)
+	name = "\improper Company Commander's Office"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -38433,6 +38990,10 @@
 /obj/structure/machinery/landinglight/ds2{
 	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "xgR" = (
@@ -38449,6 +39010,10 @@
 "xhh" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -38647,11 +39212,6 @@
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
 "xxB" = (
-/obj/structure/machinery/computer/working_joe{
-	dir = 8;
-	pixel_x = 16;
-	pixel_y = 8
-	},
 /obj/structure/machinery/door_control{
 	pixel_x = 23;
 	pixel_y = -8;
@@ -38659,7 +39219,7 @@
 	id = "BG Brig Cell Maintenance";
 	req_access = list(3)
 	},
-/turf/open/floor/almayer/red/east,
+/turf/open/floor/almayer/red/northeast,
 /area/blackgold/lower/rooms/brig/cells)
 "xya" = (
 /turf/open/floor/hybrisa/carpet,
@@ -38831,6 +39391,10 @@
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = 5
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "xSR" = (
@@ -38933,6 +39497,10 @@
 "xYi" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -4
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
@@ -68885,7 +69453,7 @@ afj
 vMB
 akD
 akz
-aky
+bBE
 aqU
 bju
 azo
@@ -68972,7 +69540,7 @@ fCa
 vMB
 akE
 akz
-aky
+bBF
 aqU
 baZ
 afE
@@ -69059,7 +69627,7 @@ eGQ
 vMB
 akB
 akz
-aky
+bBE
 aqU
 baZ
 afE
@@ -69145,9 +69713,9 @@ akI
 akI
 vMB
 akD
-akz
+bBG
 aky
-aqU
+bBD
 baZ
 afE
 afd
@@ -69763,9 +70331,9 @@ afd
 kVN
 jRZ
 xXw
-abC
-abC
-abC
+xXw
+xXw
+xXw
 xXw
 xXw
 biK
@@ -69848,13 +70416,13 @@ bjt
 afE
 afd
 kVN
-ihW
-lAS
-aaf
-aaf
-aaf
-aaf
-aaf
+nbJ
+bpO
+xhG
+bBA
+bBx
+bAi
+bAe
 biL
 aaf
 dcx
@@ -69935,15 +70503,15 @@ bju
 afE
 afd
 kVN
-ihW
+nbJ
 aVg
-iQP
-aah
-aah
-aah
+xhG
+bBB
+bBy
+bAB
 biP
 biM
-aah
+axy
 aah
 aah
 iQP
@@ -70022,12 +70590,12 @@ baZ
 afE
 afd
 kVN
-ihW
-iLP
-aag
-aag
+nbJ
+bpO
+xhG
+bBB
 cFL
-aag
+bAi
 xxB
 biN
 aag
@@ -70109,12 +70677,12 @@ baZ
 azo
 afd
 kVN
-ihW
-gwV
-gwV
-rSD
-gwV
-gwV
+nbJ
+bpO
+xhG
+bBB
+bBz
+bAi
 ihW
 sGd
 aab
@@ -70198,9 +70766,9 @@ afd
 kVN
 nbJ
 bpO
-bpO
-dky
-fCT
+xhG
+bBB
+gLR
 gLR
 nbJ
 aUO
@@ -70371,7 +70939,7 @@ afE
 afd
 kVN
 nbJ
-bpO
+bBC
 bpO
 xpR
 bpO
@@ -70725,7 +71293,7 @@ agO
 agO
 agO
 agO
-bhY
+bbr
 agO
 agO
 agO
@@ -92267,24 +92835,24 @@ bpT
 aiT
 ahq
 bma
-nXF
+bBT
 erZ
 erZ
 erZ
-eTP
+bCe
 jCM
 tMq
-erZ
+bCc
 eTP
 jCM
-tMq
+bBZ
 tLv
 eTP
 jCM
 tMq
 erZ
 eTP
-jCM
+bBX
 tMq
 erZ
 eTP
@@ -92293,24 +92861,24 @@ nXF
 aif
 bcT
 ahB
-nXF
+bBT
 bZV
 xgh
 xhh
-uWG
+bBR
 bZV
 xgh
-xhh
+bBP
 uWG
 bZV
-xgh
+bBN
 lCH
 uWG
 bZV
 xgh
 xhh
 uWG
-bZV
+bBL
 xgh
 xhh
 uWG
@@ -92489,7 +93057,7 @@ ahu
 ahu
 ahu
 aFC
-jjV
+bBH
 bma
 ahq
 aho
@@ -92724,7 +93292,7 @@ ahu
 ahu
 jyI
 jyI
-xYi
+bBV
 aif
 bcS
 ahB
@@ -92750,7 +93318,7 @@ ahu
 ahu
 jyI
 jyI
-nPl
+bBI
 blZ
 alh
 aho
@@ -92789,7 +93357,7 @@ bqx
 aYh
 blX
 bqG
-nfm
+bCh
 aIB
 ahu
 ahu
@@ -92898,7 +93466,7 @@ ahu
 ahu
 wXn
 wXn
-bOF
+bBW
 aif
 bcS
 ahB
@@ -92924,7 +93492,7 @@ ahu
 ahu
 wXn
 wXn
-uMp
+bBJ
 blZ
 ahq
 aho
@@ -93185,7 +93753,7 @@ ahu
 ahu
 ahu
 aFC
-jjV
+bBH
 bma
 ahq
 aho
@@ -93311,55 +93879,55 @@ bpT
 aiT
 ahq
 bma
-nXF
+bBU
 ela
 xSF
 sQy
-owX
+bCg
 ela
 xSF
-sQy
+bCd
 owX
 ela
-xSF
+bCa
 pqs
 owX
 ela
 xSF
 sQy
 owX
-ela
+bBY
 xSF
 sQy
 owX
 ela
-nXF
+bBK
 aif
 bcT
 ahB
-nXF
+bBU
 iHD
 iHD
 iHD
-qBT
+bBS
 fmO
 hdh
-iHD
+bBQ
 qBT
 fmO
-hdh
+bBO
 fXG
 qBT
 fmO
 hdh
 hdh
 hdh
-fmO
+bBM
 hdh
 iHD
 qBT
 fmO
-nXF
+bBK
 bma
 ahq
 aho
