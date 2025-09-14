@@ -31105,11 +31105,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
-"koL" = (
-/obj/structure/cargo_container/hybrisa/containersextended/greenleft,
-/obj/structure/roof/hybrisa/lattice_prop/lattice_3,
-/turf/open/floor/almayer/plating/northeast,
-/area/blackgold/underdeck/req)
 "koV" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -55888,7 +55883,7 @@ wWU
 cAW
 cAW
 cAW
-koL
+cAW
 iiD
 kAf
 pUo
@@ -55972,10 +55967,10 @@ obL
 nFn
 drY
 gOY
-taq
+ydL
 noo
 ydL
-ydL
+ajZ
 kcB
 drY
 rjH
