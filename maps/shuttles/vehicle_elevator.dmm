@@ -66,16 +66,18 @@
 /obj/structure/machinery/door_control{
 	pixel_x = -8;
 	id = "BG Vehicle Under";
-	req_one_access = list(1,19);
+	req_one_access = list(19,21,27);
 	name = "\improper Lower Railing Control";
-	pixel_y = 22
+	pixel_y = 22;
+	req_access = list()
 	},
 /obj/structure/machinery/door_control/railings{
 	id = "BG Vehicle Railing";
 	pixel_x = 8;
-	req_one_access = list(19,21);
+	req_one_access = list(19,21,27);
 	pixel_y = 22;
-	name = "\improper Upper Railing Control"
+	name = "\improper Upper Railing Control";
+	req_access = list()
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/vehicle_elevator)

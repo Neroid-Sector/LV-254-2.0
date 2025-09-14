@@ -4957,8 +4957,9 @@
 /obj/structure/machinery/door_control/railings{
 	id = "BG Vehicle Railing";
 	pixel_x = 24;
-	req_one_access = list(19,21);
-	name = "\improper Railing Control"
+	req_one_access = list(19,21,27);
+	name = "\improper Railing Control";
+	req_access = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
@@ -38010,8 +38011,9 @@
 /obj/structure/machinery/door_control{
 	pixel_x = 24;
 	id = "BG Vehicle Under";
-	req_one_access = list(1,19);
-	name = "\improper Railing Control"
+	req_one_access = list(19,21,27);
+	name = "\improper Railing Control";
+	req_access = list()
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/underdeck/vehicle)
