@@ -1518,7 +1518,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 		while(i < initial_stored)
 			contents += new restock_type(src)
 			i++
-		if(locked)
+	if(locked)
 		locked = FALSE
 		INVOKE_ASYNC(src,TYPE_PROC_REF(/obj/structure/machinery/auto_rack/,locking_animation_proc))
 
