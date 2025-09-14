@@ -8427,10 +8427,10 @@
 /obj/structure/stairs/perspective{
 	dir = 1
 	},
-/obj/structure/roof/hybrisa/lattice_prop/lattice_3,
 /obj/structure/machinery/light/spot/red{
 	dir = 1
 	},
+/obj/structure/roof/hybrisa/lattice_prop/lattice_3,
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/underdeck/vehicle)
 "aCC" = (
@@ -25905,6 +25905,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
+"bCw" = (
+/obj/structure/stairs/perspective,
+/obj/structure/machinery/light/spot/red,
+/obj/structure/roof/hybrisa/lattice_prop/lattice_3,
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/underdeck/vehicle)
 "bCJ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -47547,7 +47553,7 @@ vev
 pwq
 jFR
 dJb
-nQi
+bCw
 lsW
 lsW
 lsW
@@ -48156,7 +48162,7 @@ nYZ
 csq
 nBF
 dJb
-nQi
+bCw
 lsW
 lsW
 lsW
@@ -48765,7 +48771,7 @@ pZa
 ufB
 hzp
 dJb
-nQi
+bCw
 lsW
 lsW
 lsW
@@ -49374,7 +49380,7 @@ csq
 wnP
 csq
 dJb
-nQi
+bCw
 lsW
 lsW
 lsW
