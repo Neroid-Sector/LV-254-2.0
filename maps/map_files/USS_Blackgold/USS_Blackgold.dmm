@@ -24999,14 +24999,16 @@
 /turf/open/floor/almayer/aicore/no_build/ai_silver,
 /area/blackgold/lower/rooms/aicore)
 "bAw" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	name = "\improper Janitor Closet"
+	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/star/mid)
 "bAx" = (
-/obj/structure/machinery/light/red{
+/obj/structure/machinery/light/blue{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -25926,6 +25928,70 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/brig/processing)
+"bCy" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/glass/bucket/janibucket{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/reagent_container/glass/bucket/janibucket{
+	pixel_y = 15;
+	pixel_x = 4;
+	layer = 3
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCz" = (
+/obj/structure/janitorialcart,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCA" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCB" = (
+/obj/structure/bed/chair/janicart,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCC" = (
+/obj/structure/surface/table/almayer,
+/obj/item/stack/sheet/glass/large_stack{
+	pixel_y = 5
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCD" = (
+/obj/structure/closet/jcloset,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCE" = (
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = 8
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCF" = (
+/obj/structure/machinery/autolathe,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCG" = (
+/obj/structure/surface/rack,
+/obj/item/tool/mop,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCH" = (
+/obj/structure/surface/table/almayer,
+/obj/item/key,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCI" = (
+/obj/structure/surface/rack,
+/obj/item/restraint/legcuffs/beartrap,
+/obj/item/restraint/legcuffs/beartrap,
+/obj/item/restraint/legcuffs/beartrap,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
 "bCJ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -25934,10 +26000,39 @@
 	},
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
+"bCK" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 7
+	},
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = -5
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
 "bCL" = (
 /obj/structure/machinery/cryopod,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/cryo)
+"bCM" = (
+/obj/item/paper/janitor{
+	pixel_y = 27
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/mousetraps{
+	pixel_x = -11;
+	pixel_y = 3
+	},
+/obj/item/storage/box/mousetraps{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bCN" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
 "bDz" = (
 /obj/structure/machinery/light/spot/blue{
 	dir = 8
@@ -71733,13 +71828,13 @@ bbC
 bbj
 bbv
 bkH
+bCK
+bCH
+bCF
 agb
-agb
-agb
-agb
-agb
-agb
-agb
+bCD
+bCC
+bCy
 agi
 aqU
 bjz
@@ -71820,13 +71915,13 @@ agb
 agb
 bkL
 bkI
+bCM
 agb
 agb
 agb
 agb
 agb
-agb
-agb
+bCz
 agi
 aqU
 bjA
@@ -71907,13 +72002,13 @@ agb
 agb
 bkM
 agi
+bCN
 agb
 agb
 agb
 agb
 agb
-agb
-agb
+bCA
 agi
 aqU
 bjA
@@ -71994,13 +72089,13 @@ bbD
 bby
 bbw
 agi
-agb
-agb
-agb
+bCN
+bCI
+bCG
 bAx
+bCE
 agb
-agb
-agb
+bCB
 agi
 mQz
 bii
@@ -75971,8 +76066,8 @@ kPX
 kPX
 kPX
 kPX
-azg
 kPX
+azg
 kPX
 akL
 kPX
@@ -76038,8 +76133,8 @@ pCH
 akL
 kPX
 kPX
-kPX
 agy
+kPX
 kPX
 kPX
 kPX
