@@ -24,14 +24,6 @@
 "aah" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/brig/cells)
-"aai" = (
-/obj/structure/machinery/power/apc/almayer/north,
-/obj/structure/closet/secure_closet{
-	name = "secure evidence locker";
-	req_access = list(3)
-	},
-/turf/open/floor/almayer/cargo,
-/area/blackgold/lower/rooms/brig/evidence_storage)
 "aaj" = (
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
@@ -26384,6 +26376,7 @@
 /obj/item/folder/blue{
 	pixel_x = 4
 	},
+/obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/brig/evidence_storage)
 "cFU" = (
@@ -70852,7 +70845,7 @@ afE
 afd
 kVN
 nbJ
-aai
+bpO
 xhG
 xhG
 xhG
