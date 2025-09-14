@@ -233,7 +233,8 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/solid{
 	dir = 1;
 	name = "\improper Flight Crew Equipment Room";
-	req_access = list(23)
+	req_access = list();
+	req_one_access = list(19,23)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/workshop)
@@ -419,17 +420,11 @@
 /turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/medical)
 "abv" = (
-/obj/structure/platform/metal/ship/corner/west{
-	pixel_y = 8
-	},
 /turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/medical)
 "abw" = (
 /obj/structure/stairs{
 	dir = 4
-	},
-/obj/structure/platform/metal/ship/north{
-	pixel_y = 8
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/middle/rooms/medical)
@@ -534,9 +529,6 @@
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/medical)
 "abM" = (
-/obj/structure/platform/metal/ship/corner{
-	pixel_y = 8
-	},
 /obj/structure/machinery/door/poddoor/almayer/biohazard/white,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/medical)
@@ -769,12 +761,18 @@
 	pixel_y = 16;
 	density = 0
 	},
+/obj/structure/medical_supply_link/green{
+	pixel_y = 16
+	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/blackgold/middle/rooms/medical)
 "acw" = (
 /obj/structure/machinery/cm_vending/sorted/medical{
 	pixel_y = 16;
 	density = 0
+	},
+/obj/structure/medical_supply_link/green{
+	pixel_y = 16
 	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/blackgold/middle/rooms/medical)
@@ -884,6 +882,9 @@
 /obj/item/folded_tent/med{
 	pixel_x = -3;
 	pixel_y = 10
+	},
+/obj/structure/machinery/light/blue{
+	dir = 8
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/medical)
@@ -2880,8 +2881,7 @@
 /area/blackgold/upper/rooms/hangar)
 "ajL" = (
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 8
+	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk/no_build,
 /area/blackgold/upper/rooms/hangar)
@@ -4172,6 +4172,7 @@
 /turf/open/floor/almayer/green/southeast,
 /area/blackgold/middle/rooms/req)
 "aov" = (
+/obj/structure/platform/metal/ship,
 /turf/open/floor/almayer/black/southeast,
 /area/blackgold/upper/stairs/star/aft)
 "aow" = (
@@ -6014,7 +6015,7 @@
 	layer = 3.01
 	},
 /obj/structure/machinery/door_control{
-	id = "BG Medbay Storage";
+	id = "BG Medbay Chemistry";
 	name = "\improper Line Shutter Control";
 	pixel_y = -2;
 	throw_range = 15;
@@ -6576,17 +6577,13 @@
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
-"axy" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	name = "\improper Gym";
-	req_access = list()
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/lower/rooms/chapel)
 "axz" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
 "axA" = (
+/obj/structure/machinery/treadmill{
+	dir = 8
+	},
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/lower/rooms/gym)
 "axB" = (
@@ -6660,8 +6657,7 @@
 /turf/open/floor/hybrisa/carpet/carpetreddeco,
 /area/blackgold/upper/rooms/cic/conference)
 "axO" = (
-/obj/structure/window/framed/almayer,
-/turf/open/floor/plating,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/gym)
 "axP" = (
 /obj/structure/pipes/vents/pump{
@@ -6673,9 +6669,9 @@
 /turf/open/floor/almayer/green/east,
 /area/blackgold/lower/rooms/gym)
 "axR" = (
-/obj/structure/stairs{
-	dir = 8;
-	icon_state = "ramptop"
+/obj/structure/stairs/perspective{
+	dir = 10;
+	icon_state = "p_stair_full"
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
@@ -7485,11 +7481,6 @@
 	pixel_y = 9;
 	pixel_x = -7
 	},
-/obj/structure/barricade/handrail/medical{
-	dir = 1;
-	pixel_y = 4;
-	layer = 2.3
-	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/blackgold/middle/rooms/medical)
 "azO" = (
@@ -7503,22 +7494,12 @@
 	pixel_y = 4;
 	pixel_x = 1
 	},
-/obj/structure/barricade/handrail/medical{
-	dir = 1;
-	pixel_y = 4;
-	layer = 2.3
-	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/blackgold/middle/rooms/medical)
 "azP" = (
 /obj/structure/pipes/standard/cap/hidden,
 /obj/effect/decal/medical_decals{
 	icon_state = "cryotop"
-	},
-/obj/structure/barricade/handrail/medical{
-	dir = 1;
-	pixel_y = 4;
-	layer = 2.3
 	},
 /obj/structure/machinery/cryo_cell{
 	layer = 4;
@@ -7532,11 +7513,6 @@
 /obj/structure/barricade/handrail/medical{
 	dir = 4;
 	pixel_x = 2
-	},
-/obj/structure/barricade/handrail/medical{
-	dir = 1;
-	pixel_y = 4;
-	layer = 2.3
 	},
 /obj/structure/dispenser/oxygen{
 	throwpass = 1
@@ -10443,6 +10419,8 @@
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/blackgold/middle/rooms/medical)
 "aJh" = (
+/obj/structure/machinery/cm_vending/sorted/medical,
+/obj/structure/medical_supply_link/green,
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/middle/rooms/medical)
 "aJi" = (
@@ -10578,7 +10556,7 @@
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
-	id = s;
+	id = "BG Cargo Line";
 	name = "\improper Requisitions Shutter"
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer,
@@ -11158,6 +11136,14 @@
 /turf/open/floor/almayer/sterile_green_side,
 /area/blackgold/upper/rooms/medical/morgue)
 "aLF" = (
+/obj/structure/machinery/door_control{
+	id = "BG Morgue Maintenance";
+	name = "Outer Telecommunications Controls";
+	needs_power = 0;
+	pixel_y = 11;
+	pixel_x = 23;
+	req_access = list(25)
+	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/upper/rooms/medical/morgue)
 "aLG" = (
@@ -11246,11 +11232,13 @@
 /obj/structure/machinery/door/airlock/almayer/maint{
 	req_access = null
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	name = "\improper Maintenance Shutters";
+	id = "BG Morgue Maintenance"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/medical/morgue)
@@ -11799,9 +11787,9 @@
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/upper/rooms/medical/research)
 "aNF" = (
-/obj/structure/machinery/cm_vending/clothing/commanding_officer{
-	density = 0;
-	pixel_y = -30
+/obj/structure/machinery/cm_vending/clothing/company_commander{
+	pixel_y = -30;
+	density = 0
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
@@ -12623,6 +12611,7 @@
 	icon_state = "ramptop"
 	},
 /obj/structure/machinery/light/blue,
+/obj/structure/platform/metal/ship,
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/upper/stairs/star/aft)
 "aQq" = (
@@ -13077,7 +13066,8 @@
 /obj/structure/machinery/door/airlock/almayer/command{
 	dir = 1;
 	name = "\improper Flight Crew Bunks";
-	req_access = list(23)
+	req_access = list();
+	req_one_access = list(19,23)
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/workshop)
@@ -13845,7 +13835,8 @@
 /obj/structure/machinery/door/airlock/almayer/command{
 	dir = 1;
 	name = "\improper Crewman Bunks";
-	req_access = list(27)
+	req_access = list();
+	req_one_access = list(19,27)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -13933,6 +13924,7 @@
 	dir = 8
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/platform/metal/ship/corner/east,
 /turf/open/floor/almayer/blue/west,
 /area/blackgold/upper/rooms/tanker)
 "aUu" = (
@@ -13962,7 +13954,7 @@
 	id = "BG Hangar Tanker Maintenance";
 	name = "\improper Maintenance Shutters Control";
 	pixel_y = 10;
-	req_one_access = list(19,21);
+	req_one_access = list(19,27);
 	pixel_x = 23
 	},
 /turf/open/floor/almayer/blue/east,
@@ -16399,7 +16391,7 @@
 	id = "BG Hangar Tanker Maintenance";
 	name = "\improper Maintenance Shutters Control";
 	pixel_y = -22;
-	req_one_access = list(19,21);
+	req_one_access = list(19,27);
 	pixel_x = -6
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -16811,12 +16803,6 @@
 	name = "ship-grade camera"
 	},
 /turf/open/floor/almayer/green/south,
-/area/blackgold/lower/rooms/gym)
-"bbr" = (
-/obj/structure/machinery/treadmill{
-	dir = 8
-	},
-/turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/gym)
 "bbs" = (
 /obj/structure/surface/rack,
@@ -24311,6 +24297,10 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/star/mid)
+"bya" = (
+/mob/living/simple_animal/mouse/rat/brown,
+/turf/open/floor/plating,
+/area/blackgold/underdeck)
 "byb" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/plating,
@@ -24815,6 +24805,22 @@
 	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/upper/rooms/medical/morgue)
+"bAd" = (
+/mob/living/simple_animal/mouse/rat/black,
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/underdeck/req)
+"bAe" = (
+/obj/structure/machinery/computer/supply/asrs/vehicle,
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/underdeck/vehicle)
+"bAf" = (
+/mob/living/simple_animal/mouse/rat/black,
+/turf/open/floor/plating,
+/area/blackgold/underdeck)
+"bAg" = (
+/mob/living/simple_animal/mouse/rat/brown,
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
 "bAh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -24834,6 +24840,64 @@
 	},
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
+"bAi" = (
+/mob/living/simple_animal/mouse/rat,
+/turf/open/floor/almayer_hull,
+/area/space)
+"bAj" = (
+/mob/living/simple_animal/mouse/rat/black,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/fore)
+"bAk" = (
+/mob/living/simple_animal/mouse/rat/brown,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/aft)
+"bAl" = (
+/obj/structure/machinery/light/red,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/fore)
+"bAm" = (
+/obj/structure/machinery/light/red{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
+"bAn" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/blackgold/lower/maint/port/mid)
+"bAo" = (
+/obj/structure/machinery/light/red{
+	light_color = "#BB3F3F";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/fore)
+"bAp" = (
+/obj/structure/platform/metal/ship/corner,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/hallways/port/fore)
+"bAq" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/obj/structure/platform/metal/ship,
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/lower/hallways/port/fore)
+"bAr" = (
+/obj/structure/stairs/multiz/up{
+	dir = 4
+	},
+/obj/structure/platform/metal/ship,
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/lower/hallways/port/fore)
+"bAs" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "bAt" = (
 /obj/structure/platform/metal/ship/east,
 /obj/structure/stairs/perspective{
@@ -24841,15 +24905,269 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
+"bAu" = (
+/obj/structure/stairs,
+/obj/structure/platform/metal/almayer/west,
+/obj/structure/machinery/door_control{
+	id = "BG AI Stairs";
+	name = "AI Core Shutter Control";
+	pixel_x = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/blackgold/lower/rooms/aicore)
+"bAv" = (
+/obj/structure/machinery/door_control{
+	id = "BG AI Stairs";
+	name = "AI Core Shutter Control";
+	pixel_x = 10;
+	pixel_y = -22;
+	req_one_access = list(90,91,92)
+	},
+/turf/open/floor/almayer/aicore/no_build/ai_silver,
+/area/blackgold/lower/rooms/aicore)
+"bAw" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/blackgold/lower/maint/star/mid)
+"bAx" = (
+/obj/structure/machinery/light/red{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bAy" = (
+/obj/structure/weightmachine/stacklifter,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/rooms/gym)
+"bAz" = (
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/rooms/gym)
+"bAA" = (
+/obj/structure/machinery/light/spot,
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/rooms/gym)
+"bAB" = (
+/obj/structure/barricade/handrail,
+/obj/structure/machinery/computer/supply/asrs/vehicle,
+/turf/open/floor/almayer/green/southeast,
+/area/blackgold/lower/rooms/req)
+"bAC" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
+	name = "\improper Gym";
+	req_access = list();
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/gym)
+"bAD" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap";
+	layer = 3.5
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/gym)
+"bAE" = (
+/obj/structure/machinery/light/red,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/fore)
+"bAF" = (
+/mob/living/simple_animal/mouse/rat/brown,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/aft)
+"bAG" = (
+/obj/structure/machinery/light/red{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/fore)
+"bAH" = (
+/obj/structure/machinery/light/red{
+	light_color = "#BB3F3F";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/fore)
+"bAI" = (
+/mob/living/simple_animal/mouse/rat/black,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/star/mid)
+"bAJ" = (
+/mob/living/simple_animal/mouse/rat/gray,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/fore)
+"bAK" = (
+/mob/living/simple_animal/mouse/rat/black,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/aft)
+"bAL" = (
+/mob/living/simple_animal/mouse/rat/black,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/fore)
+"bAM" = (
+/obj/structure/machinery/door_control{
+	id = "BG Corporate";
+	name = "\improper Storage Shutter Control";
+	pixel_x = 9;
+	pixel_y = -21;
+	req_one_access = list(19,35)
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/hallways/mid/aft)
+"bAN" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/obj/structure/platform/metal/ship/corner/west{
+	pixel_y = 8
+	},
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/middle/rooms/medical)
+"bAO" = (
+/obj/structure/machinery/cm_vending/sorted/medical,
+/obj/structure/medical_supply_link/green,
+/turf/open/floor/almayer/sterile_green_side,
+/area/blackgold/middle/rooms/medical)
+"bAP" = (
+/obj/structure/bed/roller/hospital_empty/bigrollerempty3,
+/turf/open/floor/almayer/sterile_green_corner/east,
+/area/blackgold/middle/rooms/medical)
+"bAQ" = (
+/mob/living/simple_animal/mouse/rat/gray,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/mid)
+"bAR" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/west,
+/turf/open/floor/almayer/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"bAS" = (
+/obj/structure/stairs{
+	dir = 4;
+	icon_state = "ramptop"
+	},
+/obj/structure/platform/metal/ship,
+/turf/open/floor/plating/almayer/no_build,
+/area/almayer/hallways/lower/port_midship_hallway)
 "bAT" = (
 /obj/structure/machinery/landinglight/ds2/delaythree{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
+"bAU" = (
+/obj/structure/stairs/multiz/down{
+	dir = 8
+	},
+/obj/structure/platform/metal/ship,
+/turf/open/floor/plating/almayer/no_build,
+/area/almayer/hallways/lower/port_midship_hallway)
 "bAV" = (
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
+"bAW" = (
+/obj/structure/platform/metal/ship,
+/turf/open_space,
+/area/almayer/hallways/lower/port_midship_hallway)
+"bAX" = (
+/obj/structure/platform/metal/ship/west,
+/turf/open/floor/almayer/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"bAY" = (
+/obj/structure/largecrate/random/secure,
+/obj/structure/machinery/door_control{
+	id = "BG Morgue Maintenance";
+	name = "Outer Telecommunications Controls";
+	needs_power = 0;
+	pixel_y = 11;
+	pixel_x = -23;
+	req_access = list(25)
+	},
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/aft)
+"bAZ" = (
+/obj/structure/stairs{
+	icon_state = "ramptop"
+	},
+/obj/structure/platform/metal/ship/west,
+/turf/open/floor/plating/almayer/no_build,
+/area/almayer/hallways/lower/port_midship_hallway)
+"bBa" = (
+/obj/structure/machinery/cm_vending/gear/staff_officer_armory{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/commandbunks/staff)
+"bBb" = (
+/obj/structure/machinery/cm_vending/clothing/platoon_commander{
+	name = "\improper ColMarTech Platoon Commander Equipment Rack";
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/commandbunks/staff)
+"bBc" = (
+/obj/structure/platform/metal/ship,
+/turf/open/floor/almayer/black/south,
+/area/blackgold/upper/stairs/star/aft)
+"bBd" = (
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "ramptop"
+	},
+/obj/structure/platform/metal/ship,
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/upper/stairs/star/aft)
+"bBe" = (
+/obj/structure/platform/metal/ship/corner/north,
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/upper/stairs/star/aft)
+"bBf" = (
+/obj/structure/stairs{
+	icon_state = "ramptop";
+	dir = 1
+	},
+/obj/structure/platform/metal/ship/corner/west,
+/turf/open/floor/plating/almayer/no_build,
+/area/almayer/hallways/lower/port_midship_hallway)
+"bBg" = (
+/obj/structure/platform/metal/ship/corner,
+/turf/open/floor/almayer/plate,
+/area/almayer/hallways/lower/port_midship_hallway)
+"bBh" = (
+/obj/structure/platform/metal/ship/corner/west,
+/turf/open/floor/almayer/black/northeast,
+/area/blackgold/upper/stairs/star/aft)
+"bBi" = (
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "ramptop"
+	},
+/obj/structure/platform/metal/ship/corner/east,
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/upper/stairs/star/aft)
+"bBj" = (
+/obj/structure/platform/metal/ship/west,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/stairs/star/aft)
+"bBk" = (
+/obj/structure/platform/metal/ship/east,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/stairs/star/aft)
+"bBl" = (
+/obj/structure/platform/metal/ship/west,
+/turf/open/floor/almayer/black/southwest,
+/area/blackgold/upper/stairs/star/aft)
+"bBm" = (
+/obj/structure/platform/metal/ship/corner,
+/turf/open/floor/almayer/black/southeast,
+/area/blackgold/upper/stairs/star/aft)
 "bBn" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/drinkingglasses{
@@ -24873,6 +25191,51 @@
 /obj/structure/machinery/light/spot,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad)
+"bBo" = (
+/obj/structure/stairs/multiz/down{
+	dir = 8
+	},
+/obj/structure/platform/metal/ship,
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/upper/stairs/star/aft)
+"bBp" = (
+/obj/structure/platform/metal/ship,
+/turf/open_space,
+/area/blackgold/upper/stairs/star/aft)
+"bBq" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/blackgold/upper/stairs/star/aft)
+"bBr" = (
+/obj/structure/platform/metal/ship/east,
+/turf/open_space,
+/area/blackgold/upper/stairs/star/aft)
+"bBs" = (
+/obj/structure/platform/metal/ship,
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/blackgold/upper/rooms/tanker)
+"bBt" = (
+/obj/structure/platform/metal/ship,
+/turf/open_space,
+/area/blackgold/upper/rooms/tanker)
+"bBu" = (
+/obj/structure/stairs/multiz/down{
+	dir = 4
+	},
+/obj/structure/platform/metal/ship,
+/turf/open/floor/plating/almayer/no_build,
+/area/blackgold/upper/rooms/tanker)
+"bBv" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/platform/metal/ship/corner/north,
+/turf/open/floor/almayer/blue/west,
+/area/blackgold/upper/rooms/tanker)
+"bBw" = (
+/obj/structure/platform/metal/ship/west,
+/turf/open_space,
+/area/blackgold/upper/rooms/tanker)
 "bCb" = (
 /obj/structure/machinery/disposal{
 	pixel_y = 13;
@@ -25867,13 +26230,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/evidence_storage)
-"dkL" = (
-/obj/structure/machinery/cm_vending/gear/executive_officer{
-	density = 0;
-	pixel_y = 16
-	},
-/turf/open/floor/hybrisa/carpet/carpet_colorable/pink,
-/area/blackgold/upper/rooms/commandbunks/adjunct)
 "dkN" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo,
 /turf/open/floor/almayer/plate,
@@ -26677,6 +27033,7 @@
 	icon_state = "ramptop"
 	},
 /obj/structure/machinery/light/small/blue,
+/obj/structure/platform/metal/ship,
 /turf/open/floor/plating/almayer/no_build,
 /area/almayer/hallways/lower/port_midship_hallway)
 "eGQ" = (
@@ -27472,7 +27829,6 @@
 	icon_state = "p_stair_full"
 	},
 /obj/structure/platform/metal/ship,
-/turf/open/space/basic,
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/computer/storage)
 "fRB" = (
@@ -27838,7 +28194,7 @@
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
 "guR" = (
 /obj/structure/machinery/door_control{
-	id = "tcomms_outer";
+	id = "BG Comms Outer";
 	name = "Outer Telecommunications Controls";
 	req_one_access_txt = "7;19";
 	needs_power = 0;
@@ -28149,9 +28505,12 @@
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
 "gVD" = (
+/obj/structure/platform/metal/ship/west,
+/obj/structure/platform/metal/ship,
 /turf/open/floor/almayer/black/southwest,
 /area/blackgold/upper/stairs/star/aft)
 "gVM" = (
+/obj/structure/platform/metal/ship/west,
 /turf/open/floor/almayer/black/west,
 /area/blackgold/upper/stairs/star/aft)
 "gWs" = (
@@ -28467,6 +28826,7 @@
 /area/blackgold/lower/rooms/aicore)
 "hwI" = (
 /obj/structure/machinery/power/apc/almayer/hardened/south,
+/obj/structure/platform/metal/ship,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/port_midship_hallway)
 "hxd" = (
@@ -29861,7 +30221,6 @@
 /obj/structure/platform/metal/ship/north{
 	icon_state = "ship_platform_stair"
 	},
-/turf/open/space/basic,
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/computer/storage)
 "jVY" = (
@@ -30622,9 +30981,9 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/upper/rooms/brig/chief)
 "lhR" = (
-/obj/structure/machinery/cm_vending/clothing/commanding_officer{
-	density = 0;
-	pixel_y = 16
+/obj/structure/machinery/cm_vending/clothing/company_commander{
+	pixel_y = 16;
+	density = 0
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
@@ -30858,7 +31217,7 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie)
 "lwN" = (
-/obj/structure/platform/metal/ship/west,
+/obj/structure/platform/metal/ship/corner/east,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/stairs/star/mid)
 "lwO" = (
@@ -31618,6 +31977,7 @@
 	req_access = list();
 	no_panel = 1
 	},
+/obj/structure/platform/metal/ship/corner/north,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/cic)
 "mMe" = (
@@ -32074,8 +32434,7 @@
 /area/blackgold/upper/rooms/cic)
 "ntb" = (
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_y = 8
+	dir = 1
 	},
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -33537,6 +33896,7 @@
 	},
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
 "pwV" = (
+/obj/structure/platform/metal/ship/west,
 /turf/open/floor/almayer/black/northwest,
 /area/blackgold/upper/stairs/star/aft)
 "pxi" = (
@@ -33718,7 +34078,7 @@
 /area/blackgold/upper/rooms/evacuation)
 "pTb" = (
 /obj/structure/machinery/door_control{
-	id = "tcomms_outer";
+	id = "BG Comms Outer";
 	name = "Outer Telecommunications Controls";
 	req_one_access_txt = "7;19";
 	needs_power = 0;
@@ -35386,7 +35746,9 @@
 "sAS" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
 	pixel_y = 16;
-	density = 0
+	density = 0;
+	req_access = list();
+	req_one_access = list(7,9,102)
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/squad/prep)
@@ -36166,7 +36528,7 @@
 /turf/closed/wall/almayer/outer,
 /area/blackgold/upper/maint/port/fore)
 "tZM" = (
-/obj/structure/machinery/cm_vending/clothing/commanding_officer{
+/obj/structure/machinery/cm_vending/clothing/company_commander{
 	density = 0;
 	pixel_x = -31
 	},
@@ -36790,7 +37152,7 @@
 /turf/open/floor/almayer/blue/northeast,
 /area/blackgold/upper/rooms/cic)
 "uWi" = (
-/obj/structure/platform/metal/ship/east,
+/obj/structure/platform/metal/ship/corner/west,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/stairs/star/mid)
 "uWG" = (
@@ -38175,7 +38537,7 @@
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
 "xoH" = (
-/obj/structure/machinery/cm_vending/clothing/commanding_officer{
+/obj/structure/machinery/cm_vending/clothing/company_commander{
 	density = 0;
 	pixel_x = -31
 	},
@@ -43201,7 +43563,7 @@ obL
 obL
 obL
 obL
-xfB
+bAf
 xfB
 obL
 obL
@@ -45660,7 +46022,7 @@ lsW
 obL
 obL
 xfB
-xfB
+bya
 obL
 obL
 obL
@@ -47981,7 +48343,7 @@ obL
 obL
 obL
 obL
-xfB
+bAf
 xfB
 obL
 obL
@@ -48339,7 +48701,7 @@ mWH
 ulJ
 waf
 mWH
-jnf
+bAe
 obE
 pdJ
 edc
@@ -51660,7 +52022,7 @@ ajZ
 ydL
 ydL
 ydL
-kcB
+bAd
 fwJ
 nFn
 obL
@@ -52362,7 +52724,7 @@ nFn
 obL
 obL
 xfB
-xfB
+bya
 obL
 obL
 obL
@@ -55032,7 +55394,7 @@ obL
 nFn
 drY
 gOY
-ydL
+bAg
 ydL
 ydL
 ydL
@@ -62024,7 +62386,7 @@ bxg
 bxg
 aeW
 aeV
-aeV
+bAj
 aeT
 lrC
 lrC
@@ -62246,12 +62608,12 @@ afU
 afW
 blv
 afX
-afW
+bAH
 afW
 bxA
 bxA
 afW
-afW
+bAE
 afU
 afU
 afU
@@ -62277,12 +62639,12 @@ akr
 aeT
 aeT
 aeT
-aeV
+bAo
 bxk
 aeV
 aeV
 aeV
-aeV
+bAl
 aeW
 bhP
 bxh
@@ -63119,7 +63481,7 @@ afX
 afW
 afW
 afW
-afW
+bAG
 afW
 afW
 bxF
@@ -65560,7 +65922,7 @@ azu
 azu
 azu
 axO
-azu
+bAC
 azu
 azq
 azq
@@ -65581,7 +65943,7 @@ asc
 asc
 aBQ
 agP
-agP
+bAp
 aBQ
 asc
 asc
@@ -65647,8 +66009,8 @@ azu
 aya
 axF
 axz
-axF
 axz
+axF
 azq
 axr
 azs
@@ -65668,7 +66030,7 @@ aCZ
 aCI
 aBQ
 aqb
-aqb
+bAq
 aBQ
 aBM
 aBr
@@ -65681,7 +66043,7 @@ bhP
 bxl
 aeT
 lrC
-lrC
+bAi
 lrC
 lrC
 pCH
@@ -65734,7 +66096,7 @@ ayg
 ayb
 axV
 axG
-bbr
+axG
 axA
 azq
 axs
@@ -65755,7 +66117,7 @@ aBs
 aCJ
 aBQ
 aqc
-aqc
+bAr
 aBQ
 aBN
 aBs
@@ -65823,7 +66185,7 @@ axW
 axH
 axH
 axB
-awX
+azq
 axb
 axg
 axi
@@ -65910,7 +66272,7 @@ axW
 axH
 axH
 axB
-axy
+azq
 axb
 axg
 axg
@@ -65996,8 +66358,8 @@ ayc
 axW
 axH
 axH
-axB
-awZ
+bAy
+azq
 axb
 axg
 axi
@@ -66083,8 +66445,8 @@ ayd
 axW
 axH
 axH
-axB
-awX
+bAy
+azq
 axb
 axg
 axg
@@ -66518,7 +66880,7 @@ ayd
 axW
 axH
 axH
-axB
+bAz
 azq
 axu
 axg
@@ -66605,7 +66967,7 @@ ayb
 axW
 axH
 axH
-azv
+bAA
 azq
 axt
 axg
@@ -66693,7 +67055,7 @@ axX
 axQ
 axI
 axB
-awX
+azq
 axb
 axg
 axg
@@ -66776,11 +67138,11 @@ ayE
 ayy
 ayl
 aye
-axR
+bAD
 axR
 axJ
 axB
-axy
+azq
 axb
 axg
 axj
@@ -66867,7 +67229,7 @@ axY
 axS
 axK
 axB
-awZ
+azq
 axb
 axg
 axg
@@ -66954,7 +67316,7 @@ aVz
 axT
 axK
 axB
-awX
+azq
 axb
 axg
 axj
@@ -69638,7 +70000,7 @@ aEL
 lrC
 lrC
 agR
-agb
+bAI
 bjB
 aky
 opF
@@ -69650,7 +70012,7 @@ nMo
 bbx
 nMo
 nMo
-eGQ
+bAB
 arG
 akz
 akz
@@ -70523,7 +70885,7 @@ agi
 agi
 agi
 agi
-agi
+bAw
 agi
 agi
 agi
@@ -70539,12 +70901,12 @@ aeI
 aeI
 aeI
 aeI
+bAs
 aeI
 aeI
 aeI
 aeI
-aeI
-aeI
+bAn
 aeI
 aeI
 aeI
@@ -70629,7 +70991,7 @@ aeH
 aeH
 aeH
 aeH
-aeH
+aeI
 aeH
 aeH
 aeH
@@ -70716,7 +71078,7 @@ aeH
 aeH
 aeH
 aeH
-aeH
+aeI
 aeH
 aeH
 aeH
@@ -70803,7 +71165,7 @@ aeH
 aeH
 aeH
 aeH
-aeH
+aeI
 aeH
 aeH
 aeH
@@ -70871,7 +71233,7 @@ agi
 agb
 agb
 agb
-agb
+bAx
 agb
 agb
 agb
@@ -70887,13 +71249,13 @@ aeI
 aeH
 aeH
 aeH
+bAm
 aeH
 aeH
+aeI
 aeH
 aeH
-aeH
-aeH
-aeH
+bAm
 aeH
 aeH
 aeF
@@ -72421,6 +72783,14 @@ agb
 agb
 agb
 agb
+agu
+agb
+agb
+agb
+agb
+agb
+agb
+agu
 agb
 agb
 agb
@@ -72428,15 +72798,7 @@ agb
 agb
 agb
 agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
-agb
+agu
 agb
 agb
 agb
@@ -72450,6 +72812,14 @@ aeH
 aeH
 aeH
 aeH
+lul
+aeH
+aeH
+aeH
+aeH
+aeH
+aeH
+lul
 aeH
 aeH
 aeH
@@ -72457,15 +72827,7 @@ aeH
 aeH
 aeH
 aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
-aeH
+lul
 aeH
 aeH
 aeH
@@ -73406,7 +73768,7 @@ pre
 pre
 oRq
 ufj
-hjb
+bAv
 xzn
 xzn
 xzn
@@ -73495,7 +73857,7 @@ qnb
 pVs
 hjb
 xyQ
-vQZ
+bAu
 vQZ
 cQd
 xzn
@@ -74376,7 +74738,7 @@ xzn
 afq
 afi
 aAN
-afe
+bAk
 afb
 lrC
 lrC
@@ -78345,7 +78707,7 @@ lrC
 lrC
 lrC
 agm
-age
+bAF
 age
 agr
 age
@@ -83942,7 +84304,7 @@ asG
 asB
 ahx
 bmo
-ahy
+bAL
 aFI
 aFL
 aFZ
@@ -87516,7 +87878,7 @@ alD
 alr
 alm
 bmo
-ahy
+bAJ
 ahw
 lrC
 lrC
@@ -93675,7 +94037,7 @@ atm
 bda
 asu
 asT
-aPD
+bAM
 aOW
 aOZ
 aOZ
@@ -94436,7 +94798,7 @@ lrC
 lrC
 lrC
 aiQ
-aiX
+bAQ
 bpT
 aRA
 aSj
@@ -96301,7 +96663,7 @@ aGb
 aGb
 aGb
 bmE
-ahJ
+bAK
 ahI
 lrC
 lrC
@@ -97320,7 +97682,7 @@ bpl
 hOc
 hOc
 hOc
-aba
+bAO
 aaX
 abw
 lpC
@@ -97493,10 +97855,10 @@ azL
 bpl
 hOc
 hOc
-aba
+aco
 aaX
 aaX
-abw
+bAN
 lpC
 aaX
 ato
@@ -97580,7 +97942,7 @@ azM
 bpl
 hOc
 hOc
-aba
+aco
 aaX
 abN
 abx
@@ -97667,7 +98029,7 @@ bpX
 bpK
 aJl
 aJl
-aJh
+bAP
 aaX
 abO
 aby
@@ -102904,9 +103266,9 @@ auO
 kNR
 loP
 mLU
-bki
-oDW
-oDW
+bAZ
+bAX
+bAR
 xDc
 lrC
 lrC
@@ -102972,8 +103334,8 @@ lrC
 lrC
 xDc
 fLQ
-oDW
-scd
+bBg
+bBf
 jat
 ugv
 krM
@@ -103080,7 +103442,7 @@ lQV
 xDc
 xDc
 vIV
-uzC
+bAS
 moD
 lrC
 lrC
@@ -103146,7 +103508,7 @@ lrC
 lrC
 moD
 jqA
-jqA
+bAU
 xDc
 bZz
 ugv
@@ -103167,7 +103529,7 @@ lQV
 bZz
 xDc
 jqA
-jqA
+bAU
 moD
 lrC
 lrC
@@ -103233,7 +103595,7 @@ lrC
 lrC
 xDc
 rYx
-rYx
+bAW
 xDc
 iBC
 bhd
@@ -103254,7 +103616,7 @@ lQV
 kIK
 xDc
 rYx
-rYx
+bAW
 xDc
 lrC
 lrC
@@ -103320,7 +103682,7 @@ lrC
 lrC
 xDc
 rYx
-rYx
+bAW
 xDc
 eqs
 ugv
@@ -103341,7 +103703,7 @@ lQV
 fkR
 xDc
 rYx
-rYx
+bAW
 xDc
 lrC
 lrC
@@ -105235,7 +105597,7 @@ bzz
 noE
 xvy
 wEi
-dkL
+dhH
 rbx
 wEi
 aeA
@@ -106030,7 +106392,7 @@ atW
 btN
 atH
 qnW
-aSX
+bBa
 xGi
 okN
 dDM
@@ -106117,7 +106479,7 @@ atW
 btM
 atH
 qnW
-wJJ
+bBb
 xGi
 snU
 wss
@@ -114711,8 +115073,8 @@ apF
 apK
 apy
 aTL
-aUx
-aUx
+bBw
+bBs
 aTL
 aUn
 aUg
@@ -114799,7 +115161,7 @@ apL
 apy
 aTL
 aUx
-aUx
+bBt
 aTL
 aUo
 aUh
@@ -114886,7 +115248,7 @@ apI
 apy
 aTL
 svZ
-svZ
+bBu
 aTL
 aUp
 aUi
@@ -114973,7 +115335,7 @@ bwQ
 apy
 aTK
 aUz
-aUr
+bBv
 aUt
 aUr
 aUj
@@ -115237,8 +115599,8 @@ bal
 qjV
 pwV
 gVM
-gVD
-iIt
+bBl
+bBj
 pwV
 gVM
 gVD
@@ -115328,7 +115690,7 @@ bux
 iIt
 dYS
 vKV
-bux
+bBc
 aTM
 aTH
 aTz
@@ -115411,9 +115773,9 @@ bwB
 qjV
 nlH
 qdf
-aov
-iIt
-nlH
+bBm
+bBk
+bBh
 qdf
 aov
 aTM
@@ -115498,11 +115860,11 @@ bwB
 qjV
 aUm
 aUm
-aUm
+bBo
 kIs
+bBi
 uNm
-uNm
-uNm
+bBd
 aTM
 ada
 ada
@@ -115585,7 +115947,7 @@ bwB
 qjV
 aQr
 hJH
-hJH
+bBp
 kIs
 uNm
 uNm
@@ -115672,11 +116034,11 @@ bwB
 qjV
 hJH
 hJH
-hJH
+bBp
 kIs
 uNm
 uNm
-uNm
+bBd
 aTM
 aTI
 aTu
@@ -115759,11 +116121,11 @@ bwA
 qjV
 hJH
 hJH
-hJH
+bBp
 kIs
 uNm
 uNm
-uNm
+bBd
 aTM
 aTJ
 aTu
@@ -115844,13 +116206,13 @@ apy
 uCW
 bwB
 qjV
-hJH
-hJH
-hJH
+bBr
+bBr
+bBq
 kIs
 uNm
 uNm
-uNm
+bBd
 aTM
 aRq
 aTB
@@ -115937,7 +116299,7 @@ kIs
 kIs
 sfi
 hqs
-sfi
+bBe
 aTM
 ada
 ada
@@ -118043,7 +118405,7 @@ jJD
 jJD
 jJD
 brl
-bzk
+bAY
 bzl
 bzl
 aKT
