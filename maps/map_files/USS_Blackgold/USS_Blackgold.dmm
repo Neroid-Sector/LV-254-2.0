@@ -4408,10 +4408,13 @@
 /turf/open/floor/almayer/red/northwest,
 /area/blackgold/upper/rooms/lifeboat/port)
 "app" = (
-/obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "BG Vehicle Under"
+	},
+/obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
-	name = "\improper Cargo Lock";
-	id = "BG Under Vehicle"
+	id = "BG Vehicle Under"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/underdeck/vehicle)
@@ -4879,12 +4882,12 @@
 /area/blackgold/lower/hallways/star/fore)
 "ars" = (
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "vehicle"
+	dir = 4;
+	id = "BG Vehicle Railing"
 	},
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 4;
-	id = "vehicle"
+	dir = 8;
+	id = "BG Vehicle Railing"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/req)
@@ -4952,9 +4955,10 @@
 "arG" = (
 /obj/structure/platform/metal/ship/north,
 /obj/structure/machinery/door_control/railings{
-	id = "vehicle";
+	id = "BG Vehicle Railing";
 	pixel_x = 24;
-	req_one_access = list(19,21)
+	req_one_access = list(19,21);
+	name = "\improper Railing Control"
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
@@ -7123,7 +7127,7 @@
 	name = "Blackgold Vehicle Elevator Dock"
 	},
 /turf/open/floor/almayer/empty/vehicle_bay,
-/area/blackgold/lower/rooms/req)
+/area/supply/station_vehicle)
 "ayL" = (
 /obj/structure/desertdam/decals/road_edge{
 	pixel_x = 2;
@@ -24809,10 +24813,6 @@
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
-"bAe" = (
-/obj/structure/machinery/computer/supply/asrs/vehicle,
-/turf/open/floor/almayer/test_floor6,
-/area/blackgold/underdeck/vehicle)
 "bAf" = (
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/plating,
@@ -24840,10 +24840,6 @@
 	},
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
-"bAi" = (
-/mob/living/simple_animal/mouse/rat,
-/turf/open/floor/almayer_hull,
-/area/space)
 "bAj" = (
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/plating,
@@ -24952,11 +24948,6 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/lower/rooms/gym)
-"bAB" = (
-/obj/structure/barricade/handrail,
-/obj/structure/machinery/computer/supply/asrs/vehicle,
-/turf/open/floor/almayer/green/southeast,
-/area/blackgold/lower/rooms/req)
 "bAC" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	name = "\improper Gym";
@@ -25459,7 +25450,7 @@
 	name = "Underdeck Vehicle Elevator Dock"
 	},
 /turf/open/floor/plating,
-/area/blackgold/underdeck/vehicle)
+/area/supply/dock_vehicle)
 "bXq" = (
 /obj/structure/machinery/computer/tech_control,
 /turf/open/floor/almayer/blue/west,
@@ -25679,12 +25670,12 @@
 /area/blackgold/upper/rooms/cic/conference)
 "cnl" = (
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "vehicle"
+	dir = 4;
+	id = "BG Vehicle Railing"
 	},
 /obj/structure/machinery/door/poddoor/railing{
-	dir = 4;
-	id = "vehicle"
+	dir = 8;
+	id = "BG Vehicle Railing"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/req)
@@ -33134,7 +33125,7 @@
 /area/blackgold/upper/rooms/hangar)
 "oqf" = (
 /turf/open/floor/plating,
-/area/blackgold/underdeck/vehicle)
+/area/supply/dock_vehicle)
 "oqm" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/red/west,
@@ -35698,10 +35689,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/cic)
 "swP" = (
-/obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door{
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "BG Vehicle Under"
+	},
+/obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
-	name = "\improper Cargo Lock";
-	id = "BG Under Vehicle"
+	id = "BG Vehicle Under"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/underdeck/vehicle)
@@ -37163,7 +37157,7 @@
 /area/blackgold/middle/rooms/hangar)
 "uXl" = (
 /turf/open/floor/almayer/empty/vehicle_bay,
-/area/blackgold/lower/rooms/req)
+/area/supply/station_vehicle)
 "uXP" = (
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
 	pixel_x = 4;
@@ -38015,9 +38009,9 @@
 /obj/structure/stairs/perspective,
 /obj/structure/machinery/door_control{
 	pixel_x = 24;
-	id = "BG Under Vehicle";
+	id = "BG Vehicle Under";
 	req_one_access = list(1,19);
-	name = "Vehicle Lock"
+	name = "\improper Railing Control"
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/underdeck/vehicle)
@@ -48701,7 +48695,7 @@ mWH
 ulJ
 waf
 mWH
-bAe
+jnf
 obE
 pdJ
 edc
@@ -66043,7 +66037,7 @@ bhP
 bxl
 aeT
 lrC
-bAi
+lrC
 lrC
 lrC
 pCH
@@ -70012,7 +70006,7 @@ nMo
 bbx
 nMo
 nMo
-bAB
+eGQ
 arG
 akz
 akz
