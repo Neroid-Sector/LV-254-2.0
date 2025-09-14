@@ -25333,7 +25333,7 @@
 /area/blackgold/lower/rooms/brig/evidence_storage)
 "bBD" = (
 /obj/structure/machinery/door_control/railings{
-	id = "BG Vehicle Railing";
+	id = "BG Cargo Exterior";
 	pixel_x = -8;
 	req_one_access = list(19,21,27);
 	name = "\improper Railing Control";
@@ -25358,7 +25358,7 @@
 /area/blackgold/lower/rooms/req)
 "bBG" = (
 /obj/structure/machinery/door_control/railings{
-	id = "BG Vehicle Railing";
+	id = "BG Cargo Exterior";
 	pixel_x = -8;
 	req_one_access = list(19,21,27);
 	name = "\improper Railing Control";
