@@ -24,6 +24,19 @@
 "aah" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/brig/cells)
+"aai" = (
+/obj/structure/machinery/computer/sentencing{
+	dir = 8;
+	pixel_x = 16
+	},
+/obj/structure/machinery/computer/working_joe{
+	pixel_y = -19;
+	dir = 8;
+	pixel_x = 16;
+	layer = 3
+	},
+/turf/open/floor/almayer/red/east,
+/area/blackgold/lower/rooms/brig/cells)
 "aaj" = (
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
@@ -462,6 +475,13 @@
 	},
 /turf/open/floor/almayer/silver/west,
 /area/blackgold/middle/rooms/reporter)
+"abC" = (
+/obj/structure/machinery/door/airlock/almayer/security/glass{
+	name = "\improper Evidence Room";
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/brig/evidence_storage)
 "abD" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/reporter)
@@ -14270,12 +14290,13 @@
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/lower/rooms/engineering)
 "aVg" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
-	},
 /obj/structure/closet/secure_closet{
-	name = "secure evidence locker";
+	name = "\improper Prisoner Gear Locker";
 	req_access = list(3)
+	},
+/obj/structure/sign/safety/one{
+	pixel_x = 7;
+	pixel_y = 25
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/evidence_storage)
@@ -19631,6 +19652,9 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/brig/cells)
 "biP" = (
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
 /turf/open/floor/almayer/red/north,
 /area/blackgold/lower/rooms/brig/cells)
 "biQ" = (
@@ -21776,7 +21800,7 @@
 /area/blackgold/middle/hallways/star/fore)
 "bpO" = (
 /obj/structure/closet/secure_closet{
-	name = "secure evidence locker";
+	name = "\improper Secure Evidence Locker";
 	req_access = list(3)
 	},
 /turf/open/floor/almayer/cargo,
@@ -24851,12 +24875,6 @@
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
-"bAe" = (
-/obj/structure/machinery/computer/working_joe{
-	pixel_y = 16
-	},
-/turf/open/floor/almayer/red/northwest,
-/area/blackgold/lower/rooms/brig/cells)
 "bAf" = (
 /mob/living/simple_animal/mouse/rat/black,
 /turf/open/floor/plating,
@@ -24995,13 +25013,6 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/lower/rooms/gym)
-"bAB" = (
-/obj/structure/machinery/door/airlock/almayer/security/glass{
-	name = "Evidence Room";
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/lower/rooms/brig/evidence_storage)
 "bAC" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	name = "\improper Gym";
@@ -25284,10 +25295,6 @@
 /obj/structure/platform/metal/ship/west,
 /turf/open_space,
 /area/blackgold/upper/rooms/tanker)
-"bBx" = (
-/obj/structure/surface/rack,
-/turf/open/floor/almayer,
-/area/blackgold/lower/rooms/brig/evidence_storage)
 "bBy" = (
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/brig/evidence_storage)
@@ -25295,15 +25302,18 @@
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/tapes{
 	pixel_x = 7;
-	pixel_y = 6
+	pixel_y = 8
 	},
 /obj/item/storage/box/tapes{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/storage/box/tapes{
-	pixel_x = 1;
+	pixel_x = 7;
 	pixel_y = 1
+	},
+/obj/structure/machinery/door_control{
+	pixel_x = -6;
+	pixel_y = 3;
+	name = "\improper Maintenance Shutters Control";
+	id = "BG Brig Evidence";
+	req_access = list(3)
 	},
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/brig/evidence_storage)
@@ -25714,6 +25724,71 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
+"bCi" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/door/window/brigdoor/northright{
+	dir = 2;
+	name = "\improper Evidence Counter";
+	req_access = null
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "BG Brig Evidence";
+	name = "\improper Evidence Shutters"
+	},
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bCj" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/turf/open/floor/almayer,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bCk" = (
+/obj/structure/machinery/vending/security/prison,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bCl" = (
+/obj/structure/sign/safety/two{
+	pixel_y = 25;
+	pixel_x = 7
+	},
+/obj/structure/closet/secure_closet{
+	name = "\improper Prisoner Gear Locker";
+	req_access = list(3)
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bCm" = (
+/obj/structure/sign/safety/three{
+	pixel_x = 7;
+	pixel_y = 25
+	},
+/obj/structure/closet/secure_closet{
+	name = "\improper Prisoner Gear Locker";
+	req_access = list(3)
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bCn" = (
+/obj/structure/sign/safety/four{
+	pixel_x = 7;
+	pixel_y = 25
+	},
+/obj/structure/closet/secure_closet{
+	name = "\improper Prisoner Gear Locker";
+	req_access = list(3)
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/rooms/brig/evidence_storage)
+"bCo" = (
+/obj/structure/sign/safety/five{
+	pixel_x = 7;
+	pixel_y = 25
+	},
+/obj/structure/closet/secure_closet{
+	name = "\improper Prisoner Gear Locker";
+	req_access = list(3)
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/rooms/brig/evidence_storage)
 "bCJ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -26369,14 +26444,7 @@
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
 "cFL" = (
-/obj/structure/surface/table/almayer,
-/obj/item/folder/red{
-	pixel_x = -4
-	},
-/obj/item/folder/blue{
-	pixel_x = 4
-	},
-/obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/bed/chair/office/dark,
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/brig/evidence_storage)
 "cFU" = (
@@ -34988,6 +35056,7 @@
 /obj/item/tool/kitchen/knife/butcher,
 /obj/item/clothing/glasses/sunglasses/blindfold,
 /obj/item/clothing/mask/muzzle,
+/obj/item/pamphlet/skill/surgery,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/armory)
 "qtQ" = (
@@ -35751,7 +35820,8 @@
 	},
 /obj/item/desk_bell{
 	pixel_y = 11;
-	pixel_x = -7
+	pixel_x = -7;
+	anchored = 1
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
 	id = "BG Intel";
@@ -36793,7 +36863,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/captain_mess)
 "tuN" = (
-/obj/structure/bed/chair/comfy/orange{
+/obj/structure/bed/chair/comfy/black{
 	dir = 1
 	},
 /turf/open/floor/almayer/red/north,
@@ -39103,7 +39173,7 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet{
-	name = "secure evidence locker";
+	name = "\improper Secure Evidence Locker";
 	req_access = list(3)
 	},
 /turf/open/floor/almayer/cargo,
@@ -39211,6 +39281,12 @@
 	name = "\improper Maintenance Shutters Control";
 	id = "BG Brig Cell Maintenance";
 	req_access = list(3)
+	},
+/obj/item/desk_bell{
+	anchored = 1;
+	pixel_x = 22;
+	pixel_y = 10;
+	ring_cooldown_length = 10
 	},
 /turf/open/floor/almayer/red/northeast,
 /area/blackgold/lower/rooms/brig/cells)
@@ -70410,12 +70486,12 @@ afE
 afd
 kVN
 nbJ
-bpO
+bCk
 xhG
 bBA
-bBx
-bAi
-bAe
+bBy
+abC
+lAS
 biL
 aaf
 dcx
@@ -70500,8 +70576,8 @@ nbJ
 aVg
 xhG
 bBB
-bBy
-bAB
+bCj
+bAi
 biP
 biM
 axy
@@ -70584,17 +70660,17 @@ afE
 afd
 kVN
 nbJ
-bpO
+bCl
 xhG
 bBB
 cFL
-bAi
+bCi
 xxB
 biN
 aag
 aag
 aag
-aag
+aai
 aae
 ihW
 kVN
@@ -70671,7 +70747,7 @@ azo
 afd
 kVN
 nbJ
-bpO
+bCm
 xhG
 bBB
 bBz
@@ -70758,7 +70834,7 @@ afE
 afd
 kVN
 nbJ
-bpO
+bCn
 xhG
 bBB
 gLR
@@ -70845,7 +70921,7 @@ afE
 afd
 kVN
 nbJ
-bpO
+bCo
 xhG
 xhG
 xhG
