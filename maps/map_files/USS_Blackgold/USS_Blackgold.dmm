@@ -2477,7 +2477,6 @@
 /area/blackgold/middle/maint/port/fore)
 "ain" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office"
 	},
 /obj/structure/disposalpipe/segment{
@@ -18661,17 +18660,19 @@
 /turf/open/floor/almayer/blue/southeast,
 /area/blackgold/upper/hallways/mid/fore)
 "bge" = (
-/obj/structure/machinery/door/airlock/almayer/command/reinforced,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	id = "BG Lockdown";
-	name = "\improper Command Lockdown Shutters"
+/obj/structure/machinery/door/airlock/almayer/command/reinforced{
+	id_tag = "BG Command Hall"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "BG Lockdown";
+	name = "\improper Command Lockdown Shutters"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/hallways/mid/fore)
@@ -24927,6 +24928,19 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
+"bAn" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control{
+	id = "BG Command Hall";
+	name = "\improper Command Hall Control";
+	throw_range = 15;
+	req_access = list(3);
+	pixel_x = 5;
+	pixel_y = 5;
+	normaldoorcontrol = 1
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/rooms/brig/processing)
 "bAo" = (
 /obj/structure/machinery/light/red{
 	light_color = "#BB3F3F";
@@ -25904,6 +25918,14 @@
 /obj/structure/roof/hybrisa/lattice_prop/lattice_3,
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/underdeck/vehicle)
+"bCx" = (
+/obj/structure/window/framed/almayer/hull/hijack_bustable,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Brig Lockdown Shutter";
+	id = "BG Brig Lockdown"
+	},
+/turf/open/floor/plating,
+/area/blackgold/upper/rooms/brig/processing)
 "bCJ" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -27302,7 +27324,6 @@
 "ebQ" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	id_tag = "CO-Office";
 	name = "\improper Bravo Company Command"
 	},
 /obj/structure/disposalpipe/segment,
@@ -28624,7 +28645,6 @@
 "gbT" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -28669,14 +28689,16 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/upper/rooms/evacuation)
 "geR" = (
-/obj/structure/machinery/door/airlock/almayer/command/reinforced,
+/obj/structure/machinery/door/airlock/almayer/command/reinforced{
+	id_tag = "BG Command Hall"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
 	id = "BG Lockdown";
 	name = "\improper Command Lockdown Shutters"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/hallways/mid/fore)
@@ -28824,7 +28846,6 @@
 "gtL" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office"
 	},
 /obj/structure/disposalpipe/segment,
@@ -29054,7 +29075,6 @@
 "gIl" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	id_tag = "CO-Office";
 	name = "\improper Charlie Company Command"
 	},
 /obj/structure/disposalpipe/segment,
@@ -32750,7 +32770,6 @@
 "mSA" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	id_tag = "CO-Office";
 	name = "\improper Alpha Company Command"
 	},
 /obj/structure/disposalpipe/segment,
@@ -35465,7 +35484,6 @@
 "qPT" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
-	id_tag = "CO-Office";
 	name = "\improper Delta Company Command"
 	},
 /obj/structure/disposalpipe/segment,
@@ -38687,7 +38705,6 @@
 /area/blackgold/upper/rooms/brig)
 "wuE" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
-	id_tag = "CO-Office";
 	name = "\improper Company Commander's Office"
 	},
 /obj/structure/disposalpipe/segment{
@@ -112097,7 +112114,7 @@ aSZ
 atW
 bgl
 atH
-aQf
+bCx
 iSp
 gEO
 lDv
@@ -112184,8 +112201,8 @@ add
 pTb
 bgl
 atH
-aQf
-bnQ
+bCx
+bAn
 fqf
 dwv
 nnQ
