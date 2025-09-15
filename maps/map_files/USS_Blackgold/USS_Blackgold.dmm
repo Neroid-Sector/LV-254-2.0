@@ -79,6 +79,10 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/aientrance)
+"aaq" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/req)
 "aar" = (
 /turf/open/floor/almayer/aicore/no_build/ai_arrow{
 	dir = 1
@@ -27342,18 +27346,6 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
-"bHS" = (
-/obj/structure/machinery/door_control{
-	pixel_y = 16;
-	name = "Yutani OS server box";
-	id = "BG Liaison Maintenance";
-	req_access = list(200);
-	pixel_x = 6;
-	icon = 'icons/obj/structures/props/server_equipment.dmi';
-	icon_state = "yutani_server_broken"
-	},
-/turf/open/floor/plating,
-/area/blackgold/lower/maint/star/fore)
 "bHT" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
 	dir = 1
@@ -28464,14 +28456,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orangefull2,
 /area/blackgold/middle/rooms/briefing)
-"cJp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/middle/rooms/req)
 "cJV" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
@@ -36950,7 +36934,6 @@
 /turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig/processing)
 "mJU" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/toolcloset,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
@@ -42015,9 +41998,8 @@
 /area/blackgold/lower/rooms/liaison)
 "soF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/req)
 "spd" = (
 /obj/structure/machinery/door/airlock/almayer/security{
@@ -75238,7 +75220,7 @@ lrC
 lrC
 lrC
 afU
-bHS
+afW
 afW
 afW
 afW
@@ -98742,7 +98724,7 @@ nlo
 ant
 ant
 bIw
-cJp
+anF
 mJU
 ant
 aWM
@@ -98828,8 +98810,8 @@ aod
 wEF
 ant
 ant
-wnh
-wnh
+aaq
+anr
 soF
 ant
 aWN
