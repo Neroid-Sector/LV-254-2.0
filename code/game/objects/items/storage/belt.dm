@@ -757,7 +757,7 @@
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c
 	name = "\improper M804 heavygunner storage rig"
-	desc = "The M804 CSW Operator storage rig is an M276 pattern toolbelt rig modified to carry ammunition for crew served weapon systems, and engineering tools for the gunner."
+	desc = "The M804 CSW Operator storage rig is an M276 pattern toolbelt rig modified to carry ammunition for some crew served weapon systems, and engineering tools for the gunner."
 	icon_state = "m2c_ammo_rig"
 	item_state = "m2c_ammo_rig"
 	icon = 'icons/obj/items/clothing/belts/belts.dmi'
@@ -782,9 +782,7 @@
 		/obj/item/explosive/plastic,
 		/obj/item/explosive/atmine,
 		/obj/item/explosive/mine,
-		/obj/item/ammo_magazine/m2c,
 		/obj/item/tool/wirecutters,
-		/obj/item/ammo_magazine/m56d,
 		/obj/item/mortar_shell,
 
 	)
@@ -2169,10 +2167,12 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 		/obj/item/ammo_magazine/rifle/xm99a,
+		/obj/item/ammo_magazine/flamer_tank,
 	)
 	flags_atom = FPRINT // has gamemode skin
 	bypass_w_limit = list(
 		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/flamer_tank,
 	)
 
 /obj/item/storage/belt/gun/smartgunner/full/fill_preset_inventory()
@@ -2185,6 +2185,41 @@
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
 	new /obj/item/ammo_magazine/pistol/hp(src)
 	new /obj/item/ammo_magazine/rifle/xm99a(src)
+	new /obj/item/ammo_magazine/rifle/xm99a(src)
+
+/obj/item/storage/belt/gun/smartgunner/teamwork
+	name = "\improper M802 pattern smartgunner sidearm rig"
+	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed for USCM smartgunners to be light weight yet carry some ammunition, weapon batteries, and a sidearm."
+	icon_state = "sgbelt"
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = 5,
+			"icon_y" = -2))
+	can_hold = list(
+		/obj/item/device/flashlight/flare,
+		/obj/item/weapon/gun/flare,
+		/obj/item/weapon/gun/pistol,
+		/obj/item/weapon/gun/revolver,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/rifle/xm99a,
+		/obj/item/ammo_magazine/flamer_tank,
+		/obj/item/smartgun_battery,
+	)
+	storage_slots = 3
+	flags_atom = FPRINT // has gamemode skin
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/flamer_tank,
+	)
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
+	new /obj/item/ammo_magazine/pistol/hp(src)
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/xm99/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
+	new /obj/item/ammo_magazine/pistol/hp(src)
 	new /obj/item/ammo_magazine/rifle/xm99a(src)
 
 /obj/item/storage/belt/gun/smartgunner/pmc

@@ -341,7 +341,7 @@
 /turf/template_noop,
 /area/shuttle/attu)
 "CU" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/attu{
 	id = "aft_door";
 	name = "\improper Attu cargo door"
 	},
