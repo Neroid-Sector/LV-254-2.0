@@ -227,7 +227,7 @@
 /turf/closed/wall/almayer/white,
 /area/blackgold/middle/rooms/medical)
 "aaT" = (
-/obj/structure/bed/chair/office/dark,
+/obj/structure/bed/chair/wheelchair/officechair,
 /turf/open/floor/almayer/blue/southeast,
 /area/blackgold/upper/rooms/cic)
 "aaU" = (
@@ -1514,10 +1514,10 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "aeK" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/disposalpipe/segment,
+/obj/structure/bed/chair/wheelchair/officechair{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/flooredge/southeast,
 /area/blackgold/upper/rooms/cic)
 "aeL" = (
@@ -1916,7 +1916,6 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "ago" = (
-/obj/vehicle/train/cargo/trolley,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
@@ -2201,6 +2200,9 @@
 /obj/structure/coatrack{
 	pixel_x = 2;
 	pixel_y = 16
+	},
+/obj/item/clothing/suit/storage/jacket/marine/service/trenchcoat{
+	pixel_y = 22
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
@@ -2590,11 +2592,20 @@
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/middle/maint/star/aft)
 "aiW" = (
-/obj/vehicle/train/cargo/engine,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/rack,
+/obj/item/storage/box/guncase/xm51{
+	pixel_y = -7
+	},
+/obj/item/storage/box/guncase/xm51{
+	pixel_y = -2
+	},
+/obj/item/storage/box/guncase/xm51{
+	pixel_y = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/req)
 "aiX" = (
@@ -3125,6 +3136,7 @@
 /obj/structure/machinery/light/spot/blue{
 	dir = 4
 	},
+/obj/structure/largecrate/supply/explosives/mortar_shaped,
 /turf/open/floor/almayer/green/east,
 /area/blackgold/lower/rooms/req)
 "akP" = (
@@ -3210,24 +3222,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
 "alc" = (
-/obj/structure/closet/crate,
 /obj/structure/machinery/power/apc/almayer/north,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
-/obj/structure/closet/crate,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/req)
 "ald" = (
@@ -4065,6 +4060,12 @@
 /area/blackgold/middle/rooms/briefing)
 "anZ" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/prop/helmetgarb/gunoil,
+/obj/item/prop/colony/usedbandage{
+	dir = 6;
+	pixel_x = -8
+	},
+/obj/item/tool/screwdriver,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "aoa" = (
@@ -5030,7 +5031,7 @@
 /turf/closed/wall/almayer/outer,
 /area/blackgold/lower/hallways/star/fore)
 "arZ" = (
-/obj/structure/surface/table/almayer,
+/obj/structure/pallet/standard/empty,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/req)
 "asa" = (
@@ -5346,7 +5347,7 @@
 /turf/open/floor/almayer/black/northwest,
 /area/blackgold/middle/hallways/star/fore)
 "atA" = (
-/obj/effect/vehicle_spawner/apc_cmd/plain,
+/obj/effect/vehicle_spawner/apc_cmd/fixed,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/underdeck/vehicle)
 "atB" = (
@@ -5771,6 +5772,7 @@
 /obj/structure/machinery/light/small/red{
 	dir = 8
 	},
+/obj/structure/pallet/standard,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/mid)
 "avd" = (
@@ -6558,6 +6560,9 @@
 /area/blackgold/lower/rooms/gym)
 "axR" = (
 /obj/structure/largecrate/random/barrel/true_random,
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/liaison)
 "axT" = (
@@ -6599,7 +6604,7 @@
 /area/blackgold/lower/rooms/liaison)
 "ayb" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plating_striped/west,
+/turf/closed/wall/almayer,
 /area/blackgold/lower/rooms/liaison)
 "ayd" = (
 /obj/structure/closet/cabinet,
@@ -6607,10 +6612,12 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "aye" = (
-/obj/structure/machinery/light/small/red{
-	dir = 4
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_access = list(200);
+	req_one_access = null;
+	dir = 2
 	},
-/turf/open/floor/almayer/plating_striped/east,
+/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/liaison)
 "ayf" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -6717,12 +6724,10 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/liaison)
 "ayE" = (
-/obj/structure/machinery/light/small/red{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plating_striped/east,
-/area/blackgold/lower/rooms/liaison)
+/obj/structure/largecrate/goat,
+/obj/structure/largecrate/goat,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/aft)
 "ayK" = (
 /obj/docking_port/stationary/vehicle_elevator/almayer{
 	name = "Blackgold Vehicle Elevator Dock"
@@ -6777,6 +6782,9 @@
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/liaison)
 "ayV" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/lower/rooms/liaison)
 "ayW" = (
@@ -14288,6 +14296,7 @@
 /area/blackgold/middle/rooms/req)
 "aWx" = (
 /obj/structure/machinery/light/spot,
+/obj/structure/pallet/standard/engi/fob,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/req)
 "aWy" = (
@@ -14466,6 +14475,7 @@
 	pixel_x = 32
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pallet/standard/engi/fob,
 /turf/open/floor/almayer/green/east,
 /area/blackgold/middle/rooms/req)
 "aXd" = (
@@ -16333,6 +16343,7 @@
 	req_access = list(3);
 	pixel_x = -23
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "bbs" = (
@@ -16825,7 +16836,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/green_pointer/west,
 /area/blackgold/middle/hallways/port/fore)
 "bcM" = (
 /obj/structure/disposalpipe/junction{
@@ -17142,7 +17153,7 @@
 	dir = 8;
 	id = "BG OT-Cargo Link"
 	},
-/turf/closed/wall/almayer/outer,
+/turf/closed/wall/almayer/reinforced,
 /area/blackgold/middle/rooms/req)
 "bdC" = (
 /obj/structure/disposalpipe/segment,
@@ -17172,7 +17183,7 @@
 	id = "BG Research-Cargo Link"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer/outer,
+/turf/closed/wall/almayer/reinforced,
 /area/blackgold/middle/rooms/req)
 "bdF" = (
 /obj/structure/disposalpipe/segment,
@@ -17344,6 +17355,15 @@
 	name = "ship-grade camera"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/delta,
+/obj/structure/closet/crate/delta,
+/obj/structure/closet/crate/delta,
+/obj/structure/closet/crate/delta,
+/obj/structure/closet/crate/delta,
+/obj/structure/closet/crate/delta,
+/obj/structure/closet/crate/delta,
+/obj/structure/closet/crate/delta,
+/obj/structure/closet/crate/delta,
 /obj/structure/closet/crate/delta,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/req)
@@ -18886,6 +18906,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "bhX" = (
@@ -18899,6 +18921,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "bhZ" = (
@@ -19727,18 +19750,18 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
 "bkP" = (
-/obj/vehicle/train/cargo/trolley,
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pallet/standard/engi/fob,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/req)
 "bkQ" = (
-/obj/vehicle/train/cargo/trolley,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
+/obj/structure/largecrate/supply/explosives/mortar_shaped,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/req)
 "bkR" = (
@@ -21086,6 +21109,7 @@
 	dir = 8;
 	pixel_x = 16
 	},
+/obj/structure/bed/chair/wheelchair/officechair,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "bpd" = (
@@ -21102,9 +21126,9 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/machinery/auto_rack/uscm/slugs/empty{
-	density = 0;
-	pixel_y = 15
+/obj/structure/machinery/auto_rack/uscm/buckshot/full{
+	pixel_y = 15;
+	density = 0
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/blackgold/middle/rooms/squad/prep)
@@ -21910,6 +21934,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/structure/pallet/standard,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/fore)
 "brG" = (
@@ -23721,6 +23746,7 @@
 /area/blackgold/lower/maint/port/fore)
 "bxm" = (
 /obj/effect/landmark/yautja_teleport,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "bxn" = (
@@ -24204,6 +24230,8 @@
 "bzf" = (
 /obj/structure/machinery/light/small/red,
 /obj/structure/surface/rack,
+/obj/item/weapon/gun/shotgun/pump,
+/obj/item/ammo_magazine/shotgun/incendiarybuck,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/fore)
 "bzg" = (
@@ -24609,7 +24637,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/evidence_storage)
 "bAD" = (
-/turf/open/floor/almayer/plating_stripedcorner/east,
+/turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/liaison)
 "bAE" = (
 /obj/structure/machinery/light/red,
@@ -24668,7 +24696,10 @@
 "bAP" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/recharger{
-	pixel_y = 4
+	pixel_y = 12
+	},
+/obj/structure/machinery/recharger{
+	pixel_y = -1
 	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/middle/rooms/medical)
@@ -26034,20 +26065,13 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
 "bEb" = (
-/obj/structure/platform/metal/ship/corner/west,
-/obj/structure/platform/metal/ship/corner,
+/obj/structure/platform/metal/ship/east,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/conference)
 "bEc" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_ew_full_cap";
-	layer = 3.5
-	},
-/obj/structure/platform/metal/ship/north{
-	icon_state = "ship_platform_stair_alt"
-	},
-/obj/structure/platform/metal/ship,
-/turf/open/floor/almayer/plate,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/megaphone,
+/turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/lower/rooms/conference)
 "bEd" = (
 /obj/structure/machinery/light/spot,
@@ -26117,26 +26141,29 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/conference)
 "bEq" = (
-/obj/item/device/megaphone,
-/obj/structure/machinery/prop/almayer/CICmap,
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/CICmap,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_x = 2;
+	alpha = 0
+	},
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/conference)
 "bEr" = (
 /obj/structure/barricade/handrail{
-	dir = 1
+	dir = 1;
+	pixel_x = 2;
+	alpha = 0
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_striped/north,
 /area/blackgold/lower/rooms/conference)
 "bEs" = (
 /obj/structure/barricade/handrail{
-	dir = 1
+	dir = 1;
+	pixel_x = 2;
+	alpha = 0
 	},
-/obj/structure/barricade/handrail{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/lower/rooms/conference)
 "bEt" = (
@@ -26983,12 +27010,18 @@
 /obj/item/device/megaphone,
 /obj/structure/machinery/prop/almayer/CICmap,
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/barricade/handrail{
+	dir = 2;
+	pixel_x = 2;
+	alpha = 0
+	},
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/lower/rooms/conference)
 "bHa" = (
-/obj/structure/barricade/handrail,
 /obj/structure/barricade/handrail{
-	dir = 4
+	dir = 2;
+	pixel_x = 2;
+	alpha = 0
 	},
 /turf/open/floor/almayer/plating_stripedcorner/east,
 /area/blackgold/lower/rooms/conference)
@@ -27027,21 +27060,13 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "bHg" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_ew_full_cap";
-	layer = 3.5
-	},
-/obj/structure/platform/metal/ship/north{
-	icon_state = "ship_platform_stair_alt"
-	},
-/obj/structure/platform/metal/ship,
 /obj/structure/sign/banners/maximumeffort{
 	pixel_y = 32
 	},
-/turf/open/floor/almayer/plate,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/conference)
 "bHh" = (
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_striped/north,
 /area/blackgold/lower/rooms/conference)
 "bHi" = (
@@ -27218,11 +27243,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/liaison)
 "bHC" = (
-/obj/structure/bed,
-/obj/item/bedsheet/orange,
-/obj/item/toy/plush/farwa{
-	pixel_x = 5
-	},
+/obj/structure/bed/hybrisa/bunkbed3,
 /turf/open/floor/hybrisa/carpet/carpetblackdeco,
 /area/blackgold/lower/rooms/liaison)
 "bHD" = (
@@ -27468,18 +27489,6 @@
 	pixel_y = 16;
 	density = 0
 	},
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
-/obj/item/storage/bible,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/chapel)
 "bIn" = (
@@ -27538,7 +27547,10 @@
 "bIt" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/recharger{
-	pixel_y = 4
+	pixel_y = 12
+	},
+/obj/structure/machinery/recharger{
+	pixel_y = -1
 	},
 /turf/open/floor/almayer/sterile_green_side,
 /area/blackgold/middle/rooms/medical)
@@ -27572,15 +27584,41 @@
 "bIx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
+/obj/structure/closet/crate/alpha,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/req)
 "bIy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
+/obj/structure/closet/crate/bravo,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/req)
 "bIz" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/charlie,
+/obj/structure/closet/crate/charlie,
+/obj/structure/closet/crate/charlie,
+/obj/structure/closet/crate/charlie,
+/obj/structure/closet/crate/charlie,
+/obj/structure/closet/crate/charlie,
+/obj/structure/closet/crate/charlie,
+/obj/structure/closet/crate/charlie,
 /obj/structure/closet/crate/charlie,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/req)
@@ -27624,6 +27662,45 @@
 /obj/item/storage/fancy/candle_box{
 	pixel_x = -6
 	},
+/obj/item/prop/helmetgarb/chaplain_patch,
+/obj/item/prop/helmetgarb/chaplain_patch,
+/obj/item/prop/helmetgarb/chaplain_patch,
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
+/obj/item/prop/helmetgarb/rosary{
+	layer = 3;
+	pixel_x = -10
+	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/mid)
 "bIG" = (
@@ -27633,6 +27710,7 @@
 	pixel_y = 7
 	},
 /obj/item/storage/box/matches,
+/obj/item/reagent_container/food/drinks/bottle/holywater,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/mid)
 "bIH" = (
@@ -27667,6 +27745,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/powered)
+"bJM" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green_pointer/east,
+/area/blackgold/lower/hallways/port/fore)
 "bKr" = (
 /obj/structure/sign/prop1{
 	pixel_x = 31
@@ -27689,6 +27773,9 @@
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -7;
 	pixel_y = 14
+	},
+/obj/item/moneybag{
+	name = "Battalion Payroll bag"
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
@@ -27765,7 +27852,11 @@
 /turf/open/floor/almayer/black/east,
 /area/blackgold/lower/hallways/port/fore)
 "bQo" = (
-/obj/structure/barricade/handrail,
+/obj/structure/barricade/handrail{
+	dir = 2;
+	pixel_x = 2;
+	alpha = 0
+	},
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/lower/rooms/conference)
 "bQu" = (
@@ -27826,6 +27917,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/req)
+"bTv" = (
+/obj/effect/essentials_set/dressblues/enlisted,
+/obj/effect/essentials_set/dressblues/enlisted,
+/obj/effect/essentials_set/dressblues/enlisted,
+/obj/effect/essentials_set/dressblues/enlisted,
+/obj/effect/essentials_set/dressblues/nco,
+/obj/effect/essentials_set/dressblues/officer,
+/obj/structure/closet/cabinet,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/mid)
 "bUk" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -28283,6 +28384,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/west,
 /area/blackgold/upper/hallways/mid/mid)
+"cvt" = (
+/obj/structure/pallet/standard/weapon/mk1,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
+"cwJ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/aft)
 "cyb" = (
 /obj/structure/machinery/door/airlock/almayer/security/reinforced{
 	name = "\improper Chief MP's Bedroom";
@@ -28472,6 +28584,7 @@
 	pixel_y = 33;
 	layer = 2
 	},
+/obj/structure/closet/crate/critter,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
 "cLJ" = (
@@ -28627,7 +28740,7 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "cUP" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/bed/chair/wheelchair/officechair{
 	dir = 8
 	},
 /turf/open/floor/almayer/emerald/southwest,
@@ -28753,6 +28866,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/silverfull2,
 /area/blackgold/lower/rooms/gym)
+"ddL" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "dfo" = (
 /obj/structure/machinery/medical_pod/bodyscanner{
 	dir = 8
@@ -29071,6 +29191,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/upper/rooms/cic)
+"dwR" = (
+/obj/structure/pallet/standard/empty,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/mid)
 "dxA" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/crew/alt{
@@ -29104,6 +29228,13 @@
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/floor/almayer/no_build,
 /area/blackgold/underdeck/req)
+"dzM" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/pallet/standard/weapon/mk1,
+/turf/open/floor/almayer/green/west,
+/area/blackgold/lower/rooms/req)
 "dAD" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/purplefull,
@@ -29337,13 +29468,11 @@
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/upper/rooms/telecomms)
 "dQf" = (
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
+/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/pallet/standard/empty,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/lower/rooms/req)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/blackgold/lower/hallways/mid/mid)
 "dQg" = (
 /obj/structure/machinery/vending/walkman,
 /obj/effect/decal/cleanable/dirt,
@@ -29418,6 +29547,10 @@
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/middle/maint/port/fore)
+"dWr" = (
+/obj/structure/closet/crate/freezer/cooler,
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/req)
 "dXY" = (
 /turf/open/floor/almayer/green/north,
 /area/blackgold/lower/rooms/req)
@@ -29425,6 +29558,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/fore)
+"dYA" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/fore)
 "dYP" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -29499,6 +29637,12 @@
 "edc" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/underdeck/vehicle)
+"edh" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/box/bodybags,
+/obj/item/reagent_container/spray/cleaner,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/commandbunks/adjunct)
 "edw" = (
 /obj/effect/landmark/start/warrant,
 /obj/effect/landmark/late_join/police,
@@ -29575,6 +29719,14 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
+"egf" = (
+/obj/structure/largecrate/chick,
+/obj/structure/largecrate/chick,
+/obj/structure/largecrate/chick,
+/obj/structure/largecrate/chick,
+/obj/structure/largecrate/chick,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/aft)
 "egz" = (
 /obj/structure/platform/metal/ship/north,
 /turf/open/floor/almayer/plating_striped/north,
@@ -29702,6 +29854,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/structure/pallet/standard/weapon/mk1,
 /turf/open/floor/almayer/green/southeast,
 /area/blackgold/lower/rooms/req)
 "eps" = (
@@ -29800,6 +29953,10 @@
 	},
 /turf/open/floor/almayer/orangefull,
 /area/blackgold/middle/rooms/squad)
+"etB" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/fore)
 "etC" = (
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
@@ -29977,6 +30134,11 @@
 /area/blackgold/underdeck/req)
 "eHa" = (
 /obj/structure/closet/crate/internals,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/req)
 "eHw" = (
@@ -30033,6 +30195,12 @@
 "eLN" = (
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/evacuation)
+"eLR" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "eMd" = (
 /obj/structure/toilet{
 	dir = 4
@@ -30483,6 +30651,14 @@
 /obj/structure/platform_decoration/metal/almayer/east,
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
+"fie" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/fore)
 "fip" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -30645,6 +30821,11 @@
 /obj/structure/stairs/multiz/down,
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/middle/rooms/aientrance)
+"fsS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stool,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/squad/prep)
 "fsY" = (
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer/blue/southeast,
@@ -30707,6 +30888,10 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/xo)
+"fxu" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/liaison,
+/turf/open/floor/plating,
+/area/blackgold/underdeck)
 "fxU" = (
 /obj/structure/filingcabinet/documentation/uscm_mp{
 	pixel_x = 8;
@@ -30828,6 +31013,9 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/captain_mess)
+"fFJ" = (
+/turf/closed/wall/almayer/research/containment/wall/corner,
+/area/blackgold/underdeck)
 "fGI" = (
 /obj/structure/machinery/computer/supply,
 /turf/open/floor/almayer/plate,
@@ -30908,6 +31096,13 @@
 	},
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
+"fJH" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/aft)
 "fKh" = (
 /turf/closed/wall/almayer/outer,
 /area/shuttle/cargo/a)
@@ -30924,6 +31119,12 @@
 	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/blackgold/upper/rooms/brig/medical)
+"fLy" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "fLB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blue/south,
@@ -31708,6 +31909,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blue/north,
 /area/blackgold/upper/rooms/cic)
+"gDB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/m39/full,
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/blackgold/middle/rooms/squad/prep)
 "gEa" = (
 /obj/structure/bed/chair/office/dark,
 /obj/structure/machinery/light/spot{
@@ -31850,6 +32056,11 @@
 /obj/structure/machinery/photocopier,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
+"gJY" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/aft)
 "gKS" = (
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
@@ -32208,6 +32419,19 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/brig/chief)
+"hiD" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment{
+	id = "CL_Containment";
+	name = "\improper Containment Cell"
+	},
+/obj/structure/machinery/door/airlock/almayer/research/glass/reinforced{
+	dir = 1;
+	id = "CL_Containment";
+	locked = 1;
+	name = "\improper Containment Cell"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/blackgold/underdeck)
 "hiJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -32319,6 +32543,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/lower/rooms/req)
+"hsz" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "hsO" = (
 /obj/structure/machinery/computer/working_joe{
 	dir = 4;
@@ -32481,6 +32712,7 @@
 /obj/structure/machinery/light/spot{
 	dir = 4
 	},
+/obj/structure/pallet/standard/ammo_mk1,
 /turf/open/floor/almayer/green/east,
 /area/blackgold/middle/rooms/req)
 "hzj" = (
@@ -32529,6 +32761,9 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
+"hBt" = (
+/turf/open/floor/almayer/research/containment/floor2,
+/area/blackgold/underdeck)
 "hBA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -32595,6 +32830,9 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
+"hFG" = (
+/turf/open/floor/almayer/red_pointer/east,
+/area/blackgold/middle/rooms/squad)
 "hGa" = (
 /obj/structure/stairs/multiz/up,
 /obj/structure/platform/metal/almayer/east,
@@ -33489,6 +33727,16 @@
 	},
 /turf/open/floor/almayer/bluefull,
 /area/blackgold/middle/rooms/squad)
+"iDd" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "iDo" = (
 /turf/open/floor/almayer/uscm/directional,
 /area/blackgold/middle/rooms/briefing)
@@ -33524,6 +33772,9 @@
 "iGl" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/captain_mess)
+"iHa" = (
+/turf/closed/wall/almayer/reinforced,
+/area/blackgold/middle/rooms/req)
 "iHj" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Exit";
@@ -33622,6 +33873,11 @@
 "iME" = (
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/upper/rooms/cic)
+"iMN" = (
+/turf/closed/wall/almayer/research/containment/wall/corner{
+	dir = 4
+	},
+/area/blackgold/underdeck)
 "iNb" = (
 /obj/structure/largecrate/supply/weapons/shotgun,
 /turf/open/floor/almayer/no_build/plate,
@@ -33633,6 +33889,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/lower/rooms/brig/cells)
+"iOd" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/orange_pointer/west,
+/area/blackgold/middle/rooms/squad)
 "iOq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/red/south,
@@ -33833,6 +34095,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/hallways/port/fore)
+"jcr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/m39_ammo/full,
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/blackgold/middle/rooms/squad/prep)
 "jct" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -33922,6 +34189,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
 /area/blackgold/middle/rooms/squad/prep)
+"jfP" = (
+/obj/structure/surface/rack,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "jgN" = (
 /turf/open/floor/almayer/bluecorner/south,
 /area/blackgold/upper/hallways/mid/fore)
@@ -34073,6 +34345,9 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
+"jmj" = (
+/turf/open/floor/almayer/research/containment/entrance,
+/area/blackgold/underdeck)
 "jmP" = (
 /obj/effect/landmark/observer_start,
 /turf/open/floor/almayer/uscm/directional/logo_c/west,
@@ -34433,6 +34708,14 @@
 /obj/structure/prop/almayer/hangar_stencil,
 /turf/open/floor/almayer/blackfull2,
 /area/blackgold/middle/rooms/hangar)
+"jGF" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes/uscm_logo/dirty,
+/turf/open/floor/almayer,
+/area/blackgold/lower/rooms/conference)
 "jHf" = (
 /obj/structure/pallet/standard/empty,
 /obj/effect/decal/cleanable/dirt,
@@ -34455,6 +34738,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/south,
 /area/blackgold/middle/hallways/star/fore)
+"jIH" = (
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	dir = 8;
+	icon_state = "containment_window_h"
+	},
+/area/blackgold/underdeck)
 "jJD" = (
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/aft)
@@ -34571,6 +34860,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/star/aft)
+"jTE" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/mid)
 "jTJ" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
@@ -34644,6 +34940,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/lower/rooms/engineering/reactor)
+"jYC" = (
+/obj/structure/bed/chair/comfy/black,
+/obj/effect/decal/warning_stripes/uscm_logo/dirty,
+/turf/open/floor/almayer,
+/area/blackgold/lower/rooms/conference)
 "jZH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -34751,6 +35052,10 @@
 /obj/structure/cargo_container/hybrisa/containersextended/redright,
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/underdeck/req)
+"kgf" = (
+/obj/item/toy/dice,
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/lower/rooms/conference)
 "kgJ" = (
 /obj/structure/machinery/light/small/red{
 	dir = 4
@@ -34764,6 +35069,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
+"khq" = (
+/obj/structure/largecrate/machine/bodyscanner,
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/underdeck/req)
 "khL" = (
 /turf/open/floor/almayer/redcorner/west,
 /area/blackgold/upper/rooms/evacuation)
@@ -34892,6 +35201,22 @@
 /area/blackgold/upper/rooms/brig/chief)
 "kpu" = (
 /obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
+/obj/structure/closet/crate,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/req)
 "kqX" = (
@@ -34914,6 +35239,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/computer/storage)
+"krE" = (
+/obj/structure/machinery/flasher{
+	alpha = 1;
+	id = "CL_Containment";
+	layer = 2.1;
+	name = "Mounted Flash";
+	pixel_x = -15;
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/research/containment/corner_var1/containment_corner_variant_2,
+/area/blackgold/underdeck)
 "krM" = (
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/cic)
@@ -34950,6 +35286,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/briefing)
+"kve" = (
+/obj/structure/pallet/standard/empty,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/mid)
 "kvp" = (
 /obj/structure/machinery/cm_vending/clothing/commanding_officer{
 	pixel_y = 16;
@@ -34972,6 +35312,21 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/rack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/req)
 "kxb" = (
@@ -35250,6 +35605,27 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad)
+"kMT" = (
+/obj/structure/barricade/handrail,
+/obj/structure/closet/crate,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/lower/rooms/req)
 "kNf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/reinforced/temphull,
@@ -35572,6 +35948,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/upper/rooms/brig/chief)
+"lhz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/blackfull,
+/area/blackgold/lower/hallways/mid/mid)
 "lhG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -35762,6 +36142,9 @@
 "loP" = (
 /turf/open/floor/almayer/blue/southwest,
 /area/blackgold/upper/rooms/cic)
+"lpt" = (
+/turf/closed/wall/almayer/research/containment/wall/east,
+/area/blackgold/underdeck)
 "lpv" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blue/north,
@@ -36021,6 +36404,12 @@
 "lDv" = (
 /turf/open/floor/almayer/flooredge/west,
 /area/blackgold/upper/rooms/brig/processing)
+"lDz" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/req)
 "lEb" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/north,
@@ -36285,6 +36674,11 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/underdeck/vehicle)
+"lXy" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pallet/standard/empty,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/fore)
 "lYa" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -36338,6 +36732,10 @@
 "lZY" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/maint/port/mid)
+"mad" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/fore)
 "maL" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/overwatch/almayer{
@@ -36438,6 +36836,10 @@
 	pixel_y = 32;
 	density = 0
 	},
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_y = 18;
+	pixel_x = -7
+	},
 /turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
 "mew" = (
@@ -36458,6 +36860,29 @@
 	},
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
+"mfb" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/firstaid/regular{
+	pixel_y = 6
+	},
+/obj/item/storage/box/mre/wy{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = -10;
+	pixel_y = 14
+	},
+/obj/item/storage/box/mre/wy{
+	pixel_y = 7;
+	pixel_x = 5
+	},
+/obj/item/storage/box/mre/wy{
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/lower/rooms/liaison)
 "mfr" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/cargo,
 /turf/open/floor/almayer/green/south,
@@ -36554,6 +36979,29 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/red/north,
 /area/blackgold/middle/rooms/orbital)
+"mlF" = (
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/structure/surface/rack,
+/turf/open/floor/wood/ship,
+/area/blackgold/middle/rooms/chapel)
+"mmr" = (
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/fore)
 "mmu" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -36757,6 +37205,11 @@
 "mwI" = (
 /turf/open/floor/almayer/red/north,
 /area/blackgold/upper/rooms/brig/lobby)
+"mxp" = (
+/obj/structure/largecrate/random/secure,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "mxr" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -36764,6 +37217,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/aft)
+"mxX" = (
+/obj/structure/pallet/standard/empty,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/fore)
 "myR" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_17";
@@ -36852,7 +37309,9 @@
 /turf/open/floor/almayer/flooredge/northwest,
 /area/blackgold/lower/rooms/req)
 "mGk" = (
-/obj/structure/machinery/cryopod,
+/obj/structure/machinery/cryopod{
+	dir = 1
+	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/cic/conference)
 "mGz" = (
@@ -37018,7 +37477,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/machinery/auto_rack/uscm/slugs/empty{
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
 	pixel_y = -15;
 	density = 0
 	},
@@ -37314,6 +37773,9 @@
 "nbJ" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/lower/rooms/brig/evidence_storage)
+"nca" = (
+/turf/closed/wall/almayer/research/containment/wall/south,
+/area/blackgold/underdeck)
 "ncz" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -37605,6 +38067,14 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/underdeck/req)
+"ntF" = (
+/obj/vehicle/train/cargo/engine,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/east,
+/area/blackgold/lower/rooms/req)
 "nus" = (
 /obj/structure/prop/hybrisa/misc/machinery/screens/wood_clock{
 	pixel_x = 28;
@@ -37731,6 +38201,10 @@
 	color = "#C55AD6"
 	},
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
+"nAH" = (
+/obj/structure/pallet/standard/empty,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/fore)
 "nBp" = (
 /obj/structure/surface/table/almayer,
 /obj/item/book/manual/marine_law{
@@ -37797,6 +38271,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks)
+"nDY" = (
+/obj/structure/pallet/standard,
+/turf/closed/wall/almayer/reinforced,
+/area/blackgold/upper/rooms/telecomms)
 "nDZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -38131,6 +38609,10 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/range)
+"nSr" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/aft)
 "nSG" = (
 /obj/structure/platform_decoration/metal/almayer/east,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -38143,6 +38625,11 @@
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/aientrance)
+"nTc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1/full,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/middle/rooms/squad/prep)
 "nUB" = (
 /obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door,
 /obj/effect/decal/cleanable/dirt,
@@ -38307,7 +38794,7 @@
 /turf/closed/wall/almayer/outer,
 /area/blackgold/underdeck)
 "obP" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/bed/chair/wheelchair/officechair{
 	dir = 8
 	},
 /turf/open/floor/almayer/mono,
@@ -38357,6 +38844,9 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/mid)
+"ohC" = (
+/turf/open/floor/almayer/purple_pointer/east,
+/area/blackgold/middle/rooms/squad)
 "ohX" = (
 /obj/structure/platform/metal/almayer/north,
 /turf/open/floor/almayer/aicore/no_build,
@@ -38650,6 +39140,7 @@
 	dir = 8
 	},
 /obj/structure/pallet/standard/empty,
+/obj/item/ammo_box/magazine/xm51,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/req)
 "oyL" = (
@@ -38751,12 +39242,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "oEo" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/pallet/standard/med/firstaid,
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/lower/rooms/req)
+/turf/open/floor/almayer/research/containment/floor2/west,
+/area/blackgold/underdeck)
 "oEr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -38850,9 +39337,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/middle/rooms/squad/prep)
+"oKc" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/fore)
 "oKl" = (
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/staff)
+"oLN" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/star/mid)
 "oMi" = (
 /obj/structure/largecrate/supply/generator,
 /turf/open/floor/almayer/no_build/plate,
@@ -39048,6 +39546,14 @@
 "oUK" = (
 /turf/open/floor/almayer/red/northwest,
 /area/blackgold/upper/rooms/brig/processing)
+"oUU" = (
+/obj/item/storage/box/wood,
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_y = 18;
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/req)
 "oVp" = (
 /obj/structure/bed/chair/bolted,
 /turf/open/floor/almayer/bluefull,
@@ -39095,6 +39601,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/hangar)
+"oXN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pallet/standard/engi/fob,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
 "oXT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
@@ -39184,6 +39695,12 @@
 "pdJ" = (
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/underdeck/vehicle)
+"pdO" = (
+/obj/structure/machinery/light,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/chem_dispenser/soda,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/liaison)
 "pdP" = (
 /obj/structure/machinery/light/small/red{
 	dir = 1
@@ -39240,7 +39757,6 @@
 	pixel_x = 6;
 	pixel_y = 32
 	},
-/obj/item/moneybag,
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
 "phw" = (
@@ -39288,6 +39804,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/hallways/star/fore)
+"piU" = (
+/turf/closed/wall/almayer/research/containment/wall/corner{
+	dir = 1
+	},
+/area/blackgold/underdeck)
 "pjj" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -39379,6 +39900,10 @@
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/middle/maint/port/aft)
+"pof" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/mid)
 "pog" = (
 /obj/vehicle/motorbike/green{
 	dir = 4
@@ -39469,6 +39994,11 @@
 /obj/structure/closet/crate/secure/mortar_ammo/mortar_kit,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/req)
+"ptp" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/mid)
 "ptL" = (
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	dir = 1
@@ -39684,12 +40214,12 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/synth)
 "pDI" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
-	name = "\improper Requisitions Bay";
-	req_one_access = s
-	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
+	name = "\improper Requisitions Bay";
+	req_one_access = "19;21"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/req)
 "pDL" = (
@@ -39750,6 +40280,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/upper/rooms/medical)
+"pIb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/metal/ship/west,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/conference)
 "pIz" = (
 /obj/structure/platform/metal/almayer/west,
 /turf/open/floor/almayer/aicore/no_build/ai_silver/west,
@@ -40004,6 +40539,10 @@
 "pXI" = (
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/cic/conference)
+"pXL" = (
+/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/middle/rooms/squad/prep)
 "pYr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -40046,6 +40585,10 @@
 	},
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
+"qaZ" = (
+/obj/structure/pallet/standard/empty,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/mid)
 "qbs" = (
 /turf/open/floor/almayer/green/north,
 /area/blackgold/lower/rooms/brig/cells)
@@ -40138,6 +40681,12 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
+"qhl" = (
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	dir = 4;
+	icon_state = "containment_window_h"
+	},
+/area/blackgold/underdeck)
 "qik" = (
 /obj/structure/barricade/handrail,
 /obj/structure/surface/rack,
@@ -40180,6 +40729,7 @@
 "qkT" = (
 /obj/structure/machinery/light/spot,
 /obj/structure/surface/rack,
+/obj/item/ammo_box/magazine/misc/flares/signal,
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
 "qlg" = (
@@ -40392,7 +40942,7 @@
 /turf/open/floor/almayer/no_build,
 /area/blackgold/underdeck/req)
 "qvR" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/bed/chair/wheelchair/officechair{
 	dir = 1
 	},
 /turf/open/floor/almayer/red/northwest,
@@ -40639,6 +41189,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/req)
+"qIt" = (
+/obj/vehicle/train/cargo/trolley,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
 "qIA" = (
 /obj/structure/machinery/cryopod{
 	layer = 3.1;
@@ -40656,6 +41212,33 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/item/ammo_magazine/rifle/lmg/ap,
+/obj/structure/closet/crate/ammo,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/req)
 "qIR" = (
@@ -40703,6 +41286,9 @@
 /obj/structure/machinery/power/apc/almayer/hardened/north,
 /turf/open/floor/almayer/bluefull,
 /area/blackgold/upper/rooms/commandbunks/staff)
+"qLs" = (
+/turf/open/floor/almayer/research/containment/corner_var1/east,
+/area/blackgold/underdeck)
 "qLN" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -40837,6 +41423,10 @@
 	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/underdeck/req)
+"qRW" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/aft)
 "qTb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -41019,6 +41609,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/south,
 /area/blackgold/upper/rooms/brig/processing)
+"rdZ" = (
+/turf/open/floor/almayer/green_pointer,
+/area/blackgold/middle/rooms/squad)
+"ree" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/black_market/uscm_heap{
+	name = "Large Supply Crate"
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
 "reh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
@@ -41119,6 +41721,12 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/captain_mess)
+"rhz" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/blue_pointer/west,
+/area/blackgold/middle/rooms/squad)
 "rie" = (
 /obj/structure/platform/metal/ship/west,
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -41129,6 +41737,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
+"riq" = (
+/obj/structure/machinery/cm_vending/clothing/dress,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/mid)
 "rix" = (
 /obj/structure/machinery/power/reactor{
 	pixel_x = -1;
@@ -41172,6 +41784,10 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/synth)
+"rjB" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/mid)
 "rjH" = (
 /obj/structure/stairs/perspective{
 	dir = 1
@@ -41195,6 +41811,10 @@
 	},
 /turf/open/floor/almayer/red/north,
 /area/blackgold/upper/rooms/brig/lobby)
+"rkQ" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
 "rma" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -41233,7 +41853,7 @@
 /turf/open/floor/almayer/black/south,
 /area/blackgold/lower/hallways/port/fore)
 "rmW" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/training,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/range)
 "rnF" = (
@@ -41249,7 +41869,7 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "rpq" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/bed/chair/wheelchair/officechair{
 	dir = 4
 	},
 /turf/open/floor/almayer/flooredge/northeast,
@@ -41461,6 +42081,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/hangar)
+"rFG" = (
+/obj/structure/largecrate/cow,
+/obj/structure/largecrate/cow,
+/obj/structure/largecrate/cow,
+/obj/structure/largecrate/cow,
+/obj/structure/largecrate/cow,
+/obj/structure/largecrate/cow,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/aft)
 "rGe" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -41509,11 +42138,9 @@
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/brig/processing)
 "rHJ" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/mono,
-/area/blackgold/middle/rooms/squad)
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/fore)
 "rHQ" = (
 /obj/structure/sink{
 	pixel_y = 17
@@ -41535,6 +42162,31 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
+"rIJ" = (
+/obj/item/reagent_container/food/drinks/bottle/sake{
+	pixel_y = -3;
+	pixel_x = 4
+	},
+/obj/item/reagent_container/food/drinks/bottle/sake{
+	pixel_x = 4;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/bottle/sake{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/obj/item/reagent_container/food/drinks/bottle/sake{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/structure/machinery/light,
+/obj/item/storage/beer_pack,
+/obj/item/storage/box/drinkingglasses{
+	pixel_x = -8
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/liaison)
 "rIV" = (
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/brig/stairs)
@@ -41571,6 +42223,9 @@
 "rLN" = (
 /turf/open/floor/almayer/red/northeast,
 /area/blackgold/lower/rooms/brig/warden)
+"rLR" = (
+/turf/closed/wall/almayer/research/containment/wall/west,
+/area/blackgold/underdeck)
 "rLZ" = (
 /obj/structure/machinery/recharge_station{
 	layer = 2.8
@@ -41816,6 +42471,13 @@
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/cic)
+"scL" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/aft)
 "sdm" = (
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/floor/almayer/plating_stripedcorner/south,
@@ -41856,6 +42518,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blue/northwest,
 /area/blackgold/upper/hallways/mid/fore)
+"sfW" = (
+/obj/structure/largecrate/random/secure,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/fore)
 "sga" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -41914,6 +42581,9 @@
 /area/blackgold/lower/rooms/aicore)
 "siC" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/item/stack/sheet/wood/large_stack,
+/obj/item/stack/sheet/wood/large_stack,
+/obj/item/stack/sheet/cardboard/full_stack,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "sjh" = (
@@ -41962,6 +42632,17 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/brig/armory)
+"slG" = (
+/obj/structure/platform/metal/ship/corner/east,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/conference)
+"slO" = (
+/obj/structure/machinery/camera/autoname/almayer/containment/hidden{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/research/containment/floor2/west,
+/area/blackgold/underdeck)
 "smQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -42035,6 +42716,9 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/lobby)
+"srq" = (
+/turf/open/floor/almayer/research/containment/corner1,
+/area/blackgold/underdeck)
 "srH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/west,
@@ -42070,9 +42754,9 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/buckshot/full{
-	pixel_y = 15;
-	density = 0
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
+	density = 0;
+	pixel_y = 15
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/blackgold/middle/rooms/squad/prep)
@@ -42232,6 +42916,9 @@
 "sAd" = (
 /turf/open/floor/almayer/green/east,
 /area/blackgold/lower/rooms/brig/cells)
+"sAl" = (
+/turf/open/floor/almayer/research/containment/corner/east,
+/area/blackgold/underdeck)
 "sAS" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -42407,6 +43094,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/red/west,
 /area/blackgold/upper/rooms/hangar)
+"sIl" = (
+/obj/structure/machinery/light{
+	unacidable = 1;
+	unslashable = 1
+	},
+/turf/open/floor/almayer/research/containment/floor2/north,
+/area/blackgold/underdeck)
 "sIq" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 1
@@ -42521,6 +43215,10 @@
 	},
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
+"sOR" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/aft)
 "sPl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -42582,6 +43280,15 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
+"sSk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/green_pointer/east,
+/area/blackgold/lower/hallways/port/fore)
 "sSE" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -42629,9 +43336,13 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/armory)
+"sVw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pallet/standard/engi/fob,
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/req)
 "sVA" = (
 /obj/structure/platform/metal/ship/corner,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/conference)
 "sVH" = (
@@ -42740,6 +43451,11 @@
 /obj/structure/largecrate/supply/floodlights,
 /turf/open/floor/almayer/no_build,
 /area/blackgold/underdeck/req)
+"tdv" = (
+/obj/vehicle/train/cargo/trolley,
+/obj/structure/closet/crate,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
 "tee" = (
 /obj/structure/machinery/cm_vending/sorted/medical/marinemed,
 /obj/structure/medical_supply_link,
@@ -42842,6 +43558,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
 /area/blackgold/upper/rooms/computer)
+"tjV" = (
+/obj/detector_hud,
+/turf/open/space/basic,
+/area/space)
 "tjZ" = (
 /turf/open/floor/almayer_hull/outerhull_dir/southwest,
 /area/space)
@@ -43390,6 +44110,7 @@
 "ucn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/wood,
 /turf/open/floor/almayer/greencorner/north,
 /area/blackgold/middle/rooms/squad/prep)
 "uek" = (
@@ -43423,7 +44144,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/green_pointer/west,
 /area/blackgold/middle/hallways/mid/mid)
 "ufi" = (
 /obj/structure/cargo_container/hybrisa/containersextended/greenleft{
@@ -43492,6 +44213,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/black/west,
 /area/blackgold/lower/hallways/star/fore)
+"uiq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/supply/explosives/mines,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
 "uiB" = (
 /obj/structure/platform/metal/ship/corner/west,
 /obj/effect/decal/cleanable/dirt,
@@ -43699,6 +44426,10 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/almayer/blue/northwest,
 /area/blackgold/upper/rooms/commandbunks/staff)
+"uxh" = (
+/obj/structure/pallet/standard/food/groceries,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/aft)
 "uxu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/northeast,
@@ -43755,6 +44486,14 @@
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/almayer/hallways/lower/port_midship_hallway)
+"uAD" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/supply/ammo/shotgun,
+/turf/open/floor/almayer/green/east,
+/area/blackgold/lower/rooms/req)
 "uAE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -43826,6 +44565,11 @@
 /obj/structure/machinery/prop/almayer/CICmap/glass/target,
 /turf/open/floor/almayer/blue/south,
 /area/blackgold/upper/rooms/commandbunks/staff)
+"uGl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pallet/standard/weapon/mk1,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/req)
 "uHG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/south,
@@ -43851,7 +44595,7 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "uIM" = (
-/obj/structure/bed/chair/office/dark{
+/obj/structure/bed/chair/wheelchair/officechair{
 	dir = 4
 	},
 /turf/open/floor/almayer/orange/northeast,
@@ -43921,6 +44665,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/northwest,
 /area/blackgold/lower/rooms/req)
+"uLV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/metal/ship/east,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/conference)
 "uMp" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	dir = 1
@@ -44164,6 +44913,22 @@
 "uXl" = (
 /turf/open/floor/almayer/empty/vehicle_bay,
 /area/supply/station_vehicle)
+"uXw" = (
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/item/storage/bible,
+/obj/structure/surface/rack,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/chapel)
 "uXI" = (
 /obj/structure/platform/metal/ship/corner/west,
 /obj/effect/decal/cleanable/dirt,
@@ -44280,6 +45045,16 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/nade_box/mortar{
+	pixel_y = 13
+	},
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_x = 7
+	},
+/obj/item/storage/pill_bottle/packet/tramadol{
+	pixel_x = -7;
+	pixel_y = -3
+	},
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "vfn" = (
@@ -44437,6 +45212,14 @@
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/underdeck/req)
+"vph" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/fore)
 "vpI" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
 	name = "\improper Corpsmen Prep"
@@ -44677,6 +45460,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/shuttle/stern)
+"vDH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/green_pointer/west,
+/area/blackgold/middle/hallways/mid/mid)
 "vFc" = (
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/wood/ship,
@@ -44950,6 +45742,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/squad/prep)
+"vRX" = (
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/fore)
 "vSf" = (
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/blackgold/lower/rooms/aicore)
@@ -45260,6 +46056,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
 /area/blackgold/middle/maint/port/fore)
+"wpN" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/structure/pallet/standard,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/star/mid)
 "wrw" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/chem_dispenser/soda{
@@ -46005,6 +46808,33 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
+"xhp" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/rifle/l42a/abr40{
+	name = "\improper ABR-40 ceramonial rifle";
+	desc_lore = null;
+	desc = "A wood finish variant of the l42, used for 21 gun salutes."
+	},
+/obj/item/weapon/gun/rifle/l42a/abr40{
+	name = "\improper ABR-40 ceramonial rifle";
+	desc_lore = null;
+	desc = "A wood finish variant of the l42, used for 21 gun salutes.";
+	pixel_y = -4
+	},
+/obj/item/weapon/gun/rifle/l42a/abr40{
+	name = "\improper ABR-40 ceramonial rifle";
+	desc_lore = null;
+	desc = "A wood finish variant of the l42, used for 21 gun salutes.";
+	pixel_y = -8
+	},
+/obj/item/weapon/gun/rifle/l42a/abr40{
+	name = "\improper ABR-40 ceramonial rifle";
+	desc_lore = null;
+	desc = "A wood finish variant of the l42, used for 21 gun salutes.";
+	pixel_y = -12
+	},
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/mid)
 "xhF" = (
 /obj/structure/pipes/vents/scrubber/no_boom{
 	dir = 8
@@ -46307,9 +47137,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/red/southeast,
 /area/blackgold/lower/rooms/brig/cells)
+"xyv" = (
+/obj/structure/largecrate/machine/autodoc,
+/turf/open/floor/almayer/plating_striped/south,
+/area/blackgold/underdeck/req)
 "xyF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/computer/supply/asrs,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/req)
 "xyK" = (
@@ -46415,6 +47250,11 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/upper/rooms/commandbunks/staff)
+"xFN" = (
+/turf/closed/wall/almayer/research/containment/wall/corner{
+	dir = 8
+	},
+/area/blackgold/underdeck)
 "xGi" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/staff)
@@ -46458,6 +47298,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/briefing)
+"xKb" = (
+/obj/structure/pallet/standard/med/firstaid,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/lower/rooms/req)
 "xKl" = (
 /obj/structure/platform_decoration/metal/almayer/east,
 /turf/open/floor/almayer/aicore/no_build,
@@ -46465,7 +47309,8 @@
 "xKD" = (
 /obj/structure/machinery/cryopod{
 	layer = 3.1;
-	pixel_y = 13
+	pixel_y = 13;
+	dir = 1
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/cic/conference)
@@ -46528,6 +47373,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
+"xPZ" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating_stripedcorner/east,
+/area/blackgold/lower/rooms/liaison)
 "xQU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -52443,11 +53294,11 @@ obL
 obL
 xfB
 xfB
-xfB
-obL
-obL
-obL
-obL
+piU
+rLR
+rLR
+rLR
+xFN
 obL
 xfB
 xfB
@@ -52530,11 +53381,11 @@ obL
 obL
 xfB
 xfB
-xfB
-obL
-obL
-obL
-obL
+jIH
+krE
+oEo
+sAl
+nca
 obL
 xfB
 xfB
@@ -52613,15 +53464,15 @@ obL
 obL
 bOO
 xfB
-pCe
+fxu
 xfB
 xfB
 xfB
-nfe
-obL
-obL
-obL
-obL
+hiD
+jmj
+hBt
+sIl
+nca
 obL
 bOO
 xfB
@@ -52704,11 +53555,11 @@ obL
 obL
 xfB
 xfB
-xfB
-obL
-obL
-obL
-obL
+qhl
+qLs
+slO
+srq
+nca
 obL
 xfB
 xfB
@@ -52791,11 +53642,11 @@ obL
 obL
 xfB
 xfB
-xfB
-obL
-obL
-obL
-obL
+iMN
+lpt
+lpt
+lpt
+fFJ
 obL
 xfB
 xfB
@@ -59922,7 +60773,7 @@ ydL
 ydL
 qHM
 ydL
-kcB
+xyv
 drY
 rjH
 drY
@@ -60009,7 +60860,7 @@ ydL
 ydL
 taq
 ydL
-kcB
+khq
 drY
 rjH
 drY
@@ -72546,7 +73397,7 @@ tMt
 bEz
 bEQ
 bEI
-bEz
+kgf
 chD
 bDY
 asc
@@ -72629,7 +73480,7 @@ bDZ
 bDZ
 bFq
 asc
-sZn
+bDZ
 bDZ
 bDZ
 bEJ
@@ -72721,7 +73572,7 @@ kjP
 bER
 bEK
 sVA
-bEp
+uLV
 bEb
 asc
 baP
@@ -72731,7 +73582,7 @@ baP
 baP
 nWB
 qRc
-biz
+sSk
 uPM
 acW
 lrC
@@ -72887,11 +73738,11 @@ bQo
 bGM
 bEK
 bGd
-bFM
+jGF
 bFD
 asc
 bFn
-bFc
+jYC
 bES
 bEK
 bEA
@@ -73069,8 +73920,8 @@ bFd
 bEU
 bEK
 bEB
-bEt
-bEf
+pIb
+slG
 asc
 aqr
 aqv
@@ -73155,8 +74006,8 @@ arf
 bEK
 bEK
 bEK
-bEC
-vdV
+bEL
+bEK
 bEg
 asc
 baP
@@ -73238,13 +74089,13 @@ bEC
 bEC
 bDZ
 asc
-bFq
+sZn
 bEC
 bEC
 bEL
 bEC
 vdV
-bDZ
+bFq
 asc
 baP
 baP
@@ -73600,7 +74451,7 @@ baF
 jbY
 jbY
 ruU
-bax
+bJM
 bat
 uOL
 bil
@@ -73838,8 +74689,8 @@ bHH
 bHF
 aya
 bHz
+rIJ
 bFs
-soh
 soh
 soh
 soh
@@ -73925,7 +74776,7 @@ ayp
 ayg
 bGm
 axV
-bFs
+pdO
 bFs
 bFs
 bFs
@@ -74043,8 +74894,8 @@ rjR
 aVz
 axm
 azu
-bhP
-bxh
+vph
+htY
 aeT
 lrC
 lrC
@@ -74130,8 +74981,8 @@ aVz
 aVz
 bCS
 azu
-bhP
-aeV
+oKc
+tAf
 aeT
 lrC
 lrC
@@ -74305,7 +75156,7 @@ aqG
 xzJ
 azu
 bhP
-aeV
+tAf
 aeT
 lrC
 lrC
@@ -74392,7 +75243,7 @@ ayo
 ayo
 azu
 bhP
-aeV
+tAf
 aeT
 lrC
 lrC
@@ -74479,7 +75330,7 @@ aBu
 aBm
 azu
 bhP
-aeV
+tAf
 aeT
 lrC
 lrC
@@ -74566,7 +75417,7 @@ axB
 axz
 azu
 bhP
-aeV
+tAf
 aeT
 lrC
 lrC
@@ -74705,7 +75556,7 @@ bHP
 ayL
 ayD
 bGA
-bGA
+bGR
 bHD
 azw
 bHx
@@ -74740,7 +75591,7 @@ axB
 bCT
 azu
 bhP
-aeV
+tAf
 aeT
 lrC
 lrC
@@ -74792,9 +75643,9 @@ bGA
 bGA
 bGA
 bGA
-bGA
-bGA
 bHB
+bGA
+bGA
 bGA
 bGA
 bGA
@@ -74827,7 +75678,7 @@ axB
 bSV
 azu
 bhP
-bxh
+htY
 aeT
 lrC
 lrC
@@ -74879,9 +75730,9 @@ ayU
 bHL
 bHL
 ayx
-ayb
-ayb
 axX
+ayb
+mfb
 bHy
 bGA
 bGA
@@ -74912,9 +75763,9 @@ afQ
 bCZ
 axD
 bCU
-azu
-bhP
-bxg
+nsA
+oKc
+sfW
 aeT
 lrC
 lrC
@@ -74964,9 +75815,9 @@ blv
 bHQ
 ayV
 ayO
-ayE
+ayO
 ayl
-ayl
+xPZ
 aye
 bAD
 axR
@@ -74999,8 +75850,8 @@ afQ
 gfF
 aCa
 aBq
-azu
-bhP
+nsA
+oKc
 bxg
 aeT
 lrC
@@ -75084,8 +75935,8 @@ uwB
 aBI
 nsA
 nsA
-azu
-azu
+nsA
+nsA
 azu
 bhR
 aeV
@@ -75171,8 +76022,8 @@ bDg
 bDb
 nsA
 bif
-bhZ
-bhZ
+sKI
+sKI
 bhZ
 bhU
 aUU
@@ -75258,8 +76109,8 @@ uwB
 mOx
 azu
 bhP
-aeV
-aeV
+tAf
+tAf
 aeV
 aeV
 aeV
@@ -75345,8 +76196,8 @@ bDh
 dNR
 azu
 aQz
-aeW
-aeT
+hmI
+wXa
 aeT
 aeT
 aeT
@@ -75432,8 +76283,8 @@ azu
 azu
 azu
 big
-lhl
-vfB
+lhz
+nUB
 bLl
 qjH
 hXH
@@ -75595,7 +76446,7 @@ jnU
 bin
 bin
 agz
-fjS
+dQf
 ibs
 bin
 bin
@@ -75682,7 +76533,7 @@ azm
 thH
 thH
 thH
-thH
+jdc
 agt
 azm
 agt
@@ -75955,7 +76806,7 @@ kVN
 afd
 bhX
 aeH
-aeH
+iHo
 aeH
 beP
 aeH
@@ -76042,7 +76893,7 @@ kVN
 afd
 bij
 aUM
-aUM
+eLR
 aUM
 bhW
 beQ
@@ -76131,7 +76982,7 @@ afd
 afd
 afd
 afd
-bhX
+ddL
 aeH
 aeF
 lrC
@@ -76305,8 +77156,8 @@ ihW
 ihW
 kVN
 afd
-bhX
-aeH
+ddL
+iHo
 aeF
 lrC
 lrC
@@ -76392,8 +77243,8 @@ uHP
 ihW
 kVN
 afd
-bhX
-aeH
+ddL
+iHo
 aeF
 lrC
 lrC
@@ -76480,7 +77331,7 @@ ihW
 kVN
 afd
 bhX
-aeH
+iHo
 aeF
 lrC
 lrC
@@ -76567,7 +77418,7 @@ ihW
 kVN
 afd
 bhX
-aeH
+iHo
 aeF
 lrC
 lrC
@@ -76654,7 +77505,7 @@ ihW
 kVN
 afd
 bhX
-aeH
+iHo
 aeF
 lrC
 lrC
@@ -76709,9 +77560,9 @@ aky
 sTy
 gsM
 oyC
-dQf
 qIN
-gsM
+qIN
+dzM
 gsM
 gsM
 afj
@@ -76741,7 +77592,7 @@ ihW
 kVN
 afd
 aeZ
-beP
+ptp
 aeF
 lrC
 lrC
@@ -76828,7 +77679,7 @@ ihW
 kVN
 afd
 bhX
-bbs
+jfP
 aeF
 lrC
 lrC
@@ -76915,7 +77766,7 @@ ihW
 kVN
 afd
 bhX
-bbs
+jfP
 aeF
 lrC
 lrC
@@ -76970,7 +77821,7 @@ vvm
 dXY
 ble
 bkP
-ydq
+uiq
 eyj
 qUi
 qUi
@@ -77002,7 +77853,7 @@ ihW
 kVN
 afd
 bhX
-beO
+mxp
 aeF
 lrC
 lrC
@@ -77057,7 +77908,7 @@ bKw
 dXY
 blf
 bkQ
-ydq
+oXN
 fVv
 nRE
 akP
@@ -77088,7 +77939,7 @@ gwV
 ihW
 kVN
 afd
-bhX
+ddL
 bxm
 aeF
 lrC
@@ -77144,7 +77995,7 @@ vvm
 dXY
 akz
 aiW
-akz
+wzK
 mwA
 fpN
 ivz
@@ -77175,8 +78026,8 @@ kRV
 sIG
 kVN
 afd
-bhX
-aeH
+ddL
+iHo
 aeF
 lrC
 lrC
@@ -77231,7 +78082,7 @@ vvm
 dXY
 ydq
 kwQ
-akz
+rkQ
 hsd
 qUi
 akI
@@ -77262,8 +78113,8 @@ tHm
 sIG
 kVN
 afd
-aeZ
-aeH
+iDd
+iHo
 aeF
 lrC
 lrC
@@ -77312,7 +78163,7 @@ agb
 bjB
 aky
 oRl
-akV
+xKb
 akz
 bKw
 nVF
@@ -77349,8 +78200,8 @@ xaX
 sIG
 kVN
 afd
-bhX
-aeH
+ddL
+iHo
 aeF
 lrC
 lrC
@@ -77404,10 +78255,10 @@ aVD
 vvm
 dXY
 akz
-oEo
+hHX
 loq
 kYz
-wAk
+ree
 kYz
 ydq
 eTB
@@ -77436,8 +78287,8 @@ qID
 sIG
 kVN
 afd
-bhX
-aeH
+ddL
+iHo
 aeF
 lrC
 lrC
@@ -77491,7 +78342,7 @@ aky
 aky
 aVC
 akz
-hHX
+lDz
 lSQ
 ydq
 ydq
@@ -77523,8 +78374,8 @@ kKE
 sIG
 kVN
 afd
-bhX
-aeH
+ddL
+iHo
 aeF
 lrC
 lrC
@@ -77580,10 +78431,10 @@ iQX
 akz
 bkS
 lSQ
-akz
+qIt
 jxq
 qLN
-qLN
+uAD
 epi
 vMB
 rhf
@@ -77667,8 +78518,8 @@ akz
 akz
 bQu
 bQu
-akz
-fCa
+qIt
+kMT
 qtx
 qGZ
 qGZ
@@ -77754,7 +78605,7 @@ ydq
 kYz
 kYz
 akz
-akz
+tdv
 fCa
 vMB
 akJ
@@ -77784,7 +78635,7 @@ aad
 ihW
 kVN
 afd
-aeZ
+iDd
 aeH
 aeF
 lrC
@@ -77841,7 +78692,7 @@ nMo
 nMo
 bbx
 nMo
-nMo
+ntF
 eGQ
 arG
 akz
@@ -77871,7 +78722,7 @@ aae
 ihW
 kVN
 afd
-bhX
+ddL
 aeH
 aeF
 lrC
@@ -77958,7 +78809,7 @@ qDm
 qDm
 aeF
 aeF
-bhX
+ddL
 aeH
 aeF
 lrC
@@ -78045,7 +78896,7 @@ aeF
 aeF
 aeF
 aeF
-bhX
+ddL
 aeH
 aeF
 lrC
@@ -78132,7 +78983,7 @@ aeF
 aeF
 aeF
 aeF
-bhX
+ddL
 aeH
 aeF
 lrC
@@ -78219,7 +79070,7 @@ aeF
 aeF
 aeF
 aeF
-bhX
+ddL
 beO
 aeF
 lrC
@@ -78306,7 +79157,7 @@ aeF
 aeF
 aeF
 aeF
-aeZ
+iDd
 beP
 aeF
 lrC
@@ -78393,7 +79244,7 @@ aeF
 aeF
 aeF
 aeF
-bhX
+ddL
 aeH
 aeF
 lrC
@@ -78480,7 +79331,7 @@ aeF
 aeF
 aeF
 aeF
-bhX
+ddL
 aeH
 aeF
 aeF
@@ -78553,11 +79404,11 @@ aeP
 agO
 agO
 agO
-agO
-agO
-agO
-agO
-agO
+fLy
+fLy
+fLy
+fLy
+hsz
 bbr
 agO
 agO
@@ -78639,13 +79490,13 @@ bjl
 aeI
 beP
 aeH
+iHo
+iHo
+jrn
 aeH
 aeH
-lul
-aeH
-aeH
-aeH
-aeH
+iHo
+iHo
 lul
 beQ
 beP
@@ -90295,7 +91146,7 @@ air
 air
 bmo
 ahy
-ahy
+nAH
 byh
 ahx
 byi
@@ -91691,7 +92542,7 @@ ahy
 ahy
 ahy
 ahy
-ahy
+vRX
 ahy
 ahy
 ahy
@@ -91773,9 +92624,9 @@ boG
 anj
 boG
 boh
-bmu
-amz
-bmu
+lXy
+fie
+dYA
 bmu
 bmu
 bmu
@@ -92917,7 +93768,7 @@ bnl
 asB
 ahx
 bmo
-ahy
+nAH
 ahw
 lrC
 lrC
@@ -93759,7 +94610,7 @@ aEL
 lrC
 lrC
 aiA
-byw
+mad
 bog
 aiC
 atB
@@ -94107,7 +94958,7 @@ lrC
 lrC
 lrC
 aiA
-air
+mxX
 bog
 aiC
 atB
@@ -94543,7 +95394,7 @@ mew
 mew
 air
 air
-air
+mad
 aiC
 atD
 ats
@@ -94883,7 +95734,7 @@ lrC
 lrC
 lrC
 aiA
-air
+mad
 bog
 anl
 nHl
@@ -95067,7 +95918,7 @@ pUq
 oZw
 anK
 anE
-juM
+gDB
 juM
 jyw
 wTK
@@ -95154,7 +96005,7 @@ jfH
 lUr
 anK
 anE
-bFZ
+jcr
 bFZ
 anE
 bdt
@@ -95672,11 +96523,11 @@ anl
 jbL
 vRJ
 vRJ
-vRJ
+fsS
 vRJ
 anK
 anE
-dlb
+pXL
 dlb
 anE
 bdu
@@ -95763,7 +96614,7 @@ fZW
 fZW
 gLv
 fMr
-rwh
+nTc
 rwh
 anE
 anU
@@ -96035,7 +96886,7 @@ bdt
 bdo
 anl
 abU
-bop
+vDH
 asX
 alm
 alm
@@ -96219,7 +97070,7 @@ alv
 alv
 alv
 alv
-alF
+hFG
 hAH
 alv
 alv
@@ -96306,7 +97157,7 @@ nEF
 nEF
 nEF
 alv
-alF
+ohC
 alv
 oqn
 dAD
@@ -96557,7 +97408,7 @@ ehu
 anE
 vqo
 ati
-bop
+vDH
 asX
 alm
 amm
@@ -96735,7 +97586,7 @@ atb
 asX
 dFo
 pTi
-alF
+rdZ
 alF
 alF
 alF
@@ -96822,7 +97673,7 @@ bcN
 bcD
 bcz
 bcw
-rHJ
+bIf
 bHW
 bHW
 aGe
@@ -96909,7 +97760,7 @@ vto
 cZy
 alT
 amu
-alF
+rdZ
 alF
 alF
 alF
@@ -96926,7 +97777,7 @@ alH
 alw
 alm
 blS
-ahn
+qaZ
 ahk
 lrC
 lrC
@@ -97350,7 +98201,7 @@ nqc
 nqc
 etq
 alv
-bnr
+rhz
 alv
 oVp
 nIJ
@@ -97437,7 +98288,7 @@ alv
 alv
 alv
 alv
-bnr
+iOd
 alv
 alv
 alv
@@ -98016,7 +98867,7 @@ lrC
 lrC
 aiQ
 aiX
-bpT
+jTE
 anq
 aBz
 wMK
@@ -98277,7 +99128,7 @@ lrC
 lrC
 aiQ
 aiX
-bpT
+jTE
 anq
 fRT
 bTp
@@ -98288,13 +99139,13 @@ plN
 bpZ
 qpQ
 anF
-anF
-wnh
+cvt
+uGl
 xPz
 bpf
 boY
 boU
-qtL
+sVw
 ans
 yhi
 vto
@@ -98634,8 +99485,8 @@ aXD
 aXu
 aXl
 aXi
-ant
-ant
+iHa
+iHa
 bIv
 rKR
 bdE
@@ -98721,12 +99572,12 @@ oBP
 aoJ
 ieZ
 nlo
-ant
-ant
+iHa
+iHa
 bIw
 anF
 mJU
-ant
+iHa
 aWM
 aWG
 aWy
@@ -98808,12 +99659,12 @@ oBP
 sgO
 aod
 wEF
-ant
-ant
+iHa
+iHa
 aaq
 anr
 soF
-ant
+iHa
 aWN
 aWH
 aWz
@@ -98896,11 +99747,11 @@ aoH
 bTp
 lTF
 aXe
-ant
+iHa
 oBM
 pFR
 dJl
-ant
+iHa
 aWO
 aWI
 aWA
@@ -98979,7 +99830,7 @@ fRT
 wMK
 pxr
 aoA
-aoH
+dWr
 anr
 qtL
 aXf
@@ -99155,7 +100006,7 @@ pxr
 aoA
 aXw
 aXo
-anH
+oUU
 ant
 ant
 ant
@@ -99580,8 +100431,8 @@ aop
 aiX
 byN
 byN
-aiX
-aop
+rjB
+wpN
 aiX
 aXE
 aYe
@@ -102217,8 +103068,8 @@ bod
 asT
 aOW
 aPz
-aPe
-bIg
+uXw
+mlF
 bIj
 bIg
 bIg
@@ -102804,8 +103655,8 @@ lrC
 aiQ
 aiX
 bpT
-aiX
-aiX
+rjB
+rjB
 aSs
 aSs
 aSs
@@ -102892,7 +103743,7 @@ aiQ
 aiX
 bpT
 aiX
-aiX
+rjB
 aSs
 fMR
 fMR
@@ -105504,7 +106355,7 @@ aiG
 aiG
 aiG
 aiu
-boE
+scL
 aaS
 azO
 azJ
@@ -105591,7 +106442,7 @@ lrC
 lrC
 aiG
 aoz
-boE
+scL
 aaS
 azP
 azK
@@ -106642,9 +107493,9 @@ boJ
 ajh
 aiZ
 boJ
-boJ
-boJ
-boJ
+gJY
+gJY
+gJY
 boJ
 boJ
 boL
@@ -107358,7 +108209,7 @@ ahM
 ahZ
 ahZ
 ahM
-ahJ
+nSr
 bmP
 ahI
 lrC
@@ -107532,7 +108383,7 @@ ahM
 ahM
 ahM
 ahM
-ahJ
+nSr
 ahJ
 ahI
 lrC
@@ -108038,8 +108889,8 @@ aiu
 aiu
 aiu
 aiu
-aiu
-aiu
+sOR
+sOR
 aiu
 ahJ
 ahJ
@@ -109300,7 +110151,7 @@ kPX
 kPX
 kPX
 kPX
-kPX
+tjV
 ajS
 "}
 (237,1,3) = {"
@@ -113258,8 +114109,8 @@ kEo
 wEi
 gHA
 weR
-aZL
 ahV
+edh
 noE
 bul
 bgk
@@ -115369,9 +116220,9 @@ aSS
 dhB
 dhB
 dhB
-dhB
-aSS
-dhB
+rHJ
+mmr
+rHJ
 tZu
 lrC
 lrC
@@ -115457,8 +116308,8 @@ dhB
 dhB
 dhB
 dhB
-dhB
-dhB
+rHJ
+rHJ
 tZu
 lrC
 lrC
@@ -115545,7 +116396,7 @@ brc
 brc
 brc
 bqU
-dhB
+rHJ
 tZu
 lrC
 lrC
@@ -116199,7 +117050,7 @@ lrC
 lrC
 lrC
 bSc
-gfS
+etB
 aBB
 gfS
 gfS
@@ -116286,7 +117137,7 @@ lrC
 lrC
 lrC
 bSc
-gfS
+etB
 bwk
 ewM
 ewM
@@ -117591,11 +118442,11 @@ lrC
 lrC
 lrC
 qjV
-bEV
+kve
 bwB
 bEV
 avw
-bEV
+oLN
 tGd
 heQ
 lfJ
@@ -117631,7 +118482,7 @@ atG
 atF
 pJM
 avc
-pJM
+pof
 bqP
 pJM
 oOF
@@ -118548,7 +119399,7 @@ aEL
 lrC
 lrC
 qjV
-bEV
+oLN
 bwB
 adT
 xbr
@@ -120210,7 +121061,7 @@ add
 add
 add
 add
-add
+nDY
 ade
 ade
 ade
@@ -120296,8 +121147,8 @@ bEV
 bEV
 bEV
 bEV
-bEV
-bEV
+oLN
+oLN
 atN
 auI
 atZ
@@ -121817,7 +122668,7 @@ ajE
 ajE
 ajD
 bqP
-pJM
+dwR
 oOF
 lrC
 lrC
@@ -122548,8 +123399,8 @@ bEV
 bEV
 bEV
 bEV
-bEV
-bEV
+oLN
+oLN
 apM
 apE
 apA
@@ -122935,7 +123786,7 @@ brS
 brJ
 aRj
 bqP
-byU
+riq
 vct
 apq
 apl
@@ -123979,7 +124830,7 @@ aQQ
 aRk
 aRj
 bqP
-byT
+bTv
 vct
 apq
 apm
@@ -124066,7 +124917,7 @@ aRk
 aRk
 aRj
 bqP
-byU
+xhp
 vct
 apq
 apk
@@ -126298,7 +127149,7 @@ bzK
 buq
 bwE
 buq
-bwq
+fJH
 adg
 aBf
 aAP
@@ -126385,7 +127236,7 @@ xmN
 xmN
 xmN
 qeo
-bwr
+cwJ
 adg
 aBe
 aAP
@@ -127023,7 +127874,7 @@ aLk
 aLc
 aKV
 brl
-jJD
+qRW
 kfc
 lrC
 lrC
@@ -129014,13 +129865,13 @@ jJD
 jJD
 bzs
 aSV
-jJD
-jJD
-jJD
-jJD
+ayE
+egf
+rFG
+uxh
 jJD
 aSV
-jJD
+uxh
 bzl
 bzk
 bzn

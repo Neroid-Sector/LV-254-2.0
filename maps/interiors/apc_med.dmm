@@ -94,6 +94,7 @@
 	icon_state = "triagedecaltop";
 	pixel_y = -2
 	},
+/obj/structure/bed/roller/heavy,
 /turf/open/shuttle/vehicle/dark_sterile_green_7,
 /area/interior/vehicle/apc/med)
 "n" = (
@@ -212,11 +213,11 @@
 /obj/structure/machinery/iv_drip{
 	anchored = 1
 	},
-/obj/structure/bed/roller,
 /obj/effect/landmark/interior/spawn/interior_viewport{
 	pixel_x = -6;
 	pixel_y = 23
 	},
+/obj/structure/bed/portable_surgery,
 /turf/open/shuttle/vehicle/dark_sterile_green_12,
 /area/interior/vehicle/apc/med)
 "C" = (
