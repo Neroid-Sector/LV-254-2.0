@@ -17,10 +17,10 @@
 	icon_state = "m56"
 	item_state = "m56"
 	item_icons = list(
-		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/machineguns.dmi',
-		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/machineguns.dmi',
-		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_lefthand.dmi',
-		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/machineguns_righthand.dmi'
+	WEAR_BACK = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/smartguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/smartguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/smartguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/smartguns_righthand.dmi'
 	)
 	mouse_pointer = 'icons/effects/mouse_pointer/smartgun_mouse.dmi'
 
@@ -44,6 +44,11 @@
 	auto_retrieval_slot = WEAR_J_STORE
 	start_semiauto = FALSE
 	start_automatic = TRUE
+//Onmob is huge there
+	worn_x_dimension = 64
+	inhand_x_dimension = 64
+	hud_offset = -8
+	pixel_x = -8
 
 	ammo = /datum/ammo/bullet/smartgun
 	actions_types = list(
@@ -686,9 +691,11 @@
 	autoshot_image.pixel_y = 0
 
 /obj/item/weapon/gun/smartgun/proc/set_autoshot_image(mob/living/target)
+	visible_message(SPAN_WARNING("[src] targets [target]"))
 	autoshot_image.loc = target
 	autoshot_image.pixel_x = -target.pixel_x // -16 is counted by -(-16)
 	autoshot_image.pixel_y = -target.pixel_y
+	new /obj/effect/warning/explosive/target_lock(target.loc, 0.5 SECONDS)
 
 /obj/item/weapon/gun/smartgun/process()
 	if(!auto_aim && !motion_detector)
@@ -869,6 +876,26 @@
 	SIGNAL_HANDLER
 	linked_human = null
 
+//TERMINATOR SMARTGUN
+/obj/item/weapon/gun/smartgun/upp
+	name = "\improper UPP Gattling smartgun"
+	desc = "The actual firearm in the 4-piece UPP Gattling Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/machineguns.dmi'
+	icon_state = "gatling"
+	fire_sound = 'sound/weapons/gun_minigun.ogg'
+	actions_types = list(
+		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
+		/datum/action/item_action/smartgun/toggle_ammo_type,
+		/datum/action/item_action/smartgun/toggle_auto_aim,
+		/datum/action/item_action/smartgun/toggle_lethal_mode,
+		/datum/action/item_action/smartgun/toggle_motion_detector,
+		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+		/datum/action/item_action/smartgun/toggle_armbrace,
+	)
+/obj/item/weapon/gun/smartgun/upp/Initialize(mapload, ...)
+	. = ..()
+	MD.iff_signal = FACTION_UPP
+
 /obj/item/weapon/gun/smartgun/dirty
 	name = "\improper M56D 'Dirty' smartgun"
 	desc = "The actual firearm in the 4-piece M56D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
@@ -890,7 +917,7 @@
 /obj/item/weapon/gun/smartgun/dirty/elite
 	name = "\improper M56T 'Terminator' smartgun"
 	desc = "The actual firearm in the 4-piece M56T Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
-
+	fire_sound = "gun_smartgun"
 	actions_types = list(
 		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
 		/datum/action/item_action/smartgun/toggle_ammo_type,
@@ -972,8 +999,8 @@
 	ammo_secondary_alt = /datum/ammo/bullet/smartgun/holo_target/ap/alt
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/TWE/machineguns.dmi'
-	icon_state = "magsg"
-	item_state = "magsg"
+	icon_state = "la56"
+	item_state = "la56"
 	starting_attachment_types = list(/obj/item/attachable/l56a2_smartgun)
 
 /obj/item/weapon/gun/smartgun/rmc/Initialize(mapload, ...)
