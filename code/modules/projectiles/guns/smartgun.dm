@@ -170,7 +170,7 @@
 		recoil = RECOIL_AMOUNT_TIER_3
 		damage_mult = BASE_BULLET_DAMAGE_MULT
 	if(auto_aim)
-		aim_slowdown = SLOWDOWN_ADS_SUPERWEAPON * 2
+		aim_slowdown = SLOWDOWN_ADS_SUPERWEAPON
 	else
 		aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	if(!iff_enabled || frontline_enabled)
@@ -451,15 +451,15 @@
 	armbrace = !armbrace
 	if(armbrace)
 		flags_item |= NODROP|FORCEDROP_CONDITIONAL
-		playsound(loc,'sound/weapons/smartgun_move.mp3', 25, 1)
+		pick(playsound(src.loc, 'sound/weapons/smartgun_move.mp3', 55, 1), playsound(src.loc, 'sound/weapons/smartgun_move2.mp3', 25, 1))
 	else
 		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
-		playsound(loc,'sound/weapons/smartgun_move2.mp3', 25, 1)
+		pick(playsound(src.loc, 'sound/weapons/smartgun_move.mp3', 55, 1), playsound(src.loc, 'sound/weapons/smartgun_move2.mp3', 25, 1))
 
 /obj/item/weapon/gun/smartgun/proc/force_off_armbrace(mob/user)
 	if(armbrace)
 		to_chat(user, "[icon2html(src, usr)] You <B>disengage</b> \the [src]'s armbrace.")
-		playsound(loc,'sound/weapons/smartgun_move2.mp3',, 25, 1)
+		pick(playsound(src.loc, 'sound/weapons/smartgun_move.mp3', 55, 1), playsound(src.loc, 'sound/weapons/smartgun_move2.mp3', 25, 1))
 		armbrace = FALSE
 		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
 		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in actions
@@ -468,7 +468,7 @@
 /obj/item/weapon/gun/smartgun/proc/force_on_armbrace(mob/user)
 	if(!armbrace)
 		to_chat(user, "[icon2html(src, usr)] You <B>engage</b> \the [src]'s armbrace.")
-		playsound(loc,'sound/weapons/smartgun_move.mp3',, 25, 1)
+		pick(playsound(src.loc, 'sound/weapons/smartgun_move.mp3', 55, 1), playsound(src.loc, 'sound/weapons/smartgun_move2.mp3', 25, 1))
 		armbrace = TRUE
 		flags_item |= NODROP|FORCEDROP_CONDITIONAL
 		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in actions
@@ -517,7 +517,7 @@
 			return FALSE
 		var/mob/living/carbon/human/H = user
 		if(!skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_SMARTGUN) && !skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL))
-			balloon_alert(user, "insufficient skills")
+			balloon_alert(user, "incorrect posture!")
 			return FALSE
 		if(requires_harness)
 			if(!H.wear_suit || !(H.wear_suit.flags_inventory & SMARTGUN_HARNESS))
@@ -527,6 +527,11 @@
 			to_chat(H, SPAN_WARNING("You can't fire \the [src] with the feed cover open! (alt-click to close)"))
 			balloon_alert(user, "cannot fire; feed cover open")
 			return FALSE
+		if(!armbrace)
+			to_chat(H, SPAN_WARNING("You can't aim \the [src] with the articulation arm disengaged!"))
+			balloon_alert(user, "error!, no connection!")
+			return FALSE
+
 
 /obj/item/weapon/gun/smartgun/unique_action(mob/user)
 	if(isobserver(usr) || isxeno(usr))
@@ -624,7 +629,7 @@
 /obj/item/weapon/gun/smartgun/proc/toggle_recoil_compensation(mob/user)
 	to_chat(user, "[icon2html(src, usr)] You [recoil_compensation? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s recoil compensation.")
 	balloon_alert(user, "recoil compensation [recoil_compensation ? "disabled" : "enabled"]")
-	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	pick(playsound(src.loc, 'sound/weapons/smartgun_move.mp3', 55, 1), playsound(src.loc, 'sound/weapons/smartgun_move2.mp3', 25, 1))
 	recoil_compensation = !recoil_compensation
 	if(recoil_compensation)
 		drain[DRAIN_RECOIL_COMP] = 50
@@ -644,15 +649,20 @@
 	recalculate_attachment_bonuses()
 
 /obj/item/weapon/gun/smartgun/proc/toggle_auto_aim(mob/user)
-	to_chat(user, "[icon2html(src, user)] You [auto_aim ? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s aim assist.")
-	balloon_alert(user, "aim assist [auto_aim ? "disabled" : "enabled"]")
-	playsound(loc,'sound/machines/click.ogg', 25, 1)
-	auto_aim = !auto_aim
-
-	if(auto_aim)
-		enable_auto_aim(user)
+	if(!armbrace)
+		to_chat(user, "[icon2html(src, user)] Error! [src]'s articulation arm is not engaged/connected.")
+		balloon_alert(user, "Error!, No connection!")
+		return
 	else
-		disable_auto_aim(user)
+		to_chat(user, "[icon2html(src, user)] You [auto_aim ? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s aim assist.")
+		balloon_alert(user, "aim assist [auto_aim ? "disabled" : "enabled"]")
+		playsound(loc, 'sound/machines/twobeep.ogg', 50, 1)
+		auto_aim = !auto_aim
+
+		if(auto_aim)
+			enable_auto_aim(user)
+		else
+			disable_auto_aim(user)
 
 /obj/item/weapon/gun/smartgun/proc/enable_auto_aim(mob/user)
 	drain[DRAIN_AUTO_AIM] = 200
@@ -675,7 +685,7 @@
 		to_chat(user, SPAN_NOTICE("You start adjusting your stance to allow [src] to guide your aim."))
 		if(!do_after(user, 15, INTERRUPT_ALL, BUSY_ICON_HOSTILE, src, INTERRUPT_DIFF_LOC))
 			return
-		playsound(user,'sound/weapons/smartgun_move2.mp3', 55, 1)
+		pick(playsound(src.loc, 'sound/weapons/smartgun_move.mp3', 55, 1), playsound(src.loc, 'sound/weapons/smartgun_move2.mp3', 55, 1))
 
 	. = ..()
 	user.client.images |= autoshot_image
@@ -690,12 +700,15 @@
 	autoshot_image.pixel_x = 0
 	autoshot_image.pixel_y = 0
 
-/obj/item/weapon/gun/smartgun/proc/set_autoshot_image(mob/living/target)
+/obj/item/weapon/gun/smartgun/proc/set_autoshot_image(mob/living/target, user)
 	visible_message(SPAN_WARNING("[src] targets [target]"))
 	autoshot_image.loc = target
 	autoshot_image.pixel_x = -target.pixel_x // -16 is counted by -(-16)
 	autoshot_image.pixel_y = -target.pixel_y
 	new /obj/effect/warning/explosive/target_lock(target.loc, 0.5 SECONDS)
+	if(prob(5))
+		pick(playsound(src.loc, 'sound/weapons/smartgun_move.mp3', 100, 1), playsound(src.loc, 'sound/weapons/smartgun_move2.mp3', 100, 1))
+		to_chat(user, "[icon2html(src, user)] The [src]'s target tracking adjusts your aim.")
 
 /obj/item/weapon/gun/smartgun/process()
 	if(!auto_aim && !motion_detector)
