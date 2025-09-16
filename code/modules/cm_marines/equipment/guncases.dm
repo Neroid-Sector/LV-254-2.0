@@ -184,7 +184,7 @@
 	can_hold = list(/obj/item/weapon/gun/flamer, /obj/item/ammo_magazine/flamer_tank, /obj/item/attachable/attached_gun/extinguisher)
 
 /obj/item/storage/box/guncase/flamer/fill_preset_inventory()
-	new /obj/item/weapon/gun/flamer(src)
+	new /obj/item/weapon/gun/flamer/auto(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/attachable/attached_gun/extinguisher(src)

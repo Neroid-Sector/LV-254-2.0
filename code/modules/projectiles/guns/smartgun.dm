@@ -8,6 +8,8 @@
 #define DRAIN_AUTO_AIM "autoaim"
 #define DRAIN_RECOIL_COMP "recoil"
 #define DRAIN_MD "md"
+#define LYING_DOWN_SG_ROF_DEBUFF 0.5
+#define KNOCKDOWN_SG_FAILSOUND_COOLDOWN 0.5
 /obj/item/weapon/gun/smartgun
 	name = "\improper M56B smartgun"
 	desc = "The actual firearm in the 4-piece M56B Smartgun System. Essentially a heavy, mobile machinegun.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
@@ -50,6 +52,7 @@
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		/datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+		/datum/action/item_action/smartgun/toggle_armbrace,
 	)
 	attachable_allowed = list(
 		/obj/item/attachable/smartbarrel,
@@ -87,7 +90,7 @@
 	var/frontline_enabled = FALSE //Begin with Frontline mode off.
 	/// Whether we are using AP ammo currently
 	var/secondary_toggled = FALSE
-	var/recoil_compensation = 0
+	var/recoil_compensation = TRUE
 	var/accuracy_improvement = 0
 	var/auto_aim = 0
 	var/motion_detector = 0
@@ -99,6 +102,8 @@
 	var/cover_open = FALSE
 	var/image/autoshot_image
 	var/datum/weakref/last_autoshooter
+	var/armbrace = FALSE
+	COOLDOWN_DECLARE(knockdown_halt_sound_cooldown)
 
 /obj/item/weapon/gun/smartgun/apply_bullet_effects(obj/projectile/projectile_to_fire, mob/user, i = 1, reflex = 0)
 	. = ..()
@@ -185,6 +190,11 @@
 	. += message
 	. += "Frontline mode is [frontline_enabled ?  "<B>on</b>" : "<B>off</b>"]."
 	. += "The restriction system is [iff_enabled ? "<B>on</b>" : "<B>off</b>"]."
+
+	if(armbrace)
+		. += SPAN_HELPFUL("The articulation arm is locked to your side, allowing it to be fired while lying down.")
+	else
+		. += SPAN_ORANGE("The articulation arm is not locked to your side, it can be knocked out of your hands.")
 
 	if(battery && get_dist(user, src) <= 1)
 		. += "A small gauge on [battery] reads: Power: [battery.power_cell.charge] / [battery.power_cell.maxcharge]."
@@ -402,7 +412,78 @@
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
+/datum/action/item_action/smartgun/toggle_armbrace/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Servo arm"
+	action_icon_state = "armbrace"
+	button.icon_state = "template"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/smartgun/toggle_armbrace/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/smartgun/G = holder_item
+	G.toggle_armbrace(usr)
+	if(G.armbrace)
+		action_icon_state = "armbrace_on"
+	else
+		action_icon_state = "armbrace"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
 //more general procs
+
+/obj/item/weapon/gun/smartgun/proc/toggle_armbrace(mob/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human = user
+	if(!human.wear_suit || !(human.wear_suit.flags_inventory & SMARTGUN_HARNESS))
+		to_chat(user, "[icon2html(src, usr)] You can't actuate the servo arm without a harness.")
+		return
+
+	to_chat(user, "[icon2html(src, usr)] You [armbrace ? "<B>deactuate</b>" : "<B>actuate</b>"] \the [src]'s servo arm.")
+	armbrace = !armbrace
+	if(armbrace)
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
+		playsound(loc,'sound/weapons/smartgun_move.mp3', 25, 1)
+	else
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
+		playsound(loc,'sound/weapons/smartgun_move2.mp3', 25, 1)
+
+/obj/item/weapon/gun/smartgun/proc/force_off_armbrace(mob/user)
+	if(armbrace)
+		to_chat(user, "[icon2html(src, usr)] You <B>deactuate</b> \the [src]'s armbrace.")
+		playsound(loc,'sound/weapons/smartgun_move2.mp3',, 25, 1)
+		armbrace = FALSE
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
+		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in actions
+		armbrace_action.button.icon_state = "template"
+
+/obj/item/weapon/gun/smartgun/proc/force_on_armbrace(mob/user)
+	if(!armbrace)
+		to_chat(user, "[icon2html(src, usr)] You <B>actuate</b> \the [src]'s armbrace.")
+		playsound(loc,'sound/weapons/smartgun_move.mp3',, 25, 1)
+		armbrace = TRUE
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
+		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in actions
+		armbrace_action.button.icon_state = "template_on"
+
+/obj/item/weapon/gun/smartgun/unequipped(mob/user, slot)
+	. = ..()
+	if(!gc_destroyed)
+		INVOKE_NEXT_TICK(src, TYPE_PROC_REF(/obj/item/weapon/gun/smartgun, emergency_snap_back), user) //yeah
+
+/obj/item/weapon/gun/smartgun/proc/emergency_snap_back(mob/user)
+	if(ishuman(user))
+		if(!ishuman(loc))
+			var/mob/living/carbon/human/armbrace_human = user
+			if(isitem(armbrace_human.get_item_by_slot(auto_retrieval_slot)))
+				if(istype(armbrace_human.wear_suit, /obj/item/clothing/suit/storage/marine/smartgunner))
+					force_on_armbrace()
+					armbrace_human.put_in_hands(src, drop_on_fail = TRUE)
+					return
+		force_off_armbrace(user)
 
 /obj/item/weapon/gun/smartgun/proc/toggle_frontline_mode(mob/user, silent)
 	to_chat(user, "[icon2html(src, user)] You [frontline_enabled? "<B>disable</b>" : "<B>enable</b>"] [src]'s frontline mode. You will now [frontline_enabled ? "be able to shoot through friendlies" : "deal increased damage but be unable to shoot through friendlies"].")
@@ -484,6 +565,22 @@
 
 /obj/item/weapon/gun/smartgun/Fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield)
 	target = get_target(user, target)
+
+	if(user.IsKnockDown())
+		if(COOLDOWN_FINISHED(src, knockdown_halt_sound_cooldown))
+			COOLDOWN_START(src, knockdown_halt_sound_cooldown, KNOCKDOWN_SG_FAILSOUND_COOLDOWN)
+			if(flags_item & WIELDED)
+				playsound(loc,"smartgun_knockdown", 25, 0)
+				if((locate(/datum/effects/crit) in user.effects_list))
+					unwield(user)
+			return
+	if(user.body_position == LYING_DOWN)
+		set_gun_config_values()
+		modify_fire_delay(LYING_DOWN_SG_ROF_DEBUFF)
+		scatter += 1
+		fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_5
+	else
+		set_gun_config_values()
 
 	if(!requires_battery)
 		return ..()
@@ -573,7 +670,7 @@
 		to_chat(user, SPAN_NOTICE("You start adjusting your stance to allow [src] to guide your aim."))
 		if(!do_after(user, 15, INTERRUPT_ALL, BUSY_ICON_HOSTILE, src, INTERRUPT_DIFF_LOC))
 			return
-		playsound(user,'sound/items/m56dauto_rotate.ogg', 55, 1)
+		playsound(user,'sound/weapons/smartgun_move2.mp3', 55, 1)
 
 	. = ..()
 	user.client.images |= autoshot_image
@@ -661,7 +758,7 @@
 /obj/item/weapon/gun/smartgun/proc/toggle_motion_detector(mob/user)
 	to_chat(user, "[icon2html(src, usr)] You [motion_detector? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s motion detector.")
 	balloon_alert(user, "motion detector [motion_detector ? "disabled" : "enabled"]")
-	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	playsound(loc,'sound/items/detector_turn_on.ogg', 25, 1)
 	motion_detector = !motion_detector
 	var/datum/action/item_action/smartgun/toggle_motion_detector/TMD = locate(/datum/action/item_action/smartgun/toggle_motion_detector) in actions
 	TMD.update_icon()
@@ -801,6 +898,7 @@
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		/datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+		/datum/action/item_action/smartgun/toggle_armbrace,
 	)
 
 /obj/item/weapon/gun/smartgun/dirty/elite/Initialize(mapload, ...)
@@ -894,6 +992,7 @@
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		/datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+		/datum/action/item_action/smartgun/toggle_armbrace,
 	)
 
 /obj/item/weapon/gun/smartgun/pve/Initialize(mapload, ...)
@@ -903,3 +1002,6 @@
 /obj/item/weapon/gun/smartgun/pve/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_3
+
+#undef LYING_DOWN_SG_ROF_DEBUFF
+#undef KNOCKDOWN_SG_FAILSOUND_COOLDOWN
