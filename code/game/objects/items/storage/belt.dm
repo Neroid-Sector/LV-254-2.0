@@ -724,6 +724,22 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 
+/obj/item/storage/belt/marine/smartgunner/xm_limited
+	name = "\improper M280 pattern plasmagunner belt"
+	desc = "Designed to carry Xm99a Plasma gun magazines"
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+	)
+
+/obj/item/storage/belt/marine/smartgunner/xm_limited/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/xm99a(src)
+	new /obj/item/ammo_magazine/rifle/xm99a(src)
+
 /obj/item/storage/belt/marine/upp
 	name = "\improper Type 41 pattern load rig"
 	desc = "The Type 41 load rig is the standard-issue load-bearing equipment of the UPP military. The primary function of this belt is to provide easy access to mags for the Type 71 during operations. Despite being designed for the Type 71 weapon system, the pouches are modular enough to fit other types of ammo and equipment."
@@ -2190,28 +2206,74 @@
 /obj/item/storage/belt/gun/smartgunner/teamwork
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed for USCM smartgunners to be light weight yet carry some ammunition, weapon batteries, and a sidearm."
-	icon_state = "sgbelt"
+	icon_state = "hsgbelt_ammo_special"
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = 5,
 			"icon_y" = -2))
 	can_hold = list(
-		/obj/item/device/flashlight/flare,
 		/obj/item/weapon/gun/flare,
 		/obj/item/weapon/gun/pistol,
-		/obj/item/weapon/gun/revolver,
-		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/rifle/xm99a,
-		/obj/item/ammo_magazine/flamer_tank,
-		/obj/item/smartgun_battery,
+		/obj/item/ammo_magazine/smartgun,
 	)
-	storage_slots = 3
+	storage_slots = 5
 	flags_atom = FPRINT // has gamemode skin
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/flamer_tank,
-	)
+
+	var/obj/item/weapon/gun/current_gun
+	var/obj/item/ammo_magazine/smartgun/drum
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/Destroy()
+	drum = null
+	. = ..()
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/on_stored_atom_del(atom/movable/AM)
+	..()
+	if(AM == drum)
+		drum = null
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/can_be_inserted(obj/item/I, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(!.)
+		return
+	if(drum && istype(I, /obj/item/ammo_magazine/smartgun))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] already holds a drum."))
+		return FALSE
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/_item_insertion(obj/item/I, prevent_warning = 0, mob/user)
+	if(istype(I,/obj/item/ammo_magazine/smartgun))
+		drum = I
+	..()
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/_item_removal(obj/item/I, atom/new_location)
+	if(I == drum)
+		drum = null
+	..()
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/update_icon()
+	overlays.Cut()
+	if(!length(contents))
+		return
+	if(content_watchers) //Opened flaps.
+		if(drum)
+			overlays += "+hsgbelt_ammo_special_ammo_flap"
+	else
+		if(drum)
+			overlays += "+hsgbelt_ammo_special_ammo"
+
+/obj/item/storage/belt/gun/smartgunner/teamwork/attack_hand(mob/user, mods) //Mostly copied from gunbelt.
+	if(current_gun && ishuman(user) && loc == user)
+		if(mods && mods["alt"] && length(contents) > 1) //Withdraw the most recently inserted nongun item if possible.
+			var/obj/item/I = contents[length(contents)]
+			if(isgun(I))
+				I = contents[length(contents) - 1]
+			I.attack_hand(user)
+		else
+			current_gun.attack_hand(user)
+		return
+	..()
+
 
 /obj/item/storage/belt/gun/smartgunner/teamwork/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())

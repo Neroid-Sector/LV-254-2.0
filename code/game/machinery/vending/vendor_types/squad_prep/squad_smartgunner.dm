@@ -79,7 +79,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_smartgun, list(
 
 		list("BELT", 0, null, null, null),
 		list("M802 Smartgunner Sidearm Belt", 0, /obj/item/storage/belt/gun/smartgunner/teamwork/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
-		list("M802 Plasmagunner Sidearm Belt", 0, /obj/item/storage/belt/gun/smartgunner/teamwork/xm99/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
+		list("M802 Plasmagunner Belt", 0, /obj/item/storage/belt/marine/smartgunner/xm_limited, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
 
 		list("BACKPACK", 0, null, null, null),
 		list("IMP Ammo Bearer Pack", 0, /obj/item/storage/backpack/marine/ammo_rack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
