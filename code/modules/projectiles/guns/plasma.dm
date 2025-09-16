@@ -306,10 +306,10 @@
 		return
 	var/mob/living/carbon/human/human = user
 	if(!human.wear_suit || !(human.wear_suit.flags_inventory & SMARTGUN_HARNESS))
-		to_chat(user, "[icon2html(src, usr)] You can't actuate the servo arm without a harness.")
+		to_chat(user, "[icon2html(src, usr)] You can't engage the servo arm without a harness.")
 		return
 
-	to_chat(user, "[icon2html(src, usr)] You [armbrace ? "<B>deactuate</b>" : "<B>actuate</b>"] \the [src]'s servo arm.")
+	to_chat(user, "[icon2html(src, usr)] You [armbrace ? "<B>disengage</b>" : "<B>engage</b>"] \the [src]'s servo arm.")
 	armbrace = !armbrace
 	if(armbrace)
 		flags_item |= NODROP|FORCEDROP_CONDITIONAL
@@ -320,7 +320,7 @@
 
 /obj/item/weapon/gun/plasma/xm99a/proc/force_off_armbrace(mob/user)
 	if(armbrace)
-		to_chat(user, "[icon2html(src, usr)] You <B>deactuate</b> \the [src]'s armbrace.")
+		to_chat(user, "[icon2html(src, usr)] You <B>disengage</b> \the [src]'s armbrace.")
 		playsound(loc,'sound/weapons/smartgun_move2.mp3',, 25, 1)
 		armbrace = FALSE
 		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
@@ -329,7 +329,7 @@
 
 /obj/item/weapon/gun/plasma/xm99a/proc/force_on_armbrace(mob/user)
 	if(!armbrace)
-		to_chat(user, "[icon2html(src, usr)] You <B>actuate</b> \the [src]'s armbrace.")
+		to_chat(user, "[icon2html(src, usr)] You <B>engage</b> \the [src]'s armbrace.")
 		playsound(loc,'sound/weapons/smartgun_move.mp3',, 25, 1)
 		armbrace = TRUE
 		flags_item |= NODROP|FORCEDROP_CONDITIONAL

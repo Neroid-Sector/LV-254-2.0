@@ -31,7 +31,7 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_9_5
 	accurate_range = 12
 	accuracy = HIT_ACCURACY_TIER_2
-	damage = 20
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_10
 	damage_armor_punch = 1
 
