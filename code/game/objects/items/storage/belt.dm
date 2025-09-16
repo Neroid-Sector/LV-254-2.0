@@ -2183,6 +2183,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 		/obj/item/ammo_magazine/rifle/xm99a,
+		/obj/item/ammo_magazine/rifle/lmg,
 		/obj/item/ammo_magazine/flamer_tank,
 	)
 	flags_atom = FPRINT // has gamemode skin
@@ -2202,6 +2203,12 @@
 	new /obj/item/ammo_magazine/pistol/hp(src)
 	new /obj/item/ammo_magazine/rifle/xm99a(src)
 	new /obj/item/ammo_magazine/rifle/xm99a(src)
+
+/obj/item/storage/belt/gun/smartgunner/hpr/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
+	new /obj/item/ammo_magazine/pistol/hp(src)
+	new /obj/item/ammo_magazine/rifle/lmg/ap(src)
+	new /obj/item/ammo_magazine/rifle/lmg/holo_target(src)
 
 /obj/item/storage/belt/gun/smartgunner/teamwork
 	name = "\improper M802 pattern smartgunner sidearm rig"
