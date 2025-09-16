@@ -4215,10 +4215,6 @@
 /obj/structure/platform/metal/ship,
 /turf/open/floor/almayer/black/southeast,
 /area/blackgold/upper/stairs/star/aft)
-"aow" = (
-/mob/living/simple_animal/hostile/carp,
-/turf/open/space/basic,
-/area/space)
 "aox" = (
 /obj/structure/barricade/handrail{
 	dir = 8;
@@ -5959,7 +5955,9 @@
 /area/blackgold/middle/rooms/squad/prep)
 "avJ" = (
 /obj/structure/machinery/light/spot,
-/obj/structure/machinery/cm_vending/sorted/attachments/squad,
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = null
+	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "avK" = (
@@ -6328,14 +6326,18 @@
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "awC" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad,
+/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
+	req_one_access = null
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "awD" = (
 /obj/structure/machinery/light/spot{
 	dir = 1
 	},
-/obj/structure/machinery/cm_vending/sorted/attachments/squad,
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = null
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "awE" = (
@@ -6451,13 +6453,13 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1/southwest,
+/turf/open/floor/prison/darkyellow2/southwest,
 /area/blackgold/lower/rooms/liaison)
 "axe" = (
 /obj/structure/bed/chair/bolted{
 	dir = 1
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1,
+/turf/open/floor/prison/darkyellow2,
 /area/blackgold/lower/rooms/liaison)
 "axg" = (
 /obj/structure/sign/poster/wylogo{
@@ -6465,11 +6467,11 @@
 	pixel_y = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1/west,
+/turf/open/floor/prison/darkyellow2/west,
 /area/blackgold/lower/rooms/liaison)
 "axi" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1/southwest,
+/turf/open/floor/prison/darkyellow2/southwest,
 /area/blackgold/lower/rooms/liaison)
 "axj" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -6486,7 +6488,7 @@
 /turf/open/floor/almayer/blackfull2,
 /area/blackgold/lower/rooms/liaison)
 "axl" = (
-/turf/open/floor/hybrisa/metal/bluemetal1/east,
+/turf/open/floor/prison/darkyellow2/east,
 /area/blackgold/lower/rooms/liaison)
 "axm" = (
 /obj/structure/barricade/handrail/boxing_ring{
@@ -6496,14 +6498,14 @@
 /area/blackgold/lower/rooms/gym)
 "axp" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1/north,
+/turf/open/floor/prison/darkyellow2/north,
 /area/blackgold/lower/rooms/liaison)
 "axq" = (
 /obj/structure/machinery/atm{
 	pixel_y = 32
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1/north,
+/turf/open/floor/prison/darkyellow2/north,
 /area/blackgold/lower/rooms/liaison)
 "axr" = (
 /obj/structure/machinery/status_display{
@@ -6590,9 +6592,6 @@
 /area/blackgold/lower/rooms/gym)
 "axR" = (
 /obj/structure/largecrate/random/barrel/true_random,
-/obj/structure/machinery/light/small/red{
-	dir = 4
-	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/liaison)
 "axT" = (
@@ -6604,11 +6603,19 @@
 /area/blackgold/lower/rooms/liaison)
 "axU" = (
 /obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp/on,
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = -6;
+	layer = 3.1
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5;
+	layer = 3
+	},
 /turf/open/floor/hybrisa/carpet/carpetblackdeco,
 /area/blackgold/lower/rooms/liaison)
 "axV" = (
-/turf/open/floor/hybrisa/metal/bluemetal1/southwest,
+/turf/open/floor/prison/darkyellow2/southwest,
 /area/blackgold/lower/rooms/liaison)
 "axW" = (
 /turf/open/floor/almayer/green/north,
@@ -6634,26 +6641,20 @@
 /area/blackgold/lower/rooms/liaison)
 "ayb" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer,
+/turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/lower/rooms/liaison)
 "ayd" = (
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/folder/black_random{
-	pixel_x = -6
+/obj/structure/machinery/light/small/red{
+	dir = 4
 	},
-/obj/item/folder/black_random,
-/obj/item/folder/black_random{
-	pixel_x = 6
-	},
-/turf/open/floor/wood/ship,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating_striped/east,
 /area/blackgold/lower/rooms/liaison)
 "aye" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	req_access = list(200);
-	req_one_access = null;
-	dir = 2
+/obj/structure/machinery/light/small/red{
+	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/plating_striped/east,
 /area/blackgold/lower/rooms/liaison)
 "ayf" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -6673,6 +6674,10 @@
 /obj/structure/machinery/disposal{
 	pixel_y = 13;
 	density = 0
+	},
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101
 	},
 /obj/structure/disposalpipe/trunk,
 /obj/effect/decal/cleanable/dirt,
@@ -6814,9 +6819,6 @@
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/liaison)
 "ayV" = (
-/obj/structure/machinery/light/small/red{
-	dir = 4
-	},
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/lower/rooms/liaison)
 "ayW" = (
@@ -6915,14 +6917,14 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/liaison)
 "azr" = (
-/turf/open/floor/hybrisa/metal/bluemetal1,
+/turf/open/floor/prison/darkyellow2,
 /area/blackgold/lower/rooms/liaison)
 "azt" = (
 /obj/structure/machinery/light/spot{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1/northeast,
+/turf/open/floor/prison/darkyellow2/northeast,
 /area/blackgold/lower/rooms/liaison)
 "azu" = (
 /turf/closed/wall/almayer,
@@ -6936,6 +6938,15 @@
 	},
 /obj/structure/mirror{
 	pixel_y = 31
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	layer = 3.33;
+	pixel_x = 1
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/lower/rooms/liaison)
@@ -11891,7 +11902,9 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/middle/hallways/mid/mid)
 "aPE" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad,
+/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
+	req_one_access = null
+	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "aPF" = (
@@ -24728,7 +24741,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/evidence_storage)
 "bAD" = (
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer/plating_stripedcorner/east,
 /area/blackgold/lower/rooms/liaison)
 "bAE" = (
 /obj/structure/machinery/light/red,
@@ -26573,14 +26586,14 @@
 "bFw" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/hybrisa/metal/bluemetal1,
+/turf/open/floor/prison/darkyellow2,
 /area/blackgold/lower/rooms/liaison)
 "bFx" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_22";
 	pixel_x = 8
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1/southeast,
+/turf/open/floor/prison/darkyellow2/southeast,
 /area/blackgold/lower/rooms/liaison)
 "bFy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -26707,7 +26720,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1,
+/turf/open/floor/prison/darkyellow2,
 /area/blackgold/lower/rooms/liaison)
 "bFQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -26716,7 +26729,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1,
+/turf/open/floor/prison/darkyellow2,
 /area/blackgold/lower/rooms/liaison)
 "bFR" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -26726,14 +26739,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1,
+/turf/open/floor/prison/darkyellow2,
 /area/blackgold/lower/rooms/liaison)
 "bFS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply,
-/turf/open/floor/hybrisa/metal/bluemetal1,
+/turf/open/floor/prison/darkyellow2,
 /area/blackgold/lower/rooms/liaison)
 "bFT" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -26742,7 +26755,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1/southeast,
+/turf/open/floor/prison/darkyellow2/southeast,
 /area/blackgold/lower/rooms/liaison)
 "bFU" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
@@ -26766,7 +26779,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1/west,
+/turf/open/floor/prison/darkyellow2/west,
 /area/blackgold/lower/rooms/liaison)
 "bFW" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -26827,38 +26840,38 @@
 /area/blackgold/lower/hallways/star/fore)
 "bGf" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1/west,
+/turf/open/floor/prison/darkyellow2/west,
 /area/blackgold/lower/rooms/liaison)
 "bGg" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/hybrisa/metal/bluemetalcorner/north,
+/turf/open/floor/prison/darkyellowcorners2/north,
 /area/blackgold/lower/rooms/liaison)
 "bGh" = (
-/turf/open/floor/hybrisa/metal/bluemetal1/north,
+/turf/open/floor/prison/darkyellow2/north,
 /area/blackgold/lower/rooms/liaison)
 "bGi" = (
 /obj/structure/machinery/status_display{
 	pixel_y = 30
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1/north,
+/turf/open/floor/prison/darkyellow2/north,
 /area/blackgold/lower/rooms/liaison)
 "bGj" = (
 /obj/structure/pipes/vents/pump,
-/turf/open/floor/hybrisa/metal/bluemetal1/north,
+/turf/open/floor/prison/darkyellow2/north,
 /area/blackgold/lower/rooms/liaison)
 "bGk" = (
-/turf/open/floor/hybrisa/metal/bluemetal1/northeast,
+/turf/open/floor/prison/darkyellow2/northeast,
 /area/blackgold/lower/rooms/liaison)
 "bGl" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/liaison)
 "bGm" = (
-/turf/open/floor/hybrisa/metal/bluemetal1/northwest,
+/turf/open/floor/prison/darkyellow2/northwest,
 /area/blackgold/lower/rooms/liaison)
 "bGn" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/hybrisa/metal/bluemetal1/north,
+/turf/open/floor/prison/darkyellow2/north,
 /area/blackgold/lower/rooms/liaison)
 "bGo" = (
 /obj/effect/decal/warning_stripes{
@@ -26933,12 +26946,12 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/conference)
 "bGy" = (
-/turf/open/floor/hybrisa/metal/bluemetal1/west,
+/turf/open/floor/prison/darkyellow2/west,
 /area/blackgold/lower/rooms/liaison)
 "bGz" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/hybrisa/metal/bluemetal1/east,
+/turf/open/floor/prison/darkyellow2/east,
 /area/blackgold/lower/rooms/liaison)
 "bGA" = (
 /turf/closed/wall/almayer,
@@ -27041,7 +27054,7 @@
 	pixel_x = -26;
 	pixel_y = 2
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1/west,
+/turf/open/floor/prison/darkyellow2/west,
 /area/blackgold/lower/rooms/liaison)
 "bGP" = (
 /obj/effect/decal/cleanable/dirt,
@@ -27070,9 +27083,9 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "bGV" = (
-/obj/structure/filingcabinet/security{
+/obj/structure/machinery/vending/snack/packaged{
 	pixel_y = 16;
-	pixel_x = 8;
+	pixel_x = 6;
 	density = 0
 	},
 /turf/open/floor/wood/ship,
@@ -27124,7 +27137,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/hybrisa/metal/bluemetal1/west,
+/turf/open/floor/prison/darkyellow2/west,
 /area/blackgold/lower/rooms/liaison)
 "bHc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -27134,28 +27147,20 @@
 "bHd" = (
 /obj/structure/machinery/disposal{
 	density = 0;
-	pixel_y = 16
+	pixel_y = 9;
+	pixel_x = -7;
+	layer = 3.2
 	},
 /obj/structure/disposalpipe/trunk,
-/obj/structure/sign/banners/ruins{
-	layer = 2;
-	pixel_y = 35
-	},
-/turf/open/floor/wood/ship,
-/area/blackgold/lower/rooms/liaison)
-"bHe" = (
-/obj/structure/machinery/vending/cigarette/wy{
-	pixel_y = 16;
-	pixel_x = 6
+/obj/structure/sign/banners/city2{
+	pixel_y = 33;
+	layer = 3.1
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "bHf" = (
-/obj/structure/machinery/vending/snack/packaged{
-	pixel_y = 16;
-	pixel_x = -6;
-	density = 0
-	},
+/obj/structure/closet/cabinet,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "bHg" = (
@@ -27190,7 +27195,7 @@
 	req_access = list(200);
 	req_access_txt = null
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1/east,
+/turf/open/floor/prison/darkyellow2/east,
 /area/blackgold/lower/rooms/liaison)
 "bHl" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -27239,7 +27244,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/hybrisa/metal/bluemetal1/east,
+/turf/open/floor/prison/darkyellow2/east,
 /area/blackgold/lower/rooms/liaison)
 "bHr" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
@@ -27332,7 +27337,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/liaison)
 "bHA" = (
-/turf/open/floor/hybrisa/metal/bluemetalcorner/west,
+/turf/open/floor/prison/darkyellowcorners2/west,
 /area/blackgold/lower/rooms/liaison)
 "bHB" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
@@ -27342,7 +27347,8 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/liaison)
 "bHC" = (
-/obj/structure/bed/hybrisa/bunkbed3,
+/obj/structure/bed,
+/obj/item/bedsheet/hos,
 /turf/open/floor/hybrisa/carpet/carpetblackdeco,
 /area/blackgold/lower/rooms/liaison)
 "bHD" = (
@@ -27444,10 +27450,10 @@
 /area/blackgold/lower/rooms/liaison)
 "bHP" = (
 /obj/structure/bed,
-/obj/item/bedsheet/orange,
 /obj/item/toy/plush/farwa{
 	pixel_x = 5
 	},
+/obj/item/bedsheet/hos,
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "bHQ" = (
@@ -28959,8 +28965,10 @@
 /turf/open/floor/almayer/redcorner/east,
 /area/blackgold/upper/rooms/evacuation)
 "dbc" = (
-/obj/structure/machinery/cm_vending/sorted/attachments/squad,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = null
+	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
 "dbt" = (
@@ -32339,9 +32347,12 @@
 /turf/open/floor/almayer/orangecorner/north,
 /area/blackgold/upper/hallways/mid/fore)
 "gJn" = (
-/mob/living/simple_animal/hostile/carp,
-/turf/open/floor/almayer_hull,
-/area/space)
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_29";
+	pixel_x = 8
+	},
+/turf/open/floor/hybrisa/carpet/carpetblackdeco,
+/area/blackgold/lower/rooms/liaison)
 "gJJ" = (
 /obj/structure/machinery/photocopier,
 /turf/open/floor/wood/ship,
@@ -32450,9 +32461,11 @@
 /turf/open/floor/almayer/red/north,
 /area/blackgold/upper/rooms/brig/lobby)
 "gSb" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
+	req_one_access = null
+	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
 "gSi" = (
@@ -32790,10 +32803,10 @@
 /turf/open/floor/almayer/tcomms,
 /area/blackgold/upper/rooms/telecomms)
 "hnI" = (
-/obj/structure/machinery/computer/overwatch/pmc{
-	pixel_y = 18
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_10"
 	},
-/turf/open/floor/hybrisa/carpet/carpetblackdeco,
+/turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/liaison)
 "hoW" = (
 /obj/structure/platform/metal/ship/west,
@@ -33703,7 +33716,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
 "imk" = (
-/obj/structure/machinery/cm_vending/sorted/attachments/squad,
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = null
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -34026,10 +34041,6 @@
 /area/blackgold/lower/rooms/brig/execution)
 "iAw" = (
 /turf/open/floor/almayer_hull/outerhull_dir/northeast,
-/area/space)
-"iAy" = (
-/mob/living/simple_animal/hostile/carp,
-/turf/open/floor/almayer_hull/outerhull_dir/southeast,
 /area/space)
 "iAQ" = (
 /obj/structure/surface/table/almayer,
@@ -34449,14 +34460,6 @@
 /obj/item/device/binoculars,
 /turf/open/floor/almayer/blue/west,
 /area/blackgold/upper/rooms/cic)
-"iYg" = (
-/obj/structure/machinery/light{
-	dir = 8;
-	invisibility = 101
-	},
-/obj/structure/closet/cabinet,
-/turf/open/floor/wood/ship,
-/area/blackgold/lower/rooms/liaison)
 "iYv" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer/black/north,
@@ -34510,10 +34513,6 @@
 /obj/docking_port/stationary/escape_pod/south,
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/evacuation)
-"jbd" = (
-/obj/structure/sign/prop1,
-/turf/closed/wall/almayer/outer,
-/area/blackgold/middle/rooms/req)
 "jbg" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass/reinforced{
 	name = "\improper Warden's Office"
@@ -37047,7 +37046,9 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/captain_mess)
 "lIG" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad,
+/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
+	req_one_access = null
+	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
 "lJm" = (
@@ -37468,27 +37469,9 @@
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
 "mfb" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/firstaid/regular{
-	pixel_y = 6
-	},
-/obj/item/storage/box/mre/wy{
-	pixel_x = 8;
-	pixel_y = 4
-	},
-/obj/item/reagent_container/spray/cleaner{
-	pixel_x = -10;
-	pixel_y = 14
-	},
-/obj/item/storage/box/mre/wy{
-	pixel_y = 7;
-	pixel_x = 5
-	},
-/obj/item/storage/box/mre/wy{
-	pixel_x = 5;
-	pixel_y = 2
-	},
-/turf/open/floor/almayer/cargo,
+/obj/structure/machinery/photocopier/wyphotocopier,
+/obj/item/device/toner,
+/turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "mfr" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/cargo,
@@ -38322,9 +38305,16 @@
 /turf/open/floor/almayer/bluefull,
 /area/blackgold/upper/rooms/captain_mess)
 "mXB" = (
-/mob/living/simple_animal/hostile/carp,
-/turf/open/floor/almayer_hull/outerhull_dir/north,
-/area/space)
+/obj/structure/prop/hybrisa/misc/machinery/screens/gold_clock{
+	pixel_y = 31;
+	pixel_x = 10
+	},
+/obj/structure/machinery/vending/cigarette/wy{
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/liaison)
 "mXO" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -39012,7 +39002,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
 	pixel_y = -25;
-	density = 0
+	density = 0;
+	req_one_access = null
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -39602,10 +39593,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks)
-"ogd" = (
-/mob/living/simple_animal/hostile/carp,
-/turf/open/floor/almayer_hull/outerhull_dir/west,
-/area/space)
 "oha" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/almayer/redfull,
@@ -40471,7 +40458,8 @@
 "oZw" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
 	pixel_y = 25;
-	density = 0
+	density = 0;
+	req_one_access = null
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/north,
@@ -40543,7 +40531,6 @@
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/underdeck/vehicle)
 "pdO" = (
-/obj/structure/machinery/light,
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/chem_dispenser/soda,
 /turf/open/floor/almayer/plate,
@@ -40890,17 +40877,6 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/cryo)
-"pvh" = (
-/obj/structure/machinery/light{
-	dir = 8;
-	invisibility = 101
-	},
-/obj/structure/machinery/photocopier/wyphotocopier,
-/obj/item/device/toner,
-/obj/item/device/toner,
-/obj/item/device/toner,
-/turf/open/floor/wood/ship,
-/area/blackgold/lower/rooms/liaison)
 "pvi" = (
 /turf/open/floor/almayer/red/north,
 /area/blackgold/middle/rooms/orbital)
@@ -41558,7 +41534,9 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "qha" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
+	req_one_access = null
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "qhb" = (
@@ -43081,28 +43059,15 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "rIJ" = (
-/obj/item/reagent_container/food/drinks/bottle/sake{
-	pixel_y = -3;
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/drinkingglasses{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/ammo_box/magazine/misc/mre/wy{
+	pixel_y = 12;
 	pixel_x = 4
 	},
-/obj/item/reagent_container/food/drinks/bottle/sake{
-	pixel_x = 4;
-	pixel_y = 5
-	},
-/obj/item/reagent_container/food/drinks/bottle/sake{
-	pixel_x = -4;
-	pixel_y = -3
-	},
-/obj/item/reagent_container/food/drinks/bottle/sake{
-	pixel_x = -4;
-	pixel_y = 5
-	},
-/obj/structure/machinery/light,
-/obj/item/storage/beer_pack,
-/obj/item/storage/box/drinkingglasses{
-	pixel_x = -8
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/liaison)
 "rIV" = (
@@ -44142,10 +44107,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
 "sKi" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "pottedplant_29";
-	pixel_x = 8
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "sKI" = (
@@ -46899,14 +46865,6 @@
 "vSf" = (
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/blackgold/lower/rooms/aicore)
-"vSk" = (
-/obj/structure/prop/hybrisa/misc/machinery/screens/gold_clock{
-	pixel_y = 32
-	},
-/obj/structure/machinery/photocopier/wyphotocopier,
-/obj/item/device/toner,
-/turf/open/floor/wood/ship,
-/area/blackgold/lower/rooms/liaison)
 "vSF" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 1
@@ -48624,12 +48582,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
-"xPZ" = (
-/obj/structure/machinery/light/small/red{
-	dir = 4
-	},
-/turf/open/floor/almayer/plating_stripedcorner/east,
-/area/blackgold/lower/rooms/liaison)
 "xQU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -50276,7 +50228,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 aEL
@@ -50575,7 +50527,7 @@ obL
 obL
 lrC
 lrC
-gJn
+lrC
 lrC
 lrC
 lrC
@@ -51315,7 +51267,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 aEL
@@ -52178,7 +52130,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -53715,8 +53667,8 @@ akL
 kPX
 kPX
 kPX
-aow
-aow
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -53802,8 +53754,8 @@ akL
 kPX
 kPX
 kPX
-aow
-aow
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -54016,7 +53968,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -54182,7 +54134,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -55552,7 +55504,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -56769,8 +56721,8 @@ lrC
 lrC
 lrC
 pCH
-aow
-aow
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -56856,8 +56808,8 @@ lrC
 lrC
 lrC
 pCH
-aow
-aow
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -58275,7 +58227,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 akL
 kPX
 aEL
@@ -58531,7 +58483,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -63120,7 +63072,7 @@ lrC
 pCH
 akL
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -63200,7 +63152,7 @@ lrC
 lrC
 lrC
 lrC
-gJn
+lrC
 lrC
 lrC
 lrC
@@ -66849,7 +66801,7 @@ obL
 lrC
 lrC
 lrC
-gJn
+lrC
 lrC
 lrC
 pCH
@@ -67290,7 +67242,7 @@ lrC
 pCH
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -70800,7 +70752,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -71127,7 +71079,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -74163,7 +74115,7 @@ dqr
 dqr
 dqr
 dqr
-iAy
+kCh
 kPX
 kPX
 kPX
@@ -74810,7 +74762,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -76306,7 +76258,7 @@ bHr
 bGA
 bAy
 bGA
-bGA
+hnI
 bGh
 bFQ
 bFs
@@ -76386,13 +76338,13 @@ ayR
 bHM
 bHI
 bGA
-iYg
-bGQ
+bGA
+bHf
 bGR
 bHs
-ayd
 bHl
-pvh
+mfb
+bGA
 bGA
 bGi
 bFQ
@@ -76479,7 +76431,7 @@ bGT
 bHt
 bGR
 bGR
-bGQ
+sKi
 bGA
 bGh
 bFR
@@ -76561,11 +76513,11 @@ azw
 azw
 bGA
 ayk
-azw
+bGR
 bHm
 bHu
 bHm
-azw
+bGR
 bGQ
 axu
 bGj
@@ -76609,7 +76561,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -76821,13 +76773,13 @@ bHP
 ayL
 ayD
 bGA
-bGR
+bGA
 bHD
 azw
 bHx
 bHo
-azw
-sKi
+gJn
+bGA
 bGA
 bGk
 bFT
@@ -76908,9 +76860,9 @@ bGA
 bGA
 bGA
 bGA
+bGA
+bGA
 bHB
-bGA
-bGA
 bGA
 bGA
 bGA
@@ -76995,13 +76947,13 @@ ayU
 bHL
 bHL
 ayx
-axX
 ayb
-mfb
+ayb
+axX
 bHy
 bGA
-vSk
-bGR
+bGA
+mXB
 bGB
 bGm
 bFV
@@ -77080,9 +77032,9 @@ blv
 bHQ
 ayV
 ayO
-ayO
+ayd
 ayl
-xPZ
+ayl
 aye
 bAD
 axR
@@ -77174,7 +77126,7 @@ bGA
 bHB
 bGA
 bGA
-bHe
+bGR
 bGU
 bGD
 bGh
@@ -77258,10 +77210,10 @@ blu
 bFs
 bHG
 bGA
-hnI
+azw
 axT
 bGA
-bHf
+bGR
 bGR
 bGE
 bGj
@@ -78365,7 +78317,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -79567,7 +79519,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -79823,7 +79775,7 @@ akL
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -84195,7 +84147,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -84432,7 +84384,7 @@ lrC
 lrC
 lrC
 lrC
-gJn
+lrC
 pCH
 akL
 kPX
@@ -85680,7 +85632,7 @@ kPX
 aEL
 lrC
 lrC
-gJn
+lrC
 lrC
 lrC
 lrC
@@ -86184,7 +86136,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 ajS
 "}
@@ -89041,8 +88993,8 @@ kPX
 kPX
 kPX
 kPX
-aow
-aow
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -89344,7 +89296,7 @@ kPX
 kPX
 kPX
 kPX
-mXB
+aEL
 lrC
 lrC
 lrC
@@ -90420,7 +90372,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -91599,7 +91551,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -91995,7 +91947,7 @@ byI
 byI
 aEL
 pCH
-aow
+kPX
 kPX
 kPX
 kPX
@@ -93485,7 +93437,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -95253,7 +95205,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -96003,7 +95955,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -99972,7 +99924,7 @@ ant
 ant
 ant
 ant
-jbd
+ant
 uXI
 fYC
 qtL
@@ -100233,7 +100185,7 @@ ant
 ant
 ant
 ant
-jbd
+ant
 fiq
 bIp
 anH
@@ -100557,7 +100509,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 akL
@@ -100644,7 +100596,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 akL
@@ -100879,7 +100831,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -104970,7 +104922,7 @@ pCH
 akL
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -105057,7 +105009,7 @@ pCH
 akL
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -105144,7 +105096,7 @@ pCH
 akL
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -105231,7 +105183,7 @@ pCH
 akL
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -105318,7 +105270,7 @@ pCH
 akL
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -109605,8 +109557,8 @@ kPX
 kPX
 kPX
 kPX
-aow
-aow
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -110443,7 +110395,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -112515,9 +112467,9 @@ anx
 anx
 anx
 anx
-ogd
-ogd
-ogd
+anx
+anx
+anx
 anx
 anx
 anx
@@ -114803,7 +114755,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -115781,7 +115733,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -117672,7 +117624,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -117847,7 +117799,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -118476,7 +118428,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -126740,7 +126692,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -128550,7 +128502,7 @@ lrC
 pCH
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -129703,7 +129655,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -129789,8 +129741,8 @@ kPX
 kPX
 kPX
 kPX
-aow
-aow
+kPX
+kPX
 kPX
 kPX
 kPX
@@ -130050,7 +130002,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -130137,7 +130089,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
@@ -130547,7 +130499,7 @@ kPX
 kPX
 kPX
 kPX
-aow
+kPX
 kPX
 kPX
 kPX
