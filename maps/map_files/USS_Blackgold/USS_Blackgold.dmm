@@ -115,7 +115,6 @@
 /obj/structure/machinery/light/spot{
 	pixel_x = 16
 	},
-/obj/structure/prop/server_equipment/broken,
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/rooms/engineering)
 "aax" = (
@@ -558,7 +557,6 @@
 	dir = 4;
 	pixel_y = 16
 	},
-/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/rooms/engineering)
 "abT" = (
@@ -9083,7 +9081,6 @@
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/rooms/engineering)
 "aGm" = (
-/obj/structure/closet/secure_closet/engineering_chief,
 /turf/open/floor/almayer/orange/southeast,
 /area/blackgold/middle/rooms/engineering)
 "aGn" = (
@@ -9269,15 +9266,6 @@
 /area/blackgold/middle/rooms/engineering)
 "aGW" = (
 /obj/structure/surface/table/almayer,
-/obj/item/prop{
-	desc = "Predecessor to the M56 the M38 was known for its extreme reliability in the field. This particular M38D is fondly remembered for its stalwart defence of the hangar bay during the Arcturian commando raid of the USS Almayer on Io.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
-	icon_state = "M56D_gun_e";
-	layer = 3.1;
-	name = "\improper M38D heavy machine gun 'Bess'";
-	pixel_x = -3;
-	pixel_y = 10
-	},
 /turf/open/floor/almayer/orange/west,
 /area/blackgold/middle/rooms/engineering)
 "aGX" = (
@@ -9372,24 +9360,11 @@
 /area/blackgold/middle/rooms/engineering/ot)
 "aHh" = (
 /obj/structure/surface/table/almayer,
-/obj/item/device/radio{
-	pixel_x = 8;
-	pixel_y = 7
-	},
-/obj/item/storage/toolbox/mechanical/green{
-	pixel_x = 1;
-	pixel_y = -1
-	},
 /turf/open/floor/almayer/orange/northwest,
 /area/blackgold/middle/rooms/engineering)
 "aHi" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/power/apc/almayer/north,
-/obj/item/tool/screwdriver{
-	layer = 3.6;
-	pixel_x = 9;
-	pixel_y = 8
-	},
 /turf/open/floor/almayer/orange/north,
 /area/blackgold/middle/rooms/engineering)
 "aHj" = (
@@ -11185,7 +11160,6 @@
 	name = "EAT - poster";
 	pixel_x = -25
 	},
-/obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/upper/rooms/kitchen)
 "aMI" = (
@@ -11279,7 +11253,6 @@
 	pixel_x = -4;
 	pixel_y = 22
 	},
-/obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/upper/rooms/kitchen)
 "aMW" = (
@@ -11324,8 +11297,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aNc" = (
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/wood/ship,
+/obj/structure/machinery/vending/ingredients,
+/turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aNd" = (
 /turf/open/floor/almayer/plate,
@@ -11363,7 +11336,6 @@
 /area/blackgold/upper/rooms/kitchen)
 "aNk" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/rooms/kitchen)
 "aNl" = (
@@ -12780,6 +12752,9 @@
 /obj/item/toy/deck/uno{
 	pixel_x = -3;
 	pixel_y = 3
+	},
+/obj/structure/sign/banners/ship{
+	pixel_y = 31
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
@@ -18131,7 +18106,6 @@
 "bfP" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/upper/rooms/kitchen)
 "bfQ" = (
@@ -18153,7 +18127,6 @@
 "bfS" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/rooms/kitchen)
 "bfT" = (
@@ -25125,7 +25098,7 @@
 /obj/structure/machinery/door_control{
 	pixel_y = 23;
 	name = "\improper Shutter Control";
-	id = "BG Cargo Exterior";
+	id = "BG Brig Cell Maintenance";
 	req_access = list();
 	req_one_access = list(19,21,27);
 	pixel_x = -8
@@ -25150,7 +25123,7 @@
 /obj/structure/machinery/door_control{
 	pixel_y = -22;
 	name = "\improper Shutter Control";
-	id = "BG Cargo Exterior";
+	id = "BG Brig Cell Maintenance";
 	req_access = list();
 	req_one_access = list(19,21,27);
 	pixel_x = -8
@@ -26207,7 +26180,14 @@
 /area/blackgold/lower/rooms/conference)
 "bEc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/device/megaphone,
+/obj/structure/machinery/computer/groundside_operations{
+	dir = 4;
+	pixel_y = 4
+	},
+/obj/structure/machinery/computer/squad_changer{
+	dir = 4;
+	pixel_y = -10
+	},
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/lower/rooms/conference)
 "bEd" = (
@@ -26285,6 +26265,7 @@
 	pixel_x = 2;
 	alpha = 0
 	},
+/obj/item/device/megaphone,
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/conference)
 "bEr" = (
@@ -27141,6 +27122,10 @@
 /area/blackgold/lower/rooms/conference)
 "bGY" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/obj/structure/machinery/computer/crew/alt{
+	pixel_x = 14;
+	dir = 4
+	},
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/lower/rooms/conference)
 "bGZ" = (
@@ -27198,6 +27183,14 @@
 	pixel_y = 32
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/groundside_operations{
+	dir = 4;
+	pixel_y = 4
+	},
+/obj/structure/machinery/computer/squad_changer{
+	dir = 4;
+	pixel_y = -10
+	},
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/conference)
 "bHh" = (
@@ -27785,7 +27778,7 @@
 /obj/structure/stairs/multiz/down{
 	dir = 4
 	},
-/turf/open_space,
+/turf/open/floor/plating,
 /area/blackgold/upper/maint/port/mid)
 "bIF" = (
 /obj/structure/machinery/light/small/red,
@@ -28349,6 +28342,18 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/orangefull,
 /area/blackgold/middle/rooms/squad)
+"cif" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 12;
+	pixel_y = 13
+	},
+/obj/item/folder/black_random{
+	pixel_y = 9;
+	pixel_x = -8
+	},
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/upper/rooms/cic/conference)
 "cjf" = (
 /obj/structure/largecrate/supply/medicine/medivend,
 /turf/open/floor/almayer/no_build/plate,
@@ -28421,10 +28426,6 @@
 /area/blackgold/lower/rooms/req)
 "cnt" = (
 /obj/structure/bed/chair/office/dark,
-/obj/structure/sign/banners/blackbriar{
-	pixel_x = 6;
-	pixel_y = 32
-	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "cnQ" = (
@@ -28758,7 +28759,7 @@
 "cLp" = (
 /obj/structure/sign/banners/mountain{
 	pixel_y = 33;
-	layer = 2
+	layer = 3
 	},
 /obj/structure/closet/crate/critter,
 /turf/open/floor/wood/ship,
@@ -28860,6 +28861,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/squad)
+"cRC" = (
+/obj/structure/pallet/standard/med/firstaid,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/mid)
 "cRD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
@@ -29230,6 +29235,10 @@
 /obj/structure/surface/table/reinforced/black,
 /obj/item/prop/tableflag/uscm2{
 	pixel_y = 16
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 7;
+	pixel_y = 7
 	},
 /turf/open/floor/hybrisa/carpet/carpetreddeco,
 /area/blackgold/upper/rooms/cic/conference)
@@ -29746,19 +29755,6 @@
 /obj/structure/machinery/computer/cameras/almayer/vehicle,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/companycommand/delta)
-"dVv" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop{
-	desc = "This M57 smartgun was utilized in field testing by the greatest smartgunner the USS Almayer ever had, Larry A.W Lewis, until he was fatally and tragically decapitated from a single clean shot to the head by a CLF sniper. As he didn't wear a helmet, it took weeks to find the body.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi';
-	icon_state = "m56c";
-	item_state = "m56c";
-	name = "broken M57 'Larry's Will' smartgun";
-	pixel_x = -7;
-	pixel_y = 3
-	},
-/turf/open/floor/almayer/orange/north,
-/area/blackgold/middle/rooms/engineering)
 "dVK" = (
 /obj/structure/machinery/power/apc/almayer/hardened/east,
 /turf/open/floor/almayer/orange/east,
@@ -30314,10 +30310,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/hybrisa/carpet/blue_grey,
 /area/blackgold/upper/rooms/commandbunks/xo)
-"eDy" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/turf/open/floor/almayer/orange/east,
-/area/blackgold/middle/rooms/engineering)
 "eDG" = (
 /turf/open/floor/almayer/silver/east,
 /area/blackgold/middle/hallways/mid/aft)
@@ -30403,6 +30395,12 @@
 /obj/item/roller,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/req)
+"eHp" = (
+/obj/structure/machinery/computer/overwatch/pmc{
+	pixel_y = 20
+	},
+/turf/open/floor/hybrisa/carpet/carpetblackdeco,
+/area/blackgold/lower/rooms/liaison)
 "eHw" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/toolbox/mechanical{
@@ -31305,13 +31303,6 @@
 "fEC" = (
 /turf/open/floor/almayer/blackfull2,
 /area/blackgold/lower/rooms/range)
-"fFf" = (
-/obj/structure/machinery/light/spot{
-	dir = 4
-	},
-/obj/structure/closet/crate/freezer,
-/turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
 "fFp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -32247,6 +32238,10 @@
 /obj/structure/machinery/auto_rack/uscm/m39/full,
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
+"gDE" = (
+/obj/structure/pallet/standard/food/groceries,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/mid)
 "gEa" = (
 /obj/structure/bed/chair/office/dark,
 /obj/structure/machinery/light/spot{
@@ -32435,6 +32430,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
+"gLE" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	layer = 3
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/gym)
 "gLH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -33926,6 +33929,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad)
+"isU" = (
+/obj/structure/prop/invuln/joey,
+/turf/open/floor/almayer/orange/west,
+/area/blackgold/middle/rooms/engineering)
 "isZ" = (
 /obj/vehicle/motorbike/green,
 /turf/open/floor/almayer/no_build/plate,
@@ -34608,15 +34615,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/hallways/mid/fore)
-"jcC" = (
-/obj/structure/surface/table/almayer,
-/obj/item/tool/weldingtool{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/clothing/head/welding,
-/turf/open/floor/almayer/orange/north,
-/area/blackgold/middle/rooms/engineering)
 "jcG" = (
 /obj/structure/machinery/computer/cameras/wooden_tv/almayer{
 	dir = 8;
@@ -35206,10 +35204,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
-"jDl" = (
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/almayer/green/north,
-/area/blackgold/upper/rooms/kitchen)
 "jDM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/auto_rack/uscm/m39/full{
@@ -35467,6 +35461,10 @@
 /obj/structure/medical_supply_link,
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/blackgold/upper/rooms/brig/medical)
+"jXp" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/almayer/silverfull2,
+/area/blackgold/lower/rooms/gym)
 "jXt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -35492,10 +35490,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/lower/rooms/engineering/reactor)
-"jYj" = (
-/obj/structure/prop/invuln/joey,
-/turf/open/floor/almayer/orange/south,
-/area/blackgold/middle/rooms/engineering)
 "jYC" = (
 /obj/effect/decal/warning_stripes/uscm_logo/dirty,
 /obj/structure/bed/chair,
@@ -35585,6 +35579,10 @@
 "kcB" = (
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/underdeck/req)
+"kcI" = (
+/obj/structure/pallet/standard/food/mres,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/mid)
 "kcN" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Mainframe";
@@ -35780,6 +35778,10 @@
 /obj/structure/closet/crate,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/req)
+"kqU" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green_pointer,
+/area/blackgold/middle/rooms/squad)
 "kqX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/reinforced,
@@ -36159,11 +36161,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/engineering/reactor)
-"kLX" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/wood/ship,
-/area/blackgold/upper/rooms/kitchen)
 "kLZ" = (
 /obj/structure/machinery/cm_vending/gear/company_commander{
 	pixel_y = -30;
@@ -36249,16 +36246,22 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/fore)
+"kPL" = (
+/obj/structure/surface/rack,
+/obj/item/toy/plush/shark,
+/turf/open/floor/plating,
+/area/blackgold/upper/maint/port/fore)
 "kPX" = (
 /turf/open/space/basic,
 /area/space)
 "kQw" = (
-/obj/structure/prop/invuln/static_corpse/afric_zimmer{
-	name = "CWO2. Stanely Yelnats";
-	desc = "This is why properly secured cargo is an important thing to ensure."
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = -5;
+	pixel_y = 11
 	},
-/turf/open/floor/plating,
-/area/blackgold/lower/maint/port/aft)
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/upper/rooms/cic/conference)
 "kQN" = (
 /obj/structure/machinery/photocopier{
 	anchored = 0
@@ -36509,10 +36512,6 @@
 /obj/structure/platform/metal/ship/north,
 /turf/open/floor/almayer/blue/northeast,
 /area/blackgold/upper/rooms/cic)
-"lgl" = (
-/obj/structure/powerloader_wreckage,
-/turf/open/floor/almayer/orange/southeast,
-/area/blackgold/middle/rooms/engineering)
 "lgo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/red/northwest,
@@ -36743,6 +36742,14 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer/greencorner/east,
 /area/blackgold/middle/rooms/squad/prep)
+"lnj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/static_corpse/afric_zimmer{
+	name = "CWO2. Stanely Yelnats";
+	desc = "This is why properly secured cargo is an important thing to ensure."
+	},
+/turf/open/floor/plating,
+/area/blackgold/lower/maint/port/aft)
 "lno" = (
 /obj/structure/prop/server_equipment/yutani_server{
 	density = 0;
@@ -37060,6 +37067,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/north,
 /area/blackgold/lower/hallways/star/fore)
+"lEm" = (
+/obj/structure/prop/invuln/joey,
+/turf/open/floor/almayer/orange/southwest,
+/area/blackgold/middle/rooms/engineering)
 "lEK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/outer,
@@ -37074,6 +37085,7 @@
 	layer = 2.5
 	},
 /obj/structure/surface/table/almayer,
+/obj/item/maintenance_jack,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/synth)
 "lFS" = (
@@ -37702,7 +37714,6 @@
 /area/blackgold/middle/rooms/aientrance)
 "mnm" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/kitchen)
 "mno" = (
@@ -37995,10 +38006,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/mid)
-"mFd" = (
-/obj/item/storage/toolbox/mechanical/green,
-/turf/open/floor/almayer/mono,
-/area/blackgold/middle/rooms/engineering)
 "mFg" = (
 /turf/open/floor/almayer/flooredge/northwest,
 /area/blackgold/lower/rooms/req)
@@ -38622,10 +38629,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/north,
 /area/blackgold/middle/rooms/hangar)
-"ngm" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/closed/wall/almayer,
-/area/blackgold/upper/maint/port/aft)
 "ngn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -38668,12 +38671,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/cic)
-"niP" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/wood/ship,
-/area/blackgold/upper/rooms/kitchen)
 "nkM" = (
 /obj/structure/stairs{
 	dir = 1
@@ -39661,14 +39658,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/north,
 /area/blackgold/upper/rooms/brig/processing)
-"ocf" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	name = "\improper freezer";
-	req_access = list(30);
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/upper/rooms/kitchen)
 "ocQ" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/almayer/red/southwest,
@@ -39717,16 +39706,6 @@
 /obj/structure/platform/metal/almayer/north,
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
-"oig" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper/colonial_grunts,
-/obj/item/paper/colonial_grunts,
-/obj/item/paper/colonial_grunts,
-/obj/item/paper/colonial_grunts,
-/obj/item/paper/colonial_grunts,
-/obj/item/paper/colonial_grunts,
-/turf/open/floor/wood/ship,
-/area/blackgold/lower/rooms/brig/cells)
 "ojW" = (
 /obj/structure/coatrack{
 	pixel_x = 2;
@@ -39858,6 +39837,10 @@
 	},
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
+"opQ" = (
+/obj/effect/landmark/corpsespawner/engineer,
+/turf/open/floor/almayer_hull,
+/area/space)
 "oqf" = (
 /turf/open/floor/plating,
 /area/supply/dock_vehicle)
@@ -40472,10 +40455,6 @@
 	},
 /turf/open/floor/almayer/orange/southwest,
 /area/blackgold/upper/rooms/telecomms)
-"oTI" = (
-/obj/structure/prop/invuln/joey,
-/turf/open/floor/almayer/orange/southwest,
-/area/blackgold/middle/rooms/engineering)
 "oUH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -40708,10 +40687,10 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/cryo)
 "pfX" = (
-/obj/structure/closet/secure_closet/cmdcabinet{
-	pixel_y = 24
+/obj/structure/sign/banners/blackbriar{
+	pixel_x = 6;
+	pixel_y = 32
 	},
-/obj/item/device/cotablet,
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
 "phw" = (
@@ -41162,15 +41141,6 @@
 "pCH" = (
 /turf/open/floor/almayer_hull/outerhull_dir,
 /area/space)
-"pCU" = (
-/obj/structure/bed/chair/comfy/beige{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/wood/ship,
-/area/blackgold/upper/rooms/kitchen)
 "pDe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -41347,10 +41317,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/east,
 /area/blackgold/lower/rooms/req)
-"pNU" = (
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/upper/rooms/kitchen)
 "pPw" = (
 /obj/structure/platform/metal/ship/corner/west,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -41518,10 +41484,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
-"pXo" = (
-/obj/item/storage/toolbox/electrical,
-/turf/open/floor/almayer/orange/west,
-/area/blackgold/middle/rooms/engineering)
 "pXI" = (
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/cic/conference)
@@ -41786,17 +41748,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/squad/prep)
-"qno" = (
-/obj/structure/surface/table/almayer,
-/obj/item/tool/pen/clicky,
-/obj/item/tool/pen/clicky,
-/obj/item/tool/pen/clicky,
-/obj/item/tool/pen/clicky,
-/obj/item/tool/pen/clicky,
-/obj/item/tool/pen/clicky,
-/obj/item/paper_bin/uscm,
-/turf/open/floor/wood/ship,
-/area/blackgold/lower/rooms/brig/cells)
 "qnP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -41834,6 +41785,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/engineering/storage)
+"qqi" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 1;
+	pixel_y = 7
+	},
+/turf/open/floor/hybrisa/carpet/carpetreddeco,
+/area/blackgold/upper/rooms/cic/conference)
 "qqX" = (
 /turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig/stairs)
@@ -42793,6 +42752,8 @@
 	},
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/power/apc/almayer/north,
+/obj/item/clothing/suit/storage/webbing,
+/obj/item/clothing/suit/storage/webbing,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/synth)
 "rjB" = (
@@ -43566,10 +43527,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/hangar)
-"seJ" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/turf/open/floor/almayer/orange/northeast,
-/area/blackgold/middle/rooms/engineering)
 "sfi" = (
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/stairs/star/aft)
@@ -44341,6 +44298,13 @@
 /obj/structure/pallet/standard,
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/aft)
+"sOS" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pallet/standard/food/mres,
+/turf/open/floor/plating,
+/area/blackgold/middle/maint/port/mid)
 "sPl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -44427,11 +44391,6 @@
 	},
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
-"sSO" = (
-/obj/effect/decal/cleanable/vomit,
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/wood/ship,
-/area/blackgold/upper/rooms/kitchen)
 "sTy" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -45427,12 +45386,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
 /area/blackgold/lower/rooms/engineering)
-"ujI" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/wood/ship,
-/area/blackgold/upper/rooms/kitchen)
 "ujS" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/warning_stripes{
@@ -45547,16 +45500,6 @@
 "urw" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic/conference)
-"urU" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/wood/ship,
-/area/blackgold/upper/rooms/kitchen)
 "uta" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -46535,11 +46478,33 @@
 	pixel_x = -3;
 	pixel_y = 4
 	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 8;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 1;
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic/conference)
-"vrE" = (
-/turf/closed/wall/almayer,
-/area/blackgold/upper/maint/port/aft)
 "vsf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -47190,6 +47155,15 @@
 /obj/structure/ladder/multiz,
 /turf/open/floor/almayer/aicore/no_build/ai_cargo,
 /area/blackgold/lower/rooms/aicore)
+"wau" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/food/condiment/hotsauce/sriracha{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/purplefull,
+/area/blackgold/middle/rooms/squad)
 "waR" = (
 /obj/structure/window/reinforced/toughened,
 /obj/structure/window/reinforced/toughened{
@@ -47260,10 +47234,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/middle/rooms/req)
-"wgD" = (
-/obj/structure/machinery/vending/ingredients,
-/turf/open/floor/prison/kitchen,
-/area/blackgold/upper/rooms/kitchen)
 "wgM" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/upper/rooms/commandbunks)
@@ -47687,10 +47657,6 @@
 /obj/effect/landmark/late_join/police,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/cryo)
-"wKp" = (
-/obj/structure/prop/server_equipment/broken,
-/turf/open/floor/almayer/orange/south,
-/area/blackgold/middle/rooms/engineering)
 "wKq" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
@@ -48546,6 +48512,10 @@
 "xzn" = (
 /turf/closed/wall/almayer/aicore/hull,
 /area/blackgold/lower/rooms/aicore)
+"xzE" = (
+/mob/living/simple_animal/hostile/carp,
+/turf/open/floor/almayer_hull,
+/area/space)
 "xzJ" = (
 /obj/structure/barricade/handrail/boxing_ring{
 	pixel_y = -2
@@ -76205,7 +76175,7 @@ aBQ
 pjs
 aVz
 aVz
-aVz
+jXp
 aVz
 axm
 azu
@@ -76543,8 +76513,8 @@ bCV
 axz
 axz
 axz
-axz
-axz
+bSV
+bSV
 axz
 bDE
 bDx
@@ -76892,7 +76862,7 @@ bEv
 bEo
 igS
 igS
-axQ
+qRv
 axQ
 axQ
 axQ
@@ -76979,7 +76949,7 @@ bDa
 bDa
 bDa
 bDa
-wyB
+gLE
 axz
 axz
 wyB
@@ -77395,7 +77365,7 @@ blu
 bFs
 bHG
 bGA
-azw
+eHp
 axT
 bGA
 bGR
@@ -78894,7 +78864,7 @@ ihW
 xGR
 peP
 iBv
-qno
+iBv
 iEj
 biO
 biD
@@ -78982,7 +78952,7 @@ jsl
 peP
 ygT
 pwc
-oig
+iBv
 bsq
 biE
 peP
@@ -88988,7 +88958,7 @@ akx
 akx
 akv
 akt
-kQw
+afe
 bxv
 afi
 afe
@@ -89162,7 +89132,7 @@ jXB
 jXB
 sKX
 oqQ
-mhZ
+lnj
 bxt
 afi
 afe
@@ -98824,7 +98794,7 @@ eJl
 hAH
 vMp
 dAD
-xyK
+wau
 ydj
 alv
 bbO
@@ -98993,7 +98963,7 @@ alF
 alF
 alF
 alF
-alF
+rdZ
 bnq
 alF
 alF
@@ -99167,7 +99137,7 @@ alF
 alF
 alF
 alF
-eJl
+kqU
 bnr
 alF
 eJl
@@ -101690,8 +101660,8 @@ ahn
 ahn
 ahn
 ahn
-ahn
-blS
+kcI
+sOS
 ahn
 ahn
 byd
@@ -101861,9 +101831,9 @@ asU
 asP
 ahn
 ahn
-ahn
-ahn
-ahn
+cRC
+cRC
+gDE
 alj
 ahn
 blS
@@ -105959,8 +105929,8 @@ aGn
 bcd
 aGn
 aGn
-aGn
-aGj
+isU
+lEm
 aGb
 bmD
 bmz
@@ -106047,7 +106017,7 @@ aGz
 aGz
 aGr
 aGo
-aGk
+aGh
 aGb
 bmE
 ahJ
@@ -106134,7 +106104,7 @@ aGH
 aGA
 aGu
 aGp
-aGl
+aGh
 aGb
 bmE
 ahJ
@@ -106829,8 +106799,8 @@ aGW
 aGn
 bbX
 aGn
-pXo
-oTI
+aGn
+aGj
 aGb
 cKN
 jzG
@@ -106917,7 +106887,7 @@ aGo
 bbY
 aGo
 aGo
-jYj
+aGk
 aGb
 cKN
 hld
@@ -106998,13 +106968,13 @@ aGb
 aGb
 aGb
 aGb
-dVv
+aHj
 aGX
 aGr
 bbZ
 aGr
 aGr
-jYj
+aGl
 aGb
 cKN
 hlg
@@ -107085,7 +107055,7 @@ aGn
 aGn
 aGf
 aGb
-jcC
+aHj
 aGz
 aGE
 bca
@@ -107178,7 +107148,7 @@ aGs
 bcb
 aGy
 aGt
-wKp
+aGh
 aGb
 cKN
 naC
@@ -107339,11 +107309,11 @@ ato
 bda
 bcF
 aGb
-seJ
-eDy
-eDy
+aHl
+aGq
+aGq
 abS
-eDy
+aGq
 aGm
 aGb
 aHk
@@ -107351,7 +107321,7 @@ bbY
 aGo
 aGo
 aGo
-mFd
+aGo
 aGh
 aGb
 cKN
@@ -107439,7 +107409,7 @@ jQU
 jQU
 aGq
 aGq
-lgl
+aGm
 aGb
 ahK
 jzG
@@ -109007,7 +108977,7 @@ bmE
 ahI
 ahI
 lrC
-lrC
+xzE
 lrC
 lrC
 lrC
@@ -109180,7 +109150,7 @@ ahJ
 bmE
 ahI
 lrC
-lrC
+opQ
 lrC
 lrC
 lrC
@@ -109267,7 +109237,7 @@ ahJ
 bmE
 ahI
 lrC
-lrC
+xzE
 lrC
 lrC
 lrC
@@ -114368,7 +114338,7 @@ gfS
 otU
 vIv
 apP
-ckW
+qqi
 nHR
 vSF
 uey
@@ -114456,7 +114426,7 @@ otU
 pXI
 apP
 ckW
-ckW
+kQw
 vSF
 bhL
 aKQ
@@ -114542,7 +114512,7 @@ bzz
 otU
 pXI
 omS
-ckW
+cif
 axN
 vSF
 sLX
@@ -117878,7 +117848,7 @@ adf
 aOq
 rpd
 bza
-bzi
+kPL
 byZ
 bzi
 dhB
@@ -129700,9 +129670,9 @@ bgz
 baU
 viL
 aMU
-pNU
+aLK
 aMH
-pNU
+aLK
 aSW
 aMr
 aLK
@@ -129873,8 +129843,8 @@ aYB
 bgA
 atT
 mnm
-jDl
-aNc
+aMW
+aLL
 aLL
 aMk
 aLY
@@ -129961,8 +129931,8 @@ bgB
 atT
 aNk
 aMW
-aNc
-ujI
+aLL
+aLL
 aMj
 aLY
 aMk
@@ -130049,11 +130019,11 @@ bUk
 bfS
 bfP
 bfG
-niP
+bfG
 aMa
 aMa
-pCU
-pCU
+aMa
+aMa
 beI
 brW
 brT
@@ -130136,11 +130106,11 @@ baU
 aNj
 aMW
 aLL
-aNc
-aNc
-aNc
 aLL
-aNc
+aLL
+aLL
+aLL
+aLL
 beJ
 aLr
 aLf
@@ -130222,13 +130192,13 @@ bgz
 avn
 aLf
 aMX
-aNc
-aNc
-sSO
-kLX
-aNc
-aNc
-urU
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+beJ
 beA
 aLf
 brl
@@ -130743,7 +130713,7 @@ auB
 bgF
 atT
 aLf
-fFf
+aNb
 aLO
 btd
 aMz
@@ -130830,10 +130800,10 @@ auB
 buf
 atT
 aLf
-aLf
-aLf
-aLf
-aLf
+aNc
+aLO
+aLO
+aLO
 bfp
 bfe
 bfe
@@ -130917,10 +130887,10 @@ wyO
 bug
 atT
 aLf
-aNe
-aMM
 aNd
-ocf
+aLO
+aLO
+aLO
 aLO
 aLO
 aLO
@@ -131004,11 +130974,11 @@ xKX
 buh
 atU
 aLf
-aNd
-aNd
-aNd
-aLf
-wgD
+aNe
+aMM
+aMI
+aMA
+aMu
 aMp
 aLA
 bsw
@@ -131091,9 +131061,9 @@ aNq
 acY
 aNm
 aLf
-aMI
-aMA
-aMu
+aLf
+aLf
+aLf
 aLf
 aLf
 aLf
@@ -131177,19 +131147,19 @@ buq
 buq
 bui
 bro
-ngm
-vrE
-vrE
-vrE
-vrE
-ayE
-egf
-rFG
+bro
+bro
+bro
+bro
+bro
+bro
+bro
+bro
 bsy
 bro
 bro
 brm
-uxh
+jJD
 kfc
 lrC
 lrC
@@ -131267,10 +131237,10 @@ jJD
 jJD
 bzs
 aSV
-jJD
-jJD
-jJD
-jJD
+ayE
+egf
+rFG
+uxh
 jJD
 aSV
 uxh

@@ -75,9 +75,10 @@
 /obj/item/clothing/glasses/night/medhud/plasma
 	name = "\improper M56-B head mounted sight"
 	gender = NEUTER
-	desc = "A stripped down version of the M56 headset and goggles system refitted for the XM99a Plasmagun. Has a low-res short-range imager, allowing for view of terrain."
+	desc = "A stripped down version of the M56 headset and goggles system refitted for the XM99a Plasmagun, and M41AE2 heavy pulse rifle. Has a low-res short-range imager, allowing for view of terrain."
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
+	req_skill_level = list(SKILL_SPEC_SMARTGUN, SKILL_SPEC_ALL)
 	vision_flags = SEE_INFRA|SEE_MOBS
 
 

@@ -389,7 +389,7 @@
 			return
 		if(HAS_TRAIT(XN, TRAIT_ABILITY_BURROWED))
 			return
-		if(istype(XN, /mob/living/carbon/xenomorph/queen) || istype(XN, /mob/living/carbon/xenomorph/crusher) || istype(XN, /mob/living/carbon/xenomorph/king))
+		if(istype(XN, /mob/living/carbon/xenomorph/queen) || istype(XN, /mob/living/carbon/xenomorph/crusher) || istype(XN, /mob/living/carbon/xenomorph/king) || istype(XN, /mob/living/carbon/xenomorph/praetorian) || istype(XN, /mob/living/carbon/xenomorph/ravager || istype(XN, /mob/living/carbon/xenomorph/hivelord)))
 			XN.visible_message(SPAN_DANGER("[icon2html(src, viewers(src))] The [name] clicks as [XN] steps on it."),
 			SPAN_DANGER("[icon2html(src, XN)] The [name] clicks as you step on it."),
 			SPAN_DANGER("You hear a click."))
