@@ -115,6 +115,7 @@
 /obj/structure/machinery/light/spot{
 	pixel_x = 16
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/rooms/engineering)
 "aax" = (
@@ -181,6 +182,7 @@
 /obj/structure/machinery/light/spot{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/northwest,
 /area/blackgold/middle/rooms/engineering)
 "aaJ" = (
@@ -557,6 +559,7 @@
 	dir = 4;
 	pixel_y = 16
 	},
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/rooms/engineering)
 "abT" = (
@@ -564,6 +567,7 @@
 	dir = 1;
 	pixel_y = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/engineering)
 "abU" = (
@@ -9054,6 +9058,7 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/squad)
 "aGf" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/southwest,
 /area/blackgold/middle/rooms/engineering)
 "aGg" = (
@@ -9077,7 +9082,8 @@
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/rooms/engineering)
 "aGl" = (
-/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/prop/invuln/joey,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/rooms/engineering)
 "aGm" = (
@@ -9096,15 +9102,18 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/engineering)
 "aGq" = (
+/obj/structure/closet/secure_closet/engineering_chief,
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/rooms/engineering)
 "aGr" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering)
 "aGs" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/southeast,
 /area/blackgold/middle/rooms/engineering)
 "aGt" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/south,
 /area/blackgold/middle/rooms/engineering)
 "aGu" = (
@@ -9125,6 +9134,8 @@
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/engineering)
 "aGy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/north,
 /area/blackgold/middle/rooms/engineering)
 "aGz" = (
@@ -9150,9 +9161,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/engineering)
 "aGE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/engineering)
 "aGF" = (
@@ -9164,11 +9178,14 @@
 "aGH" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/belt/utility/full,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering)
 "aGI" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/spray/cleaner,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering)
 "aGJ" = (
@@ -9266,12 +9283,23 @@
 /area/blackgold/middle/rooms/engineering)
 "aGW" = (
 /obj/structure/surface/table/almayer,
+/obj/item/prop{
+	desc = "Predecessor to the M56 the M38 was known for its extreme reliability in the field. This particular M38D is fondly remembered for its stalwart defence of the hangar bay during the Arcturian commando raid of the USS Almayer on Io.";
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon_state = "M56D_gun_e";
+	layer = 3.1;
+	name = "\improper M38D heavy machine gun 'Bess'";
+	pixel_x = -3;
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/west,
 /area/blackgold/middle/rooms/engineering)
 "aGX" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering)
 "aGY" = (
@@ -9360,11 +9388,31 @@
 /area/blackgold/middle/rooms/engineering/ot)
 "aHh" = (
 /obj/structure/surface/table/almayer,
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/obj/item/device/radio,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/northwest,
 /area/blackgold/middle/rooms/engineering)
 "aHi" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/power/apc/almayer/north,
+/obj/item/prop{
+	desc = "This M57 smartgun was utilized in field testing by the greatest smartgunner the USS Almayer ever had, Larry A.W Lewis, until he was fatally and tragically decapitated from a single clean shot to the head by a CLF sniper. As he didn't wear a helmet, it took weeks to find the body.";
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi';
+	icon_state = "m56c";
+	item_state = "m56c";
+	name = "broken M57 'Larry's Will' smartgun";
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/item/tool/screwdriver{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/north,
 /area/blackgold/middle/rooms/engineering)
 "aHj" = (
@@ -9441,6 +9489,7 @@
 /turf/open/floor/almayer/orange/northwest,
 /area/blackgold/middle/rooms/engineering)
 "aHu" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orangecorner/north,
 /area/blackgold/middle/rooms/engineering)
 "aHv" = (
@@ -9541,6 +9590,7 @@
 /turf/open/floor/almayer/orange/west,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHH" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHI" = (
@@ -9552,6 +9602,7 @@
 /obj/structure/machinery/reagentgrinder/industrial{
 	pixel_y = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHK" = (
@@ -9582,12 +9633,14 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHO" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/southeast,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHP" = (
@@ -9601,6 +9654,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering/ot)
 "aHQ" = (
@@ -9624,6 +9678,7 @@
 "aHU" = (
 /obj/structure/stairs/multiz/down,
 /obj/structure/platform/metal/ship/east,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/middle/rooms/engineering)
 "aHV" = (
@@ -9670,6 +9725,7 @@
 /area/blackgold/middle/rooms/engineering/ot)
 "aIc" = (
 /obj/structure/machinery/power/apc/almayer/north,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/north,
 /area/blackgold/middle/rooms/engineering/ot)
 "aId" = (
@@ -9743,6 +9799,7 @@
 	pixel_y = -21;
 	req_one_access = list(19,35)
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/middle/rooms/engineering/ot)
 "aIo" = (
@@ -10705,6 +10762,8 @@
 /obj/structure/sign/banners/forest{
 	pixel_y = -31
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/upper/rooms/kitchen)
 "aLq" = (
@@ -11018,10 +11077,9 @@
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/kitchen)
 "aMo" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/kitchen/rollingpin,
-/turf/open/floor/prison/kitchen,
-/area/blackgold/upper/rooms/kitchen)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/middle/rooms/engineering)
 "aMp" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/reagentgrinder{
@@ -11040,7 +11098,7 @@
 /turf/open/floor/almayer/green/west,
 /area/blackgold/upper/rooms/kitchen)
 "aMs" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/closet/crate/freezer,
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/kitchen)
 "aMt" = (
@@ -11105,9 +11163,9 @@
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/kitchen)
 "aMA" = (
-/obj/structure/closet/secure_closet/fridge/fish/stock,
-/turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering/ot)
 "aMB" = (
 /obj/structure/window/framed/almayer/white,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -11163,8 +11221,8 @@
 /turf/open/floor/almayer/green/west,
 /area/blackgold/upper/rooms/kitchen)
 "aMI" = (
-/obj/structure/closet/secure_closet/fridge/groceries/stock,
-/turf/open/floor/almayer/plate,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/upper/rooms/kitchen)
 "aMJ" = (
 /obj/structure/surface/table/almayer,
@@ -11293,9 +11351,9 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aNb" = (
-/obj/structure/closet/crate/freezer,
-/turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/engineering)
 "aNc" = (
 /obj/structure/machinery/vending/ingredients,
 /turf/open/floor/almayer/plate,
@@ -16656,6 +16714,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/west,
 /area/blackgold/middle/rooms/engineering)
 "bbY" = (
@@ -16665,6 +16724,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/engineering)
 "bbZ" = (
@@ -16674,6 +16736,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering)
 "bca" = (
@@ -16683,6 +16746,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/south,
 /area/blackgold/middle/rooms/engineering)
 "bcb" = (
@@ -16692,6 +16756,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/engineering)
 "bcc" = (
@@ -16702,6 +16767,9 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering)
 "bcd" = (
@@ -16738,6 +16806,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering)
 "bci" = (
@@ -16747,6 +16816,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/rooms/engineering)
 "bcj" = (
@@ -16789,6 +16859,7 @@
 "bct" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering)
 "bcu" = (
@@ -17078,6 +17149,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/hallways/mid/aft)
 "bdg" = (
@@ -17653,6 +17725,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/kitchen)
 "beJ" = (
@@ -17671,6 +17744,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/east,
 /area/blackgold/upper/rooms/kitchen)
 "beL" = (
@@ -17897,6 +17971,8 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/kitchen/rollingpin,
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/kitchen)
 "bfq" = (
@@ -18106,6 +18182,7 @@
 "bfP" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/upper/rooms/kitchen)
 "bfQ" = (
@@ -20421,10 +20498,14 @@
 /area/blackgold/middle/hallways/mid/aft)
 "bmK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/rooms/engineering)
 "bmL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering)
 "bmM" = (
@@ -20474,12 +20555,14 @@
 /area/blackgold/middle/maint/port/fore)
 "bmT" = (
 /obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering)
 "bmU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/engineering)
 "bmV" = (
@@ -20550,6 +20633,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/engineering/ot)
 "bnh" = (
@@ -20650,6 +20734,7 @@
 /area/blackgold/middle/rooms/squad)
 "bnw" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/engineering/ot)
 "bnx" = (
@@ -20670,6 +20755,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/engineering/ot)
 "bnB" = (
@@ -25098,7 +25184,7 @@
 /obj/structure/machinery/door_control{
 	pixel_y = 23;
 	name = "\improper Shutter Control";
-	id = "BG Brig Cell Maintenance";
+	id = "BG Cargo Exterior";
 	req_access = list();
 	req_one_access = list(19,21,27);
 	pixel_x = -8
@@ -25123,7 +25209,7 @@
 /obj/structure/machinery/door_control{
 	pixel_y = -22;
 	name = "\improper Shutter Control";
-	id = "BG Brig Cell Maintenance";
+	id = "BG Cargo Exterior";
 	req_access = list();
 	req_one_access = list(19,21,27);
 	pixel_x = -8
@@ -28292,6 +28378,10 @@
 	},
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
+"ceB" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/west,
+/area/blackgold/middle/rooms/engineering)
 "cfq" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/wood/ship,
@@ -28377,6 +28467,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/pumps/port)
+"ckh" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/engineering)
 "cky" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/tool/kitchen/utensil/spoon,
@@ -28426,6 +28523,10 @@
 /area/blackgold/lower/rooms/req)
 "cnt" = (
 /obj/structure/bed/chair/office/dark,
+/obj/structure/sign/banners/blackbriar{
+	pixel_x = 6;
+	pixel_y = 32
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "cnQ" = (
@@ -28479,6 +28580,10 @@
 /obj/item/tool/soap/deluxe,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
+"cre" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/northeast,
+/area/blackgold/middle/rooms/engineering)
 "crt" = (
 /obj/structure/stairs/perspective{
 	dir = 4;
@@ -28543,6 +28648,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/west,
 /area/blackgold/upper/hallways/mid/mid)
+"cvs" = (
+/obj/structure/closet/secure_closet/fridge/groceries/stock,
+/obj/structure/closet/secure_closet/fridge/organic/stock,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/kitchen)
 "cvt" = (
 /obj/structure/pallet/standard/weapon/mk1,
 /turf/open/floor/almayer/plate,
@@ -29003,6 +29113,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/redcorner/east,
 /area/blackgold/upper/rooms/evacuation)
+"cZP" = (
+/obj/structure/prop/invuln/joey,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/southwest,
+/area/blackgold/middle/rooms/engineering)
 "dbc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/attachments/squad{
@@ -29583,6 +29698,11 @@
 	dir = 1
 	},
 /area/blackgold/lower/rooms/aicore)
+"dLB" = (
+/obj/structure/platform/metal/ship/west,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering)
 "dLN" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/east,
@@ -29920,6 +30040,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/hallways/port/fore)
+"efE" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/engineering)
 "efG" = (
 /obj/structure/sink{
 	pixel_y = 17
@@ -30295,6 +30421,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/captain_mess)
+"eAm" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
 "eCn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -30324,10 +30459,27 @@
 "eDY" = (
 /turf/open/floor/almayer/uscm/directional/southeast,
 /area/blackgold/upper/rooms/cic)
+"eEq" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/trash/USCMtray,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
 "eEB" = (
 /obj/effect/landmark/start/synthetic,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/commandbunks/synth)
+"eEZ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/pen,
+/obj/item/tool/pen,
+/obj/item/tool/pen,
+/obj/item/notepad,
+/obj/item/notepad,
+/obj/item/tool/pen,
+/obj/item/tool/pen,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/brig/cells)
 "eFg" = (
 /obj/effect/vehicle_spawner/tank/fixed/autocannon{
 	dir = 1
@@ -30433,6 +30585,9 @@
 /obj/item/tool/pen/multicolor/fountain{
 	pixel_y = -11;
 	pixel_x = 3
+	},
+/obj/structure/machinery/computer/overwatch/groundside_operations{
+	dir = 4
 	},
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
@@ -30582,6 +30737,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/squad)
+"eTt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
 "eTy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
@@ -31816,6 +31976,11 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/hallways/mid/fore)
+"gfn" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/middle/rooms/engineering)
 "gfF" = (
 /obj/structure/machinery/scoreboard_button{
 	id = "BG Basketball";
@@ -31873,6 +32038,13 @@
 "giV" = (
 /turf/open/floor/almayer/blue/southeast,
 /area/blackgold/upper/rooms/captain_mess)
+"gjg" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Walk in Freezer";
+	req_access = list(30)
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/kitchen)
 "gjo" = (
 /obj/item/ammo_magazine/hardpoint/ace_autocannon,
 /obj/structure/surface/rack,
@@ -32498,6 +32670,11 @@
 	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/underdeck/req)
+"gPB" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
 "gPS" = (
 /obj/structure/machinery/cryopod,
 /obj/structure/machinery/light{
@@ -32774,6 +32951,10 @@
 "hhW" = (
 /turf/open/floor/almayer/plating_striped/east,
 /area/blackgold/underdeck/req)
+"hhZ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/middle/rooms/engineering)
 "hid" = (
 /turf/open/floor/almayer/uscm/directional/northwest,
 /area/blackgold/upper/rooms/cic)
@@ -33374,6 +33555,11 @@
 /obj/structure/platform/metal/ship/corner/west,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
+"hMJ" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/middle/rooms/engineering)
 "hMO" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_striped/south,
@@ -33696,6 +33882,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/hallways/mid/fore)
+"iiv" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/west,
+/area/blackgold/upper/rooms/kitchen)
 "iiA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -33930,7 +34120,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad)
 "isU" = (
-/obj/structure/prop/invuln/joey,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/west,
 /area/blackgold/middle/rooms/engineering)
 "isZ" = (
@@ -34584,6 +34775,11 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/brig/warden)
+"jbx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
 "jby" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/reinforced,
@@ -34644,6 +34840,14 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/telecomms)
+"jdF" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering/ot)
 "jdV" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/drinks/coffeecup/uscm{
@@ -34682,6 +34886,14 @@
 	color = "#D5D5D5"
 	},
 /area/space)
+"jfB" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/engineering)
 "jfE" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -35381,6 +35593,7 @@
 /area/blackgold/middle/rooms/briefing)
 "jQU" = (
 /obj/structure/closet/radiation,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/rooms/engineering)
 "jRU" = (
@@ -36317,6 +36530,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/chief)
+"kUf" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering)
 "kUn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -36759,6 +36978,12 @@
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_cargo,
 /area/blackgold/lower/rooms/aicore)
+"lnS" = (
+/obj/item/storage/toolbox/mechanical/green,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering)
 "lok" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blue/west,
@@ -37068,8 +37293,13 @@
 /turf/open/floor/almayer/black/north,
 /area/blackgold/lower/hallways/star/fore)
 "lEm" = (
-/obj/structure/prop/invuln/joey,
-/turf/open/floor/almayer/orange/southwest,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering/ot)
+"lEv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
 /area/blackgold/middle/rooms/engineering)
 "lEK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -37476,6 +37706,11 @@
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
+"mbR" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/flooredge/west,
+/area/blackgold/middle/rooms/engineering)
 "mcd" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -37608,6 +37843,10 @@
 	icon_state = "mono"
 	},
 /area/blackgold/underdeck/vehicle)
+"mhS" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
 "mhZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -38009,6 +38248,16 @@
 "mFg" = (
 /turf/open/floor/almayer/flooredge/northwest,
 /area/blackgold/lower/rooms/req)
+"mFA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
 "mGk" = (
 /obj/structure/machinery/cryopod{
 	dir = 1
@@ -38154,6 +38403,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
+"mMG" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
 "mMK" = (
 /obj/structure/closet/secure_closet/surgical{
 	pixel_x = 30
@@ -38271,6 +38526,11 @@
 "mQz" = (
 /turf/open/floor/almayer/black/northeast,
 /area/blackgold/lower/hallways/mid/mid)
+"mQM" = (
+/obj/structure/powerloader_wreckage,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/southeast,
+/area/blackgold/middle/rooms/engineering)
 "mQZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -38629,6 +38889,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/north,
 /area/blackgold/middle/rooms/hangar)
+"nfZ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/silver/north,
+/area/blackgold/middle/hallways/mid/aft)
 "ngn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -38721,6 +38985,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/outer,
 /area/blackgold/lower/maint/star/aft)
+"nmA" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering)
 "nmD" = (
 /obj/structure/pallet/standard/empty,
 /turf/open/floor/plating,
@@ -38753,6 +39024,11 @@
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/blue/south,
 /area/blackgold/upper/rooms/cic/conference)
+"noX" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
 "npl" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -39514,6 +39790,11 @@
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/cryo)
+"nWD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/middle/rooms/engineering)
 "nXb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -40330,6 +40611,10 @@
 "oON" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks)
+"oPm" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/middle/rooms/engineering)
 "oPL" = (
 /obj/structure/stairs,
 /turf/open/floor/plating,
@@ -40687,10 +40972,10 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/cryo)
 "pfX" = (
-/obj/structure/sign/banners/blackbriar{
-	pixel_x = 6;
-	pixel_y = 32
+/obj/structure/closet/secure_closet/cmdcabinet{
+	pixel_y = 24
 	},
+/obj/item/device/cotablet,
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
 "phw" = (
@@ -40977,6 +41262,16 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/cryo)
+"puQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/hallways/mid/aft)
 "pvi" = (
 /turf/open/floor/almayer/red/north,
 /area/blackgold/middle/rooms/orbital)
@@ -41174,6 +41469,12 @@
 "pDW" = (
 /turf/open/floor/almayer/orange/north,
 /area/blackgold/upper/rooms/cic)
+"pEl" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/middle/rooms/engineering)
 "pEE" = (
 /obj/structure/surface/rack,
 /obj/item/hardpoint/locomotion/truck/wheels/jeep,
@@ -41445,6 +41746,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/cells)
+"pVu" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/flooredge/south,
+/area/blackgold/middle/rooms/engineering)
 "pVH" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/companycommand/delta)
@@ -41649,6 +41956,11 @@
 	icon_state = "containment_window_h"
 	},
 /area/blackgold/underdeck)
+"qhW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/almayer,
+/area/blackgold/middle/rooms/engineering)
 "qik" = (
 /obj/structure/barricade/handrail,
 /obj/structure/surface/rack,
@@ -41917,6 +42229,10 @@
 	},
 /turf/open/floor/almayer/red/northwest,
 /area/blackgold/upper/rooms/cic)
+"qwh" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/rooms/engineering)
 "qww" = (
 /obj/structure/largecrate/supply/weapons/m56d,
 /turf/open/floor/almayer/plating_striped/north,
@@ -41968,6 +42284,10 @@
 /obj/item/seeds/grapeseed,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/cells)
+"qAu" = (
+/obj/effect/decal/cleanable/vomit,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
 "qAC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/west,
@@ -42172,6 +42492,10 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/cells)
+"qIB" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/almayer/reinforced,
+/area/blackgold/middle/rooms/engineering/ot)
 "qID" = (
 /obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer/red/south,
@@ -42830,6 +43154,13 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/training,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/range)
+"rnc" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/hallways/mid/aft)
 "rnF" = (
 /obj/structure/platform/metal/ship/east,
 /turf/open/floor/almayer/black/southeast,
@@ -42947,6 +43278,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/hallways/port/fore)
+"ruX" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/east,
+/area/blackgold/middle/rooms/engineering)
 "rvt" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -43650,6 +43986,10 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/middle/rooms/squad/prep)
+"sko" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/almayer,
+/area/blackgold/upper/rooms/evacuation/aft)
 "skx" = (
 /obj/structure/machinery/vending/security/riot{
 	pixel_y = 16;
@@ -43874,6 +44214,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/req)
+"svz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/north,
+/area/blackgold/upper/rooms/kitchen)
 "svI" = (
 /turf/closed/wall/almayer,
 /area/blackgold/upper/rooms/commandbunks/xo)
@@ -43900,6 +44244,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/west,
 /area/blackgold/lower/hallways/star/fore)
+"swA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering)
 "swB" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/reinforced{
 	dir = 1
@@ -44098,12 +44452,23 @@
 	},
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/briefing)
+"sGs" = (
+/obj/structure/closet/secure_closet/fridge/fish/stock,
+/obj/structure/closet/secure_closet/fridge/organic/stock,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/kitchen)
 "sGt" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
 /turf/open/floor/hybrisa/carpet/carpetbeige,
 /area/blackgold/upper/rooms/commandbunks/staff)
+"sGB" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/west,
+/area/blackgold/middle/rooms/engineering)
 "sGI" = (
 /obj/structure/machinery/computer/skills{
 	pixel_y = 16;
@@ -44668,9 +45033,10 @@
 /turf/closed/wall/almayer,
 /area/blackgold/upper/rooms/computer)
 "tjV" = (
-/obj/detector_hud,
-/turf/open/space/basic,
-/area/space)
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/flooredge/southeast,
+/area/blackgold/middle/rooms/engineering)
 "tjZ" = (
 /turf/open/floor/almayer_hull/outerhull_dir/southwest,
 /area/space)
@@ -45004,6 +45370,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/rooms/req)
+"tLr" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper/colonial_grunts,
+/obj/item/paper/colonial_grunts,
+/obj/item/paper/colonial_grunts,
+/obj/item/paper/colonial_grunts,
+/obj/item/paper/colonial_grunts,
+/obj/item/paper/colonial_grunts,
+/obj/item/tool/pen,
+/obj/item/tool/pen,
+/turf/open/floor/wood/ship,
+/area/blackgold/lower/rooms/brig/cells)
 "tLv" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
@@ -45276,6 +45654,11 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/hallways/port/fore)
+"ueR" = (
+/obj/item/stool,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/east,
+/area/blackgold/upper/rooms/kitchen)
 "ueS" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/trash/USCMtray,
@@ -45621,6 +46004,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/southwest,
 /area/blackgold/upper/rooms/cic)
+"uzw" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
 "uzz" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/magazine/boots/n117{
@@ -46006,6 +46397,11 @@
 "uSo" = (
 /turf/open/floor/plating/bare_catwalk,
 /area/supply/dock/uscm)
+"uSy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/northwest,
+/area/blackgold/middle/rooms/engineering)
 "uSG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
@@ -46689,6 +47085,11 @@
 /obj/structure/machinery/power/apc/almayer/hardened/west,
 /turf/open/floor/almayer/orange/southwest,
 /area/blackgold/upper/rooms/commandbunks)
+"vCA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/test_floor6,
+/area/blackgold/middle/rooms/engineering)
 "vCF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/floodlights,
@@ -46866,6 +47267,11 @@
 /obj/structure/largecrate/supply/supplies/sandbags,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
+"vLY" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/rooms/engineering)
 "vMi" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blue/west,
@@ -47492,6 +47898,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
+"wyF" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/engineering)
 "wyI" = (
 /obj/structure/pallet/standard/food/mres,
 /obj/structure/machinery/light/small/red{
@@ -47513,6 +47926,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/req)
+"wzv" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/radio,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/engineering)
 "wzK" = (
 /obj/structure/pallet/standard/empty,
 /turf/open/floor/almayer/plate,
@@ -47618,6 +48037,10 @@
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/blue/south,
 /area/blackgold/upper/rooms/cic)
+"wHW" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/blackgold/middle/rooms/engineering)
 "wIl" = (
 /obj/structure/platform/metal/ship/west,
 /obj/structure/machinery/light/spot{
@@ -47693,6 +48116,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/silver/east,
 /area/blackgold/upper/rooms/computer)
+"wLe" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating_striped/west,
+/area/blackgold/middle/rooms/engineering)
 "wLT" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/closet/secure_closet/surgical{
@@ -48297,6 +48724,13 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
+"xpb" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ship,
+/area/blackgold/upper/rooms/kitchen)
 "xpR" = (
 /obj/structure/machinery/light/spot/blue{
 	dir = 4
@@ -48809,6 +49243,10 @@
 "xUi" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/cryo)
+"xUp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/middle/rooms/engineering)
 "xUs" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/west,
@@ -48896,6 +49334,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
+"xYo" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/weldingtool{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/clothing/head/welding,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/middle/rooms/engineering)
 "xYE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/outer,
@@ -48951,6 +49399,10 @@
 /obj/structure/machinery/power/apc/almayer/hardened/east,
 /turf/open/floor/almayer/orange/southeast,
 /area/blackgold/upper/rooms/captain_mess)
+"ybN" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/north,
+/area/blackgold/middle/rooms/engineering)
 "ybQ" = (
 /obj/structure/platform/metal/ship/corner/east,
 /obj/structure/machinery/brig_cell/cell_5{
@@ -78864,7 +79316,7 @@ ihW
 xGR
 peP
 iBv
-iBv
+eEZ
 iEj
 biO
 biD
@@ -78952,7 +79404,7 @@ jsl
 peP
 ygT
 pwc
-iBv
+tLr
 bsq
 biE
 peP
@@ -105842,7 +106294,7 @@ aGb
 aGb
 aGb
 aGb
-aGb
+qhW
 aGb
 aGb
 blS
@@ -105924,13 +106376,13 @@ aHQ
 aHQ
 aHz
 aaI
-aGn
-aGn
+ceB
+ceB
 bcd
-aGn
-aGn
+ceB
+ceB
 isU
-lEm
+aGj
 aGb
 bmD
 bmz
@@ -106010,14 +106462,14 @@ aIe
 aIe
 aHR
 aHz
-aHk
+nWD
 aGo
-aGr
+xUp
+aNb
 aGz
-aGz
-aGr
+xUp
 aGo
-aGh
+aGk
 aGb
 bmE
 ahJ
@@ -106097,14 +106549,14 @@ aIf
 aIf
 aHS
 aHz
-aHk
-aGo
-aGV
+ybN
+wHW
+gPB
 aGH
-aGA
-aGu
+wzv
+noX
 aGp
-aGh
+vLY
 aGb
 bmE
 ahJ
@@ -106175,7 +106627,7 @@ mnt
 vNW
 tUQ
 ato
-bou
+puQ
 asu
 aIT
 aIF
@@ -106185,12 +106637,12 @@ aIg
 aHU
 aHz
 aHk
-aGo
+wHW
 aGV
-aGC
+efE
 aGB
 aGv
-aGp
+nmA
 aGh
 aGb
 bmE
@@ -106262,22 +106714,22 @@ jXt
 abb
 aaS
 acg
-bda
+uye
 asu
 aGb
 abT
+jfB
 aHV
 aHV
-aHV
-aHV
+wyF
 aHz
-aHk
+ybN
 aGo
-aGV
+gPB
 aGI
 aGC
 aGw
-aGp
+nmA
 aau
 aGb
 cKN
@@ -106349,23 +106801,23 @@ abq
 abc
 aaW
 ato
-bda
+uye
 asu
 aGb
 aHt
+ceB
+ceB
 aGn
-aGn
-aGn
-aGn
+ceB
 aGn
 aHu
 aGo
-aGV
+gPB
 aGA
 aGC
 aGu
-aGp
-aGh
+nmA
+qwh
 aGb
 cKN
 ahJ
@@ -106436,14 +106888,14 @@ avR
 abd
 aIZ
 ato
-bda
+uye
 asu
 aIT
 aIG
 aGo
-aGz
-aGz
-aGz
+aNb
+aNb
+aNb
 aGz
 aGz
 aGo
@@ -106522,24 +106974,24 @@ avX
 avS
 ihE
 aIZ
-ato
+nfZ
 bou
 asu
 aIT
 aHj
 aGo
 aGz
-aGz
-aGz
-aGz
-aGz
-aGo
+aNb
+aNb
+aNb
+aNb
+wHW
 aGr
 aGz
 bmU
-aGr
-aGo
-aGh
+xUp
+wHW
+qwh
 aGb
 cKN
 ahJ
@@ -106609,7 +107061,7 @@ avY
 aJe
 aaY
 aIZ
-ato
+nfZ
 bov
 asu
 aIT
@@ -106624,8 +107076,8 @@ bce
 bce
 bce
 bbW
-aGq
-aGq
+aMo
+aMo
 aGi
 aGb
 cKN
@@ -106696,7 +107148,7 @@ bdw
 bdw
 aJc
 avF
-ato
+nfZ
 bou
 asu
 aGb
@@ -106704,15 +107156,15 @@ aII
 aHW
 aIj
 aIh
-aHW
+dLB
 aHB
 aGb
 aGb
 aGb
 aGx
 aGD
-aGx
-aGb
+vCA
+eFm
 aGb
 aGb
 cKN
@@ -106783,24 +107235,24 @@ aJf
 aJf
 bdr
 avF
-ato
+nfZ
 bda
 asu
 aGb
 aIJ
 aHX
 aHX
-aHX
-aHX
+wLe
+wLe
 aHC
 aGb
 aHh
 aGW
-aGn
+ceB
 bbX
-aGn
-aGn
-aGj
+sGB
+ceB
+cZP
 aGb
 cKN
 jzG
@@ -106870,24 +107322,24 @@ avZ
 abr
 abe
 aIZ
-ato
+nfZ
 bda
 asu
 aGb
 aIK
 aHY
 aHY
-aHY
+hhZ
 aHY
 aHD
 aGb
 aHi
-aGp
-aGo
+nmA
+wHW
 bbY
-aGo
-aGo
-aGk
+lEv
+lEv
+aGl
 aGb
 cKN
 hld
@@ -106968,12 +107420,12 @@ aGb
 aGb
 aGb
 aGb
-aHj
+gfn
 aGX
-aGr
+jbx
 bbZ
-aGr
-aGr
+xUp
+xUp
 aGl
 aGb
 cKN
@@ -107048,19 +107500,19 @@ acg
 bdc
 bob
 aGb
-aHt
-aGn
-aGn
+uSy
+ceB
+ceB
 aGn
 aGn
 aGf
 aGb
-aHj
-aGz
+xYo
+aNb
 aGE
 bca
 aGt
-aGs
+tjV
 aav
 aGb
 cKN
@@ -107137,18 +107589,18 @@ boc
 aHv
 aHk
 aGo
-aGz
-aGz
-aGo
+aNb
+aNb
+wHW
 aGh
 aHv
-aHk
-aGE
+ybN
+mbR
 aGs
 bcb
 aGy
-aGt
-aGh
+pVu
+qwh
 aGb
 cKN
 naC
@@ -107218,23 +107670,23 @@ aWQ
 aWL
 aWC
 aaS
-ato
+nfZ
 bdf
 boe
 bcg
 bck
 bcr
+ckh
 bct
-bct
-bcr
+kUf
 bcp
 bcg
-bck
+pEl
 bch
-bcg
+uzw
 bcc
 bmL
-bmL
+mMG
 bmK
 aVL
 mZz
@@ -107305,24 +107757,24 @@ abI
 abs
 abf
 aaS
-ato
-bda
+nfZ
+uye
 bcF
 aGb
 aHl
-aGq
-aGq
+oPm
+ruX
 abS
 aGq
 aGm
 aGb
-aHk
-bbY
-aGo
-aGo
-aGo
-aGo
-aGh
+ybN
+swA
+wHW
+wHW
+lEv
+lnS
+qwh
 aGb
 cKN
 fbV
@@ -107392,8 +107844,8 @@ abK
 abt
 abg
 aaS
-ato
-bda
+nfZ
+uye
 asu
 aGb
 aGb
@@ -107403,13 +107855,13 @@ aGb
 aGb
 aGb
 aGb
-aHl
+cre
 bci
 jQU
 jQU
-aGq
-aGq
-aGm
+hMJ
+aMo
+mQM
 aGb
 ahK
 jzG
@@ -107567,7 +108019,7 @@ abu
 abh
 aWr
 ato
-bou
+puQ
 asu
 aIV
 aIM
@@ -107654,7 +108106,7 @@ abv
 abi
 aWr
 ato
-bov
+fgu
 asu
 aIW
 aGF
@@ -107741,18 +108193,18 @@ abw
 lpC
 aaX
 acg
-bou
+puQ
 asu
 aIV
 aIN
 aIw
-aHa
+lEm
 aHm
 aHa
 aHI
-bnA
-aHm
-aHa
+jdF
+aMA
+lEm
 aGL
 aGF
 bmE
@@ -107835,11 +108287,11 @@ aIN
 aIx
 aIk
 aHm
-aHa
+lEm
 aHJ
 bnA
-aHm
-aHa
+aMA
+lEm
 aGM
 aGF
 bmE
@@ -107922,11 +108374,11 @@ aGF
 aIy
 aHa
 aHm
-aHa
+lEm
 aHH
 bnA
-aHm
-aHa
+aMA
+lEm
 aGN
 aGF
 bmE
@@ -108350,8 +108802,8 @@ abA
 aJb
 aJb
 ato
-boy
-asu
+rnc
+hHb
 aGG
 aIQ
 aHe
@@ -108437,8 +108889,8 @@ abn
 avL
 aJb
 acg
-boy
-asu
+rnc
+hHb
 aGG
 aHq
 aHf
@@ -108533,7 +108985,7 @@ aIo
 aGG
 aIc
 aHN
-aGG
+qIB
 aHr
 aHd
 aGT
@@ -108620,7 +109072,7 @@ aIp
 aGG
 aId
 aHO
-aGG
+qIB
 aHs
 aHg
 aGU
@@ -111523,7 +111975,7 @@ kPX
 kPX
 kPX
 kPX
-tjV
+kPX
 ajS
 "}
 (237,1,3) = {"
@@ -129587,8 +130039,8 @@ aKV
 aKV
 aKV
 aKV
-aKV
-aKV
+sko
+sko
 aKV
 aKV
 aKV
@@ -129676,7 +130128,7 @@ aLK
 aSW
 aMr
 aLK
-aLK
+iiv
 aLo
 aLf
 brN
@@ -129758,7 +130210,7 @@ atT
 aLf
 aMV
 aLL
-aLL
+mhS
 aLX
 aLX
 aLX
@@ -129844,14 +130296,14 @@ bgA
 atT
 mnm
 aMW
-aLL
-aLL
+mhS
+mhS
 aMk
 aLY
 aMj
 aLY
-aLL
-aLq
+eTt
+aMI
 aLf
 brl
 jJD
@@ -129930,14 +130382,14 @@ aCx
 bgB
 atT
 aNk
-aMW
-aLL
-aLL
-aMj
+svz
+mhS
+mhS
+eEq
 aLY
 aMk
 aLZ
-aLL
+mhS
 aLq
 aLf
 brl
@@ -130018,12 +130470,12 @@ bgC
 bUk
 bfS
 bfP
+xpb
 bfG
-bfG
+eAm
 aMa
 aMa
-aMa
-aMa
+eAm
 beI
 brW
 brT
@@ -130106,11 +130558,11 @@ baU
 aNj
 aMW
 aLL
+qAu
+mhS
 aLL
 aLL
-aLL
-aLL
-aLL
+eTt
 beJ
 aLr
 aLf
@@ -130195,10 +130647,10 @@ aMX
 aLL
 aLL
 aLL
+mhS
+mhS
 aLL
-aLL
-aLL
-beJ
+mFA
 beA
 aLf
 brl
@@ -130280,9 +130732,9 @@ baU
 aLf
 aMY
 aLM
-aMl
-aMl
-aMl
+ueR
+ueR
+ueR
 aMl
 aLM
 beK
@@ -130626,12 +131078,12 @@ auB
 aFw
 atT
 aLf
-aNb
+aNc
 aLO
-bsv
-aMy
+btd
+aLO
 aMs
-aMn
+aMs
 aLO
 beL
 aLv
@@ -130713,12 +131165,12 @@ auB
 bgF
 atT
 aLf
-aNb
-aLO
-btd
-aMz
+aLf
+gjg
+aLf
+aLf
 aMt
-aMo
+aMn
 bsI
 bsu
 aLx
@@ -130800,10 +131252,10 @@ auB
 buf
 atT
 aLf
-aNc
-aLO
-aLO
-aLO
+aNd
+aNd
+aNe
+aLf
 bfp
 bfe
 bfe
@@ -130887,11 +131339,11 @@ wyO
 bug
 atT
 aLf
+aMM
 aNd
-aLO
-aLO
-aLO
-aLO
+sGs
+aLf
+aMy
 aLO
 aLO
 bsv
@@ -130974,11 +131426,11 @@ xKX
 buh
 atU
 aLf
-aNe
-aMM
-aMI
-aMA
+cvs
+aNd
 aMu
+aLf
+aMz
 aMp
 aLA
 bsw
