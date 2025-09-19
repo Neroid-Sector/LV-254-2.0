@@ -71,7 +71,6 @@
 
 /obj/effect/vehicle_spawner/miltruck/Initialize()
 	. = ..()
-	dir = pick(NORTH,SOUTH,EAST,WEST)
 	spawn_vehicle()
 	qdel(src)
 

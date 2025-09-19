@@ -1479,6 +1479,16 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 	if(destroy)
 		qdel(src)
 
+//----------------Budget_item----------------\\
+
+/obj/item/reqcard
+	name = "Military budget Authorization card"
+	desc = "Used to allocate funding to automated equipment vendors and weapon racks around the ship."
+	icon = 'icons/obj/items/card.dmi'
+	icon_state = "centcom_old"
+	w_class = SIZE_TINY
+	var/budget_funds = 500000
+
 /obj/structure/machinery/auto_rack
 	name = "ColMarTech Automated Armaments Storage Carousel"
 	desc = "The ARMAT brand weapons rack has deceptively small storage, presenting only a limited single stack of storage clamps, the device automatically cycles to a fully stocked shelf when the current one is depleted. This one is configured to hold ."
@@ -1497,6 +1507,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 	var/initial_stored = 0
 	var/max_restocks = 5
 	var/remaining_restocks = 5
+	var/restock_cost = 10000
 	var/working = FALSE
 	var/damage = 500 //Industrial machine should tear your arm off... its gonna fucking hurt
 	var/penetration = 5000 // heavy machinery does not care about your body armor because fuck you thats why
@@ -1518,7 +1529,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 		while(i < initial_stored)
 			contents += new restock_type(src)
 			i++
-		if(locked)
+	if(locked)
 		locked = FALSE
 		INVOKE_ASYNC(src,TYPE_PROC_REF(/obj/structure/machinery/auto_rack/,locking_animation_proc))
 
@@ -1528,15 +1539,19 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 
 	if(!working == TRUE && istype(O, /obj/item/card/id))
 		if(allowed(user))
+			playsound(loc, 'sound/machines/chime.ogg', 25)
 			INVOKE_ASYNC(src,TYPE_PROC_REF(/obj/structure/machinery/auto_rack/,locking_animation_proc))
 			locked = !locked
 			for(var/mob/mob in viewers(user, 3))
 				if((mob.client && !( mob.blinded )))
 					to_chat(mob, SPAN_NOTICE("The rack has been [locked ? null : "un"]locked by [user]."))
 					return
+		else
+			playsound(loc, 'sound/machines/buzz-sigh.ogg', 25)
+			return
 	else
 		if(locked)
-			playsound(loc, 'sound/machines/chime.ogg', 25)
+			playsound(loc, 'sound/machines/buzz-sigh.ogg', 25)
 			return
 		else if(istype(O, stocked_weapon) && contents.len < max_stored)
 			user.drop_inv_item_to_loc(O, src)
@@ -1558,6 +1573,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 				remaining_restocks = (remaining_restocks - 1)
 				return
 			if(remaining_restocks == 0)
+				playsound(loc, 'sound/machines/buzz-sigh.ogg', 25)
 				to_chat(user, SPAN_WARNING("[src] requires supply budget re-allocation. Contact your Supply officer to reset!"))
 				return
 	else if(!working == TRUE && locked)
@@ -1643,12 +1659,3 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 		icon_state = "[initial(icon_state)]_0"
 		overlays.Cut()
 		overlays += image(icon,icon_state)
-
-//----------------Budget_item----------------\\
-
-/obj/item/reqcard
-	name = "Military budget Authorization card"
-	desc = "Used to allocate funding to automated equipment vendors and weapon racks around the ship."
-	icon = 'icons/obj/items/card.dmi'
-	icon_state = "centcom_old"
-	w_class = SIZE_TINY

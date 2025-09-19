@@ -447,17 +447,22 @@
 			item_icons[WEAR_BACK] = 'icons/mob/humans/onmob/clothing/back/backpacks_by_map/urban.dmi'
 
 /obj/item/storage/backpack/marine/ammo_rack
-	name = "\improper IMP ammo rack"
-	desc = "A bare IMP frame with buckles designed to hold multiple ammo cans, but can fit any cumbersome box thanks to Marine ingenuity. Helps you lug around extra rounds or supplies."
+	name = "\improper IMP Ammo Bearer Pack"
+	desc = "A heavy duty, bare IMP frame with buckles designed to hold multiple ammo cans, HMG magazines, or other crew served munitions, but can be made to fit any cumbersome box thanks to Marine ingenuity. Your back pain will not be service related."
 	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
-	storage_slots = 3
+	w_class = SIZE_MASSIVE
+	storage_slots = 4
 	icon_state = "ammo_pack_0"
 	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
 	item_icons = list(
 		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
 	)
-	can_hold = list(/obj/item/ammo_box, /obj/item/stack/folding_barricade)
+	can_hold = list(/obj/item/ammo_box, /obj/item/ammo_magazine/smartgun, /obj/item/ammo_magazine/rifle/lmg, /obj/item/ammo_magazine/m60, /obj/item/ammo_magazine/pkp, /obj/item/ammo_magazine/m56d, /obj/item/ammo_magazine/m2c, /obj/item/stack/folding_barricade, /obj/item/mortar_shell, /obj/item/storage/box,)
 	max_w_class = SIZE_MASSIVE
+	bypass_w_limit = list(
+		/obj/item/storage/box/wood,
+		/obj/item/storage/box/nade_box,
+	)
 	throw_range = 0
 	xeno_types = null
 	var/base_icon_state = "ammo_pack"

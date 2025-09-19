@@ -184,7 +184,7 @@
 	can_hold = list(/obj/item/weapon/gun/flamer, /obj/item/ammo_magazine/flamer_tank, /obj/item/attachable/attached_gun/extinguisher)
 
 /obj/item/storage/box/guncase/flamer/fill_preset_inventory()
-	new /obj/item/weapon/gun/flamer(src)
+	new /obj/item/weapon/gun/flamer/auto(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/ammo_magazine/flamer_tank(src)
 	new /obj/item/attachable/attached_gun/extinguisher(src)
@@ -204,14 +204,14 @@
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/pamphlet/skill/machinegunner(src)
-	new /obj/item/storage/belt/marine/m2c(src)
+	new /obj/item/storage/backpack/marine/ammo_rack(src)
 
 //------------
 /obj/item/storage/box/guncase/m2c
 	name = "\improper M2C heavy machine gun case"
 	desc = "A gun case containing the M2C heavy machine gun. It doesn't come loaded, but it does have spare ammunition. You'll have to order extras from requisitions."
 	storage_slots = 7
-	can_hold = list(/obj/item/pamphlet/skill/machinegunner, /obj/item/device/m2c_gun, /obj/item/ammo_magazine/m2c, /obj/item/storage/belt/marine/m2c, /obj/item/pamphlet/skill/machinegunner)
+	can_hold = list(/obj/item/pamphlet/skill/machinegunner, /obj/item/device/m2c_gun, /obj/item/ammo_magazine/m2c, /obj/item/storage/backpack/marine/ammo_rack, /obj/item/pamphlet/skill/machinegunner)
 
 /obj/item/storage/box/guncase/m2c/fill_preset_inventory()
 	new /obj/item/pamphlet/skill/machinegunner(src)
@@ -220,7 +220,7 @@
 	new /obj/item/ammo_magazine/m2c(src)
 	new /obj/item/ammo_magazine/m2c(src)
 	new /obj/item/ammo_magazine/m2c(src)
-	new /obj/item/storage/belt/marine/m2c(src)
+	new /obj/item/storage/backpack/marine/ammo_rack(src)
 
 //------------
 /obj/item/storage/box/guncase/m41a

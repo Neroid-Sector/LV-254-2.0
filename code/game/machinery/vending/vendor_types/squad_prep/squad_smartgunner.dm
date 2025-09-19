@@ -4,10 +4,14 @@ GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
 		list("SMARTGUN SET (MANDATORY)", 0, null, null, null),
 		list("Essential Smartgunner Set", 0, /obj/effect/essentials_set/smartgunner/m56, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Essential xm99a gunner Set", 0, /obj/effect/essentials_set/smartgunner/xm99a, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential HPR gunner Set", 0, /obj/effect/essentials_set/smartgunner/hpr, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("SUPPORT WEAPON AMMUNITION", 0, null, null, null),
 		list("M56 Smartgun Drum", 15, /obj/item/ammo_magazine/smartgun, null, VENDOR_ITEM_RECOMMENDED),
 		list("XM99A1 Plasmagun Canister", 25, /obj/item/ammo_magazine/rifle/xm99a, null, VENDOR_ITEM_RECOMMENDED),
+		list("HPR Box AP Magazine", 15, /obj/item/ammo_magazine/rifle/lmg/ap, null, VENDOR_ITEM_RECOMMENDED),
+		list("HPR Box HOLO Targeting Magazine", 15, /obj/item/ammo_magazine/rifle/lmg/holo_target, null, VENDOR_ITEM_RECOMMENDED),
+		list("HPR Box HEAP Magazine", 20, /obj/item/ammo_magazine/rifle/lmg/heap, null, VENDOR_ITEM_RECOMMENDED),
 
 		list("GUN ATTACHMENTS (CHOOSE 1)", 0, null, null, null),
 		list("Laser Sight", 0, /obj/item/attachable/lasersight, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
@@ -35,7 +39,6 @@ GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
 		list("Smartgunner Machete Scabbard (Full)", 6, /obj/item/storage/large_holster/machete/smartgunner/full, null, VENDOR_ITEM_REGULAR),
 		list("Fuel Tank Strap Pouch", 5, /obj/item/storage/pouch/flamertank, null, VENDOR_ITEM_REGULAR),
 		list("Large General Pouch", 6, /obj/item/storage/pouch/general/large, null, VENDOR_ITEM_REGULAR),
-		list("M5 Camera Gear", 6, /obj/item/device/radio/headset/almayer/marine/overwatch_camera, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
 		list("Range Finder", 10, /obj/item/device/binoculars/range, null, VENDOR_ITEM_REGULAR),
@@ -73,14 +76,21 @@ GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
 
 GLOBAL_LIST_INIT(cm_vending_clothing_smartgun, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
-		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/device/radio/headset/almayer/marine, /obj/item/clothing/ears/earmuffs/earplugs, /obj/item/clothing/head/cmcap/bridge, /obj/item/clothing/head/helmet/marine,  /obj/item/clothing/accessory/flak), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/clothing/ears/earmuffs/earplugs, /obj/item/clothing/head/cmcap/bridge, /obj/item/clothing/head/helmet/marine,  /obj/item/clothing/accessory/flak), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 		list("Map", 0, /obj/item/map/current_map, MARINE_CAN_BUY_KIT, VENDOR_ITEM_MANDATORY),
 
+		list("RADIO HEADSET (PICK ONE)", 0, null, null, null),
+		list("Marine radio headset", 0, /obj/item/device/radio/headset/almayer/marine, MARINE_CAN_BUY_EAR, VENDOR_ITEM_RECOMMENDED),
+		list("M5 Camera Gear radio headset", 0, /obj/item/device/radio/headset/almayer/marine/overwatch_camera, MARINE_CAN_BUY_EAR, VENDOR_ITEM_RECOMMENDED),
+
 		list("BELT", 0, null, null, null),
-		list("M802 Smartgunner Sidearm Belt", 0, /obj/item/storage/belt/gun/smartgunner/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
-		list("M802 Plasmagunner Sidearm Belt", 0, /obj/item/storage/belt/gun/smartgunner/xm99/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
-		list("M280 Smartgunner Drum Belt", 0, /obj/item/storage/belt/marine/smartgunner, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
+		list("M802 Smartgunner Sidearm Belt", 0, /obj/item/storage/belt/gun/smartgunner/teamwork/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
+		list("M802 Plasmagunner Belt", 0, /obj/item/storage/belt/marine/smartgunner/xm_limited, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
+		list("M802 HPR Supportgunner Belt", 0, /obj/item/storage/belt/gun/smartgunner/hpr, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
+
+		list("BACKPACK", 0, null, null, null),
+		list("IMP Ammo Bearer Pack", 0, /obj/item/storage/backpack/marine/ammo_rack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Flare Pouch (Full)", 0, /obj/item/storage/pouch/flare/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
@@ -149,6 +159,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_smartgun, list(
 /obj/effect/essentials_set/smartgunner/xm99a
 	spawned_gear_list = list(
 		/obj/item/storage/box/xm99a_system,
+		/obj/item/device/whiskey_supply_beacon,
+		/obj/item/device/whiskey_supply_beacon,
+	)
+
+/obj/effect/essentials_set/smartgunner/hpr
+	spawned_gear_list = list(
+		/obj/item/storage/box/hpr_system,
 		/obj/item/device/whiskey_supply_beacon,
 		/obj/item/device/whiskey_supply_beacon,
 	)
