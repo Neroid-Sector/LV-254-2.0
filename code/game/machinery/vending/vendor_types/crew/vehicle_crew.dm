@@ -7,7 +7,7 @@
 	icon_state = "vehicle_gear"
 
 	req_access = list(ACCESS_MARINE_CREWMAN)
-	vendor_role = list(JOB_TANK_CREW)
+	vendor_role = list(JOB_TANK_CREW, JOB_MS_CREWMAN)
 	bound_width = 64
 
 	unslashable = TRUE
@@ -15,13 +15,9 @@
 	vend_delay = 4 SECONDS
 	vend_sound = 'sound/machines/medevac_extend.ogg'
 
-	var/selected_vehicle
-	var/budget_points = 0
-	var/available_categories = VEHICLE_ALL_AVAILABLE
+	var/budget_points = 7500
 
-	available_points_to_display = 0
-
-	vend_flags = VEND_CLUTTER_PROTECTION|VEND_CATEGORY_CHECK|VEND_TO_HAND|VEND_USE_VENDOR_FLAGS
+	vend_flags = VEND_CLUTTER_PROTECTION|VEND_CATEGORY_CHECK|VEND_USE_VENDOR_FLAGS
 	var/faction = FACTION_MARINE
 	var/datum/controller/supply/linked_supply_controller
 
@@ -33,14 +29,12 @@
 		if(FACTION_UPP)
 			linked_supply_controller = GLOB.supply_controller_upp
 		else
-			linked_supply_controller = GLOB.supply_controller //we default to normal budget on wrong input
+			linked_supply_controller = GLOB.supply_controller
 
-	RegisterSignal(SSdcs, COMSIG_GLOB_VEHICLE_ORDERED, PROC_REF(populate_products))
 	if(!GLOB.VehicleGearConsole)
 		GLOB.VehicleGearConsole = src
 
 /obj/structure/machinery/cm_vending/gear/vehicle_crew/Destroy()
-	UnregisterSignal(SSdcs, COMSIG_GLOB_VEHICLE_ORDERED)
 	GLOB.VehicleGearConsole = null
 	return ..()
 
@@ -61,36 +55,14 @@
 			malfunction()
 			return
 
-/obj/structure/machinery/cm_vending/gear/vehicle_crew/proc/populate_products(datum/source, obj/vehicle/multitile/V)
-	SIGNAL_HANDLER
-	UnregisterSignal(SSdcs, COMSIG_GLOB_VEHICLE_ORDERED)
-
-	if(!selected_vehicle)
-		selected_vehicle = "TANK" // The whole thing seems to be based upon the assumption you unlock tank as an override, defaulting to APC
-	if(selected_vehicle == "TANK")
-		available_categories &= ~(VEHICLE_INTEGRAL_AVAILABLE) //APC lacks these, so we need to remove these flags to be able to access spare parts section
-		marine_announcement("A tank is being sent up to reinforce this operation.")
-
 /obj/structure/machinery/cm_vending/gear/vehicle_crew/get_listed_products(mob/user)
 	var/list/display_list = list()
 
-	if(!user)
-		display_list += GLOB.cm_vending_vehicle_crew_tank
-		display_list += GLOB.cm_vending_vehicle_crew_apc
-		return display_list
+	display_list += GLOB.cm_vending_vehicle_crew_tank
+	display_list += GLOB.cm_vending_vehicle_crew_apc
+	display_list += GLOB.cm_vending_vehicle_crew_arc
+	display_list += GLOB.cm_vending_vehicle_crew_lav
 
-	if(selected_vehicle == "TANK")
-		if(available_categories)
-			display_list = GLOB.cm_vending_vehicle_crew_tank
-
-	else if(selected_vehicle == "ARC")
-		display_list = GLOB.cm_vending_vehicle_crew_arc
-
-	else if(selected_vehicle == "TANK")
-		if(available_categories)
-			display_list = GLOB.cm_vending_vehicle_crew_apc
-		else //APC stuff costs more to prevent 4000 points spent on shitton of ammunition
-			display_list = GLOB.cm_vending_vehicle_crew_apc_spare
 	return display_list
 
 /obj/structure/machinery/cm_vending/gear/vehicle_crew/ui_data(mob/user)
@@ -98,9 +70,9 @@
 	. += ui_static_data(user)
 
 	if(linked_supply_controller.tank_points) //we steal points from GLOB.supply_controller, meh-he-he. Solely to be able to modify amount of points in vendor if needed by just changing one var.
-		available_points_to_display = linked_supply_controller.tank_points
+		budget_points = linked_supply_controller.tank_points
 		linked_supply_controller.tank_points = 0
-	.["current_m_points"] = available_points_to_display
+	.["current_m_points"] = budget_points
 
 	var/list/ui_listed_products = get_listed_products(user)
 	var/list/stock_values = list()
@@ -109,7 +81,7 @@
 		var/prod_available = FALSE
 		var/p_cost = myprod[2]
 		var/avail_flag = myprod[4]
-		if(budget_points >= p_cost && (!avail_flag || available_categories & avail_flag))
+		if(budget_points >= p_cost && (avail_flag))
 			prod_available = TRUE
 		stock_values += list(prod_available)
 
@@ -117,90 +89,97 @@
 
 /obj/structure/machinery/cm_vending/gear/vehicle_crew/handle_points(mob/living/carbon/human/H, list/L)
 	. = TRUE
-	if(available_categories)
-		if(!(available_categories & L[4]))
-			to_chat(usr, SPAN_WARNING("Module from this category is already taken."))
-			vend_fail()
-			return FALSE
-		available_categories &= ~L[4]
-	else
-		if(available_points_to_display < L[2])
-			to_chat(H, SPAN_WARNING("Not enough points."))
-			vend_fail()
-			return FALSE
-		budget_points -= L[2]
+	if (budget_points < L[2])
+		to_chat(H, SPAN_WARNING("Not enough points."))
+		vend_fail()
+		return FALSE
+	budget_points -= L[2]
 
 GLOBAL_LIST_INIT(cm_vending_vehicle_crew_tank, list(
-	list("STARTING KIT SELECTION:", 0, null, null, null),
+	list("TANK SELECTION:", 0, null, null, null),
 
-	list("INTEGRAL PARTS", 0, null, null, null),
-	list("M34A2-A Multipurpose Turret", 0, /obj/effect/essentials_set/tank/turret, VEHICLE_INTEGRAL_AVAILABLE, VENDOR_ITEM_MANDATORY),
-
-	list("PRIMARY WEAPON", 0, null, null, null),
-	list("AC3-E Autocannon", 0, /obj/effect/essentials_set/tank/autocannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
-	list("DRG-N Offensive Flamer Unit", 0, /obj/effect/essentials_set/tank/dragonflamer, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LTAA-AP Minigun", 0, /obj/effect/essentials_set/tank/gatling, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("SECONDARY WEAPON", 0, null, null, null),
-	list("M92T Grenade Launcher", 0, /obj/effect/essentials_set/tank/tankgl, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("M56 Cupola", 0, /obj/effect/essentials_set/tank/m56cupola, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LZR-N Flamer Unit", 0, /obj/effect/essentials_set/tank/tankflamer, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
-
-	list("SUPPORT MODULE", 0, null, null, null),
-	list("Integrated Weapons Sensor Array", 0, /obj/item/hardpoint/support/weapons_sensor, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("Overdrive Enhancer", 0, /obj/item/hardpoint/support/overdrive_enhancer, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
-
-	list("ARMOR", 0, null, null, null),
-	list("Snowplow", 0, /obj/item/hardpoint/armor/snowplow, VEHICLE_ARMOR_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("TREADS", 0, null, null, null),
-	list("Reinforced Treads", 0, /obj/item/hardpoint/locomotion/treads/robust, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("Treads", 0, /obj/item/hardpoint/locomotion/treads, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
-
-GLOBAL_LIST_INIT(cm_vending_vehicle_crew_apc, list(
-	list("STARTING KIT SELECTION:", 0, null, null, null),
+	list("INTEGRAL TANK PARTS", 0, null, null, null),
+	list("M34A2-A Multipurpose Turret", 1000, /obj/item/hardpoint/holder/tank_turret, VEHICLE_INTEGRAL_AVAILABLE, VENDOR_ITEM_MANDATORY),
 
 	list("PRIMARY WEAPON", 0, null, null, null),
-	list("PARS-159 Boyars Dualcannon", 0, /obj/effect/essentials_set/apc/dualcannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_MANDATORY),
-
-	list("SECONDARY WEAPON", 0, null, null, null),
-	list("RE-RE700 Frontal Cannon", 0, /obj/effect/essentials_set/apc/frontalcannon, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_MANDATORY),
-
-	list("SUPPORT MODULE", 0, null, null, null),
-	list("M-97F Flare Launcher", 0, /obj/effect/essentials_set/apc/flarelauncher, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_MANDATORY),
-
-	list("WHEELS", 0, null, null, null),
-	list("APC Wheels", 0, /obj/item/hardpoint/locomotion/apc_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_MANDATORY)))
-
-GLOBAL_LIST_INIT(cm_vending_vehicle_crew_apc_spare, list(
-	list("SPARE PARTS SELECTION:", 0, null, null, null),
-
-	list("PRIMARY WEAPON", 0, null, null, null),
-	list("PARS-159 Boyars Dualcannon", 500, /obj/item/hardpoint/primary/dualcannon, null, VENDOR_ITEM_REGULAR),
+	list("LTB Cannon", 500, /obj/item/hardpoint/primary/cannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
+	list("AC3-E Autocannon", 500, /obj/item/hardpoint/primary/autocannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("DRG-N Offensive Flamer Unit", 500, /obj/item/hardpoint/primary/flamer, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("LTAA-AP Minigun", 500, /obj/item/hardpoint/primary/minigun, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("PRIMARY AMMUNITION", 0, null, null, null),
-	list("PARS-159 Dualcannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/ace_autocannon, null, VENDOR_ITEM_REGULAR),
+	list("LTB Cannon Shell Box", 200, /obj/item/ammo_magazine/hardpoint/ltb_cannon, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("AC3-E Autocannon Magazine", 200, /obj/item/ammo_magazine/hardpoint/ace_autocannon, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("DRG-N Offensive Flamer Unit Fuel Tank", 200, /obj/item/ammo_magazine/hardpoint/primary_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("LTAA-AP Minigun Drum", 200, /obj/item/ammo_magazine/hardpoint/ltaaap_minigun, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SECONDARY WEAPON", 0, null, null, null),
-	list("RE-RE700 Frontal Cannon", 400, /obj/item/hardpoint/secondary/frontalcannon, null, VENDOR_ITEM_REGULAR),
+	list("M92T Grenade Launcher", 250, /obj/item/hardpoint/secondary/grenade_launcher, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("M56 Cupola", 250, /obj/item/hardpoint/secondary/m56cupola, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("LZR-N Flamer Unit", 250, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
 
 	list("SECONDARY AMMUNITION", 0, null, null, null),
-	list("RE-RE700 Frontal Cannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/tank_glauncher, null, VENDOR_ITEM_REGULAR),
+	list("M92T Grenade Launcher Magazine", 150, /obj/item/ammo_magazine/hardpoint/tank_glauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("M56 Cupola Magazine", 150, /obj/item/ammo_magazine/hardpoint/m56_cupola, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("LZR-N Flamer Unit Fuel Tank", 150, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SUPPORT MODULE", 0, null, null, null),
-	list("M-97F Flare Launcher", 300, /obj/item/hardpoint/support/flare_launcher, null, VENDOR_ITEM_REGULAR),
+	list("Integrated Weapons Sensor Array", 150, /obj/item/hardpoint/support/weapons_sensor, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("Overdrive Enhancer", 150, /obj/item/hardpoint/support/overdrive_enhancer, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
+
+	list("ARMOR", 0, null, null, null),
+	list("Snowplow", 200, /obj/item/hardpoint/armor/snowplow, VEHICLE_ARMOR_AVAILABLE, VENDOR_ITEM_REGULAR),
+
+	list("TREADS", 0, null, null, null),
+	list("Reinforced Treads", 200, /obj/item/hardpoint/locomotion/treads/robust, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("Treads", 200, /obj/item/hardpoint/locomotion/treads, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
+
+GLOBAL_LIST_INIT(cm_vending_vehicle_crew_apc, list(
+	list("ARC SELECTION:", 0, null, null, null),
+
+	list("PRIMARY WEAPON", 0, null, null, null),
+	list("PARS-159 Boyars Dualcannon", 500, /obj/item/hardpoint/primary/dualcannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+
+	list("PRIMARY AMMUNITION", 0, null, null, null),
+	list("PARS-159 Dualcannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/ace_autocannon, VEHICLE_AMMO_AVAILABLE , VENDOR_ITEM_REGULAR),
+
+	list("SECONDARY WEAPON", 0, null, null, null),
+	list("RE-RE700 Frontal Cannon", 400, /obj/item/hardpoint/secondary/frontalcannon, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+
+	list("SECONDARY AMMUNITION", 0, null, null, null),
+	list("RE-RE700 Frontal Cannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/tank_glauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+
+	list("SUPPORT MODULE", 0, null, null, null),
+	list("M-97F Flare Launcher", 300, /obj/item/hardpoint/support/flare_launcher, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SUPPORT AMMUNITION", 0, null, null, null),
-	list("M-97F Flare Launcher Magazine", 50, /obj/item/ammo_magazine/hardpoint/flare_launcher, null, VENDOR_ITEM_REGULAR),
+	list("M-97F Flare Launcher Magazine", 50, /obj/item/ammo_magazine/hardpoint/flare_launcher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("WHEELS", 0, null, null, null),
-	list("APC Wheels", 200, /obj/item/hardpoint/locomotion/apc_wheels, null, VENDOR_ITEM_REGULAR)))
+	list("APC Wheels", 200, /obj/item/hardpoint/locomotion/apc_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
 
 GLOBAL_LIST_INIT(cm_vending_vehicle_crew_arc, list(
 	list("STARTING KIT SELECTION:", 0, null, null, null),
 
 	list("WHEELS", 0, null, null, null),
 	list("Replacement ARC Wheels", 0, /obj/item/hardpoint/locomotion/arc_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_MANDATORY)))
+
+GLOBAL_LIST_INIT(cm_vending_vehicle_crew_lav, list(
+	list("LAV SELECTION:", 0, null, null, null),
+
+	list("INTEGRAL LAV PARTS", 0, null, null, null),
+	list("M620-A Multipurpose Turret", 1000, /obj/item/hardpoint/holder/lav_turret, VEHICLE_INTEGRAL_AVAILABLE, VENDOR_ITEM_MANDATORY),
+
+	list("PRIMARY WEAPON", 0, null, null, null),
+	list("PARS 40/70 Boyars Chaingun", 500, /obj/item/hardpoint/primary/chaingun, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+
+	list("PRIMARY AMMUNITION", 0, null, null, null),
+	list("PARS 40/70 Chaingun Magazine", 150, /obj/item/ammo_magazine/hardpoint/chaingun, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("PARS 40/70 AP Chaingun Magazine", 250, /obj/item/ammo_magazine/hardpoint/chaingun/ap, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("PARS 40/70 HE Chaingun Magazine", 300, /obj/item/ammo_magazine/hardpoint/chaingun/he, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
+
+	list("WHEELS", 0, null, null, null),
+	list("LAV Wheels", 200, /obj/item/hardpoint/locomotion/lav_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
 
 //------------WEAPONS RACK---------------
 
@@ -357,105 +336,3 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 
 /obj/structure/machinery/cm_vending/clothing/vehicle_crew/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_vehicle_crew
-
-//------------ESSENTIAL SETS---------------
-
-//Not essentials sets but fuck it the code's here
-/obj/effect/essentials_set/tank/ltb
-	desc = "A giant cannon firing explosive 86mm shells. You'd be lucky if this even leaves the dust of whatever you hit with it."
-	spawned_gear_list = list(
-		/obj/item/hardpoint/primary/cannon,
-		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
-		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
-		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
-		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
-		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
-	)
-
-/obj/effect/essentials_set/tank/gatling
-	desc = "A primary LTAA Minigun utilizing AP ammo for tanks. The barrel spins up as it is fired, improving its fire rate and accuracy dramatically. Capable of shredding apart even the thickest walls in seconds."
-	spawned_gear_list = list(
-		/obj/item/hardpoint/primary/minigun,
-		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
-		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
-	)
-
-/obj/effect/essentials_set/tank/dragonflamer
-	desc = "A heavy flamer that spews out high-combustion napalm in a wide radius. The fuel burns intensely and quickly, which allows for it to be used offensively by armoured vehicles."
-	spawned_gear_list = list(
-		/obj/item/hardpoint/primary/flamer,
-		/obj/item/ammo_magazine/hardpoint/primary_flamer,
-		/obj/item/ammo_magazine/hardpoint/primary_flamer,
-	)
-
-/obj/effect/essentials_set/tank/autocannon
-	desc = "An automatic cannon for tanks, capable of firing precisely even at long ranges. Loads 20mm explosive shells."
-	spawned_gear_list = list(
-		/obj/item/hardpoint/primary/autocannon,
-		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
-		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
-		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
-		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
-	)
-
-/obj/effect/essentials_set/tank/tankflamer
-	desc = "A small LZR-N Flamer Unit - a modified version of your bog standard flamer."
-	spawned_gear_list = list(
-		/obj/item/hardpoint/secondary/small_flamer,
-		/obj/item/ammo_magazine/hardpoint/secondary_flamer,
-	)
-
-/obj/effect/essentials_set/tank/tow
-	desc = "A quint rocket launcher capable of firing four rockets in quick succession."
-	spawned_gear_list = list(
-		/obj/item/hardpoint/secondary/towlauncher,
-		/obj/item/ammo_magazine/hardpoint/towlauncher,
-		/obj/item/ammo_magazine/hardpoint/towlauncher,
-	)
-
-/obj/effect/essentials_set/tank/m56cupola
-	desc = "A permanently fixed M56D, firing standard issue 10x28mm rounds."
-	spawned_gear_list = list(
-		/obj/item/hardpoint/secondary/m56cupola,
-		/obj/item/ammo_magazine/hardpoint/m56_cupola,
-	)
-
-/obj/effect/essentials_set/tank/tankgl
-	desc = "A magazine feed grenade launcher capable of holding 10 grenades. This model loads M40 grenades."
-	spawned_gear_list = list(
-		/obj/item/hardpoint/secondary/grenade_launcher,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
-	)
-
-/obj/effect/essentials_set/tank/turret
-	spawned_gear_list = list(
-		/obj/item/hardpoint/holder/tank_turret,
-		/obj/item/ammo_magazine/hardpoint/turret_smoke,
-		/obj/item/ammo_magazine/hardpoint/turret_smoke,
-	)
-
-/obj/effect/essentials_set/apc/dualcannon
-	spawned_gear_list = list(
-		/obj/item/hardpoint/primary/dualcannon,
-		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-	)
-
-/obj/effect/essentials_set/apc/frontalcannon
-	spawned_gear_list = list(
-		/obj/item/hardpoint/secondary/frontalcannon,
-		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
-	)
-
-/obj/effect/essentials_set/apc/flarelauncher
-	spawned_gear_list = list(
-		/obj/item/hardpoint/support/flare_launcher,
-		/obj/item/ammo_magazine/hardpoint/flare_launcher,
-		/obj/item/ammo_magazine/hardpoint/flare_launcher,
-		/obj/item/ammo_magazine/hardpoint/flare_launcher,
-	)
