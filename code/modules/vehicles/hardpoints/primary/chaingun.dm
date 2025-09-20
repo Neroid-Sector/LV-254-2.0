@@ -1,10 +1,10 @@
-// APC cannons
+// LAV cannons
 /obj/item/hardpoint/primary/chaingun
 	name = "\improper PARS 40/70 Boyars Chaingun"
 	desc = "A devastating automatic chain-driven cannon for the LAV that shoots 40mm rounds, not IFF-Friendly, ouch."
 	icon = 'icons/obj/vehicles/hardpoints/lav.dmi'
 
-	icon_state = "chaingun_0"
+	icon_state = "chaingun"
 	disp_icon = "lav"
 	disp_icon_state = "chaingun"
 	activation_sounds = list('sound/weapons/vehicles/autocannon_fire.ogg')

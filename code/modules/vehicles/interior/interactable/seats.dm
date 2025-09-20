@@ -53,11 +53,11 @@
 			return
 		vehicle.set_seated_mob(seat, M)
 		if(M && M.client)
-			M.client.change_view(8, vehicle)
+			M.client.change_view(10, vehicle)
 
 /obj/structure/bed/chair/comfy/vehicle/clicked(mob/user, list/mods) // If you're buckled, you can shift-click on the seat in order to return to camera-view
 	if(user == buckled_mob && mods["shift"] && !user.is_mob_incapacitated())
-		user.client.change_view(8, vehicle)
+		user.client.change_view(10, vehicle)
 		vehicle.set_seated_mob(seat, user)
 		return TRUE
 	else
@@ -197,7 +197,7 @@
 				var/obj/vehicle/multitile/apc/APC = vehicle
 				M.client.change_view(APC.gunner_view_buff, vehicle)
 			else
-				M.client.change_view(8, vehicle)
+				M.client.change_view(16, vehicle)
 
 /obj/structure/bed/chair/comfy/vehicle/gunner/armor/update_icon()
 	overlays.Cut()

@@ -140,30 +140,6 @@
 
 	..(deg)
 
-	var/obj/vehicle/multitile/lav/L = owner
-	var/obj/item/hardpoint/support/artillery_module/lav/AM
-	for(var/obj/item/hardpoint/support/artillery_module/lav/A in L.hardpoints)
-		AM = A
-	if(AM && AM.is_active)
-		var/mob/user = L.seats[VEHICLE_GUNNER]
-		if(user && user.client)
-			user = L.seats[VEHICLE_GUNNER]
-			user.client.change_view(AM.view_buff, src)
-
-			switch(dir)
-				if(NORTH)
-					user.client.pixel_x = 0
-					user.client.pixel_y = AM.view_tile_offset * 32
-				if(SOUTH)
-					user.client.pixel_x = 0
-					user.client.pixel_y = -1 * AM.view_tile_offset * 32
-				if(EAST)
-					user.client.pixel_x = AM.view_tile_offset * 32
-					user.client.pixel_y = 0
-				if(WEST)
-					user.client.pixel_x = -1 * AM.view_tile_offset * 32
-					user.client.pixel_y = 0
-
 /obj/item/hardpoint/holder/lav_turret/try_fire(atom/target, mob/living/user, params)
 	var/turf/L
 	var/turf/R

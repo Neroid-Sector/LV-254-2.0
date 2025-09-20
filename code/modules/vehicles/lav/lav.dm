@@ -34,7 +34,6 @@
 		/obj/item/hardpoint/holder/lav_turret,
 		/obj/item/hardpoint/primary/chaingun,
 		/obj/item/hardpoint/locomotion/lav_wheels,
-		/obj/item/hardpoint/support/artillery_module/lav,
 	)
 
 	seats = list(
@@ -211,7 +210,6 @@
 /obj/effect/vehicle_spawner/lav/fixed/load_hardpoints(obj/vehicle/multitile/lav/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module/lav)
 
 	for(var/obj/item/hardpoint/holder/lav_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/primary/chaingun)
