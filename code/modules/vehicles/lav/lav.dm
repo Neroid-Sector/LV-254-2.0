@@ -1,6 +1,6 @@
 /obj/vehicle/multitile/lav
 	name = "M620 Light Armored Vehicle"
-	desc = "An M620 six-wheeled LAV, a vehicle designed for infantry support. Entrance is on the back."
+	desc = "An M620 six-wheeled LAV, a nimble vehicle designed for infantry support. Entrance is in the back."
 
 	icon = 'icons/obj/vehicles/lav.dmi'
 	icon_state = "lav_base"
@@ -20,6 +20,7 @@
 
 	entrances = list(
 		"rear left" = list(1, 2),
+		"rear center" = list(0, 2),
 		"rear right" = list(-1, 2)
 	)
 
@@ -29,11 +30,11 @@
 
 	movement_sound = 'sound/vehicles/tank_driving.ogg'
 
-	var/gunner_view_buff = 14
-
 	hardpoints_allowed = list(
+		/obj/item/hardpoint/holder/lav_turret,
 		/obj/item/hardpoint/primary/chaingun,
 		/obj/item/hardpoint/locomotion/lav_wheels,
+		/obj/item/hardpoint/support/artillery_module/lav,
 	)
 
 	seats = list(
@@ -52,15 +53,15 @@
 
 	dmg_multipliers = list(
 		"all" = 1,
-		"acid" = 1.6,
-		"slash" = 0.8,
-		"bullet" = 0.6,
-		"explosive" = 0.7,
+		"acid" = 1.5,
+		"slash" = 0.7,
+		"bullet" = 0.7,
+		"explosive" = 1,
 		"blunt" = 0.7,
 		"abstract" = 1
 	)
 
-	move_max_momentum = 2
+	move_max_momentum = 3
 	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.8
 
@@ -85,6 +86,9 @@
 	RRS.roles = list(JOB_SYNTH, JOB_WO_SYNTH)
 	RRS.total = 1
 	role_reserved_slots += RRS
+
+/obj/vehicle/multitile/lav/load_hardpoints()
+	add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
 
 /obj/vehicle/multitile/lav/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
@@ -126,6 +130,28 @@
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/name_vehicle,
 		))
+
+/obj/vehicle/multitile/lav/relaymove(mob/user, direction)
+	if(user == seats[VEHICLE_DRIVER])
+		return ..()
+
+	if(user != seats[VEHICLE_GUNNER])
+		return FALSE
+
+	var/obj/item/hardpoint/holder/lav_turret/T = null
+	for(var/obj/item/hardpoint/holder/lav_turret/TT in hardpoints)
+		T = TT
+		break
+	if(!T)
+		return FALSE
+
+	if(direction == GLOB.reverse_dir[T.dir] || direction == T.dir)
+		return FALSE
+
+	T.user_rotation(user, turning_angle(T.dir, direction))
+	update_icon()
+
+	return TRUE
 
 /obj/vehicle/multitile/lav/initialize_cameras(change_tag = FALSE)
 	if(!camera)
@@ -178,13 +204,18 @@
 	LAV.update_icon()
 
 /obj/effect/vehicle_spawner/lav/decrepit/load_hardpoints(obj/vehicle/multitile/lav/V)
-	V.add_hardpoint(new /obj/item/hardpoint/primary/chaingun)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
 
 //PRESET: default hardpoints
 /obj/effect/vehicle_spawner/lav/fixed/load_hardpoints(obj/vehicle/multitile/lav/V)
-	V.add_hardpoint(new /obj/item/hardpoint/primary/chaingun)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module/lav)
+
+	for(var/obj/item/hardpoint/holder/lav_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/primary/chaingun)
+		break
 
 /obj/effect/vehicle_spawner/lav/load_hardpoints(obj/vehicle/multitile/lav/V)
 	return

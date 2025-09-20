@@ -4,9 +4,9 @@
 	desc = "A devastating automatic chain-driven cannon for the LAV that shoots 40mm rounds, not IFF-Friendly, ouch."
 	icon = 'icons/obj/vehicles/hardpoints/lav.dmi'
 
-	icon_state = "chaingun"
-	disp_icon = "lav_turret"
-	disp_icon_state = "lav_turret_0"
+	icon_state = "chaingun_0"
+	disp_icon = "lav"
+	disp_icon_state = "chaingun"
 	activation_sounds = list('sound/weapons/vehicles/autocannon_fire.ogg')
 
 	damage_multiplier = 0.15
@@ -18,17 +18,17 @@
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/chaingun
 
-	max_clips = 0
+	max_clips = 1
 
 	use_muzzle_flash = TRUE
 	angle_muzzleflash = FALSE
 	muzzleflash_icon_state = "muzzle_flash"
 
 	muzzle_flash_pos = list(
-		"1" = list(11, -29),
-		"2" = list(-11, 10),
-		"4" = list(-14, 9),
-		"8" = list(14, 9)
+		"1" = list(0, 30),
+		"2" = list(0, -61),
+		"4" = list(45, -16),
+		"8" = list(-45, -16)
 	)
 
 	scatter = 1
