@@ -5,9 +5,9 @@
 
 	damage_multiplier = 0.15
 
-	icon_state = "tires"
-	disp_icon = "lav_wheels"
-	disp_icon_state = "lav_wheels_0"
+	icon_state = "lav_wheels_0"
+	disp_icon = "lav"
+	disp_icon_state = "lav_wheels"
 
 	health = 500
 

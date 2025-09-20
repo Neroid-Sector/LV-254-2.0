@@ -10,8 +10,7 @@
 	},
 /obj/effect/landmark/interior/spawn/interior_viewport{
 	dir = 1;
-	pixel_y = -11;
-	pixel_x = -8
+	pixel_y = -11
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
@@ -24,248 +23,244 @@
 	dir = 1;
 	pixel_x = 8
 	},
-/turf/open/shuttle/vehicle/floor_3_13,
-/area/interior/vehicle/lav)
-"c" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "rear_4"
-	},
-/turf/open/void/vehicle,
-/area/space)
-"d" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "rear_3"
-	},
-/turf/open/void/vehicle,
-/area/space)
-"e" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "lav_corner";
-	pixel_x = 3
-	},
-/turf/open/shuttle/vehicle/floor_1_2,
-/area/space)
-"h" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "lav_wheel";
-	opacity = 0
-	},
-/turf/open/void/vehicle,
-/area/space)
-"i" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "wall_2";
-	opacity = 0
-	},
-/turf/open/void/vehicle,
-/area/space)
-"j" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
 	exit_type = /obj/structure/interior_exit/vehicle/lav/rear/right;
 	pixel_x = -32;
 	tag = "rear right"
 	},
-/turf/open/shuttle/vehicle/floor_1_10,
+/turf/open/shuttle/vehicle/floor_3_13,
+/area/interior/vehicle/lav)
+"c" = (
+/obj/structure/interior_wall/apc{
+	icon_state = "rear_3";
+	name = "\improper LAV interior wall"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"d" = (
+/obj/structure/interior_wall/apc{
+	icon_state = "rear_4";
+	name = "\improper LAV interior wall"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"e" = (
+/obj/structure/vehicle_locker{
+	layer = 5.21;
+	pixel_y = 28
+	},
+/turf/open/shuttle/vehicle/floor_3_5,
+/area/interior/vehicle/lav)
+"h" = (
+/obj/structure/interior_wall/apc{
+	icon_state = "lav_wheel";
+	opacity = 0;
+	name = "\improper LAV interior wall"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"j" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/lav/rear;
+	pixel_x = -32;
+	tag = "rear center"
+	},
+/turf/open/shuttle/vehicle/floor_1_5,
 /area/interior/vehicle/lav)
 "k" = (
-/turf/open/shuttle/vehicle/floor_1_1,
+/turf/open/shuttle/vehicle/floor_1_5,
 /area/interior/vehicle/lav)
 "n" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "front_7"
+	icon_state = "front_2";
+	name = "\improper LAV interior wall"
 	},
 /turf/open/void/vehicle,
 /area/space)
 "r" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "wall";
-	opacity = 0
+	icon_state = "rear_6";
+	name = "\improper LAV interior wall"
 	},
 /turf/open/void/vehicle,
 /area/space)
 "t" = (
+/obj/effect/landmark/interior/spawn/interior_camera{
+	dir = 6;
+	pixel_x = 16;
+	pixel_y = 10
+	},
 /obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
 	dir = 4
 	},
-/turf/open/shuttle/vehicle/floor_1_1,
+/turf/open/shuttle/vehicle/floor_1_5,
 /area/interior/vehicle/lav)
 "u" = (
-/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
-	dir = 4
+/obj/structure/interior_wall/apc{
+	icon_state = "wall_2";
+	opacity = 0;
+	name = "\improper LAV interior wall"
 	},
-/obj/structure/vehicle_locker{
-	layer = 5.21;
-	pixel_y = 28;
-	pixel_x = 4
-	},
-/turf/open/shuttle/vehicle/floor_3_5,
-/area/interior/vehicle/lav)
+/turf/open/void/vehicle,
+/area/space)
 "v" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 1;
 	pixel_x = -8
-	},
-/obj/effect/landmark/interior/spawn/interior_viewport{
-	dir = 1;
-	pixel_x = 8;
-	pixel_y = -11
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
 "w" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "front_8";
-	pixel_x = 3
+	pixel_x = 3;
+	name = "\improper LAV interior wall"
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/space)
 "y" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "rear_2"
+	icon_state = "rear_2";
+	name = "\improper LAV interior wall"
 	},
 /turf/open/void/vehicle,
 /area/space)
 "B" = (
-/obj/effect/landmark/interior/spawn/interior_camera{
-	dir = 6;
-	pixel_x = 16;
-	pixel_y = 10
+/obj/effect/landmark/interior/spawn/telephone{
+	pixel_x = 8;
+	pixel_y = 31
 	},
-/turf/open/shuttle/vehicle/floor_1_2,
+/obj/structure/machinery/prop/almayer/CICmap/computer{
+	layer = 2.98;
+	pixel_x = -12;
+	pixel_y = 21
+	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
 "C" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "front_1"
+	icon_state = "front_1";
+	name = "\improper LAV interior wall"
 	},
 /turf/open/void/vehicle,
 /area/space)
 "E" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "rear_wheel_L"
+	icon_state = "rear_wheel_L";
+	name = "\improper LAV interior wall"
 	},
 /turf/open/void/vehicle,
 /area/space)
 "F" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "wheel_front_top_2";
-	pixel_x = 3
-	},
-/turf/open/shuttle/vehicle/floor_1_2,
-/area/space)
-"G" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "front_8";
-	pixel_x = 3
-	},
-/turf/open/shuttle/vehicle/floor_1_1,
-/area/space)
-"I" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "wall_7"
-	},
-/turf/open/shuttle/vehicle/floor_1_1,
-/area/space)
-"J" = (
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
-	pixel_y = 28;
-	pixel_x = -8
-	},
-/obj/effect/landmark/interior/spawn/telephone{
-	pixel_x = 6;
-	pixel_y = 30
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
+	dir = 4
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
+"G" = (
+/obj/structure/interior_wall/apc{
+	icon_state = "lav_corner";
+	pixel_x = 3;
+	name = "\improper LAV interior wall"
+	},
+/turf/open/shuttle/vehicle/floor_1_5,
+/area/space)
+"I" = (
+/obj/structure/interior_wall/apc{
+	icon_state = "wheel_front_top_2";
+	pixel_x = 3;
+	name = "\improper LAV interior wall"
+	},
+/turf/open/shuttle/vehicle/floor_1_5,
+/area/space)
+"J" = (
+/obj/structure/interior_wall/apc{
+	icon_state = "front_7";
+	name = "\improper LAV interior wall"
+	},
+/turf/open/void/vehicle,
+/area/space)
 "K" = (
+/obj/structure/interior_wall/apc{
+	icon_state = "wall_1";
+	opacity = 0;
+	name = "\improper LAV interior wall"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"O" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
 	},
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 8
 	},
-/turf/open/shuttle/vehicle/floor_3_5,
-/area/interior/vehicle/lav)
-"M" = (
-/turf/open/shuttle/vehicle/floor_3_5,
-/area/interior/vehicle/lav)
-"O" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
 	exit_type = /obj/structure/interior_exit/vehicle/lav/rear/left;
 	pixel_x = -32;
 	tag = "rear left"
 	},
-/turf/open/shuttle/vehicle/floor_1_7,
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
-"P" = (
+"Q" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "front_6"
+	icon_state = "wall";
+	opacity = 0;
+	name = "\improper LAV interior wall"
 	},
 /turf/open/void/vehicle,
 /area/space)
-"Q" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8
-	},
-/obj/effect/landmark/interior/spawn/interior_viewport{
-	pixel_y = 23;
-	pixel_x = -8
-	},
-/obj/structure/extinguisher_cabinet/lifeboat{
-	icon = 'icons/obj/vehicles/interiors/general.dmi';
-	pixel_y = 28;
-	pixel_x = 5
-	},
-/turf/open/shuttle/vehicle/floor_3_5,
-/area/interior/vehicle/lav)
 "R" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "wall_7"
+	icon_state = "wall_7";
+	name = "\improper LAV interior wall"
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/space)
 "S" = (
-/obj/effect/landmark/interior/spawn/interior_viewport{
-	pixel_y = 23;
-	pixel_x = 8
-	},
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
 	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	pixel_y = 23
+	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
-"T" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "wall_1";
-	opacity = 0
-	},
-/turf/open/void/vehicle,
-/area/space)
 "U" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "rear_1"
+	icon_state = "rear_1";
+	name = "\improper LAV interior wall"
 	},
 /turf/open/void/vehicle,
 /area/space)
 "V" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "front_2"
+	icon_state = "front_6";
+	name = "\improper LAV interior wall"
 	},
 /turf/open/void/vehicle,
 /area/space)
 "W" = (
-/turf/open/shuttle/vehicle/floor_1_2,
-/area/interior/vehicle/lav)
-"Y" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "rear_6"
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
 	},
-/turf/open/void/vehicle,
-/area/space)
+/obj/structure/extinguisher_cabinet/lifeboat{
+	icon = 'icons/obj/vehicles/interiors/general.dmi';
+	pixel_y = 28;
+	pixel_x = -18
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
+	pixel_y = 28;
+	pixel_x = -4
+	},
+/turf/open/shuttle/vehicle/floor_3_5,
+/area/interior/vehicle/lav)
 "Z" = (
 /obj/effect/landmark/interior/spawn/weapons_loader{
 	pixel_x = 3;
@@ -275,15 +270,13 @@
 /area/interior/vehicle/lav)
 
 (1,1,1) = {"
-Y
-d
+r
 c
 d
 y
 U
 "}
 (2,1,1) = {"
-T
 K
 O
 j
@@ -291,39 +284,34 @@ b
 E
 "}
 (3,1,1) = {"
-r
 Q
-W
+S
 k
 a
 h
 "}
 (4,1,1) = {"
-r
-S
+Q
 W
 k
 v
 E
 "}
 (5,1,1) = {"
-r
-J
+Q
 B
 t
 Z
 h
 "}
 (6,1,1) = {"
-i
-M
+Q
 e
 G
 w
 E
 "}
 (7,1,1) = {"
-r
 u
 F
 I
@@ -331,10 +319,9 @@ R
 h
 "}
 (8,1,1) = {"
-P
 V
 n
-n
-n
+J
+J
 C
 "}

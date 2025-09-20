@@ -1,6 +1,6 @@
-/obj/item/hardpoint/support/artillery_module
-	name = "\improper Artillery Module"
-	desc = "Allows the user to look far into the distance."
+/obj/item/hardpoint/support/nightvision
+	name = "\improper Expanded Sensory Module"
+	desc = "Allows the turret camera to see in the dark."
 
 	icon_state = "artillery"
 	disp_icon = "tank"
@@ -69,16 +69,3 @@
 		return NONE
 
 	return handle_fire(target, user, params)
-
-// LAV Enhanced Zoom module
-
-/obj/item/hardpoint/support/artillery_module/lav
-	name = "\improper M620 Farsight"
-	desc = "Allows the turret to look further far into the distance."
-
-	icon_state = "lav_artillery_0"
-	disp_icon = "lav"
-	disp_icon_state = "lav_artillery"
-
-	view_buff = 12
-	view_tile_offset = 8
