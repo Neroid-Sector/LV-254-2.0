@@ -118,11 +118,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/rooms/engineering)
+"aaw" = (
+/obj/vehicle/powerloader{
+	dir = 8
+	},
+/turf/open/floor/almayer/cargo,
+/area/blackgold/middle/rooms/orbital)
 "aax" = (
 /obj/structure/window/framed/almayer/aicore/hull,
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/aientrance)
+"aay" = (
+/turf/open/floor/almayer/flooredge/west,
+/area/blackgold/middle/rooms/briefing)
 "aaz" = (
 /turf/open_space,
 /area/blackgold/middle/rooms/aientrance)
@@ -198,6 +207,13 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/middle/rooms/reporter)
+"aaK" = (
+/turf/open/floor/almayer/flooredge/east,
+/area/blackgold/middle/rooms/briefing)
+"aaL" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/flooredge/east,
+/area/blackgold/middle/rooms/briefing)
 "aaM" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -223,6 +239,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/workshop)
+"aaP" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/flooredge/west,
+/area/blackgold/middle/rooms/briefing)
+"aaQ" = (
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/cic)
 "aaR" = (
 /turf/open/floor/almayer/silvercorner/east,
 /area/blackgold/middle/hallways/mid/aft)
@@ -252,6 +275,10 @@
 "aaY" = (
 /turf/open/floor/almayer/sterile_green_corner/west,
 /area/blackgold/middle/rooms/medical/chemistry)
+"aaZ" = (
+/obj/structure/machinery/cm_vending/gear/platoon_commander_armory,
+/turf/open/floor/almayer/redfull,
+/area/blackgold/upper/rooms/cic)
 "aba" = (
 /turf/open/floor/almayer/sterile_green_side,
 /area/blackgold/middle/rooms/medical)
@@ -12311,7 +12338,6 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/brig/cells)
 "aQI" = (
-/obj/structure/platform/metal/ship/corner/east,
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 25
 	},
@@ -16922,7 +16948,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "bcH" = (
 /obj/structure/disposalpipe/segment{
@@ -17164,7 +17190,7 @@
 /area/blackgold/middle/hallways/mid/aft)
 "bdh" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "bdi" = (
 /obj/structure/disposalpipe/segment,
@@ -17266,7 +17292,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "bdA" = (
 /obj/structure/surface/rack,
@@ -20815,7 +20841,7 @@
 	pixel_y = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/north,
 /area/blackgold/middle/rooms/briefing)
 "bnL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -20955,7 +20981,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/briefing)
 "bok" = (
 /obj/effect/decal/warning_stripes{
@@ -20966,7 +20992,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "bol" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -21253,7 +21279,7 @@
 	icon_state = "S"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/south,
 /area/blackgold/middle/rooms/briefing)
 "bpb" = (
 /obj/structure/pipes/vents/pump{
@@ -27219,7 +27245,6 @@
 /obj/structure/machinery/prop/almayer/CICmap,
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/barricade/handrail{
-	dir = 2;
 	pixel_x = 2;
 	alpha = 0
 	},
@@ -27227,7 +27252,6 @@
 /area/blackgold/lower/rooms/conference)
 "bHa" = (
 /obj/structure/barricade/handrail{
-	dir = 2;
 	pixel_x = 2;
 	alpha = 0
 	},
@@ -28072,7 +28096,6 @@
 /area/blackgold/lower/hallways/port/fore)
 "bQo" = (
 /obj/structure/barricade/handrail{
-	dir = 2;
 	pixel_x = 2;
 	alpha = 0
 	},
@@ -29290,7 +29313,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "djG" = (
 /obj/item/stool,
@@ -31738,7 +31761,7 @@
 /area/blackgold/middle/rooms/req)
 "fRZ" = (
 /obj/structure/surface/table/reinforced/black,
-/turf/open/floor/almayer/flooredgesmooth/south,
+/turf/open/floor/almayer/flooredge/northeast,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "fSi" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -32075,10 +32098,6 @@
 /obj/structure/machinery/prop/almayer/CICmap/glass,
 /turf/open/floor/almayer/blue/west,
 /area/blackgold/upper/rooms/cic)
-"gkj" = (
-/obj/structure/closet/secure_closet/guncabinet/red/cic_armory_mk1_rifle_ap,
-/turf/open/floor/almayer/plating_stripedcorner/east,
-/area/blackgold/upper/rooms/cic)
 "gkt" = (
 /obj/structure/machinery/ares/substrate,
 /turf/open/floor/almayer/aicore/no_build/ai_cargo,
@@ -32112,7 +32131,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/north,
 /area/blackgold/middle/rooms/briefing)
 "gmO" = (
 /obj/structure/largecrate/supply/supplies/plasteel,
@@ -32763,7 +32782,7 @@
 	layer = 3.3
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/briefing)
 "gWX" = (
 /obj/structure/surface/rack,
@@ -33333,7 +33352,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad)
 "hBf" = (
-/turf/open/floor/almayer/flooredgesmooth/north,
+/turf/open/floor/almayer/flooredge/northwest,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "hBn" = (
 /obj/structure/surface/table/almayer,
@@ -34677,7 +34696,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
-/turf/open/floor/almayer/flooredgesmooth/east,
+/turf/open/floor/almayer/flooredge/southeast,
 /area/blackgold/upper/rooms/commandbunks/adjunct)
 "iWm" = (
 /obj/structure/machinery/disposal{
@@ -34990,7 +35009,7 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/north,
 /area/blackgold/middle/rooms/briefing)
 "jjr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -38536,7 +38555,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/north,
 /area/blackgold/middle/rooms/briefing)
 "mRf" = (
 /obj/structure/machinery/power/apc/almayer/hardened/west,
@@ -39232,7 +39251,7 @@
 	icon_state = "S"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/south,
 /area/blackgold/middle/rooms/briefing)
 "nyf" = (
 /obj/structure/filingcabinet/documentation/uscm_mp{
@@ -41823,7 +41842,7 @@
 	icon_state = "W";
 	layer = 3.3
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/briefing)
 "qab" = (
 /obj/structure/surface/rack,
@@ -43126,7 +43145,7 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "rmB" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -43842,7 +43861,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "sdK" = (
 /obj/structure/machinery/light/small/red,
@@ -44450,7 +44469,7 @@
 	icon_state = "W";
 	layer = 3.3
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/briefing)
 "sGs" = (
 /obj/structure/closet/secure_closet/fridge/fish/stock,
@@ -44673,7 +44692,7 @@
 "sPl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/briefing)
 "sPy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -45263,7 +45282,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "tFK" = (
 /obj/structure/machinery/cm_vending/clothing/military_police{
@@ -46647,7 +46666,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "vfB" = (
 /obj/structure/machinery/door/poddoor/hybrisa/ultra_reinforced_door,
@@ -47505,7 +47524,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/south,
 /area/blackgold/middle/rooms/briefing)
 "vXV" = (
 /obj/effect/decal/cleanable/dirt,
@@ -94204,7 +94223,7 @@ ygs
 ygs
 wKu
 ygs
-ygs
+aaw
 aVJ
 asl
 asi
@@ -94702,19 +94721,19 @@ sAS
 atw
 amA
 amK
-bFh
+aaP
 sPl
-amR
-amR
-bFh
-bFh
+aay
+aay
+aaP
+aaP
 boj
 sPl
-bFh
-amR
-amR
-amR
-amR
+aaP
+aay
+aay
+aay
+aay
 hBn
 amA
 asN
@@ -96797,12 +96816,12 @@ bdh
 bdh
 djh
 bcG
-bFh
-amR
-bFh
-bFh
-amR
-amR
+aaL
+aaK
+aaL
+aaL
+aaK
+aaK
 hpw
 amA
 asN
@@ -114621,8 +114640,8 @@ pXI
 pXI
 bhK
 aKQ
-abY
 tee
+aaQ
 aKQ
 aKQ
 ugv
@@ -114642,8 +114661,8 @@ bsU
 bfk
 aKQ
 aKQ
+aaQ
 sHo
-abY
 aKQ
 wrT
 uVF
@@ -115164,7 +115183,7 @@ bsV
 adV
 aKQ
 erw
-gkj
+qFP
 qZp
 aKQ
 bJc
@@ -115230,8 +115249,8 @@ wKB
 wol
 bhL
 aKQ
-abY
-abY
+aaZ
+aaQ
 abY
 aKQ
 abm
@@ -115251,8 +115270,8 @@ bsW
 oTi
 aKQ
 kbM
-abY
-abY
+aaQ
+qZp
 aKQ
 uPo
 uPo

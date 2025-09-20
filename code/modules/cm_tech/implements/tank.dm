@@ -30,6 +30,5 @@
 	gearcomp.req_access = list()
 	gearcomp.req_one_access = list()
 	gearcomp.vendor_role = list()
-	gearcomp.available_categories = VEHICLE_ALL_AVAILABLE
 
 	return TRUE
