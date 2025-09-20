@@ -27,6 +27,7 @@
 	)
 
 	vehicle_flags = VEHICLE_CLASS_WEAK
+	vehicle_pen_armor = VEHICLE_ARMOR_SOFT
 
 	passengers_slots = 4
 	xenos_slots = 2

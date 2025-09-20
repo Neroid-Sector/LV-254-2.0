@@ -31,6 +31,7 @@
 	required_skill = SKILL_VEHICLE_LARGE
 
 	vehicle_flags = VEHICLE_CLASS_MEDIUM
+	vehicle_pen_armor = VEHICLE_ARMOR_HEAVY_ARMOR
 
 	move_max_momentum = 3
 	move_momentum_build_factor = 1.8

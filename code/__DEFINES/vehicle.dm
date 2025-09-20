@@ -53,3 +53,10 @@
 // Other vehicle flags
 /// Vehicle can bypass vehicle blockers, typically going further into maps than intended
 #define VEHICLE_BYPASS_BLOCKERS (1<<5)
+
+#define VEHICLE_ARMOR_SOFT 1 //cars
+#define VEHICLE_ARMOR_HEAVY 2 //tough industrial unarmored vehicles like cranes
+#define VEHICLE_ARMOR_LIGHT_ARMOR 3
+#define VEHICLE_ARMOR_MEDIUM_ARMOR 4 //apc
+#define VEHICLE_ARMOR_HEAVY_ARMOR 5 //tank
+#define VEHICLE_ARMOR_VERY_HEAVY_ARMOR 6

@@ -5,6 +5,7 @@
 	layer = ABOVE_XENO_LAYER
 	vehicle_flags = VEHICLE_CLASS_WEAK
 	flatbed = TRUE
+	vehicle_pen_armor = VEHICLE_ARMOR_HEAVY
 
 	icon = 'icons/obj/vehicles/civtruck.dmi'
 	icon_state = "civtruck_1"
