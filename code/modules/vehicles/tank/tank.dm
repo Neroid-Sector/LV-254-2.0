@@ -43,7 +43,6 @@
 		/obj/item/hardpoint/holder/tank_turret,
 		/obj/item/hardpoint/support/weapons_sensor,
 		/obj/item/hardpoint/support/overdrive_enhancer,
-		/obj/item/hardpoint/support/artillery_module,
 		/obj/item/hardpoint/armor/ballistic,
 		/obj/item/hardpoint/armor/caustic,
 		/obj/item/hardpoint/armor/concussive,
@@ -251,7 +250,6 @@
 	TANK.update_icon()
 
 /obj/effect/vehicle_spawner/tank/decrepit/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
@@ -262,7 +260,6 @@
 
 //PRESET: default hardpoints
 /obj/effect/vehicle_spawner/tank/fixed/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
@@ -295,7 +292,6 @@
 
 //PRESET: autocannon kit
 /obj/effect/vehicle_spawner/tank/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)

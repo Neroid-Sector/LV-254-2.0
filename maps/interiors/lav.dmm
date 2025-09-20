@@ -46,9 +46,26 @@
 /turf/open/void/vehicle,
 /area/space)
 "e" = (
-/obj/structure/vehicle_locker{
-	layer = 5.21;
-	pixel_y = 28
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
+	dir = 4
+	},
+/obj/structure/prop/tank{
+	density = 0;
+	icon_state = "prop6";
+	pixel_y = 32;
+	name = "LAV machinery"
+	},
+/obj/structure/prop/tank{
+	density = 0;
+	icon_state = "prop8_extra";
+	name = "LAV machinery";
+	layer = 3.8
+	},
+/obj/structure/prop/tank{
+	density = 0;
+	icon_state = "prop4";
+	layer = 2.9;
+	name = "LAV machinery"
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
@@ -72,13 +89,6 @@
 "k" = (
 /turf/open/shuttle/vehicle/floor_1_5,
 /area/interior/vehicle/lav)
-"n" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "front_2";
-	name = "\improper LAV interior wall"
-	},
-/turf/open/void/vehicle,
-/area/space)
 "r" = (
 /obj/structure/interior_wall/apc{
 	icon_state = "rear_6";
@@ -89,22 +99,15 @@
 "t" = (
 /obj/effect/landmark/interior/spawn/interior_camera{
 	dir = 6;
-	pixel_x = 16;
-	pixel_y = 10
+	pixel_x = 22;
+	pixel_y = 14;
+	layer = 3.81
 	},
 /obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
 	dir = 4
 	},
 /turf/open/shuttle/vehicle/floor_1_5,
 /area/interior/vehicle/lav)
-"u" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "wall_2";
-	opacity = 0;
-	name = "\improper LAV interior wall"
-	},
-/turf/open/void/vehicle,
-/area/space)
 "v" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 1;
@@ -113,10 +116,9 @@
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
 "w" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "front_8";
-	pixel_x = 3;
-	name = "\improper LAV interior wall"
+/obj/structure/prop/tank{
+	icon_state = "prop9";
+	name = "LAV machinery"
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/space)
@@ -132,10 +134,10 @@
 	pixel_x = 8;
 	pixel_y = 31
 	},
-/obj/structure/machinery/prop/almayer/CICmap/computer{
-	layer = 2.98;
-	pixel_x = -12;
-	pixel_y = 21
+/obj/structure/vehicle_locker{
+	layer = 5.21;
+	pixel_y = 28;
+	pixel_x = -11
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/lav)
@@ -154,24 +156,28 @@
 /turf/open/void/vehicle,
 /area/space)
 "F" = (
-/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
-	dir = 4
+/obj/structure/prop/tank{
+	icon_state = "prop7";
+	pixel_y = 32;
+	name = "LAV machinery"
+	},
+/obj/structure/prop/tank{
+	icon_state = "prop5";
+	name = "LAV machinery"
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
-/area/interior/vehicle/lav)
+/area/space)
 "G" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "lav_corner";
-	pixel_x = 3;
-	name = "\improper LAV interior wall"
+/obj/structure/prop/tank{
+	icon_state = "prop8";
+	name = "LAV machinery"
 	},
 /turf/open/shuttle/vehicle/floor_1_5,
 /area/space)
 "I" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "wheel_front_top_2";
-	pixel_x = 3;
-	name = "\improper LAV interior wall"
+/obj/structure/prop/tank{
+	icon_state = "prop3";
+	name = "LAV machinery"
 	},
 /turf/open/shuttle/vehicle/floor_1_5,
 /area/space)
@@ -214,9 +220,9 @@
 /turf/open/void/vehicle,
 /area/space)
 "R" = (
-/obj/structure/interior_wall/apc{
-	icon_state = "wall_7";
-	name = "\improper LAV interior wall"
+/obj/structure/prop/tank{
+	icon_state = "prop3";
+	name = "LAV machinery"
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/space)
@@ -263,7 +269,6 @@
 /area/interior/vehicle/lav)
 "Z" = (
 /obj/effect/landmark/interior/spawn/weapons_loader{
-	pixel_x = 3;
 	pixel_y = -1
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
@@ -312,7 +317,7 @@ w
 E
 "}
 (7,1,1) = {"
-u
+Q
 F
 I
 R
@@ -320,7 +325,7 @@ h
 "}
 (8,1,1) = {"
 V
-n
+J
 J
 J
 C
