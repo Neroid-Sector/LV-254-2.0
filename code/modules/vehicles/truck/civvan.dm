@@ -4,6 +4,7 @@
 
 	layer = ABOVE_XENO_LAYER
 	vehicle_flags = VEHICLE_CLASS_WEAK
+	vehicle_pen_armor = VEHICLE_ARMOR_SOFT
 
 	icon = 'icons/obj/vehicles/civvan.dmi'
 	icon_state = "civvan"

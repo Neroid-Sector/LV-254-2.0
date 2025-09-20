@@ -281,6 +281,19 @@ As such, don't expect any values assigned to common firearms to even consider ho
 #define ARMOR_PENETRATION_TIER_10 50
 
 /*
+////VEHICLE ARMOR PENETRATION////
+//See Neth's armor comments for how this works. Higher is better.
+*/
+
+#define VEHICLE_PEN_NONE 0 //tasers and rubber bullets
+#define VEHICLE_PEN_SOFT 1
+#define VEHICLE_PEN_HEAVY 2
+#define VEHICLE_PEN_LIGHT_ARMOR 3
+#define VEHICLE_PEN_MEDIUM_ARMOR 4
+#define VEHICLE_PEN_HEAVY_ARMOR 5
+#define VEHICLE_PEN_VERY_HEAVY_ARMOR 6
+
+/*
 ////EXTRA PROJECTILES////
 //Extra bullets to shoot when you shoot. Mostly for shotguns.
 */

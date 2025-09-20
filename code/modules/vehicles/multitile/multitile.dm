@@ -96,6 +96,10 @@
 	//variable for various flags
 	var/vehicle_flags = VEHICLE_CLASS_WEAK
 
+//handles bullets being able to injure occupants
+	var/vehicle_pen_armor = VEHICLE_ARMOR_SOFT
+	var/era_armor = FALSE
+
 	// References to the active/chosen hardpoint for each seat
 	var/active_hp = list(
 		VEHICLE_DRIVER = null

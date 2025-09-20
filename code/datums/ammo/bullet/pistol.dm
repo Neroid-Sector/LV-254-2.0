@@ -12,6 +12,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 20
 	penetration= 0
+	vehicle_pen = VEHICLE_PEN_SOFT
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 
@@ -50,6 +51,7 @@
 
 	damage = 15
 	penetration = ARMOR_PENETRATION_TIER_10
+	vehicle_pen = VEHICLE_PEN_HEAVY
 
 /datum/ammo/bullet/pistol/ap/penetrating/set_bullet_traits()
 	. = ..()
@@ -88,6 +90,7 @@
 	sound_override = 'sound/weapons/gun_c99.ogg'
 
 	damage = 0
+	vehicle_pen = VEHICLE_PEN_NONE
 	stamina_damage = 10
 	shrapnel_chance = 0
 
@@ -125,6 +128,7 @@
 	name = ".50 high-impact armor piercing pistol bullet"
 	penetration = ARMOR_PENETRATION_TIER_10
 	damage = 45
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 
 /datum/ammo/bullet/pistol/heavy/super/highimpact/upp
 	name = "high-impact pistol bullet"
@@ -148,6 +152,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	penetration = ARMOR_PENETRATION_TIER_6
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
+	vehicle_pen = VEHICLE_PEN_HEAVY
 
 /datum/ammo/bullet/pistol/incendiary
 	name = "incendiary pistol bullet"
@@ -214,6 +219,7 @@
 	name = "wall-penetrating squash-head pistol bullet"
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_10
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 
 /datum/ammo/bullet/pistol/squash/penetrating/set_bullet_traits()
 	. = ..()
