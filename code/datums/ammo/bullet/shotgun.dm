@@ -6,6 +6,7 @@
 
 /datum/ammo/bullet/shotgun
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	vehicle_pen = VEHICLE_PEN_HEAVY
 
 /datum/ammo/bullet/shotgun/setup_faction_clash_values()
 	. = ..()

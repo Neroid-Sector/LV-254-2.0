@@ -27,6 +27,7 @@
 	entrance_speed = 0.5 SECONDS
 
 	required_skill = SKILL_VEHICLE_LARGE
+	vehicle_pen_armor = VEHICLE_ARMOR_MEDIUM_ARMOR
 
 	movement_sound = 'sound/vehicles/tank_driving.ogg'
 

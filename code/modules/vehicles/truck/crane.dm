@@ -4,6 +4,7 @@
 
 	layer = ABOVE_XENO_LAYER
 	vehicle_flags = VEHICLE_CLASS_WEAK
+	vehicle_pen_armor = VEHICLE_ARMOR_HEAVY
 
 	icon = 'icons/obj/vehicles/crane.dmi'
 	icon_state = "crane"

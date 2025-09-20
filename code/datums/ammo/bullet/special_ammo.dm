@@ -14,6 +14,7 @@
 	accuracy = HIT_ACCURACY_TIER_MAX
 	damage = 25
 	penetration = ARMOR_PENETRATION_TIER_5
+	vehicle_pen = VEHICLE_PEN_HEAVY
 	effective_range_max = 1
 
 /datum/ammo/bullet/smartgun/alt
@@ -33,6 +34,7 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_10
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 1
 
 /datum/ammo/bullet/smartgun/armor_piercing/alt
@@ -46,6 +48,7 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_10
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 1
 
 /datum/ammo/bullet/smartgun/dirty
@@ -57,6 +60,7 @@
 	accurate_range = 32
 	accuracy = HIT_ACCURACY_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage = 40
 	penetration = 0
 
@@ -77,6 +81,7 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_9_5
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_7
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 3
 
 /datum/ammo/bullet/smartgun/dirty/armor_piercing/alt
@@ -84,6 +89,7 @@
 	icon_state = "bullet"
 
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	effective_range_max = 7
 
 /datum/ammo/bullet/smartgun/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks
@@ -119,6 +125,7 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 20
 	penetration = ARMOR_PENETRATION_TIER_8
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 1
 
 /datum/ammo/bullet/smartgun/holo_target/ap/alt
@@ -127,6 +134,7 @@
 
 	// Same as /datum/ammo/bullet/smartgun/armor_piercing/alt
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	effective_range_max = 7
 
 /datum/ammo/bullet/smartgun/m56_fpw
@@ -150,6 +158,7 @@
 	max_range = 22
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_7
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 	shell_speed = 2*AMMO_SPEED_TIER_6
@@ -166,6 +175,7 @@
 	accurate_range = 12
 	damage = 36
 	penetration= ARMOR_PENETRATION_TIER_10 //Bumped the penetration to serve a different role from sentries, MGs are a bit more offensive
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	accuracy = HIT_ACCURACY_TIER_3
 
 /datum/ammo/bullet/machinegun/setup_faction_clash_values()
@@ -227,7 +237,8 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
 	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_7
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 
 /datum/ammo/bullet/minigun/New()
 	..()
@@ -250,7 +261,8 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
 	damage = 45 //7.62x51 is scary
-	penetration= ARMOR_PENETRATION_TIER_6
+	penetration= ARMOR_PENETRATION_TIER_7
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pkp
@@ -262,7 +274,8 @@
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 14
 	damage = 35
-	penetration= ARMOR_PENETRATION_TIER_6
+	penetration= ARMOR_PENETRATION_TIER_7
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pkp/setup_faction_clash_values()
