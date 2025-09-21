@@ -16,6 +16,11 @@
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke
 	max_clips = 2
+
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/turret_smoke,
+	)
+
 	use_muzzle_flash = FALSE
 
 	w_class = SIZE_MASSIVE

@@ -122,6 +122,7 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_tank, list(
 	list("M92T Grenade Launcher Magazine", 150, /obj/item/ammo_magazine/hardpoint/tank_glauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("M56 Cupola Magazine", 150, /obj/item/ammo_magazine/hardpoint/m56_cupola, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("LZR-N Flamer Unit Fuel Tank", 150, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("M87 Smoke Grenade Magazine", 125, /obj/item/ammo_magazine/hardpoint/turret_smoke, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SUPPORT MODULE", 0, null, null, null),
 	list("Integrated Weapons Sensor Array", 150, /obj/item/hardpoint/support/weapons_sensor, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
@@ -177,6 +178,14 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_lav, list(
 	list("PARS 40/70 Chaingun Magazine", 150, /obj/item/ammo_magazine/hardpoint/chaingun, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("PARS 40/70 AP Chaingun Magazine", 250, /obj/item/ammo_magazine/hardpoint/chaingun/ap, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("PARS 40/70 HE Chaingun Magazine", 300, /obj/item/ammo_magazine/hardpoint/chaingun/he, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
+
+	list("SUPPORT MODULES", 0, null, null, null),
+	list("M-97FL Flare Launcher", 300, /obj/item/hardpoint/support/flare_launcher/lav, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("M-90L Smoke Launcher", 300, /obj/item/hardpoint/support/smoke_launcher, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
+
+	list("SUPPORT AMMUNITION", 0, null, null, null),
+	list("M-97FL Flare Launcher Magazine", 125, /obj/item/ammo_magazine/hardpoint/flare_launcher/lav, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("M90-L Smoke Grenade Magazine", 125, /obj/item/ammo_magazine/hardpoint/turret_smoke/lav, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("WHEELS", 0, null, null, null),
 	list("LAV Wheels", 200, /obj/item/hardpoint/locomotion/lav_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
