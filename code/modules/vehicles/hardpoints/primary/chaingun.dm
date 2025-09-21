@@ -18,6 +18,12 @@
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/chaingun
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/chaingun,
+		/obj/item/ammo_magazine/hardpoint/chaingun/ap,
+		/obj/item/ammo_magazine/hardpoint/chaingun/he
+	)
+
 	max_clips = 1
 
 	use_muzzle_flash = TRUE

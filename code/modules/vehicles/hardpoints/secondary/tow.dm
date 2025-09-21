@@ -12,6 +12,10 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/towlauncher
 	max_clips = 1
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/towlauncher,
+	)
+
 	px_offsets = list(
 		"1" = list(1, 10),
 		"2" = list(-1, 5),

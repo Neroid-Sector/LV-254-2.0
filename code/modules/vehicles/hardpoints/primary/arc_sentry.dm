@@ -17,6 +17,11 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/arc_sentry
 	max_clips = 2
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/arc_sentry,
+		/obj/item/ammo_magazine/hardpoint/arc_sentry/he
+	)
+
 	use_muzzle_flash = TRUE
 	angle_muzzleflash = FALSE
 	muzzleflash_icon_state = "muzzle_flash_double"

@@ -13,6 +13,10 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/secondary_flamer
 	max_clips = 1
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/secondary_flamer,
+	)
+
 	use_muzzle_flash = FALSE
 
 	var/max_range = 7

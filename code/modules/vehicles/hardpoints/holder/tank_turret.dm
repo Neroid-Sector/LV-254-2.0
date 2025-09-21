@@ -54,7 +54,7 @@
 	var/gyro = FALSE
 
 	// How long the windup is before the turret rotates
-	var/rotation_windup = 15
+	var/rotation_windup = 6
 	// Used during the windup
 	var/rotating = FALSE
 
@@ -142,6 +142,8 @@
 	to_chat(user, SPAN_NOTICE("You toggle \the [src]'s gyroscopic stabilizer [gyro ? "ON" :"OFF"]."))
 
 /obj/item/hardpoint/holder/tank_turret/proc/user_rotation(mob/user, deg)
+	var/soundfile = 'sound/machines/scanning.ogg'
+
 	// no rotating a broken turret
 	if(health <= 0)
 		return
@@ -157,6 +159,7 @@
 		return
 	rotating = FALSE
 
+	playsound(loc, soundfile, 25, 1)
 	rotate(deg, TRUE)
 
 /obj/item/hardpoint/holder/tank_turret/rotate(deg, override_gyro = FALSE)

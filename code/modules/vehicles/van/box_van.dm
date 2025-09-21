@@ -240,10 +240,10 @@
 		return ..()
 
 	if(istype(A, /turf/closed/wall) || \
-	   istype(A, /obj/structure/barricade/sandbags) || \
-	   istype(A, /obj/structure/barricade/metal) || \
-	   istype(A, /obj/structure/barricade/deployable) || \
-	   istype(A, /obj/structure/machinery/cryopod)) //Can no longer runover cryopods
+		istype(A, /obj/structure/barricade/sandbags) || \
+		istype(A, /obj/structure/barricade/metal) || \
+		istype(A, /obj/structure/barricade/deployable) || \
+		istype(A, /obj/structure/machinery/cryopod)) //Can no longer runover cryopods
 
 		return FALSE
 

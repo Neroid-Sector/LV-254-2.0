@@ -13,6 +13,10 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary_flamer
 	max_clips = 1
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/primary_flamer,
+	)
+
 	px_offsets = list(
 		"1" = list(0, 21),
 		"2" = list(0, -32),

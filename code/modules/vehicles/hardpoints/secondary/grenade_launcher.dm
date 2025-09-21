@@ -13,6 +13,10 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/tank_glauncher
 	max_clips = 3
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
+	)
+
 	use_muzzle_flash = FALSE
 
 	px_offsets = list(

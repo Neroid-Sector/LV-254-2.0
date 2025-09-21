@@ -13,6 +13,10 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola
 	max_clips = 1
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/m56_cupola,
+	)
+
 	muzzle_flash_pos = list(
 		"1" = list(8, -1),
 		"2" = list(-7, -15),
