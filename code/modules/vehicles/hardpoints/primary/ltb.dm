@@ -32,4 +32,4 @@
 	)
 
 	scatter = 2
-	fire_delay = 20.0 SECONDS
+	fire_delay = 9.0 SECONDS
