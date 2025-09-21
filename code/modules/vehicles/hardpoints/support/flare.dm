@@ -18,6 +18,11 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/flare_launcher
 	max_clips = 3
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/flare_launcher,
+	)
+
+
 	use_muzzle_flash = TRUE
 	angle_muzzleflash = FALSE
 	muzzleflash_icon_state = "muzzle_laser"

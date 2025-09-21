@@ -27,7 +27,7 @@
 		if(QDELETED(H) || QDELETED(H.ammo))
 			continue
 
-		if(istype(I, H.ammo.type))
+		if(I.type in H.allowed_ammo_types)
 			reloading_hardpoint = H
 			break
 

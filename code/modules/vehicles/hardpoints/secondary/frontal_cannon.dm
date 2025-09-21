@@ -18,6 +18,10 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon
 	max_clips = 1
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon,
+	)
+
 	use_muzzle_flash = TRUE
 	angle_muzzleflash = FALSE
 	muzzleflash_icon_state = "muzzle_flash_double"

@@ -17,38 +17,34 @@
 	scatter = 1
 	damage = 90
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_6
-	accurate_range = 8
+	penetration = ARMOR_PENETRATION_TIER_10
+	vehicle_pen = VEHICLE_PEN_MEDIUM_ARMOR
+	accurate_range = 14
 	max_range = 24
 	shell_speed = AMMO_SPEED_TIER_8
+	at_shell = TRUE
 
 /datum/ammo/bullet/lav/ap
 	name = "40mm AP Chaingun round"
-	damage = 65
-	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 80
+	vehicle_pen = VEHICLE_PEN_HEAVY_ARMOR
 
 /datum/ammo/bullet/lav/he
 	name = "40mm HE Chaingun round"
-	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_EXPLOSIVE
-	damage = 75
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 80
+	vehicle_pen = VEHICLE_PEN_HEAVY_ARMOR
+	he_shell = TRUE
+	heat_shell = TRUE
 
 /datum/ammo/bullet/lav/he/on_hit_mob(mob/mob, obj/projectile/projectile)
-	cell_explosion(get_turf(mob), 25, 100, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(mob), 30, 100, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
 
 	for(var/mob/living/carbon/L in get_turf(mob))
 		if(L.stat == CONSCIOUS && L.mob_size <= MOB_SIZE_XENO)
 			shake_camera(L, 1, 1)
 
-/datum/ammo/bullet/lav/he/on_hit_obj(obj/obj,obj/projectile/projectile)
-	cell_explosion(get_turf(obj), 25, 100, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
-
-	for(var/mob/living/carbon/L in get_turf(obj))
-		if(L.stat == CONSCIOUS && L.mob_size <= MOB_SIZE_XENO)
-			shake_camera(L, 1, 1)
-
 /datum/ammo/bullet/lav/he/on_hit_turf(turf/turf,obj/projectile/projectile)
-	cell_explosion(get_turf(turf), 25, 100, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(turf), 30, 100, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
 
 	for(var/mob/living/carbon/L in turf)
 		if(L.stat == CONSCIOUS && L.mob_size <= MOB_SIZE_XENO)

@@ -13,6 +13,10 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/ltb_cannon
 	max_clips = 3
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
+	)
+
 	px_offsets = list(
 		"1" = list(0, 21),
 		"2" = list(0, -32),

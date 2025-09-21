@@ -24,11 +24,11 @@
 
 	var/vehicle_pen = VEHICLE_PEN_SOFT
 	var/sniper_shell = FALSE
-	var/at_shell = FALSE
-	var/heat_shell = FALSE
-	var/plasma_shell = FALSE
-	var/he_shell = FALSE
-	var/plasma_he_shell = FALSE
+	var/he_shell = FALSE // Boom
+	var/at_shell = FALSE // Only causes spalling
+	var/heat_shell = FALSE // Boom (anti-tank edition)
+	var/plasma_shell = FALSE // Creates fire inside
+	var/plasma_he_shell = FALSE //  Plasma but boom (not inside)
 
 /datum/ammo/bullet/proc/handle_battlefield_execution(datum/ammo/firing_ammo, mob/living/hit_mob, obj/projectile/firing_projectile, mob/living/user, obj/item/weapon/gun/fired_from)
 	SIGNAL_HANDLER
@@ -103,35 +103,42 @@
 				M.munition_interior_bullet_effect(cause_data = create_cause_data("Vehicle Spalling"))
 				M.ex_act(25, P.dir, P.weapon_cause_data, 10)
 				to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
 			if(at_shell)//anti materiel weapons (vulture)
 				if(M.vehicle_pen_armor < vehicle_pen)
 					playsound(M, 'sound/effects/bang.ogg', 100)
 					M.munition_interior_bullet_effect(cause_data = create_cause_data("Vehicle Spalling"))
 					M.ex_act(25, P.dir, P.weapon_cause_data, 10)
 					to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
 				else
 					playsound(M, 'sound/effects/bang.ogg', 100)
 					M.munition_interior_bullet_effect(cause_data = create_cause_data("Anti-Tank Rifle"))
 					M.ex_act(25, P.dir, P.weapon_cause_data, 10)
 					to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
 			if(heat_shell)//heat shells
 				playsound(M, 'sound/effects/bang.ogg', 100)
 				M.at_munition_interior_explosion_effect_bullet(cause_data = create_cause_data("HEAT shell"))
 				M.ex_act(25, P.dir, P.weapon_cause_data, 10)
 				to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
 			if(plasma_shell)
 				playsound(M, 'sound/effects/bang.ogg', 100)
 				M.plasma_munition_interior_bullet_effect(cause_data = create_cause_data("Plasma Rifle"))
 				M.ex_act(25, P.dir, P.weapon_cause_data, 10)
 				to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
 			else//normal bullet effect
 				playsound(M, 'sound/effects/Glassbr3.ogg', 50)
 				M.munition_interior_bullet_effect(cause_data = create_cause_data("Vehicle Spalling"))
 				M.ex_act(25, P.dir, P.weapon_cause_data, 10)
 				return
+
 		else if(vehicle_pen < M.vehicle_pen_armor)
 			playsound(M, 'sound/bullets/bullet_ricochet8.ogg', 100)
 			user.visible_message(SPAN_BOLDWARNING("The [src] deflects off of [O]'s armor!"))
+
 	return ..()
 
 /datum/ammo/bullet/on_hit_mob(mob/M, obj/projectile/P, mob/user)

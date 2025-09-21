@@ -23,6 +23,10 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/firing_port_weapon
 	max_clips = 1
 
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/firing_port_weapon,
+	)
+
 	underlayer_north_muzzleflash = TRUE
 
 	scatter = 3

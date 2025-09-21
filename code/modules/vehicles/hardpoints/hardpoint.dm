@@ -86,6 +86,9 @@
 	/// Maximum amount of spare mags.
 	var/max_clips = 0
 
+	/// Tell the hardpoints what ammo they can use, if they have multiple types
+	var/list/allowed_ammo_types = list()
+
 	/// An assoc list in the format list(/datum/element/bullet_trait_to_give = list(...args))
 	/// that will be given to a projectile fired from the hardpoint.
 	var/list/list/traits_to_give
