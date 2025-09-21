@@ -35,6 +35,8 @@
 		/obj/item/hardpoint/holder/lav_turret,
 		/obj/item/hardpoint/primary/chaingun,
 		/obj/item/hardpoint/locomotion/lav_wheels,
+		/obj/item/hardpoint/support/smoke_launcher,
+		/obj/item/hardpoint/support/flare_launcher/lav,
 	)
 
 	seats = list(

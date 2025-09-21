@@ -2607,6 +2607,7 @@
 #include "code\modules\vehicles\hardpoints\special\firing_port_weapon.dm"
 #include "code\modules\vehicles\hardpoints\special\special.dm"
 #include "code\modules\vehicles\hardpoints\support\antenna.dm"
+#include "code\modules\vehicles\hardpoints\support\smoke.dm"
 #include "code\modules\vehicles\hardpoints\support\flare.dm"
 #include "code\modules\vehicles\hardpoints\support\iwsa.dm"
 #include "code\modules\vehicles\hardpoints\support\overdrive.dm"
