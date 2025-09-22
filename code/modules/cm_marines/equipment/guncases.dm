@@ -193,11 +193,13 @@
 /obj/item/storage/box/guncase/m56d
 	name = "\improper M56D heavy machine gun case"
 	desc = "A gun case containing the M56D heavy machine gun. You'll need to order resupplies from requisitions or scavenge them on the field. How do they fit all this into a case? Wouldn't you need a crate."
-	storage_slots = 8
+	storage_slots = 10
 	can_hold = list(/obj/item/device/m56d_gun, /obj/item/ammo_magazine/m56d, /obj/item/device/m56d_post, /obj/item/tool/wrench, /obj/item/tool/screwdriver, /obj/item/ammo_magazine/m56d, /obj/item/pamphlet/skill/machinegunner, /obj/item/storage/belt/marine/m2c)
 
 /obj/item/storage/box/guncase/m56d/fill_preset_inventory()
 	new /obj/item/device/m56d_gun(src)
+	new /obj/item/ammo_magazine/m56d(src)
+	new /obj/item/ammo_magazine/m56d(src)
 	new /obj/item/ammo_magazine/m56d(src)
 	new /obj/item/ammo_magazine/m56d(src)
 	new /obj/item/device/m56d_post(src)
