@@ -14,7 +14,7 @@
 	accuracy = HIT_ACCURACY_TIER_MAX
 	damage = 25
 	penetration = ARMOR_PENETRATION_TIER_5
-	vehicle_pen = VEHICLE_PEN_HEAVY
+	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	effective_range_max = 1
 
 /datum/ammo/bullet/smartgun/alt
@@ -34,7 +34,6 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_10
-	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 1
 
 /datum/ammo/bullet/smartgun/armor_piercing/alt
@@ -48,7 +47,6 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_10
-	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 1
 
 /datum/ammo/bullet/smartgun/dirty
@@ -60,7 +58,6 @@
 	accurate_range = 32
 	accuracy = HIT_ACCURACY_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_9
-	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage = 40
 	penetration = 0
 
@@ -81,7 +78,6 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_9_5
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_7
-	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 3
 
 /datum/ammo/bullet/smartgun/dirty/armor_piercing/alt
@@ -89,7 +85,6 @@
 	icon_state = "bullet"
 
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
-	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	effective_range_max = 7
 
 /datum/ammo/bullet/smartgun/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks
@@ -125,7 +120,6 @@
 	accuracy = HIT_ACCURACY_TIER_2
 	damage = 20
 	penetration = ARMOR_PENETRATION_TIER_8
-	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	damage_armor_punch = 1
 
 /datum/ammo/bullet/smartgun/holo_target/ap/alt
@@ -134,7 +128,6 @@
 
 	// Same as /datum/ammo/bullet/smartgun/armor_piercing/alt
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
-	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 	effective_range_max = 7
 
 /datum/ammo/bullet/smartgun/m56_fpw

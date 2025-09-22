@@ -799,6 +799,19 @@
 	item_state = "m56c"
 	var/mob/living/carbon/human/linked_human
 	var/is_locked = TRUE
+	random_cosmetic_chance = 10
+	random_spawn_cosmetic = list(
+		/obj/item/attachable/cosmetic/uscm_flag,
+	)
+/obj/item/weapon/gun/smartgun/co/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 17, "rail_y" = 18, "under_x" = 22, "under_y" = 14, "stock_x" = 22, "stock_y" = 14, "cosmetic_x" = 16, "cosmetic_y" = 16)
+
+/obj/item/weapon/gun/smartgun/co/update_icon()
+	. = ..()
+	if(locate(/obj/item/attachable/cosmetic/uscm_flag) in src)
+		item_state = "m56c_flag"
+		item_state_slots[WEAR_J_STORE] ="m56c_flag"
+		item_state_slots[WEAR_BACK] ="m56c_flag"
 
 /obj/item/weapon/gun/smartgun/co/Initialize(mapload, ...)
 	LAZYADD(actions_types, /datum/action/item_action/co_sg/toggle_id_lock)
@@ -912,6 +925,8 @@
 /obj/item/weapon/gun/smartgun/dirty
 	name = "\improper M56D 'Dirty' smartgun"
 	desc = "The actual firearm in the 4-piece M56D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/machineguns.dmi'
+	icon_state = "l56d"
 	current_mag = /obj/item/ammo_magazine/smartgun/dirty
 	ammo = /obj/item/ammo_magazine/smartgun/dirty
 	ammo_primary //Toggled ammo type
@@ -956,54 +971,132 @@
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_10
 	fa_max_scatter = SCATTER_AMOUNT_NONE
 
-
 // CLF SMARTGUN
 
+#define CLF_SMARTGUN_UNJAM_CHANCE 20
+
 /obj/item/weapon/gun/smartgun/clf
-	name = "\improper M56B 'Freedom' smartgun"
-	desc = "The actual firearm in the 4-piece M56B Smartgun System. Essentially a heavy, mobile machinegun. This one has the CLF logo carved over the manufacturing stamp.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	name = "\improper scavenged M56 'Freedom' smartgun"
+	desc = "A smartgun abomination made from salvaged-parts sloppily wired and welded together, it appears to be rusted across it's frame. As whoever made this thing, clearly had no resources or proper tools to assemble it to an efficient usable state."
+	desc_lore = {"After long-fiery battles that partook within the Neroid Sector of the frontier, the United States Colonial Marines were pushed out by Colonial Liberation Front cells. Through a set of tactics, utilizing guerilla warfare mostly based around hit-and runs to compensate for the lack of proper logistics.
+
+		On it's aftermath gear unrecovered was left on the way, which the front proceeded to use to their own advantage. Taking what they could from the corpses of the infantry left behind to cover their needs, the mechanisms and electronics from the M56A2's were extracted from the broken-down exemplarys. Then placed into a makeshift frame although primitive and rudimentary due to no detailed schematics or resources at hand. Then issued out as  a desperate measure of giving an equal fire-support weapon to it's troops.
+
+		After studys done on this frankenstein of a weapon by the USCM, it reportedly was using parts from the slightly outdated M56, mainly it's barrel to outfit it, as  an unintentioned flaw it jams constantly requiring extensive  and frequent maintenance making it almost unreliable. The M57 and L56A2 were also scrapped for spare-parts to put it together, as the rarity of parts themselves was a prominent fabrication issue for the insurgency cells."}
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony/machineguns.dmi'
+	icon_state = "m56f"
+	item_state = "m56f"
+	random_spawn_chance = 100
+	random_cosmetic_chance = 100
+	current_mag = /obj/item/ammo_magazine/smartgun/rusty
+	var/jammed = FALSE
+	random_spawn_cosmetic = list(
+		/obj/item/attachable/cosmetic/clf_flag,
+		/obj/item/attachable/cosmetic/clf_rags,
+		/obj/item/attachable/cosmetic/clf_sling,
+	)
 
 /obj/item/weapon/gun/smartgun/clf/Initialize(mapload, ...)
 	. = ..()
 	MD.iff_signal = FACTION_CLF
 
-/obj/item/weapon/gun/smartgun/admin
-	requires_power = FALSE
-	requires_battery = FALSE
-	requires_harness = FALSE
+/obj/item/weapon/gun/smartgun/clf/set_gun_config_values()
+	..()
+	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_1 //Rusty, salvaged and worn, what did you expect?
 
-/obj/item/smartgun_battery
-	name = "\improper DV9 smartgun battery"
-	desc = "A standard-issue 9-volt lithium dry-cell battery, most commonly used within the USCMC to power smartguns. Per the manual, one battery is good for up to 50000 rounds and plugs directly into the smartgun's power receptacle, which is only compatible with this type of battery. Various auxiliary modes usually bring the round count far lower. While this cell is incompatible with most standard electrical system, it can be charged by common rechargers in a pinch. USCMC smartgunners often guard them jealously."
+/obj/item/weapon/gun/smartgun/clf/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 17, "rail_y" = 18, "under_x" = 22, "under_y" = 14, "stock_x" = 22, "stock_y" = 14, "cosmetic_x" = 16, "cosmetic_y" = 16)
 
-	icon = 'icons/obj/structures/machinery/power.dmi'
-	icon_state = "smartguncell"
+/obj/item/weapon/gun/smartgun/clf/update_icon()
+	if(locate(/obj/item/attachable/cosmetic/clf_flag) in src)
+		item_state = "m56f_flag"
+		item_state_slots[WEAR_J_STORE] ="m56f_flag"
+		item_state_slots[WEAR_BACK] ="m56f_flag"
+	else if(locate(/obj/item/attachable/cosmetic/clf_rags) in src)
+		item_state = "m56f_rags"
+		item_state_slots[WEAR_J_STORE] ="m56f_rags"
+		item_state_slots[WEAR_BACK] ="m56f_rags"
+	else if(locate(/obj/item/attachable/cosmetic/clf_sling) in src)
+		item_state = "m56f_sling"
+		item_state_slots[WEAR_J_STORE] ="m56f_sling"
+		item_state_slots[WEAR_BACK] ="m56f_sling"
+	else
+		item_state = "m56f"
+		item_state_slots[WEAR_J_STORE] ="m56f"
+		item_state_slots[WEAR_BACK] ="m56f"
 
-	force = 5
-	throwforce = 5
-	throw_speed = SPEED_VERY_FAST
-	throw_range = 5
-	w_class = SIZE_SMALL
+/obj/item/weapon/gun/smartgun/clf/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+	if(jammed)
+		if(world.time % 3)
+			playsound(src, 'sound/weapons/handling/gun_jam_click.ogg', 35, TRUE)
+			to_chat(user, SPAN_WARNING("Your gun is jammed! Mash Unique-Action to unjam it!"))
+			balloon_alert(user, "*jammed*")
+		return NONE
+	else if(prob(0.6)) //0.6% chance to jam on fire
+		jammed = TRUE
+		playsound(src, 'sound/weapons/handling/gun_jam_initial_click.ogg', 50, FALSE)
+		user.visible_message(SPAN_DANGER("[src] makes a noticeable clicking noise!"), SPAN_HIGHDANGER("\The [src] suddenly jams and refuses to fire! Mash Unique-Action to unjam it."))
+		balloon_alert(user, "*jammed*")
+		return NONE
+	else if(prob(0.8)) //0.8% chance to malfunction on fire
+		switch(rand(1, 8))
+			if(1)
+				toggle_accuracy_improvement(user)
+			if(2)
+				toggle_auto_aim(user)
+			if(3)
+				toggle_frontline_mode(user)
+			if(4)
+				toggle_motion_detector(user)
+			if(5)
+				toggle_recoil_compensation(user)
+			if(6)
+				toggle_ammo_type(user)
+			if(7)
+				toggle_lethal_mode(user)
+			if(8)
+				toggle_armbrace(user)
+		to_chat(user, SPAN_HIGHDANGER("The [src] electronics malfunctions!"))
+		var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
+		sparks.set_up(5, 3, src)
+		sparks.start()
+		playsound(src, pick('sound/machines/resource_node/node_marine_die_2.ogg', 'sound/machines/resource_node/node_marine_die.ogg'), 50, FALSE)
+	else
+		return ..()
 
-	var/obj/item/cell/high/power_cell
-
-/obj/item/smartgun_battery/Initialize(mapload)
+/obj/item/weapon/gun/smartgun/clf/unique_action(mob/user)
+	if(jammed)
+		if(prob(CLF_SMARTGUN_UNJAM_CHANCE))
+			to_chat(user, SPAN_GREEN("You successfully unjam \the [src]!"))
+			playsound(src, 'sound/weapons/handling/gun_jam_rack_success.ogg', 50, FALSE)
+			jammed = FALSE
+			cock_cooldown += 1 SECONDS //so they dont accidentally cock a bullet away
+			balloon_alert(user, "*unjammed!*")
+		else
+			to_chat(user, SPAN_NOTICE("You start wildly racking the bolt back and forth attempting to unjam \the [src]!"))
+			playsound(src, "gun_jam_rack", 50, FALSE)
+			balloon_alert(user, "*rack*")
+		return
 	. = ..()
 
-	power_cell = new(src)
+/obj/item/weapon/gun/smartgun/clf/leader
+	name = "\improper repaired M56 'Freedom' smartgun"
+	random_spawn_cosmetic = list(
+		/obj/item/attachable/cosmetic/clf_flag,
+	)
 
-/obj/item/smartgun_battery/Destroy()
-	QDEL_NULL(power_cell)
-	return ..()
+/obj/item/weapon/gun/smartgun/clf/leader/update_icon()
+	if(locate(/obj/item/attachable/cosmetic/clf_flag) in src)
+		item_state = "m56f_flag"
+		item_state_slots[WEAR_J_STORE] ="m56f_flag"
+		item_state_slots[WEAR_BACK] ="m56f_flag"
 
-/obj/item/smartgun_battery/get_examine_text(mob/user)
-	. = ..()
-
-	. += SPAN_NOTICE("The power indicator reads [power_cell.charge] charge out of [power_cell.maxcharge] total.")
+#undef CLF_SMARTGUN_UNJAM_CHANCE
 
 /obj/item/weapon/gun/smartgun/rmc
 	name = "\improper L56A2 smartgun"
-	desc = "The actual firearm in the 2-piece L56A2 Smartgun System. This Variant is used by the Three World Empires Royal Marines Commando units.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	desc = "The actual firearm in the 4-piece L56A2 Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way."
+	desc_lore = "Originally produced for the Three World Empires Royal Marines forces, it mostly ended up in hands of W-Y PMCs and other affiliated forces, with Three World Empire giving preference for other design, that is still produced by W-Y regardless. Compared to more commonly used M56A2, it has improved recoil control, better electronics and advanced tracking software."
 	current_mag = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo_primary_def = /datum/ammo/bullet/smartgun/holo_target
@@ -1043,5 +1136,35 @@
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_3
 
+/obj/item/weapon/gun/smartgun/admin
+	requires_power = FALSE
+	requires_battery = FALSE
+	requires_harness = FALSE
+
 #undef LYING_DOWN_SG_ROF_DEBUFF
 #undef KNOCKDOWN_SG_FAILSOUND_COOLDOWN
+
+
+/obj/item/smartgun_battery
+	name = "\improper DV9 smartgun battery"
+	desc = "A standard-issue 9-volt lithium dry-cell battery, most commonly used within the USCMC to power smartguns. Per the manual, one battery is good for up to 50000 rounds and plugs directly into the smartgun's power receptacle, which is only compatible with this type of battery. Various auxiliary modes usually bring the round count far lower. While this cell is incompatible with most standard electrical system, it can be charged by common rechargers in a pinch. USCMC smartgunners often guard them jealously."
+
+	icon = 'icons/obj/structures/machinery/power.dmi'
+	icon_state = "smartguncell"
+
+	force = 5
+	throwforce = 5
+	throw_speed = SPEED_VERY_FAST
+	throw_range = 5
+	w_class = SIZE_SMALL
+
+	var/obj/item/cell/high/power_cell
+
+/obj/item/smartgun_battery/Initialize(mapload)
+	. = ..()
+
+	power_cell = new(src)
+
+/obj/item/smartgun_battery/Destroy()
+	QDEL_NULL(power_cell)
+	return ..()
