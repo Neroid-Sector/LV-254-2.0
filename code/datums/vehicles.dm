@@ -48,13 +48,21 @@
 	name = "jeep"
 	interior_id = "jeep"
 
+/datum/map_template/interior/jeep_bed
+	name = "jeep_bed"
+	interior_id = "jeep_bed"
+
+/datum/map_template/interior/jeep_med
+	name = "jeep_med"
+	interior_id = "jeep_med"
+
 /datum/map_template/interior/jeep_cmd
 	name = "jeep_cmd"
 	interior_id = "jeep_cmd"
 
-/datum/map_template/interior/jeep_pass
-	name = "jeep_pass"
-	interior_id = "jeep_pass"
+/datum/map_template/interior/jeep_mp
+	name = "jeep_mp"
+	interior_id = "jeep_mp"
 
 // Civilian Interiors
 

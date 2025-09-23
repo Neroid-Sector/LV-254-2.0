@@ -39,7 +39,7 @@
 	var/gyro = FALSE
 
 	// How long the windup is before the turret rotates
-	var/rotation_windup = 4
+	var/rotation_windup = 4 // Decently quick
 	// Used during the windup
 	var/rotating = FALSE
 

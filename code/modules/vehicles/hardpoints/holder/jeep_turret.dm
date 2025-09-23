@@ -1,4 +1,4 @@
-/obj/item/hardpoint/holder/lav_turret
+/obj/item/hardpoint/holder/jeep_turret
 	name = "\improper M220 CTM Module"
 	desc = "The main upgrade for Armat M48 Military Jeeps, allows installation of a variety of weapons."
 
@@ -21,11 +21,15 @@
 
 	// basically just a ring and motor
 	health = 200
-	damage_multiplier = 0.75
+	damage_multiplier = 0.6
 
 	accepted_hardpoints = list(
-		// primaries
-		/obj/item/hardpoint/primary/chaingun
+		/obj/item/hardpoint/secondary/m56cupola/jeep,
+		/obj/item/hardpoint/secondary/m56cupola/jeep/hmg,
+		/obj/item/hardpoint/secondary/small_flamer/jeep,
+		/obj/item/hardpoint/secondary/towlauncher/jeep,
+		/obj/item/hardpoint/secondary/grenade_launcher/jeep,
+		/obj/item/hardpoint/secondary/grenade_launcher/jeep/riot
 	)
 
 	hdpt_layer = HDPT_LAYER_TURRET
@@ -39,7 +43,7 @@
 	var/gyro = FALSE
 
 	// How long the windup is before the turret rotates
-	var/rotation_windup = 4
+	var/rotation_windup = 2  // Very quick
 	// Used during the windup
 	var/rotating = FALSE
 
@@ -50,9 +54,9 @@
 	)
 	fire_delay = 0.6 SECONDS
 
-/obj/item/hardpoint/holder/lav_turret/update_icon()
+/obj/item/hardpoint/holder/jeep_turret/update_icon()
 	var/broken = (health <= 0)
-	icon_state = "lav_turret_[broken]"
+	icon_state = "jeep_turret_[broken]"
 
 	if(health <= initial(health))
 		var/image/damage_overlay = image(icon, icon_state = "damaged_turret")
@@ -61,7 +65,7 @@
 
 	..()
 
-/obj/item/hardpoint/holder/lav_turret/get_icon_image(x_offset, y_offset, new_dir)
+/obj/item/hardpoint/holder/jeep_turret/get_icon_image(x_offset, y_offset, new_dir)
 	var/icon_state_suffix = "0"
 	if(health <= 0)
 		icon_state_suffix = "1"
@@ -76,10 +80,10 @@
 	return I
 
 // no picking this big beast up
-/obj/item/hardpoint/holder/lav_turret/attack_hand(mob/user)
+/obj/item/hardpoint/holder/jeep_turret/attack_hand(mob/user)
 	return
 
-/obj/item/hardpoint/holder/lav_turret/attackby(obj/item/I, mob/user)
+/obj/item/hardpoint/holder/jeep_turret/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/powerloader_clamp))
 		var/obj/item/powerloader_clamp/PC = I
 		if(!PC.linked_powerloader)
@@ -96,7 +100,7 @@
 		return TRUE
 	..()
 
-/obj/item/hardpoint/holder/lav_turret/get_tgui_info()
+/obj/item/hardpoint/holder/jeep_turret/get_tgui_info()
 	var/list/data = list()
 
 	for(var/obj/item/hardpoint/H in hardpoints)
@@ -105,7 +109,7 @@
 	return data
 
 //gyro ON locks the turret in one direction, OFF will make turret turning when tank turns
-/obj/item/hardpoint/holder/lav_turret/proc/toggle_gyro(mob/user)
+/obj/item/hardpoint/holder/jeep_turret/proc/toggle_gyro(mob/user)
 	if(health <= 0)
 		to_chat(user, SPAN_WARNING("\The [src]'s stabilization systems are busted!"))
 		return
@@ -113,7 +117,7 @@
 	gyro = !gyro
 	to_chat(user, SPAN_NOTICE("You toggle \the [src]'s gyroscopic stabilizer [gyro ? "ON" :"OFF"]."))
 
-/obj/item/hardpoint/holder/lav_turret/proc/user_rotation(mob/user, deg)
+/obj/item/hardpoint/holder/jeep_turret/proc/user_rotation(mob/user, deg)
 	var/soundfile = 'sound/machines/scanning.ogg'
 
 	// no rotating a broken turret
@@ -134,13 +138,13 @@
 	playsound(loc, soundfile, 25, 1)
 	rotate(deg, TRUE)
 
-/obj/item/hardpoint/holder/lav_turret/rotate(deg, override_gyro = FALSE)
+/obj/item/hardpoint/holder/jeep_turret/rotate(deg, override_gyro = FALSE)
 	if(gyro && !override_gyro)
 		return
 
 	..(deg)
 
-/obj/item/hardpoint/holder/lav_turret/try_fire(atom/target, mob/living/user, params)
+/obj/item/hardpoint/holder/jeep_turret/try_fire(atom/target, mob/living/user, params)
 	var/turf/L
 	var/turf/R
 	switch(owner.dir)

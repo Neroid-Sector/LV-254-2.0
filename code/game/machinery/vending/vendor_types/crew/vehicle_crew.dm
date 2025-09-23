@@ -119,7 +119,7 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_tank, list(
 	list("LZR-N Flamer Unit", 250, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
 
 	list("SECONDARY AMMUNITION", 0, null, null, null),
-	list("M92T Grenade Launcher Magazine", 150, /obj/item/ammo_magazine/hardpoint/tank_glauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("M92T Grenade Launcher Magazine", 150, /obj/item/ammo_magazine/hardpoint/grenade, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("M56 Cupola Magazine", 150, /obj/item/ammo_magazine/hardpoint/m56_cupola, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("LZR-N Flamer Unit Fuel Tank", 150, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("M87 Smoke Grenade Magazine", 125, /obj/item/ammo_magazine/hardpoint/turret_smoke, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
@@ -148,7 +148,7 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_apc, list(
 	list("RE-RE700 Frontal Cannon", 400, /obj/item/hardpoint/secondary/frontalcannon, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SECONDARY AMMUNITION", 0, null, null, null),
-	list("RE-RE700 Frontal Cannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/tank_glauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("RE-RE700 Frontal Cannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/grenade, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SUPPORT MODULE", 0, null, null, null),
 	list("M-97F Flare Launcher", 300, /obj/item/hardpoint/support/flare_launcher, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),

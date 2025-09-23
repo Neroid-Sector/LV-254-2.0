@@ -1,15 +1,43 @@
 /obj/item/ammo_magazine/hardpoint/m56_cupola
 	name = "M56 Cupola Magazine"
-	desc = "A box of 500, 10x28mm caseless tungsten rounds for the M56D heavy machine gun system."
+	desc = "A large box of 1000, 10x28mm caseless tungsten rounds for the M56D heavy machine gun system."
 	caliber = "10x28mm" //Correlates to smartguns
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi'
 	icon_state = "cupola_1"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/bullet/machinegun
-	max_rounds = 500
+	max_rounds = 1000
 	gun_type = /obj/item/hardpoint/secondary/m56cupola
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/update_icon()
+	icon_state = "cupola_[current_rounds <= 0 ? "0" : "1"]"
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/jeep
+	name = "M56 Vehicle Drum"
+	desc = "A heavy drum of 600, 10x28mm caseless tungsten rounds for the M56D heavy machine gun, usually mounted on jeeps that cant take the bigger ammo boxes."
+	caliber = "10x28mm" //Correlates to smartguns
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi'
+	icon_state = "m56d_drum_large_1"
+
+	max_rounds = 600
+	gun_type = /obj/item/hardpoint/secondary/m56cupola/jeep
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/jeep/update_icon()
+	icon_state = "cupola_[current_rounds <= 0 ? "0" : "1"]"
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/jeep/hmg
+	name = "M2C Vehicle Box"
+	desc = "A heavy box of 300, 12x40mm tungsten rounds for the M2C heavy machine gun, usually mounted on jeeps that cant take the bigger ammo boxes."
+	caliber = "12x40mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi'
+	icon_state = "m2c_large_1"
+
+	default_ammo = /datum/ammo/bullet/machinegun/auto
+
+	max_rounds = 300
+	gun_type = /obj/item/hardpoint/secondary/m56cupola/jeep/hmg
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/jeep/hmg/update_icon()
 	icon_state = "cupola_[current_rounds <= 0 ? "0" : "1"]"
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon

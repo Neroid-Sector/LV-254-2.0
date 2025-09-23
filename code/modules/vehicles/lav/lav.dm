@@ -5,7 +5,7 @@
 	icon = 'icons/obj/vehicles/lav.dmi'
 	icon_state = "lav_base"
 	pixel_x = -48
-	pixel_y = -48
+	pixel_y = -32
 
 	bound_width = 96
 	bound_height = 96
