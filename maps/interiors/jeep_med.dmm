@@ -46,10 +46,6 @@
 	pixel_y = 32;
 	tag = "left"
 	},
-/obj/effect/landmark/interior/spawn/weapons_loader{
-	pixel_y = 3;
-	pixel_x = 14
-	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "front_roof_2";
 	alpha = 50
@@ -90,29 +86,22 @@
 /turf/open/void/vehicle,
 /area/space)
 "x" = (
-/obj/structure/bed/chair/comfy{
-	dir = 4
-	},
 /obj/structure/extinguisher_cabinet/lifeboat{
 	icon = 'icons/obj/vehicles/interiors/general.dmi';
 	layer = 3.5;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_y = 31;
+	pixel_x = -9
+	},
+/obj/effect/landmark/interior/spawn/telephone{
+	pixel_x = 3;
+	pixel_y = 33;
+	layer = 3.5
 	},
 /turf/open/shuttle/vehicle/floor_3_1_1,
 /area/interior/vehicle/van)
 "y" = (
-/obj/structure/bed/chair/comfy{
-	dir = 4
-	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
-"A" = (
-/obj/structure/interior_wall/van{
-	icon_state = "jeep_2"
-	},
-/turf/open/void/vehicle,
-/area/space)
 "B" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle{
 	pixel_x = -20;
@@ -198,15 +187,6 @@
 	},
 /turf/open/void/vehicle,
 /area/space)
-"U" = (
-/obj/structure/interior_wall/van{
-	alpha = 35;
-	icon_state = "jeep_2";
-	layer = 5.2;
-	pixel_y = 32
-	},
-/turf/open/void/vehicle,
-/area/space)
 "W" = (
 /obj/structure/interior_wall/van{
 	icon_state = "jeep_5";
@@ -248,11 +228,11 @@ S
 "}
 (4,1,1) = {"
 a
-A
+c
 x
 E
 y
-U
+S
 "}
 (5,1,1) = {"
 a
