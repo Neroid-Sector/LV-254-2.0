@@ -19,7 +19,7 @@
 
 	use_muzzle_flash = FALSE
 
-	var/max_range = 7
+	var/max_range = 9
 
 	px_offsets = list(
 		"1" = list(2, 14),
@@ -59,3 +59,5 @@
 	COOLDOWN_START(src, fire_cooldown, fire_delay)
 
 	return AUTOFIRE_CONTINUE
+
+/obj/item/hardpoint/secondary/small_flamer/jeep

@@ -30,3 +30,16 @@
 		GUN_FIREMODE_AUTOMATIC,
 	)
 	fire_delay = 0.3 SECONDS
+
+/obj/item/hardpoint/secondary/m56cupola/jeep
+	icon = 'icons/obj/vehicles/hardpoints/jeep.dmi'
+	icon_state = "jeep_m56"
+	disp_icon = "jeep"
+	disp_icon_state = "jeep_m56"
+
+/obj/item/hardpoint/secondary/m56cupola/jeep/hmg
+	icon_state = "jeep_m2c"
+	disp_icon = "jeep"
+	disp_icon_state = "jeep_m2c"
+	activation_sounds = 'sound/weapons/gun_m56d_auto.ogg'
+

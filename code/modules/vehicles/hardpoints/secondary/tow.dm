@@ -33,3 +33,4 @@
 	scatter = 4
 	fire_delay = 15.0 SECONDS
 
+/obj/item/hardpoint/secondary/towlauncher/jeep

@@ -2,6 +2,10 @@
 "a" = (
 /turf/open/void/vehicle,
 /area/space)
+"b" = (
+/obj/structure/bed/chair/comfy/blue,
+/turf/open/shuttle/vehicle/floor_1_5,
+/area/interior/vehicle/van)
 "e" = (
 /obj/structure/interior_wall/van{
 	alpha = 35;
@@ -11,19 +15,12 @@
 	},
 /turf/open/void/vehicle,
 /area/space)
-"j" = (
-/obj/structure/interior_wall/van{
-	alpha = 35;
-	icon_state = "jeep_2";
-	layer = 5.2;
-	pixel_y = 32
-	},
-/turf/open/void/vehicle,
-/area/space)
 "k" = (
-/turf/open/floor/almayer{
-	icon_state = "test_floor5"
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/crew/alt{
+	dir = 1
 	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
 "l" = (
 /obj/effect/landmark/interior/spawn/vehicle_driver_seat{
@@ -40,23 +37,15 @@
 	icon_state = "front_roof_2";
 	alpha = 50
 	},
-/turf/open/shuttle/vehicle/floor_3_1_1,
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
 "m" = (
-/obj/structure/extinguisher_cabinet/lifeboat{
-	icon = 'icons/obj/vehicles/interiors/general.dmi';
-	layer = 3.5;
+/obj/effect/landmark/interior/spawn/telephone{
+	pixel_x = -5;
 	pixel_y = 28;
-	pixel_x = -5
+	layer = 3.5
 	},
-/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
-	layer = 3.98;
-	pixel_x = 8;
-	pixel_y = 28
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor5"
-	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
 "n" = (
 /obj/structure/interior_wall/van{
@@ -64,17 +53,10 @@
 	},
 /turf/open/void/vehicle,
 /area/space)
-"o" = (
-/obj/structure/interior_wall/van{
-	icon_state = "jeep_5";
-	pixel_y = 32;
-	alpha = 35
-	},
-/turf/open/void/vehicle,
-/area/space)
 "p" = (
-/obj/structure/bed/chair/comfy{
-	dir = 4
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/faxmachine/uscm/blackgold/command{
+	sub_name = "CIC"
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
@@ -145,12 +127,6 @@
 	},
 /turf/open/void/vehicle,
 /area/space)
-"F" = (
-/obj/structure/interior_wall/van{
-	icon_state = "jeep_2"
-	},
-/turf/open/void/vehicle,
-/area/space)
 "H" = (
 /turf/open/shuttle/vehicle/floor_1_13,
 /area/interior/vehicle/van)
@@ -166,7 +142,7 @@
 	pixel_y = 18;
 	layer = 3.3
 	},
-/obj/structure/bed/chair/comfy{
+/obj/structure/bed/chair/comfy/blue{
 	dir = 1
 	},
 /turf/open/floor/almayer{
@@ -180,10 +156,18 @@
 /turf/open/space/basic,
 /area/space)
 "Q" = (
-/obj/structure/bed/chair/comfy{
-	dir = 4
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
+	layer = 3.98;
+	pixel_x = 8;
+	pixel_y = 28
 	},
-/turf/open/shuttle/vehicle/floor_3_1_1,
+/obj/structure/extinguisher_cabinet/lifeboat{
+	icon = 'icons/obj/vehicles/interiors/general.dmi';
+	layer = 3.5;
+	pixel_y = 28;
+	pixel_x = -5
+	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
 "S" = (
 /obj/structure/interior_wall/van{
@@ -198,23 +182,9 @@
 /turf/open/void/vehicle,
 /area/space)
 "W" = (
-/obj/effect/landmark/interior/spawn/telephone{
-	pixel_x = 8;
-	pixel_y = -18;
-	dir = 1
-	},
-/turf/open/floor/almayer{
-	icon_state = "test_floor5"
-	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
-"Y" = (
-/obj/structure/interior_wall/van{
-	icon_state = "jeep_4";
-	pixel_y = 32;
-	alpha = 35
-	},
-/turf/open/void/vehicle,
-/area/space)
 
 (1,1,1) = {"
 a
@@ -230,23 +200,23 @@ P
 K
 H
 k
-o
+a
 "}
 (3,1,1) = {"
 a
 u
 m
-q
+b
 W
-Y
+a
 "}
 (4,1,1) = {"
 a
-F
+u
 Q
 q
 p
-j
+a
 "}
 (5,1,1) = {"
 a

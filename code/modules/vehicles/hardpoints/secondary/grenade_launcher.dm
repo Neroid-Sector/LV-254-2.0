@@ -41,3 +41,7 @@
 		return NONE
 
 	return ..()
+
+/obj/item/hardpoint/secondary/grenade_launcher/jeep
+
+/obj/item/hardpoint/secondary/grenade_launcher/jeep/riot
