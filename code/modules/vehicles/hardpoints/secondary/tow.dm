@@ -34,3 +34,7 @@
 	fire_delay = 15.0 SECONDS
 
 /obj/item/hardpoint/secondary/towlauncher/jeep
+	icon = 'icons/obj/vehicles/hardpoints/jeep.dmi'
+	icon_state = "jeep_tow"
+	disp_icon = "jeep"
+	disp_icon_state = "jeep_tow"

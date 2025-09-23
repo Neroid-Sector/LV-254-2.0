@@ -24,22 +24,30 @@
 		"8" = list(-5, 7)
 	)
 
-	scatter = 3
+	scatter = 2
 	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.3 SECONDS
+	fire_delay = 0.2 SECONDS
 
 /obj/item/hardpoint/secondary/m56cupola/jeep
 	icon = 'icons/obj/vehicles/hardpoints/jeep.dmi'
+
+	name = "\improper M56V Machinegun System"
+	desc = "A vehicle-mounted version of the M56D, permanently fixed to its mount. You swear you can still see some weld tacks."
+
 	icon_state = "jeep_m56"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_m56"
 
 /obj/item/hardpoint/secondary/m56cupola/jeep/hmg
+	name = "\improper M2CV Heavy Machinegun System"
+	desc = "A vehicle-mounted version of the M2C, permanently fixed to its mount. Features a heavier barrel and stronger internals allowing serious suppressing fire."
+
 	icon_state = "jeep_m2c"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_m2c"
 	activation_sounds = 'sound/weapons/gun_m56d_auto.ogg'
+	fire_delay = 0.4 SECONDS
 

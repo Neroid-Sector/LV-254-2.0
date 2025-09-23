@@ -72,11 +72,11 @@
 /datum/supply_packs/ammo_glauncher
 	name = "M92T Grenade Launcher magazines (x5)"
 	contains = list(
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
+		/obj/item/ammo_magazine/hardpoint/grenade,
+		/obj/item/ammo_magazine/hardpoint/grenade,
+		/obj/item/ammo_magazine/hardpoint/grenade,
+		/obj/item/ammo_magazine/hardpoint/grenade,
+		/obj/item/ammo_magazine/hardpoint/grenade,
 	)
 	cost = 20
 	containertype = /obj/structure/closet/crate/ammo

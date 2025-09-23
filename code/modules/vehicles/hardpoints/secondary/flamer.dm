@@ -19,7 +19,7 @@
 
 	use_muzzle_flash = FALSE
 
-	var/max_range = 9
+	var/max_range = 12
 
 	px_offsets = list(
 		"1" = list(2, 14),
@@ -29,7 +29,7 @@
 	)
 
 	scatter = 6
-	fire_delay = 3.0 SECONDS
+	fire_delay = 1 SECONDS
 
 /obj/item/hardpoint/secondary/small_flamer/try_fire(atom/target, mob/living/user, params)
 	if(get_turf(target) in owner.locs)
@@ -61,3 +61,11 @@
 	return AUTOFIRE_CONTINUE
 
 /obj/item/hardpoint/secondary/small_flamer/jeep
+	icon = 'icons/obj/vehicles/hardpoints/jeep.dmi'
+
+	name = "\improper EMBR Flamer System"
+	desc = "A mounted weapon that spews hot fire, this one is for a jeep."
+
+	icon_state = "jeep_flamer"
+	disp_icon = "jeep"
+	disp_icon_state = "jeep_flamer"

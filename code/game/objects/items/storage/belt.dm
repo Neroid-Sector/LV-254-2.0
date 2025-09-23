@@ -2659,7 +2659,7 @@
 		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
 		/obj/item/ammo_magazine/hardpoint/towlauncher,
 		/obj/item/ammo_magazine/hardpoint/m56_cupola,
-		/obj/item/ammo_magazine/hardpoint/tank_glauncher,
+		/obj/item/ammo_magazine/hardpoint/grenade,
 		/obj/item/ammo_magazine/hardpoint/turret_smoke,
 		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
 		/obj/item/ammo_magazine/hardpoint/flare_launcher,

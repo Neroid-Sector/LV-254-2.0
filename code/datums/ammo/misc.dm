@@ -251,6 +251,27 @@
 /datum/ammo/souto/proc/randomize_projectile(obj/projectile/P)
 	shrapnel_type = pick(typesof(/obj/item/reagent_container/food/drinks/cans/souto)-/obj/item/reagent_container/food/drinks/cans/souto)
 
+// GL
+
+/datum/ammo/grenade_container/proc/drop_nade(obj/projectile/P)
+	var/turf/T = get_turf(P)
+	var/obj/item/explosive/grenade/G
+
+	G = new nade_type(T)
+	var/det_time = 10
+
+	if (nade_type == /obj/item/explosive/grenade/custom/teargas)
+		det_time = 2
+	else if (nade_type == /obj/item/explosive/grenade/slug/baton)
+		det_time = 0
+
+	G.visible_message(SPAN_WARNING("\A [G] lands on [T]!"))
+	G.det_time = det_time
+	G.cause_data = P.weapon_cause_data
+	G.activate()
+
+// Normal
+
 /datum/ammo/grenade_container
 	name = "grenade shell"
 	ping = null
@@ -261,7 +282,7 @@
 
 	damage = 15
 	accuracy = HIT_ACCURACY_TIER_3
-	max_range = 6
+	max_range = 12
 
 /datum/ammo/grenade_container/on_hit_mob(mob/M,obj/projectile/P)
 	drop_nade(P)
@@ -275,13 +296,59 @@
 /datum/ammo/grenade_container/do_at_max_range(obj/projectile/P)
 	drop_nade(P)
 
-/datum/ammo/grenade_container/proc/drop_nade(obj/projectile/P)
-	var/turf/T = get_turf(P)
-	var/obj/item/explosive/grenade/G = new nade_type(T)
-	G.visible_message(SPAN_WARNING("\A [G] lands on [T]!"))
-	G.det_time = 10
-	G.cause_data = P.weapon_cause_data
-	G.activate()
+// Teargas
+
+/datum/ammo/grenade_container/teargas
+	name = "grenade shell"
+	ping = null
+	damage_type = BRUTE
+	nade_type = /obj/item/explosive/grenade/custom/teargas
+	icon_state = "grenade"
+	flags_ammo_behavior = AMMO_IGNORE_COVER|AMMO_SKIPS_ALIENS
+
+	damage = 3
+	accuracy = HIT_ACCURACY_TIER_3
+	max_range = 12
+
+/datum/ammo/grenade_container/teargas/on_hit_mob(mob/M,obj/projectile/P)
+	drop_nade(P)
+
+/datum/ammo/grenade_container/teargas/on_hit_obj(obj/O,obj/projectile/P)
+	drop_nade(P)
+
+/datum/ammo/grenade_container/teargas/on_hit_turf(turf/T,obj/projectile/P)
+	drop_nade(P)
+
+/datum/ammo/grenade_container/teargas/do_at_max_range(obj/projectile/P)
+	drop_nade(P)
+
+// Baton Slugs
+
+/datum/ammo/grenade_container/slug
+	name = "grenade shell"
+	ping = null
+	damage_type = BRUTE
+	nade_type = /obj/item/explosive/grenade/slug/baton
+	icon_state = "grenade"
+	flags_ammo_behavior = AMMO_IGNORE_COVER|AMMO_SKIPS_ALIENS
+
+	damage = 3
+	accuracy = HIT_ACCURACY_TIER_3
+	max_range = 12
+
+/datum/ammo/grenade_container/slug/on_hit_mob(mob/M,obj/projectile/P)
+	drop_nade(P)
+
+/datum/ammo/grenade_container/slug/on_hit_obj(obj/O,obj/projectile/P)
+	drop_nade(P)
+
+/datum/ammo/grenade_container/slug/on_hit_turf(turf/T,obj/projectile/P)
+	drop_nade(P)
+
+/datum/ammo/grenade_container/slug/do_at_max_range(obj/projectile/P)
+	drop_nade(P)
+
+//
 
 /datum/ammo/grenade_container/rifle
 	flags_ammo_behavior = NO_FLAGS
@@ -291,7 +358,7 @@
 	nade_type = /obj/item/explosive/grenade/smokebomb
 	icon_state = "smoke_shell"
 
-/datum/ammo/grenade_container/tank_glauncher
+/datum/ammo/grenade_container/grenade
 	max_range = 8
 
 /datum/ammo/hugger_container

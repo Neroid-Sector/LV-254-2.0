@@ -141,12 +141,6 @@
 /obj/structure/prop/tank{
 	icon_state = "prop2"
 	},
-/obj/effect/landmark/interior/spawn/interior_camera{
-	dir = 10;
-	layer = 3.2;
-	pixel_x = 12;
-	pixel_y = 58
-	},
 /turf/open/shuttle/vehicle/floor_3_3,
 /area/space)
 "O" = (

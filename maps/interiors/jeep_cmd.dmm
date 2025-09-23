@@ -26,16 +26,16 @@
 /obj/effect/landmark/interior/spawn/vehicle_driver_seat{
 	dir = 4
 	},
-/obj/effect/landmark/interior/spawn/entrance{
-	dir = 1;
-	exit_type = /obj/structure/interior_exit/vehicle/van/left;
-	name = "left entrance marker";
-	pixel_y = 32;
-	tag = "left"
-	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "front_roof_2";
 	alpha = 50
+	},
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 1;
+	exit_type = /obj/structure/interior_exit/vehicle/jeep/left;
+	name = "left entrance marker";
+	pixel_y = 32;
+	tag = "left"
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
@@ -69,7 +69,7 @@
 	},
 /obj/effect/landmark/interior/spawn/entrance{
 	alpha = 50;
-	exit_type = /obj/structure/interior_exit/vehicle/van/right;
+	exit_type = /obj/structure/interior_exit/vehicle/jeep/right;
 	name = "right entrance marker";
 	tag = "right"
 	},
@@ -89,7 +89,7 @@
 	icon_state = "front_roof_1";
 	alpha = 50
 	},
-/turf/open/space/basic,
+/turf/open/void/vehicle,
 /area/space)
 "u" = (
 /obj/structure/interior_wall/van{
@@ -128,6 +128,14 @@
 /turf/open/void/vehicle,
 /area/space)
 "H" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	alpha = 50;
+	exit_type = /obj/structure/interior_exit/vehicle/jeep/rear;
+	name = "rear entrance marker";
+	tag = "rear";
+	dir = 8;
+	pixel_x = -32
+	},
 /turf/open/shuttle/vehicle/floor_1_13,
 /area/interior/vehicle/van)
 "K" = (
@@ -153,7 +161,7 @@
 /obj/structure/interior_wall/van{
 	icon_state = "jeep_6"
 	},
-/turf/open/space/basic,
+/turf/open/void/vehicle,
 /area/space)
 "Q" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{

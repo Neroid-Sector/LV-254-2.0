@@ -190,6 +190,8 @@
 			return
 
 /datum/ammo/rocket/ap/tank_towlauncher
+	name = "TOW missile"
+	icon_state = "tow"
 	max_range = 30
 
 /datum/ammo/rocket/ltb
