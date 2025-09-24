@@ -1,13 +1,13 @@
 // LAV cannons
-/obj/item/hardpoint/primary/plas
-	name = "\improper PARS 40/70 Boyars Chaingun"
-	desc = "A devastating automatic chain-driven cannon for the LAV that shoots 40mm rounds, not IFF-Friendly, ouch."
+/obj/item/hardpoint/primary/plasma
+	name = "\improper PARS 20mW Plasma Cannon"
+	desc = "An experimental 20mW plasma cannon used for taking out heavy armor, stand infront for an instant tan."
 	icon = 'icons/obj/vehicles/hardpoints/lav.dmi'
 
-	icon_state = "chaingun"
+	icon_state = "plasma"
 	disp_icon = "lav"
-	disp_icon_state = "chaingun"
-	activation_sounds = list('sound/weapons/vehicles/autocannon_fire.ogg')
+	disp_icon_state = "plasma"
+	activation_sounds = list('sound/weapons/pred_plasmacaster_fire.ogg')
 
 	damage_multiplier = 0.15
 
@@ -16,19 +16,17 @@
 
 	origins = list(0, 1)
 
-	ammo = new /obj/item/ammo_magazine/hardpoint/chaingun
+	ammo = new /obj/item/ammo_magazine/hardpoint/plasma
 
 	allowed_ammo_types = list(
-		/obj/item/ammo_magazine/hardpoint/chaingun,
-		/obj/item/ammo_magazine/hardpoint/chaingun/ap,
-		/obj/item/ammo_magazine/hardpoint/chaingun/he
+		/obj/item/ammo_magazine/hardpoint/plasma,
 	)
 
 	max_clips = 1
 
 	use_muzzle_flash = TRUE
 	angle_muzzleflash = FALSE
-	muzzleflash_icon_state = "muzzle_flash"
+	muzzleflash_icon_state = "muzzle_energy"
 
 	muzzle_flash_pos = list(
 		"1" = list(0, 30),
@@ -42,4 +40,4 @@
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.6 SECONDS
+	fire_delay = 5 SECONDS

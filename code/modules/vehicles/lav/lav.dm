@@ -209,13 +209,22 @@
 	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
 
-//PRESET: default hardpoints
-/obj/effect/vehicle_spawner/lav/fixed/load_hardpoints(obj/vehicle/multitile/lav/V)
+//PRESET: chaingun
+/obj/effect/vehicle_spawner/lav/chaingun/load_hardpoints(obj/vehicle/multitile/lav/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
 
 	for(var/obj/item/hardpoint/holder/lav_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/primary/chaingun)
+		break
+
+//PRESET: plasma
+/obj/effect/vehicle_spawner/lav/plasma/load_hardpoints(obj/vehicle/multitile/lav/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+
+	for(var/obj/item/hardpoint/holder/lav_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/primary/plasma)
 		break
 
 /obj/effect/vehicle_spawner/lav/load_hardpoints(obj/vehicle/multitile/lav/V)
