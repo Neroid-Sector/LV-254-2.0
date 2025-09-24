@@ -26,16 +26,9 @@
 /obj/structure/interior_wall/van{
 	icon_state = "jeep_6"
 	},
-/turf/open/space/basic,
+/turf/open/void/vehicle,
 /area/space)
 "k" = (
-/obj/effect/landmark/interior/spawn/entrance{
-	dir = 1;
-	exit_type = /obj/structure/interior_exit/vehicle/van/left;
-	name = "left entrance marker";
-	pixel_y = 32;
-	tag = "left"
-	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "front_roof_2";
 	alpha = 50
@@ -54,7 +47,7 @@
 	icon_state = "front_roof_1";
 	alpha = 50
 	},
-/turf/open/space/basic,
+/turf/open/void/vehicle,
 /area/space)
 "m" = (
 /obj/structure/interior_wall/van{

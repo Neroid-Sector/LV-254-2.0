@@ -59,18 +59,12 @@
 /area/interior/vehicle/van)
 "g" = (
 /obj/structure/machinery/door/window/brigdoor/eastright{
-	dir = 8
+	dir = 8;
+	autoclose = 1
 	},
 /turf/open/shuttle/vehicle/floor_1_5,
 /area/interior/vehicle/van)
 "h" = (
-/obj/effect/landmark/interior/spawn/entrance{
-	dir = 1;
-	exit_type = /obj/structure/interior_exit/vehicle/van/left;
-	name = "left entrance marker";
-	pixel_y = 32;
-	tag = "left"
-	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "front_roof_2";
 	alpha = 50

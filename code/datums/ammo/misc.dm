@@ -23,7 +23,7 @@
 
 /datum/ammo/flamethrower
 	name = "flame"
-	icon_state = "pulse0"
+	icon_state = "fireball"
 	damage_type = BURN
 	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_HITS_TARGET_TURF
 
@@ -303,7 +303,7 @@
 	ping = null
 	damage_type = BRUTE
 	nade_type = /obj/item/explosive/grenade/custom/teargas
-	icon_state = "grenade"
+	icon_state = "smoke_shell"
 	flags_ammo_behavior = AMMO_IGNORE_COVER|AMMO_SKIPS_ALIENS
 
 	damage = 3
@@ -320,32 +320,6 @@
 	drop_nade(P)
 
 /datum/ammo/grenade_container/teargas/do_at_max_range(obj/projectile/P)
-	drop_nade(P)
-
-// Baton Slugs
-
-/datum/ammo/grenade_container/slug
-	name = "grenade shell"
-	ping = null
-	damage_type = BRUTE
-	nade_type = /obj/item/explosive/grenade/slug/baton
-	icon_state = "grenade"
-	flags_ammo_behavior = AMMO_IGNORE_COVER|AMMO_SKIPS_ALIENS
-
-	damage = 3
-	accuracy = HIT_ACCURACY_TIER_3
-	max_range = 12
-
-/datum/ammo/grenade_container/slug/on_hit_mob(mob/M,obj/projectile/P)
-	drop_nade(P)
-
-/datum/ammo/grenade_container/slug/on_hit_obj(obj/O,obj/projectile/P)
-	drop_nade(P)
-
-/datum/ammo/grenade_container/slug/on_hit_turf(turf/T,obj/projectile/P)
-	drop_nade(P)
-
-/datum/ammo/grenade_container/slug/do_at_max_range(obj/projectile/P)
 	drop_nade(P)
 
 //

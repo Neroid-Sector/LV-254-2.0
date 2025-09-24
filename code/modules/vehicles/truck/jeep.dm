@@ -28,7 +28,7 @@
 
 	movement_sound = 'sound/vehicles/jeep_driving.mp3'
 	honk_sound = 'sound/vehicles/honk_4_light.ogg'
-	passengers_slots = 6
+	passengers_slots = 7
 	xenos_slots = 4
 
 	misc_multipliers = list(
@@ -54,6 +54,9 @@
 	desc = "An Armat designed light utility vehicle based around providing more protection and upgradeability compared to older jeeps, this one is configured with a flatbed to store pallets."
 	icon_state = "jeep_bed"
 	interior_map = /datum/map_template/interior/jeep_bed
+
+	cargo_allowed = list(/obj/structure/pallet, /obj/structure/closet)
+	max_stored_cargo = 1
 
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/locomotion/truck/wheels/jeep,
@@ -87,6 +90,7 @@
 
 	icon_state = "jeep_mp"
 	interior_map = /datum/map_template/interior/jeep_mp
+	passengers_slots = 10
 
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/locomotion/truck/wheels/jeep,
@@ -220,7 +224,7 @@ PRESETS SPAWNERS
 //PRESET: default M56
 /obj/effect/vehicle_spawner/jeep/m56/load_hardpoints(obj/vehicle/multitile/van/jeep/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
 
 	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/jeep)
@@ -229,7 +233,7 @@ PRESETS SPAWNERS
 //PRESET: default M2C
 /obj/effect/vehicle_spawner/jeep/m2C/load_hardpoints(obj/vehicle/multitile/van/jeep/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
 
 	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/jeep/hmg)
@@ -238,7 +242,7 @@ PRESETS SPAWNERS
 //PRESET: default Flamer
 /obj/effect/vehicle_spawner/jeep/flamer/load_hardpoints(obj/vehicle/multitile/van/jeep/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
 
 	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer/jeep)
@@ -247,7 +251,7 @@ PRESETS SPAWNERS
 //PRESET: default TOW
 /obj/effect/vehicle_spawner/jeep/missile/load_hardpoints(obj/vehicle/multitile/van/jeep/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
 
 	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher/jeep)
@@ -256,7 +260,7 @@ PRESETS SPAWNERS
 //PRESET: default GL
 /obj/effect/vehicle_spawner/jeep/grenade/load_hardpoints(obj/vehicle/multitile/van/jeep/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
 
 	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher/jeep)
@@ -275,7 +279,7 @@ FLAT BED
 -------------------*/
 
 /obj/effect/vehicle_spawner/jeep/flatbed
-	name = "Jeep Spawner"
+	name = "Flatbed Jeep Spawner"
 	icon = 'icons/obj/vehicles/jeep.dmi'
 	icon_state = "jeep_bed"
 	pixel_x = -16
@@ -301,7 +305,7 @@ FLAT BED
 
 //PRESET: default hardpoints, destroyed (this one spawns on VASRS elevator for VCs)
 /obj/effect/vehicle_spawner/jeep/flatbed/decrepit/spawn_vehicle()
-	var/obj/vehicle/multitile/van/jeep/JEEP = new (loc)
+	var/obj/vehicle/multitile/van/jeep/flatbed/JEEP = new (loc)
 
 	load_misc(JEEP)
 	load_hardpoints(JEEP)
@@ -312,3 +316,216 @@ FLAT BED
 /obj/effect/vehicle_spawner/jeep/flatbed/decrepit/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+//PRESET: default M56
+/obj/effect/vehicle_spawner/jeep/flatbed/m56/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/jeep)
+		break
+
+//PRESET: default M2C
+/obj/effect/vehicle_spawner/jeep/flatbed/m2C/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/jeep/hmg)
+		break
+
+//PRESET: default Flamer
+/obj/effect/vehicle_spawner/jeep/flatbed/flamer/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer/jeep)
+		break
+
+//PRESET: default TOW
+/obj/effect/vehicle_spawner/jeep/flatbed/missile/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher/jeep)
+		break
+
+//PRESET: default GL
+/obj/effect/vehicle_spawner/jeep/flatbed/grenade/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher/jeep)
+		break
+
+/obj/effect/vehicle_spawner/jeep/flatbed/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	return
+
+/obj/effect/vehicle_spawner/jeep/flatbed/broken/spawn_vehicle()
+	var/obj/vehicle/multitile/van/flatbed/JEEP = ..()
+	load_damage(JEEP)
+	JEEP.update_icon()
+
+/* ------------------
+MEDICAL
+-------------------*/
+
+/obj/effect/vehicle_spawner/jeep/medical
+	name = "Medical Jeep Spawner"
+	icon = 'icons/obj/vehicles/jeep.dmi'
+	icon_state = "jeep_med"
+	pixel_x = -16
+	pixel_y = -16
+
+/obj/effect/vehicle_spawner/jeep/medical/Initialize()
+	. = ..()
+	spawn_vehicle()
+	qdel(src)
+
+//PRESET: no hardpoints
+/obj/effect/vehicle_spawner/jeep/medical/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/medical/JEEP = new (loc)
+
+	load_misc(JEEP)
+	load_hardpoints(JEEP)
+	handle_direction(JEEP)
+	JEEP.update_icon()
+
+//PRESET: wheels installed
+/obj/effect/vehicle_spawner/jeep/medical/plain/load_hardpoints(obj/vehicle/multitile/van/jeep/medical/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+//PRESET: default hardpoints, destroyed (this one spawns on VASRS elevator for VCs)
+/obj/effect/vehicle_spawner/jeep/medical/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/medical/JEEP = new (loc)
+
+	load_misc(JEEP)
+	load_hardpoints(JEEP)
+	handle_direction(JEEP)
+	load_damage(JEEP)
+	JEEP.update_icon()
+
+/obj/effect/vehicle_spawner/jeep/medical/decrepit/load_hardpoints(obj/vehicle/multitile/van/jeep/medical/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+/obj/effect/vehicle_spawner/jeep/medical/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	return
+
+/obj/effect/vehicle_spawner/jeep/medical/broken/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/medical/JEEP = ..()
+	load_damage(JEEP)
+	JEEP.update_icon()
+
+/* ------------------
+COMMAND
+-------------------*/
+
+/obj/effect/vehicle_spawner/jeep/command
+	name = "Command Jeep Spawner"
+	icon = 'icons/obj/vehicles/jeep.dmi'
+	icon_state = "jeep_cmd"
+	pixel_x = -16
+	pixel_y = -16
+
+/obj/effect/vehicle_spawner/jeep/command/Initialize()
+	. = ..()
+	spawn_vehicle()
+	qdel(src)
+
+//PRESET: no hardpoints
+/obj/effect/vehicle_spawner/jeep/command/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/command/JEEP = new (loc)
+
+	load_misc(JEEP)
+	load_hardpoints(JEEP)
+	handle_direction(JEEP)
+	JEEP.update_icon()
+
+//PRESET: wheels installed
+/obj/effect/vehicle_spawner/jeep/command/plain/load_hardpoints(obj/vehicle/multitile/van/jeep/command/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+//PRESET: default hardpoints, destroyed (this one spawns on VASRS elevator for VCs)
+/obj/effect/vehicle_spawner/jeep/command/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/command/JEEP = new (loc)
+
+	load_misc(JEEP)
+	load_hardpoints(JEEP)
+	handle_direction(JEEP)
+	load_damage(JEEP)
+	JEEP.update_icon()
+
+/obj/effect/vehicle_spawner/jeep/command/decrepit/load_hardpoints(obj/vehicle/multitile/van/jeep/command/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+/obj/effect/vehicle_spawner/jeep/command/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	return
+
+/obj/effect/vehicle_spawner/jeep/command/broken/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/command/JEEP = ..()
+	load_damage(JEEP)
+	JEEP.update_icon()
+
+/* ------------------
+MILITARY POLICE
+-------------------*/
+
+/obj/effect/vehicle_spawner/jeep/police
+	name = "Military Police Jeep Spawner"
+	icon = 'icons/obj/vehicles/jeep.dmi'
+	icon_state = "jeep_mp"
+	pixel_x = -16
+	pixel_y = -16
+
+/obj/effect/vehicle_spawner/jeep/police/Initialize()
+	. = ..()
+	spawn_vehicle()
+	qdel(src)
+
+//PRESET: no hardpoints
+/obj/effect/vehicle_spawner/jeep/police/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/police/JEEP = new (loc)
+
+	load_misc(JEEP)
+	load_hardpoints(JEEP)
+	handle_direction(JEEP)
+	JEEP.update_icon()
+
+//PRESET: wheels installed
+/obj/effect/vehicle_spawner/jeep/police/plain/load_hardpoints(obj/vehicle/multitile/van/jeep/police/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+//PRESET: default hardpoints, destroyed (this one spawns on VASRS elevator for VCs)
+/obj/effect/vehicle_spawner/jeep/police/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/police/JEEP = new (loc)
+
+	load_misc(JEEP)
+	load_hardpoints(JEEP)
+	handle_direction(JEEP)
+	load_damage(JEEP)
+	JEEP.update_icon()
+
+/obj/effect/vehicle_spawner/jeep/police/decrepit/load_hardpoints(obj/vehicle/multitile/van/jeep/police/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+//PRESET: default R10T GL
+/obj/effect/vehicle_spawner/jeep/police/riot/load_hardpoints(obj/vehicle/multitile/van/jeep/police/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/jeep_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/jeep)
+
+	for(var/obj/item/hardpoint/holder/jeep_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher/jeep/riot)
+		break
+
+/obj/effect/vehicle_spawner/jeep/police/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
+	return
+
+/obj/effect/vehicle_spawner/jeep/police/broken/spawn_vehicle()
+	var/obj/vehicle/multitile/van/jeep/police/JEEP = ..()
+	load_damage(JEEP)
+	JEEP.update_icon()

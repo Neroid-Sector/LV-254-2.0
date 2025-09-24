@@ -51,7 +51,6 @@
 	icon_state = "jeep_gl"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_gl"
-	fire_delay = 1.0 SECONDS
 
 	px_offsets = list(
 		"1" = list(0, 0),
@@ -73,14 +72,14 @@
 	icon_state = "jeep_riot"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_riot"
+	fire_delay = 1.0 SECONDS
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/grenade/teargas
-	max_clips = 3
+	max_clips = 1
 
 	allowed_ammo_types = list(
-		/obj/item/ammo_magazine/hardpoint/grenade/teargas,
-		/obj/item/ammo_magazine/hardpoint/grenade/slug
+		/obj/item/ammo_magazine/hardpoint/grenade/teargas
 	)
 
 /obj/item/hardpoint/secondary/grenade_launcher/jeep/riot/set_bullet_traits()
-	..()
+	return
