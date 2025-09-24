@@ -5,7 +5,7 @@
 	icon = 'icons/obj/vehicles/lav.dmi'
 	icon_state = "lav_base"
 	pixel_x = -48
-	pixel_y = -32
+	pixel_y = -48
 
 	bound_width = 96
 	bound_height = 96
@@ -213,6 +213,7 @@
 /obj/effect/vehicle_spawner/lav/chaingun/load_hardpoints(obj/vehicle/multitile/lav/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/lav)
 
 	for(var/obj/item/hardpoint/holder/lav_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/primary/chaingun)
@@ -222,6 +223,7 @@
 /obj/effect/vehicle_spawner/lav/plasma/load_hardpoints(obj/vehicle/multitile/lav/V)
 	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/lav)
 
 	for(var/obj/item/hardpoint/holder/lav_turret/LT in V.hardpoints)
 		LT.add_hardpoint(new /obj/item/hardpoint/primary/plasma)

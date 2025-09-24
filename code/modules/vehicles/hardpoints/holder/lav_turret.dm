@@ -114,7 +114,7 @@
 	to_chat(user, SPAN_NOTICE("You toggle \the [src]'s gyroscopic stabilizer [gyro ? "ON" :"OFF"]."))
 
 /obj/item/hardpoint/holder/lav_turret/proc/user_rotation(mob/user, deg)
-	var/soundfile = 'sound/machines/scanning.ogg'
+	var/soundfile = 'sound/mecha/powerloader_turn2.ogg'
 
 	// no rotating a broken turret
 	if(health <= 0)

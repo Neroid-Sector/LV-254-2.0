@@ -26,8 +26,13 @@
 		"8" = list(-6, 17)
 	)
 
+	gun_firemode = GUN_FIREMODE_AUTOMATIC
+	gun_firemode_list = list(
+		GUN_FIREMODE_AUTOMATIC,
+	)
+
 	scatter = 10
-	fire_delay = 2.0 SECONDS
+	fire_delay = 1.0 SECONDS
 
 /obj/item/hardpoint/secondary/grenade_launcher/set_bullet_traits()
 	..()
