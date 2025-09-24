@@ -29,7 +29,7 @@
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.4 SECONDS
+	fire_delay = 0.2 SECONDS
 
 /obj/item/hardpoint/secondary/m56cupola/jeep
 	icon = 'icons/obj/vehicles/hardpoints/jeep.dmi'
@@ -40,7 +40,6 @@
 	icon_state = "jeep_m56"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_m56"
-	fire_delay = 0.1 SECONDS
 
 	px_offsets = list(
 		"1" = list(0, 0),
@@ -57,7 +56,7 @@
 	)
 
 /obj/item/hardpoint/secondary/m56cupola/jeep/hmg
-	name = "\improper M2CV Heavy Machinegun System"
+	name = "\improper M2V Heavy Machinegun System"
 	desc = "A vehicle-mounted version of the M2C, permanently fixed to its mount. Features a heavier barrel and stronger internals allowing serious suppressing fire."
 
 	icon_state = "jeep_m2c"

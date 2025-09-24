@@ -6,6 +6,22 @@
 /obj/structure/bed/chair/comfy/blue,
 /turf/open/shuttle/vehicle/floor_1_5,
 /area/interior/vehicle/van)
+"c" = (
+/obj/structure/interior_wall/van{
+	icon_state = "jeep_5";
+	pixel_y = 32;
+	alpha = 35
+	},
+/turf/open/void/vehicle,
+/area/space)
+"d" = (
+/obj/structure/interior_wall/van{
+	icon_state = "jeep_4";
+	pixel_y = 32;
+	alpha = 35
+	},
+/turf/open/void/vehicle,
+/area/space)
 "e" = (
 /obj/structure/interior_wall/van{
 	alpha = 35;
@@ -98,13 +114,6 @@
 /turf/open/void/vehicle,
 /area/space)
 "y" = (
-/obj/effect/landmark/interior/spawn/entrance{
-	dir = 1;
-	exit_type = /obj/structure/interior_exit/vehicle/van/left;
-	name = "left entrance marker";
-	pixel_y = 32;
-	tag = "left"
-	},
 /obj/effect/landmark/interior/spawn/weapons_loader{
 	pixel_y = 3;
 	pixel_x = 14
@@ -208,7 +217,7 @@ P
 K
 H
 k
-a
+c
 "}
 (3,1,1) = {"
 a
@@ -216,7 +225,7 @@ u
 m
 b
 W
-a
+d
 "}
 (4,1,1) = {"
 a
@@ -224,7 +233,7 @@ u
 Q
 q
 p
-a
+d
 "}
 (5,1,1) = {"
 a
