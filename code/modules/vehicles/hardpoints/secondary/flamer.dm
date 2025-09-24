@@ -19,7 +19,7 @@
 
 	use_muzzle_flash = FALSE
 
-	var/max_range = 12
+	var/max_range = 8
 
 	px_offsets = list(
 		"1" = list(2, 14),
@@ -69,3 +69,10 @@
 	icon_state = "jeep_flamer"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_flamer"
+
+	px_offsets = list(
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
+	)

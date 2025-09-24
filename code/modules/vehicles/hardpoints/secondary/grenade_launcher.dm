@@ -51,6 +51,14 @@
 	icon_state = "jeep_gl"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_gl"
+	fire_delay = 1.0 SECONDS
+
+	px_offsets = list(
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
+	)
 
 /obj/item/hardpoint/secondary/grenade_launcher/jeep/set_bullet_traits()
 	..()
