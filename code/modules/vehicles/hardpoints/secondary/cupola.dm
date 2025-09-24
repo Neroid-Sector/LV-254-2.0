@@ -29,7 +29,7 @@
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.2 SECONDS
+	fire_delay = 0.4 SECONDS
 
 /obj/item/hardpoint/secondary/m56cupola/jeep
 	icon = 'icons/obj/vehicles/hardpoints/jeep.dmi'
@@ -40,6 +40,21 @@
 	icon_state = "jeep_m56"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_m56"
+	fire_delay = 0.1 SECONDS
+
+	px_offsets = list(
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
+	)
+
+	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/jeep
+	max_clips = 1
+
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/m56_cupola,
+	)
 
 /obj/item/hardpoint/secondary/m56cupola/jeep/hmg
 	name = "\improper M2CV Heavy Machinegun System"
@@ -49,5 +64,10 @@
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_m2c"
 	activation_sounds = 'sound/weapons/gun_m56d_auto.ogg'
-	fire_delay = 0.4 SECONDS
 
+	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/jeep/hmg
+	max_clips = 1
+
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hardpoint/m56_cupola/jeep/hmg,
+	)

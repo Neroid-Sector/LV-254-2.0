@@ -276,6 +276,26 @@
 
 	qdel(src)
 
+/obj/effect/landmark/interior/spawn/weapons_loader_skilless
+	name = "vehicle weapons reloader spawner"
+	icon = 'icons/obj/vehicles/interiors/general.dmi'
+	icon_state = "weapons_loader"
+	color = "#005c08"
+
+/obj/effect/landmark/interior/spawn/weapons_loader_skilless/on_load(datum/interior/I)
+	var/obj/structure/weapons_loader_skilless/R = new(loc)
+
+	R.icon = icon
+	R.icon_state = icon_state
+	R.layer = layer
+	R.pixel_x = pixel_x
+	R.pixel_y = pixel_y
+	R.vehicle = I.exterior
+	R.setDir(dir)
+	R.update_icon()
+
+	qdel(src)
+
 //This one spawns armored vehicles version of viewport
 /obj/effect/landmark/interior/spawn/interior_viewport
 	name = "armored vehicle viewport spawner"

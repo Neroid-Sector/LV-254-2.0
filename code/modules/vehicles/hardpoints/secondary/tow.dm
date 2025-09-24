@@ -38,3 +38,10 @@
 	icon_state = "jeep_tow"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_tow"
+
+	px_offsets = list(
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
+	)

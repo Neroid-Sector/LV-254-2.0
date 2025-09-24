@@ -18,13 +18,13 @@
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
 "f" = (
-/obj/effect/landmark/interior/spawn/weapons_loader{
-	pixel_y = 3;
-	pixel_x = 14
-	},
 /obj/effect/vehicle_roof/van{
 	icon_state = "front_roof_2";
 	alpha = 50
+	},
+/obj/effect/landmark/interior/spawn/weapons_loader_skilless{
+	pixel_y = 3;
+	pixel_x = 14
 	},
 /turf/open/shuttle/vehicle/floor_1_14,
 /area/interior/vehicle/van)
