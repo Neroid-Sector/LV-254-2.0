@@ -5,6 +5,7 @@
 	icon_state = "tow_launcher"
 	disp_icon = "tank"
 	disp_icon_state = "towlauncher"
+	activation_sounds = list('sound/machines/terminal_success.ogg')
 
 	health = 500
 	firing_arc = 60
@@ -30,6 +31,8 @@
 		"8" = list(-5, 10)
 	)
 
+	use_muzzle_flash = FALSE
+
 	scatter = 4
 	fire_delay = 15.0 SECONDS
 
@@ -44,4 +47,15 @@
 		"2" = list(0, 0),
 		"4" = list(0, 0),
 		"8" = list(0, 0)
+	)
+
+	use_muzzle_flash = TRUE
+	angle_muzzleflash = FALSE
+	muzzleflash_icon_state = "muzzle_flash_backwards"
+
+	muzzle_flash_pos = list(
+		"1" = list(-12, 50),
+		"2" = list(-20, -10),
+		"4" = list(-35, -35),
+		"8" = list(10, -32)
 	)

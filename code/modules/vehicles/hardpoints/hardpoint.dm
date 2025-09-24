@@ -55,8 +55,6 @@
 	/// Sounds to play when the module activated/fired.
 	var/list/activation_sounds
 
-
-
 	//------INTERACTION VARS----------
 
 	/// Which seat can use this module.
@@ -588,26 +586,38 @@
 /// Actually fires the gun, sets up the projectile and fires it.
 /obj/item/hardpoint/proc/handle_fire(atom/target, mob/living/user, params)
 	var/turf/origin_turf = get_origin_turf()
-
 	var/obj/projectile/projectile_to_fire = generate_bullet(user, origin_turf)
 	ammo.current_rounds--
 	SEND_SIGNAL(projectile_to_fire, COMSIG_BULLET_USER_EFFECTS, user)
 
-	// turf-targeted projectiles are fired without scatter, because proc would raytrace them further away
 	var/ammo_flags = projectile_to_fire.ammo.flags_ammo_behavior | projectile_to_fire.projectile_override_flags
-	if(!HAS_FLAG(ammo_flags, AMMO_HITS_TARGET_TURF) && !HAS_FLAG(ammo_flags, AMMO_EXPLOSIVE)) //AMMO_EXPLOSIVE is also a turf-targeted projectile
+	if(!HAS_FLAG(ammo_flags, AMMO_HITS_TARGET_TURF) && !HAS_FLAG(ammo_flags, AMMO_EXPLOSIVE))
 		projectile_to_fire.scatter = scatter
 		target = simulate_scatter(projectile_to_fire, target, origin_turf, get_turf(target), user)
 
-	INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed)
-	projectile_to_fire = null
+	if(HAS_FLAG(ammo_flags, AMMO_ROCKET))
+		// 2 second delay for balance (requires good positioning)
+		// Used currently for the TOW launchers
+		play_firing_sounds()
+		spawn(20)
+			if(projectile_to_fire)
+				INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed)
+				projectile_to_fire = null
 
-	shots_fired++
-	play_firing_sounds()
-	if(use_muzzle_flash)
-		muzzle_flash(Get_Angle(origin_turf, target))
+				shots_fired++
+				if(use_muzzle_flash)
+					muzzle_flash(Get_Angle(origin_turf, target))
+				set_fire_cooldown(gun_firemode)
+	else
+		// No delay
+		INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed)
+		projectile_to_fire = null
 
-	set_fire_cooldown(gun_firemode)
+		shots_fired++
+		play_firing_sounds()
+		if(use_muzzle_flash)
+			muzzle_flash(Get_Angle(origin_turf, target))
+		set_fire_cooldown(gun_firemode)
 
 	return AUTOFIRE_CONTINUE
 
