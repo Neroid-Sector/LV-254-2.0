@@ -37,10 +37,7 @@
 
 	accepted_hardpoints = list(
 		// primaries
-		/obj/item/hardpoint/primary/flamer,
 		/obj/item/hardpoint/primary/cannon,
-		/obj/item/hardpoint/primary/minigun,
-		/obj/item/hardpoint/primary/autocannon,
 		// secondaries
 		/obj/item/hardpoint/secondary/small_flamer,
 		/obj/item/hardpoint/secondary/towlauncher,

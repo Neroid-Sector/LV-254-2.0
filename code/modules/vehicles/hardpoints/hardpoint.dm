@@ -596,10 +596,10 @@
 		target = simulate_scatter(projectile_to_fire, target, origin_turf, get_turf(target), user)
 
 	if(HAS_FLAG(ammo_flags, AMMO_ROCKET))
-		// 2 second delay for balance (requires good positioning)
+		// 1.5 second delay for balance (requires good positioning)
 		// Used currently for the TOW launchers
 		play_firing_sounds()
-		spawn(20)
+		spawn(15)
 			if(projectile_to_fire)
 				INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed)
 				projectile_to_fire = null

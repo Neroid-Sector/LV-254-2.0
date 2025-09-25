@@ -197,7 +197,7 @@
 /datum/ammo/rocket/ltb
 	name = "cannon round"
 	icon_state = "ltb"
-	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET|AMMO_STRIKES_SURFACE
+	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_STRIKES_SURFACE
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32

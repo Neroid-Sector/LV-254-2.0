@@ -268,35 +268,3 @@
 		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
 		TT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
 		break
-
-//PRESET: minigun kit
-/obj/effect/vehicle_spawner/tank/fixed/minigun/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/minigun)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer)
-		break
-
-//PRESET: dragon flamer kit
-/obj/effect/vehicle_spawner/tank/fixed/flamer/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/flamer)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher)
-		break
-
-//PRESET: autocannon kit
-/obj/effect/vehicle_spawner/tank/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/autocannon)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher)
-		break
