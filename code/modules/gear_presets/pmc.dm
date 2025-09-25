@@ -1025,7 +1025,7 @@ list("POUCHES (CHOOSE 2)", 0, null, null, null),
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/pmc, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/wy, WEAR_ACCESSORY)
@@ -1051,7 +1051,7 @@ list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("CFR", 0,  /obj/item/storage/box/mre/pmc, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 		list("Combat Pack", 0, /obj/item/storage/backpack/lightpack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
 		list("Armored Balaclava", 0, /obj/item/clothing/mask/gas/pmc/leader, MARINE_CAN_BUY_MASK, VENDOR_ITEM_MANDATORY),
-		list("Helmet", 0, /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+		list("Helmet", 0, /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
 		list("Armor", 0, /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 
 		list("BELT", 0, null, null, null),
@@ -1376,8 +1376,8 @@ list("POUCHES (CHOOSE 2)", 0, null, null, null),
 
 	faction_group = FACTION_LIST_MARINE_WY
 
-	assignment = JOB_PMC_XENO_HANDLER
-	rank = JOB_PMC_XENO_HANDLER
+	assignment = JOB_WY_COMMANDO_DOGCATHER
+	rank = JOB_WY_COMMANDO_DOGCATHER
 	paygrades = list(PAY_SHORT_PMC_XS = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "XH"
 	minimap_icon = "pmc_handler"

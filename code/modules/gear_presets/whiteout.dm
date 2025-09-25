@@ -3,9 +3,9 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	uses_special_name = TRUE //We always use a codename!
 	faction = FACTION_WY_DEATHSQUAD
-	assignment = JOB_DS_OP
+	assignment = JOB_DS_CU
 	role_comm_title = "WO"
-	rank = JOB_DS_OP
+	rank = JOB_DS_CU
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE, LANGUAGE_CHINESE,
 					LANGUAGE_RUSSIAN, LANGUAGE_GERMAN, LANGUAGE_FRENCH,
 					LANGUAGE_CELTIC, LANGUAGE_FARSI, LANGUAGE_ARABIC,
@@ -60,16 +60,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/commando, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/M = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/combat_android/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
 	for(var/i in 1 to W.hold.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/pmc, WEAR_IN_ACCESSORY)
 	//jacket
-	var/obj/item/clothing/suit/storage/marine/veteran/pmc/commando/armor = new()
+	var/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/heap, WEAR_IN_JACKET)
@@ -94,8 +94,8 @@
 	assignment = "Whiteout Team Medic"
 	role_comm_title = "WO-TM"
 	minimap_background = "background_mp"
-	assignment = JOB_DS_MED
-	rank = JOB_DS_MED
+	assignment = JOB_DS_SUP
+	rank = JOB_DS_SUP
 
 /datum/equipment_preset/pmc/w_y_whiteout/medic/load_gear(mob/living/carbon/human/new_human)
 	// back
@@ -115,16 +115,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/commando, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/M = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/combat_android/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
 	for(var/i in 1 to W.hold.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/stack/nanopaste, WEAR_IN_ACCESSORY)
 	//jacket
-	var/obj/item/clothing/suit/storage/marine/veteran/pmc/commando/armor = new()
+	var/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/heap, WEAR_IN_JACKET)
@@ -148,17 +148,17 @@
 	assignment = "Whiteout Team Terminator"
 	role_comm_title = "WO-TT"
 	minimap_background = "background_ua"
-	assignment = JOB_DS_SG
-	rank = JOB_DS_SG
+	assignment = JOB_DS_CU
+	rank = JOB_DS_CU
 
 /datum/equipment_preset/pmc/w_y_whiteout/terminator/load_gear(mob/living/carbon/human/new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/commando, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/M = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/combat_android/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
@@ -212,9 +212,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/commando, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/M = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/combat_android/M = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
@@ -223,7 +223,7 @@
 	// accessory
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/wy, WEAR_ACCESSORY)
 	//jacket
-	var/obj/item/clothing/suit/storage/marine/veteran/pmc/commando/armor = new()
+	var/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/heap, WEAR_IN_JACKET)
@@ -245,8 +245,8 @@
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat
 	name = "Whiteout Team Operative"
 	minimap_background = "background_pmc"
-	assignment = JOB_DS_OP
-	rank = JOB_DS_OP
+	assignment = JOB_DS_CU
+	rank = JOB_DS_CU
 
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat/load_gear(mob/living/carbon/human/new_human)
 	// back
@@ -267,9 +267,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/commando, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/combat_android/uniform = new()
 	var/obj/item/clothing/accessory/storage/webbing/accessory = new()
 	uniform.attach_accessory(new_human, accessory)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
@@ -278,7 +278,7 @@
 	// accessory
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/wy, WEAR_ACCESSORY)
 	//jacket
-	var/obj/item/clothing/suit/storage/marine/veteran/pmc/commando/armor = new()
+	var/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_JACKET)
@@ -300,8 +300,8 @@
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat/medic
 	name = "Whiteout Team Medic"
 	minimap_background = "background_mp"
-	assignment = JOB_DS_MED
-	rank = JOB_DS_MED
+	assignment = JOB_DS_SUP
+	rank = JOB_DS_SUP
 
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat/medic/load_gear(mob/living/carbon/human/new_human)
 	// back
@@ -319,16 +319,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/commando, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/combat_android/uniform = new()
 	var/obj/item/clothing/accessory/storage/webbing/accessory = new()
 	uniform.attach_accessory(new_human, accessory)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	for(var/i in 1 to accessory.hold.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/stack/nanopaste, WEAR_IN_ACCESSORY)
 	//jacket
-	var/obj/item/clothing/suit/storage/marine/veteran/pmc/commando/armor = new()
+	var/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/ap, WEAR_IN_JACKET)
@@ -350,17 +350,17 @@
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat/terminator
 	name = "Whiteout Team Terminator"
 	minimap_background = "background_ua"
-	assignment = JOB_DS_SG
-	rank = JOB_DS_SG
+	assignment = JOB_DS_CU
+	rank = JOB_DS_CU
 
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat/terminator/load_gear(mob/living/carbon/human/new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/commando, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/combat_android/uniform = new()
 	var/obj/item/clothing/accessory/storage/webbing/accessory = new()
 	uniform.attach_accessory(new_human, accessory)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
@@ -411,16 +411,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/leader, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/commando, WEAR_L_EAR)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/commando, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/combat_droid, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/commando/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/combat_android/uniform = new()
 	var/obj/item/clothing/accessory/storage/webbing/accessory = new()
 	uniform.attach_accessory(new_human, accessory)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	for(var/i in 1 to accessory.hold.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/pmc, WEAR_IN_ACCESSORY)
 	//jacket
-	var/obj/item/clothing/suit/storage/marine/veteran/pmc/commando/armor = new()
+	var/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_JACKET)
