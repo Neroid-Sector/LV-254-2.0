@@ -54,6 +54,26 @@
 		icon_state = initial(icon_state)
 		icon_state += "0"
 
+///////////////////////////////////////////
+//////////////// testing ui ////////////////
+///////////////////////////////////////////
+
+/obj/structure/machinery/prop/almayer/computer/attack_hand(mob/user)
+	if(!allowed(user))
+		to_chat(user, SPAN_WARNING("Access denied."))
+		return TRUE
+	tgui_interact(user)
+
+/obj/structure/machinery/prop/almayer/computer/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "PartFabricatorVehicle", "PartFabricatorVehicle")
+		ui.open()
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+
 /obj/structure/machinery/prop/almayer/computer/NavCon
 	name = "NavCon"
 	desc = "Navigational console for plotting course and heading of the ship. Since the AI calculates all long-range navigation, this is only used for in-system course corrections and orbital maneuvers. Don't touch it!"

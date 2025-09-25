@@ -34343,7 +34343,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/hardpoint/holder/tank_turret,
+/obj/item/hardpoint/support/longstreet/tank_turret,
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 1;
 	icon_state = "lattice3";

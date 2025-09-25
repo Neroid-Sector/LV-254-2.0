@@ -20,7 +20,6 @@
 	name = "UPP part fabricator"
 	faction = FACTION_UPP
 
-
 /datum/build_queue_entry
 	var/item
 	var/cost
