@@ -3,6 +3,8 @@
 	desc = "Integral to the movement of the LAV."
 	icon = 'icons/obj/vehicles/hardpoints/lav.dmi'
 
+	slot = HDPT_WHEELS
+
 	icon_state = "lav_wheels"
 	disp_icon = "lav"
 	disp_icon_state = "lav_wheels"

@@ -3,6 +3,8 @@
 	desc = "Integral to the movement of the APC."
 	icon = 'icons/obj/vehicles/hardpoints/apc.dmi'
 
+	slot = HDPT_WHEELS
+
 	icon_state = "tires"
 	disp_icon = "apc"
 	disp_icon_state = "wheels"
