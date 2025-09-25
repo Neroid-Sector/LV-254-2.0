@@ -5,6 +5,8 @@
 
 	damage_multiplier = 0.15
 
+	slot = HDPT_WHEELS
+
 	icon_state = "tires"
 	disp_icon = "arc"
 	disp_icon_state = "arc_wheels"

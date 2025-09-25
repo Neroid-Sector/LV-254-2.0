@@ -166,6 +166,19 @@
 		if(chosen_hp == "Cancel")
 			return
 		var/obj/item/hardpoint/old = chosen_hp
+
+		// 5 second delay
+		user.visible_message(
+			SPAN_NOTICE("[user] begins removing \the [old] from the [old.slot] hardpoint slot of \the [src]."),
+			SPAN_NOTICE("You begin removing \the [old] from the [old.slot] hardpoint slot of \the [src].")
+		)
+		if(!do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+			user.visible_message(
+				SPAN_WARNING("[user] stops removing \the [old] from \the [src]."),
+				SPAN_WARNING("You stop removing \the [old] from \the [src].")
+			)
+			return
+
 		uninstall(old, user)
 		return
 
@@ -223,6 +236,18 @@
 	if(health <= 0)
 		to_chat(user, SPAN_WARNING("All the mounting points on \the [src] are broken!"))
 		return
+
+	if(user)
+		user.visible_message(
+			SPAN_NOTICE("[user] begins installing \the [H] on the [H.slot] hardpoint slot of \the [src]."),
+			SPAN_NOTICE("You begin installing \the [H] on the [H.slot] hardpoint slot of \the [src].")
+		)
+		if(!do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+			user.visible_message(
+				SPAN_WARNING("[user] stops installing \the [H] on \the [src]."),
+				SPAN_WARNING("You stop installing \the [H] on \the [src].")
+			)
+			return
 	user.temp_drop_inv_item(H, 0)
 	add_hardpoint(H)
 	update_icon()
@@ -242,24 +267,40 @@
 		return
 	if(!LAZYISIN(hardpoints, H))
 		return
+
+	if(user)
+		user.visible_message(
+			SPAN_NOTICE("[user] begins removing \the [H] from the [H.slot] hardpoint slot of \the [src]."),
+			SPAN_NOTICE("You begin removing \the [H] from the [H.slot] hardpoint slot of \the [src].")
+		)
+		if(!do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+			user.visible_message(
+				SPAN_WARNING("[user] stops removing \the [H] from \the [src]."),
+				SPAN_WARNING("You stop removing \the [H] from \the [src].")
+			)
+			return
+
 	remove_hardpoint(H, get_turf(user))
 	update_icon()
 
 /obj/item/hardpoint/support/proc/add_hardpoint(obj/item/hardpoint/H)
-	if(!is_turret())
-		return
-	H.owner = owner
-	H.forceMove(src)
-	LAZYADD(hardpoints, H)
-	H.on_install(owner)
-	H.rotate(turning_angle(H.dir, dir))
+    if(!is_turret())
+        return
+    H.owner = owner
+    H.forceMove(src)
+    LAZYADD(hardpoints, H)
+    H.on_install(owner)
+    H.dir = SOUTH
+    H.rotate(turning_angle(H.dir, dir))
 
 /obj/item/hardpoint/support/proc/remove_hardpoint(obj/item/hardpoint/H, turf/uninstall_to)
 	if(!is_turret() || !hardpoints)
 		return
 	H.forceMove(uninstall_to ? uninstall_to : get_turf(src))
 	H.on_uninstall(owner)
+	H.dir = SOUTH
 	H.reset_rotation()
+
 	hardpoints -= H
 	H.owner = null
 	if(H.health <= 0)

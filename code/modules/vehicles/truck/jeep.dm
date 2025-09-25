@@ -519,7 +519,7 @@ MILITARY POLICE
 	V.add_hardpoint(new /obj/item/hardpoint/support/jeep/jeep_wheels)
 
 	for(var/obj/item/hardpoint/support/jeep/jeep_turret/LT in V.hardpoints)
-		LT.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher/jeep/riot)
+		LT.add_hardpoint(new /obj/item/hardpoint/primary/jeep/grenade_launcher/riot)
 		break
 
 /obj/effect/vehicle_spawner/jeep/police/load_hardpoints(obj/vehicle/multitile/van/jeep/flatbed/V)
