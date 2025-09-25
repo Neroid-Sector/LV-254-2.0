@@ -167,7 +167,7 @@
 	// accessory
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/wy, WEAR_ACCESSORY)
 	//jacket
-	var/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/terminator/armor = new()
+	var/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/stack/nanopaste, WEAR_IN_JACKET)
@@ -367,7 +367,7 @@
 	for(var/i in 1 to accessory.hold.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/pmc, WEAR_IN_ACCESSORY)
 	//jacket
-	var/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/terminator/armor = new()
+	var/obj/item/clothing/suit/storage/marine/smartgunner/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
 	for(var/i in 1 to armor.storage_slots)
 		new_human.equip_to_slot_or_del(new /obj/item/stack/nanopaste, WEAR_IN_JACKET)

@@ -107,6 +107,8 @@
 	var/squad_overlay_icon = 'icons/obj/items/clothing/suits/misc_ert.dmi'
 
 	var/atom/movable/marine_light/light_holder
+/// Icon state of the on-armor lamp
+	var/lamp_light_color = LIGHT_COLOR_TUNGSTEN
 
 /obj/item/clothing/suit/storage/marine/Initialize(mapload)
 	. = ..()
@@ -217,6 +219,7 @@
 		return
 	set_light_range(initial(light_range))
 	set_light_power(floor(initial(light_power) * 0.5))
+	set_light_color(lamp_light_color)
 	set_light_on(toggle_on)
 	flags_marine_armor ^= ARMOR_LAMP_ON
 
