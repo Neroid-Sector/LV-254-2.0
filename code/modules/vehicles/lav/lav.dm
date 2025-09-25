@@ -32,11 +32,11 @@
 	movement_sound = 'sound/vehicles/tank_driving.ogg'
 
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/holder/lav_turret,
-		/obj/item/hardpoint/primary/chaingun,
-		/obj/item/hardpoint/locomotion/lav_wheels,
-		/obj/item/hardpoint/support/smoke_launcher,
-		/obj/item/hardpoint/support/flare_launcher/lav,
+		/obj/item/hardpoint/support/lav/lav_turret,
+		/obj/item/hardpoint/primary/lav/chaingun,
+		/obj/item/hardpoint/support/lav/lav_wheels,
+		/obj/item/hardpoint/support/lav/smoke_launcher,
+		/obj/item/hardpoint/support/lav/flare_launcher
 	)
 
 	seats = list(
@@ -90,7 +90,7 @@
 	role_reserved_slots += RRS
 
 /obj/vehicle/multitile/lav/load_hardpoints()
-	add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
+	add_hardpoint(new /obj/item/hardpoint/support/lav/lav_turret)
 
 /obj/vehicle/multitile/lav/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
@@ -140,8 +140,8 @@
 	if(user != seats[VEHICLE_GUNNER])
 		return FALSE
 
-	var/obj/item/hardpoint/holder/lav_turret/T = null
-	for(var/obj/item/hardpoint/holder/lav_turret/TT in hardpoints)
+	var/obj/item/hardpoint/support/lav/lav_turret/T = null
+	for(var/obj/item/hardpoint/support/lav/lav_turret/TT in hardpoints)
 		T = TT
 		break
 	if(!T)
@@ -193,7 +193,7 @@
 
 //PRESET: wheels installed
 /obj/effect/vehicle_spawner/lav/plain/load_hardpoints(obj/vehicle/multitile/lav/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/lav_wheels)
 
 //PRESET: default hardpoints, destroyed (this one spawns on VASRS elevator for VCs)
 /obj/effect/vehicle_spawner/lav/decrepit/spawn_vehicle()
@@ -206,27 +206,27 @@
 	LAV.update_icon()
 
 /obj/effect/vehicle_spawner/lav/decrepit/load_hardpoints(obj/vehicle/multitile/lav/V)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/lav_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/lav_wheels)
 
 //PRESET: chaingun
 /obj/effect/vehicle_spawner/lav/chaingun/load_hardpoints(obj/vehicle/multitile/lav/V)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
-	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/lav)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/lav_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/flare_launcher)
 
-	for(var/obj/item/hardpoint/holder/lav_turret/LT in V.hardpoints)
-		LT.add_hardpoint(new /obj/item/hardpoint/primary/chaingun)
+	for(var/obj/item/hardpoint/support/lav/lav_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/primary/lav/chaingun)
 		break
 
 //PRESET: plasma
 /obj/effect/vehicle_spawner/lav/plasma/load_hardpoints(obj/vehicle/multitile/lav/V)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/lav_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/lav_wheels)
-	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/lav)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/lav_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/lav_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/lav/flare_launcher)
 
-	for(var/obj/item/hardpoint/holder/lav_turret/LT in V.hardpoints)
-		LT.add_hardpoint(new /obj/item/hardpoint/primary/plasma)
+	for(var/obj/item/hardpoint/support/lav/lav_turret/LT in V.hardpoints)
+		LT.add_hardpoint(new /obj/item/hardpoint/primary/lav/plasma)
 		break
 
 /obj/effect/vehicle_spawner/lav/load_hardpoints(obj/vehicle/multitile/lav/V)

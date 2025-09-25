@@ -55,37 +55,70 @@
 			malfunction()
 			return
 
-/obj/structure/machinery/cm_vending/gear/vehicle_crew/get_listed_products(mob/user)
-	var/list/display_list = list()
 
-	display_list += GLOB.cm_vending_vehicle_crew_tank
-	display_list += GLOB.cm_vending_vehicle_crew_apc
-	display_list += GLOB.cm_vending_vehicle_crew_arc
-	display_list += GLOB.cm_vending_vehicle_crew_lav
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
-	return display_list
+/proc/build_equipment_list(list/static_data, vehicle, category, path_root, is_ammo)
+	var/list/items = list()
+	var/index = 1
+	for (var/build_type in typesof(path_root))
+		var/obj/item/hardpoint/item = build_type
+		var/build_name = initial(item.name)
+		var/build_desc = initial(item.desc)
+		var/build_cost = initial(item.point_cost)
+		if (build_cost)
+			items += list(list(
+				"name" = capitalize_first_letters(build_name),
+				"desc" = build_desc,
+				"cost" = build_cost,
+				"index" = index,
+				"is_ammo" = is_ammo
+			))
+		index++
 
-/obj/structure/machinery/cm_vending/gear/vehicle_crew/ui_data(mob/user)
-	. = list()
-	. += ui_static_data(user)
+	// Ensure vehicle entry exists
+	if (!static_data[vehicle])
+		static_data[vehicle] = list()
+	static_data[vehicle][category] = items
 
-	if(linked_supply_controller.tank_points) //we steal points from GLOB.supply_controller, meh-he-he. Solely to be able to modify amount of points in vendor if needed by just changing one var.
-		budget_points = linked_supply_controller.tank_points
-		linked_supply_controller.tank_points = 0
-	.["current_m_points"] = budget_points
+/obj/structure/machinery/cm_vending/gear/vehicle_crew/ui_static_data(mob/user)
+	var/list/static_data = list()
 
-	var/list/ui_listed_products = get_listed_products(user)
-	var/list/stock_values = list()
-	for (var/i in 1 to length(ui_listed_products))
-		var/list/myprod = ui_listed_products[i] //we take one list from listed_products
-		var/prod_available = FALSE
-		var/p_cost = myprod[2]
-		var/avail_flag = myprod[4]
-		if(budget_points >= p_cost && (avail_flag))
-			prod_available = TRUE
-		stock_values += list(prod_available)
+	// Jeep
+	build_equipment_list(static_data, "jeep", "Primary Weapons", typesof(/obj/item/hardpoint/primary/jeep), 0)
+	build_equipment_list(static_data, "jeep", "Primary Ammunition", typesof(/obj/item/ammo_magazine/hardpoint/primary/jeep), 1)
+	build_equipment_list(static_data, "jeep", "Support Modules", typesof(/obj/item/hardpoint/support/jeep), 0)
 
-	.["stock_listing"] = stock_values
+	// ARC
+	build_equipment_list(static_data, "arc", "Primary Weapons", typesof(/obj/item/hardpoint/primary/arc), 0)
+	build_equipment_list(static_data, "arc", "Primary Ammunition", typesof(/obj/item/ammo_magazine/hardpoint/primary/arc), 1)
+	build_equipment_list(static_data, "arc", "Support Modules", typesof(/obj/item/hardpoint/support/arc), 0)
+
+	// APC
+	build_equipment_list(static_data, "apc", "Primary Weapons", typesof(/obj/item/hardpoint/primary/apc), 0)
+	build_equipment_list(static_data, "apc", "Primary Ammunition", typesof(/obj/item/ammo_magazine/hardpoint/primary/apc), 1)
+	build_equipment_list(static_data, "apc", "Secondary Weapons", typesof(/obj/item/hardpoint/secondary/apc), 0)
+	build_equipment_list(static_data, "apc", "Secondary Ammunition", typesof(/obj/item/ammo_magazine/hardpoint/secondary/apc), 1)
+	build_equipment_list(static_data, "apc", "Support Modules", typesof(/obj/item/hardpoint/support/apc), 0)
+
+	// LAV
+	build_equipment_list(static_data, "lav", "Primary Weapons", typesof(/obj/item/hardpoint/primary/lav), 0)
+	build_equipment_list(static_data, "lav", "Primary Ammunition", typesof(/obj/item/ammo_magazine/hardpoint/primary/lav), 1)
+	build_equipment_list(static_data, "lav", "Support Modules", typesof(/obj/item/hardpoint/support/lav), 0)
+
+	// Longstreet
+	build_equipment_list(static_data, "longstreet", "Primary Weapons", typesof(/obj/item/hardpoint/primary/longstreet), 0)
+	build_equipment_list(static_data, "longstreet", "Primary Ammunition", typesof(/obj/item/ammo_magazine/hardpoint/primary/longstreet), 1)
+	build_equipment_list(static_data, "longstreet", "Secondary Weapons", typesof(/obj/item/hardpoint/secondary/longstreet), 0)
+	build_equipment_list(static_data, "longstreet", "Secondary Ammunition", typesof(/obj/item/ammo_magazine/hardpoint/secondary/longstreet), 1)
+	build_equipment_list(static_data, "longstreet", "Support Modules", typesof(/obj/item/hardpoint/support/longstreet), 0)
+
+
+	return static_data
+
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 /obj/structure/machinery/cm_vending/gear/vehicle_crew/handle_points(mob/living/carbon/human/H, list/L)
 	. = TRUE
@@ -94,122 +127,6 @@
 		vend_fail()
 		return FALSE
 	budget_points -= L[2]
-
-GLOBAL_LIST_INIT(cm_vending_vehicle_crew_tank, list(
-	list("TANK SELECTION:", 0, null, null, null),
-
-	list("INTEGRAL TANK PARTS", 0, null, null, null),
-	list("M34A2-A Multipurpose Turret", 1000, /obj/item/hardpoint/holder/tank_turret, VEHICLE_INTEGRAL_AVAILABLE, VENDOR_ITEM_MANDATORY),
-
-	list("PRIMARY WEAPON", 0, null, null, null),
-	list("LTB Cannon", 500, /obj/item/hardpoint/primary/cannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
-
-	list("PRIMARY AMMUNITION", 0, null, null, null),
-	list("LTB Cannon Shell Box", 200, /obj/item/ammo_magazine/hardpoint/ltb_cannon, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("SECONDARY WEAPON", 0, null, null, null),
-	list("M56 Cupola", 150, /obj/item/hardpoint/secondary/m56cupola, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LZR-N Flamer Unit", 300, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
-	list("M92T Grenade Launcher", 400, /obj/item/hardpoint/secondary/grenade_launcher, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("TOW Guided Missile Launcher", 750, /obj/item/hardpoint/secondary/towlauncher, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("SECONDARY AMMUNITION", 0, null, null, null),
-	list("M92T Grenade Launcher Magazine", 350, /obj/item/ammo_magazine/hardpoint/grenade, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("M56 Cupola Magazine", 150, /obj/item/ammo_magazine/hardpoint/m56_cupola, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LZR-N Flamer Unit Fuel Tank", 150, /obj/item/ammo_magazine/hardpoint/secondary_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("M87 Smoke Grenade Magazine", 125, /obj/item/ammo_magazine/hardpoint/turret_smoke, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("TOW Missile", 400, /obj/item/ammo_magazine/hardpoint/towlauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("SUPPORT MODULE", 0, null, null, null),
-	list("Integrated Weapons Sensor Array", 150, /obj/item/hardpoint/support/weapons_sensor, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("Overdrive Enhancer", 150, /obj/item/hardpoint/support/overdrive_enhancer, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
-
-	list("ARMOR", 0, null, null, null),
-	list("Snowplow", 200, /obj/item/hardpoint/armor/snowplow, VEHICLE_ARMOR_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("TREADS", 0, null, null, null),
-	list("Reinforced Treads", 200, /obj/item/hardpoint/locomotion/treads/robust, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("Treads", 200, /obj/item/hardpoint/locomotion/treads, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
-
-GLOBAL_LIST_INIT(cm_vending_vehicle_crew_apc, list(
-	list("APC SELECTION:", 0, null, null, null),
-
-	list("PRIMARY WEAPON", 0, null, null, null),
-	list("PARS-159 Boyars Dualcannon", 500, /obj/item/hardpoint/primary/dualcannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("PRIMARY AMMUNITION", 0, null, null, null),
-	list("PARS-159 Dualcannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/boyars_dualcannon, VEHICLE_AMMO_AVAILABLE , VENDOR_ITEM_REGULAR),
-
-	list("SECONDARY WEAPON", 0, null, null, null),
-	list("RE-RE700 Frontal Cannon", 400, /obj/item/hardpoint/secondary/frontalcannon, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("SECONDARY AMMUNITION", 0, null, null, null),
-	list("RE-RE700 Frontal Cannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/grenade, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("SUPPORT MODULE", 0, null, null, null),
-	list("M-97F Flare Launcher", 300, /obj/item/hardpoint/support/flare_launcher, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("SUPPORT AMMUNITION", 0, null, null, null),
-	list("M-97F Flare Launcher Magazine", 50, /obj/item/ammo_magazine/hardpoint/flare_launcher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("WHEELS", 0, null, null, null),
-	list("APC Wheels", 200, /obj/item/hardpoint/locomotion/apc_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
-
-GLOBAL_LIST_INIT(cm_vending_vehicle_crew_arc, list(
-	list("ARC:", 0, null, null, null),
-
-	list("WHEELS", 0, null, null, null),
-	list("Replacement ARC Wheels", 0, /obj/item/hardpoint/locomotion/arc_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_MANDATORY)))
-
-GLOBAL_LIST_INIT(cm_vending_vehicle_crew_lav, list(
-	list("LAV SELECTION:", 0, null, null, null),
-
-	list("INTEGRAL LAV PARTS", 0, null, null, null),
-	list("M620-A Multipurpose Turret", 1000, /obj/item/hardpoint/holder/lav_turret, VEHICLE_INTEGRAL_AVAILABLE, VENDOR_ITEM_MANDATORY),
-
-	list("PRIMARY WEAPON", 0, null, null, null),
-	list("PARS 40/70 Boyars Chaingun", 500, /obj/item/hardpoint/primary/chaingun, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("PRIMARY AMMUNITION", 0, null, null, null),
-	list("PARS 40/70 Chaingun Magazine", 150, /obj/item/ammo_magazine/hardpoint/chaingun, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("PARS 40/70 AP Chaingun Magazine", 250, /obj/item/ammo_magazine/hardpoint/chaingun/ap, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("PARS 40/70 HE Chaingun Magazine", 300, /obj/item/ammo_magazine/hardpoint/chaingun/he, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
-
-	list("SUPPORT MODULES", 0, null, null, null),
-	list("M-97FL Flare Launcher", 300, /obj/item/hardpoint/support/flare_launcher/lav, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("M-90L Smoke Launcher", 300, /obj/item/hardpoint/support/smoke_launcher, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("SUPPORT AMMUNITION", 0, null, null, null),
-	list("M-97FL Flare Launcher Magazine", 125, /obj/item/ammo_magazine/hardpoint/flare_launcher/lav, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("M90-L Smoke Grenade Magazine", 125, /obj/item/ammo_magazine/hardpoint/turret_smoke/lav, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("WHEELS", 0, null, null, null),
-	list("LAV Wheels", 200, /obj/item/hardpoint/locomotion/lav_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
-
-GLOBAL_LIST_INIT(cm_vending_vehicle_crew_jeep, list(
-	list("JEEP SELECTION:", 0, null, null, null),
-
-	list("INTEGRAL JEEP PARTS", 0, null, null, null),
-	list("M220 CTM Upgrade", 300, /obj/item/hardpoint/holder/jeep_turret, VEHICLE_INTEGRAL_AVAILABLE, VENDOR_ITEM_MANDATORY),
-
-	list("PRIMARY WEAPON", 0, null, null, null),
-	list("M56V Machinegun System", 250, /obj/item/hardpoint/secondary/m56cupola/jeep, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("M2V Heavy Machinegun System", 300, /obj/item/hardpoint/secondary/m56cupola/jeep/hmg, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("EMBR Flamer System", 500, /obj/item/hardpoint/secondary/small_flamer/jeep, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("FRA9-V Grenade Launcher", 500, /obj/item/hardpoint/secondary/grenade_launcher/jeep, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("R10T Dispersal System", 500, /obj/item/hardpoint/secondary/grenade_launcher/jeep/riot, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("Jeep TOW Guided Missile Launcher", 800, /obj/item/hardpoint/secondary/towlauncher/jeep, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("PRIMARY AMMUNITION", 0, null, null, null),
-	list("PARS 40/70 Chaingun Magazine", 150, /obj/item/ammo_magazine/hardpoint/m56_cupola/jeep, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("PARS 40/70 AP Chaingun Magazine", 250, /obj/item/ammo_magazine/hardpoint/m56_cupola/jeep/hmg, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LZR-N Flamer Unit Fuel Tank", 150, /obj/item/ammo_magazine/hardpoint/secondary_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("FRA9-V Grenade Launcher Magazine", 350, /obj/item/ammo_magazine/hardpoint/grenade, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("R10T Dispersal System Magazine", 350, /obj/item/ammo_magazine/hardpoint/grenade/teargas, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("TOW Missile", 400, /obj/item/ammo_magazine/hardpoint/towlauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-
-	list("WHEELS", 0, null, null, null),
-	list("Jeep Wheels", 150, /obj/item/hardpoint/locomotion/lav_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
 
 //------------WEAPONS RACK---------------
 

@@ -7,16 +7,13 @@
 	vehicle_pen_armor = VEHICLE_ARMOR_HEAVY_ARMOR
 
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/support/overdrive_enhancer,
-		/obj/item/hardpoint/armor/ballistic,
-		/obj/item/hardpoint/armor/caustic,
-		/obj/item/hardpoint/armor/concussive,
-		/obj/item/hardpoint/armor/paladin,
-		/obj/item/hardpoint/armor/snowplow,
-		/obj/item/hardpoint/locomotion/treads,
-		/obj/item/hardpoint/locomotion/treads/robust,
+		/obj/item/hardpoint/support/longstreet/overdrive,
+		/obj/item/hardpoint/support/longstreet/ballistic,
+		/obj/item/hardpoint/support/longstreet/caustic,
+		/obj/item/hardpoint/support/longstreet/concussive,
+		/obj/item/hardpoint/support/longstreet/snowplow,
+		/obj/item/hardpoint/support/longstreet/treads
 	)
-
 
 	required_skill = SKILL_VEHICLE_LARGE
 	interior_map = /datum/map_template/interior/aev
@@ -70,9 +67,9 @@
 	return AEV
 
 /obj/effect/vehicle_spawner/aev/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/snowplow)
-	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/snowplow)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/overdrive)
 
 /obj/effect/vehicle_spawner/aev/decrepit/spawn_vehicle()
 	var/obj/vehicle/multitile/tank/aev/AEV = new(loc)

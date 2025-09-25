@@ -24,10 +24,6 @@
 	name = "Med APC"
 	interior_id = "apc_med"
 
-/datum/map_template/interior/apc_no_fpw
-	name = "APC - No FPW"
-	interior_id = "apc_no_fpw"
-
 /datum/map_template/interior/lav
 	name = "LAV"
 	interior_id = "lav"

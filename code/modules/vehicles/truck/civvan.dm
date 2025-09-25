@@ -32,7 +32,7 @@
 	move_turn_momentum_loss_factor = 1
 
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/locomotion/truck/wheels/civvan
+		/obj/item/hardpoint/support/locomotion/civvan
 	)
 
 
@@ -115,7 +115,7 @@
 	CIVVAN.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/decrepit/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 	//PRESET: wheels installed
 /obj/effect/vehicle_spawner/civvan/fixed/spawn_vehicle()
@@ -127,7 +127,7 @@
 	CIVVAN.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/fixed/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 	//PRESET: random
 /obj/effect/vehicle_spawner/civvan/random/spawn_vehicle()
@@ -142,7 +142,7 @@
 	CIVVAN.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/random/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 
 //red fixed
@@ -159,7 +159,7 @@
 	civvan_2.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/red/fixed/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 
 //blue fixed
@@ -176,7 +176,7 @@
 	civvan_3.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/blu/fixed/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 
 //green fixed
@@ -193,7 +193,7 @@
 	civvan_4.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/grn/fixed/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 
 //yellow fixed
@@ -210,7 +210,7 @@
 	civvan_5.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/ylw/fixed/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 
 //CMB fixed
@@ -227,7 +227,7 @@
 	civvan_6.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/cmb/fixed/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 
 //Med fixed
@@ -244,7 +244,7 @@
 	civvan_7.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/med/fixed/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)
 
 
 //Bank fixed
@@ -261,4 +261,4 @@
 	civvan_8.update_icon()
 
 /obj/effect/vehicle_spawner/civvan/bank/fixed/load_hardpoints(obj/vehicle/multitile/civvan/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels/civvan)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/civvan)

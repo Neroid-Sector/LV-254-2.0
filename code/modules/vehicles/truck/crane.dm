@@ -34,7 +34,7 @@
 	move_turn_momentum_loss_factor = 0.6
 
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/locomotion/truck/treads/crane
+		/obj/item/hardpoint/support/locomotion/treads/crane
 	)
 
 /*
@@ -63,7 +63,7 @@
 	CRANE.update_icon()
 
 /obj/effect/vehicle_spawner/crane/decrepit/load_hardpoints(obj/vehicle/multitile/crane/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/treads/crane)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/treads/crane)
 
 	//PRESET: wheels installed
 /obj/effect/vehicle_spawner/crane/fixed/spawn_vehicle()
@@ -75,7 +75,7 @@
 	CRANE.update_icon()
 
 /obj/effect/vehicle_spawner/crane/fixed/load_hardpoints(obj/vehicle/multitile/crane/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/treads/crane)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/treads/crane)
 
 	//PRESET: random
 /obj/effect/vehicle_spawner/crane/random/spawn_vehicle()
@@ -90,4 +90,4 @@
 	CRANE.update_icon()
 
 /obj/effect/vehicle_spawner/crane/random/load_hardpoints(obj/vehicle/multitile/crane/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/treads/crane)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/treads/crane)

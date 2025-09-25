@@ -34,5 +34,5 @@
 	move_turn_momentum_loss_factor = 1
 
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/locomotion/truck/wheels/minitruck
+		/obj/item/hardpoint/support/locomotion/minitruck
 	)
