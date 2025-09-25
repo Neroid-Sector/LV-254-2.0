@@ -22,6 +22,8 @@
 
 	var/buff_applied = FALSE
 
+	var/point_cost = 0
+
 	//------ICON VARS----------
 	icon = 'icons/obj/vehicles/hardpoints/tank.dmi'
 	icon_state = "tires" //Placeholder
@@ -737,11 +739,11 @@
 	var/muzzle_flash_y = muzzle_flash_pos["[dir]"][2] + 64
 
 	// Account for turret rotation
-	if(istype(loc, /obj/item/hardpoint/holder))
-		var/obj/item/hardpoint/holder/H = loc
-		if(LAZYLEN(H.px_offsets))
-			muzzle_flash_x += H.px_offsets["[H.loc.dir]"][1]
-			muzzle_flash_y += H.px_offsets["[H.loc.dir]"][2]
+	if(istype(loc, /obj/item/hardpoint/support))
+		var/obj/item/hardpoint/support/S = loc
+		if(S.is_turret() && LAZYLEN(S.px_offsets))
+			muzzle_flash_x += S.px_offsets["[S.loc.dir]"][1]
+			muzzle_flash_y += S.px_offsets["[S.loc.dir]"][2]
 
 	var/image_layer = owner.layer + 0.1
 	if(underlayer_north_muzzleflash && dir == NORTH)

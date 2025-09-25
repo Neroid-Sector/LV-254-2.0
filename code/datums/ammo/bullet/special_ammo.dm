@@ -130,16 +130,6 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	effective_range_max = 7
 
-/datum/ammo/bullet/smartgun/m56_fpw
-	name = "\improper M56 FPW bullet"
-	icon_state = "redbullet"
-	flags_ammo_behavior = AMMO_BALLISTIC
-
-	max_range = 7
-	accuracy = HIT_ACCURACY_TIER_7
-	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_5
-
 /datum/ammo/bullet/turret
 	name = "autocannon bullet"
 	icon_state = "redbullet" //Red bullets to indicate friendly fire restriction

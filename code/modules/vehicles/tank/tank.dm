@@ -41,16 +41,14 @@
 
 	// Rest (all the guns) is handled by the tank turret hardpoint
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/holder/tank_turret,
-		/obj/item/hardpoint/support/weapons_sensor,
-		/obj/item/hardpoint/support/overdrive_enhancer,
-		/obj/item/hardpoint/armor/ballistic,
-		/obj/item/hardpoint/armor/caustic,
-		/obj/item/hardpoint/armor/concussive,
-		/obj/item/hardpoint/armor/paladin,
-		/obj/item/hardpoint/armor/snowplow,
-		/obj/item/hardpoint/locomotion/treads,
-		/obj/item/hardpoint/locomotion/treads/robust,
+		/obj/item/hardpoint/support/longstreet/tank_turret,
+		/obj/item/hardpoint/support/longstreet/sensor,
+		/obj/item/hardpoint/support/longstreet/overdrive,
+		/obj/item/hardpoint/support/longstreet/ballistic,
+		/obj/item/hardpoint/support/longstreet/caustic,
+		/obj/item/hardpoint/support/longstreet/concussive,
+		/obj/item/hardpoint/support/longstreet/snowplow,
+		/obj/item/hardpoint/support/longstreet/treads
 	)
 
 	seats = list(
@@ -95,7 +93,7 @@
 	role_reserved_slots += RRS
 
 /obj/vehicle/multitile/tank/load_hardpoints()
-	add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
 
 /obj/vehicle/multitile/tank/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
@@ -148,8 +146,8 @@
 	if(user != seats[VEHICLE_GUNNER])
 		return FALSE
 
-	var/obj/item/hardpoint/holder/tank_turret/T = null
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in hardpoints)
+	var/obj/item/hardpoint/support/longstreet/tank_turret/T = null
+	for(var/obj/item/hardpoint/support/longstreet/tank_turret/TT in hardpoints)
 		T = TT
 		break
 	if(!T)
@@ -223,12 +221,12 @@
 	return TANK
 
 /obj/effect/vehicle_spawner/tank/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
 
 //PRESET: turret, treads installed
 /obj/effect/vehicle_spawner/tank/plain/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/treads)
 
 //PRESET: no hardpoints
 /obj/effect/vehicle_spawner/tank/hull/load_hardpoints(obj/vehicle/multitile/tank/V)
@@ -251,20 +249,20 @@
 	TANK.update_icon()
 
 /obj/effect/vehicle_spawner/tank/decrepit/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/concussive)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
+	for(var/obj/item/hardpoint/support/longstreet/tank_turret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/longstreet/cannon)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/longstreet/m56cupola)
 		break
 
 //PRESET: default hardpoints
 /obj/effect/vehicle_spawner/tank/fixed/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/concussive)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
+	for(var/obj/item/hardpoint/support/longstreet/tank_turret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/longstreet/cannon)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/longstreet/m56cupola)
 		break

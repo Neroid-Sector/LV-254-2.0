@@ -33,8 +33,8 @@
 	move_turn_momentum_loss_factor = 1
 
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/locomotion/truck/wheels,
-		/obj/item/hardpoint/locomotion/truck/treads
+		/obj/item/hardpoint/support/locomotion/truck,
+		/obj/item/hardpoint/support/locomotion/treads
 	)
 
 /obj/vehicle/multitile/miltruck/miltruck_2
@@ -89,7 +89,7 @@
 	miltruck_2.update_icon()
 
 /obj/effect/vehicle_spawner/miltruck/miltruck_2/fixed/load_hardpoints(obj/vehicle/multitile/miltruck/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/truck)
 
 
 //miltruck 3 fixed
@@ -106,7 +106,7 @@
 	miltruck_3.update_icon()
 
 /obj/effect/vehicle_spawner/miltruck/miltruck_3/fixed/load_hardpoints(obj/vehicle/multitile/miltruck/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/truck/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/treads)
 
 
 
@@ -160,7 +160,7 @@
 	move_max_momentum = 3
 
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/locomotion/atruck,
+		/obj/item/hardpoint/support/locomotion/atruck,
 	)
 
 	move_turn_momentum_loss_factor = 1
@@ -229,7 +229,7 @@
 	atruck.update_icon()
 
 /obj/effect/vehicle_spawner/atruck/decrepit/load_hardpoints(obj/vehicle/multitile/atruck/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/atruck)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/atruck)
 
 //PRESET: wheels installed
 /obj/effect/vehicle_spawner/atruck/fixed/spawn_vehicle()
@@ -241,7 +241,7 @@
 	atruck.update_icon()
 
 /obj/effect/vehicle_spawner/atruck/fixed/load_hardpoints(obj/vehicle/multitile/atruck/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/atruck)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/atruck)
 
 
 //trauma
@@ -258,7 +258,7 @@
 	atruck_trauma.update_icon()
 
 /obj/effect/vehicle_spawner/atruck/trauma/fixed/load_hardpoints(obj/vehicle/multitile/atruck/trauma/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/atruck)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/atruck)
 
 //cmb
 /obj/effect/vehicle_spawner/atruck/cmb
@@ -274,4 +274,4 @@
 	atruck_cmb.update_icon()
 
 /obj/effect/vehicle_spawner/atruck/cmb/fixed/load_hardpoints(obj/vehicle/multitile/atruck/trauma/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/atruck)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion/atruck)
