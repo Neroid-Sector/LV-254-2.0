@@ -34,7 +34,9 @@
 "k" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/crew/alt{
-	dir = 1
+	dir = 1;
+	pixel_x = -4;
+	pixel_y = -3
 	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
@@ -70,10 +72,6 @@
 /turf/open/void/vehicle,
 /area/space)
 "p" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/faxmachine/uscm/blackgold/command{
-	sub_name = "CIC"
-	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
 "q" = (
@@ -148,12 +146,6 @@
 /turf/open/shuttle/vehicle/floor_1_13,
 /area/interior/vehicle/van)
 "K" = (
-/obj/structure/machinery/computer/groundside_operations{
-	indestructible = 1;
-	layer = 3.3;
-	pixel_x = 12;
-	pixel_y = 18
-	},
 /obj/structure/machinery/computer/squad_changer{
 	pixel_x = -6;
 	pixel_y = 18;
@@ -161,6 +153,11 @@
 	},
 /obj/structure/bed/chair/comfy/blue{
 	dir = 1
+	},
+/obj/structure/machinery/computer/groundside_operations/arc{
+	pixel_x = 12;
+	pixel_y = 18;
+	layer = 3.5
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor5"
@@ -190,6 +187,11 @@
 /obj/structure/interior_wall/van{
 	icon_state = "back_3"
 	},
+/obj/structure/interior_wall/van{
+	icon_state = "jeep_4";
+	pixel_y = 32;
+	alpha = 35
+	},
 /turf/open/void/vehicle,
 /area/space)
 "U" = (
@@ -200,6 +202,19 @@
 /area/space)
 "W" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin/wy{
+	pixel_x = -20;
+	pixel_y = 5
+	},
+/obj/item/tool/pen{
+	pixel_x = -21;
+	pixel_y = 1
+	},
+/obj/structure/machinery/faxmachine/uscm/blackgold/command{
+	sub_name = "CIC";
+	pixel_x = 1;
+	pixel_y = 1
+	},
 /turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/van)
 
