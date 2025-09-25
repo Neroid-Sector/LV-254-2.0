@@ -103,26 +103,22 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_tank, list(
 
 	list("PRIMARY WEAPON", 0, null, null, null),
 	list("LTB Cannon", 500, /obj/item/hardpoint/primary/cannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
-	list("AC3-E Autocannon", 500, /obj/item/hardpoint/primary/autocannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("DRG-N Offensive Flamer Unit", 500, /obj/item/hardpoint/primary/flamer, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LTAA-AP Minigun", 500, /obj/item/hardpoint/primary/minigun, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("PRIMARY AMMUNITION", 0, null, null, null),
 	list("LTB Cannon Shell Box", 200, /obj/item/ammo_magazine/hardpoint/ltb_cannon, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("AC3-E Autocannon Magazine", 200, /obj/item/ammo_magazine/hardpoint/ace_autocannon, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("DRG-N Offensive Flamer Unit Fuel Tank", 200, /obj/item/ammo_magazine/hardpoint/primary_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LTAA-AP Minigun Drum", 200, /obj/item/ammo_magazine/hardpoint/ltaaap_minigun, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SECONDARY WEAPON", 0, null, null, null),
-	list("M92T Grenade Launcher", 250, /obj/item/hardpoint/secondary/grenade_launcher, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("M56 Cupola", 250, /obj/item/hardpoint/secondary/m56cupola, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LZR-N Flamer Unit", 250, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
+	list("M56 Cupola", 150, /obj/item/hardpoint/secondary/m56cupola, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("LZR-N Flamer Unit", 300, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_RECOMMENDED),
+	list("M92T Grenade Launcher", 400, /obj/item/hardpoint/secondary/grenade_launcher, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("TOW Guided Missile Launcher", 750, /obj/item/hardpoint/secondary/towlauncher, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SECONDARY AMMUNITION", 0, null, null, null),
-	list("M92T Grenade Launcher Magazine", 150, /obj/item/ammo_magazine/hardpoint/grenade, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("M92T Grenade Launcher Magazine", 350, /obj/item/ammo_magazine/hardpoint/grenade, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("M56 Cupola Magazine", 150, /obj/item/ammo_magazine/hardpoint/m56_cupola, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
-	list("LZR-N Flamer Unit Fuel Tank", 150, /obj/item/hardpoint/secondary/small_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("LZR-N Flamer Unit Fuel Tank", 150, /obj/item/ammo_magazine/hardpoint/secondary_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 	list("M87 Smoke Grenade Magazine", 125, /obj/item/ammo_magazine/hardpoint/turret_smoke, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("TOW Missile", 400, /obj/item/ammo_magazine/hardpoint/towlauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("SUPPORT MODULE", 0, null, null, null),
 	list("Integrated Weapons Sensor Array", 150, /obj/item/hardpoint/support/weapons_sensor, VEHICLE_SUPPORT_AVAILABLE, VENDOR_ITEM_REGULAR),
@@ -136,13 +132,13 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_tank, list(
 	list("Treads", 200, /obj/item/hardpoint/locomotion/treads, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
 
 GLOBAL_LIST_INIT(cm_vending_vehicle_crew_apc, list(
-	list("ARC SELECTION:", 0, null, null, null),
+	list("APC SELECTION:", 0, null, null, null),
 
 	list("PRIMARY WEAPON", 0, null, null, null),
 	list("PARS-159 Boyars Dualcannon", 500, /obj/item/hardpoint/primary/dualcannon, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
 
 	list("PRIMARY AMMUNITION", 0, null, null, null),
-	list("PARS-159 Dualcannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/ace_autocannon, VEHICLE_AMMO_AVAILABLE , VENDOR_ITEM_REGULAR),
+	list("PARS-159 Dualcannon Magazine", 150, /obj/item/ammo_magazine/hardpoint/boyars_dualcannon, VEHICLE_AMMO_AVAILABLE , VENDOR_ITEM_REGULAR),
 
 	list("SECONDARY WEAPON", 0, null, null, null),
 	list("RE-RE700 Frontal Cannon", 400, /obj/item/hardpoint/secondary/frontalcannon, VEHICLE_SECONDARY_AVAILABLE, VENDOR_ITEM_REGULAR),
@@ -160,7 +156,7 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_apc, list(
 	list("APC Wheels", 200, /obj/item/hardpoint/locomotion/apc_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
 
 GLOBAL_LIST_INIT(cm_vending_vehicle_crew_arc, list(
-	list("STARTING KIT SELECTION:", 0, null, null, null),
+	list("ARC:", 0, null, null, null),
 
 	list("WHEELS", 0, null, null, null),
 	list("Replacement ARC Wheels", 0, /obj/item/hardpoint/locomotion/arc_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_MANDATORY)))
@@ -189,6 +185,31 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_lav, list(
 
 	list("WHEELS", 0, null, null, null),
 	list("LAV Wheels", 200, /obj/item/hardpoint/locomotion/lav_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
+
+GLOBAL_LIST_INIT(cm_vending_vehicle_crew_jeep, list(
+	list("JEEP SELECTION:", 0, null, null, null),
+
+	list("INTEGRAL JEEP PARTS", 0, null, null, null),
+	list("M220 CTM Upgrade", 300, /obj/item/hardpoint/holder/jeep_turret, VEHICLE_INTEGRAL_AVAILABLE, VENDOR_ITEM_MANDATORY),
+
+	list("PRIMARY WEAPON", 0, null, null, null),
+	list("M56V Machinegun System", 250, /obj/item/hardpoint/secondary/m56cupola/jeep, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("M2V Heavy Machinegun System", 300, /obj/item/hardpoint/secondary/m56cupola/jeep/hmg, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("EMBR Flamer System", 500, /obj/item/hardpoint/secondary/small_flamer/jeep, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("FRA9-V Grenade Launcher", 500, /obj/item/hardpoint/secondary/grenade_launcher/jeep, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("R10T Dispersal System", 500, /obj/item/hardpoint/secondary/grenade_launcher/jeep/riot, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("Jeep TOW Guided Missile Launcher", 800, /obj/item/hardpoint/secondary/towlauncher/jeep, VEHICLE_PRIMARY_AVAILABLE, VENDOR_ITEM_REGULAR),
+
+	list("PRIMARY AMMUNITION", 0, null, null, null),
+	list("PARS 40/70 Chaingun Magazine", 150, /obj/item/ammo_magazine/hardpoint/m56_cupola/jeep, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("PARS 40/70 AP Chaingun Magazine", 250, /obj/item/ammo_magazine/hardpoint/m56_cupola/jeep/hmg, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("LZR-N Flamer Unit Fuel Tank", 150, /obj/item/ammo_magazine/hardpoint/secondary_flamer, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("FRA9-V Grenade Launcher Magazine", 350, /obj/item/ammo_magazine/hardpoint/grenade, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("R10T Dispersal System Magazine", 350, /obj/item/ammo_magazine/hardpoint/grenade/teargas, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+	list("TOW Missile", 400, /obj/item/ammo_magazine/hardpoint/towlauncher, VEHICLE_AMMO_AVAILABLE, VENDOR_ITEM_REGULAR),
+
+	list("WHEELS", 0, null, null, null),
+	list("Jeep Wheels", 150, /obj/item/hardpoint/locomotion/lav_wheels, VEHICLE_TREADS_AVAILABLE, VENDOR_ITEM_REGULAR)))
 
 //------------WEAPONS RACK---------------
 

@@ -2648,22 +2648,10 @@
 		WEAR_L_HAND = "utility",
 		WEAR_R_HAND = "utility"
 	)
-	storage_slots = 2 //can hold 2 only two large items such as Tank Ammo.
+	storage_slots = 4 //can hold 2 only two large items such as Tank Ammo.
 	max_w_class = SIZE_LARGE
-	max_storage_space = 2
-	can_hold = list(
-		/obj/item/ammo_magazine/hardpoint/ltb_cannon,
-		/obj/item/ammo_magazine/hardpoint/ltaaap_minigun,
-		/obj/item/ammo_magazine/hardpoint/primary_flamer,
-		/obj/item/ammo_magazine/hardpoint/secondary_flamer,
-		/obj/item/ammo_magazine/hardpoint/ace_autocannon,
-		/obj/item/ammo_magazine/hardpoint/towlauncher,
-		/obj/item/ammo_magazine/hardpoint/m56_cupola,
-		/obj/item/ammo_magazine/hardpoint/grenade,
-		/obj/item/ammo_magazine/hardpoint/turret_smoke,
-		/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-		/obj/item/ammo_magazine/hardpoint/flare_launcher,
-	)
+	max_storage_space = 4
+	can_hold = list(/obj/item/ammo_magazine/hardpoint)
 
 /obj/item/storage/belt/souto
 	name = "\improper Souto belt"

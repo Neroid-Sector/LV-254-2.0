@@ -1,5 +1,5 @@
 /obj/item/hardpoint/holder/jeep_turret
-	name = "\improper M220 CTM Module"
+	name = "\improper M220 CTM Upgrade"
 	desc = "The main upgrade for Armat M48 Military Jeeps, allows installation of a variety of weapons."
 
 	icon = 'icons/obj/vehicles/jeep.dmi'
