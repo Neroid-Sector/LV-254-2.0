@@ -32,7 +32,6 @@
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 
 /obj/item/clothing/glasses/night/medhud
 	name = "\improper Mark 4 Battle Medic sight"
@@ -56,7 +55,6 @@
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 
 /obj/item/clothing/glasses/night/m42_night_goggles/spotter
 	name = "\improper M42 spotter sight"

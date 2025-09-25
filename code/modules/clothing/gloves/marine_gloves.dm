@@ -132,7 +132,6 @@
 	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
 	unacidable = TRUE
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 	adopts_squad_color = FALSE
 
 /obj/item/clothing/gloves/marine/veteran

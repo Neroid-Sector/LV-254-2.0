@@ -232,25 +232,6 @@
 
 	damage = 0
 
-/datum/ammo/pill/on_hit_mob(mob/M, obj/projectile/P)
-	. = ..()
-
-	if(!ishuman(M))
-		return
-
-	if(!istype(P, /obj/projectile/pill))
-		return
-
-	var/obj/projectile/pill/pill_projectile = P
-
-	if(QDELETED(pill_projectile.source_pill))
-		pill_projectile.source_pill = null
-		return
-
-	var/datum/reagents/pill_reagents = pill_projectile.source_pill.reagents
-
-	pill_reagents.trans_to(M, pill_reagents.total_volume)
-
 /obj/projectile/pill
 	var/obj/item/reagent_container/pill/source_pill
 

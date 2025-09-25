@@ -10,7 +10,6 @@ GLOBAL_LIST_INIT(cm_vending_gear_leader, list(
 		list("M240 Pyrotechnician Support Kit", 0, /obj/item/storage/box/kit/mini_pyro, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("M2C Heavy Machine Gun", 0, /obj/item/storage/box/guncase/m2c, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("M56D Heavy Machine Gun", 0, /obj/item/storage/box/guncase/m56d, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("M79 Grenade Launcher", 0, /obj/item/storage/box/guncase/m79, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("MOU-53 Shotgun", 0, /obj/item/storage/box/guncase/mou53, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("XM88 Heavy Rifle", 0, /obj/item/storage/box/guncase/xm88, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 

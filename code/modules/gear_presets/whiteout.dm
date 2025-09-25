@@ -41,7 +41,7 @@
 
 /datum/equipment_preset/pmc/w_y_whiteout/load_gear(mob/living/carbon/human/new_human)
 	// back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/commando, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/wy_invis_droid, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
@@ -99,7 +99,7 @@
 
 /datum/equipment_preset/pmc/w_y_whiteout/medic/load_gear(mob/living/carbon/human/new_human)
 	// back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/commando, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/wy_invis_droid, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/synth, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/synth, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/synth, WEAR_IN_BACK)
@@ -173,7 +173,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/stack/nanopaste, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/dirty/elite, WEAR_J_STORE)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/whiteout/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/commando/full, WEAR_WAIST)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc/commando, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/commando/knife, WEAR_FEET)
@@ -198,7 +198,7 @@
 
 /datum/equipment_preset/pmc/w_y_whiteout/leader/load_gear(mob/living/carbon/human/new_human)
 	// back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/commando, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/wy_invis_droid, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/nanopaste, WEAR_IN_BACK)
@@ -250,7 +250,7 @@
 
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat/load_gear(mob/living/carbon/human/new_human)
 	// back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/commando, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/wy_invis_droid, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
@@ -305,7 +305,7 @@
 
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat/medic/load_gear(mob/living/carbon/human/new_human)
 	// back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/commando, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/wy_invis_droid, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/synth, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/synth, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/synth, WEAR_IN_BACK)
@@ -397,7 +397,7 @@
 
 /datum/equipment_preset/pmc/w_y_whiteout/low_threat/leader/load_gear(mob/living/carbon/human/new_human)
 	// back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/commando, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/wy_invis_droid, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/nanopaste, WEAR_IN_BACK)
