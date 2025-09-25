@@ -272,6 +272,11 @@
 	display_maptext = TRUE
 	maptext_label = "UZ"
 
+/obj/item/reagent_container/hypospray/autoinjector/ultrazine/empty
+	name = "empty ultrazine autoinjector"
+	volume = 0
+	uses_left = 0
+
 /obj/item/reagent_container/hypospray/autoinjector/ultrazine/update_icon()
 	icon_state = uses_left ? "stimpack" : "stimpack0"
 	if((isstorage(loc) || ismob(loc)) && display_maptext)
@@ -348,7 +353,7 @@
 /obj/item/reagent_container/hypospray/autoinjector/empty
 	name = "autoinjector (C-T)"
 	desc = "A custom-made auto-injector, likely from research."
-	chemname = "custom"
+	custom_chem_icon = "custom"
 	mixed_chem = TRUE
 	amount_per_transfer_from_this = 5
 	volume = 15

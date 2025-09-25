@@ -329,6 +329,13 @@
 
 	damage = 0
 
+/datum/ammo/pill
+	name = "syringe"
+	icon_state = "syringe"
+	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_ALWAYS_FF
+
+	damage = 0
+
 /datum/ammo/pill/on_hit_mob(mob/M, obj/projectile/P)
 	. = ..()
 
