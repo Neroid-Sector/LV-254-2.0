@@ -768,7 +768,7 @@
 		ACCESS_MARINE_BRIG,
 	)
 	assignment = JOB_MS_RFM
-	rank = JOB_MS_RFM
+	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2)
 	role_comm_title = "Rfm"
 	skills = /datum/skills/ms/rifleman
@@ -827,21 +827,6 @@
 
 /datum/equipment_preset/uscm_mudskippers/rfm/e4
 	paygrades = list(PAY_SHORT_ME4)
-
-
-/datum/equipment_preset/proc/pick_rfm_kit(mob/living/carbon/human/new_human)
-	if(!istype(new_human)) return
-	var/rfm_kit = pick(
-		/obj/item/storage/box/spec/pyro,
-		/obj/item/storage/box/spec/heavy_grenadier,
-		/obj/item/storage/box/spec/scout,
-		/obj/item/storage/box/spec/demolitionist,
-		/obj/item/storage/box/spec/sniper,
-		/obj/item/storage/box/spec/sharp_operator,
-		/obj/item/storage/box/kit/pursuit,
-		/obj/item/storage/box/kit/mini_jtac,
-		)
-	new_human.equip_to_slot_or_del(new rfm_kit, WEAR_L_HAND)
 
 //---K9---//
 /datum/equipment_preset/uscm_mudskippers/k9
