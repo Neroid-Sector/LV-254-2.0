@@ -1,10 +1,12 @@
 
-/obj/structure/machinery/part_fabricator
-	name = "part fabricator"
-	desc = "A large automated 3D printer for producing runtime errors."
+/obj/structure/machinery/fabricator_dropship
+	name = "USCM dropship part fabricator"
+	desc = "A large automated 3D printer for producing dropship parts. You can recycle parts or ammo in it, and get 80% of your points back, by clicking it while holding them in a powerloader claw."
 	density = TRUE
 	anchored = TRUE
 	use_power = USE_POWER_IDLE
+	unslashable = TRUE
+	unacidable = TRUE
 	idle_power_usage = 20
 	icon = 'icons/obj/structures/machinery/drone_fab.dmi'
 	icon_state = "drone_fab_idle"
@@ -16,23 +18,18 @@
 	var/datum/controller/supply/linked_supply_controller
 	var/list/datum/build_queue_entry/build_queue = list()
 
-/obj/structure/machinery/part_fabricator/upp
-	name = "UPP part fabricator"
+	req_access = list(ACCESS_MARINE_DROPSHIP)
+
+/obj/structure/machinery/fabricator_dropship/upp
+	name = "UPP dropship part fabricator"
 	faction = FACTION_UPP
+	req_access = list(ACCESS_UPP_FLIGHT)
 
-/datum/build_queue_entry
-	var/item
-	var/cost
-
-/datum/build_queue_entry/New(item, cost)
-	src.item = item
-	src.cost = cost
-
-/obj/structure/machinery/part_fabricator/get_examine_text(mob/user)
+/obj/structure/machinery/fabricator_dropship/get_examine_text(mob/user)
 	. = ..()
 	to_chat(user, build_queue ? "It has [length(build_queue)] items in the queue" : "the build queue is empty")
 
-/obj/structure/machinery/part_fabricator/New()
+/obj/structure/machinery/fabricator_dropship/New()
 	..()
 	switch(faction)
 		if(FACTION_MARINE)
@@ -43,16 +40,16 @@
 			linked_supply_controller = GLOB.supply_controller
 	start_processing()
 
-/obj/structure/machinery/part_fabricator/proc/get_point_store()
+/obj/structure/machinery/fabricator_dropship/proc/get_point_store()
 	return 0
 
-/obj/structure/machinery/part_fabricator/proc/add_to_point_store(number = 1)
+/obj/structure/machinery/fabricator_dropship/proc/add_to_point_store(number = 1)
 	return
 
-/obj/structure/machinery/part_fabricator/proc/spend_point_store(number = 1)
+/obj/structure/machinery/fabricator_dropship/proc/spend_point_store(number = 1)
 	return
 
-/obj/structure/machinery/part_fabricator/dropship/ui_data(mob/user)
+/obj/structure/machinery/fabricator_dropship/ui_data(mob/user)
 	var/index = 1
 	var/list/build_queue_formatted = list()
 	for(var/datum/build_queue_entry/entry in build_queue)
@@ -71,12 +68,12 @@
 		"BuildQueue" = build_queue_formatted
 	)
 
-/obj/structure/machinery/part_fabricator/power_change()
+/obj/structure/machinery/fabricator_dropship/power_change()
 	..()
 	if (stat & NOPOWER)
 		icon_state = "drone_fab_nopower"
 
-/obj/structure/machinery/part_fabricator/process()
+/obj/structure/machinery/fabricator_dropship/process()
 	if(SSticker.current_state < GAME_STATE_PLAYING)
 		return
 
@@ -87,7 +84,7 @@
 
 	update_icon()
 
-/obj/structure/machinery/part_fabricator/proc/process_build_queue()
+/obj/structure/machinery/fabricator_dropship/proc/process_build_queue()
 	if(stat & NOPOWER)
 		return
 
@@ -117,7 +114,7 @@
 		visible_message(SPAN_NOTICE("[src] starts printing something."))
 		addtimer(CALLBACK(src, PROC_REF(produce_part), entry), 3 SECONDS)
 
-/obj/structure/machinery/part_fabricator/proc/build_part(part_type, cost, mob/user)
+/obj/structure/machinery/fabricator_dropship/proc/build_part(part_type, cost, mob/user)
 	set waitfor = FALSE
 	if(stat & NOPOWER)
 		return
@@ -131,7 +128,7 @@
 
 	build_queue += new /datum/build_queue_entry(part_type, cost)
 
-/obj/structure/machinery/part_fabricator/proc/produce_part(datum/build_queue_entry/entry)
+/obj/structure/machinery/fabricator_dropship/proc/produce_part(datum/build_queue_entry/entry)
 	build_queue.Remove(entry)
 
 	busy = FALSE
@@ -139,7 +136,7 @@
 	new entry.item(get_step(src, SOUTHEAST))
 	icon_state = "drone_fab_idle"
 
-/obj/structure/machinery/part_fabricator/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+/obj/structure/machinery/fabricator_dropship/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
 		return
@@ -205,19 +202,19 @@
 		log_admin("Bad topic: [user] may be trying to HREF exploit [src]")
 		return
 
-/obj/structure/machinery/part_fabricator/attack_hand(mob/user)
+/obj/structure/machinery/fabricator_dropship/attack_hand(mob/user)
 	if(!allowed(user))
 		to_chat(user, SPAN_WARNING("Access denied."))
 		return TRUE
 	tgui_interact(user)
 
-/obj/structure/machinery/part_fabricator/tgui_interact(mob/user, datum/tgui/ui)
+/obj/structure/machinery/fabricator_dropship/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "PartFabricator", "Part Fabricator")
 		ui.open()
 
-/obj/structure/machinery/part_fabricator/update_icon()
+/obj/structure/machinery/fabricator_dropship/update_icon()
 	. = ..()
 	if(stat & NOPOWER)
 		icon_state = "drone_fab_nopower"
@@ -228,31 +225,7 @@
 
 	icon_state = "drone_fab_idle"
 
-/obj/structure/machinery/part_fabricator/dropship
-	name = "dropship part fabricator"
-	desc = "A large automated 3D printer for producing dropship parts. You can recycle parts or ammo in it, and get 80% of your points back, by clicking it while holding them in a powerloader claw."
-	req_access = list(ACCESS_MARINE_DROPSHIP)
-
-	unslashable = TRUE
-	unacidable = TRUE
-	faction = FACTION_MARINE
-
-/obj/structure/machinery/part_fabricator/dropship/upp
-	name = "UPP dropship part fabricator"
-	faction = FACTION_UPP
-	req_access = list(ACCESS_UPP_FLIGHT)
-
-
-/obj/structure/machinery/part_fabricator/dropship/get_point_store()
-	return linked_supply_controller.dropship_points
-
-/obj/structure/machinery/part_fabricator/dropship/add_to_point_store(number = 1)
-	linked_supply_controller.dropship_points += number
-
-/obj/structure/machinery/part_fabricator/dropship/spend_point_store(number = 1)
-	linked_supply_controller.dropship_points -= number
-
-/obj/structure/machinery/part_fabricator/dropship/ui_static_data(mob/user)
+/obj/structure/machinery/fabricator_dropship/ui_static_data(mob/user)
 	var/list/static_data = list()
 	static_data["Equipment"] = list()
 	var/is_ammo = 0
@@ -305,14 +278,14 @@
 
 	return static_data
 
-/obj/structure/machinery/part_fabricator/dropship/attackby(obj/item/I, mob/user)
+/obj/structure/machinery/fabricator_dropship/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/powerloader_clamp))
 		var/obj/item/powerloader_clamp/powerloader_clamp_used = I
 		recycle_equipment(powerloader_clamp_used, user)
 		return
 	return ..()
 
-/obj/structure/machinery/part_fabricator/dropship/proc/recycle_equipment(obj/item/powerloader_clamp/powerloader_clamp_used, mob/living/user)
+/obj/structure/machinery/fabricator_dropship/proc/recycle_equipment(obj/item/powerloader_clamp/powerloader_clamp_used, mob/living/user)
 	if(!powerloader_clamp_used.loaded)
 		to_chat(user, SPAN_WARNING("There is nothing loaded in \the [powerloader_clamp_used]."))
 		return
@@ -356,61 +329,3 @@
 	add_to_point_store(floor(recycle_points * 0.8))
 	playsound(loc, 'sound/machines/fax.ogg', 40, 1)
 	powerloader_clamp_used.update_icon()
-
-
-// WARNING: IF YOU DECIDE TO READD THIS, GIVE THE HARDPOINTS POINT COSTS
-/// Fabricator for individual tank parts
-/obj/structure/machinery/part_fabricator/tank
-	name = "vehicle part fabricator"
-	desc = "A large automated 3D printer for producing vehicle parts."
-	req_access = list(ACCESS_MARINE_CREWMAN)
-	generate_points = FALSE
-
-	unacidable = TRUE
-	explo_proof = TRUE
-	faction = FACTION_MARINE
-
-/obj/structure/machinery/part_fabricator/tank/upp
-	name = "UPP vehicle part fabricator"
-	faction = FACTION_UPP
-
-/obj/structure/machinery/part_fabricator/tank/get_point_store()
-	return linked_supply_controller.tank_points
-
-/obj/structure/machinery/part_fabricator/tank/add_to_point_store(number = 1)
-	linked_supply_controller.tank_points += number
-
-/obj/structure/machinery/part_fabricator/tank/spend_point_store(number = 1)
-	linked_supply_controller.tank_points -= number
-
-/obj/structure/machinery/part_fabricator/tank/ui_static_data(mob/user)
-	var/list/static_data = list()
-	static_data["Equipment"] = list()
-	for(var/build_type in typesof(/obj/item/hardpoint))
-		var/obj/item/hardpoint/hardpoint_data = build_type
-		var/build_name = initial(hardpoint_data.name)
-		var/build_description = initial(hardpoint_data.desc)
-		var/build_cost = 0
-		if(build_cost)
-			static_data["Equipment"] += list(list(
-				"name" = capitalize_first_letters(build_name),
-				"desc" = build_description,
-				"path" = build_type,
-				"cost" = build_cost
-			))
-
-	static_data["Ammo"] = list()
-	for(var/build_type in typesof(/obj/item/ammo_magazine/hardpoint))
-		var/obj/item/ammo_magazine/hardpoint/ammo_data = build_type
-		var/build_name = initial(ammo_data.name)
-		var/build_description = initial(ammo_data.desc)
-		var/build_cost = 0
-		if(build_cost)
-			static_data["Ammo"] += list(list(
-				"name" = capitalize_first_letters(build_name),
-				"desc" = build_description,
-				"path" = build_type,
-				"cost" = build_cost
-			))
-
-	return static_data

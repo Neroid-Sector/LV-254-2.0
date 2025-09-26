@@ -6802,20 +6802,16 @@
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/gym)
 "axI" = (
+/turf/closed/wall/almayer/reinforced,
+/area/blackgold/upper/rooms/commandbunks/xo)
+"axJ" = (
 /obj/structure/sign/prop1{
 	pixel_y = 32
 	},
 /turf/open/floor/almayer/black/north,
 /area/blackgold/middle/hallways/mid/mid)
-"axJ" = (
-/turf/open/floor/almayer/test_floor6,
-/area/blackgold/middle/rooms/squad/prep)
 "axK" = (
-/obj/structure/machinery/cm_vending/clothing/squad_marines{
-	pixel_x = 32;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo_arrow/east,
+/turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/squad/prep)
 "axL" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
@@ -6826,15 +6822,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/liaison)
 "axM" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_x = 32;
+	density = 0
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/south,
+/turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/middle/rooms/squad/prep)
 "axN" = (
 /obj/structure/surface/table/reinforced/black,
@@ -6860,8 +6852,15 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/liaison)
 "axS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/west,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "axT" = (
 /obj/structure/machinery/light{
@@ -6893,7 +6892,8 @@
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/lower/rooms/liaison)
 "axY" = (
-/turf/open/floor/almayer/flooredge/east,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "axZ" = (
 /turf/open/floor/almayer/plating_stripedcorner/east,
@@ -6916,7 +6916,7 @@
 /turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/lower/rooms/liaison)
 "ayc" = (
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/squad/prep)
 "ayd" = (
 /obj/structure/machinery/light/small/red{
@@ -6946,8 +6946,7 @@
 /turf/open/floor/almayer/test_floor6,
 /area/shuttle/small/e)
 "ayh" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/flooredge/west,
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "ayi" = (
 /obj/structure/machinery/disposal{
@@ -6983,15 +6982,8 @@
 /turf/open/floor/almayer/plating_striped/east,
 /area/blackgold/lower/rooms/liaison)
 "aym" = (
-/obj/structure/machinery/auto_rack/uscm/m39/full{
-	pixel_y = 32;
-	density = 0
-	},
-/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full/locked{
-	density = 0;
-	pixel_x = -32
-	},
-/turf/open/floor/almayer/green/northwest,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/squad/prep)
 "ayn" = (
 /obj/structure/machinery/door/window/tinted{
@@ -7014,16 +7006,19 @@
 /turf/open_space,
 /area/shuttle/small/e)
 "ayq" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/m39/full{
 	pixel_y = 32;
 	density = 0
 	},
-/turf/open/floor/almayer/green/north,
+/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full/locked{
+	density = 0;
+	pixel_x = -32
+	},
+/turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
 "ayr" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/mk221/full{
+/obj/structure/machinery/auto_rack/uscm/m39/full{
 	pixel_y = 32;
 	density = 0
 	},
@@ -7037,7 +7032,8 @@
 /turf/open/floor/almayer/orange/southeast,
 /area/blackgold/upper/rooms/cic)
 "ayt" = (
-/obj/structure/machinery/auto_rack/uscm/buckshot/full{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk221/full{
 	pixel_y = 32;
 	density = 0
 	},
@@ -7052,15 +7048,14 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/liaison)
 "ayv" = (
-/obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
+/obj/structure/machinery/auto_rack/uscm/buckshot/full{
 	pixel_y = 32;
 	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "ayw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/m4ra/full{
+/obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
 	pixel_y = 32;
 	density = 0
 	},
@@ -7072,23 +7067,25 @@
 /area/blackgold/lower/rooms/liaison)
 "ayy" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/mk1/full{
+/obj/structure/machinery/auto_rack/uscm/m4ra/full{
 	pixel_y = 32;
 	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "ayz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	pixel_y = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
+"ayA" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/almayer/flooredge/west,
-/area/blackgold/middle/rooms/squad/prep)
-"ayA" = (
-/obj/structure/pipes/vents/pump{
-	dir = 8
-	},
-/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "ayB" = (
 /obj/structure/platform/metal/ship/east,
@@ -7098,12 +7095,10 @@
 /turf/open/floor/hybrisa/carpet/carpetblackdeco,
 /area/blackgold/lower/rooms/liaison)
 "ayC" = (
-/obj/structure/machinery/light/spot{
+/obj/structure/pipes/vents/pump{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer/green/west,
+/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "ayD" = (
 /obj/structure/closet/secure_closet/cmdcabinet{
@@ -7122,6 +7117,14 @@
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/aft)
 "ayF" = (
+/obj/structure/machinery/light/spot{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/green/west,
+/area/blackgold/middle/rooms/squad/prep)
+"ayG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
 /obj/item/tool/screwdriver{
@@ -7131,27 +7134,17 @@
 /obj/item/prop/helmetgarb/gunoil,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
-"ayG" = (
+"ayH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
 	req_one_access = null
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
-"ayH" = (
+"ayI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stool,
 /turf/open/floor/almayer/green/west,
-/area/blackgold/middle/rooms/squad/prep)
-"ayI" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "SW-out"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "SE-out";
-	pixel_x = 1
-	},
-/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "ayJ" = (
 /obj/effect/decal/warning_stripes{
@@ -7161,8 +7154,6 @@
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "ayK" = (
@@ -7178,19 +7169,31 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/liaison)
 "ayM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "ayN" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/flooredge/west,
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "ayO" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_striped/east,
 /area/blackgold/lower/rooms/liaison)
 "ayP" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/flooredge/west,
+/area/blackgold/middle/rooms/squad/prep)
+"ayQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
 	pixel_x = 1;
@@ -7200,15 +7203,6 @@
 	icon_state = "NW-out";
 	pixel_y = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
-"ayQ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -7338,14 +7332,11 @@
 /area/blackgold/lower/hallways/mid/mid)
 "azp" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 1;
+	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 1
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "azq" = (
@@ -7364,7 +7355,12 @@
 /area/blackgold/lower/rooms/liaison)
 "azs" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "N";
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
 	pixel_y = 1
 	},
 /turf/open/floor/almayer/green/north,
@@ -7384,7 +7380,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/turf/open/floor/almayer/green/northeast,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "azw" = (
 /turf/open/floor/hybrisa/carpet/carpetblackdeco,
@@ -8083,8 +8079,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
 "aBn" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/flooredge/east,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/green/northeast,
 /area/blackgold/middle/rooms/squad/prep)
 "aBo" = (
 /obj/structure/disposalpipe/segment{
@@ -8111,15 +8110,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
 "aBr" = (
-/obj/structure/machinery/light/small/blue{
-	pixel_x = -16;
-	dir = 1
-	},
-/obj/structure/machinery/cm_vending/gear/squad_marines{
-	pixel_x = 32;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo_arrow/east,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/squad/prep)
 "aBs" = (
 /obj/structure/machinery/treadmill{
@@ -8153,9 +8145,15 @@
 /turf/open/floor/almayer/flooredge/south,
 /area/blackgold/upper/rooms/cic)
 "aBy" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/nade_box/mortar,
-/turf/open/floor/almayer/green/west,
+/obj/structure/machinery/light/small/blue{
+	pixel_x = -16;
+	dir = 1
+	},
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_x = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/middle/rooms/squad/prep)
 "aBz" = (
 /obj/effect/decal/warning_stripes{
@@ -8354,9 +8352,9 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
 "aCb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stool,
-/turf/open/floor/almayer,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/nade_box/mortar,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "aCc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8370,12 +8368,9 @@
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/middle/rooms/aientrance)
 "aCe" = (
-/obj/structure/machinery/light/spot{
-	dir = 8
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/misc/flashlight/combat,
-/turf/open/floor/almayer/green/west,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stool,
+/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "aCf" = (
 /turf/closed/wall/almayer,
@@ -8509,15 +8504,12 @@
 /turf/open/floor/almayer/silverfull2,
 /area/blackgold/lower/rooms/gym)
 "aCu" = (
-/obj/structure/machinery/auto_rack/uscm/m4ra/full{
-	pixel_y = -32;
-	density = 0
+/obj/structure/machinery/light/spot{
+	dir = 8
 	},
-/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full/locked{
-	density = 0;
-	pixel_x = -32
-	},
-/turf/open/floor/almayer/green/southwest,
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/misc/flashlight/combat,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "aCv" = (
 /obj/structure/disposalpipe/segment{
@@ -8603,12 +8595,15 @@
 /turf/open/floor/almayer/black/north,
 /area/blackgold/middle/hallways/mid/aft)
 "aCK" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/m4ra/full{
 	pixel_y = -32;
 	density = 0
 	},
-/turf/open/floor/almayer/green/south,
+/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full/locked{
+	density = 0;
+	pixel_x = -32
+	},
+/turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
 "aCL" = (
 /obj/structure/largecrate/random{
@@ -8619,7 +8614,7 @@
 /area/blackgold/underdeck/req)
 "aCM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/slugs/full{
+/obj/structure/machinery/auto_rack/uscm/m4ra/full{
 	pixel_y = -32;
 	density = 0
 	},
@@ -8685,7 +8680,7 @@
 /area/blackgold/middle/rooms/hangar)
 "aDa" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/mk221/full{
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
 	pixel_y = -32;
 	density = 0
 	},
@@ -8718,7 +8713,7 @@
 /area/blackgold/upper/rooms/lifeboat/star)
 "aDf" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/buckshot/full{
+/obj/structure/machinery/auto_rack/uscm/mk221/full{
 	pixel_y = -32;
 	density = 0
 	},
@@ -8809,9 +8804,9 @@
 /area/blackgold/upper/rooms/evacuation)
 "aDv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full{
-	density = 0;
-	pixel_y = -32
+/obj/structure/machinery/auto_rack/uscm/buckshot/full{
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -8821,9 +8816,9 @@
 /area/blackgold/middle/rooms/hangar)
 "aDx" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/m39/full{
-	pixel_y = -32;
-	density = 0
+/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full{
+	density = 0;
+	pixel_y = -32
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -8914,12 +8909,12 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/lower/rooms/engineering/reactor)
 "aDN" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 1
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/obj/structure/machinery/auto_rack/uscm/m39/full{
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "aDO" = (
 /obj/structure/platform/metal/ship/west,
@@ -9016,8 +9011,12 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic/conference)
 "aEe" = (
-/obj/item/stool,
-/turf/open/floor/almayer,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "aEf" = (
 /obj/structure/machinery/cryopod{
@@ -9028,7 +9027,8 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/engineering)
 "aEg" = (
-/turf/open/floor/almayer/flooredge/south,
+/obj/item/stool,
+/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "aEh" = (
 /obj/structure/weightmachine/weightlifter,
@@ -9036,19 +9036,14 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/gym)
 "aEi" = (
+/turf/open/floor/almayer/flooredge/south,
+/area/blackgold/middle/rooms/squad/prep)
+"aEj" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/blackgold/middle/rooms/squad/prep)
-"aEj" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/clothing/platoon_commander{
-	density = 0;
-	pixel_y = 32
-	},
-/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "aEk" = (
 /obj/structure/sign/prop1{
@@ -9066,6 +9061,14 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/gym)
+"aEm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/platoon_commander{
+	density = 0;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
 "aEn" = (
 /obj/structure/machinery/cryopod,
 /turf/open/floor/almayer/cargo,
@@ -12884,7 +12887,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 25
 	},
-/obj/structure/machinery/part_fabricator/tank,
+/obj/structure/machinery/fabricator_vehicle,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
 "aQJ" = (
@@ -13435,7 +13438,7 @@
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/middle/rooms/workshop)
 "aSx" = (
-/obj/structure/machinery/part_fabricator/dropship,
+/obj/structure/machinery/fabricator_dropship,
 /obj/item/reagent_container/food/drinks/cans/souto{
 	pixel_y = 16;
 	pixel_x = -6
@@ -30253,7 +30256,7 @@
 /area/blackgold/middle/rooms/briefing)
 "dQT" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer,
+/turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "dSj" = (
 /obj/structure/surface/table/almayer,
@@ -97177,7 +97180,7 @@ anl
 exf
 anJ
 fJG
-aCu
+aCK
 anl
 exf
 anJ
@@ -97186,7 +97189,7 @@ mem
 anJ
 exf
 anl
-aym
+ayq
 mem
 anJ
 exf
@@ -97261,21 +97264,21 @@ aiA
 dPw
 jro
 anl
-aBr
-axK
+aBy
+axM
 bYt
 vpI
 anl
-aBr
-axK
+aBy
+axM
 bYt
 cSE
-axK
+axM
 gIh
 anl
 qnf
 anQ
-axK
+axM
 gIh
 anl
 ati
@@ -97350,18 +97353,18 @@ jro
 anl
 anl
 anl
-ayP
-aCK
+ayQ
+aCM
 anl
 anl
 anl
-ayP
-ayI
+ayQ
+ayJ
 anl
 anl
 anl
-ayq
-axM
+ayr
+axS
 anl
 anl
 anl
@@ -97438,11 +97441,11 @@ anl
 exf
 anJ
 bYt
-aCM
+aDa
 anl
 exf
 anJ
-ayQ
+azp
 anQ
 anJ
 exf
@@ -97522,21 +97525,21 @@ aiA
 mew
 jro
 anl
-aBr
-axK
+aBy
+axM
 bYt
-aDa
+aDf
 anl
-aBr
-axK
+aBy
+axM
 bYt
 anQ
-axK
+axM
 gIh
 anl
-ayr
+ayt
 anQ
-axK
+axM
 gIh
 anl
 yhi
@@ -97611,18 +97614,18 @@ jro
 anl
 anl
 anl
-ayP
-aDf
+ayQ
+aDv
 anl
 anl
 anl
-ayP
-axM
+ayQ
+axS
 anl
 anl
 anl
-ayt
-axM
+ayv
+axS
 anl
 anl
 anl
@@ -97698,7 +97701,7 @@ jro
 anl
 exf
 anJ
-azs
+azv
 fek
 anl
 exf
@@ -97783,21 +97786,21 @@ aiA
 rfA
 jro
 anl
-aBr
-axK
-azs
-aDv
+aBy
+axM
+azv
+aDx
 anl
-aBr
-axK
+aBy
+axM
 bYt
 anQ
-axK
+axM
 gIh
 anl
-ayv
+ayw
 anQ
-axK
+axM
 gIh
 anl
 vkR
@@ -97872,18 +97875,18 @@ jro
 anl
 anl
 anl
-ayP
+ayQ
 fek
 anl
 anl
 anl
-azp
-ayJ
+azs
+ayM
 anl
 anl
 anl
-ayw
-axM
+ayy
+axS
 anl
 anl
 anl
@@ -97960,16 +97963,16 @@ anl
 exf
 anJ
 bYt
-aDx
+aDN
 anl
 exf
 anJ
-azs
+azv
 rLb
 anJ
 exf
 anl
-ayy
+ayz
 anQ
 anJ
 exf
@@ -98044,21 +98047,21 @@ aiA
 mew
 jro
 anl
-aBr
-axK
+aBy
+axM
 awA
 vfa
 anl
-aBr
-axK
-azv
+aBy
+axM
+aBn
 lIG
-axK
+axM
 gIh
 anl
 anZ
 tLP
-axK
+axM
 gIh
 anl
 ati
@@ -98133,7 +98136,7 @@ jro
 anl
 anl
 anl
-aDN
+aEe
 fsS
 anl
 anl
@@ -98220,18 +98223,18 @@ jro
 anl
 qha
 aoq
-axS
+axY
 aoq
-aCe
-aBy
+aCu
+aCb
 fMr
-axS
-axS
-ayH
+axY
+axY
+ayI
+ayG
 ayF
-ayC
-axS
-axS
+axY
+axY
 aoq
 avI
 anl
@@ -98306,11 +98309,11 @@ mew
 jro
 anl
 awC
-aEe
+aEg
 gLv
 gLv
-aCb
-aCb
+aCe
+aCe
 gLv
 anU
 anU
@@ -98322,7 +98325,7 @@ gLv
 anU
 aPE
 anl
-axI
+axJ
 atb
 cZy
 alm
@@ -98394,18 +98397,18 @@ jro
 anl
 awD
 anU
-aBn
-aBn
-aBn
-aBn
-aBn
-axY
-axY
-axY
-axY
-axY
-axY
-axY
+aBr
+aBr
+aBr
+aBr
+aBr
+ayc
+ayc
+ayc
+ayc
+ayc
+ayc
+ayc
 anU
 avJ
 anl
@@ -98480,8 +98483,8 @@ bHc
 mXO
 anl
 siC
-aEg
-ayc
+aEi
+ayh
 anE
 anE
 anE
@@ -98492,10 +98495,10 @@ anK
 anE
 anE
 anE
-ayc
+ayh
 bdt
 avJ
-axJ
+axK
 ati
 vDH
 asX
@@ -98566,20 +98569,20 @@ aiA
 mew
 npl
 anl
-aEj
-aEg
-ayc
+aEm
+aEi
+ayh
 dbc
 wJN
 gSb
-ayc
-ayM
-ayM
-ayc
-ayG
+ayh
+ayN
+ayN
+ayh
+ayH
 wJN
 bpd
-ayc
+ayh
 bdt
 bdp
 bdl
@@ -98655,7 +98658,7 @@ bqg
 aYf
 bqv
 gag
-ayc
+ayh
 anE
 anE
 anE
@@ -98666,7 +98669,7 @@ anK
 anE
 anE
 anE
-ayc
+ayh
 bdt
 boM
 ann
@@ -98741,22 +98744,22 @@ eTz
 bpT
 anl
 hbc
-aEi
-ayN
-ayz
-ayh
-ayh
-ayh
-ayN
-ayN
-ayh
-ayh
-ayh
-ayz
-ayh
+aEj
+ayP
+ayA
+aym
+aym
+aym
+ayP
+ayP
+aym
+aym
+aym
+ayA
+aym
 rJc
 voi
-axJ
+axK
 yhi
 atb
 asX
@@ -98839,7 +98842,7 @@ gLv
 anU
 anU
 anU
-ayA
+ayC
 anU
 gLv
 rPH
@@ -99018,7 +99021,7 @@ nyF
 ehu
 qxn
 anl
-axI
+axJ
 vDH
 asX
 alm
@@ -119302,15 +119305,15 @@ wpc
 wpc
 aSv
 aYk
-svI
-svI
-svI
-svI
-svI
-svI
-svI
-svI
-svI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
 bqP
 pJM
 oOF
@@ -119389,7 +119392,7 @@ xAf
 wpc
 sfL
 bsa
-svI
+axI
 paK
 cUz
 fxf
@@ -119397,7 +119400,7 @@ qWx
 svI
 xeN
 xnF
-svI
+axI
 bqP
 pJM
 oOF
@@ -119484,7 +119487,7 @@ ben
 vfZ
 aaU
 jNK
-svI
+axI
 bqP
 pJM
 oOF
@@ -119563,7 +119566,7 @@ kjN
 wpc
 qIR
 gkF
-svI
+axI
 pVT
 klU
 brz
@@ -119571,7 +119574,7 @@ beo
 svI
 yfN
 aaU
-svI
+axI
 bqP
 pJM
 oOF
@@ -119658,7 +119661,7 @@ eiB
 svI
 svI
 pqT
-svI
+axI
 bqP
 pJM
 oOF
@@ -119745,7 +119748,7 @@ beo
 svI
 dlA
 bMY
-svI
+axI
 bqP
 aaa
 oOF
@@ -119832,7 +119835,7 @@ bep
 svI
 hJc
 fOb
-svI
+axI
 bqP
 pJM
 oOF
@@ -119919,7 +119922,7 @@ axC
 svI
 ujU
 kIn
-svI
+axI
 bqP
 pJM
 oOF
@@ -119999,14 +120002,14 @@ wpc
 atX
 bsc
 dQT
-svI
-svI
-svI
-svI
-svI
-svI
-svI
-svI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
 bqP
 pJM
 oOF
@@ -121044,7 +121047,7 @@ fdT
 bsf
 bev
 uCQ
-jND
+aYl
 aDs
 aCc
 pua
@@ -121998,7 +122001,7 @@ xiO
 mCc
 fQB
 fVM
-aYl
+jND
 aDs
 ndv
 aSQ
@@ -122085,7 +122088,7 @@ wJY
 wJY
 wJY
 fVM
-jND
+aYl
 abJ
 ndv
 vGW

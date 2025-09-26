@@ -1,108 +1,142 @@
 import type { BooleanLike } from 'common/react';
 import { useBackend } from 'tgui/backend';
-import { Button, Collapsible, Divider, Flex, Section } from 'tgui/components';
+import {
+  Button,
+  Collapsible,
+  Divider,
+  Flex,
+  LabeledList,
+  Section,
+} from 'tgui/components';
 import { Window } from 'tgui/layouts';
 
-interface Data {
-  status?: string;
-  details?: string;
-  busy?: BooleanLike;
+interface CategoryItem {
+  name: string;
+  desc: string;
+  cost: number;
+  path: string;
 }
 
-// Reusable helper for consistent tall buttons
-const TallButton = (props) => (
-  <Button
-    {...props}
-    fluid
-    style={{
-      height: '64px',
-      fontSize: '18px',
-      lineHeight: '64px',
-      textAlign: 'center',
-    }}
-  />
-);
+interface Data {
+  busy?: BooleanLike;
+  selected_vehicle?: string;
+  points?: number;
+  BuildQueue?: { name: string; cost: number; index: number }[];
+  'Primary Weapons'?: CategoryItem[];
+  'Primary Ammunition'?: CategoryItem[];
+  'Secondary Weapons'?: CategoryItem[];
+  'Secondary Ammunition'?: CategoryItem[];
+  'Support Modules'?: CategoryItem[];
+}
 
 export const PartFabricatorVehicle = (props, context) => {
   const { act, data } = useBackend<Data>();
+  const selected = data.selected_vehicle;
+
+  // Helper to style selected vehicle buttons
+  const selectedStyle = (key: string) =>
+    selected === key
+      ? { backgroundColor: '#3a6ea5', color: 'white' }
+      : undefined;
+
+  const categories = [
+    'Primary Weapons',
+    'Primary Ammunition',
+    'Secondary Weapons',
+    'Secondary Ammunition',
+    'Support Modules',
+  ];
 
   return (
     <Window width={900} height={600}>
       <Window.Content>
         <Flex direction="row" grow={1}>
-          {/* Left Column (slimmer) */}
+          {/* Left Column: Vehicle selection + build queue */}
           <Flex.Item basis="34%" grow={0} mr={1}>
             <Section title="Vehicles">
               <Flex direction="column" gap={1}>
-                <TallButton onClick={() => act('vehicle1')}>Jeep</TallButton>
-                <TallButton onClick={() => act('vehicle2')}>ARC</TallButton>
-                <TallButton onClick={() => act('vehicle3')}>APC</TallButton>
-                <TallButton onClick={() => act('vehicle4')}>LAV</TallButton>
-                <TallButton onClick={() => act('vehicle5')}>
-                  Longstreet
-                </TallButton>
+                {['jeep', 'arc', 'apc', 'lav', 'longstreet'].map((veh) => (
+                  <Button
+                    key={veh}
+                    fluid
+                    disabled={data.busy}
+                    onClick={() => act('select_vehicle', { vehicle: veh })}
+                    style={{
+                      height: '64px',
+                      fontSize: '18px',
+                      lineHeight: '64px',
+                      textAlign: 'center',
+                      ...selectedStyle(veh),
+                    }}
+                  >
+                    {veh.toUpperCase()}
+                  </Button>
+                ))}
               </Flex>
+            </Section>
+
+            {/* Scrollable Build Queue */}
+            <Section title="Build Queue" scrollable fill>
+              {data.BuildQueue?.length ? (
+                data.BuildQueue.map((entry) => (
+                  <Flex key={entry.index} justify="space-between" mb={1}>
+                    <span>
+                      {entry.name} ({entry.cost})
+                    </span>
+                    <Button
+                      icon="times"
+                      disabled={data.busy && entry.index === 1}
+                      onClick={() => act('cancel', { index: entry.index })}
+                    />
+                  </Flex>
+                ))
+              ) : (
+                <span>No items queued</span>
+              )}
             </Section>
           </Flex.Item>
 
-          {/* Vertical divider using built-in component */}
+          {/* Vertical divider */}
           <Divider vertical />
 
-          {/* Right Column (wider) */}
+          {/* Right Column: Points + Scrollable Categories */}
           <Flex.Item basis="66%" grow={1} ml={1}>
-            <Flex direction="column" gap={1}>
-              <Collapsible title="Primary Weapons" open>
-                <Flex direction="column" gap={1}>
-                  <div>
-                    <strong>Info:</strong>{' '}
-                    {data.details ?? 'No details available'}
-                  </div>
-                  <TallButton onClick={() => act('expand')}>Expand</TallButton>
-                </Flex>
-              </Collapsible>
+            <Section title="Fabricator Status">
+              <b>Available Points:</b> {data.points ?? 0}
+            </Section>
 
-              <Collapsible title="Primary Ammunition">
-                <Flex direction="column" gap={1}>
-                  <div>
-                    <strong>Status:</strong>{' '}
-                    {data.status ?? 'No status available'}
-                  </div>
-                  <TallButton onClick={() => act('refresh_status')}>
-                    Refresh
-                  </TallButton>
-                </Flex>
-              </Collapsible>
-
-              <Collapsible title="Secondary Weapons">
-                <Flex direction="column" gap={1}>
-                  <div>
-                    <strong>Status:</strong>{' '}
-                    {data.status ?? 'No status available'}
-                  </div>
-                  <TallButton onClick={() => act('refresh_status')}>
-                    Refresh
-                  </TallButton>
-                </Flex>
-              </Collapsible>
-
-              <Collapsible title="Secondary Ammunition">
-                <Flex direction="column" gap={1}>
-                  <div>
-                    <strong>Status:</strong>{' '}
-                    {data.status ?? 'No status available'}
-                  </div>
-                  <TallButton onClick={() => act('refresh_status')}>
-                    Refresh
-                  </TallButton>
-                </Flex>
-              </Collapsible>
-
-              <Collapsible title="Support Modules">
-                <Flex direction="column" gap={1}>
-                  <TallButton onClick={() => act('build')}>Build</TallButton>
-                </Flex>
-              </Collapsible>
-            </Flex>
+            <Section title="Categories" scrollable fill>
+              {categories.map((cat) => (
+                <Collapsible key={cat} title={cat}>
+                  {data[cat]?.length ? (
+                    <LabeledList>
+                      {data[cat].map((item, i) => (
+                        <LabeledList.Item
+                          key={i}
+                          label={item.name}
+                          className="underline"
+                          buttons={
+                            <Button
+                              icon="wrench"
+                              tooltip={item.desc}
+                              tooltipPosition="left"
+                              disabled={data.busy || !selected}
+                              onClick={() =>
+                                act('produce', { category: cat, index: i + 1 })
+                              }
+                            >
+                              {`Fabricate (${item.cost})`}
+                            </Button>
+                          }
+                        />
+                      ))}
+                    </LabeledList>
+                  ) : (
+                    <span>No items available</span>
+                  )}
+                </Collapsible>
+              ))}
+            </Section>
           </Flex.Item>
         </Flex>
       </Window.Content>
