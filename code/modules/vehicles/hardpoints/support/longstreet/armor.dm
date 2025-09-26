@@ -5,6 +5,7 @@
 	desc = "Protects the vehicle from high-penetration weapons"
 
 	slot = HDPT_ARMOR
+	point_cost = 400
 
 	icon_state = "ballistic_armor"
 	disp_icon = "tank"
@@ -23,6 +24,7 @@
 	desc = "Protects vehicles from most types of acid"
 
 	slot = HDPT_ARMOR
+	point_cost = 400
 
 	icon_state = "caustic_armor"
 	disp_icon = "tank"
@@ -40,6 +42,7 @@
 	desc = "Protects the vehicle from large incoming explosive and high-impact projectiles"
 
 	slot = HDPT_ARMOR
+	point_cost = 400
 
 	icon_state = "concussive_armor"
 	disp_icon = "tank"
@@ -62,6 +65,7 @@
 	disp_icon_state = "snowplow"
 
 	activatable = 1
+	point_cost = 400
 
 /obj/item/hardpoint/support/longstreet/snowplow/livingmob_interact(mob/living/M)
 	var/turf/targ = get_step(M, owner.dir)

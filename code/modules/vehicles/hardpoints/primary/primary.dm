@@ -8,12 +8,6 @@
 
 	activatable = TRUE
 
-/obj/item/hardpoint/primary/apc
-/obj/item/hardpoint/primary/arc
-/obj/item/hardpoint/primary/jeep
-/obj/item/hardpoint/primary/lav
-/obj/item/hardpoint/primary/longstreet
-
 // Technical MG
 /obj/item/hardpoint/primary/m56
 	name = "\improper Stolen M56 Crows-nest"

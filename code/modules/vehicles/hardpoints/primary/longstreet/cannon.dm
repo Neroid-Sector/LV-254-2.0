@@ -9,6 +9,7 @@
 
 	health = 500
 	firing_arc = 60
+	point_cost = 600
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary/longstreet/cannon
 	max_clips = 3

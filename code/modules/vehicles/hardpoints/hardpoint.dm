@@ -125,7 +125,6 @@
 	var/extra_delay = 0
 	/// If the gun is currently burst firing.
 	var/burst_firing = FALSE
-
 	/// Currently selected target to fire at. Set with set_target().
 	var/atom/target
 	/// The type of projectile to fire

@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/bullet/machinegun
 	max_rounds = 600
 	gun_type = /obj/item/hardpoint/secondary/apc/frontalcannon
+	point_cost = 150
 
 /obj/item/ammo_magazine/hardpoint/secondary/apc/frontalcannon/update_icon()
 	icon_state = "frontal_[current_rounds <= 0 ? "0" : "1"]"

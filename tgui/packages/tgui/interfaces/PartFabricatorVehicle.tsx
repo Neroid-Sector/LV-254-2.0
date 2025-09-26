@@ -36,7 +36,7 @@ export const PartFabricatorVehicle = (props, context) => {
   // Helper to style selected vehicle buttons
   const selectedStyle = (key: string) =>
     selected === key
-      ? { backgroundColor: '#3a6ea5', color: 'white' }
+      ? { backgroundColor: '#28a745', color: 'white' }
       : undefined;
 
   const categories = [
@@ -48,7 +48,7 @@ export const PartFabricatorVehicle = (props, context) => {
   ];
 
   return (
-    <Window width={900} height={600}>
+    <Window width={950} height={825}>
       <Window.Content>
         <Flex direction="row" grow={1}>
           {/* Left Column: Vehicle selection + build queue */}

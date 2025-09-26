@@ -14,6 +14,7 @@
 
 	health = 500
 	firing_arc = 360
+	point_cost = 300
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/secondary/apc/flare_launcher
 	max_clips = 2

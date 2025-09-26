@@ -18,6 +18,7 @@
 	allowed_seat = VEHICLE_GUNNER
 
 	slot = HDPT_TURRET
+	point_cost = 400
 
 	// basically just a ring and motor
 	health = 200

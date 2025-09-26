@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/rocket/ltb
 	max_rounds = 4
 	gun_type = /obj/item/hardpoint/primary/longstreet/cannon
+	point_cost = 300
 
 /obj/item/ammo_magazine/hardpoint/primary/longstreet/cannon/update_icon()
 	icon_state = "ltbcannon_[current_rounds]"

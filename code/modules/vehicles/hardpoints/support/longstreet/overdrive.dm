@@ -7,6 +7,7 @@
 	disp_icon_state = "odrive_enhancer"
 
 	health = 250
+	point_cost = 400
 
 	// 20% movespeed increase. Remember that movespeed is given in delay
 	buff_multipliers = list(

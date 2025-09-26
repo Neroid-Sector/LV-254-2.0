@@ -14,6 +14,7 @@
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary/jeep/missile
 	max_clips = 1
+	point_cost = 800
 
 	allowed_ammo_types = list(
 		/obj/item/ammo_magazine/hardpoint/primary/jeep/missile,

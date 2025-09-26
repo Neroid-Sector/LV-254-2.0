@@ -9,6 +9,7 @@
 
 	health = 350
 	firing_arc = 120
+	point_cost = 300
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/secondary/longstreet/m56_cupola
 	max_clips = 1

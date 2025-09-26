@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/bullet/machinegun
 	max_rounds = 600
 	gun_type = /obj/item/hardpoint/secondary/longstreet/m56cupola
+	point_cost = 200
 
 /obj/item/ammo_magazine/hardpoint/secondary/longstreet/m56_cupola/update_icon()
 	icon_state = "cupola_[current_rounds <= 0 ? "0" : "1"]"

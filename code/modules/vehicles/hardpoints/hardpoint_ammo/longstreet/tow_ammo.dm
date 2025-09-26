@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/rocket/ap/tank_towlauncher
 	max_rounds = 1
 	gun_type = /obj/item/hardpoint/primary/jeep/towlauncher || /obj/item/hardpoint/secondary/longstreet/towlauncher
+	point_cost = 600
 
 /obj/item/ammo_magazine/hardpoint/secondary/longstreet/missile/update_icon()
 	if(current_rounds > 0)

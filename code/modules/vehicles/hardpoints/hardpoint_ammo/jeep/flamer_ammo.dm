@@ -7,4 +7,4 @@
 	w_class = SIZE_LARGE
 	max_rounds = 150
 	gun_type = /obj/item/hardpoint/primary/jeep/small_flamer || /obj/item/hardpoint/secondary/longstreet/small_flamer
-
+	point_cost = 300

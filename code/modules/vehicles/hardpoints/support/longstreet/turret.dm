@@ -30,6 +30,7 @@
 	allowed_seat = VEHICLE_DRIVER
 
 	slot = HDPT_TURRET
+	point_cost = 600
 
 	// big beefy chonk of metal
 	health = 450

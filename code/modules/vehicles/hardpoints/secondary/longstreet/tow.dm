@@ -9,6 +9,7 @@
 
 	health = 500
 	firing_arc = 60
+	point_cost = 800
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/secondary/longstreet/missile
 

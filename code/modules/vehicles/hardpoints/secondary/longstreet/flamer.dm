@@ -9,6 +9,7 @@
 
 	health = 300
 	firing_arc = 120
+	point_cost = 400
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/secondary/longstreet/flamer
 	max_clips = 1

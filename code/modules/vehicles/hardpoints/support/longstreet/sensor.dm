@@ -7,6 +7,7 @@
 	disp_icon_state = "warray"
 
 	health = 250
+	point_cost = 400
 
 	buff_multipliers = list(
 		"cooldown" = 0.67,
