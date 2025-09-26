@@ -7,6 +7,14 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/grenade_launchers.dmi'
 	icon_state = "sharprifle"
 	item_state = "sharp"
+
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/grenade_launchers.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/grenade_launchers.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/grenade_launchers_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/grenade_launchers_righthand.dmi'
+	)
+
 	fire_sound = 'sound/weapons/gun_sharp.ogg'
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
@@ -23,7 +31,7 @@
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 
 	var/explosion_delay_sharp = TRUE
 
