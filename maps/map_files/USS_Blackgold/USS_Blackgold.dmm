@@ -5148,10 +5148,7 @@
 	pixel_x = -7;
 	pixel_y = -1
 	},
-/obj/item/reagent_container/food/drinks/coffeecup/uscm{
-	pixel_x = 9;
-	pixel_y = -2
-	},
+/obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig)
 "arD" = (
@@ -5216,7 +5213,6 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/hallways/star/fore)
 "arO" = (
-/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/red/northwest,
 /area/blackgold/upper/rooms/brig)
 "arP" = (
@@ -5692,6 +5688,14 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/blackgold/upper/hallways/mid/aft)
+"auf" = (
+/obj/structure/machinery/cm_vending/clothing/military_police{
+	density = 0;
+	pixel_x = -32
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/brig)
 "aug" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -5811,6 +5815,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/northwest,
 /area/blackgold/upper/hallways/mid/aft)
+"auL" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Bathroom";
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/brig)
 "auM" = (
 /obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer/red/south,
@@ -6020,6 +6032,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/fore)
+"avg" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/brig)
 "avh" = (
 /obj/structure/machinery/light/spot{
 	dir = 8
@@ -6785,6 +6803,16 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/liaison)
+"axv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/upper/rooms/brig)
 "axw" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/liaison)
@@ -6800,6 +6828,15 @@
 "axz" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/gym)
+"axA" = (
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/item/tool/soap/deluxe,
+/obj/structure/curtain/open/shower,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/brig)
 "axB" = (
 /turf/open/floor/almayer/green/south,
 /area/blackgold/lower/rooms/gym)
@@ -6812,6 +6849,13 @@
 "axD" = (
 /turf/open/floor/almayer/green/southeast,
 /area/blackgold/lower/rooms/gym)
+"axE" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/rooms/brig/lobby)
 "axF" = (
 /obj/structure/machinery/treadmill/console{
 	dir = 8
@@ -32330,7 +32374,13 @@
 /area/blackgold/underdeck)
 "gnb" = (
 /obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp/on,
+/obj/item/device/flashlight/lamp/on{
+	pixel_x = 6
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = -8;
+	pixel_y = 2
+	},
 /turf/open/floor/almayer/red/southeast,
 /area/blackgold/upper/rooms/brig)
 "gnr" = (
@@ -32892,9 +32942,20 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/captain_mess)
 "gRZ" = (
-/obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/almayer/red/north,
-/area/blackgold/upper/rooms/brig/lobby)
+/obj/structure/sink{
+	pixel_y = 17
+	},
+/obj/structure/mirror{
+	pixel_y = 29;
+	pixel_x = -1;
+	layer = 2.99
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/upper/rooms/brig)
 "gSb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -38286,9 +38347,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/lower/rooms/req)
-"mwI" = (
-/turf/open/floor/almayer/red/north,
-/area/blackgold/upper/rooms/brig/lobby)
 "mxp" = (
 /obj/structure/largecrate/random/secure,
 /obj/effect/decal/cleanable/dirt,
@@ -44487,10 +44545,6 @@
 /turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/req)
-"sFw" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/red/south,
-/area/blackgold/upper/rooms/brig/lobby)
 "sFB" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -120567,9 +120621,9 @@ aYs
 mQa
 wYc
 bdH
-wYc
-wYc
-wYc
+mkv
+mkv
+mkv
 mkv
 arD
 arD
@@ -120654,14 +120708,14 @@ imy
 bfu
 nBp
 wdI
-wYc
-gxt
-lAp
+mkv
+axA
+avg
 gQi
 hKC
+auf
 hKC
-hKC
-hKC
+auf
 ybs
 wuj
 mkv
@@ -120741,10 +120795,10 @@ haH
 bgD
 mTg
 mZb
-wYc
+mkv
 gRZ
-kls
-gQi
+axv
+auL
 arO
 pdW
 pdW
@@ -120828,9 +120882,9 @@ vWF
 bfv
 odb
 nJu
-wYc
-mwI
-kls
+mkv
+gQi
+gQi
 gQi
 avB
 arH
@@ -120916,8 +120970,8 @@ hiJ
 odb
 kls
 sqr
-mwI
-sFw
+gxt
+lAp
 gQi
 tFK
 arI
@@ -121090,7 +121144,7 @@ dZz
 wYc
 wYc
 wYc
-bsf
+axE
 rma
 uCQ
 oUK
