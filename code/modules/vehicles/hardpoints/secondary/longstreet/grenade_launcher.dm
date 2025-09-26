@@ -9,6 +9,7 @@
 
 	health = 500
 	firing_arc = 120
+	point_cost = 500
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/secondary/longstreet/grenade
 	max_clips = 3

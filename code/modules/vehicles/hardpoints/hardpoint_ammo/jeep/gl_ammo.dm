@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/grenade_container/grenade
 	max_rounds = 20
 	gun_type = /obj/item/hardpoint/primary/jeep/grenade_launcher || /obj/item/hardpoint/secondary/longstreet/grenade_launcher
+	point_cost = 400
 
 /obj/item/ammo_magazine/hardpoint/primary/jeep/grenade/update_icon()
 	if(current_rounds >= max_rounds)
@@ -23,6 +24,7 @@
 	icon_state = "rlauncher_2"
 	default_ammo = /datum/ammo/grenade_container/teargas
 	gun_type = /obj/item/hardpoint/primary/jeep/grenade_launcher/riot
+	point_cost = 300
 
 /obj/item/ammo_magazine/hardpoint/grenade/teargas/update_icon()
 	if(current_rounds >= max_rounds)

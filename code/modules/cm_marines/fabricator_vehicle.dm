@@ -41,14 +41,19 @@
 			linked_supply_controller = GLOB.supply_controller
 	start_processing()
 
+/obj/structure/machinery/fabricator_vehicle
+    var/point_store = 8000   // starting budget
+
 /obj/structure/machinery/fabricator_vehicle/proc/get_point_store()
-	return 0
+    return point_store
 
 /obj/structure/machinery/fabricator_vehicle/proc/add_to_point_store(number = 1)
-	return
+    point_store += number
+    return point_store
 
 /obj/structure/machinery/fabricator_vehicle/proc/spend_point_store(number = 1)
-	return
+    point_store = max(0, point_store - number)
+    return point_store
 
 /obj/structure/machinery/fabricator_vehicle/ui_data(mob/user)
 	var/index = 1
@@ -110,6 +115,9 @@
 			busy = FALSE
 			return
 
+		// Deduct points here
+		spend_point_store(entry.cost)
+
 		visible_message(SPAN_NOTICE("[src] starts printing something."))
 		addtimer(CALLBACK(src, PROC_REF(produce_part), entry), 3 SECONDS)
 
@@ -157,7 +165,12 @@
 
 		var/choice = category_list[index]
 		var/typepath = choice["path"]
-		var/cost = choice["cost"]
+
+		// Create a dummy reference to check restrictions
+		var/obj/item/hardpoint/produce = typepath
+
+		// Always pull the true cost from the type definition
+		var/cost = initial(produce.point_cost)
 
 		build_part(typepath, cost, user)
 		return TRUE
@@ -175,11 +188,7 @@
 
 			var/datum/build_queue_entry/entry = build_queue[index]
 			build_queue.Remove(entry)
-			return TRUE
-
-	else
-		log_admin("Bad topic: [user] may be trying to HREF exploit [src]")
-		return
+			return
 
 /obj/structure/machinery/fabricator_vehicle/attack_hand(mob/user)
 	if(!allowed(user))
@@ -208,84 +217,94 @@
 	var/list/static_data = list()
 
 	// Primary Weapons
-	var/list/primary_weapons = list()
+	static_data["Primary Weapons"] = list()
+	var/index = 1
 	for(var/build_type in typesof(/obj/item/hardpoint/primary))
-		var/obj/item/hardpoint/primary/primary_data = build_type
-		var/build_name = initial(primary_data.name)
-		var/build_description = initial(primary_data.desc)
-		var/build_cost = 0
-		if(build_name)
-			primary_weapons += list(list(
+		var/obj/item/hardpoint/primary/data = build_type
+		var/build_name = initial(data.name)
+		var/build_desc = initial(data.desc)
+		var/build_cost = initial(data.point_cost)
+		if(build_cost)
+			static_data["Primary Weapons"] += list(list(
 				"name" = capitalize_first_letters(build_name),
-				"desc" = build_description,
+				"desc" = build_desc,
+				"cost" = build_cost,
 				"path" = build_type,
-				"cost" = build_cost
+				"index" = index
 			))
-	static_data["Primary Weapons"] = list() + primary_weapons
+		index++
 
 	// Primary Ammunition
-	var/list/primary_ammo = list()
+	static_data["Primary Ammunition"] = list()
+	index = 1
 	for(var/build_type in typesof(/obj/item/ammo_magazine/hardpoint/primary))
-		var/obj/item/ammo_magazine/hardpoint/primary/primary_ammo_data = build_type
-		var/build_name = initial(primary_ammo_data.name)
-		var/build_description = initial(primary_ammo_data.desc)
-		var/build_cost = 0
-		if(build_name)
-			primary_ammo += list(list(
+		var/obj/item/ammo_magazine/hardpoint/primary/data = build_type
+		var/build_name = initial(data.name)
+		var/build_desc = initial(data.desc)
+		var/build_cost = initial(data.point_cost)
+		if(build_cost)
+			static_data["Primary Ammunition"] += list(list(
 				"name" = capitalize_first_letters(build_name),
-				"desc" = build_description,
+				"desc" = build_desc,
+				"cost" = build_cost,
 				"path" = build_type,
-				"cost" = build_cost
+				"index" = index
 			))
-	static_data["Primary Ammunition"] = list() + primary_ammo
+		index++
 
 	// Secondary Weapons
-	var/list/secondary_weapons = list()
+	static_data["Secondary Weapons"] = list()
+	index = 1
 	for(var/build_type in typesof(/obj/item/hardpoint/secondary))
-		var/obj/item/hardpoint/secondary/secondary_data = build_type
-		var/build_name = initial(secondary_data.name)
-		var/build_description = initial(secondary_data.desc)
-		var/build_cost = 0
-		if(build_name)
-			secondary_weapons += list(list(
+		var/obj/item/hardpoint/primary/data = build_type
+		var/build_name = initial(data.name)
+		var/build_desc = initial(data.desc)
+		var/build_cost = initial(data.point_cost)
+		if(build_cost)
+			static_data["Secondary Weapons"] += list(list(
 				"name" = capitalize_first_letters(build_name),
-				"desc" = build_description,
+				"desc" = build_desc,
+				"cost" = build_cost,
 				"path" = build_type,
-				"cost" = build_cost
+				"index" = index
 			))
-	static_data["Secondary Weapons"] = list() + secondary_weapons
+		index++
 
 	// Secondary Ammunition
-	var/list/secondary_ammo = list()
+	static_data["Secondary Ammunition"] = list()
+	index = 1
 	for(var/build_type in typesof(/obj/item/ammo_magazine/hardpoint/secondary))
-		var/obj/item/ammo_magazine/hardpoint/secondary/secondary_ammo_data = build_type
-		var/build_name = initial(secondary_ammo_data.name)
-		var/build_description = initial(secondary_ammo_data.desc)
-		var/build_cost = 0
-		if(build_name)
-			secondary_ammo += list(list(
+		var/obj/item/ammo_magazine/hardpoint/secondary/data = build_type
+		var/build_name = initial(data.name)
+		var/build_desc = initial(data.desc)
+		var/build_cost = initial(data.point_cost)
+		if(build_cost)
+			static_data["Secondary Ammunition"] += list(list(
 				"name" = capitalize_first_letters(build_name),
-				"desc" = build_description,
+				"desc" = build_desc,
+				"cost" = build_cost,
 				"path" = build_type,
-				"cost" = build_cost
+				"index" = index
 			))
-	static_data["Secondary Ammunition"] = list() + secondary_ammo
+		index++
 
 	// Support Modules
-	var/list/support_modules = list()
+	static_data["Support Modules"] = list()
+	index = 1
 	for(var/build_type in typesof(/obj/item/hardpoint/support))
-		var/obj/item/hardpoint/support/support_data = build_type
-		var/build_name = initial(support_data.name)
-		var/build_description = initial(support_data.desc)
-		var/build_cost = 0
-		if(build_name)
-			support_modules += list(list(
+		var/obj/item/hardpoint/support/data = build_type
+		var/build_name = initial(data.name)
+		var/build_desc = initial(data.desc)
+		var/build_cost = initial(data.point_cost)
+		if(build_cost)
+			static_data["Support Modules"] += list(list(
 				"name" = capitalize_first_letters(build_name),
-				"desc" = build_description,
+				"desc" = build_desc,
+				"cost" = build_cost,
 				"path" = build_type,
-				"cost" = build_cost
+				"index" = index
 			))
-	static_data["Support Modules"] = list() + support_modules
+		index++
 
 	return static_data
 

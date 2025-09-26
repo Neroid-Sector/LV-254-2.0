@@ -8,6 +8,7 @@
 
 	max_rounds = 300
 	gun_type = /obj/item/hardpoint/primary/jeep/m56
+	point_cost = 200
 
 /obj/item/ammo_magazine/hardpoint/primary/jeep/m56_cupola/update_icon()
 	icon_state = "m56d_drum_large_[current_rounds <= 0 ? "0" : "1"]"
@@ -22,6 +23,7 @@
 
 	max_rounds = 200
 	gun_type = /obj/item/hardpoint/primary/jeep/m56/hmg
+	point_cost = 300
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/jeep/hmg/update_icon()
 	icon_state = "m2c_large_[current_rounds <= 0 ? "0" : "1"]"

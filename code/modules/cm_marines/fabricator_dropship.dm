@@ -40,14 +40,19 @@
 			linked_supply_controller = GLOB.supply_controller
 	start_processing()
 
+/obj/structure/machinery/fabricator_dropship
+    var/point_store = 8000   // starting budget
+
 /obj/structure/machinery/fabricator_dropship/proc/get_point_store()
-	return 0
+    return point_store
 
 /obj/structure/machinery/fabricator_dropship/proc/add_to_point_store(number = 1)
-	return
+    point_store += number
+    return point_store
 
 /obj/structure/machinery/fabricator_dropship/proc/spend_point_store(number = 1)
-	return
+    point_store = max(0, point_store - number)
+    return point_store
 
 /obj/structure/machinery/fabricator_dropship/ui_data(mob/user)
 	var/index = 1

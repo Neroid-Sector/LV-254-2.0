@@ -12,6 +12,7 @@
 
 	health = 350
 	firing_arc = 120
+	point_cost = 200
 
 	px_offsets = list(
 		"1" = list(0, 0),
@@ -52,6 +53,7 @@
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary/jeep/m56_cupola/hmg
 	max_clips = 1
+	point_cost = 300
 
 	allowed_ammo_types = list(
 /obj/item/ammo_magazine/hardpoint/primary/jeep/m56_cupola/hmg

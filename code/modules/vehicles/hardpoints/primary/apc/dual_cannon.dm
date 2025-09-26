@@ -18,6 +18,7 @@
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary/apc/dualcannon
 	max_clips = 2
+	point_cost = 500
 
 	allowed_ammo_types = list(
 		/obj/item/ammo_magazine/hardpoint/primary/apc/dualcannon

@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/flare
 	max_rounds = 6
 	gun_type = /obj/item/hardpoint/support/apc/flare_launcher
+	point_cost = 150
 
 /obj/item/ammo_magazine/hardpoint/secondary/apc/flare_launcher/update_icon()
 	icon_state = "flauncher_[current_rounds <= 0 ? "0" : "1"]"

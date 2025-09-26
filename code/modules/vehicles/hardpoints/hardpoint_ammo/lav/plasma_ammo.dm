@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/bullet/lav_plasma
 	max_rounds = 10
 	gun_type = /obj/item/hardpoint/primary/lav/plasma
+	point_cost = 600
 
 /obj/item/ammo_magazine/hardpoint/primary/lav/plasma/update_icon()
 	if(current_rounds > 8)

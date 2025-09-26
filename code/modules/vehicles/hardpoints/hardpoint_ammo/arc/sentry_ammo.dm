@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/bullet/re700
 	max_rounds = 500
 	gun_type = /obj/item/hardpoint/primary/arc/sentry
+	point_cost = 400
 
 /obj/item/ammo_magazine/hardpoint/primary/arc/sentry/update_icon()
 	if(current_rounds > 0)
@@ -19,3 +20,4 @@
 	name = "\improper RE700 Rotary Cannon HE Magazine"
 	desc = "A magazine for RE700 Rotary Cannon filled with 20mm HE rounds, ouch. Supports IFF."
 	default_ammo = /datum/ammo/bullet/re700/he
+	point_cost = 800

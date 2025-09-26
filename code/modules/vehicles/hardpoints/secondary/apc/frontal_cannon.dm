@@ -12,6 +12,7 @@
 
 	health = 350
 	firing_arc = 120
+	point_cost = 300
 
 	origins = list(0, -1)
 

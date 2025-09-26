@@ -10,6 +10,7 @@
 	damage_multiplier = 0.1
 
 	health = 500
+	point_cost = 400
 
 	/// How long the antenna deploy/retract animation is, keep accurate to the sprite in the dmi
 	var/deploy_animation_time = 1.2 SECONDS

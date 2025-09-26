@@ -21,6 +21,7 @@
 	// big beefy chonk of metal
 	health = 450
 	damage_multiplier = 0.1
+	point_cost = 500
 
 	accepted_hardpoints = list(
 		// primaries

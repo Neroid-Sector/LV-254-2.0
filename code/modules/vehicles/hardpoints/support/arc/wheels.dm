@@ -12,6 +12,7 @@
 	disp_icon_state = "arc_wheels"
 
 	health = 500
+	point_cost = 250
 
 	move_delay = VEHICLE_SPEED_SUPERFAST
 	move_max_momentum = 2

@@ -14,6 +14,7 @@
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary/jeep/grenade
 	max_clips = 3
+	point_cost = 500
 
 	allowed_ammo_types = list(
 		/obj/item/ammo_magazine/hardpoint/primary/jeep/grenade,
@@ -61,6 +62,7 @@
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary/jeep/grenade/teargas
 	max_clips = 1
+	point_cost = 400
 
 	allowed_ammo_types = list(
 		/obj/item/ammo_magazine/hardpoint/primary/jeep/grenade/teargas

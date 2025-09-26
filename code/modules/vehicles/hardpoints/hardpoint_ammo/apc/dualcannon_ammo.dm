@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/bullet/tank/dualcannon
 	max_rounds = 60
 	gun_type = /obj/item/hardpoint/primary/apc/dualcannon
+	point_cost = 200
 
 /obj/item/ammo_magazine/hardpoint/primary/apc/dualcannon/update_icon()
 	if(current_rounds > 0)

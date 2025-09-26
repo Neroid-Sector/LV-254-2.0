@@ -10,6 +10,7 @@
 	acid_resistant = TRUE
 
 	health = 500
+	point_cost = 300
 
 	//with this settings, takes 4 tiles to reach top speed
 	move_delay = 3.5

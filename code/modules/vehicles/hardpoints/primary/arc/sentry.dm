@@ -38,6 +38,7 @@
 	)
 	burst_delay = 2
 	burst_amount = 10
+	point_cost = 500
 
 	/// Potential targets the turret can shoot at
 	var/list/targets = list()

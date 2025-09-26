@@ -8,6 +8,7 @@
 	default_ammo = /datum/ammo/bullet/lav
 	max_rounds = 50
 	gun_type = /obj/item/hardpoint/primary/lav/chaingun
+	point_cost = 400
 
 /obj/item/ammo_magazine/hardpoint/primary/lav/chaingun/update_icon()
 	if(current_rounds > 40)
@@ -26,6 +27,7 @@
 	desc = "A box magazine for 40/70 Boyars Chaingun filled with armor-piercing 40mm rounds. 'Slightly' contuses targets upon hit. Non-IFF, watch your fire."
 	icon_state = "chaingun_ap_4"
 	default_ammo = /datum/ammo/bullet/lav/ap
+	point_cost = 500
 
 /obj/item/ammo_magazine/hardpoint/primary/lav/chaingun/ap/update_icon()
 	if(current_rounds > 40)
@@ -44,6 +46,7 @@
 	desc = "A box magazine for 40/70 Boyars Chaingun filled with explosive 40mm rounds. 'Slightly' contuses targets upon hit. Non-IFF, watch your fire."
 	icon_state = "chaingun_he_4"
 	default_ammo = /datum/ammo/bullet/lav/he
+	point_cost = 800
 
 /obj/item/ammo_magazine/hardpoint/chaingun/he/update_icon()
 	if(current_rounds > 40)
