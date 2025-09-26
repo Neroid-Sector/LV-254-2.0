@@ -3,7 +3,7 @@
 // Wall
 /obj/structure/interior_wall/tank
 	name = "\improper tank interior wall"
-	icon = 'icons/obj/vehicles/interiors/tank.dmi'
+	icon = 'icons/obj/vehicles/interiors/longstreet.dmi'
 	icon_state = "wall"
 
 // Props
@@ -16,12 +16,12 @@
 	unslashable = TRUE
 	explo_proof = TRUE
 
-	icon = 'icons/obj/vehicles/interiors/tank.dmi'
+	icon = 'icons/obj/vehicles/interiors/longstreet.dmi'
 	icon_state = "prop0"
 
 // Hatch
 /obj/structure/interior_exit/vehicle/tank
 	name = "tank hatch"
-	icon = 'icons/obj/vehicles/interiors/tank.dmi'
+	icon = 'icons/obj/vehicles/interiors/longstreet.dmi'
 	icon_state = "hatch"
 

@@ -25,7 +25,7 @@
 	var/point_cost = 0
 
 	//------ICON VARS----------
-	icon = 'icons/obj/vehicles/hardpoints/tank.dmi'
+	icon = 'icons/obj/vehicles/hardpoints/longstreet.dmi'
 	icon_state = "tires" //Placeholder
 
 	//Strings, used to get the overlay for the armored vic
