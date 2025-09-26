@@ -886,7 +886,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	flags_item = MOB_LOCK_ON_EQUIP
 	var/camo_active = FALSE
 	var/full_camo_alpha = FULL_PVE_CAMO_ALPHA
-	var/incremental_shooting_camo_penalty = 30
+	var/incremental_shooting_camo_penalty = 75
 	var/current_camo = FULL_PVE_CAMO_ALPHA
 	var/visible_camo_alpha = VISIBLE_PVE_CAMO_ALPHA
 	var/camouflage_break = 8 SECONDS
