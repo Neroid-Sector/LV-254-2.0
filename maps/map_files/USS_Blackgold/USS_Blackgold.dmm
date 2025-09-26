@@ -49,7 +49,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/chapel)
 "aal" = (
-/turf/closed/wall/almayer/aicore/hull,
+/turf/closed/wall/almayer/outer,
 /area/blackgold/middle/rooms/aientrance)
 "aam" = (
 /obj/structure/disposalpipe/segment{
@@ -70,12 +70,15 @@
 /turf/open/floor/hybrisa/carpet/carpetreddeco,
 /area/blackgold/middle/rooms/chapel)
 "aap" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
+	dir = 4;
+	unacidable = 1;
+	vehicle_resistant = 1;
+	name = "Core Emergency Lockdown Shutter"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Lobby";
 	name = "\improper AI Core Shutters";
-	dir = 4
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -125,8 +128,12 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/orbital)
 "aax" = (
-/obj/structure/window/framed/almayer/aicore/hull,
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/structure/window/framed/almayer/aicore/hull/black/hijack_bustable,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
+	unacidable = 1;
+	vehicle_resistant = 1;
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/aientrance)
 "aay" = (
@@ -179,7 +186,7 @@
 	pixel_y = -10;
 	req_one_access = list(90,91,92)
 	},
-/turf/open/floor/almayer/black/west,
+/turf/open/floor/almayer/blackcorner/north,
 /area/blackgold/middle/hallways/mid/aft)
 "aaH" = (
 /obj/structure/machinery/light{
@@ -4609,6 +4616,12 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/lifeboat/star)
+"apJ" = (
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
+	dir = 5
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/blackgold/lower/rooms/aicore)
 "apK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lifeboat_hatch_placeholder{
@@ -4721,6 +4734,12 @@
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/lower/hallways/port/fore)
+"aqd" = (
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
+	dir = 9
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/blackgold/lower/rooms/aicore)
 "aqe" = (
 /turf/closed/wall/almayer,
 /area/blackgold/lower/rooms/cryo)
@@ -4753,6 +4772,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
+"aqk" = (
+/obj/structure/prop/invuln/lifeboat_hatch_placeholder{
+	layer = 2
+	},
+/turf/open/floor/almayer/no_build/plating,
+/area/blackgold/lower/rooms/aicore)
 "aql" = (
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/range)
@@ -4762,6 +4787,12 @@
 "aqn" = (
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/lower/rooms/range)
+"aqo" = (
+/obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal{
+	layer = 2
+	},
+/turf/open/floor/almayer/no_build/plating,
+/area/blackgold/lower/rooms/aicore)
 "aqp" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4879,6 +4910,9 @@
 /obj/structure/bed/chair,
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/conference)
+"aqQ" = (
+/turf/open/floor/almayer/silver/west,
+/area/blackgold/middle/hallways/mid/aft)
 "aqR" = (
 /obj/effect/vehicle_spawner/tank/fixed,
 /turf/open/floor/plating/plating_catwalk,
@@ -4906,6 +4940,9 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/black/north,
 /area/blackgold/lower/hallways/mid/mid)
+"aqY" = (
+/turf/closed/wall/almayer/reinforced/temphull,
+/area/blackgold/middle/rooms/aientrance)
 "aqZ" = (
 /obj/structure/machinery/vending/cigarette/koorlander/free{
 	pixel_x = 4
@@ -4989,6 +5026,9 @@
 /obj/structure/pallet/standard/food/groceries,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/req)
+"arj" = (
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/hallways/mid/aft)
 "ark" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -5006,6 +5046,12 @@
 	},
 /turf/open/floor/almayer/silver/northwest,
 /area/blackgold/lower/rooms/conference)
+"arm" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/hallways/mid/aft)
 "arn" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -5059,6 +5105,10 @@
 "aru" = (
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/lower/rooms/engineering/reactor)
+"arv" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/hallways/mid/aft)
 "arw" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8;
@@ -5069,6 +5119,45 @@
 "arx" = (
 /turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/lower/rooms/conference)
+"ary" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/hallways/mid/aft)
+"arz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/south,
+/area/blackgold/middle/hallways/mid/aft)
+"arA" = (
+/obj/structure/machinery/light/spot{
+	pixel_x = 16
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/brig/processing)
+"arB" = (
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/rooms/brig)
+"arC" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin/uscm{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/tool/pen{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 9;
+	pixel_y = -2
+	},
+/turf/open/floor/almayer/red/east,
+/area/blackgold/upper/rooms/brig)
+"arD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/almayer/reinforced,
+/area/blackgold/upper/rooms/brig)
 "arE" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -5093,6 +5182,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
+"arH" = (
+/turf/open/floor/almayer,
+/area/blackgold/upper/rooms/brig)
+"arI" = (
+/turf/open/floor/almayer/red/east,
+/area/blackgold/upper/rooms/brig)
 "arJ" = (
 /obj/structure/bed/chair/bolted,
 /obj/structure/sign/banners/united_americas_flag{
@@ -5105,6 +5200,13 @@
 /obj/structure/bed/chair/bolted,
 /turf/open/floor/almayer/plating_striped/north,
 /area/blackgold/lower/rooms/conference)
+"arL" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/reinforced{
+	dir = 1;
+	name = "\improper Brig Breakroom"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/upper/rooms/brig)
 "arM" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/plate,
@@ -5113,6 +5215,10 @@
 /obj/structure/machinery/cm_vending/sorted/marine_food,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/hallways/star/fore)
+"arO" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/almayer/red/northwest,
+/area/blackgold/upper/rooms/brig)
 "arP" = (
 /turf/open/floor/almayer/black/southwest,
 /area/blackgold/lower/hallways/star/fore)
@@ -5240,7 +5346,7 @@
 /turf/open/floor/almayer/black/south,
 /area/blackgold/middle/hallways/mid/aft)
 "asv" = (
-/turf/open/floor/almayer/black/southeast,
+/turf/open/floor/almayer/orange/southeast,
 /area/blackgold/middle/hallways/mid/aft)
 "asw" = (
 /turf/open/floor/almayer/black/west,
@@ -5250,7 +5356,7 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/hallways/mid/aft)
 "asy" = (
-/turf/open/floor/almayer/black/east,
+/turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/hallways/mid/aft)
 "asz" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -5365,7 +5471,7 @@
 /turf/open/floor/almayer/blackcorner/west,
 /area/blackgold/middle/hallways/mid/aft)
 "ata" = (
-/turf/open/floor/almayer/blackcorner/south,
+/turf/open/floor/almayer/orangecorner/south,
 /area/blackgold/middle/hallways/mid/aft)
 "atb" = (
 /obj/structure/disposalpipe/segment{
@@ -5505,7 +5611,7 @@
 /area/blackgold/upper/hallways/mid/fore)
 "atI" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/blue/southeast,
+/turf/open/floor/almayer/red/southeast,
 /area/blackgold/upper/hallways/mid/fore)
 "atJ" = (
 /turf/open/floor/almayer/blue/west,
@@ -5516,7 +5622,7 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/hallways/mid/fore)
 "atL" = (
-/turf/open/floor/almayer/blue/east,
+/turf/open/floor/almayer/red/east,
 /area/blackgold/upper/hallways/mid/fore)
 "atM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -5586,9 +5692,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/blackgold/upper/hallways/mid/aft)
-"auf" = (
-/turf/open/floor/almayer/black/east,
-/area/blackgold/upper/hallways/mid/aft)
 "aug" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
@@ -5629,7 +5732,7 @@
 /area/blackgold/upper/hallways/mid/aft)
 "auq" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/blackcorner/south,
+/turf/open/floor/almayer/silvercorner/south,
 /area/blackgold/upper/hallways/mid/aft)
 "aur" = (
 /obj/structure/window/framed/almayer,
@@ -5707,10 +5810,6 @@
 "auK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/northwest,
-/area/blackgold/upper/hallways/mid/aft)
-"auL" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/black/north,
 /area/blackgold/upper/hallways/mid/aft)
 "auM" = (
 /obj/structure/machinery/power/apc/almayer/south,
@@ -5921,12 +6020,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/fore)
-"avg" = (
-/obj/structure/machinery/light/spot{
-	dir = 4
-	},
-/turf/open/floor/almayer/black/east,
-/area/blackgold/upper/hallways/mid/aft)
 "avh" = (
 /obj/structure/machinery/light/spot{
 	dir = 8
@@ -6032,6 +6125,23 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/mid)
+"avB" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_29";
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/red/north,
+/area/blackgold/upper/rooms/brig)
+"avC" = (
+/obj/structure/machinery/vending/security,
+/turf/open/floor/almayer/cargo,
+/area/blackgold/upper/rooms/brig/processing)
+"avD" = (
+/turf/open/floor/almayer/silver/southeast,
+/area/blackgold/upper/hallways/mid/aft)
+"avE" = (
+/turf/open/floor/almayer/plating_striped/east,
+/area/blackgold/upper/rooms/brig/armory)
 "avF" = (
 /obj/structure/window/framed/almayer/white,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
@@ -6553,6 +6663,18 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/liaison)
+"awY" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/blackgold/upper/hallways/mid/fore)
+"awZ" = (
+/turf/open/floor/almayer/red/northeast,
+/area/blackgold/upper/hallways/mid/fore)
+"axa" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/hallways/mid/fore)
 "axb" = (
 /obj/structure/bed/chair/bolted{
 	dir = 1
@@ -6560,12 +6682,25 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/southwest,
 /area/blackgold/lower/rooms/liaison)
+"axc" = (
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/hallways/mid/fore)
+"axd" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/hallways/mid/fore)
 "axe" = (
 /obj/structure/bed/chair/bolted{
 	dir = 1
 	},
 /turf/open/floor/prison/darkyellow2,
 /area/blackgold/lower/rooms/liaison)
+"axf" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/almayer/red/south,
+/area/blackgold/upper/hallways/mid/fore)
 "axg" = (
 /obj/structure/sign/poster/wylogo{
 	pixel_x = -26;
@@ -6574,6 +6709,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/west,
 /area/blackgold/lower/rooms/liaison)
+"axh" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/silver/south,
+/area/blackgold/upper/hallways/mid/aft)
 "axi" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/southwest,
@@ -6601,6 +6740,13 @@
 	},
 /turf/open/floor/almayer/silverfull2,
 /area/blackgold/lower/rooms/gym)
+"axn" = (
+/turf/open/floor/almayer/silver/south,
+/area/blackgold/upper/hallways/mid/aft)
+"axo" = (
+/obj/structure/machinery/light/spot,
+/turf/open/floor/almayer/silver/south,
+/area/blackgold/upper/hallways/mid/aft)
 "axp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/north,
@@ -6619,6 +6765,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/liaison)
+"axs" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/almayer/silver/south,
+/area/blackgold/upper/hallways/mid/aft)
+"axt" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/almayer/silver/south,
+/area/blackgold/upper/hallways/mid/aft)
 "axu" = (
 /obj/structure/window/framed/almayer/aicore/black{
 	name = "reinforced window"
@@ -7878,7 +8034,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/blue/south,
+/turf/open/floor/almayer,
 /area/blackgold/upper/hallways/mid/fore)
 "aBK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11501,7 +11657,7 @@
 /obj/structure/sign/nosmoking_1{
 	pixel_y = -25
 	},
-/turf/open/floor/almayer/black/south,
+/turf/open/floor/almayer/silver/south,
 /area/blackgold/upper/hallways/mid/aft)
 "aNm" = (
 /turf/closed/wall/almayer,
@@ -13572,10 +13728,6 @@
 "aUk" = (
 /turf/open/floor/almayer/blue/southeast,
 /area/blackgold/upper/rooms/tanker)
-"aUl" = (
-/obj/structure/machinery/light,
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/upper/rooms/brig/processing)
 "aUm" = (
 /obj/structure/stairs/multiz/down{
 	dir = 8
@@ -13752,11 +13904,6 @@
 	name = "\improper Brig Cells";
 	id_tag = "BG Brig Cell Entrance"
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "\improper Brig Lockdown Shutter";
-	id = "BG Brig Lockdown";
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/brig/cells)
@@ -13781,11 +13928,6 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "aUN" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	name = "\improper Brig Lockdown Shutter";
-	id = "BG Brig Lockdown";
-	dir = 4
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -13895,16 +14037,17 @@
 /turf/open/floor/almayer/orange/south,
 /area/blackgold/lower/rooms/engineering)
 "aUY" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/mainframe,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Mainframe";
 	name = "\improper AI Core Shutters"
 	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "aUZ" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/public{
 	alert_id = "AresStairs";
 	alert_message = "Caution: Movement detected in ARES Core.";
@@ -13914,6 +14057,9 @@
 	id = "BG AI Stairs";
 	name = "\improper AI Core Shutters"
 	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/aicore)
 "aVa" = (
@@ -13921,25 +14067,31 @@
 	id = "BG AI Office";
 	name = "\improper AI Core Shutters"
 	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/terminals,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "aVb" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/terminals,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Office";
 	name = "\improper AI Core Shutters"
 	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/aicore)
 "aVc" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/terminals,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Office";
 	name = "\improper AI Core Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
@@ -13994,38 +14146,46 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/rooms/range)
 "aVi" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/core,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Outer";
 	name = "\improper AI Core Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/aicore)
 "aVj" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/core,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Outer";
 	name = "\improper AI Core Shutters"
 	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "aVk" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/terminals,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Vault";
 	name = "\improper AI Core Shutters"
 	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "aVl" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/terminals,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Vault";
 	name = "\improper AI Core Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/aicore)
@@ -14097,30 +14257,36 @@
 /turf/open/floor/almayer/aicore/no_build/ai_silver/west,
 /area/blackgold/lower/rooms/aicore)
 "aVt" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /obj/effect/step_trigger/ares_alert/core,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Inner";
 	name = "\improper AI Core Shutters"
 	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "aVu" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/core,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Inner";
 	name = "\improper AI Core Shutters"
 	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/aicore)
 "aVv" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/core,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Inner";
 	name = "\improper AI Core Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
@@ -14292,7 +14458,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/almayer/black/east,
+/turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/hallways/mid/aft)
 "aVR" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
@@ -15283,10 +15449,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/rooms/cic)
 "aYq" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
 /obj/structure/machinery/door_control{
 	id = "BG Brig Armory";
 	name = "\improper Maintenance Shutters Control";
@@ -15295,7 +15457,7 @@
 	pixel_x = -23;
 	req_access = list(4)
 	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/upper/rooms/brig/armory)
 "aYr" = (
 /obj/structure/machinery/status_display{
@@ -17013,7 +17175,7 @@
 	dir = 1;
 	name = "ship-grade camera"
 	},
-/turf/open/floor/almayer/black/south,
+/turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/hallways/mid/aft)
 "bcG" = (
 /obj/structure/disposalpipe/segment{
@@ -18105,7 +18267,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/almayer/blue/east,
+/turf/open/floor/almayer/red/east,
 /area/blackgold/upper/hallways/mid/fore)
 "bfu" = (
 /obj/structure/disposalpipe/segment{
@@ -18407,7 +18569,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/turf/open/floor/almayer/blue/southeast,
+/turf/open/floor/almayer/red/southeast,
 /area/blackgold/upper/hallways/mid/fore)
 "bge" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
@@ -18447,7 +18609,7 @@
 "bgh" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/black/south,
+/turf/open/floor/almayer/silver/south,
 /area/blackgold/upper/hallways/mid/aft)
 "bgi" = (
 /obj/structure/machinery/camera/autoname/almayer{
@@ -18533,7 +18695,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/almayer/blue/east,
+/turf/open/floor/almayer,
 /area/blackgold/upper/hallways/mid/fore)
 "bgs" = (
 /obj/structure/disposalpipe/segment{
@@ -20595,10 +20757,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/aft)
-"bmJ" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/black/south,
-/area/blackgold/middle/hallways/mid/aft)
 "bmK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -21025,7 +21183,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/almayer/black/south,
+/turf/open/floor/almayer/orange/south,
 /area/blackgold/middle/hallways/mid/aft)
 "bof" = (
 /obj/structure/machinery/light/small/red{
@@ -21215,7 +21373,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/almayer/black/east,
+/turf/open/floor/almayer,
 /area/blackgold/middle/hallways/mid/aft)
 "boE" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -21820,10 +21978,6 @@
 	},
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
-"bqt" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/black/north,
-/area/blackgold/middle/hallways/mid/aft)
 "bqu" = (
 /obj/structure/machinery/light/small/red{
 	dir = 8
@@ -22438,10 +22592,6 @@
 	},
 /turf/open/floor/almayer/black/south,
 /area/blackgold/upper/hallways/mid/mid)
-"bso" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/black/south,
-/area/blackgold/upper/hallways/mid/aft)
 "bsp" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -22828,7 +22978,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/turf/open/floor/almayer/blue/south,
+/turf/open/floor/almayer/red/south,
 /area/blackgold/upper/hallways/mid/fore)
 "btD" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -22854,7 +23004,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/turf/open/floor/almayer/black/south,
+/turf/open/floor/almayer/silver/south,
 /area/blackgold/upper/hallways/mid/aft)
 "btI" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
@@ -23054,7 +23204,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/almayer/black/east,
+/turf/open/floor/almayer,
 /area/blackgold/upper/hallways/mid/aft)
 "bui" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
@@ -29421,10 +29571,14 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
 "dmc" = (
-/obj/structure/flora/pottedplant/random{
-	pixel_y = 8
+/obj/structure/machinery/light{
+	dir = 4
 	},
-/turf/open/floor/almayer/red/northeast,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/emails{
+	dir = 8
+	},
+/turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig)
 "dmj" = (
 /turf/open/floor/almayer/aicore/no_build/ai_arrow,
@@ -29664,11 +29818,8 @@
 /obj/structure/reagent_dispensers/forensictank{
 	pixel_y = 41
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E"
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/upper/rooms/brig/armory)
 "dDM" = (
 /obj/structure/sink{
@@ -30086,10 +30237,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/lower/rooms/engineering/storage)
 "edS" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E"
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/plating_stripedcorner/east,
 /area/blackgold/upper/rooms/brig/armory)
 "eeb" = (
 /obj/structure/machinery/door/poddoor/railing,
@@ -30469,12 +30617,15 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/underdeck/req)
 "eyd" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
+	dir = 4;
+	unacidable = 1;
+	vehicle_resistant = 1;
+	name = "Core Emergency Lockdown Shutter"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Exit";
 	name = "\improper AI Core Shutters";
-	dir = 4
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -30533,14 +30684,6 @@
 "eDG" = (
 /turf/open/floor/almayer/silver/east,
 /area/blackgold/middle/hallways/mid/aft)
-"eDH" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
-/turf/open/floor/almayer/aicore/no_build,
-/area/blackgold/lower/rooms/aicore)
 "eDY" = (
 /turf/open/floor/almayer/uscm/directional/southeast,
 /area/blackgold/upper/rooms/cic)
@@ -31070,9 +31213,6 @@
 /area/blackgold/upper/rooms/companycommand/charlie)
 "fdC" = (
 /obj/structure/platform_decoration/metal/almayer/north,
-/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
-	dir = 5
-	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
 "fdT" = (
@@ -31696,11 +31836,13 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/squad/prep)
 "fMH" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/mainframe,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Mainframe";
 	name = "\improper AI Core Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/lower/rooms/aicore)
@@ -31890,6 +32032,7 @@
 "fWQ" = (
 /obj/structure/window/framed/almayer/aicore/hull,
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter";
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -32186,10 +32329,9 @@
 /turf/open/floor/plating,
 /area/blackgold/underdeck)
 "gnb" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/almayer/red/east,
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp/on,
+/turf/open/floor/almayer/red/southeast,
 /area/blackgold/upper/rooms/brig)
 "gnr" = (
 /obj/structure/platform/metal/ship/east,
@@ -32874,24 +33016,19 @@
 /area/blackgold/middle/rooms/squad/prep)
 "hcB" = (
 /obj/structure/platform_decoration/metal/almayer/north,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
+	dir = 4;
+	unacidable = 1;
+	vehicle_resistant = 1;
+	name = "Core Emergency Lockdown Shutter"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Exit";
 	name = "\improper AI Core Shutters";
 	dir = 4
 	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
-	dir = 4
-	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/aientrance)
-"hcV" = (
-/obj/structure/machinery/vending/security{
-	pixel_y = 16;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo,
-/area/blackgold/upper/rooms/brig/processing)
 "hdh" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	dir = 8
@@ -33438,15 +33575,7 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "hEA" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/nade_box/tear_gas{
-	pixel_y = 9
-	},
-/obj/item/storage/box/nade_box/tear_gas{
-	pixel_x = -2;
-	pixel_y = -2;
-	layer = 3
-	},
+/obj/structure/machinery/vending/security/riot,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/armory)
 "hEK" = (
@@ -33577,8 +33706,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/hallways/mid/fore)
 "hKC" = (
-/obj/structure/surface/rack,
-/turf/open/floor/almayer/red/northwest,
+/obj/structure/machinery/cm_vending/clothing/military_police{
+	density = 0;
+	pixel_x = -32
+	},
+/turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig)
 "hLd" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -34030,7 +34162,7 @@
 /area/blackgold/upper/rooms/brig/lobby)
 "imF" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/black/east,
+/turf/open/floor/almayer/orange/east,
 /area/blackgold/middle/hallways/mid/aft)
 "inb" = (
 /obj/structure/barricade/handrail{
@@ -34485,12 +34617,15 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/req)
 "iHj" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
+	dir = 4;
+	unacidable = 1;
+	vehicle_resistant = 1;
+	name = "Core Emergency Lockdown Shutter"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Exit";
 	name = "\improper AI Core Shutters";
-	dir = 4
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor6,
@@ -35062,7 +35197,7 @@
 /obj/structure/machinery/light/spot,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/blue/south,
+/turf/open/floor/almayer/red/south,
 /area/blackgold/upper/hallways/mid/fore)
 "jjQ" = (
 /obj/structure/machinery/light/red{
@@ -35830,8 +35965,10 @@
 	id = "BG AI Mainframe";
 	name = "\improper AI Core Shutters"
 	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/effect/step_trigger/ares_alert/mainframe,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "kdE" = (
@@ -36675,12 +36812,15 @@
 /area/blackgold/lower/rooms/brig/cells)
 "kYw" = (
 /obj/structure/platform/metal/almayer,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
+	dir = 4;
+	unacidable = 1;
+	vehicle_resistant = 1;
+	name = "Core Emergency Lockdown Shutter"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Lobby";
 	name = "\improper AI Core Shutters";
-	dir = 4
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor6,
@@ -36715,14 +36855,6 @@
 	},
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/lower/rooms/aicore)
-"laQ" = (
-/obj/structure/machinery/cm_vending/clothing/military_police{
-	density = 0;
-	pixel_y = 16
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo,
-/area/blackgold/upper/rooms/brig/processing)
 "lcA" = (
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/maint/port/mid)
@@ -37536,11 +37668,8 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/maint/port/fore)
 "lTM" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E"
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/plating_striped/east,
 /area/blackgold/upper/rooms/brig/armory)
 "lTO" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -37815,16 +37944,6 @@
 /obj/structure/closet/secure_closet/guncabinet/riot_control,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/armory)
-"meJ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/obj/structure/prop/invuln/lifeboat_hatch_placeholder/terminal{
-	layer = 2
-	},
-/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
-/area/blackgold/lower/rooms/aicore)
 "mfb" = (
 /obj/structure/machinery/photocopier/wyphotocopier,
 /obj/item/device/toner,
@@ -39084,8 +39203,10 @@
 /turf/open_space,
 /area/blackgold/middle/maint/star/fore)
 "nqR" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer/red/south,
+/obj/structure/closet/secure_closet/personal/cabinet{
+	req_access = null
+	},
+/turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/brig)
 "nrm" = (
 /obj/structure/flora/pottedplant/random,
@@ -39722,12 +39843,15 @@
 /area/blackgold/middle/maint/port/aft)
 "nSG" = (
 /obj/structure/platform_decoration/metal/almayer/east,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
+	dir = 4;
+	unacidable = 1;
+	vehicle_resistant = 1;
+	name = "Core Emergency Lockdown Shutter"
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Lobby";
 	name = "\improper AI Core Shutters";
-	dir = 4
-	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
 	dir = 4
 	},
 /turf/open/floor/almayer/test_floor6,
@@ -40066,12 +40190,8 @@
 /turf/open/floor/hybrisa/carpet/carpetreddeco,
 /area/blackgold/upper/rooms/cic/conference)
 "omY" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/upper/rooms/brig/armory)
 "ona" = (
 /obj/structure/bookcase{
@@ -40197,16 +40317,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/northeast,
 /area/blackgold/middle/rooms/hangar)
-"osj" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/obj/structure/prop/invuln/lifeboat_hatch_placeholder{
-	layer = 2
-	},
-/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
-/area/blackgold/lower/rooms/aicore)
 "oty" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/blue{
@@ -40939,8 +41049,7 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/fore)
 "pdW" = (
-/obj/structure/machinery/power/apc/almayer/north,
-/turf/open/floor/almayer/red/north,
+/turf/open/floor/almayer/red/west,
 /area/blackgold/upper/rooms/brig)
 "pdY" = (
 /obj/structure/disposalpipe/segment{
@@ -42629,10 +42738,6 @@
 "qPE" = (
 /turf/open/floor/almayer/blue/northeast,
 /area/blackgold/middle/rooms/workshop)
-"qPM" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/black/east,
-/area/blackgold/upper/hallways/mid/aft)
 "qPT" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
@@ -42898,7 +43003,9 @@
 /area/blackgold/upper/rooms/computer)
 "rdz" = (
 /obj/structure/window/reinforced/ultra,
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
 "rdA" = (
@@ -43361,7 +43468,7 @@
 /area/blackgold/middle/rooms/squad/prep)
 "rBc" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/blue/east,
+/turf/open/floor/almayer/red/east,
 /area/blackgold/upper/hallways/mid/fore)
 "rBq" = (
 /obj/structure/surface/table/reinforced/black,
@@ -43653,7 +43760,6 @@
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "rPV" = (
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/structure/platform_decoration/metal/almayer,
 /obj/effect/step_trigger/ares_alert/public{
 	alert_id = "AresStairs";
@@ -43663,6 +43769,9 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "BG AI Stairs";
 	name = "\improper AI Core Shutters"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
 	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
@@ -43987,15 +44096,7 @@
 /turf/closed/wall/almayer,
 /area/blackgold/upper/rooms/evacuation/aft)
 "skx" = (
-/obj/structure/machinery/vending/security/riot{
-	pixel_y = 16;
-	density = 0
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/upper/rooms/brig/armory)
 "slG" = (
 /obj/structure/platform/metal/ship/corner/east,
@@ -44062,13 +44163,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/underdeck/vehicle)
-"spd" = (
-/obj/structure/machinery/door/airlock/almayer/security{
-	dir = 1;
-	name = "\improper Brig Breakroom"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/upper/rooms/brig)
 "spl" = (
 /obj/structure/stairs{
 	dir = 8
@@ -45248,12 +45342,8 @@
 /turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/briefing)
 "tFK" = (
-/obj/structure/machinery/cm_vending/clothing/military_police{
-	density = 0;
-	pixel_y = 16
-	},
-/turf/open/floor/almayer/cargo,
-/area/blackgold/upper/rooms/brig/processing)
+/turf/open/floor/almayer/red/northeast,
+/area/blackgold/upper/rooms/brig)
 "tGd" = (
 /turf/closed/wall/almayer,
 /area/blackgold/upper/rooms/evacuation)
@@ -45462,7 +45552,9 @@
 	dir = 2;
 	req_access = list(91)
 	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
 "tPg" = (
@@ -45567,6 +45659,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
 "tZr" = (
@@ -45709,7 +45802,7 @@
 "uhf" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/blue/south,
+/turf/open/floor/almayer,
 /area/blackgold/upper/hallways/mid/fore)
 "uhW" = (
 /obj/structure/stairs/multiz/down{
@@ -45990,7 +46083,10 @@
 /turf/open/floor/almayer/redfull,
 /area/blackgold/middle/rooms/squad)
 "uzB" = (
-/turf/open/floor/almayer/red/north,
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/almayer,
 /area/blackgold/upper/rooms/brig)
 "uzC" = (
 /obj/structure/stairs{
@@ -46277,33 +46373,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating_striped/east,
 /area/blackgold/lower/rooms/range)
-"uOk" = (
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/bed{
-	can_buckle = 0
-	},
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.1
-	},
-/turf/open/floor/almayer/red/southeast,
-/area/blackgold/upper/rooms/brig)
 "uOp" = (
 /obj/effect/landmark/start/cargo,
 /obj/structure/platform/metal/ship/corner,
@@ -46713,6 +46782,14 @@
 "vmf" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/power/apc/almayer/west,
+/obj/item/storage/box/nade_box/tear_gas{
+	pixel_x = -2;
+	pixel_y = -2;
+	layer = 3
+	},
+/obj/item/storage/box/nade_box/tear_gas{
+	pixel_y = 9
+	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/brig/armory)
 "vmk" = (
@@ -47804,9 +47881,21 @@
 /turf/open/floor/almayer/flooredge/southeast,
 /area/blackgold/upper/rooms/brig/processing)
 "wuj" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/flashlight/lamp/on,
-/turf/open/floor/almayer/red/southwest,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.1
+	},
+/turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/brig)
 "wuE" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
@@ -48197,13 +48286,6 @@
 	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/middle/rooms/aientrance)
-"wRu" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/emails{
-	dir = 4
-	},
-/turf/open/floor/almayer/red/west,
-/area/blackgold/upper/rooms/brig)
 "wRK" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -48382,8 +48464,7 @@
 /turf/open/floor/plating,
 /area/blackgold/underdeck)
 "wZV" = (
-/obj/structure/bed/chair/office/dark,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/red/southwest,
 /area/blackgold/upper/rooms/brig)
 "xaA" = (
 /obj/structure/prop/server_equipment,
@@ -48425,13 +48506,6 @@
 /obj/structure/platform/metal/ship/corner,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/brig/stairs)
-"xbI" = (
-/obj/structure/machinery/vending/security{
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo,
-/area/blackgold/upper/rooms/brig/processing)
 "xbU" = (
 /obj/structure/orbital_cannon{
 	density = 0
@@ -48733,13 +48807,9 @@
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/cells)
 "xsa" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/upper/rooms/brig/armory)
 "xsd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -48824,9 +48894,11 @@
 	id = "BG AI Outer";
 	name = "\improper AI Core Shutters"
 	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /obj/effect/step_trigger/ares_alert/core,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/aicore)
 "xwG" = (
@@ -48894,7 +48966,9 @@
 	id = "BG AI Stairs";
 	name = "\improper AI Core Shutters"
 	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
+	name = "Core Emergency Lockdown Shutter"
+	},
 /obj/structure/platform_decoration/metal/almayer/north,
 /obj/effect/step_trigger/ares_alert/public{
 	alert_id = "AresStairs";
@@ -48945,9 +49019,6 @@
 /area/blackgold/powered)
 "xAX" = (
 /obj/structure/platform_decoration/metal/almayer,
-/obj/structure/pipes/standard/simple/hidden/supply/no_boom{
-	dir = 9
-	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
 "xAY" = (
@@ -49340,20 +49411,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/req)
 "ybs" = (
-/obj/structure/surface/table/almayer,
-/obj/item/paper_bin/uscm{
-	pixel_x = -6;
-	pixel_y = 3
-	},
-/obj/item/tool/pen{
-	pixel_x = -7;
-	pixel_y = -1
-	},
-/obj/item/reagent_container/food/drinks/coffeecup/uscm{
-	pixel_x = 9;
-	pixel_y = -2
-	},
-/turf/open/floor/almayer/red/south,
+/turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/brig)
 "ybt" = (
 /obj/structure/machinery/power/apc/almayer/hardened/east,
@@ -83863,7 +83921,7 @@ hHB
 ohX
 bCf
 jpJ
-sTH
+aqk
 cFF
 cgO
 mZL
@@ -83950,8 +84008,8 @@ csi
 xKl
 bCf
 jpJ
-xdI
-eDH
+aqo
+cFF
 fdC
 hVi
 pre
@@ -84037,9 +84095,9 @@ eZh
 bCf
 aaj
 oui
-sTH
+xdI
 tYz
-hdo
+apJ
 iuK
 pre
 aGc
@@ -84562,7 +84620,7 @@ iuK
 nik
 ujS
 hdo
-osj
+iuK
 pre
 pre
 pre
@@ -84649,7 +84707,7 @@ iuK
 sTH
 upO
 hdo
-meJ
+iuK
 pre
 pre
 kdE
@@ -84733,9 +84791,9 @@ eZh
 bCf
 aaj
 oui
-sTH
+inF
 tYz
-hdo
+aqd
 iuK
 pre
 arn
@@ -84820,8 +84878,8 @@ hrx
 hGj
 bCf
 jpJ
-inF
-eDH
+aqk
+cFF
 xAX
 qnP
 pre
@@ -84907,7 +84965,7 @@ hHB
 ohX
 bCf
 jpJ
-sTH
+aqo
 cFF
 cgO
 shc
@@ -105546,7 +105604,7 @@ aal
 aVX
 aaA
 ijg
-aal
+aqY
 kCt
 frf
 wVr
@@ -105807,7 +105865,7 @@ aal
 mni
 htq
 oVt
-aal
+aqY
 wRn
 frf
 wVr
@@ -105982,10 +106040,10 @@ asw
 asw
 asw
 aaG
-asw
-asw
-asw
-asw
+aqQ
+aqQ
+aqQ
+asZ
 ast
 ahz
 qXM
@@ -106041,7 +106099,7 @@ aiQ
 eTz
 bqx
 aiS
-bqt
+asK
 asx
 asz
 asz
@@ -106073,7 +106131,7 @@ asz
 asz
 asz
 asx
-bmJ
+asK
 ahp
 vNA
 rAC
@@ -106232,7 +106290,7 @@ aaW
 aaS
 aWl
 bda
-asu
+arj
 aGb
 eFm
 aGb
@@ -106319,7 +106377,7 @@ azB
 aaW
 ato
 bda
-asu
+arj
 aGb
 aIE
 aHQ
@@ -106406,7 +106464,7 @@ aba
 aaS
 ato
 bou
-asu
+arj
 aIT
 aIF
 aIq
@@ -106493,7 +106551,7 @@ boO
 bdn
 bdk
 bde
-asu
+arj
 aIT
 aIF
 aIr
@@ -106580,7 +106638,7 @@ vNW
 tUQ
 ato
 puQ
-asu
+arj
 aIT
 aIF
 aIs
@@ -106667,7 +106725,7 @@ abb
 aaS
 acg
 uye
-asu
+arj
 aGb
 abT
 jfB
@@ -106754,7 +106812,7 @@ abc
 aaW
 ato
 uye
-asu
+arj
 aGb
 aHt
 ceB
@@ -106841,7 +106899,7 @@ abd
 aIZ
 ato
 uye
-asu
+arj
 aIT
 aIG
 aGo
@@ -106928,7 +106986,7 @@ ihE
 aIZ
 nfZ
 bou
-asu
+arj
 aIT
 aHj
 aGo
@@ -107015,7 +107073,7 @@ aaY
 aIZ
 nfZ
 bov
-asu
+arj
 aIT
 aIH
 aHA
@@ -107102,7 +107160,7 @@ aJc
 avF
 nfZ
 bou
-asu
+arj
 aGb
 aII
 aHW
@@ -107189,7 +107247,7 @@ bdr
 avF
 nfZ
 bda
-asu
+arj
 aGb
 aIJ
 aHX
@@ -107276,7 +107334,7 @@ abe
 aIZ
 nfZ
 bda
-asu
+arj
 aGb
 aIK
 aHY
@@ -107363,7 +107421,7 @@ avK
 aIZ
 atp
 bda
-asu
+arj
 aGb
 aGb
 aGb
@@ -107450,7 +107508,7 @@ aIZ
 aIZ
 acg
 bdc
-bob
+arm
 aGb
 uSy
 ceB
@@ -107537,7 +107595,7 @@ oBU
 aaS
 ato
 bdd
-boc
+arv
 aHv
 aHk
 aGo
@@ -107798,7 +107856,7 @@ abg
 aaS
 nfZ
 uye
-asu
+arj
 aGb
 aGb
 aGb
@@ -107885,7 +107943,7 @@ aWr
 aWr
 ato
 bda
-asu
+arj
 aIU
 aIL
 aIt
@@ -107972,7 +108030,7 @@ abh
 aWr
 ato
 puQ
-asu
+arj
 aIV
 aIM
 aIu
@@ -108059,7 +108117,7 @@ abi
 aWr
 ato
 fgu
-asu
+arj
 aIW
 aGF
 aIv
@@ -108146,7 +108204,7 @@ lpC
 aaX
 acg
 puQ
-asu
+arj
 aIV
 aIN
 aIw
@@ -108233,7 +108291,7 @@ acx
 aaX
 ato
 bda
-asu
+arj
 aIW
 aIN
 aIx
@@ -108320,7 +108378,7 @@ lpC
 aaX
 ato
 bdg
-asu
+arj
 aIV
 aGF
 aIy
@@ -108407,7 +108465,7 @@ abj
 aaX
 ato
 boy
-asu
+arj
 aIY
 aGF
 aIz
@@ -108494,7 +108552,7 @@ abk
 aaX
 ato
 boA
-bob
+arm
 aGG
 aGG
 aGG
@@ -108581,7 +108639,7 @@ aJa
 aJa
 aWl
 boB
-boc
+arv
 aGG
 aIO
 aHc
@@ -108668,7 +108726,7 @@ abl
 aJb
 ato
 boC
-bod
+ary
 aGG
 aIP
 aHd
@@ -108755,7 +108813,7 @@ aJb
 aJb
 ato
 rnc
-hHb
+arz
 aGG
 aIQ
 aHe
@@ -108842,7 +108900,7 @@ avL
 aJb
 acg
 rnc
-hHb
+arz
 aGG
 aHq
 aHf
@@ -108929,7 +108987,7 @@ avN
 aJb
 ato
 boy
-asu
+arj
 aGG
 aIR
 aHd
@@ -120329,7 +120387,7 @@ bum
 btS
 aBJ
 jFd
-bfO
+awY
 bff
 bfm
 bfs
@@ -120414,9 +120472,9 @@ jUN
 psU
 qIR
 btM
-vaq
+axa
 aum
-atX
+awZ
 atL
 rBc
 bft
@@ -120501,7 +120559,7 @@ tGd
 tGd
 aBD
 btN
-vaq
+axa
 wYc
 bdH
 wYc
@@ -120512,9 +120570,9 @@ bdH
 wYc
 wYc
 wYc
-aQf
-ory
-ory
+mkv
+arD
+arD
 mkv
 mkv
 mkv
@@ -120588,7 +120646,7 @@ vjX
 aSZ
 qIR
 btM
-vaq
+axa
 wYc
 kKN
 imy
@@ -120599,12 +120657,12 @@ wdI
 wYc
 gxt
 lAp
-uCQ
-oUK
-aXm
 gQi
 hKC
-wRu
+hKC
+hKC
+hKC
+ybs
 wuj
 mkv
 bqP
@@ -120686,10 +120744,10 @@ mZb
 wYc
 gRZ
 kls
-uCQ
-jND
-laz
 gQi
+arO
+pdW
+pdW
 pdW
 wZV
 nqR
@@ -120762,7 +120820,7 @@ buv
 adc
 bum
 btT
-atH
+axc
 wYc
 rkp
 odb
@@ -120773,12 +120831,12 @@ nJu
 wYc
 mwI
 kls
-uCQ
-wsm
-aDs
-spd
-uzB
+gQi
+avB
+arH
 aBV
+uzB
+arB
 ybs
 mkv
 bqP
@@ -120849,7 +120907,7 @@ lpH
 adb
 atW
 bgl
-atH
+axc
 wYc
 oNl
 odb
@@ -120860,13 +120918,13 @@ kls
 sqr
 mwI
 sFw
-uCQ
-tFK
-aDs
 gQi
+tFK
+arI
+arC
 dmc
 gnb
-uOk
+wuj
 mkv
 bqP
 pJM
@@ -120936,7 +120994,7 @@ nyH
 aSZ
 atW
 btM
-atH
+axc
 wYc
 lvY
 tJc
@@ -120947,9 +121005,9 @@ bfg
 aYo
 beE
 tba
-uCQ
-tFK
-abJ
+gQi
+aBV
+arL
 gQi
 gQi
 gQi
@@ -121023,7 +121081,7 @@ rGQ
 aSZ
 atW
 btN
-atH
+axc
 wYc
 wYc
 wYc
@@ -121035,8 +121093,8 @@ wYc
 bsf
 rma
 uCQ
-tFK
-laz
+oUK
+aXm
 rHr
 kUv
 kUv
@@ -121110,7 +121168,7 @@ ugn
 aSZ
 atW
 btM
-atH
+axc
 wzb
 wLT
 cfO
@@ -121122,12 +121180,12 @@ xnW
 bsf
 rma
 hOh
-laQ
+jND
 laz
 kTG
 pua
 pua
-pua
+arA
 aQf
 bqP
 byY
@@ -121197,7 +121255,7 @@ adh
 aSZ
 atW
 bgl
-atH
+axc
 wzb
 lYN
 jwi
@@ -121214,7 +121272,7 @@ aDs
 aCc
 pua
 pua
-aUl
+pua
 aQf
 bqP
 byU
@@ -121284,7 +121342,7 @@ nqA
 aSZ
 atW
 bgl
-atH
+axc
 wzb
 cfM
 fhk
@@ -121371,7 +121429,7 @@ aJJ
 aSZ
 atW
 bgl
-atH
+axc
 wzb
 xnW
 xnW
@@ -121458,7 +121516,7 @@ vPX
 aSZ
 atW
 btU
-btv
+axd
 aQf
 gtf
 izV
@@ -121545,7 +121603,7 @@ dgf
 aSZ
 atW
 btQ
-btw
+axf
 aQf
 wWF
 nnQ
@@ -121719,7 +121777,7 @@ rbz
 aSZ
 qIR
 aCv
-atH
+axc
 ory
 gIe
 nnQ
@@ -121806,7 +121864,7 @@ mAD
 aSZ
 atW
 bgl
-atH
+axc
 bCx
 iSp
 gEO
@@ -121893,7 +121951,7 @@ add
 add
 pTb
 bgl
-vaq
+axa
 bCx
 bAn
 obQ
@@ -121980,7 +122038,7 @@ guR
 uMG
 atW
 btM
-atH
+axc
 aQf
 aSY
 beu
@@ -122250,7 +122308,7 @@ wJY
 wJY
 wJY
 fVM
-xbI
+jND
 abJ
 ndv
 vGW
@@ -122337,7 +122395,7 @@ qsc
 bCL
 pfK
 fVM
-hcV
+wsm
 aDs
 rWr
 rWr
@@ -122680,13 +122738,13 @@ atQ
 uEF
 dDd
 lTM
-edS
-edS
+avE
+avE
 lTM
 edS
 lFS
-jND
-laz
+aeL
+lyy
 uwO
 nkV
 nkV
@@ -122772,8 +122830,8 @@ cVH
 meA
 uvP
 uEF
-aeL
-lyy
+avC
+avC
 aBw
 nkV
 nkV
@@ -126928,7 +126986,7 @@ apD
 apB
 bwh
 bwc
-auL
+aue
 aue
 auh
 aan
@@ -126948,7 +127006,7 @@ aui
 aui
 auh
 aue
-bso
+aue
 brV
 bri
 brq
@@ -127027,15 +127085,15 @@ wIr
 auA
 bgz
 auq
-qPM
-auf
-auf
-auf
-auf
-avg
-auf
-auf
-atU
+wIr
+auE
+auE
+auE
+auE
+avq
+auE
+auE
+avD
 apu
 apr
 apn
@@ -127113,7 +127171,7 @@ aYE
 bOp
 auB
 bgA
-baU
+axh
 aKv
 aKv
 aYt
@@ -127374,7 +127432,7 @@ aYE
 aYC
 auB
 bgz
-atT
+axn
 aKB
 aMe
 aLT
@@ -127461,7 +127519,7 @@ aYE
 aYC
 aCx
 bgz
-avn
+axo
 aKv
 aMO
 aMJ
@@ -127548,7 +127606,7 @@ aYE
 aYC
 aCx
 bgz
-atT
+axn
 aKv
 aKv
 aKv
@@ -127635,7 +127693,7 @@ aYE
 aYC
 aCx
 bgA
-atT
+axn
 aKv
 aKY
 aKN
@@ -127722,7 +127780,7 @@ aYE
 aYC
 aCx
 bgB
-atT
+axn
 aKv
 aKY
 aKO
@@ -127809,7 +127867,7 @@ aYE
 aYD
 auB
 aDd
-atT
+axn
 aKv
 aMP
 aKO
@@ -127896,7 +127954,7 @@ aYE
 aYC
 auB
 aFw
-atT
+axn
 aKv
 aKY
 aKO
@@ -127983,7 +128041,7 @@ aYE
 aYC
 auB
 aFw
-atT
+axn
 aKv
 aKY
 aKO
@@ -128070,7 +128128,7 @@ aYE
 aYC
 auB
 bgz
-atT
+axn
 aKv
 aKY
 aKS
@@ -128157,7 +128215,7 @@ aYE
 aYC
 auB
 bgA
-atT
+axn
 aKv
 aKv
 aKv
@@ -128244,7 +128302,7 @@ aYE
 aYC
 auB
 aam
-atT
+axn
 aKv
 aKY
 aKN
@@ -128331,7 +128389,7 @@ aYE
 aYC
 auB
 aDd
-atT
+axn
 aKv
 aKY
 aKO
@@ -128418,7 +128476,7 @@ aYE
 aYC
 auB
 bgz
-atT
+axn
 aKv
 aMP
 aKO
@@ -128505,7 +128563,7 @@ aYE
 aYC
 auB
 bgz
-avn
+axo
 aKv
 aKY
 aKO
@@ -128592,7 +128650,7 @@ aYE
 aYC
 auB
 bgz
-atT
+axn
 aKv
 aKY
 aKO
@@ -128766,7 +128824,7 @@ adg
 adg
 auC
 bub
-btI
+axs
 aKv
 aKv
 aKv
@@ -128853,7 +128911,7 @@ aNt
 adg
 auB
 buc
-btJ
+axt
 aKT
 bzn
 bzn
@@ -128940,7 +128998,7 @@ adm
 adg
 auB
 bud
-bso
+aue
 aNg
 bro
 bro
