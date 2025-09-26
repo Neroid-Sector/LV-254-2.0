@@ -4609,13 +4609,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/lifeboat/star)
-"apJ" = (
-/obj/structure/surface/rack,
-/obj/item/hardpoint/locomotion/apc_wheels,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/blackgold/underdeck/vehicle)
 "apK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lifeboat_hatch_placeholder{
@@ -4728,13 +4721,6 @@
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/lower/hallways/port/fore)
-"aqd" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/hardpoint/arc_sentry,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/blackgold/underdeck/vehicle)
 "aqe" = (
 /turf/closed/wall/almayer,
 /area/blackgold/lower/rooms/cryo)
@@ -4767,13 +4753,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/brig/chief)
-"aqk" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/hardpoint/plasma,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
-/area/blackgold/underdeck/vehicle)
 "aql" = (
 /turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/range)
@@ -4783,10 +4762,6 @@
 "aqn" = (
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/lower/rooms/range)
-"aqo" = (
-/mob/living/simple_animal/mouse/rat/brown,
-/turf/open/floor/almayer/no_build/plate,
-/area/blackgold/underdeck/vehicle)
 "aqp" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4904,13 +4879,6 @@
 /obj/structure/bed/chair,
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/conference)
-"aqQ" = (
-/obj/structure/surface/rack,
-/obj/item/hardpoint/locomotion/lav_wheels,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
-/area/blackgold/underdeck/vehicle)
 "aqR" = (
 /obj/effect/vehicle_spawner/tank/fixed,
 /turf/open/floor/plating/plating_catwalk,
@@ -4938,13 +4906,6 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/black/north,
 /area/blackgold/lower/hallways/mid/mid)
-"aqY" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/hardpoint/chaingun,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/blackgold/underdeck/vehicle)
 "aqZ" = (
 /obj/structure/machinery/vending/cigarette/koorlander/free{
 	pixel_x = 4
@@ -5028,10 +4989,17 @@
 /obj/structure/pallet/standard/food/groceries,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/req)
-"arj" = (
-/obj/structure/machinery/prop/almayer/computer,
-/turf/open/floor/almayer/plate,
-/area/blackgold/middle/rooms/briefing)
+"ark" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/floor/almayer,
+/area/blackgold/underdeck/vehicle)
 "arl" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -12330,13 +12298,15 @@
 /area/blackgold/middle/rooms/workshop)
 "aQn" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/pilot_officer{
-	pixel_y = 16
+	pixel_y = 16;
+	density = 0
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/workshop)
 "aQo" = (
 /obj/structure/machinery/cm_vending/clothing/pilot_officer{
-	pixel_y = 16
+	pixel_y = 16;
+	density = 0
 	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/workshop)
@@ -12447,7 +12417,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 25
 	},
-/obj/structure/machinery/cm_vending/gear/vehicle_crew,
+/obj/structure/machinery/part_fabricator/tank,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
 "aQJ" = (
@@ -13536,8 +13506,8 @@
 /turf/open/floor/hybrisa/carpet/carpetred,
 /area/blackgold/upper/rooms/tanker)
 "aUb" = (
-/obj/structure/curtain/open/colorable,
 /obj/structure/window/framed/almayer/hull/hijack_bustable,
+/obj/structure/curtain/colorable,
 /turf/open/floor/plating,
 /area/blackgold/upper/rooms/tanker)
 "aUc" = (
@@ -13561,7 +13531,9 @@
 /area/blackgold/upper/rooms/tanker)
 "aUe" = (
 /obj/structure/bookcase{
-	pixel_y = 16
+	pixel_y = 16;
+	density = 0;
+	can_block_movement = 0
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/tanker)
@@ -31069,7 +31041,6 @@
 /area/blackgold/middle/maint/port/aft)
 "fcb" = (
 /obj/structure/surface/rack,
-/obj/item/hardpoint/locomotion/treads,
 /turf/open/floor/almayer{
 	icon_state = "mono"
 	},
@@ -31657,8 +31628,6 @@
 /area/blackgold/lower/rooms/brig/cells)
 "fJi" = (
 /obj/structure/surface/rack,
-/obj/item/hardpoint/locomotion/truck/treads,
-/obj/item/hardpoint/locomotion/truck/treads,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -32156,13 +32125,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
-"gjo" = (
-/obj/structure/surface/rack,
-/obj/item/hardpoint/locomotion/treads,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/blackgold/underdeck/vehicle)
 "gjr" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -38741,13 +38703,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/fore)
-"mXZ" = (
-/obj/structure/surface/rack,
-/obj/item/hardpoint/locomotion/lav_wheels,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/blackgold/underdeck/vehicle)
 "mYi" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/reinforced,
@@ -45176,20 +45131,6 @@
 	},
 /turf/open/floor/almayer/red/southeast,
 /area/blackgold/lower/rooms/brig/cells)
-"tri" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/cleanable/blood/oil/streak,
-/obj/effect/decal/hybrisa/tiretrack{
-	dir = 8
-	},
-/turf/open/floor/almayer/mono,
-/area/blackgold/underdeck/vehicle)
 "tsB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -45530,13 +45471,6 @@
 	},
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/lower/maint/port/aft)
-"tQi" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_magazine/hardpoint/boyars_dualcannon,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
-/area/blackgold/underdeck/vehicle)
 "tRh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/south,
@@ -48792,13 +48726,6 @@
 /obj/structure/machinery/faxmachine/uscm/blackgold/ai_core,
 /turf/open/floor/almayer/aicore/no_build/ai_cargo,
 /area/blackgold/lower/rooms/aicore)
-"xri" = (
-/obj/structure/surface/rack,
-/obj/item/hardpoint/locomotion/arc_wheels,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
-/area/blackgold/underdeck/vehicle)
 "xrm" = (
 /obj/structure/machinery/cryopod{
 	dir = 1
@@ -49479,10 +49406,6 @@
 "ydL" = (
 /turf/open/floor/almayer/plating/northeast,
 /area/blackgold/underdeck/req)
-"yey" = (
-/mob/living/simple_animal/mouse/rat/brown,
-/turf/open/floor/almayer/test_floor4,
-/area/blackgold/underdeck/vehicle)
 "yeL" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
@@ -56622,7 +56545,7 @@ obL
 lsW
 mhO
 mWH
-gjo
+fJi
 fcb
 mWH
 jnf
@@ -56636,7 +56559,7 @@ qlE
 jnf
 mWH
 mWH
-gjo
+fJi
 fcb
 mhO
 lsW
@@ -57230,8 +57153,8 @@ obL
 obL
 lsW
 mhO
-xri
-aqd
+fcb
+fJi
 mWH
 mWH
 jnf
@@ -57245,7 +57168,7 @@ qlE
 jnf
 mWH
 mWH
-gjo
+fJi
 fcb
 mhO
 lsW
@@ -57500,7 +57423,7 @@ obE
 pdJ
 iYI
 lWb
-tri
+rLK
 pdJ
 qlE
 kzN
@@ -58202,8 +58125,8 @@ qlE
 jnf
 ssa
 edc
-amZ
 edc
+amZ
 ssa
 lsW
 obL
@@ -58623,8 +58546,8 @@ obL
 lsW
 mjc
 mWH
-aqY
-aqQ
+fJi
+fcb
 mWH
 jnf
 obE
@@ -58636,8 +58559,8 @@ pdJ
 qlE
 jnf
 mWH
-aqk
-mXZ
+fcb
+fJi
 mWH
 egJ
 lsW
@@ -58717,9 +58640,9 @@ kzN
 obE
 pdJ
 vlO
-eGE
+ark
 vlO
-aqo
+pdJ
 qlE
 kzN
 mWH
@@ -59232,8 +59155,8 @@ obL
 lsW
 mjc
 mWH
-apJ
-tQi
+fJi
+fcb
 mWH
 jnf
 obE
@@ -59245,8 +59168,8 @@ pdJ
 qlE
 jnf
 mWH
-tQi
-apJ
+fcb
+fJi
 mWH
 egJ
 lsW
@@ -59583,7 +59506,7 @@ mZS
 fUq
 mZS
 mWH
-yey
+kzN
 obE
 pdJ
 iYI
@@ -96476,7 +96399,7 @@ amN
 lHs
 amN
 amN
-arj
+amN
 liu
 lHs
 lHs

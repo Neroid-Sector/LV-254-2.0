@@ -187,11 +187,6 @@
 /obj/structure/interior_wall/van{
 	icon_state = "back_3"
 	},
-/obj/structure/interior_wall/van{
-	icon_state = "jeep_4";
-	pixel_y = 32;
-	alpha = 35
-	},
 /turf/open/void/vehicle,
 /area/space)
 "U" = (
