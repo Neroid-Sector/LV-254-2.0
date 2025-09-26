@@ -6868,6 +6868,9 @@
 "axH" = (
 /turf/open/floor/almayer,
 /area/blackgold/lower/rooms/gym)
+"axI" = (
+/turf/closed/wall/almayer/reinforced,
+/area/blackgold/upper/rooms/commandbunks/xo)
 "axL" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 1;
@@ -12617,7 +12620,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 25
 	},
-/obj/structure/machinery/part_fabricator/tank,
+/obj/structure/machinery/fabricator_vehicle,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
 "aQJ" = (
@@ -13168,7 +13171,7 @@
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/middle/rooms/workshop)
 "aSx" = (
-/obj/structure/machinery/part_fabricator/dropship,
+/obj/structure/machinery/fabricator_dropship,
 /obj/item/reagent_container/food/drinks/cans/souto{
 	pixel_y = 16;
 	pixel_x = -6
@@ -30097,7 +30100,7 @@
 /area/blackgold/middle/rooms/briefing)
 "dQT" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer,
+/turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/commandbunks/xo)
 "dSj" = (
 /obj/structure/surface/table/almayer,
@@ -119579,15 +119582,15 @@ wpc
 wpc
 aSv
 aYk
-svI
-svI
-svI
-svI
-svI
-svI
-svI
-svI
-svI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
 bqP
 pJM
 oOF
@@ -119666,7 +119669,7 @@ xAf
 wpc
 sfL
 bsa
-svI
+axI
 paK
 cUz
 fxf
@@ -119674,7 +119677,7 @@ qWx
 svI
 xeN
 xnF
-svI
+axI
 bqP
 pJM
 oOF
@@ -119761,7 +119764,7 @@ ben
 vfZ
 aaU
 jNK
-svI
+axI
 bqP
 pJM
 oOF
@@ -119840,7 +119843,7 @@ kjN
 wpc
 qIR
 gkF
-svI
+axI
 pVT
 klU
 brz
@@ -119848,7 +119851,7 @@ beo
 svI
 yfN
 aaU
-svI
+axI
 bqP
 pJM
 oOF
@@ -119935,7 +119938,7 @@ eiB
 svI
 svI
 pqT
-svI
+axI
 bqP
 pJM
 oOF
@@ -120022,7 +120025,7 @@ beo
 svI
 dlA
 bMY
-svI
+axI
 bqP
 aaa
 oOF
@@ -120109,7 +120112,7 @@ bep
 svI
 hJc
 fOb
-svI
+axI
 bqP
 pJM
 oOF
@@ -120196,7 +120199,7 @@ axC
 svI
 ujU
 kIn
-svI
+axI
 bqP
 pJM
 oOF
@@ -120276,14 +120279,14 @@ wpc
 atX
 bsc
 dQT
-svI
-svI
-svI
-svI
-svI
-svI
-svI
-svI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
 bqP
 pJM
 oOF
@@ -121321,7 +121324,7 @@ fdT
 bsf
 bev
 uCQ
-jND
+aYl
 aDs
 aCc
 pua
@@ -122275,7 +122278,7 @@ xiO
 mCc
 fQB
 fVM
-aYl
+jND
 aDs
 ndv
 aSQ
@@ -122362,7 +122365,7 @@ wJY
 wJY
 wJY
 fVM
-jND
+aYl
 abJ
 ndv
 vGW
