@@ -3883,10 +3883,6 @@
 "anl" = (
 /turf/closed/wall/almayer,
 /area/blackgold/middle/rooms/squad/prep)
-"anm" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/test_floor6,
-/area/blackgold/middle/rooms/squad/prep)
 "ann" = (
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/squad/prep)
@@ -3961,9 +3957,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/briefing)
-"anB" = (
-/turf/open/floor/almayer/green/south,
-/area/blackgold/middle/rooms/squad/prep)
 "anC" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/hybrisa/coffee_machine{
@@ -3972,10 +3965,11 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo)
 "anD" = (
-/obj/structure/machinery/light/blue{
-	dir = 4
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	pixel_y = 32
 	},
-/turf/open/floor/almayer/green/southeast,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "anE" = (
 /turf/open/floor/almayer/cargo,
@@ -4018,12 +4012,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/sea)
-"anJ" = (
-/obj/structure/machinery/light/blue{
-	dir = 8
-	},
-/turf/open/floor/almayer/green/southwest,
-/area/blackgold/middle/rooms/squad/prep)
 "anK" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/squad/prep)
@@ -4048,6 +4036,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
 "anQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/platoon_commander{
+	density = 0;
+	pixel_y = 32
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "anR" = (
@@ -4057,8 +4050,15 @@
 /turf/open/floor/almayer/green/northeast,
 /area/blackgold/middle/rooms/squad/prep)
 "anT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/northwest,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "anU" = (
 /turf/open/floor/almayer,
@@ -4082,17 +4082,12 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
 "anZ" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/prop/helmetgarb/gunoil,
-/obj/item/prop/colony/usedbandage{
-	dir = 6;
-	pixel_x = -8
+/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full{
+	density = 0;
+	pixel_y = 32
 	},
-/obj/item/tool/screwdriver,
-/obj/structure/machinery/light/spot{
-	dir = 8
-	},
-/turf/open/floor/almayer/green/west,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/northeast,
 /area/blackgold/middle/rooms/squad/prep)
 "aoa" = (
 /obj/structure/barricade/handrail{
@@ -4136,9 +4131,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
-"aoh" = (
-/turf/open/floor/almayer/greencorner/west,
-/area/blackgold/middle/rooms/squad/prep)
 "aoi" = (
 /obj/structure/barricade/handrail{
 	dir = 8;
@@ -4160,9 +4152,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/fore)
-"aol" = (
-/turf/open/floor/almayer/greencorner/north,
-/area/blackgold/middle/rooms/squad/prep)
 "aom" = (
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/sea)
@@ -4196,9 +4185,11 @@
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/aft)
 "aos" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/greencorner/south,
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/west,
 /area/blackgold/middle/rooms/squad/prep)
 "aot" = (
 /obj/structure/window/framed/almayer,
@@ -4245,16 +4236,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
-"aoB" = (
-/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
-	density = 0;
-	req_access = list();
-	req_one_access = list(7,9,102);
-	pixel_x = -12
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/southwest,
-/area/blackgold/middle/rooms/squad/prep)
 "aoC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4271,20 +4252,10 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
-"aoE" = (
-/obj/structure/machinery/light/blue{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/northwest,
-/area/blackgold/middle/rooms/squad/prep)
 "aoF" = (
 /obj/structure/machinery/power/apc/almayer/north,
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_y = 28;
-	pixel_x = 16
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "aoG" = (
@@ -5942,10 +5913,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/rooms/medical/chemistry)
-"avG" = (
-/obj/structure/machinery/computer/supply,
-/turf/open/floor/almayer/green/south,
-/area/blackgold/middle/rooms/squad/prep)
 "avH" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8;
@@ -5954,15 +5921,11 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo)
 "avI" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep,
-/turf/open/floor/almayer/green/south,
-/area/blackgold/middle/rooms/squad/prep)
-"avJ" = (
-/obj/structure/machinery/light/spot,
-/obj/structure/machinery/cm_vending/sorted/attachments/squad{
-	req_one_access = null
+/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
+	req_one_access = null;
+	req_access = null
 	},
-/turf/open/floor/almayer/green/south,
+/turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
 "avK" = (
 /obj/structure/machinery/disposal,
@@ -6005,10 +5968,6 @@
 /obj/structure/platform/metal/almayer/west,
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
-"avQ" = (
-/obj/structure/machinery/cm_vending/gear/platoon_commander_armory,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/middle/rooms/squad/prep)
 "avR" = (
 /obj/structure/machinery/smartfridge/chemistry{
 	pixel_x = -6
@@ -6077,11 +6036,6 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/wood/ship,
 /area/blackgold/middle/rooms/medical/cmo)
-"avV" = (
-/obj/structure/machinery/cm_vending/clothing/marine,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/middle/rooms/squad/prep)
 "avW" = (
 /obj/structure/window/framed/almayer/white,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
@@ -6236,11 +6190,12 @@
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/blackgold/middle/rooms/medical/cmo)
 "awp" = (
-/obj/structure/machinery/auto_rack/uscm/m39_ammo/full{
-	density = 0;
-	pixel_x = 15
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 1;
+	name = "ship-grade camera"
 	},
-/turf/open/floor/almayer/cargo_arrow/west,
+/turf/open/floor/almayer/green/southeast,
 /area/blackgold/middle/rooms/squad/prep)
 "awq" = (
 /obj/structure/barricade/handrail/boxing_ring{
@@ -6320,28 +6275,29 @@
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
 "awA" = (
-/obj/structure/machinery/cm_vending/clothing/k9_synth,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/west,
+/turf/open/floor/almayer/green/northeast,
 /area/blackgold/middle/rooms/squad/prep)
 "awB" = (
-/obj/structure/machinery/cm_vending/clothing/synth,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/west,
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/squad/prep)
 "awC" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
-	req_one_access = null
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 28
 	},
+/obj/structure/machinery/computer/squad_changer,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "awD" = (
-/obj/structure/machinery/light/spot{
-	dir = 1
-	},
-/obj/structure/machinery/cm_vending/sorted/attachments/squad{
-	req_one_access = null
-	},
+/obj/structure/machinery/computer/supply,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "awE" = (
@@ -11960,8 +11916,9 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/middle/hallways/mid/mid)
 "aPE" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
-	req_one_access = null
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -12159,14 +12116,6 @@
 /obj/structure/platform/metal/ship/west,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/workshop)
-"aQh" = (
-/obj/structure/machinery/auto_rack/uscm/mk1/full{
-	density = 0;
-	pixel_x = 15
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/west,
-/area/blackgold/middle/rooms/squad/prep)
 "aQi" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -16977,9 +16926,7 @@
 	dir = 4;
 	icon_state = "pipe-j2"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
+/obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/hallways/mid/mid)
 "bcN" = (
@@ -17169,6 +17116,7 @@
 "bdi" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/black/north,
 /area/blackgold/middle/hallways/mid/mid)
 "bdj" = (
@@ -17184,7 +17132,8 @@
 /area/blackgold/middle/hallways/mid/aft)
 "bdl" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/almayer/test_floor6,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/squad/prep)
 "bdm" = (
 /obj/structure/disposalpipe/segment,
@@ -17197,18 +17146,19 @@
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/medical)
 "bdo" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/camera/autoname/almayer{
-	dir = 1;
-	name = "ship-grade camera"
-	},
-/obj/structure/machinery/computer/squad_changer{
-	dir = 1
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "bdp" = (
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "bdq" = (
@@ -17222,24 +17172,29 @@
 /turf/open/floor/almayer/sterile_green_side,
 /area/blackgold/middle/rooms/medical/chemistry)
 "bds" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/machinery/light/small/blue{
+	pixel_x = -16
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_x = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/middle/rooms/squad/prep)
 "bdt" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/flooredge/north,
 /area/blackgold/middle/rooms/squad/prep)
 "bdu" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "bdv" = (
 /obj/structure/disposalpipe/segment,
@@ -17251,8 +17206,11 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/middle/rooms/medical/chemistry)
 "bdx" = (
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_x = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/middle/rooms/squad/prep)
 "bdy" = (
 /obj/structure/disposalpipe/segment,
@@ -20977,12 +20935,14 @@
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/briefing)
 "bom" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
 	},
-/obj/structure/pipes/standard/manifold/hidden/supply,
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/middle/hallways/mid/mid)
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
 "bon" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -21144,10 +21104,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/aft)
-"boK" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/test_floor4,
-/area/blackgold/middle/rooms/squad/prep)
 "boL" = (
 /obj/structure/machinery/light/small/red{
 	dir = 4
@@ -21158,7 +21114,10 @@
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/aft)
 "boM" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -21174,11 +21133,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/sterile_green_side,
 /area/blackgold/middle/rooms/medical)
-"boP" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/middle/rooms/squad/prep)
 "boQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -21230,7 +21184,7 @@
 "boW" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer/reinforced,
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/squad/prep)
 "boX" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -21256,10 +21210,7 @@
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/briefing)
 "bpb" = (
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/squad/prep)
 "bpc" = (
 /obj/structure/machinery/computer/overwatch/groundside_operations{
@@ -21270,24 +21221,19 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "bpd" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_one_access = null
 	},
-/obj/structure/machinery/auto_rack/uscm/mk221/full{
-	density = 0;
-	pixel_y = 15
-	},
-/turf/open/floor/almayer/cargo_arrow,
+/turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
 "bpe" = (
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 4
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
 	},
-/obj/structure/machinery/auto_rack/uscm/buckshot/full{
-	pixel_y = 15;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo_arrow,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "bpf" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -21711,12 +21657,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/aft)
-"bqs" = (
-/obj/structure/pipes/vents/scrubber{
-	dir = 4
-	},
-/turf/open/floor/almayer,
-/area/blackgold/middle/rooms/squad/prep)
 "bqt" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/black/north,
@@ -21731,7 +21671,6 @@
 /area/blackgold/middle/maint/star/fore)
 "bqv" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -26902,11 +26841,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/req)
-"bFZ" = (
-/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/blackgold/middle/rooms/squad/prep)
 "bGa" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -27572,14 +27506,14 @@
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/liaison)
 "bHR" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
 	},
-/obj/structure/machinery/auto_rack/uscm/buckshot/full{
-	pixel_y = -15;
-	density = 0
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
 	},
-/turf/open/floor/almayer/cargo_arrow/north,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "bHT" = (
 /obj/structure/machinery/door/airlock/almayer/maint{
@@ -28053,11 +27987,11 @@
 /turf/open/floor/plating,
 /area/blackgold/underdeck)
 "bPh" = (
-/obj/structure/machinery/cm_vending/gear/medic{
-	pixel_y = 16;
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_x = -32;
 	density = 0
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer/cargo_arrow/west,
 /area/blackgold/middle/rooms/squad/prep)
 "bPj" = (
 /obj/structure/platform/metal/ship/west,
@@ -28248,12 +28182,12 @@
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/upper/stairs/star/mid)
 "bYt" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "bYw" = (
 /obj/structure/machinery/gear,
@@ -28346,12 +28280,8 @@
 /turf/open/floor/almayer/redfull,
 /area/blackgold/middle/rooms/squad)
 "cdv" = (
-/obj/structure/machinery/cm_vending/gear/medic{
-	pixel_y = 16;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/flooredge/west,
 /area/blackgold/middle/rooms/squad/prep)
 "cdQ" = (
 /obj/structure/machinery/vending/coffee{
@@ -28853,11 +28783,11 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "cKx" = (
-/obj/structure/machinery/cm_vending/clothing/marine{
-	pixel_y = -25;
-	density = 0
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
 	},
-/turf/open/floor/almayer/green/south,
+/turf/open/floor/almayer/green/northeast,
 /area/blackgold/middle/rooms/squad/prep)
 "cKN" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -28992,9 +28922,10 @@
 /turf/open_space,
 /area/blackgold/middle/maint/port/fore)
 "cSE" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "cSH" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -29316,8 +29247,12 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
 "dlb" = (
-/obj/structure/machinery/auto_rack/uscm/m39_ammo/full,
-/turf/open/floor/almayer/cargo,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "dlA" = (
 /obj/structure/toilet,
@@ -29339,12 +29274,12 @@
 /turf/open/floor/almayer/aicore/no_build/ai_arrow,
 /area/blackgold/lower/rooms/aicore)
 "dms" = (
-/obj/structure/machinery/cm_vending/gear/smartgun{
-	pixel_y = -31;
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_x = -32;
 	density = 0
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "dmU" = (
 /obj/structure/surface/table/reinforced/black,
@@ -29443,15 +29378,6 @@
 	},
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/underdeck/req)
-"dtN" = (
-/obj/structure/machinery/cm_vending/clothing/marine{
-	pixel_y = 25;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
 "duC" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/emails{
@@ -29843,10 +29769,6 @@
 /obj/structure/largecrate/supply/supplies/flares,
 /turf/open/floor/plating,
 /area/blackgold/underdeck)
-"dTD" = (
-/obj/structure/flora/pottedplant/random,
-/turf/open/floor/almayer/green/southwest,
-/area/blackgold/middle/rooms/squad/prep)
 "dUT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -30281,11 +30203,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
-"erY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/middle/rooms/squad/prep)
 "erZ" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
@@ -30368,13 +30285,6 @@
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
-"exf" = (
-/obj/structure/machinery/cm_vending/clothing/smartgun{
-	pixel_y = -31;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
 "exk" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/almayer/plating_striped/north,
@@ -30553,21 +30463,6 @@
 	},
 /turf/open/floor/hybrisa/carpet/carpetblackdeco,
 /area/blackgold/lower/rooms/liaison)
-"eHw" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = 1;
-	pixel_y = 7
-	},
-/obj/item/storage/toolbox/emergency{
-	pixel_x = -3
-	},
-/obj/structure/machinery/light/spot{
-	dir = 1;
-	pixel_y = 10
-	},
-/turf/open/floor/almayer/green/northwest,
-/area/blackgold/middle/rooms/squad/prep)
 "eIE" = (
 /obj/structure/platform/metal/ship/north,
 /obj/structure/blocker/forcefield/human{
@@ -30810,9 +30705,11 @@
 /turf/open/floor/almayer/black/east,
 /area/blackgold/upper/hallways/mid/mid)
 "eVn" = (
-/obj/structure/disposalpipe/segment,
-/obj/item/stool,
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "eVA" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -31005,11 +30902,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/medical)
 "fek" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
-	name = "\improper ComTech Prep"
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "feo" = (
 /obj/effect/decal/cleanable/dirt,
@@ -31173,8 +31070,16 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "fkZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/greencorner/south,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "fmB" = (
 /obj/structure/bed/chair/office/dark{
@@ -31269,9 +31174,10 @@
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/middle/rooms/aientrance)
 "fsS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stool,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/auto_rack/uscm/m39/full{
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "fsY" = (
 /obj/structure/flora/pottedplant/random,
@@ -31553,11 +31459,12 @@
 	},
 /area/blackgold/underdeck/vehicle)
 "fJG" = (
-/obj/structure/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	dir = 4
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
 	},
-/turf/open/floor/almayer/green/west,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
 "fJH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -31611,9 +31518,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "fMr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo,
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "fMH" = (
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
@@ -31746,11 +31655,12 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "fSF" = (
-/obj/structure/machinery/cm_vending/clothing/engi{
-	pixel_y = 16;
-	density = 0
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/turf/open/floor/almayer/cargo,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "fTa" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -31866,17 +31776,17 @@
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "gae" = (
-/obj/structure/machinery/cm_vending/clothing/leader{
-	pixel_y = -31;
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_x = -32;
 	density = 0
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "gag" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/almayer/flooredge/south,
 /area/blackgold/middle/rooms/squad/prep)
 "gaF" = (
 /obj/structure/bed,
@@ -32288,9 +32198,11 @@
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/upper/stairs/star/mid)
 "gwo" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "gwV" = (
 /turf/closed/wall/almayer,
@@ -32345,9 +32257,6 @@
 "gzN" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/commandbunks)
-"gAc" = (
-/turf/closed/wall/almayer/reinforced,
-/area/blackgold/middle/rooms/squad/prep)
 "gAN" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -32373,14 +32282,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
-"gCg" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/clothing/marine{
-	pixel_y = -25;
-	density = 0
-	},
-/turf/open/floor/almayer/green/south,
-/area/blackgold/middle/rooms/squad/prep)
 "gCT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/aicore_lockdown,
@@ -32407,8 +32308,10 @@
 /area/blackgold/upper/rooms/cic)
 "gDB" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/m39/full,
-/turf/open/floor/almayer/cargo_arrow/north,
+/obj/structure/machinery/auto_rack/uscm/m4ra/full{
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "gDE" = (
 /obj/structure/pallet/standard/food/groceries,
@@ -32453,8 +32356,7 @@
 /area/blackgold/upper/rooms/cic)
 "gFf" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer/reinforced,
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "gFS" = (
 /obj/structure/surface/table/almayer,
@@ -32550,15 +32452,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/engineering)
-"gIh" = (
-/obj/structure/machinery/cm_vending/clothing/smartgun{
-	pixel_y = -31;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
 "gIl" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	dir = 1;
@@ -32812,11 +32705,6 @@
 	},
 /turf/open/floor/almayer/red/northeast,
 /area/blackgold/upper/rooms/hangar)
-"hbc" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
 "hcB" = (
 /obj/structure/platform_decoration/metal/almayer/north,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -33502,14 +33390,6 @@
 "hJH" = (
 /turf/open_space,
 /area/blackgold/upper/stairs/star/aft)
-"hJM" = (
-/obj/structure/machinery/cm_vending/gear/engi{
-	pixel_y = 16;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
 "hKf" = (
 /obj/structure/machinery/prop/almayer/computer{
 	pixel_y = 16
@@ -33861,12 +33741,12 @@
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/lower/rooms/aicore)
 "ihS" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/auto_rack/uscm/m4ra/full{
-	density = 0;
-	pixel_x = -15
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
 	},
-/turf/open/floor/almayer/cargo_arrow/east,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "ihW" = (
 /turf/closed/wall/almayer/reinforced,
@@ -33966,16 +33846,6 @@
 /obj/item/tool/soap/deluxe,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
-"imk" = (
-/obj/structure/machinery/cm_vending/sorted/attachments/squad{
-	req_one_access = null
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/blackgold/middle/rooms/squad/prep)
 "imy" = (
 /turf/open/floor/almayer/red/west,
 /area/blackgold/upper/rooms/brig/lobby)
@@ -34785,21 +34655,17 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/lower/rooms/engineering/storage)
 "jbL" = (
-/obj/structure/machinery/computer/supply,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
+/obj/structure/sign/prop1{
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/black/north,
+/area/blackgold/middle/hallways/mid/mid)
 "jbY" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/hallways/port/fore)
-"jcr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/m39_ammo/full,
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/blackgold/middle/rooms/squad/prep)
 "jct" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -34902,8 +34768,11 @@
 /area/blackgold/upper/rooms/captain_mess)
 "jfH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer,
+/obj/structure/machinery/auto_rack/uscm/mk221/full{
+	pixel_y = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "jfP" = (
 /obj/structure/surface/rack,
@@ -35121,11 +34990,11 @@
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
 "joW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/machinery/auto_rack/uscm/mk221/full{
+	pixel_y = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
 "jpy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -35260,9 +35129,11 @@
 /turf/open/floor/almayer/green/north,
 /area/blackgold/lower/rooms/brig/cells)
 "juM" = (
-/obj/structure/machinery/auto_rack/uscm/mk1/full,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/north,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "jvh" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass{
@@ -35306,10 +35177,6 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer/black/west,
 /area/blackgold/middle/rooms/hangar)
-"jyw" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
 "jyI" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 8
@@ -35416,15 +35283,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/hangar)
-"jDM" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/auto_rack/uscm/m39/full{
-	density = 0;
-	pixel_x = -15
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/east,
-/area/blackgold/middle/rooms/squad/prep)
 "jEb" = (
 /obj/structure/platform/metal/ship/west,
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -35898,11 +35756,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/charlie)
-"klh" = (
-/obj/structure/flora/pottedplant/random,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/northwest,
-/area/blackgold/middle/rooms/squad/prep)
 "klp" = (
 /turf/open/floor/almayer/red/southeast,
 /area/blackgold/lower/rooms/range)
@@ -36129,18 +35982,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad)
-"kyx" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/machinery/auto_rack/uscm/mk221/full{
-	pixel_y = -15;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/blackgold/middle/rooms/squad/prep)
 "kyF" = (
 /obj/docking_port/stationary/cargo/empty{
 	elevator_network = "BG Elevator Cargo"
@@ -36956,11 +36797,6 @@
 "lmX" = (
 /turf/closed/wall/almayer,
 /area/blackgold/upper/rooms/companycommand/bravo)
-"lni" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/almayer/greencorner/east,
-/area/blackgold/middle/rooms/squad/prep)
 "lnj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/static_corpse/afric_zimmer{
@@ -37372,10 +37208,12 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/upper/rooms/captain_mess)
 "lIG" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
-	req_one_access = null
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/turf/open/floor/almayer/cargo_arrow/north,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/southeast,
 /area/blackgold/middle/rooms/squad/prep)
 "lJm" = (
 /obj/structure/largecrate/supply/weapons/m39,
@@ -37384,10 +37222,10 @@
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/underdeck/req)
 "lJw" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
-	name = "\improper Squad Lead Prep"
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
+	pixel_y = 32
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "lJN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -37466,10 +37304,6 @@
 	},
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/star/mid)
-"lRS" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/middle/rooms/squad/prep)
 "lSa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -37544,12 +37378,7 @@
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/upper/rooms/lifeboat/star)
 "lUr" = (
-/obj/structure/machinery/cm_vending/clothing/marine{
-	pixel_y = 25;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/north,
+/turf/open/floor/almayer/test_floor6,
 /area/blackgold/middle/rooms/squad/prep)
 "lUW" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
@@ -37766,15 +37595,12 @@
 /turf/closed/wall/almayer,
 /area/blackgold/upper/rooms/brig/chief)
 "mem" = (
-/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full{
-	pixel_y = 32;
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_x = -32;
 	density = 0
 	},
-/obj/item/storage/backpack/marine/ammo_rack{
-	pixel_y = 18;
-	pixel_x = -7
-	},
-/turf/open/floor/almayer/green/northwest,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "meq" = (
 /obj/effect/decal/cleanable/dirt,
@@ -37965,10 +37791,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/middle/rooms/medical)
-"mnO" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/greencorner/west,
-/area/blackgold/middle/rooms/squad/prep)
 "mol" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -38365,12 +38187,8 @@
 /turf/open/floor/plating,
 /area/blackgold/underdeck)
 "mKU" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
-	pixel_x = -15;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo_arrow/east,
+/obj/item/stool,
+/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "mLc" = (
 /obj/structure/machinery/vending/snack/packaged,
@@ -38447,18 +38265,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta/cc)
-"mNJ" = (
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/structure/machinery/auto_rack/uscm/slugs/full{
-	pixel_y = -15;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/blackgold/middle/rooms/squad/prep)
 "mNY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
@@ -38481,13 +38287,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/gym)
-"mOI" = (
-/obj/structure/machinery/light/blue{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/northwest,
-/area/blackgold/middle/rooms/squad/prep)
 "mOU" = (
 /obj/structure/platform/metal/ship/east,
 /obj/effect/decal/cleanable/dirt,
@@ -39220,12 +39019,8 @@
 /turf/open/floor/almayer/red/northwest,
 /area/blackgold/upper/rooms/brig/stairs)
 "nxE" = (
-/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full{
-	density = 0;
-	pixel_x = 15
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/west,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "nxN" = (
 /obj/effect/decal/warning_stripes{
@@ -39371,13 +39166,11 @@
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/lower/rooms/conference)
 "nEn" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	pixel_y = -25;
-	density = 0;
-	req_one_access = null
+/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full{
+	pixel_y = 32;
+	density = 0
 	},
-/turf/open/floor/almayer/green/south,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "nEF" = (
 /obj/structure/bed/chair/bolted{
@@ -39422,11 +39215,15 @@
 /turf/open/floor/almayer/black/east,
 /area/blackgold/middle/hallways/port/fore)
 "nHl" = (
-/obj/structure/machinery/cm_vending/clothing/medic{
-	pixel_y = 16;
+/obj/structure/machinery/light/small/blue{
+	pixel_x = -16;
+	dir = 1
+	},
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_x = 32;
 	density = 0
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer/cargo_arrow/east,
 /area/blackgold/middle/rooms/squad/prep)
 "nHR" = (
 /obj/structure/surface/table/reinforced/black,
@@ -39493,9 +39290,7 @@
 /turf/open/floor/almayer/blue/north,
 /area/blackgold/upper/hallways/mid/fore)
 "nKz" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "nKT" = (
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
@@ -39742,8 +39537,7 @@
 /area/blackgold/underdeck)
 "nTc" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/mk1/full,
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "nUl" = (
 /obj/effect/decal/cleanable/dirt,
@@ -39862,13 +39656,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/blue/northeast,
 /area/blackgold/upper/rooms/captain_mess)
-"nZA" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	pixel_y = -25;
-	density = 0
-	},
-/turf/open/floor/almayer/green/south,
-/area/blackgold/middle/rooms/squad/prep)
 "nZG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -40192,13 +39979,6 @@
 	},
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
-"oty" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/blue{
-	dir = 4
-	},
-/turf/open/floor/almayer/green/southeast,
-/area/blackgold/middle/rooms/squad/prep)
 "otS" = (
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/almayer/plate,
@@ -40423,7 +40203,10 @@
 /area/blackgold/upper/maint/star/fore)
 "oDd" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/greencorner/east,
+/obj/structure/machinery/cm_vending/sorted/cargo_ammo/squad{
+	req_one_access = null
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
 "oDW" = (
 /turf/open/floor/almayer/plate,
@@ -40509,14 +40292,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/delta)
-"oHw" = (
-/obj/structure/machinery/cm_vending/clothing/leader{
-	pixel_y = -31;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
 "oHM" = (
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/upper/rooms/cic)
@@ -40528,13 +40303,10 @@
 	},
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
 "oJV" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/auto_rack/uscm/m39_ammo/full{
-	density = 0;
-	pixel_x = -15
+/obj/structure/machinery/auto_rack/uscm/buckshot/full{
+	pixel_y = 32
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/east,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "oKc" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -40840,15 +40612,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/east,
 /area/blackgold/lower/hallways/star/fore)
-"oZw" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	pixel_y = 25;
-	density = 0;
-	req_one_access = null
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
 "oZC" = (
 /obj/structure/cargo_container/hybrisa/containersextended/greenright,
 /turf/open/floor/almayer/plating_striped/south,
@@ -41165,14 +40928,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/bluefull2,
 /area/blackgold/middle/rooms/briefing)
-"ppK" = (
-/obj/structure/machinery/auto_rack/uscm/m39/full{
-	density = 0;
-	pixel_x = 15
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/cargo_arrow/west,
-/area/blackgold/middle/rooms/squad/prep)
 "pqs" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
@@ -41387,13 +41142,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/hallways/mid/mid)
-"pAY" = (
-/obj/structure/machinery/auto_rack/uscm/m4ra/full{
-	density = 0;
-	pixel_x = 15
-	},
-/turf/open/floor/almayer/cargo_arrow/west,
-/area/blackgold/middle/rooms/squad/prep)
 "pBF" = (
 /turf/open/floor/almayer/greencorner/south,
 /area/blackgold/lower/rooms/brig/cells)
@@ -41442,8 +41190,17 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
 "pDo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/southeast,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "pDz" = (
 /obj/structure/closet/secure_closet/fridge/meat/stock,
@@ -41777,12 +41534,6 @@
 "pWy" = (
 /turf/closed/wall/almayer/outer,
 /area/shuttle/cargo/b)
-"pWZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/almayer,
-/area/blackgold/middle/rooms/squad/prep)
 "pXl" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/hybrisa/coffee_machine{
@@ -41795,8 +41546,11 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/cic/conference)
 "pXL" = (
-/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full,
-/turf/open/floor/almayer/cargo,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "pYr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -41856,10 +41610,11 @@
 /turf/open/floor/almayer/black/west,
 /area/blackgold/middle/hallways/mid/aft)
 "qda" = (
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
+	pixel_y = 32
+	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/west,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "qdf" = (
 /turf/open/floor/almayer/black/east,
@@ -41941,10 +41696,8 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "qha" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access = null
-	},
-/turf/open/floor/almayer/green/north,
+/obj/structure/machinery/chem_dispenser/corpsman,
+/turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
 "qhb" = (
 /obj/structure/pallet/standard/ammo_mk1,
@@ -42000,12 +41753,6 @@
 /obj/structure/cargo_container/uscm/right,
 /turf/open/floor/almayer/no_build,
 /area/blackgold/underdeck/req)
-"qkT" = (
-/obj/structure/machinery/light/spot,
-/obj/structure/surface/rack,
-/obj/item/ammo_box/magazine/misc/flares/signal,
-/turf/open/floor/almayer/green/southwest,
-/area/blackgold/middle/rooms/squad/prep)
 "qlg" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -42055,10 +41802,11 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "qnf" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
-	name = "\improper Smartgunner Prep"
+/obj/structure/machinery/auto_rack/uscm/buckshot/full{
+	pixel_y = 32
 	},
-/turf/open/floor/plating/plating_catwalk,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "qnP" = (
 /obj/effect/decal/warning_stripes{
@@ -42162,10 +41910,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "qsV" = (
-/obj/structure/machinery/cm_vending/gear/leader{
-	pixel_y = -31
-	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer/flooredge/south,
 /area/blackgold/middle/rooms/squad/prep)
 "qtx" = (
 /obj/structure/platform/metal/ship/north,
@@ -42245,9 +41990,7 @@
 /area/blackgold/upper/rooms/companycommand/charlie)
 "qxe" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
+/turf/open/floor/almayer/flooredge/east,
 /area/blackgold/middle/rooms/squad/prep)
 "qxf" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -42787,11 +42530,10 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/maint/star/fore)
 "qXx" = (
-/obj/structure/machinery/cm_vending/gear/smartgun{
-	pixel_y = -31;
-	density = 0
+/obj/structure/machinery/auto_rack/uscm/m4ra/full{
+	pixel_y = -32
 	},
-/turf/open/floor/almayer/cargo,
+/turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
 "qXM" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -42961,8 +42703,10 @@
 	},
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
 "rfT" = (
-/obj/structure/flora/pottedplant/random,
-/turf/open/floor/almayer/green/west,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
 "rgi" = (
 /obj/item/prop/colony/usedbandage,
@@ -43258,11 +43002,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/rooms/evacuation)
-"rut" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/south,
-/area/blackgold/middle/rooms/squad/prep)
 "ruB" = (
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/brig/chief)
@@ -43303,11 +43042,6 @@
 	},
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/lower/rooms/brig/cells)
-"rwh" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/m39/full,
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
 "rwx" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -43356,13 +43090,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/commandbunks/staff)
-"rAT" = (
-/obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
-	density = 0;
-	pixel_x = 15
-	},
-/turf/open/floor/almayer/cargo_arrow/west,
-/area/blackgold/middle/rooms/squad/prep)
 "rBc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blue/east,
@@ -43462,13 +43189,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/upper/rooms/computer)
-"rHl" = (
-/obj/structure/machinery/cm_vending/gear/engi{
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo,
-/area/blackgold/middle/rooms/squad/prep)
 "rHr" = (
 /obj/structure/window/framed/almayer/hull/hijack_bustable,
 /turf/open/floor/plating,
@@ -43520,9 +43240,10 @@
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/upper/rooms/brig/stairs)
 "rJc" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "rKt" = (
 /obj/structure/platform/metal/ship/north,
@@ -43540,8 +43261,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/req)
 "rLb" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/east,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "rLu" = (
 /obj/structure/prop/almayer/minigun_crate,
@@ -43942,12 +43666,9 @@
 /turf/open/floor/almayer/aicore/no_build,
 /area/blackgold/lower/rooms/aicore)
 "siC" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/stack/sheet/wood/large_stack,
-/obj/item/stack/sheet/wood/large_stack,
-/obj/item/stack/sheet/cardboard/full_stack,
-/obj/item/maintenance_jack{
-	pixel_y = 13
+/obj/structure/machinery/cm_vending/gear/platoon_commander_armory{
+	density = 0;
+	pixel_y = 32
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -43977,15 +43698,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/req)
-"ska" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/mk1/full{
-	density = 0;
-	pixel_x = -15
-	},
-/turf/open/floor/almayer/cargo_arrow/east,
-/area/blackgold/middle/rooms/squad/prep)
 "sko" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
@@ -44133,17 +43845,6 @@
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_cargo,
 /area/blackgold/lower/rooms/aicore)
-"ssA" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/slugs/full{
-	density = 0;
-	pixel_y = 15
-	},
-/turf/open/floor/almayer/cargo_arrow,
-/area/blackgold/middle/rooms/squad/prep)
 "ssV" = (
 /obj/structure/machinery/ares/substrate,
 /obj/structure/machinery/ares/processor/bioscan{
@@ -45353,13 +45054,6 @@
 /obj/structure/ladder/multiz,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/port/aft)
-"tJH" = (
-/obj/structure/machinery/cm_vending/clothing/marine{
-	pixel_y = 25;
-	density = 0
-	},
-/turf/open/floor/almayer/green/north,
-/area/blackgold/middle/rooms/squad/prep)
 "tJK" = (
 /obj/structure/machinery/cryopod{
 	dir = 1
@@ -45405,9 +45099,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/hangar)
 "tLP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/clothing/platoon_commander,
-/turf/open/floor/almayer/green/west,
+/turf/open/floor/almayer/green/southeast,
 /area/blackgold/middle/rooms/squad/prep)
 "tMq" = (
 /obj/structure/machinery/landinglight/ds1{
@@ -45434,12 +45130,11 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/lower/rooms/req)
 "tMP" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	pixel_y = 25;
-	density = 0
+/obj/structure/machinery/light/spot{
+	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/north,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "tNl" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -45581,12 +45276,6 @@
 "tXi" = (
 /turf/open/floor/almayer/black/northwest,
 /area/blackgold/lower/hallways/port/fore)
-"tXO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/middle/rooms/squad/prep)
 "tYz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -45636,9 +45325,10 @@
 /area/blackgold/upper/rooms/captain_mess)
 "ucn" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/wood,
-/turf/open/floor/almayer/greencorner/north,
+/obj/structure/machinery/auto_rack/uscm/m39/full{
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "uek" = (
 /turf/closed/wall/almayer/reinforced,
@@ -46213,11 +45903,6 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha/cc)
-"uKx" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/middle/rooms/squad/prep)
 "uLp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -46595,8 +46280,11 @@
 /turf/open/floor/almayer/mono,
 /area/blackgold/underdeck/vehicle)
 "veD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/greencorner/north,
+/turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
 "veK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -46624,23 +46312,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/captain_mess)
 "vfa" = (
-/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/auto_rack/uscm/m39_ammo/full{
+	pixel_y = -32
+	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/nade_box/mortar{
-	pixel_y = 13
-	},
-/obj/item/storage/backpack/marine/ammo_rack{
-	pixel_x = 7
-	},
-/obj/item/storage/pill_bottle/packet/tramadol{
-	pixel_x = -7;
-	pixel_y = -3
-	},
-/obj/structure/machinery/light/spot{
-	dir = 8
-	},
-/turf/open/floor/almayer/green/west,
+/turf/open/floor/almayer/green/southeast,
 /area/blackgold/middle/rooms/squad/prep)
 "vfn" = (
 /obj/effect/decal/warning_stripes{
@@ -46785,7 +46461,9 @@
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/mid)
 "voi" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/south,
@@ -46821,10 +46499,10 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/fore)
 "vpI" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
-	name = "\improper Corpsmen Prep"
+/obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
+	pixel_y = -32
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
 "vqh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -46851,10 +46529,6 @@
 	},
 /turf/open/floor/almayer/silver/northwest,
 /area/blackgold/upper/rooms/computer/storage)
-"vqo" = (
-/obj/structure/sign/prop1,
-/turf/closed/wall/almayer,
-/area/blackgold/middle/rooms/squad/prep)
 "vqD" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine/uscm/blackgold/brig,
@@ -47187,10 +46861,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/cic/conference)
-"vIy" = (
-/obj/item/stool,
-/turf/open/floor/almayer/greencorner/west,
-/area/blackgold/middle/rooms/squad/prep)
 "vIJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -47341,15 +47011,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/greencorner/west,
 /area/blackgold/lower/rooms/req)
-"vPk" = (
-/obj/structure/machinery/chem_dispenser/corpsman{
-	density = 0;
-	pixel_x = -12
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/southwest,
-/area/blackgold/middle/rooms/squad/prep)
 "vPX" = (
 /obj/structure/machinery/vending/coffee{
 	pixel_x = -2
@@ -47881,11 +47542,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/lower/maint/port/mid)
-"wxV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/east,
-/area/blackgold/middle/rooms/squad/prep)
 "wyq" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -48073,7 +47729,14 @@
 /area/blackgold/upper/rooms/commandbunks/staff)
 "wJN" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/almayer/reinforced,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
+	req_access = null;
+	req_one_access = null;
+	req_one_access_txt = "15;16;21";
+	vend_x_offset = 0;
+	vend_y_offset = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
 /area/blackgold/middle/rooms/squad/prep)
 "wJY" = (
 /obj/effect/landmark/start/police,
@@ -48277,13 +47940,6 @@
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/lower/rooms/req)
-"wTK" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/middle/rooms/squad/prep)
 "wTL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -48688,13 +48344,6 @@
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer/red/northwest,
 /area/blackgold/middle/rooms/squad)
-"xnQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
-/area/blackgold/middle/rooms/squad/prep)
 "xnV" = (
 /obj/structure/closet/secure_closet/securecom,
 /turf/open/floor/almayer/redfull,
@@ -49046,14 +48695,6 @@
 "xGi" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/commandbunks/staff)
-"xGq" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full{
-	density = 0;
-	pixel_x = -15
-	},
-/turf/open/floor/almayer/cargo_arrow/east,
-/area/blackgold/middle/rooms/squad/prep)
 "xGR" = (
 /obj/structure/machinery/vending/coffee{
 	density = 0;
@@ -49351,12 +48992,6 @@
 "xYI" = (
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/underdeck/req)
-"xYZ" = (
-/obj/structure/machinery/cm_vending/clothing/marine,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/west,
-/area/blackgold/middle/rooms/squad/prep)
 "xZb" = (
 /turf/open/floor/almayer/orange/west,
 /area/blackgold/lower/rooms/engineering/reactor)
@@ -49412,11 +49047,10 @@
 /turf/open/floor/almayer/green/west,
 /area/blackgold/lower/rooms/brig/cells)
 "ycz" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/blue{
-	dir = 4
+/obj/structure/machinery/light/spot{
+	dir = 8
 	},
-/turf/open/floor/almayer/green/northeast,
+/turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "ycH" = (
 /obj/structure/sink{
@@ -49475,12 +49109,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/shuttle/bow)
-"yfl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/green/east,
-/area/blackgold/middle/rooms/squad/prep)
 "yfr" = (
 /obj/structure/machinery/door_control{
 	pixel_x = -24;
@@ -97388,21 +97016,21 @@ byH
 jro
 anl
 bPh
-aoE
-vPk
+aos
+fJG
+qXx
 anl
-eHw
-uKx
-xYZ
+bPh
+aos
 fJG
 rfT
-avV
-lRS
-qkT
+aos
+bPh
 anl
-mem
-anJ
-exf
+joW
+rfT
+aos
+bPh
 anl
 ati
 vto
@@ -97475,21 +97103,21 @@ dPw
 jro
 anl
 nHl
-eiN
-rPH
+bdx
+bYt
 vpI
-anQ
-rJc
-joW
+anl
+nHl
+bdx
 bYt
 cSE
 bdx
 bds
-anB
+anl
 qnf
-anQ
-rPH
-gIh
+juM
+bdx
+bds
 anl
 ati
 erM
@@ -97561,22 +97189,22 @@ aiA
 mad
 jro
 anl
-nHl
-eiN
-rPH
-vRJ
-eiN
-rJc
-xnQ
-gLv
-fZW
-fZW
-bdt
-anB
-vRJ
-anQ
-rPH
-dms
+anl
+anl
+pDo
+gDB
+anl
+anl
+anl
+pDo
+bHR
+anl
+anl
+anl
+qda
+anT
+anl
+anl
 anl
 ati
 iRf
@@ -97648,22 +97276,22 @@ aiA
 mew
 jro
 anl
-cdv
-ycz
-pDo
-jfH
-dtN
-vRJ
-fkZ
-anL
-rLb
-oDd
-bdt
-cKx
-jfH
-anS
-anD
-qXx
+bPh
+aos
+bYt
+rPH
+anl
+bPh
+aos
+bom
+juM
+aos
+bPh
+anl
+eiN
+juM
+aos
+bPh
 anl
 ati
 ufe
@@ -97735,22 +97363,22 @@ aiA
 mew
 jro
 anl
-pUq
+nHl
+bdx
+bYt
+fek
 anl
-anl
-pUq
-oZw
-anK
-anE
-gDB
+nHl
+bdx
+bYt
 juM
-jyw
-wTK
-nEn
+bdx
+bds
+anl
 jfH
-pUq
-anl
-anl
+juM
+bdx
+bds
 anl
 yhi
 atc
@@ -97822,22 +97450,22 @@ aiA
 mew
 jro
 anl
-hJM
-mOI
-aoB
-jfH
-lUr
-anK
-anE
-jcr
-bFZ
-anE
-bdt
-gCg
 anl
+anl
+pDo
+fek
+anl
+anl
+anl
+pDo
 anT
-anJ
-qsV
+anl
+anl
+anl
+oJV
+anT
+anl
+anl
 anl
 yhi
 atb
@@ -97909,22 +97537,22 @@ aiA
 mew
 jro
 anl
-fSF
-eiN
-rPH
+bPh
+aos
+rLb
 fek
-anQ
-anK
-anE
-gSb
-imk
-qxn
-bdt
-anB
+anl
+bPh
+aos
+bYt
+juM
+aos
+bPh
+anl
 lJw
-anQ
-rPH
-qsV
+juM
+aos
+bPh
 anl
 yhi
 atb
@@ -97996,22 +97624,22 @@ aiA
 rfA
 jro
 anl
-fSF
-eiN
-rPH
-vRJ
-anQ
-vRJ
-aoh
-erY
-qda
-veD
-wTK
-anB
-anK
-anQ
-rPH
-gae
+nHl
+bdx
+rLb
+fek
+anl
+nHl
+bdx
+bYt
+juM
+bdx
+bds
+anl
+nEn
+juM
+bdx
+bds
 anl
 vkR
 atb
@@ -98083,22 +97711,22 @@ aiA
 mew
 jro
 anl
-rHl
-ycz
-pDo
-pUq
-tJH
-vRJ
-gLv
-gLv
-fZW
-gLv
-wTK
-cKx
 anl
-anS
-oty
-oHw
+anl
+pDo
+rPH
+anl
+anl
+anl
+bdu
+fkZ
+anl
+anl
+anl
+eiN
+anT
+anl
+anl
 anl
 ati
 iRf
@@ -98170,22 +97798,22 @@ aiA
 mew
 jro
 anl
+bPh
+aos
+bYt
+ucn
 anl
-pUq
-pUq
-pUq
-tMP
-rJc
+bPh
 aos
 rLb
-rLb
-lni
-wTK
-nZA
+fSF
+aos
+bPh
 anl
-anl
-anl
-anl
+anD
+juM
+aos
+bPh
 anl
 aWk
 ufe
@@ -98257,22 +97885,22 @@ aiA
 mew
 jro
 anl
-klh
-awB
+nHl
+bdx
 awA
 vfa
-ucn
-vRJ
-qxn
-dbc
+anl
+nHl
+bdx
+cKx
 lIG
-anE
-bdt
-vIy
+bdx
+bds
+anl
 anZ
 tLP
-avQ
-dTD
+bdx
+bds
 anl
 ati
 iRf
@@ -98344,22 +97972,22 @@ aiA
 mew
 jro
 anl
-jbL
-vRJ
-vRJ
+anl
+anl
+ihS
 fsS
-vRJ
-anK
-anE
+anl
+anl
+anl
 pXL
 dlb
-anE
-bdu
-bdx
+anl
+anl
+anl
 eVn
-bdx
-bds
-avG
+veD
+anl
+anl
 anl
 ati
 vto
@@ -98432,20 +98060,20 @@ mew
 jro
 anl
 qha
-vRJ
-gLv
-fZW
-fZW
-gLv
+aoq
+nTc
+aoq
+ycz
+gae
 fMr
 nTc
-rwh
-anE
-anU
-anU
-anU
-gLv
-bdt
+nTc
+dms
+mem
+tMP
+nTc
+nTc
+aoq
 avI
 anl
 ati
@@ -98519,23 +98147,23 @@ mew
 jro
 anl
 awC
-anK
+mKU
+gLv
+gLv
+gLv
+gLv
+gLv
+anU
+anU
+anU
 anU
 gLv
 gLv
+gLv
 anU
-mnO
-aoq
-aoq
-aol
-pWZ
-anU
-anU
-anU
-wTK
 aPE
 anl
-ati
+jbL
 atb
 cZy
 alm
@@ -98606,23 +98234,23 @@ byP
 jro
 anl
 awD
-vRJ
-fZW
-bqs
-gLv
+anU
 qxe
-fZW
-gLv
-anU
-anU
-fZW
-gLv
+qxe
+qxe
+qxe
+qxe
+bpb
+bpb
+bpb
+bpb
+bpb
+bpb
 bpb
 anU
-wTK
-avJ
-vqo
-ati
+bdo
+anl
+abU
 atc
 cZy
 alm
@@ -98693,23 +98321,23 @@ bHc
 mXO
 anl
 siC
-vRJ
-fZW
-bHR
-gAc
-aQh
-nxE
-ppK
-awp
-pAY
-rAT
-wJN
-ssA
-gLv
+qsV
+nKz
+anE
+anE
+anE
+anK
+anK
+anK
+anK
+anE
+anE
+anE
+nKz
 bdt
 bdo
-anl
-abU
+lUr
+ati
 vDH
 asX
 alm
@@ -98780,20 +98408,20 @@ mew
 npl
 anl
 anQ
-anK
-gLv
-kyx
+qsV
+nKz
+dbc
 wJN
-wJN
-wJN
+gSb
+nKz
 gFf
-wJN
-gAc
-wJN
+gFf
+nKz
+oDd
 wJN
 bpd
-anU
-bdu
+nKz
+bdt
 bdp
 bdl
 bdi
@@ -98869,22 +98497,22 @@ aYf
 bqv
 gag
 nKz
-mNJ
-boW
-mKU
-ihS
-oJV
-jDM
-xGq
-ska
-boW
-bpe
+anE
+anE
+anE
+anK
+vRJ
+vRJ
+anK
+anE
+anE
+anE
 nKz
-boP
+bdt
 boM
-boK
-iRN
-bom
+ann
+yhi
+atb
 asX
 alm
 amY
@@ -98953,23 +98581,23 @@ aiQ
 eTz
 bpT
 anl
-hbc
-rJc
-anU
-gLv
-gLv
-anU
-anU
-gLv
-gLv
-qxe
-fZW
-fZW
-fZW
-fZW
-rJc
+eiN
+bpe
+boW
+awB
+cdv
+cdv
+cdv
+boW
+boW
+cdv
+cdv
+cdv
+awB
+cdv
+nxE
 voi
-ann
+lUr
 yhi
 atb
 asX
@@ -99041,22 +98669,22 @@ eTz
 bpT
 anl
 aoF
-anK
-anK
+fZW
+fZW
 gwo
-vRJ
-vRJ
-vRJ
-vRJ
-vRJ
-tXO
+anU
+anU
+gLv
+gLv
+gLv
+anU
+anU
+anU
 rJc
-vRJ
-rJc
-vRJ
-rJc
-rut
-anm
+anU
+gLv
+rPH
+pUq
 ati
 atb
 asX
@@ -99130,19 +98758,19 @@ anl
 anS
 anL
 anL
-rLb
-rLb
-rLb
-rLb
-rLb
 anL
-yfl
-rLb
-rLb
-wxV
-rLb
-rLb
-pDo
+anL
+anL
+anL
+anL
+anL
+anL
+anL
+anL
+anL
+anL
+anL
+awp
 anl
 ati
 atc
@@ -99229,9 +98857,9 @@ aoi
 aoa
 nyF
 ehu
-anE
-vqo
-ati
+qxn
+anl
+jbL
 vDH
 asX
 alm
