@@ -837,7 +837,7 @@
 		/obj/item/storage/box/spec/scout,
 		/obj/item/storage/box/spec/demolitionist,
 		/obj/item/storage/box/spec/sniper,
-		/obj/item/storage/box/kit/heavy_support,
+		/obj/item/storage/box/spec/sharp_operator,
 		/obj/item/storage/box/kit/pursuit,
 		/obj/item/storage/box/kit/mini_jtac,
 		)
