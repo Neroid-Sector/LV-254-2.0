@@ -46,7 +46,7 @@
 
 /obj/effect/vehicle_spawner/aev
 	name = "AEV Spawner"
-	icon = 'icons/obj/vehicles/tank.dmi'
+	icon = 'icons/obj/vehicles/longstreet.dmi'
 	icon_state = "aev_base"
 	pixel_x = -48
 	pixel_y = -48

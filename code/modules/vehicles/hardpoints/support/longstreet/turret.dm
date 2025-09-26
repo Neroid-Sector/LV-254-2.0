@@ -2,7 +2,7 @@
 	name = "\improper M34A2-A Multipurpose Turret"
 	desc = "The centerpiece of the tank. Designed to support quick installation and deinstallation of various tank weapon modules. Has inbuilt smoke screen deployment system."
 
-	icon = 'icons/obj/vehicles/tank.dmi'
+	icon = 'icons/obj/vehicles/longstreet.dmi'
 	icon_state = "tank_turret_0"
 	disp_icon = "tank"
 	disp_icon_state = "tank_turret"

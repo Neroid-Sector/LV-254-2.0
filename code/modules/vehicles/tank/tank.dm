@@ -2,7 +2,7 @@
 	name = "M34A2 Longstreet Light Tank"
 	desc = "A giant piece of armor with a big gun, you know what to do. Entrance in the back."
 
-	icon = 'icons/obj/vehicles/tank.dmi'
+	icon = 'icons/obj/vehicles/longstreet.dmi'
 	icon_state = "tank_base"
 	pixel_x = -48
 	pixel_y = -48
@@ -199,7 +199,7 @@
 */
 /obj/effect/vehicle_spawner/tank
 	name = "Tank Spawner"
-	icon = 'icons/obj/vehicles/tank.dmi'
+	icon = 'icons/obj/vehicles/longstreet.dmi'
 	icon_state = "tank_base"
 	pixel_x = -48
 	pixel_y = -48

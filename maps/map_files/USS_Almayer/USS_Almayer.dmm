@@ -37013,7 +37013,7 @@
 /obj/structure/machinery{
 	density = 1;
 	dir = 4;
-	icon = 'icons/obj/vehicles/tank.dmi';
+	icon = 'icons/obj/vehicles/longstreet.dmi';
 	icon_state = "tank_base";
 	explo_proof = 1;
 	name = "M34A2 Longstreet Light Tank";

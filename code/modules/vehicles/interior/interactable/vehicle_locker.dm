@@ -138,7 +138,7 @@
 /obj/structure/vehicle_locker/tank
 	name = "storage compartment"
 	desc = "Small storage unit allowing vehicle crewmen to store their personal possessions or weaponry ammunition. Only vehicle crewmen can access these."
-	icon = 'icons/obj/vehicles/interiors/tank.dmi'
+	icon = 'icons/obj/vehicles/interiors/longstreet.dmi'
 	icon_state = "locker"
 
 /obj/structure/vehicle_locker/med
