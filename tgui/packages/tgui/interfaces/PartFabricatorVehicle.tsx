@@ -1,10 +1,12 @@
 import type { BooleanLike } from 'common/react';
+import { useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import {
   Button,
   Collapsible,
   Divider,
   Flex,
+  Input,
   LabeledList,
   Section,
 } from 'tgui/components';
@@ -32,6 +34,7 @@ interface Data {
 export const PartFabricatorVehicle = (props, context) => {
   const { act, data } = useBackend<Data>();
   const selected = data.selected_vehicle;
+  const [search, setSearch] = useState('');
 
   // Helper to style selected vehicle buttons
   const selectedStyle = (key: string) =>
@@ -46,6 +49,9 @@ export const PartFabricatorVehicle = (props, context) => {
     'Secondary Ammunition',
     'Support Modules',
   ];
+
+  // Normalize search query
+  const query = search.toLowerCase();
 
   return (
     <Window width={950} height={825}>
@@ -106,36 +112,58 @@ export const PartFabricatorVehicle = (props, context) => {
             </Section>
 
             <Section title="Categories" scrollable fill>
-              {categories.map((cat) => (
-                <Collapsible key={cat} title={cat}>
-                  {data[cat]?.length ? (
-                    <LabeledList>
-                      {data[cat].map((item, i) => (
-                        <LabeledList.Item
-                          key={i}
-                          label={item.name}
-                          className="underline"
-                          buttons={
-                            <Button
-                              icon="wrench"
-                              tooltip={item.desc}
-                              tooltipPosition="left"
-                              disabled={data.busy || !selected}
-                              onClick={() =>
-                                act('produce', { category: cat, index: i + 1 })
-                              }
-                            >
-                              {`Fabricate (${item.cost})`}
-                            </Button>
-                          }
-                        />
-                      ))}
-                    </LabeledList>
-                  ) : (
-                    <span>No items available</span>
-                  )}
-                </Collapsible>
-              ))}
+              {/* Search bar */}
+              <Input
+                fluid
+                placeholder="Search items..."
+                value={search}
+                onInput={(e, value) => setSearch(value)}
+                mb={2}
+              />
+
+              {categories.map((cat) => {
+                const items = data[cat] || [];
+                // Filter items by search query
+                const filtered = items.filter(
+                  (item) =>
+                    item.name.toLowerCase().includes(query) ||
+                    item.desc.toLowerCase().includes(query),
+                );
+
+                return (
+                  <Collapsible key={cat} title={cat}>
+                    {filtered.length ? (
+                      <LabeledList>
+                        {filtered.map((item, i) => (
+                          <LabeledList.Item
+                            key={i}
+                            label={item.name}
+                            className="underline"
+                            buttons={
+                              <Button
+                                icon="wrench"
+                                tooltip={item.desc}
+                                tooltipPosition="left"
+                                disabled={data.busy || !selected}
+                                onClick={() =>
+                                  act('produce', {
+                                    category: cat,
+                                    index: i + 1,
+                                  })
+                                }
+                              >
+                                {`Fabricate (${item.cost})`}
+                              </Button>
+                            }
+                          />
+                        ))}
+                      </LabeledList>
+                    ) : (
+                      <span>No matching items</span>
+                    )}
+                  </Collapsible>
+                );
+              })}
             </Section>
           </Flex.Item>
         </Flex>
