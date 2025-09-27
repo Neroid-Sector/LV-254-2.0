@@ -13,7 +13,7 @@
 		combined += GLOB.cm_vending_gear_marine
 		combined += GLOB.cm_vending_gear_medic
 		combined += GLOB.cm_vending_gear_engi
-		combined += GLOB.cm_vending_clothing_smartgun
+		combined += GLOB.cm_vending_gear_smartgun
 		combined += GLOB.cm_vending_gear_spec
 		combined += GLOB.cm_vending_gear_tl
 		return combined
