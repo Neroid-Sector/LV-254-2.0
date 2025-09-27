@@ -33370,11 +33370,6 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
-"hHR" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stool,
-/turf/open/floor/almayer,
-/area/blackgold/middle/rooms/squad/prep)
 "hHT" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	req_access = list(19);
@@ -42087,6 +42082,10 @@
 /obj/item/seeds/grapeseed,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/cells)
+"qAr" = (
+/obj/item/storage/toolbox/mechanical/green,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/squad/prep)
 "qAu" = (
 /obj/effect/decal/cleanable/vomit,
 /turf/open/floor/wood/ship,
@@ -43555,10 +43554,6 @@
 /obj/structure/platform/metal/ship/west,
 /turf/open/floor/almayer/plating_striped/west,
 /area/blackgold/lower/rooms/engineering/reactor)
-"rXO" = (
-/obj/item/storage/toolbox/mechanical/green,
-/turf/open/floor/almayer,
-/area/blackgold/middle/rooms/squad/prep)
 "rYn" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/flooredge/west,
@@ -47467,6 +47462,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blackfull2,
 /area/blackgold/middle/rooms/hangar)
+"wpo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stool,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/squad/prep)
 "wps" = (
 /obj/structure/bed/chair/comfy/charlie{
 	dir = 4
@@ -98245,13 +98245,13 @@ awC
 mKU
 gLv
 gLv
-hHR
-hHR
+wpo
+wpo
 gLv
 anU
 anU
 anU
-rXO
+qAr
 gLv
 gLv
 gLv
