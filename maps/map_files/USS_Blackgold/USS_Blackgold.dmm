@@ -4869,10 +4869,6 @@
 "aqQ" = (
 /turf/open/floor/almayer/silver/west,
 /area/blackgold/middle/hallways/mid/aft)
-"aqR" = (
-/obj/effect/vehicle_spawner/tank/fixed,
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/underdeck/vehicle)
 "aqS" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/mono,
@@ -30898,12 +30894,6 @@
 /obj/item/tool/pen,
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/brig/cells)
-"eFg" = (
-/obj/effect/vehicle_spawner/tank/fixed{
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/underdeck/vehicle)
 "eFm" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/almayer,
@@ -45521,12 +45511,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
-"tZr" = (
-/obj/effect/vehicle_spawner/aev{
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/underdeck/vehicle)
 "tZu" = (
 /turf/closed/wall/almayer/outer,
 /area/blackgold/upper/maint/port/fore)
@@ -56122,7 +56106,7 @@ obL
 lsW
 ssa
 edc
-aqR
+edc
 edc
 ssa
 jnf
@@ -56136,7 +56120,7 @@ qlE
 jnf
 ssa
 edc
-eFg
+edc
 edc
 ssa
 lsW
@@ -56745,7 +56729,7 @@ qlE
 jnf
 ssa
 edc
-tZr
+edc
 edc
 ssa
 lsW
