@@ -3967,7 +3967,8 @@
 "anD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/mk1/full{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -30707,7 +30708,8 @@
 "eVn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/mk1/full{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
@@ -30903,8 +30905,9 @@
 /area/blackgold/upper/rooms/brig/medical)
 "fek" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/auto_rack/uscm/mk1/full{
-	pixel_y = -32
+/obj/structure/machinery/auto_rack/uscm/buckshot/full{
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -31175,7 +31178,8 @@
 /area/blackgold/middle/rooms/aientrance)
 "fsS" = (
 /obj/structure/machinery/auto_rack/uscm/m39/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
@@ -31464,6 +31468,10 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	density = 0;
+	pixel_x = -32
+	},
 /turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
 "fJH" = (
@@ -32309,7 +32317,8 @@
 "gDB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/m4ra/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -33927,6 +33936,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/redfull2,
 /area/blackgold/middle/rooms/briefing)
+"ipG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk221/full{
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "ipI" = (
 /obj/structure/machinery/cryopod/right{
 	layer = 3.1;
@@ -34990,9 +35007,13 @@
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
 "joW" = (
-/obj/structure/machinery/auto_rack/uscm/mk221/full{
+/obj/structure/machinery/auto_rack/uscm/m39/full{
 	pixel_y = 32;
 	density = 0
+	},
+/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full/locked{
+	density = 0;
+	pixel_x = -32
 	},
 /turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
@@ -37222,8 +37243,9 @@
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/underdeck/req)
 "lJw" = (
-/obj/structure/machinery/auto_rack/uscm/slugs/full{
-	pixel_y = 32
+/obj/structure/machinery/auto_rack/uscm/m4ra/full{
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -38402,6 +38424,14 @@
 /obj/structure/bed/chair/bolted,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/upper/rooms/brig/lobby)
+"mUY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/m4ra/full{
+	pixel_y = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
 "mVu" = (
 /obj/structure/machinery/ares/substrate,
 /obj/structure/machinery/ares/processor{
@@ -38852,6 +38882,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orangefull,
 /area/blackgold/middle/rooms/squad)
+"nqy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "nqA" = (
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/almayer/silver/south,
@@ -39166,7 +39204,7 @@
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/lower/rooms/conference)
 "nEn" = (
-/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full{
+/obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
 	pixel_y = 32;
 	density = 0
 	},
@@ -40304,7 +40342,8 @@
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
 "oJV" = (
 /obj/structure/machinery/auto_rack/uscm/buckshot/full{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -41610,10 +41649,11 @@
 /turf/open/floor/almayer/black/west,
 /area/blackgold/middle/hallways/mid/aft)
 "qda" = (
-/obj/structure/machinery/auto_rack/uscm/slugs/full{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/m39/full{
+	pixel_y = 32;
+	density = 0
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "qdf" = (
@@ -41802,10 +41842,11 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "qnf" = (
-/obj/structure/machinery/auto_rack/uscm/buckshot/full{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/m39_ammo/full{
+	pixel_y = 32;
+	density = 0
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "qnP" = (
@@ -41853,6 +41894,14 @@
 	},
 /turf/open/floor/hybrisa/carpet/carpetreddeco,
 /area/blackgold/upper/rooms/cic/conference)
+"qqJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full{
+	density = 0;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "qqX" = (
 /turf/open/floor/almayer/red/east,
 /area/blackgold/upper/rooms/brig/stairs)
@@ -42531,7 +42580,12 @@
 /area/blackgold/upper/maint/star/fore)
 "qXx" = (
 /obj/structure/machinery/auto_rack/uscm/m4ra/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
+	},
+/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full/locked{
+	density = 0;
+	pixel_x = -32
 	},
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
@@ -42705,6 +42759,10 @@
 "rfT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
+	},
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	density = 0;
+	pixel_x = -32
 	},
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
@@ -42923,6 +42981,14 @@
 	},
 /turf/open/floor/almayer/flooredge/northeast,
 /area/blackgold/upper/rooms/cic)
+"rpy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "rqd" = (
 /turf/open/floor/almayer/aicore/no_build/ai_silver{
 	dir = 10
@@ -45326,7 +45392,8 @@
 "ucn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/m39/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -46251,6 +46318,14 @@
 /obj/structure/platform/metal/almayer/east,
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
+"vdd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
+	pixel_y = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
 "vdl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/powerloader,
@@ -46313,7 +46388,8 @@
 /area/blackgold/upper/rooms/captain_mess)
 "vfa" = (
 /obj/structure/machinery/auto_rack/uscm/m39_ammo/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/southeast,
@@ -46500,7 +46576,8 @@
 /area/blackgold/lower/maint/port/fore)
 "vpI" = (
 /obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -97279,7 +97356,7 @@ anl
 bPh
 aos
 bYt
-rPH
+nqy
 anl
 bPh
 aos
@@ -97288,7 +97365,7 @@ juM
 aos
 bPh
 anl
-eiN
+vdd
 juM
 aos
 bPh
@@ -97366,7 +97443,7 @@ anl
 nHl
 bdx
 bYt
-fek
+ipG
 anl
 nHl
 bdx
@@ -97540,7 +97617,7 @@ anl
 bPh
 aos
 rLb
-fek
+rpy
 anl
 bPh
 aos
@@ -97627,7 +97704,7 @@ anl
 nHl
 bdx
 rLb
-fek
+qqJ
 anl
 nHl
 bdx
@@ -97714,7 +97791,7 @@ anl
 anl
 anl
 pDo
-rPH
+rpy
 anl
 anl
 anl
@@ -97723,7 +97800,7 @@ fkZ
 anl
 anl
 anl
-eiN
+mUY
 anT
 anl
 anl
