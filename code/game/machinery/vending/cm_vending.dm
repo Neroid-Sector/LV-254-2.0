@@ -555,35 +555,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 				var/can_buy_flags = itemspec[4]
 				if(can_buy_flags)
 					if(can_buy_flags == MARINE_CAN_BUY_ESSENTIALS)
-						if(vendor_role.Find(JOB_SQUAD_SPECIALIST))
-							// handle specalist essential gear assignment
-							if(user.job != JOB_SQUAD_SPECIALIST)
-								to_chat(user, SPAN_WARNING("Only specialists can take specialist sets."))
-								vend_fail()
-								return FALSE
 
-							else if(!user.skills || user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_TRAINED)
-								to_chat(user, SPAN_WARNING("You already have a specialization."))
-								vend_fail()
-								return FALSE
-
-							var/p_name = itemspec[1]
-							if(!(p_name in GLOB.specialist_set_name_dict))
-								return
-
-							if(GLOB.specialist_set_name_dict[p_name].get_available_vendor_num() <= 0)
-								to_chat(user, SPAN_WARNING("That set is already taken."))
-								vend_fail()
-								return FALSE
-
-							var/obj/item/card/id/card = human_user.get_idcard()
-							if(!istype(card) || !card.check_biometrics(user))
-								to_chat(user, SPAN_WARNING("You must be wearing your [SPAN_INFO("dog tags")] to select a specialization!"))
-								return FALSE
-
-							GLOB.specialist_set_name_dict[p_name].redeem_set(human_user)
-
-						else if(vendor_role.Find(JOB_SYNTH))
+						if(vendor_role.Find(JOB_SYNTH))
 							if(user.job != JOB_SYNTH)
 								to_chat(user, SPAN_WARNING("Only USCM Synthetics may vend experimental tool tokens."))
 								vend_fail()
