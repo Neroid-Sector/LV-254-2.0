@@ -28,7 +28,7 @@
 	else if(user.job == JOB_SQUAD_SPECIALIST)
 		return GLOB.cm_vending_gear_spec
 	else if(user.job == JOB_SQUAD_SMARTGUN)
-		return GLOB.cm_vending_clothing_smartgun
+		return GLOB.cm_vending_gear_smartgun
 	else if(user.job == JOB_SQUAD_MARINE)
 		return GLOB.cm_vending_gear_marine
 	return ..()

@@ -530,6 +530,7 @@
 
 /obj/item/storage/box/kit/pursuit/fill_preset_inventory()
 	new /obj/item/weapon/gun/smg/m39(src)
+	new /obj/item/clothing/gloves/marine/insulated(src)
 	new /obj/item/weapon/shield/riot/ballistic/uscm(src)
 	new /obj/item/storage/large_holster/machete/full(src)
 	new /obj/item/attachable/stock/smg/collapsible/brace(src)
