@@ -378,13 +378,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 //------------Squad Smartgunner---------------
 GLOBAL_LIST_INIT(cm_vending_clothing_smartgun, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
-		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/clothing/ears/earmuffs/earplugs, /obj/item/clothing/head/cmcap/bridge, /obj/item/clothing/head/helmet/marine,  /obj/item/clothing/accessory/flak), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/clothing/head/cmcap/bridge, /obj/item/clothing/head/helmet/marine,  /obj/item/clothing/accessory/flak), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 		list("Map", 0, /obj/item/map/current_map, MARINE_CAN_BUY_KIT, VENDOR_ITEM_MANDATORY),
 
 		list("RADIO HEADSET (PICK ONE)", 0, null, null, null),
-		list("Marine radio headset", 0, /obj/item/device/radio/headset/almayer/marine, MARINE_CAN_BUY_EAR, VENDOR_ITEM_RECOMMENDED),
-		list("M5 Camera Gear radio headset", 0, /obj/item/device/radio/headset/almayer/marine/overwatch_camera, MARINE_CAN_BUY_EAR, VENDOR_ITEM_RECOMMENDED),
+		list("Marine radio headset", 0, list(/obj/item/device/radio/headset/almayer/marine, /obj/item/clothing/ears/earmuffs/earplugs), MARINE_CAN_BUY_EAR, VENDOR_ITEM_RECOMMENDED),
+		list("M5 Camera Gear radio headset", 0, list(/obj/item/device/radio/headset/almayer/marine/overwatch_camera, /obj/item/clothing/ears/earmuffs/earplugs), MARINE_CAN_BUY_EAR, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT", 0, null, null, null),
 		list("M802 Smartgunner Sidearm Belt", 0, /obj/item/storage/belt/gun/smartgunner/teamwork/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),

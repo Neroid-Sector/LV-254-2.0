@@ -3967,7 +3967,8 @@
 "anD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/mk1/full{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -4047,6 +4048,7 @@
 /turf/closed/wall/almayer,
 /area/blackgold/lower/rooms/range)
 "anS" = (
+/obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer/green/northeast,
 /area/blackgold/middle/rooms/squad/prep)
 "anT" = (
@@ -4253,9 +4255,12 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
 "aoF" = (
-/obj/structure/machinery/power/apc/almayer/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/k9_handler{
+	density = 0;
+	pixel_y = 32
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "aoG" = (
@@ -28594,6 +28599,14 @@
 /obj/structure/pallet/standard,
 /turf/open/floor/plating,
 /area/blackgold/upper/maint/star/aft)
+"cxR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/buckshot/full{
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "cyb" = (
 /obj/structure/machinery/door/airlock/almayer/security/reinforced{
 	name = "\improper Chief MP's Bedroom";
@@ -29275,10 +29288,7 @@
 /area/blackgold/lower/rooms/aicore)
 "dms" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/clothing/squad_marines{
-	pixel_x = -32;
-	density = 0
-	},
+/obj/item/stool,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "dmU" = (
@@ -30047,6 +30057,10 @@
 /area/blackgold/upper/rooms/commandbunks/xo)
 "eiN" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/k9_synth{
+	density = 0;
+	pixel_y = 32
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "ejs" = (
@@ -30707,7 +30721,8 @@
 "eVn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/mk1/full{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
@@ -30904,7 +30919,8 @@
 "fek" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/mk1/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -31175,7 +31191,8 @@
 /area/blackgold/middle/rooms/aientrance)
 "fsS" = (
 /obj/structure/machinery/auto_rack/uscm/m39/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/squad/prep)
@@ -31464,6 +31481,10 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	density = 0;
+	pixel_x = -32
+	},
 /turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
 "fJH" = (
@@ -31518,10 +31539,11 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "fMr" = (
-/obj/structure/machinery/cm_vending/clothing/squad_marines{
-	pixel_x = -32;
-	density = 0
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_y = 18;
+	pixel_x = -7
 	},
+/obj/item/storage/pill_bottle/packet/tramadol,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "fMH" = (
@@ -31776,10 +31798,8 @@
 /turf/open/floor/almayer,
 /area/blackgold/middle/rooms/squad/prep)
 "gae" = (
-/obj/structure/machinery/cm_vending/gear/squad_marines{
-	pixel_x = -32;
-	density = 0
-	},
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/nade_box/mortar,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "gag" = (
@@ -31930,6 +31950,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/test_floor6,
 /area/blackgold/lower/rooms/engineering/reactor)
+"gid" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
+	pixel_y = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
 "gif" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
@@ -32309,7 +32337,8 @@
 "gDB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/m4ra/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -34318,6 +34347,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/mid)
+"iHw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk1_ammo/full{
+	density = 0;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "iHD" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 8
@@ -34990,9 +35027,13 @@
 /turf/open/floor/hybrisa/carpet/carpetbluedeco,
 /area/blackgold/upper/rooms/commandbunks)
 "joW" = (
-/obj/structure/machinery/auto_rack/uscm/mk221/full{
+/obj/structure/machinery/auto_rack/uscm/m39/full{
 	pixel_y = 32;
 	density = 0
+	},
+/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full/locked{
+	density = 0;
+	pixel_x = -32
 	},
 /turf/open/floor/almayer/green/northwest,
 /area/blackgold/middle/rooms/squad/prep)
@@ -36456,6 +36497,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/blackgold/middle/hallways/star/fore)
+"kWn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/mk221/full{
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "kXu" = (
 /turf/open/floor/almayer/purple/south,
 /area/blackgold/upper/hallways/mid/fore)
@@ -37222,8 +37271,9 @@
 /turf/open/floor/almayer/no_build/plate,
 /area/blackgold/underdeck/req)
 "lJw" = (
-/obj/structure/machinery/auto_rack/uscm/slugs/full{
-	pixel_y = 32
+/obj/structure/machinery/auto_rack/uscm/m4ra/full{
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -37596,10 +37646,12 @@
 /area/blackgold/upper/rooms/brig/chief)
 "mem" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/gear/squad_marines{
-	pixel_x = -32;
-	density = 0
+/obj/structure/surface/table/almayer,
+/obj/item/tool/screwdriver{
+	pixel_x = -1;
+	pixel_y = 2
 	},
+/obj/item/prop/helmetgarb/gunoil,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "meq" = (
@@ -39166,7 +39218,7 @@
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/lower/rooms/conference)
 "nEn" = (
-/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full{
+/obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
 	pixel_y = 32;
 	density = 0
 	},
@@ -40304,7 +40356,8 @@
 /area/blackgold/upper/rooms/companycommand/bravo/cc)
 "oJV" = (
 /obj/structure/machinery/auto_rack/uscm/buckshot/full{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -41610,10 +41663,11 @@
 /turf/open/floor/almayer/black/west,
 /area/blackgold/middle/hallways/mid/aft)
 "qda" = (
-/obj/structure/machinery/auto_rack/uscm/slugs/full{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/m39/full{
+	pixel_y = 32;
+	density = 0
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "qdf" = (
@@ -41802,10 +41856,11 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/alpha)
 "qnf" = (
-/obj/structure/machinery/auto_rack/uscm/buckshot/full{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/m39_ammo/full{
+	pixel_y = 32;
+	density = 0
+	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
 "qnP" = (
@@ -42027,6 +42082,10 @@
 /obj/item/seeds/grapeseed,
 /turf/open/floor/almayer/cargo,
 /area/blackgold/lower/rooms/brig/cells)
+"qAr" = (
+/obj/item/storage/toolbox/mechanical/green,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/squad/prep)
 "qAu" = (
 /obj/effect/decal/cleanable/vomit,
 /turf/open/floor/wood/ship,
@@ -42531,7 +42590,12 @@
 /area/blackgold/upper/maint/star/fore)
 "qXx" = (
 /obj/structure/machinery/auto_rack/uscm/m4ra/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
+	},
+/obj/structure/machinery/auto_rack/uscm/smartgun_ammo/full/locked{
+	density = 0;
+	pixel_x = -32
 	},
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
@@ -42705,6 +42769,10 @@
 "rfT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
+	},
+/obj/structure/machinery/auto_rack/uscm/mk1/full{
+	density = 0;
+	pixel_x = -32
 	},
 /turf/open/floor/almayer/green/southwest,
 /area/blackgold/middle/rooms/squad/prep)
@@ -45134,6 +45202,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "tNl" = (
@@ -45326,7 +45395,8 @@
 "ucn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/auto_rack/uscm/m39/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -46313,7 +46383,8 @@
 /area/blackgold/upper/rooms/captain_mess)
 "vfa" = (
 /obj/structure/machinery/auto_rack/uscm/m39_ammo/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/southeast,
@@ -46500,7 +46571,8 @@
 /area/blackgold/lower/maint/port/fore)
 "vpI" = (
 /obj/structure/machinery/auto_rack/uscm/m4ra_ammo/full{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
@@ -46626,6 +46698,14 @@
 /obj/structure/platform_decoration/metal/almayer/north,
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/blackgold/lower/rooms/aicore)
+"vuu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/slugs/full{
+	pixel_y = -32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/south,
+/area/blackgold/middle/rooms/squad/prep)
 "vuZ" = (
 /obj/effect/decal/cleanable/blood/tracks/wheels,
 /turf/open/floor/almayer/silver/east,
@@ -47382,6 +47462,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blackfull2,
 /area/blackgold/middle/rooms/hangar)
+"wpo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stool,
+/turf/open/floor/almayer,
+/area/blackgold/middle/rooms/squad/prep)
 "wps" = (
 /obj/structure/bed/chair/comfy/charlie{
 	dir = 4
@@ -48632,6 +48717,14 @@
 "xAC" = (
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/powered)
+"xAL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/auto_rack/uscm/m4ra/full{
+	pixel_y = 32;
+	density = 0
+	},
+/turf/open/floor/almayer/green/north,
+/area/blackgold/middle/rooms/squad/prep)
 "xAX" = (
 /obj/structure/platform_decoration/metal/almayer,
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom{
@@ -49050,6 +49143,8 @@
 /obj/structure/machinery/light/spot{
 	dir = 8
 	},
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/misc/flashlight/combat,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "ycH" = (
@@ -97279,7 +97374,7 @@ anl
 bPh
 aos
 bYt
-rPH
+vuu
 anl
 bPh
 aos
@@ -97288,7 +97383,7 @@ juM
 aos
 bPh
 anl
-eiN
+gid
 juM
 aos
 bPh
@@ -97366,7 +97461,7 @@ anl
 nHl
 bdx
 bYt
-fek
+kWn
 anl
 nHl
 bdx
@@ -97453,7 +97548,7 @@ anl
 anl
 anl
 pDo
-fek
+cxR
 anl
 anl
 anl
@@ -97627,7 +97722,7 @@ anl
 nHl
 bdx
 rLb
-fek
+iHw
 anl
 nHl
 bdx
@@ -97714,7 +97809,7 @@ anl
 anl
 anl
 pDo
-rPH
+fek
 anl
 anl
 anl
@@ -97723,7 +97818,7 @@ fkZ
 anl
 anl
 anl
-eiN
+xAL
 anT
 anl
 anl
@@ -98150,13 +98245,13 @@ awC
 mKU
 gLv
 gLv
+wpo
+wpo
 gLv
-gLv
-gLv
 anU
 anU
 anU
-anU
+qAr
 gLv
 gLv
 gLv
