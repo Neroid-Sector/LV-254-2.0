@@ -5,6 +5,7 @@
 	layer = ABOVE_XENO_LAYER
 	vehicle_flags = VEHICLE_CLASS_LIGHT
 	vehicle_pen_armor = VEHICLE_ARMOR_HEAVY
+	flatbed = FALSE
 
 	icon = 'icons/obj/vehicles/jeep.dmi'
 	icon_state = "jeep"
@@ -54,8 +55,8 @@
 	desc = "An Armat designed light utility vehicle based around providing more protection and upgradeability compared to older jeeps, this one is configured with a flatbed to store pallets."
 	icon_state = "jeep_bed"
 	interior_map = /datum/map_template/interior/jeep_bed
+	flatbed = TRUE
 
-	cargo_allowed = list(/obj/structure/pallet, /obj/structure/closet)
 	max_stored_cargo = 1
 
 	hardpoints_allowed = list(
