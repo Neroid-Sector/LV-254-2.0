@@ -599,12 +599,13 @@
 	if(HAS_FLAG(ammo_flags, AMMO_ROCKET))
 		// 1.5 second delay for balance (requires good positioning)
 		// Used currently for the TOW launchers
-		play_firing_sounds()
+		playsound(src, 'sound/machines/terminal_success.ogg', 20, 1, 5)
 		spawn(15)
 			if(projectile_to_fire)
 				INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed)
 				projectile_to_fire = null
 
+				play_firing_sounds()
 				shots_fired++
 				if(use_muzzle_flash)
 					muzzle_flash(Get_Angle(origin_turf, target))

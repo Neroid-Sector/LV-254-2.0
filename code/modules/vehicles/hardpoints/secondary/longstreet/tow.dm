@@ -5,7 +5,7 @@
 	icon_state = "tow_launcher"
 	disp_icon = "tank"
 	disp_icon_state = "towlauncher"
-	activation_sounds = list('sound/machines/terminal_success.ogg')
+	activation_sounds = list('sound/weapons/gun_rocketlauncher.ogg')
 
 	health = 500
 	firing_arc = 60

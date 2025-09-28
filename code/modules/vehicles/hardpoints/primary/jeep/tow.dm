@@ -7,7 +7,7 @@
 	icon_state = "jeep_tow"
 	disp_icon = "jeep"
 	disp_icon_state = "jeep_tow"
-	activation_sounds = list('sound/machines/terminal_success.ogg')
+	activation_sounds = list('sound/weapons/gun_rocketlauncher.ogg')
 
 	health = 500
 	firing_arc = 60
