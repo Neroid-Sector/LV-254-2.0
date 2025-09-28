@@ -35,7 +35,7 @@
 		hdpt_layer = HDPT_LAYER_ARMOR
 		if(damage_multiplier == initial(damage_multiplier))
 			damage_multiplier = 0.5
-		if(health <= 0)
+		if(health == initial(health))
 			health = 1000
 
 //-------------------------------------------------------------------------------//
