@@ -21,7 +21,7 @@
 
 	use_muzzle_flash = FALSE
 
-	var/max_range = 8
+	var/max_range = 14
 
 	px_offsets = list(
 		"1" = list(0, 0),

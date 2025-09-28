@@ -333,7 +333,7 @@
 	icon_state = "smoke_shell"
 
 /datum/ammo/grenade_container/grenade
-	max_range = 8
+	max_range = 14
 
 /datum/ammo/hugger_container
 	name = "hugger shell"
