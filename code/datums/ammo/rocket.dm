@@ -199,7 +199,7 @@
 	name = "80mm AP cannon round"
 	icon_state = "ltb_ap"
 	max_range = 30
-	shell_speed = AMMO_SPEED_TIER_4
+	shell_speed = AMMO_SPEED_TIER_3
 
 /datum/ammo/rocket/ltb
 	name = "cannon round"
