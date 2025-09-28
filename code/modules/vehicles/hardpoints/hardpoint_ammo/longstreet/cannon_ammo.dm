@@ -21,7 +21,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi'
 	icon_state = "ltbcannon_ap_1"
 	w_class = SIZE_LARGE //Heavy fucker
-	default_ammo = /datum/ammo/rocket/ap
+	default_ammo = /datum/ammo/rocket/ap/ltb
 	max_rounds = 1
 	gun_type = /obj/item/hardpoint/primary/longstreet/cannon
 	point_cost = 600
