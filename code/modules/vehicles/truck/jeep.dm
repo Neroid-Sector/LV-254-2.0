@@ -4,7 +4,7 @@
 
 	layer = ABOVE_XENO_LAYER
 	vehicle_flags = VEHICLE_CLASS_LIGHT
-	vehicle_pen_armor = VEHICLE_ARMOR_HEAVY
+	vehicle_pen_armor = VEHICLE_ARMOR_LIGHT_ARMOR
 	flatbed = FALSE
 
 	icon = 'icons/obj/vehicles/jeep.dmi'

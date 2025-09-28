@@ -48,10 +48,10 @@
 
 	hdpt_layer = HDPT_LAYER_TURRET
 	px_offsets = list(
-		"1" = list(0, -10),
-		"2" = list(0, 10),
-		"4" = list(-10, 0),
-		"8" = list(10, 0)
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
 	)
 
 	var/gyro = FALSE

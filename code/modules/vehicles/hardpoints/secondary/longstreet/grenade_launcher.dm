@@ -22,10 +22,10 @@
 	use_muzzle_flash = FALSE
 
 	px_offsets = list(
-		"1" = list(0, 17),
+		"1" = list(0, 0),
 		"2" = list(0, 0),
-		"4" = list(6, 0),
-		"8" = list(-6, 17)
+		"4" = list(0, 0),
+		"8" = list(0, 0)
 	)
 
 	gun_firemode = GUN_FIREMODE_AUTOMATIC

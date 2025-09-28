@@ -17,7 +17,7 @@
 	px_offsets = list(
 		"1" = list(0, 0),
 		"2" = list(0, 0),
-		"4" = list(0, 32),
+		"4" = list(0, 0),
 		"8" = list(0, 0)
 	)
 

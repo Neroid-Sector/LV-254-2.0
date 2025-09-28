@@ -1,6 +1,6 @@
 /obj/item/hardpoint/primary/longstreet/cannon
 	name = "\improper LTB Cannon"
-	desc = "A primary cannon for tanks that shoots explosive rounds"
+	desc = "A 80mm cannon for the M34A2 Longstreet tank, you know what to do with it."
 
 	icon_state = "ltb_cannon"
 	disp_icon = "tank"
@@ -9,20 +9,21 @@
 
 	health = 500
 	firing_arc = 60
-	point_cost = 600
+	point_cost = 800
 
-	ammo = new /obj/item/ammo_magazine/hardpoint/primary/longstreet/cannon
-	max_clips = 3
+	ammo = new /obj/item/ammo_magazine/hardpoint/primary/longstreet/he
+	max_clips = 2
 
 	allowed_ammo_types = list(
-		/obj/item/ammo_magazine/hardpoint/primary/longstreet/cannon
+		/obj/item/ammo_magazine/hardpoint/primary/longstreet/he,
+		/obj/item/ammo_magazine/hardpoint/primary/longstreet/ap
 	)
 
 	px_offsets = list(
-		"1" = list(0, 21),
-		"2" = list(0, -32),
-		"4" = list(32, 0),
-		"8" = list(-32, 0)
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
 	)
 
 	muzzle_flash_pos = list(

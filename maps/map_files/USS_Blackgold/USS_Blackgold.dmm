@@ -3939,6 +3939,12 @@
 "anl" = (
 /turf/closed/wall/almayer,
 /area/blackgold/middle/rooms/squad/prep)
+"anm" = (
+/obj/effect/vehicle_spawner/longstreet/fixed{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/underdeck/vehicle)
 "ann" = (
 /turf/open/floor/almayer/test_floor4,
 /area/blackgold/middle/rooms/squad/prep)
@@ -4013,6 +4019,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/middle/rooms/briefing)
+"anB" = (
+/obj/effect/vehicle_spawner/longstreet/fixed,
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/underdeck/vehicle)
 "anC" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/hybrisa/coffee_machine{
@@ -4020,6 +4030,14 @@
 	},
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/companycommand/bravo)
+"anD" = (
+/obj/structure/platform/metal/ship/east,
+/obj/structure/prop/almayer/whiteboard{
+	layer = 2.99;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/conference)
 "anE" = (
 /turf/open/floor/almayer/cargo,
 /area/blackgold/middle/rooms/squad/prep)
@@ -6572,7 +6590,7 @@
 	explo_proof = 1
 	},
 /turf/open/floor/almayer/plate,
-/area/blackgold/lower/maint/port/aft)
+/area/blackgold/powered)
 "awO" = (
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/lower/maint/port/aft)
@@ -7250,7 +7268,7 @@
 	explo_proof = 1
 	},
 /turf/open/floor/almayer/plate,
-/area/blackgold/lower/maint/star/aft)
+/area/blackgold/powered)
 "ayX" = (
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/lower/maint/star/aft)
@@ -13475,29 +13493,22 @@
 /turf/open/floor/plating,
 /area/blackgold/lower/maint/port/aft)
 "aSE" = (
-/obj/structure/machinery/vending/sea{
-	pixel_y = 16;
-	density = 0
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/plating_stripedcorner/north,
-/area/blackgold/lower/rooms/sea)
-"aSF" = (
-/obj/structure/filingcabinet/documentation/uscm_mp{
-	pixel_y = 16;
-	pixel_x = 8;
-	density = 0
-	},
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 16;
 	pixel_x = -8;
+	density = 0
+	},
+/obj/structure/filingcabinet/documentation/uscm_mp{
+	pixel_y = 16;
+	pixel_x = 8;
 	density = 0
 	},
 /obj/item/storage/fancy/cigar/tarbacks{
 	pixel_x = -8;
 	pixel_y = 23
 	},
-/turf/open/floor/almayer/plating_striped/north,
+/turf/open/floor/almayer/plating_stripedcorner/north,
 /area/blackgold/lower/rooms/sea)
 "aSG" = (
 /turf/open/floor/almayer/plating_striped/north,
@@ -16766,13 +16777,9 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/sea)
 "baz" = (
-/obj/structure/machinery/door_control{
-	pixel_y = 8;
-	name = "\improper Maintenance Shutters Control";
-	id = "BG Brig Cell Maintenance";
-	req_access = list();
-	req_one_access = list(19, 29);
-	pixel_x = 23
+/obj/structure/machinery/cm_vending/clothing/sea{
+	density = 0;
+	pixel_y = 16
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/sea)
@@ -26424,9 +26431,7 @@
 /turf/open/floor/wood/ship,
 /area/blackgold/lower/rooms/gym)
 "bDc" = (
-/obj/structure/machinery/cm_vending/clothing/sea{
-	density = 0
-	},
+/obj/structure/machinery/vending/sea,
 /turf/open/floor/almayer/plate,
 /area/blackgold/lower/rooms/sea)
 "bDd" = (
@@ -26540,16 +26545,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/greencorner/west,
 /area/blackgold/lower/rooms/gym)
-"bDu" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	dir = 1
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "BG Brig Cell Maintenance";
-	name = "\improper Maintenance Shutter"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/blackgold/lower/rooms/sea)
 "bDv" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -26852,17 +26847,16 @@
 /area/blackgold/lower/rooms/conference)
 "bEr" = (
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_x = 2;
-	alpha = 0
+	dir = 1
 	},
 /turf/open/floor/almayer/plating_striped/north,
 /area/blackgold/lower/rooms/conference)
 "bEs" = (
 /obj/structure/barricade/handrail{
-	dir = 1;
-	pixel_x = 2;
-	alpha = 0
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 1
 	},
 /turf/open/floor/almayer/plating_stripedcorner/south,
 /area/blackgold/lower/rooms/conference)
@@ -27712,9 +27706,9 @@
 /turf/open/floor/almayer/plating_stripedcorner/west,
 /area/blackgold/lower/rooms/conference)
 "bHa" = (
+/obj/structure/barricade/handrail,
 /obj/structure/barricade/handrail{
-	pixel_x = 2;
-	alpha = 0
+	dir = 4
 	},
 /turf/open/floor/almayer/plating_stripedcorner/east,
 /area/blackgold/lower/rooms/conference)
@@ -28539,10 +28533,7 @@
 /turf/open/floor/almayer/black/east,
 /area/blackgold/lower/hallways/port/fore)
 "bQo" = (
-/obj/structure/barricade/handrail{
-	pixel_x = 2;
-	alpha = 0
-	},
+/obj/structure/barricade/handrail,
 /turf/open/floor/almayer/plating_striped/south,
 /area/blackgold/lower/rooms/conference)
 "bQu" = (
@@ -37475,23 +37466,6 @@
 /obj/structure/platform/metal/ship/north,
 /turf/open/floor/almayer/black/northwest,
 /area/blackgold/upper/stairs/star/mid)
-"lBB" = (
-/obj/structure/machinery/door_control{
-	pixel_y = -22;
-	name = "\improper Maintenance Shutters Control";
-	id = "BG Brig Cell Maintenance";
-	req_access = list();
-	req_one_access = list(19, 29);
-	pixel_x = -8
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/blackgold/lower/maint/port/fore)
 "lCH" = (
 /obj/structure/machinery/landinglight/ds2/delayone{
 	dir = 4
@@ -56106,7 +56080,7 @@ obL
 lsW
 ssa
 edc
-edc
+anB
 edc
 ssa
 jnf
@@ -56120,7 +56094,7 @@ qlE
 jnf
 ssa
 edc
-edc
+anm
 edc
 ssa
 lsW
@@ -73611,7 +73585,7 @@ jSM
 lKf
 mcK
 bhP
-bDu
+ano
 baz
 aom
 aSO
@@ -73697,13 +73671,13 @@ bDR
 bDR
 bkr
 mcK
-lBB
+azD
 ano
 ano
 bav
 ano
 eZG
-aSF
+aSG
 aSB
 aom
 aom
@@ -75076,7 +75050,7 @@ bFF
 bDZ
 bDZ
 bDZ
-bFq
+bDZ
 asc
 bDZ
 bDZ
@@ -75157,7 +75131,7 @@ arT
 bkU
 arQ
 asc
-bEb
+anD
 bEp
 bGK
 bEK

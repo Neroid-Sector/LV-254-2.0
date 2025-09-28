@@ -24,10 +24,10 @@
 	var/max_range = 8
 
 	px_offsets = list(
-		"1" = list(2, 14),
-		"2" = list(-2, 3),
-		"4" = list(3, 0),
-		"8" = list(-3, 18)
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
 	)
 
 	scatter = 6

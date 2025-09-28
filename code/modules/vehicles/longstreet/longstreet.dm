@@ -1,6 +1,6 @@
-/obj/vehicle/multitile/tank
+/obj/vehicle/multitile/longstreet
 	name = "M34A2 Longstreet Light Tank"
-	desc = "A giant piece of armor with a big gun, you know what to do. Entrance in the back."
+	desc = "The lightest tank fielded by the USCMC, the Longstreet is an agile platform with less importance placed on armor. Entrance in the back."
 
 	icon = 'icons/obj/vehicles/longstreet.dmi'
 	icon_state = "tank_base"
@@ -13,10 +13,10 @@
 	bound_x = -32
 	bound_y = -32
 
-	interior_map = /datum/map_template/interior/tank
+	interior_map = /datum/map_template/interior/longstreet
 
 	//tank always has 2 crewmen slot reserved and 1 general slot for other roles.
-	passengers_slots = 1
+	passengers_slots = 2
 	//this is done in case VCs die inside the tank, so that someone else can come in and take them out.
 	revivable_dead_slots = 2
 	xenos_slots = 4
@@ -73,7 +73,7 @@
 
 	explosive_resistance = 400
 
-/obj/vehicle/multitile/tank/initialize_cameras(change_tag = FALSE)
+/obj/vehicle/multitile/longstreet/initialize_cameras(change_tag = FALSE)
 	if(!camera)
 		camera = new /obj/structure/machinery/camera/vehicle(src)
 	if(change_tag)
@@ -85,17 +85,17 @@
 		if(camera_int)
 			camera_int.c_tag = camera.c_tag + " interior" //this fluff allows it to be at the start of cams list
 
-/obj/vehicle/multitile/tank/load_role_reserved_slots()
+/obj/vehicle/multitile/longstreet/load_role_reserved_slots()
 	var/datum/role_reserved_slots/RRS = new
 	RRS.category_name = "Crewmen"
 	RRS.roles = list(JOB_TANK_CREW, JOB_WO_CREWMAN, JOB_UPP_CREWMAN, JOB_PMC_CREWMAN)
 	RRS.total = 2
 	role_reserved_slots += RRS
 
-/obj/vehicle/multitile/tank/load_hardpoints()
+/obj/vehicle/multitile/longstreet/load_hardpoints()
 	add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
 
-/obj/vehicle/multitile/tank/add_seated_verbs(mob/living/M, seat)
+/obj/vehicle/multitile/longstreet/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
 	add_verb(M.client, list(
@@ -116,7 +116,7 @@
 		))
 
 
-/obj/vehicle/multitile/tank/remove_seated_verbs(mob/living/M, seat)
+/obj/vehicle/multitile/longstreet/remove_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
 	remove_verb(M.client, list(
@@ -139,7 +139,7 @@
 
 //Called when players try to move vehicle
 //Another wrapper for try_move()
-/obj/vehicle/multitile/tank/relaymove(mob/user, direction)
+/obj/vehicle/multitile/longstreet/relaymove(mob/user, direction)
 	if(user == seats[VEHICLE_DRIVER])
 		return ..()
 
@@ -161,7 +161,7 @@
 
 	return TRUE
 
-/obj/vehicle/multitile/tank/MouseDrop_T(mob/dropped, mob/user)
+/obj/vehicle/multitile/longstreet/MouseDrop_T(mob/dropped, mob/user)
 	. = ..()
 	if((dropped != user) || !isxeno(user))
 		return
@@ -197,21 +197,21 @@
 /*
 ** PRESETS SPAWNERS
 */
-/obj/effect/vehicle_spawner/tank
-	name = "Tank Spawner"
+/obj/effect/vehicle_spawner/longstreet
+	name = "Longstreet Tank Spawner"
 	icon = 'icons/obj/vehicles/longstreet.dmi'
 	icon_state = "tank_base"
 	pixel_x = -48
 	pixel_y = -48
 
-/obj/effect/vehicle_spawner/tank/Initialize()
+/obj/effect/vehicle_spawner/longstreet/Initialize()
 	. = ..()
 	spawn_vehicle()
 	qdel(src)
 
 //PRESET: turret, no hardpoints (not the one without turret for convenience, you still expect to have turret when you spawn "no hardpoints tank")
-/obj/effect/vehicle_spawner/tank/spawn_vehicle()
-	var/obj/vehicle/multitile/tank/TANK = new (loc)
+/obj/effect/vehicle_spawner/longstreet/spawn_vehicle()
+	var/obj/vehicle/multitile/longstreet/TANK = new (loc)
 
 	load_misc(TANK)
 	load_hardpoints(TANK)
@@ -220,27 +220,27 @@
 
 	return TANK
 
-/obj/effect/vehicle_spawner/tank/load_hardpoints(obj/vehicle/multitile/tank/V)
+/obj/effect/vehicle_spawner/longstreet/load_hardpoints(obj/vehicle/multitile/longstreet/V)
 	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
 
 //PRESET: turret, treads installed
-/obj/effect/vehicle_spawner/tank/plain/load_hardpoints(obj/vehicle/multitile/tank/V)
+/obj/effect/vehicle_spawner/longstreet/plain/load_hardpoints(obj/vehicle/multitile/longstreet/V)
 	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
 	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/treads)
 
 //PRESET: no hardpoints
-/obj/effect/vehicle_spawner/tank/hull/load_hardpoints(obj/vehicle/multitile/tank/V)
+/obj/effect/vehicle_spawner/longstreet/hull/load_hardpoints(obj/vehicle/multitile/longstreet/V)
 	return
 
 //Just the hull and it's broken TOO, you get the full experience
-/obj/effect/vehicle_spawner/tank/hull/broken/spawn_vehicle()
-	var/obj/vehicle/multitile/tank/tonk = ..()
+/obj/effect/vehicle_spawner/longstreet/hull/broken/spawn_vehicle()
+	var/obj/vehicle/multitile/longstreet/tonk = ..()
 	load_damage(tonk)
 	tonk.update_icon()
 
 //PRESET: default hardpoints, destroyed
-/obj/effect/vehicle_spawner/tank/decrepit/spawn_vehicle()
-	var/obj/vehicle/multitile/tank/TANK = new (loc)
+/obj/effect/vehicle_spawner/longstreet/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/longstreet/TANK = new (loc)
 
 	load_misc(TANK)
 	handle_direction(TANK)
@@ -248,8 +248,7 @@
 	load_damage(TANK)
 	TANK.update_icon()
 
-/obj/effect/vehicle_spawner/tank/decrepit/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/concussive)
+/obj/effect/vehicle_spawner/longstreet/decrepit/load_hardpoints(obj/vehicle/multitile/longstreet/V)
 	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
 	for(var/obj/item/hardpoint/support/longstreet/tank_turret/TT in V.hardpoints)
@@ -258,10 +257,10 @@
 		break
 
 //PRESET: default hardpoints
-/obj/effect/vehicle_spawner/tank/fixed/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/concussive)
+/obj/effect/vehicle_spawner/longstreet/fixed/load_hardpoints(obj/vehicle/multitile/longstreet/V)
 	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/tank_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/longstreet/overdrive)
 	for(var/obj/item/hardpoint/support/longstreet/tank_turret/TT in V.hardpoints)
 		TT.add_hardpoint(new /obj/item/hardpoint/primary/longstreet/cannon)
 		TT.add_hardpoint(new /obj/item/hardpoint/secondary/longstreet/m56cupola)

@@ -28,9 +28,9 @@
 	name = "LAV"
 	interior_id = "lav"
 
-/datum/map_template/interior/tank
-	name = "Tank"
-	interior_id = "tank"
+/datum/map_template/interior/longstreet
+	name = "Longstreet Tank"
+	interior_id = "longstreet"
 
 /datum/map_template/interior/aev
 	name = "AEV"
