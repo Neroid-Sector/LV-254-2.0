@@ -3849,10 +3849,10 @@
 /turf/open/floor/almayer/red/north,
 /area/blackgold/middle/rooms/squad)
 "amZ" = (
-/obj/effect/vehicle_spawner/jeep/medical/plain{
-	dir = 1
+/obj/effect/vehicle_spawner/jeep/medical/plain,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
 	},
-/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/underdeck/vehicle)
 "ana" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food{
@@ -4267,7 +4267,7 @@
 /turf/open/floor/almayer/black/southeast,
 /area/blackgold/upper/stairs/star/aft)
 "aow" = (
-/obj/effect/vehicle_spawner/lav/plasma{
+/obj/effect/vehicle_spawner/apc_cmd/fixed{
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -4848,12 +4848,6 @@
 	},
 /turf/open/floor/almayer/silverfull2,
 /area/blackgold/lower/rooms/gym)
-"aqH" = (
-/obj/effect/vehicle_spawner/jeep/flatbed/plain,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
-/area/blackgold/underdeck/vehicle)
 "aqI" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
@@ -7136,6 +7130,8 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/item/tool/hand_labeler,
+/obj/item/tool/hand_labeler,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "ayG" = (
@@ -57734,7 +57730,7 @@ lsW
 mWH
 mWH
 ssa
-aqH
+mWH
 mWH
 jnf
 obE
@@ -57821,7 +57817,7 @@ lsW
 mWH
 mZS
 fUq
-mZS
+amZ
 mWH
 kzN
 obE
@@ -57922,7 +57918,7 @@ jnf
 ssa
 edc
 edc
-amZ
+edc
 ssa
 lsW
 obL
