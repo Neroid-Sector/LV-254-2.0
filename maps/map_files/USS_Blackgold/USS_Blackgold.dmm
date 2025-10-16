@@ -34675,6 +34675,12 @@
 	},
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
+"iCf" = (
+/obj/vehicle/multitile/tank/aev{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/underdeck/vehicle)
 "iCJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/west,
@@ -56699,7 +56705,7 @@ qlE
 jnf
 ssa
 edc
-edc
+iCf
 edc
 ssa
 lsW
