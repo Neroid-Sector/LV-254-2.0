@@ -11373,6 +11373,7 @@
 "aLt" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/book/manual/chef_recipes,
+/obj/structure/machinery/power/apc/almayer/hardened/south,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aLu" = (
@@ -11384,6 +11385,9 @@
 	},
 /obj/item/reagent_container/food/snacks/sliceable/bread,
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/light/spot{
+	pixel_x = 16
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aLv" = (
@@ -11414,6 +11418,9 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/microwave{
 	pixel_y = 6
+	},
+/obj/structure/machinery/light/spot{
+	pixel_x = 16
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
@@ -11686,8 +11693,7 @@
 /turf/open/floor/almayer/green/west,
 /area/blackgold/upper/rooms/kitchen)
 "aMs" = (
-/obj/structure/closet/crate/freezer,
-/turf/open/floor/prison/kitchen,
+/turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/kitchen)
 "aMt" = (
 /obj/structure/machinery/disposal,
@@ -11702,7 +11708,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "aMv" = (
 /obj/structure/surface/rack,
 /obj/item/storage/box/bodybags{
@@ -11743,6 +11749,10 @@
 "aMy" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/clothing/head/chefhat,
+/obj/structure/machinery/light/spot{
+	dir = 1;
+	pixel_y = 10
+	},
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/kitchen)
 "aMz" = (
@@ -11850,7 +11860,7 @@
 "aMM" = (
 /obj/structure/closet/secure_closet/fridge/organic/stock,
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "aMN" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_29"
@@ -11936,6 +11946,10 @@
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = -6
 	},
+/obj/structure/machinery/light/spot{
+	dir = 1;
+	pixel_y = 10
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aNb" = (
@@ -11948,11 +11962,14 @@
 /area/blackgold/upper/rooms/kitchen)
 "aNd" = (
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "aNe" = (
 /obj/structure/closet/secure_closet/fridge/meat/stock,
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "aNf" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/solid{
 	name = "Morgue";
@@ -29098,7 +29115,7 @@
 /obj/structure/closet/secure_closet/fridge/groceries/stock,
 /obj/structure/closet/secure_closet/fridge/organic/stock,
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "cvt" = (
 /obj/structure/pallet/standard/weapon/mk1,
 /turf/open/floor/almayer/plate,
@@ -31227,6 +31244,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/shuttle/stern)
+"eXe" = (
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/no_build,
+/area/blackgold/underdeck/req)
 "eXH" = (
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/cic)
@@ -31366,6 +31387,11 @@
 "fdn" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/companycommand/charlie)
+"fdp" = (
+/obj/structure/machinery/power/apc/almayer/hardened/west,
+/obj/structure/closet/crate/freezer,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/kitchen/freezer)
 "fdC" = (
 /obj/structure/platform_decoration/metal/almayer/north,
 /turf/open/floor/almayer/aicore/no_build,
@@ -31690,6 +31716,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/hallways/star/fore)
+"fvZ" = (
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/plating_striped/north,
+/area/blackgold/underdeck/req)
 "fwd" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -32300,6 +32330,10 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
+"gdJ" = (
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
 "gdO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -42781,6 +42815,10 @@
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/xo)
+"qWC" = (
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
 "qXe" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -44390,7 +44428,7 @@
 /obj/structure/closet/secure_closet/fridge/fish/stock,
 /obj/structure/closet/secure_closet/fridge/organic/stock,
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "sGt" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -47257,6 +47295,13 @@
 "vTW" = (
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/upper/rooms/brig/stairs)
+"vUH" = (
+/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+	layer = 2.9
+	},
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/no_build,
+/area/blackgold/underdeck/req)
 "vUV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/secure/ammo,
@@ -47453,6 +47498,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/east,
 /area/blackgold/middle/hallways/port/fore)
+"wew" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/closet/crate/freezer,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/kitchen)
 "weR" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -62354,7 +62404,7 @@ drY
 nPo
 nPo
 jzQ
-onU
+vUH
 nPo
 drY
 kXK
@@ -62528,7 +62578,7 @@ drY
 tjG
 nPo
 hln
-onU
+vUH
 oTd
 drY
 kXK
@@ -62867,7 +62917,7 @@ drY
 gOY
 ydL
 ydL
-ydL
+qWC
 noo
 kcB
 drY
@@ -63142,7 +63192,7 @@ jzQ
 drY
 kXK
 drY
-gOY
+fvZ
 ydL
 ydL
 ydL
@@ -65570,7 +65620,7 @@ kcB
 drY
 rjH
 drY
-jzQ
+eXe
 jzQ
 jzQ
 jzQ
@@ -65912,7 +65962,7 @@ drY
 gOY
 qHM
 noo
-ydL
+qWC
 ydL
 kcB
 drY
@@ -79477,7 +79527,7 @@ bjB
 aky
 alc
 eHa
-akz
+gdJ
 bKw
 dXY
 blf
@@ -130832,8 +130882,8 @@ aNc
 aLO
 btd
 aLO
-aMs
-aMs
+aLO
+aLO
 aLO
 beL
 aLv
@@ -130914,11 +130964,11 @@ aNr
 auB
 bgF
 atT
-aLf
-aLf
+aMs
+aMs
 gjg
-aLf
-aLf
+aMs
+aMs
 aMt
 aMn
 bsI
@@ -131001,11 +131051,11 @@ aNr
 auB
 buf
 atT
-aLf
-aNd
+aMs
+fdp
 aNd
 aNe
-aLf
+aMs
 bfp
 bfe
 bfe
@@ -131088,11 +131138,11 @@ aNr
 wyO
 bug
 atT
-aLf
+aMs
 aMM
 aNd
 sGs
-aLf
+aMs
 aMy
 aLO
 aLO
@@ -131175,16 +131225,16 @@ aNr
 xKX
 buh
 atU
-aLf
+aMs
 cvs
 aNd
 aMu
-aLf
+aMs
 aMz
 aMp
 aLA
 bsw
-aLA
+wew
 aLf
 brl
 jJD
@@ -131262,11 +131312,11 @@ aNr
 aNq
 acY
 aNm
-aLf
-aLf
-aLf
-aLf
-aLf
+aMs
+aMs
+aMs
+aMs
+aMs
 aLf
 aLf
 aLf
