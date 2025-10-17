@@ -475,3 +475,9 @@
 	name = "Sky"
 	icon_state = "lv-626"
 	flags_area = AREA_UNWEEDABLE
+
+/area/volcano
+	name = "Volcano"
+	can_build_special = TRUE //T-Comms structure
+	powernet_name = "ground"
+	temperature = VOLCANO_TEMP
