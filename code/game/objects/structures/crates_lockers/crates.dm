@@ -315,6 +315,36 @@
 	new /obj/item/clothing/suit/radiation(src)
 	new /obj/item/clothing/head/radiation(src)
 
+
+
+/obj/structure/closet/crate/hazheat
+	name = "heat hazard gear crate"
+	desc = "A crate with a heat hazard sign on it."
+	icon_state = "closed_hazheat"
+	icon_opened = "open_hazheat"
+	icon_closed = "closed_hazheat"
+
+/obj/structure/closet/crate/hazheat/Initialize()
+	. = ..()
+
+	new /obj/item/clothing/shoes/veteran/pmc/commando/cbrn(src)
+	new /obj/item/clothing/under/marine/cbrn/volcano(src)
+	new /obj/item/clothing/gloves/marine/veteran/cbrn(src)
+	new /obj/item/storage/backpack/marine/satchel/oxygen_pack(src)
+	new /obj/item/clothing/mask/gas(src)
+
+	new /obj/item/clothing/shoes/veteran/pmc/commando/cbrn(src)
+	new /obj/item/clothing/under/marine/cbrn/volcano(src)
+	new /obj/item/clothing/gloves/marine/veteran/cbrn(src)
+	new /obj/item/storage/backpack/marine/satchel/oxygen_pack(src)
+	new /obj/item/clothing/mask/gas(src)
+
+	new /obj/item/clothing/shoes/veteran/pmc/commando/cbrn(src)
+	new /obj/item/clothing/under/marine/cbrn/volcano(src)
+	new /obj/item/clothing/gloves/marine/veteran/cbrn(src)
+	new /obj/item/storage/backpack/marine/satchel/oxygen_pack(src)
+	new /obj/item/clothing/mask/gas(src)
+
 /obj/structure/closet/crate/science
 	name = "science crate"
 	desc = "A science crate."
