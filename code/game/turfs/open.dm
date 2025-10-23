@@ -658,6 +658,7 @@
 	desc = "Martian Sand that is absolutely toxic with chlorine and iron dust."
 	icon = 'icons/turf/floors/floors.dmi'
 	minimap_color = MINIMAP_MARS_DIRT
+	icon_state = "ironsand1"
 
 /turf/open/gm/marssand/Initialize(mapload, ...)
 	. = ..()
