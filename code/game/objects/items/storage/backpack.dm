@@ -565,6 +565,7 @@
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
 		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
 	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN
 	max_storage_space = 15
 
 
