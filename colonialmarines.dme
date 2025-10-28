@@ -2568,6 +2568,7 @@
 #include "code\modules\vehicles\arc\verbs.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\hardpoint_ammo.dm"
+#include "code\modules\vehicles\hardpoints\hardpoint_ammo\m56_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\apc\dualcannon_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\apc\flare_launcher_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\apc\frontal_cannon_ammo.dm"
