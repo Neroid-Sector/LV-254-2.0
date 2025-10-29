@@ -489,20 +489,8 @@
 	icon = 'icons/turf/floors/floors.dmi'
 	icon_state = "basalt"
 	minimap_color = MINIMAP_DIRT
+	var/recently_lit = FALSE
 
-/turf/open/gm/basalt/Initialize(mapload, ...)
-	. = ..()
-	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt,timer_proc), 10))
-
-/turf/open/gm/basalt/proc/timer_proc()
-	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt,ignite_proc), rand(5, 10)))
-
-/turf/open/gm/basalt/proc/ignite_proc()
-	if(prob(90))
-		for(var/obj/flamer_fire/flames in src)
-			if(!flames)
-				new /obj/flamer_fire (src)
-	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt, timer_proc), pick(5,10)))
 
 /turf/open/gm/basalt/auto_rdm
 
@@ -550,6 +538,83 @@
 	icon_state = "basalt11"
 
 /turf/open/gm/basalt/alt_12
+	icon_state = "basalt12"
+
+
+//burning
+
+/turf/open/gm/basalt/burning/Initialize(mapload, ...)
+	. = ..()
+	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt/burning,timer_proc), 60))
+
+/turf/open/gm/basalt/burning/proc/timer_proc()
+	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt/burning,ignite_proc), 60))
+
+/turf/open/gm/basalt/burning/proc/wait_proc()
+	recently_lit = TRUE
+	sleep(rand(60, 10000))
+	recently_lit = FALSE
+
+/turf/open/gm/basalt/burning/proc/ignite_proc()
+	var/ignite_rdm = rand(1,3)
+	switch(ignite_rdm)
+		if(2)
+			var/flames_present = 0
+			for(var/obj/flamer_fire/flames in src)
+				if(flames)
+					flames_present = 1
+			if(flames_present == 0 && !recently_lit)
+				new /obj/flamer_fire(src)
+				INVOKE_ASYNC(src,TYPE_PROC_REF(/turf/open/gm/basalt/burning, wait_proc))
+				addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt/burning, timer_proc), 60))
+	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt/burning, timer_proc), 60))
+
+/turf/open/gm/basalt/burning/auto_rdm
+
+/turf/open/gm/basalt/burning/auto_rdm/Initialize(mapload, ...)
+	. = ..()
+	icon_state = "basalt[rand(0,12)]"
+
+/turf/open/gm/basalt/burning/dug
+	icon_state = "basalt_dug"
+
+/turf/open/gm/basalt/burning/alt
+	icon_state = "basalt0"
+
+/turf/open/gm/basalt/burning/alt_1
+	icon_state = "basalt1"
+
+/turf/open/gm/basalt/burning/alt_2
+	icon_state = "basalt2"
+
+/turf/open/gm/basalt/burning/alt_3
+	icon_state = "basalt3"
+
+/turf/open/gm/basalt/burning/alt_4
+	icon_state = "basalt4"
+
+/turf/open/gm/basalt/burning/alt_5
+	icon_state = "basalt5"
+
+/turf/open/gm/basalt/burning/alt_6
+	icon_state = "basalt6"
+
+/turf/open/gm/basalt/burning/alt_7
+	icon_state = "basalt7"
+
+/turf/open/gm/basalt/burning/alt_8
+	icon_state = "basalt8"
+
+/turf/open/gm/basalt/burning/alt_9
+	icon_state = "basalt9"
+
+/turf/open/gm/basalt/burning/alt_10
+	icon_state = "basalt10"
+
+/turf/open/gm/basalt/burning/alt_11
+	icon_state = "basalt11"
+
+/turf/open/gm/basalt/burning/alt_12
 	icon_state = "basalt12"
 
 //Lunar
