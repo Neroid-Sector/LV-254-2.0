@@ -492,14 +492,17 @@
 
 /turf/open/gm/basalt/Initialize(mapload, ...)
 	. = ..()
-	var/timer = world.time + (10)
-	while (world.time < timer)
-		INVOKE_ASYNC(src,TYPE_PROC_REF(/turf/open/gm/basalt, ignite_proc))
+	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt,timer_proc), 10))
+
+/turf/open/gm/basalt/proc/timer_proc()
+	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt,ignite_proc), rand(5, 10)))
 
 /turf/open/gm/basalt/proc/ignite_proc()
-	if(prob(20))
-		new /obj/flamer_fire (src)
-	sleep(10)
+	if(prob(90))
+		for(var/obj/flamer_fire/flames in src)
+			if(!flames)
+				new /obj/flamer_fire (src)
+	addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/open/gm/basalt, timer_proc), pick(5,10)))
 
 /turf/open/gm/basalt/auto_rdm
 
