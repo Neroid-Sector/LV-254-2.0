@@ -490,6 +490,17 @@
 	icon_state = "basalt"
 	minimap_color = MINIMAP_DIRT
 
+/turf/open/gm/basalt/Initialize(mapload, ...)
+	. = ..()
+	var/timer = world.time + (10)
+	while (world.time < timer)
+		INVOKE_ASYNC(src,TYPE_PROC_REF(/turf/open/gm/basalt, ignite_proc))
+
+/turf/open/gm/basalt/proc/ignite_proc()
+	if(prob(20))
+		new /obj/flamer_fire (src)
+	sleep(10)
+
 /turf/open/gm/basalt/auto_rdm
 
 /turf/open/gm/basalt/auto_rdm/Initialize(mapload, ...)
