@@ -1530,7 +1530,7 @@
 		to_chat(M, pick(SPAN_DANGER("YOU BURST INTO FLAMES!!")))
 		M.apply_effect(2, AGONY)
 		M.apply_effect(1, SUPERSLOW)
-		M.apply_damage(rand(10,20), BURN)
+		M.apply_damage(rand(20,40), BURN)
 		M.fire_act()
 		new /obj/flamer_fire(src)
 

@@ -172,7 +172,7 @@
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	jumpsuit.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/militia/hazard(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia/smartgun/hazard(new_human), WEAR_JACKET)
 	if(prob(50))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/hybrisa/kelland_mining_helmet(new_human), WEAR_HEAD)
 	else
@@ -189,7 +189,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv/hacked/clf, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/mre_food_packet/clf, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_IN_BACK)
 	if(prob(50))
 		spawn_rebel_smg(new_human)
 	else
