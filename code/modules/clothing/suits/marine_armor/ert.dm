@@ -451,6 +451,46 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	storage_slots = 2
 
+/obj/item/clothing/suit/storage/marine/militia/hazard
+	name = "\improper Combat mining hazmat suit."
+	desc = "A set of standard issue Kelland-Mining utility fatigues, a yellow pair of utility work slacks and a black collared heavy padded jacket, which protects against various environmental hazards. This one has been modified by insurgents to protect against bullets."
+	icon = 'icons/obj/items/clothing/suits/hazard.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/hazard.dmi',
+	)
+	icon_state = "insurgentminer_oversuit"
+	item_state = "insurgentminer_oversuit"
+	uniform_restricted = null
+	fire_intensity_resistance = BURN_LEVEL_TIER_1
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_HIGH
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/prop/prop_gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/storage/bible,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/belt/gun/type47,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/smartpistol,
+		/obj/item/storage/belt/gun/flaregun,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+		/obj/item/storage/belt/gun/xm51,
+	)
+	valid_accessory_slots = list(ACCESSORY_SLOT_PONCHO)
 
 //===========================//CMB\\================================\\
 //=====================================================================\\
@@ -602,6 +642,10 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/CLF.dmi'
 	)
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_VERYHIGH
