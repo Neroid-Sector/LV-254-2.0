@@ -481,3 +481,10 @@
 	can_build_special = TRUE //T-Comms structure
 	powernet_name = "ground"
 	temperature = VOLCANO_TEMP
+
+/area/volcano/indoors
+	name = "Volcano Indoors"
+	can_build_special = TRUE //T-Comms structure
+	powernet_name = "ground"
+	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
+	temperature = VOLCANO_TEMP
