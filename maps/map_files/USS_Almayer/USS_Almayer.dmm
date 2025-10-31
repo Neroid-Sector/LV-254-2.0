@@ -16277,7 +16277,7 @@
 /turf/open/floor/almayer/no_build,
 /area/almayer/middeck/maintenance/sp)
 "aQT" = (
-/obj/structure/machinery/cm_vending/gear/squad_marines{
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
 	pixel_y = -16;
 	density = 0
 	},
@@ -36057,7 +36057,7 @@
 /turf/open/floor/almayer,
 /area/almayer/living/grunt_rnr)
 "cdP" = (
-/obj/structure/machinery/cm_vending/clothing/squad_marines{
+/obj/structure/machinery/cm_vending/gear/squad_marines{
 	pixel_y = -16;
 	density = 0
 	},
@@ -40132,13 +40132,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/underdeck/hangar)
-"dCr" = (
-/obj/structure/machinery/cm_vending/gear/squad_marines{
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/almayer/squads/bravo)
 "dCs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -40492,6 +40485,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/hull/upper/u_a_p)
+"dJr" = (
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/almayer/squads/delta)
 "dJy" = (
 /obj/structure/machinery/light/red{
 	light_color = "#BB3F3F";
@@ -41932,6 +41932,13 @@
 	},
 /turf/open/floor/wood/ship,
 /area/almayer/command/corporateliaison)
+"epS" = (
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_y = -16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/almayer/squads/charlie)
 "epT" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -49752,6 +49759,13 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/hallways/lower/port_midship_hallway)
+"hCj" = (
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_y = -16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/almayer/squads/alpha)
 "hCk" = (
 /obj/structure/largecrate/random/barrel/red,
 /turf/open/floor/almayer/plate,
@@ -53794,13 +53808,6 @@
 	},
 /turf/open/floor/almayer/plating_striped/north,
 /area/almayer/underdeck/req)
-"jjA" = (
-/obj/structure/machinery/cm_vending/gear/squad_marines{
-	pixel_y = -16;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/almayer/squads/charlie)
 "jjS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -54348,6 +54355,13 @@
 "juo" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/lower/port_fore_hallway)
+"jut" = (
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/almayer/squads/bravo)
 "juD" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -64561,13 +64575,6 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/maint/hull/upper/u_f_s)
-"nHF" = (
-/obj/structure/machinery/cm_vending/clothing/squad_marines{
-	pixel_y = -16;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/almayer/squads/alpha)
 "nHG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -69243,13 +69250,6 @@
 "pAm" = (
 /turf/open/floor/almayer,
 /area/almayer/engineering/lower/engine_core)
-"pBy" = (
-/obj/structure/machinery/cm_vending/clothing/squad_marines{
-	pixel_y = 16;
-	density = 0
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/almayer/squads/delta)
 "pBG" = (
 /turf/closed/wall/almayer,
 /area/almayer/command/corporateliaison)
@@ -143017,7 +143017,7 @@ aLT
 avv
 bfu
 rGj
-nHF
+aQT
 aLT
 aTv
 blB
@@ -143061,9 +143061,9 @@ bJC
 cog
 chN
 mzg
-cdP
+epS
 bJC
-pBy
+dJr
 ckX
 cli
 coj
@@ -143120,9 +143120,9 @@ aLT
 aLT
 bfx
 rGj
-aQT
+hCj
 aLT
-dCr
+jut
 blB
 kiU
 aQL
@@ -143164,7 +143164,7 @@ bJC
 bJC
 chO
 mzg
-jjA
+cdP
 bJC
 dpO
 ckX
@@ -143326,7 +143326,7 @@ bdC
 aLT
 bfw
 rGj
-nHF
+aQT
 aLT
 aTv
 blB
@@ -143370,9 +143370,9 @@ cgs
 bJC
 chQ
 mzg
-cdP
+epS
 bJC
-pBy
+dJr
 ckX
 clk
 bSJ
@@ -143429,9 +143429,9 @@ bdC
 beR
 bfy
 rGj
-aQT
+hCj
 aLT
-dCr
+jut
 blB
 bnt
 bpG
@@ -143473,7 +143473,7 @@ cgs
 chk
 chR
 mzg
-jjA
+cdP
 bJC
 dpO
 ckX
@@ -143635,7 +143635,7 @@ bdC
 aLT
 bfx
 bgY
-nHF
+aQT
 aLT
 aTv
 blB
@@ -143679,9 +143679,9 @@ cgs
 bJC
 chP
 mzg
-cdP
+epS
 bJC
-pBy
+dJr
 ckX
 cln
 bSJ
@@ -143738,9 +143738,9 @@ aLT
 aLT
 hQW
 bgY
-aQT
+hCj
 aLT
-dCr
+jut
 blB
 qhU
 aQL
@@ -143782,7 +143782,7 @@ bJC
 bJC
 uUo
 mzg
-jjA
+cdP
 bJC
 dpO
 ckX
@@ -143944,7 +143944,7 @@ bdC
 aLT
 rrq
 bgY
-nHF
+aQT
 aLT
 aTv
 blB
@@ -143988,9 +143988,9 @@ cgs
 bJC
 chQ
 cjf
-cdP
+epS
 bJC
-pBy
+dJr
 ckX
 xoe
 bSJ
@@ -144047,9 +144047,9 @@ bdC
 beS
 bfy
 bgY
-aQT
+hCj
 aLT
-dCr
+jut
 blB
 bnt
 bpH
@@ -144091,7 +144091,7 @@ cgs
 chl
 chR
 cjf
-jjA
+cdP
 bJC
 dpO
 ckX
@@ -144253,7 +144253,7 @@ aLT
 aLT
 bfx
 bgY
-nHF
+aQT
 aLT
 aTv
 blB
@@ -144297,9 +144297,9 @@ bJC
 bJC
 chW
 rvT
-cdP
+epS
 bJC
-pBy
+dJr
 ckX
 hAZ
 bSJ
@@ -144356,9 +144356,9 @@ aLT
 bpL
 bfE
 njd
-aQT
+hCj
 aLT
-dCr
+jut
 blB
 uvu
 aUZ
@@ -144400,7 +144400,7 @@ bJC
 bMx
 chQ
 cjf
-jjA
+cdP
 bJC
 dpO
 ckX
@@ -144562,7 +144562,7 @@ aLT
 brv
 nuA
 bgY
-nHF
+aQT
 aLT
 aTv
 blB
@@ -144606,9 +144606,9 @@ bJC
 cdf
 jxx
 cjf
-cdP
+epS
 bJC
-pBy
+dJr
 ckX
 rXj
 gfo
@@ -144665,9 +144665,9 @@ bpK
 aMz
 bfy
 bgY
-aQT
+hCj
 aLT
-dCr
+jut
 blB
 bnt
 aRT
@@ -144709,7 +144709,7 @@ chn
 bJD
 chR
 cjf
-jjA
+cdP
 bJC
 dpO
 ckX
