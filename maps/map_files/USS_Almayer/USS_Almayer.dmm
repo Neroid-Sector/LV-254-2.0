@@ -16277,7 +16277,11 @@
 /turf/open/floor/almayer/no_build,
 /area/almayer/middeck/maintenance/sp)
 "aQT" = (
-/turf/open/floor/almayer/cargo_arrow,
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_y = -16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
 /area/almayer/squads/alpha)
 "aQU" = (
 /obj/effect/decal/warning_stripes{
@@ -17264,6 +17268,10 @@
 /turf/open_space,
 /area/almayer/middeck/req)
 "aTv" = (
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_y = 16;
+	density = 0
+	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/almayer/squads/bravo)
 "aTw" = (
@@ -36049,7 +36057,11 @@
 /turf/open/floor/almayer,
 /area/almayer/living/grunt_rnr)
 "cdP" = (
-/turf/open/floor/almayer/cargo_arrow,
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_y = -16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
 /area/almayer/squads/charlie)
 "cdU" = (
 /obj/structure/sign/safety/ammunition{
@@ -39535,6 +39547,10 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/starboard_aft_hallway)
 "dpO" = (
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_y = 16;
+	density = 0
+	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/almayer/squads/delta)
 "dqb" = (
@@ -40116,6 +40132,13 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/underdeck/hangar)
+"dCr" = (
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/almayer/squads/bravo)
 "dCs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -53771,6 +53794,13 @@
 	},
 /turf/open/floor/almayer/plating_striped/north,
 /area/almayer/underdeck/req)
+"jjA" = (
+/obj/structure/machinery/cm_vending/gear/squad_marines{
+	pixel_y = -16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/almayer/squads/charlie)
 "jjS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -64531,6 +64561,13 @@
 	},
 /turf/open/floor/almayer,
 /area/almayer/maint/hull/upper/u_f_s)
+"nHF" = (
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_y = -16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/almayer/squads/alpha)
 "nHG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -69206,6 +69243,13 @@
 "pAm" = (
 /turf/open/floor/almayer,
 /area/almayer/engineering/lower/engine_core)
+"pBy" = (
+/obj/structure/machinery/cm_vending/clothing/squad_marines{
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/almayer/squads/delta)
 "pBG" = (
 /turf/closed/wall/almayer,
 /area/almayer/command/corporateliaison)
@@ -142973,7 +143017,7 @@ aLT
 avv
 bfu
 rGj
-aQT
+nHF
 aLT
 aTv
 blB
@@ -143019,7 +143063,7 @@ chN
 mzg
 cdP
 bJC
-dpO
+pBy
 ckX
 cli
 coj
@@ -143078,7 +143122,7 @@ bfx
 rGj
 aQT
 aLT
-aTv
+dCr
 blB
 kiU
 aQL
@@ -143120,7 +143164,7 @@ bJC
 bJC
 chO
 mzg
-cdP
+jjA
 bJC
 dpO
 ckX
@@ -143282,7 +143326,7 @@ bdC
 aLT
 bfw
 rGj
-aQT
+nHF
 aLT
 aTv
 blB
@@ -143328,7 +143372,7 @@ chQ
 mzg
 cdP
 bJC
-dpO
+pBy
 ckX
 clk
 bSJ
@@ -143387,7 +143431,7 @@ bfy
 rGj
 aQT
 aLT
-aTv
+dCr
 blB
 bnt
 bpG
@@ -143429,7 +143473,7 @@ cgs
 chk
 chR
 mzg
-cdP
+jjA
 bJC
 dpO
 ckX
@@ -143591,7 +143635,7 @@ bdC
 aLT
 bfx
 bgY
-aQT
+nHF
 aLT
 aTv
 blB
@@ -143637,7 +143681,7 @@ chP
 mzg
 cdP
 bJC
-dpO
+pBy
 ckX
 cln
 bSJ
@@ -143696,7 +143740,7 @@ hQW
 bgY
 aQT
 aLT
-aTv
+dCr
 blB
 qhU
 aQL
@@ -143738,7 +143782,7 @@ bJC
 bJC
 uUo
 mzg
-cdP
+jjA
 bJC
 dpO
 ckX
@@ -143900,7 +143944,7 @@ bdC
 aLT
 rrq
 bgY
-aQT
+nHF
 aLT
 aTv
 blB
@@ -143946,7 +143990,7 @@ chQ
 cjf
 cdP
 bJC
-dpO
+pBy
 ckX
 xoe
 bSJ
@@ -144005,7 +144049,7 @@ bfy
 bgY
 aQT
 aLT
-aTv
+dCr
 blB
 bnt
 bpH
@@ -144047,7 +144091,7 @@ cgs
 chl
 chR
 cjf
-cdP
+jjA
 bJC
 dpO
 ckX
@@ -144209,7 +144253,7 @@ aLT
 aLT
 bfx
 bgY
-aQT
+nHF
 aLT
 aTv
 blB
@@ -144255,7 +144299,7 @@ chW
 rvT
 cdP
 bJC
-dpO
+pBy
 ckX
 hAZ
 bSJ
@@ -144314,7 +144358,7 @@ bfE
 njd
 aQT
 aLT
-aTv
+dCr
 blB
 uvu
 aUZ
@@ -144356,7 +144400,7 @@ bJC
 bMx
 chQ
 cjf
-cdP
+jjA
 bJC
 dpO
 ckX
@@ -144518,7 +144562,7 @@ aLT
 brv
 nuA
 bgY
-aQT
+nHF
 aLT
 aTv
 blB
@@ -144564,7 +144608,7 @@ jxx
 cjf
 cdP
 bJC
-dpO
+pBy
 ckX
 rXj
 gfo
@@ -144623,7 +144667,7 @@ bfy
 bgY
 aQT
 aLT
-aTv
+dCr
 blB
 bnt
 aRT
@@ -144665,7 +144709,7 @@ chn
 bJD
 chR
 cjf
-cdP
+jjA
 bJC
 dpO
 ckX
