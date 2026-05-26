@@ -8,7 +8,7 @@
 //---------FIRST AID KITS---------
 /obj/item/storage/firstaid
 	name = "first-aid kit"
-	desc = "It's an emergency medical kit for those serious boo-boos. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit for those serious boo-boos."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	item_icons = list(
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
@@ -38,8 +38,7 @@
 		/obj/item/reagent_container/blood,
 	)
 	storage_flags = STORAGE_FLAGS_BOX
-	required_skill_for_nest_opening = SKILL_MEDICAL
-	required_skill_level_for_nest_opening = SKILL_MEDICAL_MEDIC
+
 
 	var/icon_full //icon state to use when kit is full
 	var/possible_icons_full
@@ -578,6 +577,56 @@
 	new /obj/item/tool/surgery/surgical_line(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 
+
+//---------I-A-M FAKs---------
+/obj/item/storage/ifak
+	name = "I.F.A.K."
+	desc = "Individual First Aid Kit or IFAK, a compact emergency medical kit designed for treating trauma, such as gunshot wounds or severe bleeding, in high-risk situations.  Includes velcro and straps so it can be worn externally for ease of access."
+	icon = 'icons/obj/items/storage/medical.dmi'
+	icon_state = "afak"
+	flags_equip_slot = SLOT_STORE| SLOT_WAIST|SLOT_SUIT_STORE
+	throw_speed = SPEED_FAST
+	throw_range = 8
+	use_sound = "zipper"
+	can_hold = list(
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+	)
+	storage_slots = 10
+	storage_flags = STORAGE_FLAGS_POUCH
+
+/obj/item/storage/ifak/update_icon()
+	if(content_watchers)
+		icon_state = "afak_open"
+		return
+	else
+		icon_state = "afak"
+		return
+
+/obj/item/storage/ifak/fill_preset_inventory()
+
+	new /obj/item/stack/medical/advanced/bruise_pack( src )
+	new /obj/item/stack/medical/advanced/ointment( src )
+	new /obj/item/stack/medical/splint( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/emergency( src )
+	new /obj/item/storage/pill_bottle/packet/oxycodone( src )
+
+/obj/item/storage/ifak/blk
+	icon_state = "afak_blk"
+
+/obj/item/storage/ifak/blk/update_icon()
+	if(content_watchers)
+		icon_state = "afak_blk_open"
+		return
+	else
+		icon_state = "afak_blk"
+		return
 
 //---------PILL BOTTLES---------
 
