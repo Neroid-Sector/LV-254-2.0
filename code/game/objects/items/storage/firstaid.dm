@@ -163,14 +163,22 @@
 	desc = "Contains more effective methods of medical treatment than a basic first-aid kit, such as burn and trauma kits. With medical training you can fit this in a backpack."
 	icon_state = "advfirstaid"
 	item_state = "firstaid-advanced"
+	storage_slots = 14
 
 /obj/item/storage/firstaid/adv/fill_preset_inventory()
-	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/splint(src)
 
 /obj/item/storage/firstaid/adv/empty/fill_preset_inventory()
@@ -578,10 +586,10 @@
 	new /obj/item/tool/surgery/synthgraft(src)
 
 
-//---------I-A-M FAKs---------
+//---------I-FAKs---------
 /obj/item/storage/ifak
-	name = "I.F.A.K."
-	desc = "Individual First Aid Kit or IFAK, a compact emergency medical kit designed for treating trauma, such as gunshot wounds or severe bleeding, in high-risk situations.  Includes velcro and straps so it can be worn externally for ease of access."
+	name = "I-FAK"
+	desc = "Individual First Aid Kit or I-FAK, a compact emergency medical kit designed for treating trauma, such as gunshot wounds or severe bleeding, in high-risk situations. This is intended for the treament of the wearer not others."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "afak"
 	flags_equip_slot = SLOT_STORE| SLOT_WAIST|SLOT_SUIT_STORE
@@ -595,6 +603,10 @@
 	)
 	storage_slots = 10
 	storage_flags = STORAGE_FLAGS_POUCH
+
+/obj/item/storage/ifak/get_examine_text(mob/user)
+	. = ..()
+	. += "Small enough it can be attached to a pocket or stuffed in a backpack."
 
 /obj/item/storage/ifak/update_icon()
 	if(content_watchers)

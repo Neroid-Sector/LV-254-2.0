@@ -29,7 +29,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Medium General Pouch", 0, /obj/item/storage/pouch/general/medium, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-			list("Individual First-Aid Kit (Tan)", 0, /obj/item/storage/ifak, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Individual First-Aid Kit (Tan)", 0, /obj/item/storage/ifak, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Individual First-Aid Kit (Black)", 0, /obj/item/storage/ifak/blk, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pistol Pouch", 0, /obj/item/storage/pouch/pistol, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
@@ -86,7 +86,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Medium General Pouch", 0, /obj/item/storage/pouch/general/medium, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-			list("Individual First-Aid Kit (Tan)", 0, /obj/item/storage/ifak, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Individual First-Aid Kit (Tan)", 0, /obj/item/storage/ifak, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Individual First-Aid Kit (Black)", 0, /obj/item/storage/ifak/blk, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pistol Magazine Pouch", 0, /obj/item/storage/pouch/magazine/pistol, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Pistol Pouch", 0, /obj/item/storage/pouch/pistol, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
