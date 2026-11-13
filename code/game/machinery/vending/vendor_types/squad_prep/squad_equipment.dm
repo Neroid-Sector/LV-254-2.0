@@ -39,6 +39,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_leader, list(
 		list("Essential SL Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 
 		list("SQUAD LEADER SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
+		list("Veteran SL kit", 0, /obj/item/storage/box/spec/vet_sl, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 		list("Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("HPR Support Kit", 0, /obj/item/storage/box/kit/heavy_support, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("M240 Pyrotechnician Support Kit", 0, /obj/item/storage/box/kit/mini_pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
@@ -177,6 +178,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_tl, list(
 		list("CLOTHING ITEMS", 0, null, null, null),
 		list("Machete Scabbard (Full)", 5, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
 		list("Machete Pouch (Full)", 15, /obj/item/storage/pouch/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("M278 Pattern pistol webbing", 30, /obj/item/storage/belt/gun/dual_pistol, null,VENDOR_ITEM_REGULAR),
 		list("USCM Radio Telephone Pack", 5, /obj/item/storage/backpack/marine/satchel/rto, null, VENDOR_ITEM_REGULAR),
 		list("Welding Goggles", 3, /obj/item/clothing/glasses/welding, null, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Combat Toolbelt Rig", 15, /obj/item/storage/belt/gun/utility, null, VENDOR_ITEM_REGULAR),
@@ -301,6 +303,11 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi, list(
 		list("HELMET OPTICS", 0, null, null, null),
 		list("Medical Helmet Optic", 12, /obj/item/device/helmet_visor/medical, null, VENDOR_ITEM_REGULAR),
 
+		list("CLOTHING ITEMS", 0, null, null, null),
+		list("Machete Scabbard (Full)", 5, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("Machete Pouch (Full)", 15, /obj/item/storage/pouch/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("M278 Pattern pistol webbing", 30, /obj/item/storage/belt/gun/dual_pistol, null,VENDOR_ITEM_REGULAR),
+
 		list("PAMPHLETS", 0, null, null, null),
 		list("JTAC Pamphlet", 15, /obj/item/pamphlet/skill/jtac, null, VENDOR_ITEM_REGULAR),
 
@@ -323,6 +330,8 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 		list("Blood Bag (O-)", 4, /obj/item/reagent_container/blood/OMinus, null, VENDOR_ITEM_REGULAR),
 
 		list("FIRSTAID KITS", 0, null, null, null),
+		list("Complex Firstaid Kit", 60, /obj/item/storage/box/czsp/medical, null, VENDOR_ITEM_RECOMMENDED),
+		list("Upgraded Firstaid Kit", 25, /obj/item/storage/box/czsp/medic_upgraded_kits/full, null, VENDOR_ITEM_RECOMMENDED),
 		list("Advanced Firstaid Kit", 20, /obj/item/storage/firstaid/adv, null, VENDOR_ITEM_RECOMMENDED),
 		list("Firstaid Kit", 5, /obj/item/storage/firstaid/regular, null, VENDOR_ITEM_REGULAR),
 		list("Fire Firstaid Kit", 6, /obj/item/storage/firstaid/fire, null, VENDOR_ITEM_REGULAR),
@@ -385,6 +394,11 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 		list("Binoculars", 5, /obj/item/device/binoculars, null, VENDOR_ITEM_REGULAR),
 		list("Range Finder", 10, /obj/item/device/binoculars/range, null, VENDOR_ITEM_REGULAR),
 		list("Laser Designator", 15, /obj/item/device/binoculars/range/designator, null, VENDOR_ITEM_REGULAR),
+
+		list("CLOTHING ITEMS", 0, null, null, null),
+		list("Machete Scabbard (Full)", 5, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("Machete Pouch (Full)", 15, /obj/item/storage/pouch/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("M278 Pattern pistol webbing", 30, /obj/item/storage/belt/gun/dual_pistol, null,VENDOR_ITEM_REGULAR),
 
 		list("HELMET OPTICS", 0, null, null, null),
 		list("Welding Visor", 5, /obj/item/device/helmet_visor/welding_visor, null, VENDOR_ITEM_REGULAR),
@@ -598,4 +612,9 @@ GLOBAL_LIST_INIT(cm_vending_gear_marine, list(
 		list("Motion Detector", 15, /obj/item/device/motiontracker/adv, null, VENDOR_ITEM_REGULAR),
 		list("Supply Beacon", 15, /obj/item/device/whiskey_supply_beacon, null, VENDOR_ITEM_REGULAR),
 		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
+
+		list("CLOTHING ITEMS", 0, null, null, null),
+		list("Machete Scabbard (Full)", 5, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("Machete Pouch (Full)", 15, /obj/item/storage/pouch/machete/full, null, VENDOR_ITEM_REGULAR),
+		list("M278 Pattern pistol webbing", 30, /obj/item/storage/belt/gun/dual_pistol, null,VENDOR_ITEM_REGULAR),
 	))

@@ -68,7 +68,7 @@
 	rank = JOB_MS_CO
 	paygrades = list(PAY_SHORT_MO5)
 	role_comm_title = "CO"
-	skills = /datum/skills/ms/commander
+	skills = /datum/skills/commander
 	idtype = /obj/item/card/id/gold/council
 
 	minimap_icon = "co"
@@ -149,7 +149,7 @@
 	rank = JOB_MS_GC
 	paygrades = list(PAY_SHORT_MO3)
 	role_comm_title = "CDR"
-	skills = /datum/skills/ms/commander
+	skills = /datum/skills/commander
 	idtype = /obj/item/card/id/gold
 
 	minimap_icon = "xo"
@@ -244,7 +244,7 @@
 	paygrades = list(PAY_SHORT_MO2)
 	role_comm_title = "Adjc"
 	minimum_age = 35
-	skills = /datum/skills/ms/lt
+	skills = /datum/skills/SO
 
 	minimap_icon = "so"
 	minimap_background = "background_command"
@@ -290,7 +290,7 @@
 	paygrades = list(PAY_SHORT_MO1)
 	role_comm_title = "LT"
 	minimum_age = 25
-	skills = /datum/skills/ms/lt
+	skills = /datum/skills/SO
 
 	minimap_icon = "so"
 	minimap_background = "background_command"
@@ -330,7 +330,7 @@
 	paygrades = list(PAY_SHORT_MO1)
 	role_comm_title = "LT"
 	minimum_age = 25
-	skills = /datum/skills/ms/lt
+	skills = /datum/skills/SO
 
 	minimap_icon = "so"
 	minimap_background = "background_command"
@@ -373,7 +373,7 @@
 /datum/equipment_preset/uscm_mudskippers/leader
 	name = "Mudskippers-Squad Leader"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_BRIG, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_MS_SL
@@ -381,7 +381,7 @@
 	paygrades = list(PAY_SHORT_ME5)
 	role_comm_title = "SL"
 	minimum_age = 27
-	skills = /datum/skills/ms/sl
+	skills = /datum/skills/SL
 
 	minimap_icon = "leader"
 
@@ -453,7 +453,7 @@
 /datum/equipment_preset/uscm_mudskippers/sg
 	name = "Mudskippers-Squad Smartgunner"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -475,7 +475,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3)
 	role_comm_title = "SG"
-	skills = /datum/skills/ms/rifleman
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "smartgunner"
 
@@ -574,7 +574,7 @@
 /datum/equipment_preset/uscm_mudskippers/medic
 	name = "Mudskippers-Squad Hospital Corpsman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -596,7 +596,7 @@
 	rank = JOB_SQUAD_MEDIC
 	paygrades = list(PAY_SHORT_ME3)
 	role_comm_title = "HM"
-	skills = /datum/skills/ms/medic
+	skills = /datum/skills/combat_medic
 
 	minimap_icon = "medic"
 
@@ -656,7 +656,7 @@
 /datum/equipment_preset/uscm_mudskippers/engineer
 	name = "Mudskippers-Squad Combat Technician"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -678,7 +678,7 @@
 	rank = JOB_SQUAD_ENGI
 	paygrades = list(PAY_SHORT_ME4)
 	role_comm_title = "ComTech"
-	skills = /datum/skills/ms/engi
+	skills = /datum/skills/combat_engineer
 
 	minimap_icon = "engi"
 
@@ -739,7 +739,7 @@
 /datum/equipment_preset/uscm_mudskippers/rfm
 	name = "Mudskippers-Squad Rifleman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -760,7 +760,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2)
 	role_comm_title = "Rfm"
-	skills = /datum/skills/ms/rifleman
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "private"
 
@@ -821,7 +821,7 @@
 /datum/equipment_preset/uscm_mudskippers/k9
 	name = "Mudskippers-Squad K9 Handler"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -842,7 +842,7 @@
 	rank = JOB_MS_K9
 	paygrades = list(PAY_SHORT_ME2)
 	role_comm_title = "Rfm"
-	skills = /datum/skills/ms/rifleman
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "private"
 

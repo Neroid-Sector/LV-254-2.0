@@ -69,7 +69,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "private"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -84,7 +84,7 @@
 
 /datum/equipment_preset/uscm/pfc/cryo
 	name = "Falling Falcons Cryo Squad Rifleman"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 /datum/equipment_preset/uscm/pfc/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
@@ -101,7 +101,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "smartgunner"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -116,7 +116,7 @@
 
 /datum/equipment_preset/uscm/sg/cryo
 	name = "Falling Falcons Cryo Squad Smartgunner"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 /datum/equipment_preset/uscm/sg/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
@@ -279,7 +279,7 @@
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "Spc"
-	skills = /datum/skills/specialist
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "spec"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -295,37 +295,12 @@
 
 /datum/equipment_preset/uscm/spec/cryo
 	name = "Falling Falcons Cryo Squad Weapons Specialist"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 /datum/equipment_preset/uscm/spec/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/spec_kit/cryo, WEAR_R_HAND)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/uscm/spec/full_armor
-	name = "Falling Falcons Weapons Specialist (B18 Armor)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
-/datum/equipment_preset/uscm/spec/full_armor/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/specialist(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/specialist(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas(new_human), WEAR_FACE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/specialist(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a(new_human), WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human.back), WEAR_IN_BACK)
-
-/datum/equipment_preset/uscm/spec/full_armor/load_status(mob/living/carbon/human/new_human)
-	return //No cryo munchies
 
 //*****************************************************************************************************/
 
@@ -355,7 +330,7 @@
 
 /datum/equipment_preset/uscm/medic/cryo
 	name = "Falling Falcons Cryo Squad Hospital Corpsman"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 /datum/equipment_preset/uscm/medic/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
@@ -385,7 +360,7 @@
 
 /datum/equipment_preset/uscm/tl/cryo
 	name = "Falling Falcons Cryo Fireteam Leader"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 /datum/equipment_preset/uscm/tl/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
@@ -419,7 +394,7 @@
 
 /datum/equipment_preset/uscm/engineer/cryo
 	name = "Falling Falcons Cryo Squad Combat Technician"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 /datum/equipment_preset/uscm/engineer/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
@@ -450,7 +425,7 @@
 
 /datum/equipment_preset/uscm/leader/cryo
 	name = "Falling Falcons Cryo Squad Leader"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 /datum/equipment_preset/uscm/leader/cryo/load_gear(mob/living/carbon/human/new_human)
 	..()
@@ -469,7 +444,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/rifleman/crafty
 
 	minimap_icon = "private"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -499,7 +474,7 @@
 
 /datum/equipment_preset/uscm/private_equipped/cryo
 	name = "Falling Falcons Cryo Squad Rifleman (Equipped)"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 
 //*****************************************************************************************************/
@@ -542,7 +517,7 @@
 
 /datum/equipment_preset/uscm/leader_equipped/cryo
 	name = "Falling Falcons Cryo Squad Leader (Equipped)"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 //*****************************************************************************************************/
 
@@ -555,7 +530,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "smartgunner"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -580,7 +555,7 @@
 
 /datum/equipment_preset/uscm/smartgunner_equipped/cryo
 	name = "Falling Falcons Cryo Squad Smartgunner (Equipped)"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 
 //*****************************************************************************************************/
@@ -629,7 +604,7 @@
 
 /datum/equipment_preset/uscm/engineer_equipped/cryo
 	name = "Falling Falcons Cryo Squad Combat Technician (Equipped)"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 //*****************************************************************************************************/
 
@@ -684,7 +659,7 @@
 
 /datum/equipment_preset/uscm/medic_equipped/cryo
 	name = "Falling Falcons Cryo Hospital Corpsman (Equipped)"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 
 //*****************************************************************************************************/
@@ -698,7 +673,7 @@
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "Spc"
-	skills = /datum/skills/specialist
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "spec"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -731,7 +706,7 @@
 
 /datum/equipment_preset/uscm/specialist_equipped/cryo
 	name = "Falling Falcons Cryo Squad Weapons Specialist (Equipped)"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 //*****************************************************************************************************/
 
@@ -795,7 +770,7 @@
 
 /datum/equipment_preset/uscm/tl_equipped/cryo
 	name = "Falling Falcons Cryo Fireteam Leader (Equipped)"
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_FALL
 
 //############ Marine Raiders #############
 //Operator
@@ -1114,7 +1089,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner_pve
+	skills = /datum/skills/rifleman_pve
 
 	minimap_icon = "smartgunner"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -1372,7 +1347,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner_pve
+	skills = /datum/skills/rifleman_pve
 
 	minimap_icon = "smartgunner"
 
@@ -1395,3 +1370,49 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_R_STORE)
 	spawn_marine_fluff_items(new_human)
+
+/datum/equipment_preset/uscm/chaplain
+	name = "USCM Chaplain"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_LIST_MARINE_MAIN)
+	assignment = JOB_MARINE_CHAPLAIN
+	rank = JOB_MARINE_CHAPLAIN
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_3)
+	role_comm_title = "Chp"
+	skills = /datum/skills/SO
+
+	minimap_icon = "private"
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
+
+/datum/equipment_preset/uscm/chaplain/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm/chaplain/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_MARINE_ALL)
+
+/datum/equipment_preset/uscm/chaplain/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/service(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/chaplain(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/chaplain(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/chaplain_patch(new_human), WEAR_AS_GARB)
+	if(new_human.disabilities & NEARSIGHTED)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription(new_human), WEAR_EYES)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/bible/mil_chaplain(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/candle_box(new_human), WEAR_IN_BELT)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/ifak/blk(new_human), WEAR_IN_BELT)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/ifak(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/device/megaphone(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/mod88(new_human), WEAR_IN_L_STORE)

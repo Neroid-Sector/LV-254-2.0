@@ -13,7 +13,12 @@
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_FORECON "FORECON"
+#define SQUAD_FALL "Falling Falcons"
+#define SQUAD_DUST "Dust Raiders"
 #define SQUAD_SOLAR "Solar Devils"
+#define SQUAD_MUD "Mudskippers"
+#define SQUAD_HELL "Hell Divers"
+#define SQUAD_TUNNEL "Tunnel Rats"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -79,9 +84,10 @@ GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 #define JOB_CO "Commanding Officer"
 #define JOB_XO "Executive Officer"
 #define JOB_SO "Staff Officer"
+#define JOB_MARINE_CHAPLAIN "Marine Chaplain"
 #define JOB_AUXILIARY_OFFICER "Auxiliary Support Officer"
 #define JOB_COMMAND_ROLES /datum/timelock/command
-#define JOB_COMMAND_ROLES_LIST   list(JOB_CO, JOB_XO, JOB_SO, JOB_AUXILIARY_OFFICER)
+#define JOB_COMMAND_ROLES_LIST   list(JOB_CO, JOB_XO, JOB_SO, JOB_MARINE_CHAPLAIN, JOB_AUXILIARY_OFFICER)
 GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 #define JOB_CAS_PILOT "Gunship Pilot"
@@ -133,7 +139,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_ACMC "Assistant Commandant of the Marine Corps"
 #define JOB_CMC "Commandant of the Marine Corps"
 #define JOB_PLT_MED "Platoon Corpsman"
-#define JOB_PLT_SL "Platoon Squad Leader"
+#define JOB_PLT_SL "Platoon Enlisted Leader"
 #define JOB_SQUAD_TECH "Reconnaissance Support Technician"
 
 // Used to add a timelock to a job. Will be passed onto derivatives

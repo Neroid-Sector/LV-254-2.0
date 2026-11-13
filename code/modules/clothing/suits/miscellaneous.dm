@@ -287,7 +287,21 @@
 		/obj/item/storage/large_holster/machete,
 		/obj/item/storage/large_holster/katana,
 		/obj/item/device/motiontracker/adv,
+
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/handful,
+
 	)
+
+/obj/item/clothing/suit/storage/webbing/diamond_dog
+	name = "LBV-88 tactical load bearing equipment"
+	icon_state = "dd_webbing_green"
+	item_state = "dd_webbing_green"
+
+/obj/item/clothing/suit/storage/webbing/diamond_dog/black
+	name = "LBV-88 tactical load bearing equipment"
+	icon_state = "dd_webbing_black"
+	item_state = "dd_webbing_black"
 
 /obj/item/clothing/suit/storage/utility_vest
 	name = "utility vest"

@@ -129,7 +129,7 @@
 	rank = JOB_COMBAT_REPORTER
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CC"
-	skills = /datum/skills/pfc
+	skills = /datum/skills/rifleman
 	idtype = /obj/item/card/id/dogtag
 
 	minimap_icon = "correspondent"
@@ -298,6 +298,7 @@
 	)
 	assignment = JOB_CHIEF_REQUISITION
 	rank = JOB_CHIEF_REQUISITION
+	faction_group = FACTION_LIST_LARRY
 	paygrades = list(PAY_SHORT_MW1= JOB_PLAYTIME_TIER_0)
 	role_comm_title = "QM"
 	minimum_age = 25

@@ -332,6 +332,7 @@
 	flags = EQUIPMENT_PRESET_START_OF_ROUND_WO
 
 	access = list(ACCESS_MARINE_CARGO, ACCESS_MARINE_RO, ACCESS_MARINE_COMMAND)
+	faction_group = FACTION_LIST_LARRY
 	assignment = JOB_WO_CHIEF_REQUISITION
 	rank = JOB_WO_CHIEF_REQUISITION
 	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
@@ -678,7 +679,7 @@
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Spc"
-	skills = /datum/skills/specialist
+	skills = /datum/skills/rifleman
 	minimap_icon = "spec"
 
 /datum/equipment_preset/wo/marine/spec/load_gear(mob/living/carbon/human/new_human)
@@ -714,7 +715,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner
+	skills = /datum/skills/rifleman
 	minimap_icon = "smartgunner"
 
 /datum/equipment_preset/wo/marine/sg/load_gear(mob/living/carbon/human/new_human)
@@ -813,7 +814,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc
+	skills = /datum/skills/rifleman
 
 /datum/equipment_preset/wo/marine/pfc/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
